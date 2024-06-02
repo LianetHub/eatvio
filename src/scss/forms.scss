@@ -96,6 +96,14 @@ input[type="date"] {
 		background: #fff;
 		border-color: #e9e9ea;
 	}
+	&.textarea-sm {
+		font-size: 16px;
+		height: 7.1875rem;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		padding: 0.75rem 0.88rem;
+	}
 	&:focus {
 		border-color: #2f80ed;
 	}
@@ -411,6 +419,24 @@ input[type="date"] {
 				}
 			}
 		}
+	}
+	// .checkbox__column
+	&__column {
+		display: flex;
+		align-items: flex-start;
+		text-align: left;
+	}
+	// .checkbox__content-title
+	&__content-title {
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 130%;
+	}
+	// .checkbox__content-text
+	&__content-text {
+		margin-top: 0.25rem;
+		font-size: 0.875rem;
+		line-height: 130%;
 	}
 }
 

@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle('active');
             e.target.nextElementSibling?.classList.toggle('active');
         }
+
+
         if (e.target.classList.contains('diet__desc-full')) {
             e.target.classList.toggle('active');
             if (e.target.classList.contains('active')) {
@@ -92,6 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (e.target.classList.contains('search-mobile-btn')) {
             document.querySelector('.search').classList.add('open');
+        }
+
+        if (e.target.classList.contains('person__menu-btn')) {
+            e.target.classList.toggle('active');
+            e.target.nextElementSibling?.classList.toggle('active');
         }
 
     })

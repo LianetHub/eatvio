@@ -766,7 +766,7 @@
         <div class="popup__body">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
             <div class="popup__calc">
-                <div class="popup__calc-title title">Не можем посчитать КБЖУ для продукта</div>
+                <div class="popup__calc-title title">Не можем посчитать КБЖУ для продукта</div>
                 <div class="popup__calc-desc">
                     Если у вас данные по нему просим заполнить значения на 100гр
                 </div>
@@ -932,6 +932,288 @@
                 <div class="popup__selecting-btns">
                     <button type="button" class="popup__selecting-btn l-btn l-btn-light">Отменить диету</button>
                     <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Вернутся назад</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="complaint") {
+<div id="complaint" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__complaint">
+                <button type="button" class="popup__close icon-close" data-close-modal></button>
+                <div class="popup__complaint-title">Пожаловаться</div>
+                <p class="popup__complaint-subtitle">
+                    Выберите причину жалобы
+                </p>
+                <ul class="popup__complaint-list">
+                    <li class="popup__complaint-item"><a href="#complaint-1" data-modal class="popup__complaint-link">Спам</a></li>
+                    <li class="popup__complaint-item"><a href="#complaint-2" data-modal class="popup__complaint-link">Нарушение законодательства</a></li>
+                    <li class="popup__complaint-item"><a href="#complaint-3" data-modal class="popup__complaint-link">Обман</a></li>
+                    <li class="popup__complaint-item"><a href="#complaint-4" data-modal class="popup__complaint-link">Насилие и вражда</a></li>
+                    <li class="popup__complaint-item"><a href="#complaint-5" data-modal class="popup__complaint-link">Откровенное изображение</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="complaint-1" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <a href="#complaint" data-modal class="popup__header-back icon-arrow-left">
+                        Вернуться назад
+                    </a>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Жалоба на спам</div>
+                    <p class="popup__subtitle">Убедитесь что в этом материале есть спам</p>
+                    <p class="popup__text">Отправьте жалобу, если кто-то разместил рекламу в не предназначенном для этого месте.</p>
+                </div>
+                <div class="popup__footer popup__footer_no-line">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="complaint-2" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <a href="#complaint" data-modal class="popup__header-back icon-arrow-left">
+                        Вернуться назад
+                    </a>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Нарушение законодательства</div>
+                    <p class="popup__subtitle">На что Вы хотите пожаловаться</p>
+                    <div class="popup__step-options sm-width">
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="1" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Алкоголь
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="2" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Наркотики
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="3" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Никотин
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="4" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Оружие
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="5" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Поддельные документы
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="6" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Проституция
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" checked name="complaint-checkbox" value="7" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                Другое
+                            </span>
+                        </label>
+                        <input type="text" name="complaint" class="input" placeholder="На что Вы хотите пожаловаться">
+                    </div>
+                </div>
+                <div class="popup__footer popup__footer_no-line">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="complaint-3" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <a href="#complaint" data-modal class="popup__header-back icon-arrow-left">
+                        Вернуться назад
+                    </a>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Жалоба на обман</div>
+                    <p class="popup__subtitle">На что Вы хотите пожаловаться</p>
+                    <div class="popup__step-options sm-width">
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="1" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Введение в заблуждение
+                                    </span>
+                                    <span class="checkbox__content-text">Потенциально резонансные и опасные новости, размещённые с целью массовой дезинформации</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="2" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Мошенничество
+                                    </span>
+                                    <span class="checkbox__content-text">Обман с целью получения материальной выгоды. Если вы стали жертвой мошенников, обратитесь в правоохранительные органы.</span>
+                                </span>
+                            </span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="popup__footer popup__footer_no-line">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="complaint-4" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <a href="#complaint" data-modal class="popup__header-back icon-arrow-left">
+                        Вернуться назад
+                    </a>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Жалоба на насилие или вражду</div>
+                    <p class="popup__subtitle">На что Вы хотите пожаловаться</p>
+                    <div class="popup__step-options ">
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="1" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Насилие над людьми или животными
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="2" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Оскорбление
+                                    </span>
+                                    <span class="checkbox__content-text">Унижение чести и достоинства личности</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="3" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Склонение к сомоубийству
+                                    </span>
+                                    <span class="checkbox__content-text">Призывы к суициду или нанесению себе увечий, демонстрация самоубийств</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="4" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Враждебные высказывания
+                                    </span>
+                                    <span class="checkbox__content-text">Выражение нетерпимости к людям из-за расы, национальности, вероисповедания, гендера, сексуальной ориентации и других признаков</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="5" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Враждебные высказывания
+                                    </span>
+                                    <span class="checkbox__content-text">Выражение нетерпимости к людям из-за расы, национальности, вероисповедания, гендера, сексуальной ориентации и других признаков</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="6" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Экстремизм
+                                    </span>
+                                    <span class="checkbox__content-text">Призывы к беспорядкам и террору, насилию над людьми определённой национальности, вероисповедания, расы</span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="complaint-checkbox" value="7" class="checkbox__input hidden" hidden="">
+                            <span class="checkbox__content">
+                                <span class="checkbox__column">
+                                    <span class="checkbox__content-title">
+                                        Призывы к травле
+                                    </span>
+                                    <span class="checkbox__content-text">Призывы применять физическую силу и унижать конкретного человека</span>
+                                </span>
+                            </span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="popup__footer popup__footer_no-line">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="complaint-5" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-md">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <a href="#complaint" data-modal class="popup__header-back icon-arrow-left">
+                        Вернуться назад
+                    </a>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Жалоба на откровенные изображения</div>
+                    <p class="popup__text">Отправьте жалобу, если кто-то разместил откровенные изображения на сайте</p>
+                </div>
+                <div class="popup__footer popup__footer_no-line">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">Отправить</button>
                 </div>
             </div>
         </div>

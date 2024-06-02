@@ -171,6 +171,72 @@
 			}
 		}
 	}
+	// .person__menu
+	&__menu {
+		position: relative;
+		margin-left: auto;
+		@media (max-width: $md5) {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+	}
+	// .person__menu-btn
+	&__menu-btn {
+		font-size: 2rem;
+		transition: color 0.3s ease 0s;
+		&.active {
+			color: #2f80ed;
+		}
+	}
+	// .person__menu-list
+	&__menu-list {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		border-radius: 0.5rem;
+		background: #fff;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		padding: 0.62rem 0.5rem;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .person__menu-item
+	&__menu-item {
+	}
+	// .person__menu-action
+	&__menu-action {
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		border-radius: 0.25rem;
+		transition: background-color 0.3s ease 0s;
+		padding: 0.38rem;
+		&::before {
+			color: #ff3b3b;
+			width: 1.25rem;
+			height: 1.25rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+		}
+		&.icon-info {
+			&::before {
+				font-size: 1.25rem;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #f2f2f2;
+			}
+		}
+	}
 	// .person__checklist
 	&__checklist {
 		order: 1;

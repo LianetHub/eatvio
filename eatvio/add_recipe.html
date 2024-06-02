@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
+<head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
+
+<body>
+  <div class="wrapper">
+    <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,239 +393,241 @@
         </div>
     </div>
 </header>
-            <main class="page">
-                <section class="diet">
-                    <div class="diet__container">
-                        <div class="diet__header">
-                            <button class="diet__back icon-arrow-short-left"><span>Мой блог</span></button>
-                            <h1 class="diet__title">
-                                Добавление в блог
-                            </h1>
-                        </div>
-                        <form action="#" class="diet__form">
-                            <div class="diet__form-row">
-                                <div class="diet__form-columns lg-columns">
-                                    <div class="diet__form-column">
-                                        <div class="label">
-                                            Изображение
-                                        </div>
-                                        <label class="file">
-                                            <input type="file" name="file" class="file__input hidden" hidden="">
-                                            <span class="file__content">
-                                                <span class="file__formats">
-                                                    <img src="img/formats-2.svg" alt="formats">
-                                                </span>
-                                                <span class="file__title">
-                                                    Нажмите для&nbsp;выбора или&nbsp;перетащите изображание
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="diet__form-column diet__form-column-lg">
-                                        <div class="diet__form-row">
-                                            <div class="label">
-                                                Тип записи
-                                            </div>
-                                            <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-                                                <button class="l-tab l-btn" role="tab" type="button" id="tab-1" aria-selected="true" aria-controls="tabpanel-1">Рецепт</button>
-                                                <button class="l-tab l-btn" role="tab" type="button" id="tab-2" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">Cтатья</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
-                                        <div class="diet__form-column">
-                                            <div class="diet__form-row">
-                                                <div class="label">
-                                                    Время приготавления
-                                                </div>
-                                                <div class="select">
-                                                    <select>
-                                                        <option value="2" selected>1 час</option>
-                                                        <option value="3">30 минут</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="diet__form-column">
-                                            <div class="diet__form-row">
-                                                <div class="label">
-                                                    Статус
-                                                </div>
-                                                <div class="select">
-                                                    <select>
-                                                        <option value="2" selected>Активна</option>
-                                                        <option value="3">Неактивна</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="diet__form-column diet__form-column-xl">
-                                            <div class="diet__form-columns">
-                                                <div class="diet__form-column diet__form-column-lg">
-                                                    <input type="text" name="product" class="input" placeholder="Введите название продукта">
-                                                </div>
-                                                <div class="diet__form-column">
-                                                    <div class="diet__form-adding">
-                                                        <div class="diet__form-column">
-                                                            <input type="num" name="ccal" class="input" placeholder="Порция">
-                                                            <button type="button" class="l-btn l-btn-primary icon-plus"></button>
-                                                        </div>
-                                                        <button type="button" class="icon-close"></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
-                                        <div class="diet__form-column">
-                                            <div class="diet__form-row">
-                                                <div class="label">
-                                                    Статус
-                                                </div>
-                                                <div class="select">
-                                                    <select>
-                                                        <option value="1" selected>
-                                                            Активна
-                                                        </option>
-                                                        <option value="2">
-                                                            Неактивна
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="diet__form-row">
-                                <div class="label">
-                                    Описание
-                                </div>
-                                <div class="wysiwyg">
-                                    <div class="wysiwyg__caption">
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/bold.svg" alt="icon bold">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/italic.svg" alt="icon italic">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/underline.svg" alt="icon underline">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/strike.svg" alt="icon strike">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/h1.svg" alt="icon h1">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/h2.svg" alt="icon h2">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/h3.svg" alt="icon h3">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/smile.svg" alt="icon smile">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/paragraph.svg" alt="icon paragraph">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/align-center.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/align-left.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/align-right.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/list-num.svg" alt="icon list">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/list.svg" alt="icon list">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/image.svg" alt="icon image">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/link.svg" alt="icon link">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/file.svg" alt="icon file">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/undo.svg" alt="icon undo">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="img/wysiwyg/redo.svg" alt="icon redo">
-                                        </button>
-                                    </div>
-                                    <textarea name="wysiwyg" placeholder="Введите описание диеты" class="textarea"></textarea>
-                                </div>
-                            </div>
-                            <div class="diet__form-row">
-                                <div class="label">
-                                    Шаг 1
-                                    <span>
-                                        Шагов всего: 2
-                                    </span>
-                                </div>
-                                <div class="diet__form-step">
-                                    <label class="file">
-                                        <input type="file" name="file" class="file__input hidden" hidden="">
-                                        <span class="file__content">
-                                            <img src="img/add-file.svg" width="40" height="40" alt="formats">
-                                        </span>
-                                    </label>
-                                    <textarea name="desc-step-1" class="textarea" placeholder="Введите описание шага"></textarea>
-                                    <div class="diet__form-btns">
-                                        <button type="button" class="diet__form-add l-btn l-btn-gray">-</button>
-                                        <button type="button" class="diet__form-add l-btn l-btn-primary">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="diet__form-row">
-                                <div class="label">
-                                    Шаг 2
-                                </div>
-                                <div class="diet__form-step">
-                                    <label class="file">
-                                        <input type="file" name="file" class="file__input hidden" hidden="">
-                                        <span class="file__content">
-                                            <img src="img/add-file.svg" width="40" height="40" alt="formats">
-                                        </span>
-                                    </label>
-                                    <textarea name="desc-step-1" class="textarea" placeholder="Введите описание шага"></textarea>
-                                    <div class="diet__form-btns">
-                                        <button type="button" class="diet__form-add l-btn l-btn-primary">-</button>
-                                        <button type="button" class="diet__form-add l-btn l-btn-primary">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="diet__form-row">
-                                <div class="label">
-                                    Теги
-                                </div>
-                                <input type="text" name="link" class="input" placeholder="Введите теги через запятую">
-                            </div>
-                            <div class="diet__form-row">
-                                <div class="label">
-                                    Ссылка на видео (YouTube)
-                                </div>
-                                <input type="text" name="link" class="input" placeholder="Прикрепите ссылку на YouTube видео">
-                            </div>
-
-                        </form>
-                        <div class="diet__btns">
-                            <button type="button" class="diet__btn l-btn l-btn-gray">В черновик</button>
-                            <button type="button" class="diet__btn l-btn l-btn-gray">Превью</button>
-                            <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
-                        </div>
+    <main class="page">
+      <section class="diet">
+        <div class="diet__container">
+          <div class="diet__header">
+            <button class="diet__back icon-arrow-short-left">
+              <span>Мой блог</span>
+            </button>
+            <h1 class="diet__title">
+              Добавление в блог
+            </h1>
+          </div>
+          <form action="#" class="diet__form">
+            <div class="diet__form-row">
+              <div class="diet__form-columns lg-columns">
+                <div class="diet__form-column">
+                  <div class="label">
+                    Изображение
+                  </div>
+                  <label class="file">
+                    <input type="file" name="file" class="file__input hidden" hidden="">
+                    <span class="file__content">
+                      <span class="file__formats">
+                        <img src="img/formats-2.svg" alt="formats">
+                      </span>
+                      <span class="file__title">
+                        Нажмите для&nbsp;выбора или&nbsp;перетащите изображание
+                      </span>
+                    </span>
+                  </label>
+                </div>
+                <div class="diet__form-column diet__form-column-lg">
+                  <div class="diet__form-row">
+                    <div class="label">
+                      Тип записи
                     </div>
-                </section>
-            </main>
-            <footer class="footer">
+                    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
+                      <button class="l-tab l-btn" role="tab" type="button" id="tab-1" aria-selected="true" aria-controls="tabpanel-1">Рецепт</button>
+                      <button class="l-tab l-btn" role="tab" type="button" id="tab-2" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">Cтатья</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
+                  <div class="diet__form-column">
+                    <div class="diet__form-row">
+                      <div class="label">
+                        Время приготавления
+                      </div>
+                      <div class="select">
+                        <select>
+                          <option value="2" selected>1 час</option>
+                          <option value="3">30 минут</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="diet__form-column">
+                    <div class="diet__form-row">
+                      <div class="label">
+                        Статус
+                      </div>
+                      <div class="select">
+                        <select>
+                          <option value="2" selected>Активна</option>
+                          <option value="3">Неактивна</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="diet__form-column diet__form-column-xl">
+                    <div class="diet__form-columns">
+                      <div class="diet__form-column diet__form-column-lg">
+                        <input type="text" name="product" class="input" placeholder="Введите название продукта">
+                      </div>
+                      <div class="diet__form-column">
+                        <div class="diet__form-adding">
+                          <div class="diet__form-column">
+                            <input type="num" name="ccal" class="input" placeholder="Порция">
+                            <button type="button" class="l-btn l-btn-primary icon-plus"></button>
+                          </div>
+                          <button type="button" class="icon-close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
+                  <div class="diet__form-column">
+                    <div class="diet__form-row">
+                      <div class="label">
+                        Статус
+                      </div>
+                      <div class="select">
+                        <select>
+                          <option value="1" selected>
+                            Активна
+                          </option>
+                          <option value="2">
+                            Неактивна
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diet__form-row">
+              <div class="label">
+                Описание
+              </div>
+              <div class="wysiwyg">
+                <div class="wysiwyg__caption">
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/bold.svg" alt="icon bold">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/italic.svg" alt="icon italic">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/underline.svg" alt="icon underline">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/strike.svg" alt="icon strike">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/h1.svg" alt="icon h1">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/h2.svg" alt="icon h2">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/h3.svg" alt="icon h3">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/smile.svg" alt="icon smile">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/paragraph.svg" alt="icon paragraph">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/align-center.svg" alt="icon align">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/align-left.svg" alt="icon align">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/align-right.svg" alt="icon align">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/list-num.svg" alt="icon list">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/list.svg" alt="icon list">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/image.svg" alt="icon image">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/link.svg" alt="icon link">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/file.svg" alt="icon file">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/undo.svg" alt="icon undo">
+                  </button>
+                  <button type="button" class="l-btn l-btn-white">
+                    <img src="img/wysiwyg/redo.svg" alt="icon redo">
+                  </button>
+                </div>
+                <textarea name="wysiwyg" placeholder="Введите описание диеты" class="textarea"></textarea>
+              </div>
+            </div>
+            <div class="diet__form-row">
+              <div class="label">
+                Шаг 1
+                <span>
+                  Шагов всего: 2
+                </span>
+              </div>
+              <div class="diet__form-step">
+                <label class="file">
+                  <input type="file" name="file" class="file__input hidden" hidden="">
+                  <span class="file__content">
+                    <img src="img/add-file.svg" width="40" height="40" alt="formats">
+                  </span>
+                </label>
+                <textarea name="desc-step-1" class="textarea" placeholder="Введите описание шага"></textarea>
+                <div class="diet__form-btns">
+                  <button type="button" class="diet__form-add l-btn l-btn-gray">-</button>
+                  <button type="button" class="diet__form-add l-btn l-btn-primary">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="diet__form-row">
+              <div class="label">
+                Шаг 2
+              </div>
+              <div class="diet__form-step">
+                <label class="file">
+                  <input type="file" name="file" class="file__input hidden" hidden="">
+                  <span class="file__content">
+                    <img src="img/add-file.svg" width="40" height="40" alt="formats">
+                  </span>
+                </label>
+                <textarea name="desc-step-1" class="textarea" placeholder="Введите описание шага"></textarea>
+                <div class="diet__form-btns">
+                  <button type="button" class="diet__form-add l-btn l-btn-primary">-</button>
+                  <button type="button" class="diet__form-add l-btn l-btn-primary">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="diet__form-row">
+              <div class="label">
+                Теги
+              </div>
+              <input type="text" name="link" class="input" placeholder="Введите теги через запятую">
+            </div>
+            <div class="diet__form-row">
+              <div class="label">
+                Ссылка на видео (YouTube)
+              </div>
+              <input type="text" name="link" class="input" placeholder="Прикрепите ссылку на YouTube видео">
+            </div>
+
+          </form>
+          <div class="diet__btns">
+            <button type="button" class="diet__btn l-btn l-btn-gray">В черновик</button>
+            <button type="button" class="diet__btn l-btn l-btn-gray">Превью</button>
+            <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
@@ -632,8 +635,8 @@
         <a href="" class="footer__link">Обратная связь</a>
     </div>
 </footer>
-        </div>
-        
+  </div>
+  
 
 
 
@@ -737,8 +740,10 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>
