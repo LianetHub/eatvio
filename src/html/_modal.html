@@ -1,0 +1,940 @@
+@@if (modal==="start") {
+<div id="start" class="popup">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__start">
+                <div class="popup__title title title-lg">
+                    У вас пока-что нет рекламных компаний
+                </div>
+                <a href="" class="popup__btn l-btn l-btn-primary l-btn-lg">
+                    Создать рекламную компанию
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="strategy") {
+<div id="strategy" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Стратегия
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Стратегия рекламной компании</div>
+                    <div class="popup__step-items">
+                        <label class="popup__step-item option-btn">
+                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                            <span class="option-btn__text icon-click">
+                                Оплата за клики
+                                <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый клик по вашему объявению">i</span>
+                            </span>
+                        </label>
+                        <label class="popup__step-item option-btn">
+                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                            <span class="option-btn__text icon-eye">
+                                Оплата за показы
+                                <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый показ вашего объявения">i</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm icon-arrow-right">ДАЛЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="auditory") {
+<div id="auditory" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Аудитория
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Кому показывать объявления?</div>
+                    <div class="popup__audience">
+                        <label class="popup__audience-item">
+                            <input type="radio" name="audience" value="woman" class="popup__audience-input hidden" hidden>
+                            <span class="popup__audience-content">
+                                <span class="popup__audience-image">
+                                    <img src="@img/audience/people.png" class="popup__audience-color" alt="people">
+                                    <img src="@img/audience/people.png" class="popup__audience-static" alt="people">
+                                </span>
+                                <span class="popup__audience-text">
+                                    Всем
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__audience-item">
+                            <input type="radio" name="audience" value="woman" class="popup__audience-input hidden" hidden>
+                            <span class="popup__audience-content">
+                                <span class="popup__audience-image">
+                                    <img src="@img/audience/woman.svg" class="popup__audience-color" alt="woman">
+                                    <img src="@img/audience/woman.png" class="popup__audience-static" alt="woman">
+                                </span>
+                                <span class="popup__audience-text">
+                                    Женщинам
+                                </span>
+                            </span>
+                        </label>
+                        <label class="popup__audience-item">
+                            <input type="radio" name="audience" value="woman" class="popup__audience-input hidden" hidden>
+                            <span class="popup__audience-content">
+                                <span class="popup__audience-image">
+                                    <img src="@img/audience/man.svg" class="popup__audience-color" alt="man">
+                                    <img src="@img/audience/man.png" class="popup__audience-static" alt="man">
+                                </span>
+                                <span class="popup__audience-text">
+                                    Мужчинам
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="popup__step-items">
+                        <label class="popup__step-item option-btn">
+                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                            <span class="option-btn__text icon-location">
+                                Местоположение
+                                <span class="icon-arrow-short-right"></span>
+                            </span>
+                        </label>
+                        <label class="popup__step-item option-btn">
+                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                            <span class="option-btn__text icon-people">
+                                Любой возраст
+                                <span class="icon-arrow-short-right"></span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm icon-arrow-right">ДАЛЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="age") {
+<div id="age" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Возраст
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Выберите возраст</div>
+                    <div class="popup__step-options">
+                        <label class="popup__step-option option">
+                            <input type="radio" name="age" value="all" class="option__input hidden" hidden>
+                            <span class="option__text">
+                                Любой возраст
+                            </span>
+                        </label>
+                        <label class="popup__step-option option">
+                            <input type="radio" name="age" value="14-18" class="option__input hidden" hidden>
+                            <span class="option__text">
+                                14 - 18
+                            </span>
+                        </label>
+                        <label class="popup__step-option option">
+                            <input type="radio" name="age" value="18-25" class="option__input hidden" hidden>
+                            <span class="option__text">
+                                18 - 25
+                            </span>
+                        </label>
+                        <label class="popup__step-option option">
+                            <input type="radio" name="age" value="25-40" class="option__input hidden" hidden>
+                            <span class="option__text">
+                                25 - 40
+                            </span>
+                        </label>
+                        <label class="popup__step-option option">
+                            <input type="radio" name="age" value="40-65" class="option__input hidden" hidden>
+                            <span class="option__text">
+                                40 - 65
+                            </span>
+                        </label>
+                        <input type="radio" name="age" id="variant" value="variant" class="option__input hidden" hidden>
+                        <label for="variant" class="popup__step-option option">
+                            <span class="option__text">
+                                Свой вариант
+                            </span>
+                        </label>
+                        <div class="options-hidden">
+                            <input type="text" name="start-age" class="input" placeholder="Возраст, от">
+                            <input type="text" name="end-age" class="input" placeholder="Возраст, до">
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
+                    <button type="button" class="l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="place") {
+<div id="place" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body popup__body-md">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        География показов
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Выберите город и\или регион</div>
+                    <form action="#" class="popup__search search">
+                        <button class="search__btn search__btn-sm icon-search"></button>
+                        <input type="text" name="search" class="search__input" placeholder="Введите название города, региона или области">
+                    </form>
+                    <ul class="popup__list">
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Показывать всем!</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Ростов</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Москва</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Волгоград</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Санкт-Петербург</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Севастополь</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Нижний Новгород</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Краснодар</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Казань</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Сочи</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Екатеринбург</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Новосибирск</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Воронеж</a></li>
+                        <li class="popup__list-item"><a href="" class="popup__list-link">Владивосток</a></li>
+                    </ul>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="l-btn l-btn-light l-btn-sm">НАЗАД</button>
+                    <button type="button" class="l-btn l-btn-primary l-btn-sm">ГОТОВО</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="create") {
+<div id="create" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Создание объявления
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__rows">
+                        <div class="popup__row">
+                            <div class="label">
+                                Заголовок рекламного объявления
+                                <div class="label__quantity" id="company-name">
+                                    <span class="label__quantity-current">0</span>
+                                    /
+                                    <span class="label__quantity-total">150</span>
+                                </div>
+                            </div>
+                            <input type="text" name="title" data-maxlength="company-name" maxlength="150" class="input" placeholder="Напиши привлекательный заголовок">
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                Текс рекламного объявления
+                                <div class="label__quantity" id="message-2">
+                                    <span class="label__quantity-current">0</span>
+                                    /
+                                    <span class="label__quantity-total">1500</span>
+                                </div>
+                            </div>
+                            <textarea name="message" class="textarea" data-maxlength="message-2" maxlength="1500" placeholder="Напишите о предлагаемой услуге\товаре, чем они интересны"></textarea>
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                Добавьте изображение или видео
+                            </div>
+                            <label class="file">
+                                <input type="file" name="file" class="file__input hidden" hidden>
+                                <span class="file__content">
+                                    <span class="file__formats">
+                                        <img src="@img/formats.svg" alt="formats">
+                                    </span>
+                                    <span class="file__title">
+                                        Выбери или перетащите в эту область <br> изображение или видео
+                                    </span>
+                                    <span class="file__footer">
+                                        от 938x440px | формат видео 16:9
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm icon-arrow-right">ДАЛЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="preview") {
+<div id="preview" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Предпросмотр
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Стратегия рекламной компании</div>
+                    <div class="popup__step-announcement announcement">
+                        <div class="announcement__header">
+                            <div class="announcement__thumb">
+                                <img src="@img/user.png" alt="user">
+                            </div>
+                            <div class="announcement__person">
+                                <div class="announcement__person-name">
+                                    Иван Семенов
+                                </div>
+                                <div class="announcement__person-subtitle">
+                                    Реклама
+                                </div>
+                            </div>
+                            <div class="announcement__actions">
+                                <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+                                <ul class="announcement__actions-list">
+                                    <li class="announcement__actions-item">
+                                        <button type="button" class="announcement__action">О рекламодателе</button>
+                                    </li>
+                                    <li class="announcement__actions-item">
+                                        <button type="button" class="announcement__action">Не интересно</button>
+                                    </li>
+                                    <li class="announcement__actions-item">
+                                        <button type="button" class="announcement__action">Пожаловаться</button>
+                                    </li>
+                                    <li class="announcement__actions-item">
+                                        <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="announcement__title">
+                            Рекламный заголовок
+                        </div>
+                        <p class="announcement__desc">
+                            Равным образом, реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение стандартных подходов. В своём стремлении повысить качество жизни, они забывают, что существующая теория напрямую зависит от инновационных
+                        </p>
+                        <a href="" class="announcement__more icon-arrow-right">Подробнее</a>
+                        <div class="announcement__image">
+                            <img src="@img/announcement.png" class="cover-image" alt="announcement">
+                            <div class="announcement__stats">
+                                <div class="announcement__stat icon-eye-fill">
+                                    200
+                                </div>
+                                <div class="announcement__stat icon-heart-fill">
+                                    64
+                                </div>
+                            </div>
+                        </div>
+                        <div class="announcement__footer">
+                            <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                            <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                            <button type="button" class="announcement__footer-action icon-share">Поделится</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm icon-arrow-right">ДАЛЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="retargeting") {
+<div id="retargeting" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Ретаргетинг
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Частота показов уникальному пользователю</div>
+                    <div class="popup__rows">
+                        <div class="popup__row">
+                            <div class="label">
+                                Лимит показов уникальному пользователю
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option value="">В день</option>
+                                    <option value="">В неделю</option>
+                                    <option value="">В месяц</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                Частота показов одного объявления уникальному пользователю
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option value="">Без ограничений</option>
+                                    <option value="">1 раз</option>
+                                    <option value="">5 раз</option>
+                                    <option value="">10 раз</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm icon-arrow-right">ДАЛЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="budget") {
+<div id="budget" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Бюджет
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Стратегия распределения бюджета</div>
+                    <div class="popup__rows popup__rows-bordered">
+                        <div class="popup__row">
+                            <div class="label">
+                                Дневной лимит
+                            </div>
+                            <input type="text" name="day-limit" class="input" placeholder="1000₽">
+                        </div>
+                        <div class="popup__row">
+                            <div class="popup__rows">
+                                <div class="popup__row">
+                                    <div class="label">
+                                        Расписание показов
+                                    </div>
+                                    <div class="select">
+                                        <select>
+                                            <option value="">Каждый день, круглосуточно</option>
+                                            <option value="">По будням с 08:00 до 20:00</option>
+                                            <option value="">Почасовая настройка</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="popup__row">
+                                    <div class="label">
+                                        Расписание показов (выбрано&nbsp;<span data-checking-value>6</span>&nbsp;дней)
+                                    </div>
+                                    <div class="popup__checkboxes">
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Mon" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                ПН
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Tue" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                ВТ
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Wed" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                СР
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Thu" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                ЧТ
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Fri" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                ПТ
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked data-checking-item name="day" value="Sat" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                СБ
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" data-checking-item name="day" value="Sun" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                ВС
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="popup__row popup__row-columns">
+                                    <div class="popup__row-column">
+                                        <div class="label">
+                                            Время старта
+                                        </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="">00:00</option>
+                                                <option value="">06:00</option>
+                                                <option value="">12:00</option>
+                                                <option value="">18:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="popup__row-column">
+                                        <div class="label">
+                                            Время окончания
+                                        </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="">00:00</option>
+                                                <option value="">06:00</option>
+                                                <option value="">12:00</option>
+                                                <option value="">18:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__row">
+                            <a href="" class="popup__link icon-shield">
+                                Моя юридическая информация
+                                <span class="popup__link-info info-block" data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae fugiat, aspernatur error consequuntur reprehenderit incidunt impedit, quia cupiditate tempora porro! Sunt quaerat animi debitis magni quis libero placeat molestiae.">i</span>
+                            </a>
+                        </div>
+                        <div class="popup__row">
+                            <label class="checkbox">
+                                <input type="checkbox" name="agreement" class="checkbox__input hidden" hidden>
+                                <span class="checkbox__content">
+                                    Соглашаюсь отправлять данные в ОРД
+                                </span>
+                            </label>
+                            <div class="popup__privacy">
+                                Нажимая на кнопку “Запустить рекламу”, вы принимаете <a href="" class="popup__privacy-link">условия оферты</a>
+                            </div>
+                            <span class="popup__info info-block" data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae fugiat, aspernatur error consequuntur reprehenderit incidunt impedit, quia cupiditate tempora porro! Sunt quaerat animi debitis magni quis libero placeat molestiae.">i</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm icon-arrow-left">НАЗАД</button>
+                    <button type="button" class="popup__next l-btn l-btn-green l-btn-sm">ЗАПУСТИТЬ РЕКЛАМУ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="legal") {
+<div id="legal" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Юридическая информация
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__rows popup__rows-sm">
+                        <div class="popup__row">
+                            <div class="label">
+                                ФИО
+                            </div>
+                            <input type="text" name="person" class="input" placeholder="Иванов Иван Иванович">
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                ИНН
+                                <div class="label__quantity" id="inn">
+                                    <span class="label__quantity-current">0</span>
+                                    /
+                                    <span class="label__quantity-total">12</span>
+                                </div>
+                            </div>
+                            <input type="text" name="inn" data-maxlength="inn" maxlength="12" class="input" placeholder="Введите ИНН">
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                Телефон
+                            </div>
+                            <input type="tel" name="phone" class="input" placeholder="+7 999-999-99-99">
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                ОКВЕД
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option value="">00,00,0 — Другое</option>
+                                    <option value="">43,3 — Дом, ремонт</option>
+                                    <option value="">93,2 — Развлечение и хобби</option>
+                                    <option value="">96 — Красота и здоровье</option>
+                                    <option value="">91 — Lorem, ipsum.</option>
+                                    <option value="">92 — Lorem, ipsum.</option>
+                                    <option value="">93 — Lorem, ipsum.</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="popup__prev l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
+                    <button type="button" class="popup__next l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="settings") {
+<div id="settings" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Настройки отображения
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-subtitle">Чтобы изменить список отображаемых колонок, выберите нужный вам вид и&nbsp;отметьте интересующие галочкой</div>
+                    <div class="popup__step-checkboxes">
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Выбрать всё
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" checked name="setting" value="total" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Показывать “Итого”
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" checked name="setting" value="status" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Статус компаний
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" checked name="setting" value="type" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Тип компаний
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" checked name="setting" value="rate" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Ставка
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="budget" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Дневной бюджет
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="1" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Lorem, ipsum dolor.
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="2" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Lorem, ipsum dolor.
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="3" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Lorem, ipsum dolor.
+                            </span>
+                        </label>
+                        <label class="popup__step-checkbox checkbox">
+                            <input type="checkbox" name="setting" value="4" class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                Lorem, ipsum dolor.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button type="button" class="l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
+                    <button type="button" class="l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="top") {
+<div id="top" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Бюджет
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body">
+                    <div class="popup__step-title title">Пополнение счета</div>
+                    <div class="popup__rows popup__rows-sm">
+                        <div class="popup__row">
+                            <div class="label">
+                                Сумма к оплате
+                            </div>
+                            <input type="num" name="sum" class="input" placeholder="Введите сумму пополнения">
+                        </div>
+                        <div class="popup__row">
+                            <div class="label">
+                                Сумма, поступающая на ваш счет (НДС – 20%)
+                            </div>
+                            <input type="num" name="nds" class="input" placeholder="Введите сумму пополнения">
+                        </div>
+                        <div class="popup__row">
+                            <button type="button" class="l-btn l-btn-primary l-btn-fullwidth">Пополнить счет</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="product") {
+<div id="product" class="popup">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__calc">
+                <div class="popup__calc-title title">Не можем посчитать КБЖУ для продукта</div>
+                <div class="popup__calc-desc">
+                    Если у вас данные по нему просим заполнить значения на 100гр
+                </div>
+                <div class="popup__rows">
+                    <div class="popup__row popup__grid">
+                        <input type="text" name="name-product" class="input input-lg" placeholder="Введите названия продукта">
+                        <div class="select">
+                            <select>
+                                <option value="0">Группа продуктов</option>
+                                <option value="1">Группа продуктов № 1</option>
+                                <option value="2">Группа продуктов № 2</option>
+                                <option value="3">Группа продуктов № 3</option>
+                            </select>
+                        </div>
+                        <input type="num" name="cal" class="input" placeholder="Калории">
+                        <input type="num" name="proteins" class="input" placeholder="Белки">
+                        <input type="num" name="fats" class="input" placeholder="Жиры">
+                        <input type="num" name="carbohydrates" class="input" placeholder="Углеводы">
+                    </div>
+                    <div class="popup__row">
+                        <button type="button" class="l-btn l-btn-primary l-btn-fullwidth">Добавить продукт</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="certs") {
+
+<div id="certs" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-lg">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">
+                        Сертификаты
+                    </div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__certs">
+                    <div class="popup__cert">
+                        <img src="@img/certs/03.png" alt="cert">
+                    </div>
+                    <div class="popup__cert">
+                        <img src="@img/certs/02.png" alt="cert">
+                    </div>
+                    <div class="popup__cert">
+                        <img src="@img/certs/01.png" alt="cert">
+                    </div>
+                    <div class="popup__cert">
+                        <img src="@img/certs/04.png" alt="cert">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@@if (modal==="date-select") {
+<div id="date-select" class="popup">
+    <div class="popup__content">
+        <div class="popup__body ofsset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-lg">
+                План: Легкий
+            </div>
+            <div class="popup__subtitle">
+                Выбор даты старта плана
+            </div>
+            <div class="popup__selecting">
+                <div class="label">
+                    Март
+                </div>
+                <div class="popup__checkboxes">
+                    <label class="checkbox-btn">
+                        <input type="radio" checked name="day-start" value="22" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            22
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="23" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            23
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="24" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            24
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="25" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            25
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="26" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            26
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="27" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            27
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="28" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            28
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__selecting-btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@@if (modal==="cancel-bid") {
+<div id="cancel-bid" class="popup ">
+    <div class="popup__content">
+        <div class="popup__body ofsset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-lg">
+                Отказ от прохожения плана
+            </div>
+            <div class="popup__subtitle">
+                Вкраце напишите причину отказа
+            </div>
+            <div class="popup__selecting">
+                <input type="text" name="reason" class="input input-white" placeholder="Причина отказа">
+                <div class="popup__selecting-btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@@if (modal==="cancel-diet") {
+<div id="cancel-diet" class="popup ">
+    <div class="popup__content">
+        <div class="popup__body ofsset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-lg">
+                Вы уверены то хотите отменить диету <br>
+                <span class="accent-color">“легкая диета для похудения”?</span>
+            </div>
+            <div class="popup__selecting">
+                <div class="popup__selecting-btns">
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-light">Отменить диету</button>
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Вернутся назад</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

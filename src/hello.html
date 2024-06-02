@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                @@include('./html/_rk.html', {
+                "modal": "start",
+                "open": false
+                })
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "start"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

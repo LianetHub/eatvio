@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body class="dark-theme">
+        <div class="wrapper">
+            <main class="page">
+                <section class="arm">
+                    <div class="arm__container">
+                        <form action="#" class="arm__login">
+                            <h2 class="arm__login-title">
+                                Вход в систему
+                            </h2>
+                            <div class="arm__login-body">
+                                <div class="arm__login-row">
+                                    <label for="login" class="label">Логин или e-mail</label>
+                                    <input type="text" name="login" id="login" class="input" placeholder="Login">
+                                </div>
+                                <div class="arm__login-row">
+                                    <label for="password" class="label">Пароль</label>
+                                    <input type="password" name="password" id="password" class="input" placeholder="********">
+                                </div>
+                                <button type="submit" class="l-btn l-btn-primary l-btn-sm l-btn-fullwidth">Войти</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>

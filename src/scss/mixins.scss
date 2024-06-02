@@ -1,0 +1,92 @@
+//Подключение шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// rem
+@function rem($px) {
+	$result: math.div($px, 16);
+	@return #{$result}rem;
+}
+// rem
+
+// rem
+@function em($px, $value: 16) {
+	$result: math.div($px, $value);
+	@return #{$result}em;
+}
+// rem
+
+//К псевдоэлементам
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+//Cтилизация плэйсхолдеров
+@mixin placeholder($color: currentColor, $size: inherit, $weight: 400) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+}
+
+//Aдаптивное свойствo
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	$minSizeValue: $minSize + px;
+	$regularSize: $startSize + px;
+
+	@if $property == "font-size" {
+		$minSizeValue: math.div($minSize, 16) + rem;
+		$regularSize: math.div($startSize, 16) + rem;
+	}
+
+	@if $type == 1 {
+		//только если меньше контейнера
+		#{$property}: $regularSize;
+		@media (max-width: $md0) {
+			#{$property}: calc(
+				#{$minSizeValue} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContainer - $minWidth})
+			);
+		}
+	} @else if $type == 2 {
+		//только если больше контейнера
+		#{$property}: $regularSize;
+		@media (min-width: $md0) {
+			#{$property}: calc(
+				#{$minSizeValue} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth})
+			);
+		}
+	} @else {
+		// всегда
+		#{$property}: calc(#{$minSizeValue} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+	}
+}
+
+// Поддрежка свойств
+

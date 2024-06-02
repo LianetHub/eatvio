@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__body">
+                            <aside class="content__side content__side-sm">
+                                <nav class="content__menu">
+                                    <ul class="content__menu-list">
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-mouthpiece active">Компании</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-stats">Статистика</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-wallet">Бюджет</a>
+                                        </li>
+                                        <li class="content__menu-separator"></li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-gear">Настройки</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-logout">Выход</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <div class="content__main">
+                                <div class="content__block">
+                                    <div class="content__breadcrumbs">
+                                        <a href="rk.html" class="content__breadcrumbs-link">Компании</a>
+                                        <a href="create.html" class="content__breadcrumbs-link">Создание компании</a>
+                                        <a href="ad.html" class="content__breadcrumbs-link">Создание объявления</a>
+                                        <a href="preview.html" class="content__breadcrumbs-link active">Предпросмотр</a>
+                                    </div>
+                                    <div class="content__title title">
+                                        Предпросмотр
+                                    </div>
+                                </div>
+                                <div class="content__announcement announcement announcement-lg">
+                                    <div class="announcement__header">
+                                        <div class="announcement__thumb">
+                                            <img src="@img/user.png" alt="user">
+                                        </div>
+                                        <div class="announcement__person">
+                                            <div class="announcement__person-name">
+                                                Иван Семенов
+                                            </div>
+                                            <div class="announcement__person-subtitle">
+                                                Реклама
+                                            </div>
+                                        </div>
+                                        <div class="announcement__actions">
+                                            <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+                                            <ul class="announcement__actions-list">
+                                                <li class="announcement__actions-item">
+                                                    <button type="button" class="announcement__action">О рекламодателе</button>
+                                                </li>
+                                                <li class="announcement__actions-item">
+                                                    <button type="button" class="announcement__action">Не интересно</button>
+                                                </li>
+                                                <li class="announcement__actions-item">
+                                                    <button type="button" class="announcement__action">Пожаловаться</button>
+                                                </li>
+                                                <li class="announcement__actions-item">
+                                                    <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="announcement__title">
+                                        Рекламный заголовок
+                                    </div>
+                                    <p class="announcement__desc">
+                                        Равным образом, реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение стандартных подходов. В своём стремлении повысить качество жизни, они забывают, что существующая теория напрямую зависит от инновационных
+                                    </p>
+                                    <a href="" class="announcement__more icon-arrow-right">Подробнее</a>
+                                    <div class="announcement__image">
+                                        <img src="@img/announcement.png" class="cover-image" alt="announcement">
+                                        <div class="announcement__stats">
+                                            <div class="announcement__stat icon-eye-fill">
+                                                200
+                                            </div>
+                                            <div class="announcement__stat icon-heart-fill">
+                                                64
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="announcement__footer">
+                                        <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                        <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                        <button type="button" class="announcement__footer-action icon-share">Поделится</button>
+                                    </div>
+                                </div>
+
+                                <div class="content__footer">
+                                    <button type="button" class="content__footer-btn l-btn l-btn-light">
+                                        Назад
+                                    </button>
+                                    <button type="button" class="content__footer-btn l-btn l-btn-primary">
+                                        Опубликовать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="consults">
+                    <div class="consults__container container-sm">
+                        <div class="consults__header">
+                            <a href="" class="consults__title title icon-arrow-short-left">
+                                АРХИВ КОНСУЛЬТАЦИЙ
+                            </a>
+                            <div class="consults__column consults__column-lg">
+                                <div class="consults__column-caption">
+                                    Всего консультаций
+                                </div>
+                                <div class="consults__column-value blue">
+                                    9
+                                </div>
+                            </div>
+                            <div class="consults__column consults__column-lg">
+                                <div class="consults__column-caption">
+                                    В процессе
+                                </div>
+                                <div class="consults__column-value blue">
+                                    2
+                                </div>
+                            </div>
+                            <div class="consults__column consults__column-lg">
+                                <div class="consults__column-caption">
+                                    Завершено
+                                </div>
+                                <div class="consults__column-value blue">
+                                    6
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consults__body archive">
+                            <div class="archive__body">
+                                <div class="archive__header">
+                                    <div class="archive__all">
+                                        Всего консультаций: <strong>9</strong>
+                                    </div>
+                                    <div class="archive__stats">
+                                        <div class="archive__stat">
+                                            В процессе: <span class="brown">2</span>
+                                        </div>
+                                        <div class="archive__stat">
+                                            Завершено: <span class="green">6</span>
+                                        </div>
+                                        <div class="archive__stat">
+                                            Отменено: <span class="red">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="archive__filtres">
+                                    <div class="archive__filtres-caption">
+                                        Фильтр консультаций
+                                    </div>
+                                    <div class="archive__filtres-body">
+                                        <div class="archive__dates">
+                                            <div class="archive__date icon-calendar">
+                                                <input type="text" name="start-date" class="input date" placeholder="От">
+                                            </div>
+                                            -
+                                            <div class="archive__date icon-calendar">
+                                                <input type="text" name="end-date" class="input date" placeholder="До">
+                                            </div>
+                                        </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="1" selected>Все консультации</option>
+                                                <option value="2">Действие 2</option>
+                                                <option value="3">Действие 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="archive__table">
+                                <table>
+                                    <thead class="archive__table-header">
+                                        <tr>
+                                            <th>Дата начала</th>
+                                            <th>Участник</th>
+                                            <th>Название плана</th>
+                                            <th>Сумма</th>
+                                            <th>Статус</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12 Мая 2022</td>
+                                            <td>
+                                                <div class="archive__table-row">
+                                                    <img src="@img/user-2.png">
+                                                    Анна Власова
+                                                </div>
+                                            </td>
+                                            <td>Легкий</td>
+                                            <td>2 000 ₽</td>
+                                            <td class="archive__table-brown">В процессе</td>
+                                            <td>
+                                                <a href="" class="archive__table-question">?</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10 Мая 2022</td>
+                                            <td>
+                                                <div class="archive__table-row">
+                                                    <img src="@img/user-2.png">
+                                                    Анна Власова
+                                                </div>
+                                            </td>
+                                            <td>Средний</td>
+                                            <td>500 ₽</td>
+                                            <td class="archive__table-green">Завершён</td>
+                                            <td>
+                                                <a href="" class="archive__table-question">?</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10 Мая 2022</td>
+                                            <td>
+                                                <div class="archive__table-row">
+                                                    <img src="@img/user-2.png">
+                                                    Анна Власова
+                                                </div>
+                                            </td>
+                                            <td>Эксперт</td>
+                                            <td>3 000 ₽</td>
+                                            <td class="archive__table-red">Отменён</td>
+                                            <td>
+                                                <a href="" class="archive__table-question">?</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_logout.html')
+        </div>
+        @@include('html/_footer.html')
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

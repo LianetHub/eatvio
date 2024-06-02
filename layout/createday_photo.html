@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Myday</title>
+	<style>@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
+	<link type="text/css"  rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css"  rel="stylesheet" href="css/datepicker.min.css" />  
+	<link type="text/css"  rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.steps.min.js"></script>
+	<script src="js/datepicker.js"></script>
+</head>
+<body>
+
+<svg width=0 height=0 class=d-none>
+
+<symbol id="SearchIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#7B8794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.9999 18.9999L14.6499 14.6499" stroke="#7B8794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="Main" width="26" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.0926 13.2793V24.9999H14.9533V19.4186H10.4866V24.9999H4.34863V13.2793" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 11.6046L12.7206 1L24.4419 11.6046" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="Lenta" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.70596 14.6708C9.86516 14.6708 10.806 15.7146 10.806 17.0038V21.667C10.806 22.2857 10.5847 22.8791 10.1909 23.3166C9.79705 23.7541 9.26291 23.9999 8.70596 23.9999H2.09999C1.54304 23.9999 1.0089 23.7541 0.615073 23.3166C0.221249 22.8791 0 22.2857 0 21.667V17.0038C0 15.7146 0.940796 14.6708 2.09999 14.6708H8.70596V14.6708ZM21.8999 14.6708C23.0591 14.6708 23.9999 15.7146 23.9999 17.0038V21.667C23.9999 22.2857 23.7786 22.8791 23.3848 23.3166C22.991 23.7541 22.4569 23.9999 21.8999 23.9999H15.2939C14.737 23.9999 14.2028 23.7541 13.809 23.3166C13.4152 22.8791 13.1939 22.2857 13.1939 21.667V17.0038C13.1939 15.7146 14.1347 14.6708 15.2939 14.6708H21.8999V14.6708ZM8.70596 16.6705H2.09999C2.02043 16.6705 1.94412 16.7056 1.88786 16.7681C1.8316 16.8306 1.79999 16.9154 1.79999 17.0038V21.667C1.79999 21.8523 1.93439 22.0002 2.09999 22.0002H8.70596C8.78553 22.0002 8.86183 21.9651 8.91809 21.9026C8.97435 21.8401 9.00596 21.7553 9.00596 21.667V17.0038C9.00596 16.9154 8.97435 16.8306 8.91809 16.7681C8.86183 16.7056 8.78553 16.6705 8.70596 16.6705V16.6705ZM21.8999 16.6705H15.2939C15.2144 16.6705 15.1381 16.7056 15.0818 16.7681C15.0255 16.8306 14.9939 16.9154 14.9939 17.0038V21.667C14.9939 21.8523 15.1283 22.0002 15.2939 22.0002H21.8999C21.9795 22.0002 22.0558 21.9651 22.112 21.9026C22.1683 21.8401 22.1999 21.7553 22.1999 21.667V17.0038C22.1999 16.9154 22.1683 16.8306 22.112 16.7681C22.0558 16.7056 21.9795 16.6705 21.8999 16.6705V16.6705ZM21.8999 0C23.0591 0 23.9999 1.04515 23.9999 2.33293V9.66501C23.9999 10.2837 23.7786 10.8771 23.3848 11.3146C22.991 11.7522 22.4569 11.9979 21.8999 11.9979H2.09999C1.54304 11.9979 1.0089 11.7522 0.615073 11.3146C0.221249 10.8771 0 10.2837 0 9.66501V2.33293C1.96854e-05 1.74745 0.198204 1.18337 0.555213 0.752683C0.912222 0.321992 1.40195 0.0561759 1.92719 0.00799869L2.09999 0H21.8999ZM21.8999 1.99966H2.09999L2.03159 2.00899C1.96578 2.02611 1.90711 2.06741 1.86507 2.12621C1.82304 2.18501 1.8001 2.25785 1.79999 2.33293V9.66501C1.79999 9.84898 1.93439 9.99829 2.09999 9.99829H21.8999C21.9795 9.99829 22.0558 9.96318 22.112 9.90067C22.1683 9.83817 22.1999 9.7534 22.1999 9.66501V2.33293C22.1999 2.24454 22.1683 2.15977 22.112 2.09727C22.0558 2.03477 21.9795 1.99966 21.8999 1.99966Z"/>
+</symbol>
+
+<symbol id="Plan" width="22" height="24" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 1H20.6366V24.9999H1V1Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8179 6.33301H11.3633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8179 13H11.3633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8179 19H11.3633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.81836 6.45502L5.90902 7.54568L8.63634 4.81836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.81836 12.9999L5.90902 14.0906L8.63634 11.3633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="6.45502" cy="19.5458" r="1.63666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="MainChat" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.9709 1.56935C22.3871 1.56935 22.7863 1.73469 23.0806 2.029C23.3749 2.32331 23.5402 2.72248 23.5402 3.1387V15.6935C23.5402 16.1097 23.3749 16.5089 23.0806 16.8032C22.7863 17.0975 22.3871 17.2628 21.9709 17.2628H6.92711C6.09474 17.263 5.29653 17.5938 4.70805 18.1825L1.56935 21.3212V3.1387C1.56935 2.72248 1.73469 2.32331 2.029 2.029C2.32331 1.73469 2.72248 1.56935 3.1387 1.56935H21.9709ZM3.1387 0C2.30626 0 1.50792 0.330683 0.919304 0.919304C0.330683 1.50792 0 2.30626 0 3.1387L0 23.2154C3.29797e-05 23.3706 0.0461272 23.5224 0.132449 23.6515C0.21877 23.7805 0.341439 23.8811 0.484928 23.9404C0.628417 23.9997 0.786277 24.0151 0.938527 23.9847C1.09078 23.9542 1.23057 23.8793 1.34022 23.7694L5.81758 19.292C6.11182 18.9977 6.51092 18.8323 6.92711 18.8322H21.9709C22.8033 18.8322 23.6017 18.5015 24.1903 17.9129C24.7789 17.3243 25.1096 16.5259 25.1096 15.6935V3.1387C25.1096 2.30626 24.7789 1.50792 24.1903 0.919304C23.6017 0.330683 22.8033 0 21.9709 0L3.1387 0Z"/>
+<path d="M4.70801 5.49268C4.70801 5.28457 4.79068 5.08499 4.93783 4.93783C5.08499 4.79068 5.28457 4.70801 5.49268 4.70801H19.6168C19.8249 4.70801 20.0245 4.79068 20.1717 4.93783C20.3188 5.08499 20.4015 5.28457 20.4015 5.49268C20.4015 5.70079 20.3188 5.90038 20.1717 6.04753C20.0245 6.19469 19.8249 6.27736 19.6168 6.27736H5.49268C5.28457 6.27736 5.08499 6.19469 4.93783 6.04753C4.79068 5.90038 4.70801 5.70079 4.70801 5.49268ZM4.70801 9.41606C4.70801 9.20795 4.79068 9.00836 4.93783 8.86121C5.08499 8.71405 5.28457 8.63138 5.49268 8.63138H19.6168C19.8249 8.63138 20.0245 8.71405 20.1717 8.86121C20.3188 9.00836 20.4015 9.20795 20.4015 9.41606C20.4015 9.62416 20.3188 9.82375 20.1717 9.9709C20.0245 10.1181 19.8249 10.2007 19.6168 10.2007H5.49268C5.28457 10.2007 5.08499 10.1181 4.93783 9.9709C4.79068 9.82375 4.70801 9.62416 4.70801 9.41606ZM4.70801 13.3394C4.70801 13.1313 4.79068 12.9317 4.93783 12.7846C5.08499 12.6374 5.28457 12.5548 5.49268 12.5548H13.3394C13.5475 12.5548 13.7471 12.6374 13.8943 12.7846C14.0414 12.9317 14.1241 13.1313 14.1241 13.3394C14.1241 13.5475 14.0414 13.7471 13.8943 13.8943C13.7471 14.0414 13.5475 14.1241 13.3394 14.1241H5.49268C5.28457 14.1241 5.08499 14.0414 4.93783 13.8943C4.79068 13.7471 4.70801 13.5475 4.70801 13.3394Z"/>
+</symbol>
+
+<symbol id="Profile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9999 0C8.32396 0 5.33331 2.83325 5.33331 6.31576C5.33331 9.79827 8.32396 12.6315 11.9999 12.6315C15.6759 12.6315 18.6666 9.79827 18.6666 6.31576C18.6666 2.83325 15.6759 0 11.9999 0ZM11.9999 10.1052C9.79462 10.1052 7.99996 8.40502 7.99996 6.31576C7.99996 4.22651 9.79462 2.5263 11.9999 2.5263C14.2053 2.5263 15.9999 4.22651 15.9999 6.31576C15.9999 8.40502 14.2053 10.1052 11.9999 10.1052ZM23.9999 23.9999V22.7367C23.9999 17.8622 19.8119 13.8947 14.6666 13.8947H9.33329C4.18665 13.8947 0 17.8622 0 22.7367V23.9999H2.66665V22.7367C2.66665 19.2542 5.65731 16.421 9.33329 16.421H14.6666C18.3426 16.421 21.3332 19.2542 21.3332 22.7367V23.9999H23.9999Z"/>
+</symbol>
+
+<symbol id="Chat" width="21" height="24" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 13C19.5 13.5304 19.2893 14.0391 18.9142 14.4142C18.5391 14.7893 18.0304 15 17.5 15H5.5L1.5 19V3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1H17.5C18.0304 1 18.5391 1.21071 18.9142 1.58579C19.2893 1.96086 19.5 2.46957 19.5 3V13Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#2F80ED"/>
+</symbol>
+
+<symbol id="GoBack" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 8H1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#323F4B"/>
+<path d="M8.5 15L1.5 8L8.5 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#323F4B"/>
+</symbol>
+
+<symbol id="Clock" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.6257 8.06143C20.0286 7.66252 20.3484 7.18759 20.5664 6.66418C20.7844 6.14077 20.8963 5.57929 20.8957 5.01229C20.8957 2.6357 18.9661 0.709543 16.5872 0.7092H16.5854C15.3925 0.7092 14.3117 1.19391 13.5318 1.97685L16.0743 4.51523L15.5015 5.09421C14.0704 4.11102 12.3743 3.58576 10.638 3.58798C8.90167 3.58564 7.20562 4.11078 5.77443 5.09387L5.16048 4.47307L7.64436 1.96108C7.24901 1.5571 6.77694 1.23618 6.25586 1.01714C5.73479 0.798098 5.1752 0.685362 4.60996 0.685547C2.24503 0.685547 0.328125 2.62404 0.328125 5.01537C0.328125 6.21515 0.810093 7.30077 1.58995 8.08474L4.09988 5.54636L4.6055 6.05746C3.77997 6.86538 3.12441 7.83027 2.67741 8.89536C2.2304 9.96045 2.00099 11.1042 2.00267 12.2593C2.00267 13.9804 2.50418 15.5833 3.36527 16.9326L2.64232 21.2531H3.28198C3.68167 21.2531 3.82942 20.7839 4.08925 20.2001C4.32028 19.6762 4.54904 19.1512 4.77553 18.6253C6.31501 20.0568 8.37417 20.932 10.638 20.932C12.9014 20.932 14.9603 20.0561 16.5004 18.6253C16.7269 19.1513 16.9557 19.6762 17.187 20.2001C17.4472 20.7839 17.5943 21.2531 17.994 21.2531H18.6336L17.9117 16.9316C18.803 15.5365 19.2757 13.9151 19.2736 12.2596C19.2753 11.1046 19.0459 9.96089 18.5989 8.89585C18.1519 7.83082 17.4963 6.86599 16.6708 6.05815L17.1425 5.58167L19.6257 8.06143ZM17.3547 12.2596C17.3547 15.9848 14.3473 19.0051 10.638 19.0051C6.92861 19.0051 3.92163 15.9848 3.92163 12.2596C3.92163 8.53517 6.92827 5.51516 10.638 5.51516C14.347 5.51516 17.3547 8.53483 17.3547 12.2596Z" fill="#323F4B"/>
+<path d="M11.2771 11.1538V7.44238H9.99816V11.1538C9.80403 11.266 9.64277 11.4273 9.53051 11.6214C9.41826 11.8156 9.35895 12.0358 9.35851 12.26C9.35851 12.5449 9.45346 12.8061 9.60943 13.0189L6.70117 15.9594L7.09881 16.3625L10.039 13.3895C10.2179 13.4855 10.4201 13.5451 10.6378 13.5451C11.1102 13.5451 11.5178 13.2853 11.7399 12.9027H13.8361V11.6183H11.7399C11.6287 11.4258 11.4692 11.2657 11.2771 11.1538Z" fill="#323F4B"/>
+</symbol>
+
+<symbol id="Sleep" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.6429 3.42857H15.1494V2.57143L16.5582 0.857143H15.1494V0H17.6429V0.857143L16.2382 2.57143H17.6429V3.42857ZM14.3182 5.14286H11.8247V4.28571L13.2335 2.57143H11.8247V1.71429H14.3182V2.57143L12.9135 4.28571H14.3182V5.14286ZM10.9935 6.85714H8.5V6L9.90883 4.28571H8.5V3.42857H10.9935V4.28571L9.58883 6H10.9935V6.85714Z" fill="#323F4B"/>
+<path d="M7.35714 17.1431C9.25428 17.1431 10.7857 15.6117 10.7857 13.7146C10.7857 11.8174 9.25428 10.286 7.35714 10.286C5.46 10.286 3.92857 11.8174 3.92857 13.7146C3.92857 15.6117 5.46 17.1431 7.35714 17.1431ZM7.35714 12.5717C7.98571 12.5717 8.5 13.086 8.5 13.7146C8.5 14.3431 7.98571 14.8574 7.35714 14.8574C6.72857 14.8574 6.21429 14.3431 6.21429 13.7146C6.21429 13.086 6.72857 12.5717 7.35714 12.5717ZM21.0714 9.14314H11.9286V18.286H2.78571V6.85742H0.5V24.0003H2.78571V20.5717H23.3571V24.0003H25.6429V13.7146C25.6429 11.1888 23.5971 9.14314 21.0714 9.14314ZM23.3571 18.286H14.2143V11.4289H21.0714C22.3286 11.4289 23.3571 12.4574 23.3571 13.7146V18.286Z" fill="#323F4B"/>
+</symbol>
+
+<symbol id="Time" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 21C17.0228 21 21.5 16.5228 21.5 11C21.5 5.47715 17.0228 1 11.5 1C5.97715 1 1.5 5.47715 1.5 11C1.5 16.5228 5.97715 21 11.5 21Z" stroke="#7B8794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.5 5V11L15.5 13" stroke="#7B8794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#323F4B"/>
+</symbol>
+
+<symbol id="Settings" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 18.75C17.0711 18.75 18.75 17.0711 18.75 15C18.75 12.9289 17.0711 11.25 15 11.25C12.9289 11.25 11.25 12.9289 11.25 15C11.25 17.0711 12.9289 18.75 15 18.75Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.25 18.75C24.0836 19.127 24.034 19.5452 24.1075 19.9507C24.181 20.3562 24.3743 20.7304 24.6625 21.025L24.7375 21.1C24.9699 21.3322 25.1543 21.6079 25.2801 21.9114C25.406 22.2149 25.4707 22.5402 25.4707 22.8688C25.4707 23.1973 25.406 23.5226 25.2801 23.8261C25.1543 24.1296 24.9699 24.4053 24.7375 24.6375C24.5053 24.8699 24.2296 25.0543 23.9261 25.1801C23.6226 25.306 23.2973 25.3707 22.9688 25.3707C22.6402 25.3707 22.3149 25.306 22.0114 25.1801C21.7079 25.0543 21.4322 24.8699 21.2 24.6375L21.125 24.5625C20.8304 24.2743 20.4562 24.081 20.0507 24.0075C19.6452 23.934 19.227 23.9836 18.85 24.15C18.4803 24.3085 18.165 24.5716 17.9429 24.9069C17.7208 25.2423 17.6016 25.6353 17.6 26.0375V26.25C17.6 26.913 17.3366 27.5489 16.8678 28.0178C16.3989 28.4866 15.763 28.75 15.1 28.75C14.437 28.75 13.8011 28.4866 13.3322 28.0178C12.8634 27.5489 12.6 26.913 12.6 26.25V26.1375C12.5903 25.7238 12.4564 25.3225 12.2156 24.9859C11.9749 24.6493 11.6384 24.3929 11.25 24.25C10.873 24.0836 10.4548 24.034 10.0493 24.1075C9.64377 24.181 9.2696 24.3743 8.975 24.6625L8.9 24.7375C8.66782 24.9699 8.3921 25.1543 8.0886 25.2801C7.78511 25.406 7.45979 25.4707 7.13125 25.4707C6.80271 25.4707 6.47739 25.406 6.1739 25.2801C5.8704 25.1543 5.59468 24.9699 5.3625 24.7375C5.13006 24.5053 4.94566 24.2296 4.81985 23.9261C4.69404 23.6226 4.62928 23.2973 4.62928 22.9688C4.62928 22.6402 4.69404 22.3149 4.81985 22.0114C4.94566 21.7079 5.13006 21.4322 5.3625 21.2L5.4375 21.125C5.72567 20.8304 5.91898 20.4562 5.99251 20.0507C6.06603 19.6452 6.01639 19.227 5.85 18.85C5.69155 18.4803 5.42844 18.165 5.09308 17.9429C4.75772 17.7208 4.36473 17.6016 3.9625 17.6H3.75C3.08696 17.6 2.45107 17.3366 1.98223 16.8678C1.51339 16.3989 1.25 15.763 1.25 15.1C1.25 14.437 1.51339 13.8011 1.98223 13.3322C2.45107 12.8634 3.08696 12.6 3.75 12.6H3.8625C4.27624 12.5903 4.67751 12.4564 5.01412 12.2156C5.35074 11.9749 5.60714 11.6384 5.75 11.25C5.91639 10.873 5.96603 10.4548 5.89251 10.0493C5.81898 9.64377 5.62567 9.2696 5.3375 8.975L5.2625 8.9C5.03006 8.66782 4.84566 8.3921 4.71985 8.0886C4.59404 7.78511 4.52928 7.45979 4.52928 7.13125C4.52928 6.80271 4.59404 6.47739 4.71985 6.1739C4.84566 5.8704 5.03006 5.59468 5.2625 5.3625C5.49468 5.13006 5.7704 4.94566 6.0739 4.81985C6.37739 4.69404 6.70271 4.62928 7.03125 4.62928C7.35979 4.62928 7.68511 4.69404 7.9886 4.81985C8.2921 4.94566 8.56782 5.13006 8.8 5.3625L8.875 5.4375C9.1696 5.72567 9.54377 5.91898 9.94926 5.99251C10.3548 6.06603 10.773 6.01639 11.15 5.85H11.25C11.6197 5.69155 11.935 5.42844 12.1571 5.09308C12.3792 4.75772 12.4984 4.36473 12.5 3.9625V3.75C12.5 3.08696 12.7634 2.45107 13.2322 1.98223C13.7011 1.51339 14.337 1.25 15 1.25C15.663 1.25 16.2989 1.51339 16.7678 1.98223C17.2366 2.45107 17.5 3.08696 17.5 3.75V3.8625C17.5016 4.26473 17.6208 4.65772 17.8429 4.99308C18.065 5.32844 18.3803 5.59155 18.75 5.75C19.127 5.91639 19.5452 5.96603 19.9507 5.89251C20.3562 5.81898 20.7304 5.62567 21.025 5.3375L21.1 5.2625C21.3322 5.03006 21.6079 4.84566 21.9114 4.71985C22.2149 4.59404 22.5402 4.52928 22.8688 4.52928C23.1973 4.52928 23.5226 4.59404 23.8261 4.71985C24.1296 4.84566 24.4053 5.03006 24.6375 5.2625C24.8699 5.49468 25.0543 5.7704 25.1801 6.0739C25.306 6.37739 25.3707 6.70271 25.3707 7.03125C25.3707 7.35979 25.306 7.68511 25.1801 7.9886C25.0543 8.2921 24.8699 8.56782 24.6375 8.8L24.5625 8.875C24.2743 9.1696 24.081 9.54377 24.0075 9.94926C23.934 10.3548 23.9836 10.773 24.15 11.15V11.25C24.3085 11.6197 24.5716 11.935 24.9069 12.1571C25.2423 12.3792 25.6353 12.4984 26.0375 12.5H26.25C26.913 12.5 27.5489 12.7634 28.0178 13.2322C28.4866 13.7011 28.75 14.337 28.75 15C28.75 15.663 28.4866 16.2989 28.0178 16.7678C27.5489 17.2366 26.913 17.5 26.25 17.5H26.1375C25.7353 17.5016 25.3423 17.6208 25.0069 17.8429C24.6716 18.065 24.4085 18.3803 24.25 18.75V18.75Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="Smile_1" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 0C6.71667 0 0 6.71667 0 15C0 20.0425 2.49667 24.4933 6.31167 27.2125C6.39833 21.8475 4.4475 15.8333 1.17 15.8333C0.783333 15.8333 0.47 15.8883 0.209167 15.9858C0.461667 15.355 1.00917 15 2.03333 15C5.59167 15 7.58833 22.0883 7.11 27.74C9.405 29.1642 12.1017 30 15 30C17.8992 30 20.5967 29.1633 22.8917 27.7392C22.4108 22.0667 24.4067 15 27.9675 15C28.995 15 29.5442 15.355 29.7942 15.9858C29.5325 15.8883 29.2183 15.8333 28.83 15.8333C25.5483 15.8333 23.5983 21.8325 23.6883 27.2125C27.5042 24.4933 30 20.0425 30 15C30 6.71667 23.2842 0 15 0Z" fill="#FFCC4D"/>
+<path d="M15 0C6.71667 0 0 6.71667 0 15C0 15.9933 0.1025 16.9633 0.286667 17.9033C0.481667 17.1842 0.786667 16.4942 1.16833 15.8333C0.7825 15.8333 0.47 15.8883 0.21 15.9858C0.43 15.4367 0.895 15.1125 1.68333 15.0342C4.17667 11.5517 9.1975 9.16667 15 9.16667C20.8033 9.16667 25.8233 11.5508 28.3167 15.0333C29.1083 15.1117 29.575 15.435 29.7933 15.9858C29.5333 15.8883 29.2192 15.8333 28.8325 15.8333C29.2142 16.4942 29.5183 17.1842 29.7142 17.9033C29.8983 16.9633 30 15.9933 30 15C30 6.71667 23.2842 0 15 0Z" fill="#BDDDF4"/>
+<path d="M6.12241 9.92495C5.33408 12.5716 6.21158 15.1691 8.08325 15.7266C9.95491 16.2849 12.1116 14.5916 12.8991 11.9449C13.6874 9.29911 12.8107 6.70078 10.9399 6.14328C9.06825 5.58578 6.91158 7.27911 6.12241 9.92495ZM23.8766 9.92495C24.6649 12.5716 23.7874 15.1691 21.9166 15.7266C20.0449 16.2849 17.8882 14.5916 17.1007 11.9449C16.3124 9.29911 17.1899 6.70078 19.0599 6.14328C20.9307 5.58578 23.0874 7.27911 23.8766 9.92495Z" fill="#F5F8FA"/>
+<path d="M14.9997 15C12.7022 15 10.833 16.8692 10.833 19.1667V24.1667C10.833 26.4642 12.7022 28.3333 14.9997 28.3333C17.2972 28.3333 19.1663 26.4642 19.1663 24.1667V19.1667C19.1663 16.8692 17.2972 15 14.9997 15Z" fill="#664500"/>
+<path d="M1.17013 15.8335C0.783467 15.8335 0.470133 15.8885 0.2093 15.986C0.2693 15.8369 0.348467 15.706 0.443467 15.5894C-1.1082 17.4985 2.3743 23.7835 0.6818 30.0002H6.06513C7.0568 24.2002 5.03597 15.8335 1.17013 15.8335ZM29.7943 15.986C29.5326 15.8885 29.2185 15.8335 28.8301 15.8335C24.9626 15.8335 22.9426 24.1685 23.936 30.0002H29.3193C27.731 24.1294 30.6993 18.2594 29.7943 15.986Z" fill="#FCAB40"/>
+</symbol>
+
+<symbol id="Smile_2" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.9868 30.2021C25.3269 30.2021 32.0878 23.4411 32.0878 15.1011C32.0878 6.76097 25.3269 0 16.9868 0C8.64671 0 1.88574 6.76097 1.88574 15.1011C1.88574 23.4411 8.64671 30.2021 16.9868 30.2021Z" fill="#FFCC4D"/>
+<path d="M10.7071 19.8169C10.7448 19.9671 11.6869 23.4906 16.9866 23.4906C22.287 23.4906 23.2283 19.9671 23.2661 19.8169C23.3122 19.6348 23.23 19.4461 23.0673 19.3521C22.9037 19.259 22.699 19.2867 22.5639 19.4167C22.548 19.4326 20.9246 20.9738 16.9866 20.9738C13.0486 20.9738 11.4244 19.4326 11.4093 19.4175C11.3287 19.3378 11.2213 19.2959 11.1139 19.2959C11.0435 19.2959 10.9722 19.3135 10.9076 19.3496C10.7431 19.4436 10.6609 19.634 10.7071 19.8169V19.8169Z" fill="#664500"/>
+<path d="M11.9528 14.2623C13.1112 14.2623 14.0502 12.9476 14.0502 11.326C14.0502 9.70428 13.1112 8.38965 11.9528 8.38965C10.7945 8.38965 9.85547 9.70428 9.85547 11.326C9.85547 12.9476 10.7945 14.2623 11.9528 14.2623Z" fill="#664500"/>
+<path d="M22.0202 14.2623C23.1786 14.2623 24.1176 12.9476 24.1176 11.326C24.1176 9.70428 23.1786 8.38965 22.0202 8.38965C20.8619 8.38965 19.9229 9.70428 19.9229 11.326C19.9229 12.9476 20.8619 14.2623 22.0202 14.2623Z" fill="#664500"/>
+<path d="M2.72411 24.7491C0.207267 20.5543 2.30464 14.2622 2.30464 14.2622L11.9525 28.9438C11.9525 28.9438 5.24095 28.9438 2.72411 24.7491Z" fill="#FFCC4D" stroke="#FFCC4D"/>
+<path d="M16.3658 31.9261C11.4779 31.7286 7.3685 26.5226 7.3685 26.5226L24.9364 26.5128C24.9364 26.5128 21.2537 32.1237 16.3658 31.9261Z" fill="#FFCC4D" stroke="#FFCC4D"/>
+<path d="M31.0574 25.2322C28.1005 29.1292 21.1818 29.3631 21.1818 29.3631L31.2492 14.2621C31.2492 14.2621 34.0144 21.3352 31.0574 25.2322Z" fill="#FFCC4D" stroke="#FFCC4D"/>
+<path d="M2.30503 13.4233C2.30503 13.4233 -0.631285 20.1349 2.30503 24.7491C5.24134 29.3633 11.9529 29.3633 11.9529 29.3633" stroke="#664500" stroke-width="0.2"/>
+<path d="M20.3419 29.7827C20.3419 29.7827 28.3119 29.3632 31.2482 25.5879C34.1845 21.8127 31.6677 14.2622 31.6677 14.2622" stroke="#664500" stroke-width="0.2"/>
+</symbol>
+
+<symbol id="Smile_3" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 15C30 23.2842 23.2842 30 15 30C6.71583 30 0 23.2842 0 15C0 6.71583 6.71583 0 15 0C23.2842 0 30 6.71583 30 15Z" fill="#FFCC4D"/>
+<path d="M18.3333 22.4999C18.3333 24.8024 16.8408 24.9999 15 24.9999C13.1583 24.9999 11.6667 24.8024 11.6667 22.4999C11.6667 20.1991 13.1583 17.4999 15 17.4999C16.8408 17.4999 18.3333 20.1991 18.3333 22.4999ZM25 12.4999C24.8967 12.4999 24.7917 12.4807 24.6908 12.4399C20.3333 10.6974 18.5475 8.07241 18.4733 7.96157C18.2175 7.57824 18.3208 7.06074 18.7042 6.80574C19.0867 6.55074 19.6017 6.65241 19.8583 7.03407C19.8742 7.05657 21.4667 9.35491 25.3092 10.8916C25.7367 11.0632 25.945 11.5474 25.7742 11.9749C25.6433 12.3016 25.33 12.4999 25 12.4999ZM5 12.4999C4.66917 12.4999 4.35667 12.3016 4.22583 11.9757C4.055 11.5482 4.2625 11.0632 4.69 10.8924C8.53333 9.35574 10.1258 7.05741 10.1417 7.03491C10.3983 6.65491 10.9158 6.55407 11.2975 6.80991C11.6783 7.06657 11.7817 7.58074 11.5267 7.96241C11.4525 8.07324 9.66667 10.6982 5.31 12.4407C5.20833 12.4807 5.10333 12.4999 5 12.4999Z" fill="#664500"/>
+<path d="M20.0003 13.3335H23.3337V29.1668L20.0003 29.1285V13.3335ZM6.66699 29.1668L10.0003 29.1285V13.3335H6.66699V29.1668Z" fill="#5DADEC"/>
+<path d="M12.499 15C12.374 15 12.2465 14.9717 12.1274 14.9125C9.2007 13.4492 6.2357 14.8975 6.20654 14.9125C5.79404 15.12 5.29404 14.9509 5.0882 14.54C4.88237 14.1284 5.04904 13.6275 5.4607 13.4217C5.61237 13.3467 9.20904 11.5909 12.8732 13.4217C13.2849 13.6275 13.4515 14.1284 13.2457 14.54C13.099 14.8317 12.8049 15 12.499 15ZM24.1657 15C24.0407 15 23.9132 14.9717 23.794 14.9125C20.8665 13.4492 17.9024 14.8975 17.8732 14.9125C17.4615 15.1192 16.9615 14.9517 16.7549 14.54C16.549 14.1284 16.7157 13.6275 17.1274 13.4217C17.279 13.3467 20.8782 11.5917 24.5399 13.4217C24.9515 13.6275 25.1182 14.1284 24.9124 14.54C24.7657 14.8317 24.4715 15 24.1657 15Z" fill="#664500"/>
+<path d="M15 30.0001C23.2843 30.0001 30 29.2539 30 28.3334C30 27.4129 23.2843 26.6667 15 26.6667C6.71573 26.6667 0 27.4129 0 28.3334C0 29.2539 6.71573 30.0001 15 30.0001Z" fill="#5DADEC"/>
+<path d="M15 24.1666C16.3807 24.1666 17.5 23.4204 17.5 22.4999C17.5 21.5794 16.3807 20.8333 15 20.8333C13.6193 20.8333 12.5 21.5794 12.5 22.4999C12.5 23.4204 13.6193 24.1666 15 24.1666Z" fill="#E75A70"/>
+</symbol>
+
+<symbol id="Smile_4" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 15.2634C30 23.5476 23.2842 30.2634 15 30.2634C6.71583 30.2634 0 23.5476 0 15.2634C0 6.97926 6.71583 0.263428 15 0.263428C23.2842 0.263428 30 6.97926 30 15.2634Z" fill="#FFCC4D"/>
+<path d="M14.9997 17.7635C11.9805 17.7635 9.97717 17.4118 7.49967 16.9301C6.93384 16.821 5.83301 16.9301 5.83301 18.5968C5.83301 21.9301 9.66217 26.0968 14.9997 26.0968C20.3363 26.0968 24.1663 21.9301 24.1663 18.5968C24.1663 16.9301 23.0655 16.8201 22.4997 16.9301C20.0222 17.4118 18.0188 17.7635 14.9997 17.7635Z" fill="#664500"/>
+<path d="M7.5 18.5967C7.5 18.5967 10 19.43 15 19.43C20 19.43 22.5 18.5967 22.5 18.5967C22.5 18.5967 20.8333 21.93 15 21.93C9.16667 21.93 7.5 18.5967 7.5 18.5967Z" fill="white"/>
+<path d="M13.0686 3.94107L9.28363 4.60857L7.33363 1.06441C7.11863 0.673574 6.67697 0.464408 6.2403 0.541074C5.80113 0.618574 5.45947 0.966908 5.39113 1.40691L4.7703 5.40441L0.9853 6.07191C0.539467 6.15024 0.1953 6.50941 0.134467 6.95857C0.0736333 7.40774 0.3103 7.84441 0.7203 8.03941L4.11197 9.64941L3.48863 13.6594C3.41947 14.1061 3.64613 14.5461 4.04947 14.7502C4.19863 14.8252 4.35863 14.8611 4.5178 14.8611C4.7903 14.8611 5.05947 14.7544 5.2603 14.5511L8.18697 11.5836L11.952 13.3711C12.3603 13.5644 12.847 13.4736 13.157 13.1444C13.467 12.8152 13.5286 12.3244 13.3111 11.9286L11.3545 8.37191L13.992 5.69857C14.3103 5.37607 14.3828 4.88441 14.1728 4.48274C13.9611 4.08107 13.512 3.86357 13.0686 3.94107ZM16.932 3.94107L20.717 4.60857L22.667 1.06441C22.882 0.673574 23.3236 0.464408 23.7603 0.541074C24.1986 0.618574 24.5403 0.966908 24.6086 1.40691L25.2295 5.40441L29.0145 6.07191C29.4611 6.15024 29.8053 6.50857 29.8653 6.95774C29.9253 7.40691 29.6895 7.84357 29.2795 8.03857L25.8878 9.64857L26.5111 13.6586C26.5803 14.1052 26.3536 14.5452 25.9503 14.7494C25.8011 14.8244 25.6411 14.8602 25.482 14.8602C25.2095 14.8602 24.9403 14.7536 24.7395 14.5502L21.8128 11.5827L18.0478 13.3702C17.6395 13.5636 17.1528 13.4727 16.8428 13.1436C16.5328 12.8144 16.4711 12.3236 16.6886 11.9277L18.6453 8.37191L16.0078 5.69857C15.6895 5.37607 15.617 4.88441 15.827 4.48274C16.0395 4.08107 16.4886 3.86357 16.932 3.94107Z" fill="#E95F28"/>
+</symbol>
+
+</svg>
+
+	<header class="d-flex justify-content-between align-items-center">
+		<div id="topSearch" class="d-flex">
+			<a href="/"><img src="img/logo.svg" class="logo" /></a>
+			<form class="d-flex">
+				<button class="btn" type="submit"><svg width="20" height="20"><use xlink:href="#SearchIcon"></use></svg></button>
+				<input class="form-control" type="search" placeholder="Поиск" aria-label="Search" />
+			</form>
+		</div>
+		<div class="container px-0 --mw-800">
+			<ul id="TopMenu">
+				<!--li><a href="#"><svg width="26" height="24"><use xlink:href="#Main"></use></svg><span>Главная</span></a></li-->
+				<li><a href="#"><svg width="24" height="24"><use xlink:href="#Lenta"></use></svg><span>Лента</span></a></li>
+				<li><a href="#" class="--active"><svg width="22" height="24"><use xlink:href="#Plan"></use></svg><span>Дневник</span></a></li>
+				<li><a href="#"><svg width="26" height="24"><use xlink:href="#MainChat"></use></svg><span>Чат</span></a></li>
+				<li><a href="#"><svg width="24" height="24"><use xlink:href="#Profile"></use></svg><span>Профиль</span></a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<section class="py-5" id="main">
+		<div class="container d-flex justify-content-between align-items-center mb-4 px-4 py-2 --bg_white --shadow --radius --mw-1000">
+			<a href="#" class="d-flex align-items-center --f_bold --f_main"><svg width="17" height="16" class="me-2"><use xlink:href="#GoBack"></use></svg><span class="d-none d-md-inline">Календарь плана</span></a>
+			<div class="fs-5_5 text-center">
+				<div class="--f_bolder">4 День</div>
+				<div class="--f_blue">План - Легкий</div>
+			</div>
+			<div class="d-flex align-items-center">
+				<div class="text-end me-2">
+					<small><a href="#" class="--f_bold --f_main">Дмитрий Коваль</a></small><br/>
+					<small class="py-1">Консультант</small>
+				</div>
+				<a href="#" class="d-none d-md-block --radius_100 overflow-hidden"><img src="img/Rectangle 34_2.png" width="42px" height="42px" /></a>
+				<a href="#" class="ms-3"><svg width="24" height="24"><use xlink:href="#Chat"></use></svg></a>
+			</div>
+		</div>
+		
+		<form>
+		
+		<div class="container d-flex justify-content-between align-items-center mb-4 px-0 py-2 --mw-1000 flex-wrap flex-md-nowrap">
+			<div class="w-100 w-md-50 me-md-4 mb-3 mb-md-0 py-3 px-5 --bg_white --shadow --radius text-center --f_bold --no_wrap">
+				<p>Во сколько вы просунились?</p>
+				<div class="d-flex align-items-center justify-content-center position-relative mx-2">
+					<svg width="24" height="24" class="--input_inline_left_icon"><use xlink:href="#Clock"></use></svg>
+					<input type="text" class="form-control --f_blue --f_bold fs-6 text-center py-2" value="6:30" placeholder="6:30" required="" />
+				</div>
+			</div>
+			<div class="w-100 w-md-50 py-3 px-5 --bg_white --shadow --radius text-center --f_bold --no_wrap">
+				<p>Во сколько вы легли спать?</p>
+				<div class="d-flex align-items-center justify-content-center position-relative mx-2">
+					<svg width="26" height="24" class="--input_inline_left_icon"><use xlink:href="#Sleep"></use></svg>
+					<input type="text" class="form-control --f_blue --f_bold fs-6 text-center py-2" value="22:30" placeholder="22:30" required="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="container mb-4 py-3 overflow-hidden --bg_white --shadow --radius --mw-1000">
+			<div class="d-flex px-md-5 justify-content-between align-items-center flex-wrap flex-lg-nowrap flex-column-reverse flex-lg-row overflow-x-xs-scroll">
+				<ul class="nav nav-pills flex-nowrap --bordered --radius --tabs_blue" id="pills-tab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="btn-lg px-md-4 nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-0" type="button" role="tab" aria-controls="pills-0" aria-selected="true"><small>Завтрак</small></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="btn-lg px-md-4 nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="false"><small>Обед</small></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="btn-lg px-md-4 nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false"><small>Ужин</small></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="btn-lg px-md-4 nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-3" aria-selected="false"><small>Ланч</small></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="btn-lg px-md-4 nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-4" aria-selected="false"><small>Закуски</small></button>
+					</li>
+				</ul>
+				<div class="d-flex w-md-50 mb-3 mb-lg-0 align-items-center">
+					<div class="d-flex align-items-center w-50 me-3 mx-lg-3">
+						<small>Время приёма пищи</small>
+					</div>
+					<div class="d-flex align-items-center position-relative">
+						<svg width="23" height="22" class="--input_inline_left_icon"><use xlink:href="#Time"></use></svg>
+						<input type="text" class="form-control --f_blue --f_bold fs-6 ps-5 pe-0 py-2 w-130px" value="22:30" placeholder="22:30" required="" />
+					</div>
+					<div class="d-none d-lg-flex align-items-center w-45 ms-4">
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="my-3 px-md-5">
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-0" role="tabpanel" aria-labelledby="pills-0-tab">
+						<div class="d-flex align-items-center flex-wrap flex-sm-nowrap" data-row="0">
+							<input type="text" class="form-control fs-6 py-2 w-100" placeholder="Введите название продукта...." required="" />
+							<div class="d-flex w-md-50 ms-sm-3 align-items-center">
+								<div class="d-flex align-items-center ms-sm-3 mt-3 mt-sm-0">
+									<input type="text" class="form-control fs-6 py-2 w-130px ms-sm-1" placeholder="Порция" required="" />
+								</div>
+
+							</div>
+						</div>
+						<div class="d-flex align-items-center flex-wrap flex-lg-nowrap" data-row="0">
+							<div class="w-100"></div>
+							<div class="d-flex w-md-50 ms-lg-4 align-items-center">
+								<div class="d-flex align-items-center ms-lg-3 mt-3">
+									<button type="button" class="btn btn-lg btn-primary btn-block w-130px ms-lg-1 fs-6 --f_bold w-130px">+</button>
+								</div>
+							</div>
+						</div>
+						<img src="/img/plate1.jpg"  class="img-thumbnail">
+						<img src="/img/plate2.jpg"  class="img-thumbnail">
+						<img src="/img/plate3.jpg"  class="img-thumbnail">
+						<img src="/img/blanc_pic.svg">
+						<img src="/img/add_plus.svg">
+					</div>
+					<div class="tab-pane fade" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+						<div class="d-flex align-items-center flex-wrap flex-sm-nowrap" data-row="0">
+							<input type="text" class="form-control fs-6 py-2 w-100" placeholder="Введите название продукта...." required="" />
+							<div class="d-flex w-md-50 ms-sm-3 align-items-center">
+								<div class="d-flex align-items-center ms-sm-3 mt-3 mt-sm-0">
+									<input type="text" class="form-control fs-6 py-2 w-130px ms-sm-1" placeholder="Порция" required="" />
+								</div>
+								<div class="d-flex align-items-center w-45 ms-4 mt-3 mt-sm-0">
+									<a href="#"><svg width="30" height="30"><use xlink:href="#Settings"></use></svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-center flex-wrap flex-lg-nowrap" data-row="0">
+							<div class="w-100"></div>
+							<div class="d-flex w-md-50 ms-lg-4 align-items-center">
+								<div class="d-flex align-items-center ms-lg-3 mt-3">
+									<button type="button" class="btn btn-lg btn-primary btn-block w-130px ms-lg-1 fs-6 --f_bold w-130px">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+						<div class="d-flex align-items-center flex-wrap flex-sm-nowrap" data-row="0">
+							<input type="text" class="form-control fs-6 py-2 w-100" placeholder="Введите название продукта...." required="" />
+							<div class="d-flex w-md-50 ms-sm-3 align-items-center">
+								<div class="d-flex align-items-center ms-sm-3 mt-3 mt-sm-0">
+									<input type="text" class="form-control fs-6 py-2 w-130px ms-sm-1" placeholder="Порция" required="" />
+								</div>
+								<div class="d-flex align-items-center w-45 ms-4 mt-3 mt-sm-0">
+									<a href="#"><svg width="30" height="30"><use xlink:href="#Settings"></use></svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-center flex-wrap flex-lg-nowrap" data-row="0">
+							<div class="w-100"></div>
+							<div class="d-flex w-md-50 ms-lg-4 align-items-center">
+								<div class="d-flex align-items-center ms-lg-3 mt-3">
+									<button type="button" class="btn btn-lg btn-primary btn-block w-130px ms-lg-1 fs-6 --f_bold w-130px">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+						<div class="d-flex align-items-center flex-wrap flex-sm-nowrap" data-row="0">
+							<input type="text" class="form-control fs-6 py-2 w-100" placeholder="Введите название продукта...." required="" />
+							<div class="d-flex w-md-50 ms-sm-3 align-items-center">
+								<div class="d-flex align-items-center ms-sm-3 mt-3 mt-sm-0">
+									<input type="text" class="form-control fs-6 py-2 w-130px ms-sm-1" placeholder="Порция" required="" />
+								</div>
+								<div class="d-flex align-items-center w-45 ms-4 mt-3 mt-sm-0">
+									<a href="#"><svg width="30" height="30"><use xlink:href="#Settings"></use></svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-center flex-wrap flex-lg-nowrap" data-row="0">
+							<div class="w-100"></div>
+							<div class="d-flex w-md-50 ms-lg-4 align-items-center">
+								<div class="d-flex align-items-center ms-lg-3 mt-3">
+									<button type="button" class="btn btn-lg btn-primary btn-block w-130px ms-lg-1 fs-6 --f_bold w-130px">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+						<div class="d-flex align-items-center flex-wrap flex-sm-nowrap" data-row="0">
+							<input type="text" class="form-control fs-6 py-2 w-100" placeholder="Введите название продукта...." required="" />
+							<div class="d-flex w-md-50 ms-sm-3 align-items-center">
+								<div class="d-flex align-items-center ms-sm-3 mt-3 mt-sm-0">
+									<input type="text" class="form-control fs-6 py-2 w-130px ms-sm-1" placeholder="Порция" required="" />
+								</div>
+								<div class="d-flex align-items-center w-45 ms-4 mt-3 mt-sm-0">
+									<a href="#"><svg width="30" height="30"><use xlink:href="#Settings"></use></svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-center flex-wrap flex-lg-nowrap" data-row="0">
+							<div class="w-100"></div>
+							<div class="d-flex w-md-50 ms-lg-4 align-items-center">
+								<div class="d-flex align-items-center ms-lg-3 mt-3">
+									<button type="button" class="btn btn-lg btn-primary btn-block w-130px ms-lg-1 fs-6 --f_bold w-130px">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt-4 px-md-5 text-center">
+					
+				<p class="--f_bold"><small>Ваше настроение после приёма пищи</small></p>
+				<div class="d-flex align-items-end flex-nowrap">
+					<svg width="30" height="30"><use xlink:href="#Smile_1"></use></svg>
+					<div class="mx-3 --colored flex-grow-1">
+						<div class="lh-1"><small>Сытость</small></div>
+						<div class="w-100 btn-group --colored" role="group" aria-label="Ваше настроение после приёма пищи">
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_1" autocomplete="off" checked>
+							<label class="btn btn-outline-primary" for="colored_1_1"></label>
+
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_2" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_1_2"></label>
+
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_3" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_1_3"></label>
+							
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_4" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_1_4"></label>
+							
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_5" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_1_5"></label>
+							
+							<input type="radio" class="btn-check" name="colored_1" id="colored_1_6" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_1_6"></label>
+						</div>
+					</div>
+					<svg width="30" height="30"><use xlink:href="#Smile_2"></use></svg>
+				</div>
+				
+				<div class="d-flex my-3 align-items-end flex-nowrap">
+					<svg width="30" height="30"><use xlink:href="#Smile_3"></use></svg>
+					<div class="mx-3 --colored flex-grow-1">
+						<div class="lh-1"><small>Настроение</small></div>
+						<div class="w-100 btn-group --colored" role="group" aria-label="Ваше настроение после приёма пищи">
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_1" autocomplete="off" checked>
+							<label class="btn btn-outline-primary" for="colored_2_1"></label>
+
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_2" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_2_2"></label>
+
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_3" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_2_3"></label>
+							
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_4" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_2_4"></label>
+							
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_5" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_2_5"></label>
+							
+							<input type="radio" class="btn-check" name="colored_2" id="colored_2_6" autocomplete="off">
+							<label class="btn btn-outline-primary" for="colored_2_6"></label>
+						</div>
+					</div>
+					<svg width="30" height="30"><use xlink:href="#Smile_4"></use></svg>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="container mb-4 px-4 py-4 --bg_white --shadow --radius --mw-1000 text-center">
+			<small>
+				<p class="--f_bold">Дополнительная информация для консультанта</p>
+				<textarea class="form-control fs-6" placeholder="Введите дополнительную информация для консультанта..."></textarea>
+			</small>
+		</div>
+		
+		<div class="container p-0 --mw-1000">
+			<a href="#" class="btn btn-lg btn-primary btn-block w-100 --f_bolder" type="submit">ЗАКОНЧИТЬ ДЕНЬ</a>
+		</div>
+		
+		</form>
+		
+	</section>
+	
+	<footer>
+		<div class="container --mw-1000 py-5 --f_bold">
+			<div class="d-flex align-items-center justify-content-between">
+				<div>
+					<a href="#" class="me-4 active">Русский</a>
+					<a href="#">English</a>
+				</div>
+				<div style="color:var(--main_fcolor)">
+					Eatvio © 2022
+				</div>
+			</div>
+			<hr/>
+			<ul class="--menu --footer">
+				<li><a href="#">Конфиденциальность</a></li>
+				<li><a href="#">Условия использования</a></li>
+				<li><a href="#">Справка</a></li>
+				<li><a href="#">Регистрация</a></li>
+			</ul>
+		</div>
+	</footer>
+	
+	<script>
+	(function($){
+		const searchForm = $('#topSearch form'),
+			  active	 = '--active',
+			  button	 = $('button', searchForm),
+			  input		 = $('input', searchForm),
+			  width		 = input.width();
+		
+		if ( $(window).width() < 1600 ) {
+			
+			button.bind('click', (e)=>{
+				if ( searchForm.hasClass(active) ) return;
+				e.preventDefault();
+				searchForm.addClass(active);
+				input.css({visibility: 'visible', opacity: 1, width: 250});
+			});
+			
+			$(document).bind('click', 
+				(e) => {
+					if (e.target!=searchForm[0]&&!searchForm.has(e.target).length) {
+						searchForm.removeClass(active);
+						input.css({visibility: 'hidden', opacity: 0, width: width});
+					}
+				}
+			);
+			
+		}
+	})( jQuery );
+	</script>
+</body>
+</html>

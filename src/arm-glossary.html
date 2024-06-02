@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body class="dark-theme">
+        <div class="wrapper">
+            <main class="page">
+                <section class="arm">
+                    <div class="arm__container">
+                        <div class="arm__content">
+                            <aside class="arm__sidebar">
+                                @@include('./html/_arm-menu.html', {
+                                "active": 5
+                                })
+                            </aside>
+                            <div class="arm__header">
+                                <div class="arm__title">
+                                    Глоссарий модерация
+                                </div>
+                                <div class="arm__actions">
+                                    <form action="#" class="arm__search">
+                                        <button type="submit" class="arm__search-btn icon-search"></button>
+                                        <input type="text" name="search" class="input input-white" placeholder="Поиск">
+                                    </form>
+                                    <a href="#new-product" data-modal class="arm__add l-btn l-btn-primary l-btn-sm">Добавить продукт</a>
+                                </div>
+                            </div>
+                            <table class="arm__table">
+                                <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Ккал на 100гр.</th>
+                                        <th>Белки на 100гр.</th>
+                                        <th>Жиры на 100гр.</th>
+                                        <th>Углеводы на 100гр.</th>
+                                        <th>Порция</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <div class="arm__row">
+                                            <img src="@img/glossary/01.png" alt="product">
+                                            Абрикос
+                                        </div>
+                                    </td>
+                                    <td>44 Ккал</td>
+                                    <td>0,9 г.</td>
+                                    <td>0,1 г.</td>
+                                    <td>9 г.</td>
+                                    <td>1 шт.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="arm__table-actions">
+                                            <a href="" class="arm__table-btn reject">Отклонить</a>
+                                            <a href="" class="arm__table-btn confirm">Подтвердить</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="arm__row">
+                                            <img src="@img/glossary/02.png" alt="product">
+                                            Ананас консерв.
+                                        </div>
+                                    </td>
+                                    <td>44 Ккал</td>
+                                    <td>0,9 г.</td>
+                                    <td>0,1 г.</td>
+                                    <td>9 г.</td>
+                                    <td>100 г.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="arm__table-actions">
+                                            <a href="" class="arm__table-btn reject">Отклонить</a>
+                                            <a href="" class="arm__table-btn confirm">Подтвердить</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="arm__row">
+                                            <img src="@img/glossary/03.png" alt="product">
+                                            Сникерс
+                                        </div>
+                                    </td>
+                                    <td>500 Ккал</td>
+                                    <td>7,8 г.</td>
+                                    <td>26 г.</td>
+                                    <td>58 г.</td>
+                                    <td>1 шт.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="arm__table-actions">
+                                            <a href="" class="arm__table-btn reject">Отклонить</a>
+                                            <a href="" class="arm__table-btn confirm">Подтвердить</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div id="new-product" class="popup">
+            <div class="popup__content">
+                <div class="popup__body">
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                    <form action="#" class="popup__form">
+                        <div class="popup__caption title">Добавление нового продутка</div>
+                        <div class="popup__options">
+                            <label class="popup__option option-btn">
+                                <input type="radio" checked name="new-product" value="part" class="option-btn__input hidden" hidden>
+                                <span class="option-btn__text">
+                                    На 100 грамм
+                                </span>
+                            </label>
+                            <label class="popup__option option-btn">
+                                <input type="radio" name="new-product" value="full" class="option-btn__input hidden" hidden>
+                                <span class="option-btn__text">
+                                    На порцию
+                                </span>
+                            </label>
+                        </div>
+                        <div class="popup__row">
+                            <input type="text" name="product" class="input input-white" placeholder="Введите названия продукта">
+                        </div>
+                        <div class="popup__columns">
+                            <div class="popup__column">
+                                <input type="text" name="calories" class="input input-white" placeholder="Калории">
+                                <input type="text" name="squirrels" class="input input-white" placeholder="Белки">
+                                <input type="text" name="fats" class="input input-white" placeholder="Жиры">
+                                <input type="text" name="carbohydrates" class="input input-white" placeholder="Углеводы">
+                            </div>
+                            <div class="popup__column">
+                                <label class="file">
+                                    <input type="file" name="file" class="file__input hidden" hidden="">
+                                    <span class="file__content">
+                                        <span class="file__formats">
+                                            <img src="img/formats-2.svg" alt="formats">
+                                        </span>
+                                        <span class="file__title">
+                                            Нажмите для&nbsp;выбора или&nbsp;перетащите изображание
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="popup__submit l-btn l-btn-primary l-btn-fullwidth">Добавить продукт</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @@include('html/_logout.html')
+        @@include('html/_js.html', {})
+    </body>
+</html>

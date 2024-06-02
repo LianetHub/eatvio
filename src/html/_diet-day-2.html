@@ -1,0 +1,140 @@
+<div class="diet__day" data-tabs>
+    <div class="diet__day-header">
+        <div class="diet__day-num">
+            День @@day
+        </div>
+    </div>
+    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
+        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-@@day-1" aria-selected="true" aria-controls="tabpanel-day-@@day-1">Прием 1</button>
+        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-@@day-2" aria-selected="false" aria-controls="tabpanel-day-@@day-2" tabindex="-1">Прием 2</button>
+        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-@@day-3" aria-selected="false" aria-controls="tabpanel-day-@@day-3" tabindex="-1">Прием 3</button>
+        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-@@day-4" aria-selected="false" aria-controls="tabpanel-day-@@day-4" tabindex="-1">Прием 4</button>
+        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-@@day-5" aria-selected="false" aria-controls="tabpanel-day-@@day-5" tabindex="-1">Прием 5</button>
+    </div>
+    <div class="diary__stats-body">
+        <div class="tabpanel" role="tabpanel" id="tabpanel-day-@@day-1" tabindex="0" aria-labelledby="tab-day-@@day-1">
+            @@if(list===1){
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Курица</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Молоко</div>
+                    <div class="diary__stats-quantity">200 мл</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Яйца</div>
+                    <div class="diary__stats-quantity">3 шт</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Сервелат</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+            }
+            @@if(list===2){
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Курица</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+            }
+            @@if(list===3){
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Курица</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Молоко</div>
+                    <div class="diary__stats-quantity">200 мл</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Яйца</div>
+                    <div class="diary__stats-quantity">3 шт</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Сервелат</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Хлеб</div>
+                    <div class="diary__stats-quantity">1000 гр</div>
+                </li>
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Йогурт</div>
+                    <div class="diary__stats-quantity">500 гр</div>
+                </li>
+            </ul>
+            }
+        </div>
+        <div class="tabpanel" role="tabpanel" id="tabpanel-day-@@day-2" tabindex="0" aria-labelledby="tab-day-@@day-2">
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Курица</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="tabpanel-day-@@day-3" tabindex="0" aria-labelledby="tab-day-@@day-3">
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Рыба</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="tabpanel-day-@@day-4" tabindex="0" aria-labelledby="tab-day-@@day-4">
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Кефир</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="tabpanel-day-@@day-5" tabindex="0" aria-labelledby="tab-day-@@day-5">
+            <ul class="diary__stats-list">
+                <li class="diary__stats-item">
+                    <div class="diary__stats-product">Амлет</div>
+                    <div class="diary__stats-quantity">200 гр</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="diary__total">
+        <div class="diary__total-item">
+            <div class="diary__total-val">
+                @@cal
+            </div>
+            <div class="diary__total-unit">
+                Калории
+            </div>
+        </div>
+        <div class="diary__total-item">
+            <div class="diary__total-val">
+                @@bel
+            </div>
+            <div class="diary__total-unit">
+                Белки
+            </div>
+        </div>
+        <div class="diary__total-item">
+            <div class="diary__total-val">
+                @@zhir
+            </div>
+            <div class="diary__total-unit">
+                Жиры
+            </div>
+        </div>
+        <div class="diary__total-item">
+            <div class="diary__total-val">
+                @@ugl
+            </div>
+            <div class="diary__total-unit">
+                Углеводы
+            </div>
+        </div>
+    </div>
+</div>

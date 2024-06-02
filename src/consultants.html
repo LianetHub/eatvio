@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__header">
+                            <div class="content__header-title title">
+                                Консультанты
+                            </div>
+                            <form action="#" class="content__header-search search">
+                                <div class="search__box">
+                                    <button class="search__btn icon-search"></button>
+                                    <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск консультантов">
+                                </div>
+                                <button class="search__send l-btn l-l-btn-primary l-btn-sm">найти консультанта</button>
+                            </form>
+                        </div>
+                        <div class="content__tabs">
+                            <div class="content__tabs-wrapper">
+                                <a href="" class="content__filter">Все</a>
+                                <a href="" class="content__filter">Рецепты</a>
+                                <a href="" class="content__filter">Диеты</a>
+                                <a href="" class="content__filter">Планы питания</a>
+                                <a href="" class="content__filter active">Консультанты</a>
+                            </div>
+                        </div>
+                        <div class="content__settings" data-spollers>
+                            <button type="reset" form="consult-filter" class="content__settings-reset">
+                                Сбросить фильтр
+                            </button>
+                            <button type="button" data-spoller class="content__settings-btn icon-down _active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                    <rect x="1.7998" width="1.2" height="24" fill="#323F4B" />
+                                    <rect x="9.60059" width="1.2" height="24" fill="#323F4B" />
+                                    <circle cx="10.1998" cy="19.2" r="2.4" fill="#323F4B" />
+                                    <circle cx="2.4" cy="7.20002" r="2.4" fill="#323F4B" />
+                                </svg>
+                                Фильтр
+                            </button>
+                            <form action="#" id="consult-filter" class="content__settings-filtres">
+                                <div class="content__settings-body">
+                                    <div class="content__settings-filter">
+                                        <button type="button" class="label spoller-mobile">
+                                            Стоимость планов
+                                        </button>
+                                        <div class="content__settings-row">
+                                            <input type="text" name="start-price" class="input input-white" placeholder="от">
+                                            -
+                                            <input type="text" name="edn-price" class="input input-white" placeholder="до">
+                                            <button type="button" class="content__settings-ok">ОК</button>
+                                        </div>
+                                    </div>
+                                    <div class="content__settings-filter">
+                                        <label class="checkbox checkbox-gray">
+                                            <input type="checkbox" name="study" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content">
+                                                Наличие мед образования
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <a href="" class="content__settings-archive">
+                                        <svg width="1.625rem" height="1.625rem" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2026_2042)">
+                                                <path d="M281.937 92.75C290.774 99.6861 297.518 109.671 299 121C299.81 131.748 299.117 141.824 293 151C293.145 155.787 295.81 158.548 298.875 161.937C299.886 163.092 300.895 164.248 301.902 165.406C302.419 165.999 302.935 166.592 303.468 167.203C305.887 170.041 308.159 172.987 310.437 175.937C329.516 200.826 329.516 200.826 357.89 212.402C375.175 214.225 388.712 208.607 402.937 199.187C404.844 197.948 406.752 196.71 408.66 195.473C409.57 194.879 410.48 194.284 411.418 193.672C414.871 191.436 418.363 189.268 421.875 187.125C422.883 186.509 423.891 185.893 424.929 185.258C425.612 184.843 426.296 184.428 427 184C426.856 182.459 426.856 182.459 426.71 180.887C425.47 166.147 427.071 153.969 436.25 141.687C445.506 132.641 456.879 126.881 470 127C482.149 127.644 494.178 132.795 502.39 141.902C505.078 145.406 507.164 148.988 509 153C509.319 153.651 509.639 154.302 509.968 154.973C513.842 164.281 513.456 177.416 510.035 186.805C504.351 198.857 495.46 207.257 483 212C481.438 212.381 479.87 212.739 478.298 213.077C477.492 213.251 476.686 213.426 475.855 213.606C475.243 213.736 474.63 213.866 474 214C473.87 214.795 473.741 215.589 473.607 216.408C470.453 235.776 467.281 255.14 464.089 274.501C462.545 283.865 461.008 293.229 459.485 302.595C458.157 310.762 456.818 318.927 455.465 327.09C454.749 331.409 454.039 335.73 453.343 340.052C452.687 344.127 452.015 348.2 451.331 352.27C451.084 353.758 450.843 355.247 450.607 356.737C448.163 372.164 443.023 383.364 430.152 392.731C396.794 415.739 352.389 420.934 313 425C311.901 425.119 310.803 425.237 309.672 425.359C240.694 432.503 136.449 433.752 78.0425 389.773C69.3268 382.378 65.1624 375.306 63.1743 364.155C63.0077 363.251 62.841 362.346 62.6693 361.413C60.2846 348.303 58.1278 335.151 55.9496 322.004C55.3174 318.193 54.6824 314.381 54.0478 310.57C52.8524 303.388 51.6596 296.207 50.4676 289.025C49.108 280.833 47.7455 272.642 46.3828 264.451C43.5853 247.634 40.7912 230.817 37.9995 214C37.1956 213.817 36.3917 213.634 35.5635 213.445C34.4982 213.192 33.433 212.94 32.3354 212.68C31.2841 212.435 30.2327 212.189 29.1494 211.937C24.2075 210.467 20.199 207.933 15.9995 205C14.9476 204.278 13.8958 203.556 12.812 202.812C4.68006 194.681 -0.29905 184.493 -0.46875 172.96C-0.458599 172.169 -0.448447 171.378 -0.437988 170.562C-0.430415 169.73 -0.422842 168.897 -0.415039 168.04C-0.24435 161.669 0.724978 156.549 3.99951 151C4.42361 150.237 4.84771 149.474 5.28467 148.687C10.4636 140.147 17.7407 133.747 26.9995 130C28.4226 129.412 28.4226 129.412 29.8745 128.812C41.7885 125.715 54.1104 127.138 64.9995 133C75.3149 139.749 81.283 148.325 84.9995 160C86.3676 166.612 86.2654 173.089 85.4917 179.758C85.4 180.556 85.3083 181.354 85.2139 182.176C85.1078 183.079 85.1078 183.079 84.9995 184C86.1133 184.678 87.227 185.356 88.3745 186.055C89.9163 186.995 91.4579 187.935 92.9995 188.875C93.811 189.369 94.6224 189.864 95.4585 190.374C100.158 193.244 104.832 196.149 109.482 199.098C124.554 208.638 138.604 215.422 156.925 211.781C176.138 206.899 187.09 194.675 199.007 179.527C201.12 176.847 203.273 174.202 205.437 171.562C206.177 170.655 206.917 169.747 207.679 168.812C209.291 166.859 210.922 164.923 212.57 163C213.803 161.546 213.803 161.546 215.062 160.062C215.816 159.187 216.57 158.312 217.347 157.41C219.376 154.937 219.376 154.937 219 151C218.217 149.102 218.217 149.102 217.125 147.25C211.579 136.513 211.382 124.014 214.949 112.535C216.721 108.259 219.214 104.672 222 101C222.598 100.113 223.196 99.2262 223.812 98.3125C239.013 82.2428 263.961 80.4095 281.937 92.75Z" fill="#FFC107" />
+                                                <path d="M253.25 319.687C254.466 319.684 255.681 319.681 256.934 319.678C387.059 319.565 387.059 319.565 423 355C425.218 357.629 425.961 358.798 426.625 362.25C425.703 367.78 423.227 370.429 419 374C408.89 381.074 397.613 385.098 386 389C385.306 389.238 384.612 389.477 383.898 389.723C345.974 402.691 303.22 405.59 263.393 405.336C259.434 405.312 255.476 405.316 251.518 405.322C217.598 405.285 183.952 402.808 150.759 395.597C148.318 395.069 145.874 394.566 143.426 394.07C123.622 389.916 101.236 383.03 87.0001 368C85.3988 364.797 85.5931 362.547 86.0001 359C91.2833 348.19 109.458 341.695 120 338C126.934 335.77 133.955 333.845 141 332C142.207 331.678 143.413 331.355 144.656 331.023C154.121 328.538 163.57 326.771 173.25 325.375C174.703 325.161 176.156 324.946 177.609 324.731C188.374 323.16 199.146 321.773 210 321C211.128 320.915 212.255 320.831 213.417 320.743C226.682 319.815 239.957 319.717 253.25 319.687Z" fill="#FFA000" />
+                                                <path d="M254.187 298.813C255.428 298.814 256.669 298.815 257.947 298.816C284.546 298.868 310.463 300.161 336.812 303.875C337.684 303.998 338.556 304.121 339.454 304.247C357.637 306.849 375.287 310.303 392.687 316.25C393.4 316.491 394.112 316.732 394.846 316.98C414.909 323.789 434.788 331.843 446 351C449.259 357.649 449.255 365.784 447.16 372.82C438.647 391.108 419.736 400.153 401.824 406.973C373.29 417.352 343.08 421.895 313 425C311.902 425.119 310.804 425.237 309.672 425.359C240.694 432.503 136.449 433.752 78.0428 389.773C71.2601 384.018 64.5424 376.422 63.7615 367.18C63.4969 355.398 66.8529 347.531 74.9998 339C104.306 312.825 149.585 306.535 187.125 302.188C188.022 302.082 188.919 301.977 189.844 301.869C211.31 299.387 232.586 298.79 254.187 298.813ZM201 322C200.11 322.08 199.219 322.16 198.302 322.243C137.81 327.486 137.81 327.486 86.9998 357C85.3696 360.26 85.5324 362.378 85.9998 366C93.7249 380.125 115.857 386.314 130.213 390.672C134.122 391.771 138.058 392.701 142.025 393.564C144.06 394.013 146.084 394.496 148.109 394.984C164.45 398.863 181.098 401.565 197.812 403.188C198.918 403.295 198.918 403.295 200.046 403.405C202.696 403.637 205.345 403.825 208 404C208.63 404.042 209.261 404.083 209.91 404.126C226.01 405.152 242.122 405.284 258.25 405.313C258.939 405.314 259.628 405.316 260.338 405.317C284.098 405.364 307.442 404.215 331 401C333.018 400.746 335.036 400.494 337.054 400.242C341.731 399.63 346.363 398.86 351 398C351.845 397.85 352.69 397.7 353.561 397.546C365.724 395.343 377.43 392.104 389.125 388.125C390.309 387.727 391.494 387.328 392.714 386.918C412.061 380.165 412.061 380.165 426 366C426.577 361.794 426.417 358.953 423.875 355.563C395.671 326.104 337.035 324.334 299.139 321.182C297.296 321.025 295.454 320.852 293.612 320.677C282.249 319.685 270.844 319.814 259.446 319.815C255.8 319.813 252.154 319.794 248.508 319.775C232.581 319.738 216.856 320.529 201 322Z" fill="#FFD44E" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2026_2042">
+                                                    <rect width="512" height="512" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Архив рейтинга
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="content__consultants">
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Дмитрий Коваль
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. Образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>3</span> Плана
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 2500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user-4.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Максим Ровный
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>3</span> Плана
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price disabled">
+                                            Занят
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user-5.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Николай Казак
+                                        </div>
+                                        <button type="button" class="consultant__favorite active">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>3</span> Плана
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 3500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user-6.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Мила Fox
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>10</span> Планов
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 2500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user-7.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Dina Deny
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. Образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>10</span> Планов
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price disabled">
+                                            Занят
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user-8.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Dina Deny
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. Образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>10</span> Планов
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 2500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Дмитрий Коваль
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. Образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>3</span> Плана
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 2500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content__consultant consultant">
+                                <div class="consultant__main">
+                                    <div class="consultant__thumb">
+                                        <img src="@img/user.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="consultant__rate icon-star">
+                                        <span>
+                                            4.6
+                                        </span>
+                                        (32)
+                                    </div>
+                                    <button type="button" class="consultant__comment l-btn l-btn-primary icon-message-square"></button>
+                                </div>
+                                <div class="consultant__body">
+                                    <div class="consultant__header">
+                                        <div class="consultant__name">
+                                            Дмитрий Коваль
+                                        </div>
+                                        <button type="button" class="consultant__favorite">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M29.2913 12.6118C28.7805 12.1008 28.1741 11.6955 27.5066 11.4189C26.8392 11.1423 26.1238 11 25.4013 11C24.6788 11 23.9634 11.1423 23.2959 11.4189C22.6285 11.6955 22.022 12.1008 21.5113 12.6118L20.4513 13.6718L19.3913 12.6118C18.3596 11.5801 16.9603 11.0005 15.5013 11.0005C14.0423 11.0005 12.643 11.5801 11.6113 12.6118C10.5796 13.6435 10 15.0428 10 16.5018C10 17.9609 10.5796 19.3601 11.6113 20.3918L12.6713 21.4518L20.4513 29.2318L28.2313 21.4518L29.2913 20.3918C29.8023 19.8811 30.2076 19.2746 30.4842 18.6072C30.7608 17.9397 30.9031 17.2243 30.9031 16.5018C30.9031 15.7793 30.7608 15.0639 30.4842 14.3965C30.2076 13.729 29.8023 13.1226 29.2913 12.6118V12.6118Z" stroke="#323F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="consultant__desc">
+                                        Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок.
+                                    </div>
+                                    <div class="consultant__benefits">
+                                        <div class="consultant__benefit icon-check">
+                                            Мед. Образование
+                                        </div>
+                                        <a href="#certs" data-modal class="consultant__certs">
+                                            Сертификаты
+                                        </a>
+                                        <div class="consultant__benefit">
+                                            <span>3</span> Плана
+                                        </div>
+                                    </div>
+                                    <div class="consultant__footer">
+                                        <div class="person__checklist">
+                                            <img src="@img/checklist_1.png" alt="checklist">
+                                            <img src="@img/slim 1.png" alt="checklist">
+                                            <img src="@img/dumbbell 1.png" alt="checklist">
+                                            <img src="@img/diet 1.png" alt="checklist">
+                                        </div>
+                                        <div class="consultant__footer-price">
+                                            от 2500₽
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "certs"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 2
+            })
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left">Консультанты</a>
+                            <div class="settings__actions">
+                                <a href="" class="settings__action icon-blog"><span>Блог</span></a>
+                                <a href="" class="settings__action icon-gear"><span>Настройки</span></a>
+                            </div>
+                        </div>
+                        <div class="setting__content person">
+                            <div class="person__header">
+                                <div class="person__main">
+                                    <div class="person__main-side">
+                                        <div class="person__succes-plans mobile-only">
+                                            <div class="person__succes-plans-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="30" viewBox="0 0 34 30" fill="none">
+                                                    <path d="M2.45731 0.148186C1.50949 0.490454 0.710864 1.21009 0.254507 2.13158L0 2.65815V12.619V22.5799L0.254507 23.1065C0.614327 23.8349 1.32519 24.5545 2.04483 24.9143L2.63283 25.2127L6.88924 25.2566C9.94332 25.2917 11.1983 25.3268 11.3212 25.4058C11.4177 25.4585 12.427 26.4414 13.5591 27.5823C14.6912 28.7232 15.7706 29.7324 15.9462 29.829C16.385 30.0571 17.2275 30.0571 17.6663 29.829C17.8418 29.7324 18.9213 28.7232 20.0534 27.5823C21.1855 26.4414 22.1948 25.4585 22.2913 25.4058C22.4142 25.3268 23.6691 25.2917 26.7232 25.2566L30.9796 25.2127L31.5676 24.9143C32.2873 24.5545 32.9981 23.8349 33.358 23.1065L33.6125 22.5799L33.6388 16.7087L33.6651 3.83748L33.4282 3.58297C32.9718 3.11784 32.2258 3.17927 31.8923 3.72339C31.7344 3.97789 31.7256 4.26751 31.7256 16.4191C31.7256 22.3342 31.7344 22.1938 31.2166 22.7379C30.69 23.2995 30.848 23.282 26.2405 23.3259L22.028 23.3697L21.5014 23.6155C21.0626 23.8261 20.6326 24.2035 18.8862 25.9411L16.8062 28.0123L14.7175 25.9411C12.9798 24.2035 12.5498 23.8261 12.111 23.6155L11.5844 23.3697L7.37192 23.3259C2.76447 23.282 2.92244 23.2995 2.39587 22.7379C1.86053 22.1762 1.88686 22.7115 1.88686 12.6015C1.88686 3.79027 1.89564 3.34269 2.05361 3.00919C2.25546 2.57916 2.61528 2.22812 3.04531 2.0526C3.33492 1.92973 4.86196 1.91218 16.8062 1.91218C31.5325 1.91218 30.5672 1.87708 31.1464 2.4212C31.6642 2.90388 31.7256 3.18472 31.7256 5.07158C31.7256 6.58984 31.7431 6.80925 31.8923 7.05498C32.2258 7.59909 32.9718 7.66053 33.4282 7.18662L33.6651 6.94089L33.6388 4.79952L33.6125 2.65815L33.3141 2.07015C32.9543 1.35051 32.2346 0.639648 31.5062 0.279827L30.9796 0.0253201L16.9379 0.00776863C3.5631 -0.00978279 2.87856 -0.0097847 2.45731 0.148186Z" fill="#2F80ED" />
+                                                    <path d="M9.96152 5.60675C7.74117 5.98413 6.16147 8.1957 6.52129 10.3897C6.64416 11.1181 7.11807 12.1186 7.53932 12.5223L7.84648 12.8207L7.2146 13.2332C5.99472 14.0318 5.04691 15.278 4.68709 16.5681C4.51156 17.1912 4.53789 18.8323 4.72219 19.1834C5.04691 19.7889 5.93329 19.8591 6.35454 19.3238C6.51251 19.1219 6.53007 18.9728 6.53007 18.2005C6.52129 17.63 6.56517 17.1824 6.64416 16.9455C7.08296 15.7256 8.08344 14.7953 9.42618 14.3741C10.1195 14.1547 11.3043 14.1371 11.9888 14.339C13.9898 14.927 15.1306 16.4891 14.9902 18.455C14.9551 18.9903 14.9727 19.0956 15.1306 19.3062C15.4115 19.6573 15.8942 19.7802 16.2979 19.6134C16.7279 19.4291 16.8946 19.0781 16.9561 18.2092C17.0702 16.4628 16.2891 14.7778 14.8323 13.6106C14.5426 13.3824 14.1565 13.1103 13.9898 13.0226L13.6738 12.8558L14.0863 12.3029C14.6304 11.5921 14.8849 10.9163 14.9376 10.0211C15.0955 7.68669 13.4018 5.75595 11.0498 5.57165C10.7163 5.54532 10.2248 5.56287 9.96152 5.60675ZM11.6729 7.73935C12.6119 8.17815 13.156 9.19618 12.9629 10.144C12.8313 10.7759 12.4013 11.3463 11.8045 11.6886C11.392 11.9255 11.2341 11.9607 10.7075 11.9607C9.99663 11.9519 9.57537 11.7764 9.06636 11.241C8.64511 10.8022 8.46958 10.3722 8.46958 9.74907C8.47836 8.10794 10.1809 7.03726 11.6729 7.73935Z" fill="#2F80ED" />
+                                                    <path d="M27.7162 6.9407C27.6109 7.00214 26.1365 8.39754 24.434 10.0562L21.3448 13.0664L20.1951 11.9343C19.2649 11.0128 18.984 10.7759 18.7207 10.732C18.3521 10.6618 17.8782 10.8461 17.7027 11.1357C17.5623 11.3551 17.5447 11.9168 17.6676 12.1449C17.7203 12.2327 18.5628 13.1103 19.5457 14.0844L21.3272 15.866L25.1624 12.1274C27.9971 9.37168 29.0239 8.31855 29.0941 8.09037C29.3662 7.28297 28.4622 6.52823 27.7162 6.9407Z" fill="#2F80ED" />
+                                                </svg>
+                                            </div>
+                                            <div class="person__succes-plans-value">
+                                                123
+                                            </div>
+                                        </div>
+                                        <button class="person__comment mobile-only icon-message-square"></button>
+                                        <div class="person__thumb">
+                                            <img src="@img/user-2.png" class="cover-image" alt="thumb">
+                                        </div>
+                                        <div class="person__activity icon-clock pc-only">
+                                            с 3 апреля 2022
+                                        </div>
+                                        <div class="person__status pc-only">
+                                            Нет на месте
+                                        </div>
+                                    </div>
+                                    <div class="person__main-body">
+                                        <div class="person__main-header">
+                                            <div class="person__main-title title">
+                                                Анна Власова
+                                            </div>
+                                            <div class="person__status mobile-only"></div>
+                                            <div class="person__btns pc-only">
+                                                <a href="" class="person__btn l-btn l-btn-sm l-btn-gray">Написать</a>
+                                                <a href="" class="person__btn l-btn l-btn-sm l-btn-primary">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="person__main-position pc-only">
+                                            Пользователь
+                                        </div>
+                                        <div class="person__main-desc">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                            <span class="pc-only">
+                                                <br>
+                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                            </span>
+                                            <button type="button" class="person__main-edit icon-edit-bold mobile-only"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="person__stats person__stats-sm pc-only">
+                                    <li class="person__stat">
+                                        <div class="person__stat-value">
+                                            3
+                                        </div>
+                                        <div class="person__stat-text">
+                                            Плавнов и диет пройдено
+                                        </div>
+                                    </li>
+                                    <li class="person__stat">
+                                        <div class="person__stat-value">
+                                            64
+                                        </div>
+                                        <div class="person__stat-text">
+                                            Записей в блоге
+                                        </div>
+                                    </li>
+                                    <li class="person__stat">
+                                        <div class="person__stat-value icon-eye-fill"></div>
+                                        <div class="person__stat-text">
+                                            Просмотров: 2102
+                                        </div>
+                                    </li>
+                                    <li class="person__stat">
+                                        <div class="person__stat-value icon-heart"></div>
+                                        <div class="person__stat-text">
+                                            Лайков: 128
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="person__body">
+                                <div class="person__column">
+                                    <div class="person__column-section">
+                                        <div class="person__chart">
+                                            <div class="person__chart-header">
+                                                <div class="person__chart-text">
+                                                    Обхват:
+                                                </div>
+                                                <ul class="person__chart-list">
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Грудь:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            90
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Талия:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            90
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Бедра:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            90
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="icon-edit-bold mobile-only"></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="person__chart-image">
+                                                <img src="@img/chart_1.svg" alt="chart">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="person__column-section">
+                                        <div class="person__chart">
+                                            <div class="person__chart-header">
+                                                <div class="person__chart-text">
+                                                    Вес:
+                                                </div>
+                                                <ul class="person__chart-list">
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Было:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            80
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Стало:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            55
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="icon-edit-bold mobile-only"></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="person__chart-image">
+                                                <img src="@img/chart_2.svg" alt="chart">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="person__column-section">
+                                        <div class="person__chart">
+                                            <div class="person__chart-header">
+                                                <div class="person__chart-text">
+                                                    Индекс массы тела:
+                                                </div>
+                                                <ul class="person__chart-list">
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Было:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            80
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person__chart-text">
+                                                            Стало:
+                                                        </div>
+                                                        <div class="person__chart-value">
+                                                            55
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="icon-edit-bold mobile-only"></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="person__chart-image">
+                                                <img src="@img/chart_2.svg" alt="chart">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="person__column-section">
+                                        <div class="person__column-caption title title-sm">
+                                            Пройденные планы и диеты:
+                                        </div>
+                                        <ul class="person__plans">
+                                            <li class="person__plan">
+                                                <div class="person__plan-thumb pc-only">
+                                                    <img src="@img/user.png" alt="thumb">
+                                                </div>
+                                                <div class="person__plan-title">
+                                                    Лёгкий
+                                                </div>
+                                                <div class="person__plan-status succes">Готов</div>
+                                            </li>
+                                            <li class="person__plan">
+                                                <div class="person__plan-thumb pc-only">
+                                                    <img src="@img/user-2.png" alt="thumb">
+                                                </div>
+                                                <div class="person__plan-title">
+                                                    Умеренный
+                                                </div>
+                                                <div class="person__plan-status succes">Готов</div>
+                                            </li>
+                                            <li class="person__plan">
+                                                <div class="person__plan-thumb pc-only">
+                                                    <img src="@img/user-3.png" alt="thumb">
+                                                </div>
+                                                <div class="person__plan-title">
+                                                    Полный
+                                                </div>
+                                                <div class="person__plan-status">В процессе</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="person__column">
+
+                                    <div class="person__column-caption title">
+                                        ВСЕ ПУБЛИКАЦИИ
+                                    </div>
+                                    <div class="person__column-section announcement">
+                                        <div class="announcement__header">
+                                            <div class="announcement__thumb">
+                                                <img src="img/user-2.png" alt="user">
+                                            </div>
+                                            <div class="announcement__person">
+                                                <div class="announcement__person-name">
+                                                    Анна Власова
+                                                </div>
+                                                <div class="announcement__person-subtitle">
+                                                    Вчера в 12:11
+                                                </div>
+                                            </div>
+                                            <div class="announcement__actions">
+                                                <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+                                                <ul class="announcement__actions-list">
+                                                    <li class="announcement__actions-item">
+                                                        <button type="button" class="announcement__action">О рекламодателе</button>
+                                                    </li>
+                                                    <li class="announcement__actions-item">
+                                                        <button type="button" class="announcement__action">Не интересно</button>
+                                                    </li>
+                                                    <li class="announcement__actions-item">
+                                                        <button type="button" class="announcement__action">Пожаловаться</button>
+                                                    </li>
+                                                    <li class="announcement__actions-item">
+                                                        <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="announcement__title">
+                                            10 Trending Nutrition Research Articles of 2021
+                                        </div>
+                                        <p class="announcement__desc">
+                                            As 2020 begins, we took a look back at nutrition in the news during 2019. The most popular diet search according to Google was intermittent fasting...
+                                        </p>
+
+                                        <div class="announcement__image">
+                                            <img src="img/announcement.png" class="cover-image" alt="announcement">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="announcement__footer announcement__footer-sm">
+                                            <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                            <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                            <button type="button" class="announcement__footer-action icon-share"><span class="pc-only">Поделится</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "product"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

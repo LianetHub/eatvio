@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__body">
+                            <aside class="content__side content__side-sm">
+                                <nav class="content__menu">
+                                    <ul class="content__menu-list">
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-mouthpiece active">Компании</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-stats">Статистика</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-wallet">Бюджет</a>
+                                        </li>
+                                        <li class="content__menu-separator"></li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-gear">Настройки</a>
+                                        </li>
+                                        <li class="content__menu-item">
+                                            <a href="" class="content__menu-link icon-logout">Выход</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <div class="content__main">
+                                <div class="content__cabinet cabinet">
+                                    <div class="cabinet__title title">
+                                        Рекламный кабинет
+                                    </div>
+                                    <div class="cabinet__header">
+                                        <a href="create.html" class="cabinet__btn l-btn l-btn-primary">Создать компанию</a>
+                                        <div class="select">
+                                            <select>
+                                                <option value="">Все компании</option>
+                                                <option value="">Активные компании</option>
+                                                <option value="">Остановленные</option>
+                                                <option value="">На модерации и отклонённые</option>
+                                                <option value="">Архивные</option>
+                                                <option value="">Черновики</option>
+                                            </select>
+                                        </div>
+                                        <div class="cabinet__actions">
+                                            <button type="button" class="cabinet__action icon-refresh"></button>
+                                            <a href="#settings" data-modal class="cabinet__action icon-gear"></a>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet__filters">
+                                        <div class="select">
+                                            <select>
+                                                <option value="">Возобновить показы</option>
+                                                <option value="">Копировать</option>
+                                                <option value="">Изменить ставку</option>
+                                                <option value="">Изменить бюджет</option>
+                                                <option value="">Остановить</option>
+                                                <option value="">Удалить</option>
+                                                <option value="">Архивировать</option>
+                                            </select>
+                                        </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="">Последний день</option>
+                                                <option value="">Последние 7 дней</option>
+                                                <option value="">Последние 30 дней</option>
+                                            </select>
+                                        </div>
+                                        <form action="#" class="cabinet__search search">
+                                            <button class="search__btn icon-search"></button>
+                                            <input type="text" name="search" class="search__input" placeholder="Поиск">
+                                        </form>
+                                    </div>
+                                    <div class="cabinet__body">
+                                        <div class="cabinet__empty icon-mouthpiece">
+                                            <div class="cabinet__empty-caption">
+                                                Компаний пока-что нет
+                                            </div>
+                                            <div class="cabinet__empty-subtitle">
+                                                Создайте первую рекламную компанию <br> Это не займёт много времени
+                                            </div>
+                                            <a href="create.html" class="cabinet__empty-create">
+                                                Создать компанию
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

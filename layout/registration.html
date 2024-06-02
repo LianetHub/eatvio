@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Auth</title>
+	<style>@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
+	<link type="text/css"  rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css"  rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+	<link type="text/css"  rel="stylesheet" href="css/datepicker.min.css" />  
+	<link type="text/css"  rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.steps.min.js"></script>
+	<script src="js/datepicker.js"></script>
+</head>
+<body>
+	<header></header>
+	
+	<section class="d-flex align-items-center --80vh py-5" id="main">
+		<div id="auth_content" class="container --mw-1000">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-md-6">
+					<img src="img/logo.svg" class="logo" />
+					<div class="h4 my-5 --medium_title">Eatvio - lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices orci mauris velit lacus, massa. At velit erat erat nisi.</div>
+					<div class="mobile_app mb-5">
+						<a href="#" class="me-4"><img src="img/pm.svg" class="logo" /></a>
+						<a href="#"><img src="img/as.svg" class="logo" /></a>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="--popup_style --b_radius">
+						<form class="form-signin">
+							  <input type="email" id="inputEmail" class="form-control" placeholder="Электронный адрес или номер телефона" required="" autofocus="" />
+							  <input type="password" id="inputPassword" class="form-control my-3" placeholder="Пароль" required="" />
+							  <button class="mb-3 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="submit">ВХОД</button>
+							  <div class="text-center --f_bold"><a href="#">Забыли пароль?</a></div>
+							  <hr/>
+							  <div class="text-center px-3">
+								<a href="#" class="mb-3 px-4 btn btn-lg btn-dark btn-block w-100 --f_bold text-uppercase">Создать новый аккаунт</a>
+							  </div>
+						</form>
+					</div>
+					<div class="text-center my-3">
+						<a href="#" class="text-uppercase --f_bolder" ata-bs-modal style="color:var(--main_fcolor)">Я консультант</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade modal-dialog-centered" id="regModal" area-hidden=true tabindex="-1">
+			<div class="modal-dialog p-0 --popup_style --b_radius">
+				<div class="modal-content">
+					<div class="p-3">
+					  <div class="modal-header">
+						<h5 class="modal-title --medium_title">Регистрация</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						<form class="form-signin">
+							
+							<div class="progress mb-2 w-100" style="display:none;"><div class="progress-bar" role="progressbar" style="width:25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div>
+							
+							<div class="Steps" id="registrationSteps">
+								
+								
+								
+								
+								
+								<hidden>Регистрация</hidden>
+								<div step-item>
+									<div class="row">
+										<div class="col-6">
+											<input type="text" id="inputFirstName" class="form-control" placeholder="Имя" required="" />
+										</div>
+										<div class="col-6">
+											<input type="text" id="inputLastName" class="form-control" placeholder="Фамилия" required="" />
+										</div>
+									</div>
+									
+									<input type="tel" id="inputEmail" class="form-control my-3" placeholder="Номер мобильного телефона или эл. адресс" required="" />
+									
+									<input type="password" id="inputPassword" class="form-control my-3" placeholder="Пароль" required="" />
+									
+									<div class="text-center --f_bold">Дата рождения</div>
+									
+									<div class="--with_arr">
+										<!-- http://t1m0n.name/air-datepicker/docs/index-ru.html -->
+										<input type="text" id="birthdate" class="form-control my-3 text-center --f_bold" value="01.01.2000" required="" autocomplete="off" />
+										<span></span>
+									</div>
+									
+									<div class="my-3 text-center --f_bold">Пол</div>
+									<div class="btn-group mb-3 d-flex justify-content-center --roundredRadioButtons">
+										<input type="radio" class="btn-check" name="gender" id="genderM" autocomplete="off" checked />
+										<label class="btn btn-x btn-primary" for="genderM">М</label>
+
+										<input type="radio" class="btn-check" name="gender" id="genderF" autocomplete="off" />
+										<label class="btn btn-lg btn-primary" for="genderF">Ж</label>	
+									</div>
+									
+									<p class="--max_small --f_grey lh-1">Нажимая кнопку Регистрация, вы принимаете <a href="#" class="--f_black">Условия</a>, <a href="#" class="--f_black">Политику использования данных</a> и <a href="#" class="--f_black">Политику в отоношении файлов cookie</a>. Вы можете получать от нас SMS-уведомления, отказаться от которых можно в любой момент.</p>
+									
+									<button class="btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>РЕГИСТРАЦИЯ</button>
+								</div>
+								
+								
+								
+								
+								
+								
+								<hidden>Отлично! Продолжим :)</hidden>
+								<div step-item>
+									<div class="row mt-4">
+										<div class="col-6">
+											<div class="text-center --f_bold">Страна</div>
+											<div class="--with_arr my-3">
+												<select class="form-select text-center">
+													<option selected>Россия</option>
+													<option>Укранина</option>
+												</select>
+												<span></span>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="text-center --f_bold">Город</div>
+											<div class="--with_arr my-3">
+												<select class="form-select text-center">
+													<option selected>Москва</option>
+													<option>Киев</option>
+												</select>
+												<span></span>
+											</div>
+										</div>
+									</div>
+									<div class="text-center --f_bold">Предпочитаемый язык общения</div>
+									<div class="--with_arr my-3">
+										<select class="form-select text-center">
+											<option selected>Русский</option>
+											<option>Украинский</option>
+											<option>Польский</option>
+										</select>
+										<span></span>
+									</div>
+									<div class="text-center --f_bold">Ваш вес</div>
+									<input type="number" id="inputWeight" class="form-control my-3 text-center" value="" />
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								
+								
+								<hidden>Так держать :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Первичные замеры</div>
+									<div class="row">
+										<div class="col-4">
+											<div class="text-center --f_bold">Обхват груди</div>
+											<input type="number" class="form-control my-3 text-center" value="" />
+										</div>
+										<div class="col-4">
+											<div class="text-center --f_bold">Обхват талии</div>
+											<input type="number" class="form-control my-3 text-center" value="" />
+										</div>
+										<div class="col-4">
+											<div class="text-center --f_bold">Обхват бедр</div>
+											<input type="number" class="form-control my-3 text-center" value="" />
+										</div>
+									</div>
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								
+								<hidden>Давай в том же духе :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Ваше артериальное давление?</div>
+									
+									<div class="text-center --f_bold">Средние показатели давления</div>
+									<input type="number" class="form-control my-3 text-center" value="" />
+									
+									<div class="text-center --f_bold">Есть ли у вас склогность к гипо?</div>
+									<input type="number" class="form-control my-3 text-center" value="" />
+									
+									<div class="text-center --f_bold">Есть ли у вас склонность к гипертании? </div>
+									<div class="--with_arr my-3">
+										<select class="form-select text-center">
+											<option selected>Нет</option>
+											<option>Да</option>
+										</select>
+										<span></span>
+									</div>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								
+								
+								<hidden>Расскажи о себе :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Наличие аллергии</div>
+									
+									<textarea class="form-control my-3" placeholder="Введите информацию..." style="min-height"></textarea>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								<hidden>Расскажи о себе :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Принимаете ли вы лекарства или бады?</div>
+									
+									<textarea class="form-control my-3" placeholder="Введите информацию..." style="min-height"></textarea>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								
+								
+								<hidden>Расскажи о себе :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Ваши спортивные увлечения?</div>
+									
+									<textarea class="form-control my-3" placeholder="Введите информацию..." style="min-height"></textarea>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								<hidden>Расскажи о себе :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Ваши любимые/нелюбимые продукты питания?</div>
+									
+									<textarea class="form-control my-3" placeholder="Введите информацию..." style="min-height"></textarea>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								
+								<hidden>Ещё немного :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Ваши любимые/нелюбимые продукты питания?</div>
+									
+									<textarea class="form-control" placeholder="Любимые продукты" style="min-height:140px"></textarea>
+									<textarea class="form-control my-3" placeholder="Нелюбимые продукты" style="min-height:140px"></textarea>
+									
+									<button class="mb-2 btn btn-lg btn-primary btn-block w-100 --f_bolder" type="button" next-step>ПРОДОЛЖИТЬ</button>
+									<div class="text-center --f_bold"><a href="javascript:void(0)" skip-step><span class="--f_grey">Пропустить</span></a></div>
+								</div>
+								
+								
+								<hidden>Почти готово :)</hidden>
+								<div step-item>
+									<div class="my-3 text-center">Дополнительная информация</div>
+									
+									<textarea class="form-control my-3" placeholder="Введите любую дополнительную информацию на своё усмотрение" style="min-height:140px"></textarea>
+									
+									<button class="btn btn-lg btn-primary btn-block w-100 --f_bolder" type="submit">ЗАВЕРШИТЬ</button>
+								</div>
+								
+								
+								
+							</div>
+						</form>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</section>
+	
+	<footer>
+		<div class="container --mw-1000 py-5 --f_bold">
+			<div class="d-flex align-items-center justify-content-between">
+				<div>
+					<a href="#" class="me-4 active">Русский</a>
+					<a href="#">English</a>
+				</div>
+				<div style="color:var(--main_fcolor)">
+					Eatvio © 2022
+				</div>
+			</div>
+			<hr/>
+			<ul class="--menu --footer">
+				<li><a href="#">Конфиденциальность</a></li>
+				<li><a href="#">Условия использования</a></li>
+				<li><a href="#">Справка</a></li>
+				<li><a href="#">Регистрация</a></li>
+			</ul>
+		</div>
+	</footer>
+
+<script>
+// https://bootstrap5.ru/docs/components/modal
+const regModal 		= document.getElementById('regModal'),
+	  regFormModal 	= new bootstrap.Modal(regModal, {});  
+
+$(document).ready( () => {
+
+const regTitle 	= $(regModal).find('.modal-title'),
+	  close 	= $(regModal).find('.close'),
+	  progress 	= $(regModal).find('.progress'),
+	  prgrssbar = $('.progress-bar', progress),
+	  steps		= $('#registrationSteps'),
+	  stepsCnt	= 10;
+	  
+	  
+
+// https://github.com/rstaib/jquery-steps/wiki/Settings
+steps.steps({
+	headerTag: 'hidden',
+	enableKeyNavigation: false,
+	enablePagination: false,
+	enableFinishButton: false,
+	transitionEffect: 'fade',
+	transitionEffectSpeed: 300,
+	onInit: 		(event, currentIndex) 			  => {
+														// TODO - надо ещё валидацию прикрутить
+														$(regModal).find('[next-step], [skip-step]').bind('click', () => { steps.steps('next') });
+														},
+	onStepChanged:  (event, currentIndex, priorIndex) => {
+														let title = $('#registrationSteps-h-' + currentIndex).text();
+														regTitle.text(title);
+														if (currentIndex>0)
+															prgrssbar.css({width: (currentIndex+1)*100/stepsCnt+'%'}), progress.show(300);
+														else
+															prgrssbar.css({width: 0}), progress.hide(300);
+														},
+	
+});
+
+// http://t1m0n.name/air-datepicker/docs/index-ru.html
+regModal.addEventListener('shown.bs.modal', (e) => { $('#birthdate').datepicker() });
+
+close.bind('click', () => { regFormModal.hide() });
+regFormModal.show();
+	
+});
+</script>
+
+</body>
+</html>

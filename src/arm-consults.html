@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body class="dark-theme">
+        <div class="wrapper">
+            <main class="page">
+                <section class="arm">
+                    <div class="arm__container">
+                        <div class="arm__content">
+                            <aside class="arm__sidebar">
+                                @@include('./html/_arm-menu.html', {
+                                "active": 5
+                                })
+                            </aside>
+                            <div class="arm__header">
+                                <div class="arm__title">
+                                    Новые консультанты
+                                </div>
+                                <form action="#" class="arm__search">
+                                    <button type="submit" class="arm__search-btn icon-search"></button>
+                                    <input type="text" name="search" class="input input-white" placeholder="Поиск">
+                                </form>
+                            </div>
+                            <ul class="arm__list">
+                                <li class="arm__consult">
+                                    <div class="arm__consult-thumb">
+                                        <img src="@img/user.png" alt="thumb">
+                                    </div>
+                                    <div class="arm__consult-name">Фамилия Имя</div>
+                                    <div class="arm__consult-status">Самозанятый</div>
+                                    <a href="" class="arm__consult-btn l-btn l-btn-outline-primary l-btn-sm">Посмотреть</a>
+                                </li>
+                                <li class="arm__consult">
+                                    <div class="arm__consult-thumb">
+                                        <img src="@img/user-2.png" alt="thumb">
+                                    </div>
+                                    <div class="arm__consult-name">Фамилия Имя</div>
+                                    <div class="arm__consult-status">Индивидуальный предприниматель</div>
+                                    <a href="" class="arm__consult-btn l-btn l-btn-outline-primary l-btn-sm">Посмотреть</a>
+                                </li>
+                                <li class="arm__consult">
+                                    <div class="arm__consult-thumb">
+                                        <img src="@img/user-3.png" alt="thumb">
+                                    </div>
+                                    <div class="arm__consult-name">Фамилия Имя</div>
+                                    <div class="arm__consult-status">Общество с Ограниченной Ответственостью</div>
+                                    <a href="" class="arm__consult-btn l-btn l-btn-outline-primary l-btn-sm">Посмотреть</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        @@include('html/_logout.html')
+        @@include('html/_js.html', {})
+    </body>
+</html>
