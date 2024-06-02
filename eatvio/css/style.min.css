@@ -12439,7 +12439,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-color: #fff;
   background: transparent;
 }
-
+.arm__complaint-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .subscribers {
   margin-top: 1.375rem;
 }
