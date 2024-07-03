@@ -948,12 +948,16 @@
 		display: flex;
 		border: 1px solid #e6e6e6;
 		border-radius: 0.5rem;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			height: rem(3);
+		}
 		.l-tab.l-btn {
 			flex: 1 1 auto;
 			border: 0;
 			padding: 0.75rem;
 			@media (min-width: $md4) {
-				padding: 1.06rem 4rem;
+				padding: 1.06rem 2rem;
 			}
 			// border-radius: 0;
 		}

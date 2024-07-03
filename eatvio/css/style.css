@@ -6894,6 +6894,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   border: 1px solid #e6e6e6;
   border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.settings__tablist::-webkit-scrollbar {
+  height: 0.1875rem;
 }
 
 .settings__tablist .l-tab.l-btn {
@@ -16468,7 +16473,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .settings__tablist .l-tab.l-btn {
-    padding: 1.06rem 4rem;
+    padding: 1.06rem 2rem;
   }
 
   .diary__header {

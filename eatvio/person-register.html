@@ -481,11 +481,12 @@
             <div class="settings__tabs tabs" data-tabs>
               <div class="settings__tablist" role="tablist" aria-labelledby="label">
                 <button class="l-tab l-btn" role="tab" type="button" id="self-employed" aria-selected="true" aria-controls="tabpanel-1">Самозанятый</button>
-                <button class="l-tab l-btn" role="tab" type="button" id="IP" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+                <button class="l-tab l-btn" role="tab" type="button" id="individual" aria-selected="true" aria-controls="tabpanel-2">Физическое лицо</button>
+                <button class="l-tab l-btn" role="tab" type="button" id="IP" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
                   <span class="pc-only">Индивидуальный предприниматель</span>
                   <span class="mobile-only">ИП</span>
                 </button>
-                <button class="l-tab l-btn" role="tab" type="button" id="OOO" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">ООО</button>
+                <button class="l-tab l-btn" role="tab" type="button" id="OOO" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">ООО</button>
               </div>
               <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="self-employed">
                 <div class="settings__hint">
@@ -509,7 +510,29 @@
                   </div>
                 </div>
               </div>
-              <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="IP">
+              <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="individual">
+                <div class="settings__hint">
+                  <div class="settings__hint-title">
+                    Рекомендуемый метод
+                  </div>
+                  <a href="" class="settings__hint-link">Информация как стать сомозанятым</a>
+                </div>
+                <div class="settings__warning">
+                  Самозанятые платят налог при&nbsp;работе с&nbsp;Итвио всего 6%.
+                  Итвио при&nbsp;выплатах автоматически оплатит налог и&nbsp;подготовит чек&nbsp;для&nbsp;себя.
+                  Вы&nbsp;сможете отследить все&nbsp;операции в&nbsp;официальном приложении «Мой&nbsp;Налог»
+                  Перестать быть самозанятым можно в&nbsp;любой момент
+                </div>
+                <div class="settings__grid">
+                  <div class="settings__grid-item">
+                    <div class="settings__grid-label">
+                      ИНН
+                    </div>
+                    <input type="text" name="inn" class="input input-white" placeholder="Введите ИНН">
+                  </div>
+                </div>
+              </div>
+              <div class="tabpanel" role="tabpanel" id="tabpanel-3" tabindex="0" aria-labelledby="IP">
                 <div class="settings__warning">
                   При&nbsp;работе с&nbsp;индивидуальными предпринимателями выплаты происходят
                   в&nbsp;полуавтоматическом режиме, от&nbsp;вас&nbsp;потребуется иметь доступ в&nbsp;любую
@@ -531,7 +554,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tabpanel" role="tabpanel" id="tabpanel-3" tabindex="0" aria-labelledby="OOO">
+              <div class="tabpanel" role="tabpanel" id="tabpanel-4" tabindex="0" aria-labelledby="OOO">
                 <div class="settings__warning">
                   При&nbsp;работе с&nbsp;юридическими лицами (ООО) выплаты происходят в&nbsp;полуавтоматическом режиме, от&nbsp;вас&nbsp;потребуется иметь доступ в&nbsp;любую систему электронного документооборота, более подробно о&nbsp;порядках рассчета написано здесь(ссылка будет)
                 </div>
