@@ -12311,10 +12311,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-align: center;
+  height: 9.375rem;
 }
 
 .diet__form-checkboxes .checkbox-btn__content img {
