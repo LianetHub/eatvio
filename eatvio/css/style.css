@@ -110,6 +110,14 @@
   display: block;
 }
 
+.icon-next:before {
+  content: "\e94b";
+}
+
+.icon-prev:before {
+  content: "\e94c";
+}
+
 .icon-check-circle:before,
 .diet__content-list li:before,
 .plans__item-list li:before {
@@ -485,7 +493,6 @@ body.dark-theme {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
   z-index: 10;
 }
@@ -518,7 +525,6 @@ body.dark-theme {
   background: #fff;
   color: #000;
   -webkit-transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-  -o-transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
   transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -584,7 +590,6 @@ body.dark-theme {
           align-items: center;
   gap: 0.62rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -606,7 +611,6 @@ body.dark-theme {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color: currentColor;
   background: transparent;
@@ -773,7 +777,6 @@ body.dark-theme {
   background: rgba(217, 217, 217, 0.01);
   cursor: pointer;
   -webkit-transition: border-color 0.3s ease 0s;
-  -o-transition: border-color 0.3s ease 0s;
   transition: border-color 0.3s ease 0s;
 }
 
@@ -858,7 +861,6 @@ body.dark-theme {
   font-weight: 600;
   line-height: 100%;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -965,7 +967,6 @@ body.dark-theme {
   font-size: 18px;
   line-height: normal;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
 }
 
@@ -974,7 +975,6 @@ body.dark-theme {
   font-size: 24px;
   margin: 0em 1rem 0em 0em;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -1009,7 +1009,6 @@ body.dark-theme {
 .popup__privacy a {
   color: #000;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -1026,6 +1025,7 @@ body.dark-theme {
 .popup__caption {
   text-align: center;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .popup__caption.title {
@@ -1218,7 +1218,6 @@ body.dark-theme {
   font-size: 1.125rem;
   line-height: 130%;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -1232,7 +1231,6 @@ body.dark-theme {
           order: 1;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -1245,7 +1243,6 @@ body.dark-theme {
   content: "";
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   position: absolute;
@@ -1279,8 +1276,7 @@ body.dark-theme {
   color: #323f4b;
   font-size: 1rem;
   font-weight: 500;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   padding: 0.7625em 1.625em 0.7625em 0.875em;
   font-family: "Mulish";
   white-space: nowrap;
@@ -1333,7 +1329,6 @@ body.dark-theme {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   color: #323f4b;
   font-size: 26px;
@@ -1750,6 +1745,19 @@ body.dark-theme {
   cursor: help;
 }
 
+[data-popover] {
+  background: #f7faff;
+  color: #323f4b;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+[data-popover-close] {
+  color: #7c8388;
+  font-size: 0.65rem;
+}
+
 .info-block {
   width: 15px;
   height: 15px;
@@ -1768,7 +1776,6 @@ body.dark-theme {
   font-size: 12px;
   line-height: 1.25;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -1906,6 +1913,10 @@ body.dark-theme {
 
 .red-color {
   color: #f00;
+}
+
+.green-color {
+  color: #019a3e !important;
 }
 
 .notification-btn {
@@ -2047,7 +2058,6 @@ body.dark-theme {
   padding: 0.4285714286em;
   border-radius: 4px;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -2071,7 +2081,6 @@ body.dark-theme {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -2103,7 +2112,6 @@ body.dark-theme {
   display: block;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -2114,7 +2122,6 @@ body.dark-theme {
   left: 0.125rem;
   width: 0.875rem;
   -webkit-transition: left 0.3s ease 0s;
-  -o-transition: left 0.3s ease 0s;
   transition: left 0.3s ease 0s;
   border-radius: 50%;
   background: #fff;
@@ -2160,7 +2167,6 @@ body.dark-theme {
 .notification__body {
   position: absolute;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   opacity: 0;
   padding: 0 0 2.12rem 0;
@@ -2192,7 +2198,6 @@ body.dark-theme {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -2254,7 +2259,6 @@ body.dark-theme {
   width: 100%;
   padding: 1rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -2288,10 +2292,8 @@ body.dark-theme {
 }
 
 .input {
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   width: 100%;
   background: none;
@@ -2426,10 +2428,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .textarea {
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   width: 100%;
   background: none;
@@ -2538,7 +2538,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
   padding: 2.375em 1.875em;
 }
@@ -2649,7 +2648,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   cursor: pointer;
   -webkit-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -2660,7 +2658,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       align-self: center;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   font-size: 14px;
 }
@@ -2669,7 +2666,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 24px;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   margin: 0em 0.875rem 0em 0em;
 }
@@ -2868,7 +2864,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2894,6 +2889,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 8px;
   border: 2px solid #2f80ed;
   color: #2f80ed;
+  background: rgba(217, 217, 217, 0.01);
+}
+
+.l-btn.l-btn-primary-outline {
+  border-radius: 8px;
+  border: 2px solid #2f80ed;
+  color: #fff;
   background: rgba(217, 217, 217, 0.01);
 }
 
@@ -3161,7 +3163,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-left: 0.25rem;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -3211,7 +3212,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   right: 0;
   bottom: calc(100% + 2rem);
@@ -3234,7 +3234,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0.4285714286em;
   border-radius: 4px;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -3282,7 +3281,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
   padding: 0.7142857143em 1.4285714286em 0.7142857143em 2.8571428571em;
   -webkit-transition: border-color 0.3s ease 0s;
-  -o-transition: border-color 0.3s ease 0s;
   transition: border-color 0.3s ease 0s;
 }
 
@@ -3390,7 +3388,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 0.75rem;
   font-weight: 600;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -3446,8 +3443,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -3560,7 +3556,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .footer__link {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -3609,7 +3604,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -3766,6 +3760,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
           order: -1;
 }
 
+.content__side.content__side-xs {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
 .content__settings-spoller {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3888,7 +3888,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -3903,7 +3902,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 600;
   margin: 0em 0.625rem 0em 0em;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -3928,7 +3926,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -4040,7 +4037,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 114%;
   letter-spacing: 0.2px;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -4208,7 +4204,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0.5em;
   border-radius: 4px;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -4252,7 +4247,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -ms-flexbox;
   display: flex;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -4311,7 +4305,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 30px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -4341,7 +4334,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -4392,7 +4384,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           transform: rotate(-90deg);
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -4473,7 +4464,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           align-items: center;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -4613,7 +4603,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background: rgba(217, 217, 217, 0.01);
   padding: 0.5em 0.875em;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
 }
 
@@ -4703,8 +4692,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #2f80ed;
   font-size: 20px;
   font-weight: 600;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .content__row-options {
@@ -4776,7 +4764,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1.125rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -4872,7 +4859,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           transform: rotate(-90deg);
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   -webkit-box-ordinal-group: 2;
@@ -5023,7 +5009,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           order: 1;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   display: none;
@@ -5053,7 +5038,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           transform: rotate(-90deg);
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   -webkit-box-ordinal-group: 2;
@@ -5074,7 +5058,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 0.65rem;
   font-weight: 500;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -5206,7 +5189,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-top: -1rem;
   margin-right: -1rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -5437,7 +5419,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -5490,7 +5471,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin: 0em 0em 0em 0.3125rem;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -5522,7 +5502,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 8px;
   z-index: 2;
   background: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -5642,7 +5621,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   border-radius: 50%;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -5683,7 +5661,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .announcement__details-btn {
   font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -5769,7 +5746,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           align-items: center;
   border-radius: 6px;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -5869,8 +5845,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 4;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
@@ -5961,7 +5936,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   border-radius: 50%;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
   z-index: 3;
 }
@@ -6034,7 +6008,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #0d6efd;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -6095,7 +6068,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           column-gap: 0.5rem;
   font-weight: 700;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -6127,7 +6099,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           align-items: center;
   line-height: normal;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -6284,7 +6255,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   border-radius: 4px;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -6345,7 +6315,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           order: 1;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -6562,7 +6531,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-left: auto;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -6667,7 +6635,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -6765,7 +6732,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           justify-content: space-between;
   width: 100%;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -6779,7 +6745,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           transform: rotate(-90deg);
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -6798,8 +6763,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #323f4b;
   text-decoration: underline;
   text-underline-offset: 5px;
-  -webkit-text-decoration-color: #2f80ed;
-          text-decoration-color: #2f80ed;
+  text-decoration-color: #2f80ed;
   font-size: 1.125rem;
 }
 
@@ -6883,8 +6847,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #596883;
   font-size: 0.875rem;
   text-decoration: underline;
-  -webkit-text-decoration-color: #0d6efd;
-          text-decoration-color: #0d6efd;
+  text-decoration-color: #0d6efd;
   text-underline-offset: 2px;
 }
 
@@ -6926,8 +6889,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .settings__hint-link {
   text-decoration: underline;
-  -webkit-text-decoration-color: #0d6efd;
-          text-decoration-color: #0d6efd;
+  text-decoration-color: #0d6efd;
   text-underline-offset: 2px;
 }
 
@@ -7059,7 +7021,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
 }
 
@@ -7210,7 +7171,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background: #f0f2f5;
   padding: 0.35em 1.6em;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -7232,7 +7192,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   font-weight: 500;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -7424,7 +7383,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .cabinet__table-setting {
   font-size: 20px;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -7504,7 +7462,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .diary__back {
   font-size: 14px;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -7552,7 +7509,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
   font-size: 0.875rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -7611,7 +7567,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   font-weight: 700;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -7814,7 +7769,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.2px;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
-  -o-transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
 }
@@ -7921,6 +7875,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.0125rem;
 }
 
+.diary__product-name .input {
+  min-height: 100%;
+}
+
 .diary__product-name .checkbox__content {
   font-size: inherit;
 }
@@ -7990,7 +7948,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   border: 1px solid currentColor;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -8010,7 +7967,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #2f80ed;
   font-size: 20px;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -8026,8 +7982,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
           transform: translateY(-50%);
   right: 0;
   width: 190px;
-  background: #fff;
+  min-width: 0;
+  overflow: hidden;
   height: 212px;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8040,7 +7998,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   z-index: 2;
 }
@@ -8058,7 +8015,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 10px;
   padding: 0.375rem;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -8125,13 +8081,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__tooltip-item {
   padding: 0.625em;
-  height: 34px;
+  height: 34px !important;
   font-size: 14px;
   cursor: pointer;
   line-height: 100%;
   letter-spacing: 0.2px;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
@@ -8140,6 +8095,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .diary__product-slider {
+  min-width: 0;
   border-radius: 8px;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -8178,11 +8134,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 100%;
   border-radius: 8px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 63, 75, 0)), to(rgba(50, 63, 75, 0.5)));
-  background: -o-linear-gradient(top, rgba(50, 63, 75, 0) 0%, rgba(50, 63, 75, 0.5) 100%);
   background: linear-gradient(180deg, rgba(50, 63, 75, 0) 0%, rgba(50, 63, 75, 0.5) 100%);
   pointer-events: none;
   -webkit-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
   opacity: 0;
 }
@@ -8230,7 +8184,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
 }
 
@@ -8401,7 +8354,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s ease 0s;
   transition: -webkit-transform 0.2s ease 0s;
-  -o-transition: transform 0.2s ease 0s;
   transition: transform 0.2s ease 0s;
   transition: transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
 }
@@ -8509,7 +8461,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -8678,7 +8629,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1rem;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -8687,7 +8637,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #617080;
   font-size: 0.875rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -8785,7 +8734,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   right: 0.75rem;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9115,7 +9063,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .calendar__prev {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9135,7 +9082,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .calendar__next {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9490,7 +9436,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .person__main-benefit.icon-file-text {
   color: #0d6efd;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9544,7 +9489,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 0.875rem;
   display: inline-block;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9603,7 +9547,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .person__menu-btn {
   font-size: 2rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -9623,7 +9566,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
 }
 
@@ -9642,7 +9584,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 0.63rem;
   border-radius: 0.25rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
   padding: 0.38rem;
 }
@@ -10160,7 +10101,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: inline-block;
   border: 1px solid #2f80ed;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -10228,7 +10168,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
   -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
   transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
   transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -10415,7 +10354,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 1px;
   background: #019a3e;
   -webkit-transition: width 0.3s ease 0s;
-  -o-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
 }
 
@@ -10470,7 +10408,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 1px;
   background: #019a3e;
   -webkit-transition: width 0.3s ease 0s;
-  -o-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
 }
 
@@ -10656,7 +10593,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           align-items: center;
   font-weight: 700;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -10712,7 +10648,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -10744,7 +10679,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
      -moz-column-gap: 0.625rem;
           column-gap: 0.625rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -10790,7 +10724,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 100%;
   z-index: 2;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(-5.5%, #000), color-stop(32%, rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, #000 -5.5%, rgba(0, 0, 0, 0) 32%);
   background: linear-gradient(0deg, #000 -5.5%, rgba(0, 0, 0, 0) 32%);
 }
 
@@ -11121,7 +11054,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
   font-weight: 700;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -11144,7 +11076,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #323f4b;
   font-weight: 900;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -11187,7 +11118,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background-color: #f6faff;
   -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
   gap: 0.62rem;
   padding: 0.5rem 0.5rem;
@@ -11278,8 +11208,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-right: -4rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
   -webkit-line-clamp: 1;
 }
@@ -11466,7 +11395,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   padding: 0 0.5rem 0 0;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -11627,7 +11555,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 30px;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   cursor: pointer;
 }
@@ -11641,7 +11568,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 30px;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -11757,7 +11683,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 100%;
   font-size: 0.75rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -11972,7 +11897,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .consults__title[href] {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12176,7 +12100,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1.5rem;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12246,7 +12169,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           column-gap: 0.625rem;
   font-size: 20px;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12371,7 +12293,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   min-width: 40px;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12472,7 +12393,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 24px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   -webkit-transform: rotate(180deg);
@@ -12546,7 +12466,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
      -moz-column-gap: 0.625rem;
           column-gap: 0.625rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12578,7 +12497,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 40px;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12707,8 +12625,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 7;
 }
 
@@ -12776,7 +12693,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 0.875rem;
   font-weight: 500;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -12874,7 +12790,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diet__info-favorite {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   margin-left: 0.5rem;
   font-size: 1.75rem;
@@ -12914,7 +12829,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   font-size: 1.125rem;
   display: -webkit-box;
@@ -12939,7 +12853,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
   height: 4.4375rem;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(81.69%, rgba(255, 255, 255, 0)));
-  background: -o-linear-gradient(bottom, #fff 0%, rgba(255, 255, 255, 0) 81.69%);
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 81.69%);
 }
 
@@ -12950,7 +12863,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 0.5rem;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
@@ -12983,7 +12895,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   border-radius: 0.25rem;
 }
@@ -13259,7 +13170,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   overflow: hidden;
   width: 70px;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -13274,7 +13184,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
   gap: 2rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -13297,7 +13206,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -13307,7 +13215,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 600;
   white-space: nowrap;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -13385,7 +13292,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 1.25rem;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
-  -o-transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
 }
@@ -13426,7 +13332,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .arm__block-link {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -13450,7 +13355,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1.5rem;
   margin-right: 1.25rem;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -13563,7 +13467,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 100%;
   display: inline-block;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -13833,7 +13736,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 500;
   line-height: 100%;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -13859,8 +13761,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 0.0625rem;
-  -webkit-text-decoration-color: #2f80ed;
-          text-decoration-color: #2f80ed;
+  text-decoration-color: #2f80ed;
 }
 
 .arm__body-list {
@@ -13995,7 +13896,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 600;
   line-height: 100%;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
   background: #252736;
 }
@@ -14119,7 +14019,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 0.5rem;
   padding: 0.63rem 3.84rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 
@@ -14253,7 +14152,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1.5rem;
   cursor: pointer;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -14417,7 +14315,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1.125rem;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -14442,7 +14339,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   z-index: 2;
 }
@@ -14694,7 +14590,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .comment-block__item-write {
   color: #2f80ed;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -14707,7 +14602,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #323f4b;
   font-weight: 600;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14779,7 +14673,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #2f80ed;
   font-weight: 600;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
@@ -14855,13 +14748,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 1rem;
   font-weight: 600;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -14935,7 +14826,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0.38rem 1.62rem;
   font-size: 0.875rem;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -14966,8 +14856,357 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 100%;
   border-radius: 0.25rem;
   -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+}
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rating__main {
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.rating__current {
+  color: #2f80ed;
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
+.rating__subtite {
+  margin-top: 0.75rem;
+  color: #323f4b;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.rating__link {
+  margin-top: 1.12rem;
+  color: #7e8e9c;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.rating__btn {
+  margin-top: 1.87rem;
+}
+
+.rating__btn.l-btn {
+  padding: 0.5rem 0;
+}
+
+.stats {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.875em;
+}
+
+.stats:not(:last-child) {
+  margin: 0em 0em 1.875em 0rem;
+}
+
+.stats__header {
+  border-bottom: 0.0625rem solid #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -0.875rem;
+  margin-right: -0.875rem;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-bottom: 0.87rem;
+}
+
+.stats__header-info {
+  color: #d9d9d9;
+  border: 0.125rem solid;
+  font-weight: 600;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 1.5rem;
+}
+
+.stats__title {
+  font-size: 1.375rem;
+}
+
+.stats__calendar {
+  margin-top: 1.19rem;
+  position: relative;
+}
+
+.stats__calendar .select select {
+  padding-left: 3rem;
+}
+
+.stats__calendar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0.87rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #2f80ed;
+  z-index: 2;
+}
+
+.stats__list {
+  margin-top: 1.25rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.stats__item {
+  border-radius: 0.5rem;
+  background: #f7faff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0.75rem 0.75rem;
+}
+
+.stats__item-num {
+  color: #2f80ed;
+  font-weight: 600;
+  font-size: 1.875rem;
+}
+
+.stats__item-desc {
+  color: #323f4b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.stats__table {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.stats__table td {
+  font-weight: 600;
+  color: #22282d;
+  font-size: 1.125rem;
+}
+
+.stats__table td.color-green {
+  font-weight: 700;
+  color: #0bb450;
+}
+
+.stats__table td:nth-child(2) {
+  color: #72818e;
+}
+
+.stats__pagintion {
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.stats__pagintion-prev,
+.stats__pagintion-next {
+  border-radius: 0.25rem;
+  border: 1px solid #dfe3e8;
+  background: #fff;
+  color: #c4cdd5;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.75rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.stats__pagintion-prev:disabled,
+.stats__pagintion-next:disabled {
+  background: #d4d7db;
+  color: #8c969f;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.stats__pagintion-prev:hover,
+.stats__pagintion-next:hover {
+  border: 1px solid #2f80ed;
+  color: #2f80ed;
+}
+
+.stats__pagintion-item {
+  border-radius: 0.25rem;
+  border: 1px solid #dfe3e8;
+  background: #fff;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212b36;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.stats__pagintion-item.active {
+  border: 1px solid #2f80ed;
+  color: #2f80ed;
+}
+
+.stats__pagintion-item[href]:hover {
+  border: 1px solid #2f80ed;
+  color: #2f80ed;
+}
+
+.stats__block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.13rem;
+  counter-increment: num;
+}
+
+.stats__block::before {
+  content: counter(num);
+  font-size: 1.25rem;
+  font-weight: 600;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.875rem;
+          flex: 0 0 1.875rem;
+  margin-right: -0.75rem;
+}
+
+.stats__block-thumb {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 3.125rem;
+  height: 3.125rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.stats__block-thumb img {
+  border-radius: 50%;
+}
+
+.stats__block-name {
+  font-size: 1.125rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.stats__block-checklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  gap: 0.75rem;
+}
+
+.stats__block-checkitem {
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.stats__block-value {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  color: #2f80ed;
+  font-size: 1.375rem;
+  font-weight: 700;
 }
 
 @media (min-width: 575.98px) {
@@ -15597,11 +15836,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .diary__tooltip {
-    width: 217px;
+    max-width: 217px;
   }
 
   .diary__tooltip-item {
-    height: 36px;
+    height: 36px !important;
     font-size: 16px;
   }
 
@@ -16002,6 +16241,89 @@ input[type=date]::-webkit-calendar-picker-indicator {
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
   }
+
+  .stats {
+    padding: 1.25em 1.875em 1.875em;
+  }
+
+  .stats__header {
+    padding-bottom: 1.25rem;
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .stats__header-info {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .stats__title {
+    font-size: 1.5rem;
+  }
+
+  .stats__list {
+    gap: 1.25rem;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats__item {
+    padding: 0.75rem;
+  }
+
+  .stats__item-desc {
+    margin-top: 0.13rem;
+  }
+
+  .stats__table {
+    margin-top: 0.675rem;
+  }
+
+  .stats__table td {
+    padding: 0.625rem 0;
+  }
+
+  .stats__pagintion {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .stats__block {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .stats__block:not(:last-child) {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 0.0625rem solid #d9d9d9;
+  }
+
+  .stats__block-name {
+    text-align: left;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .stats__block-checklist {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
+
+  .stats__block-value {
+    white-space: nowrap;
+    margin-left: auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -16202,7 +16524,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-weight: 500;
     line-height: 120%;
     -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-    -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
     transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   }
 
@@ -17058,6 +17379,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
     width: 5rem;
     height: 5rem;
   }
+
+  .rating__current {
+    font-size: 2.875rem;
+  }
+
+  .stats__calendar {
+    max-width: 14.875rem;
+  }
+
+  .stats__item-num {
+    font-size: 2.5rem;
+  }
+
+  .stats__table td {
+    font-size: 1.25rem;
+  }
+
+  .stats__block {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
 }
 
 @media (min-width: 767.98px) and (any-hover: hover) {
@@ -17120,7 +17462,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
     transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   }
 
@@ -17145,6 +17486,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 17.75rem;
             flex: 0 0 17.75rem;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .content__side.content__side-xs {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.875rem;
+            flex: 0 0 16.875rem;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -17403,6 +17753,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .search-page__side {
     width: 16.875rem;
   }
+
+  .stats__block-name {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+    font-size: 1.25rem;
+  }
+
+  .stats__block-checklist {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .stats__block-value {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
 }
 
 @media (min-width: 991.98px) and (hover: hover) {
@@ -17443,7 +17812,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
             transform: scaleX(0);
     -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-    -o-transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     background: #2f80ed;
@@ -17562,7 +17930,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .chat__container {
     -webkit-transition: -webkit-transform 0.3s ease 0s;
     transition: -webkit-transform 0.3s ease 0s;
-    -o-transition: transform 0.3s ease 0s;
     transition: transform 0.3s ease 0s;
     transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   }
@@ -17728,6 +18095,82 @@ input[type=date]::-webkit-calendar-picker-indicator {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+
+  .stats__table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 0.88rem;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .stats__table tr td:first-child {
+    text-align: center;
+    width: 100%;
+  }
+
+  .stats__table tr:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+
+  .stats__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 0.88rem;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .stats__block:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .stats__block::before {
+    margin-right: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    border-radius: 0.25rem;
+    background: #2f80ed;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 0.38rem;
+    line-height: 1;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .stats__block-thumb {
+    margin: 0 auto;
+  }
+
+  .stats__block-value {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
 }
 
 @media (any-hover: hover) {
@@ -17845,6 +18288,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: #fff;
   }
 
+  .l-btn.l-btn-primary-outline:hover {
+    background-color: #2f80ed;
+    color: #fff;
+  }
+
   .l-btn.l-btn-secondary-outline:hover {
     background: #e6e6e6;
   }
@@ -17899,7 +18347,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .search__recent-link {
     -webkit-transition: background-color 0.3s ease 0s;
-    -o-transition: background-color 0.3s ease 0s;
     transition: background-color 0.3s ease 0s;
   }
 
@@ -18267,7 +18714,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .plan {
     -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
 
@@ -18478,7 +18924,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .diary__product-next {
     opacity: 0.3;
     -webkit-transition: opacity 0.3s ease 0s;
-    -o-transition: opacity 0.3s ease 0s;
     transition: opacity 0.3s ease 0s;
   }
 
@@ -18486,7 +18931,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
     transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   }
 
@@ -18498,7 +18942,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     visibility: hidden;
     height: 0;
     -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
 }

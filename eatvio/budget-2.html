@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,107 +393,97 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="content">
-        <div class="content__container">
-          <div class="content__body">
-            <aside class="content__side content__side-sm">
-              <nav class="content__menu">
-                <ul class="content__menu-list">
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-mouthpiece">Компании</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-stats">Статистика</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-wallet active">Бюджет</a>
-                  </li>
-                  <li class="content__menu-separator"></li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-gear">Настройки</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-logout">Выход</a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
-            <div class="content__main">
-              <div class="content__cabinet cabinet">
-                <div class="cabinet__title title">
-                  Бюджет
-                </div>
-                <div class="cabinet__body">
-                  <div class="cabinet__budget">
-                    <div class="cabinet__budget-caption">
-                      Ваш бюджет
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__menu">
+                                <ul class="content__menu-list">
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-mouthpiece">Компании</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-stats">Статистика</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-wallet active">Бюджет</a>
+                                    </li>
+                                    <li class="content__menu-separator"></li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-gear">Настройки</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-logout">Выход</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <div class="content__cabinet cabinet">
+                                <div class="cabinet__title title"> Бюджет </div>
+                                <div class="cabinet__body">
+                                    <div class="cabinet__budget">
+                                        <div class="cabinet__budget-caption"> Ваш бюджет </div>
+                                        <div class="cabinet__budget-value">
+                                            <span> 7 032.38 ₽</span> 8 438.86 ₽ с НДС
+                                        </div>
+                                        <a href="#top" data-modal class="cabinet__budget-btn l-btn btn-primary">Пополнить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__cabinet cabinet">
+                                <div class="content__header">
+                                    <div class="content__date">
+                                        <input type="date" name="start-date" class="input input-white" value="2023-05-03">
+                                        <span class="content__date-separator"> – </span>
+                                        <input type="date" name="end-date" class="input input-white" value="2023-05-21">
+                                    </div>
+                                    <form action="#" class="content__search search">
+                                        <button class="search__btn icon-search"></button>
+                                        <input type="text" name="search" class="search__input" placeholder="Поиск">
+                                    </form>
+                                </div>
+                                <div class="cabinet__body">
+                                    <table class="cabinet__table">
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Поступление</th>
+                                            <th>Списание</th>
+                                            <th>Примечание</th>
+                                        </tr>
+                                        <tr>
+                                            <td>21.05.2023 – 22.06.2023</td>
+                                            <td></td>
+                                            <td>-2000 ₽</td>
+                                            <td>Показы по рекламной компании “Недельный месячный план”</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.05.2023 – 06.06.2023</td>
+                                            <td></td>
+                                            <td>-968 ₽</td>
+                                            <td>Клики по рекламной компании “Тестовая”</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.05.2023</td>
+                                            <td>+10.000 ₽</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="cabinet__budget-value">
-                      <span> 7 032.38 ₽</span> 8 438.86 ₽ с НДС
-                    </div>
-                    <a href="#top" data-modal class="cabinet__budget-btn l-btn btn-primary">Пополнить</a>
-                  </div>
-                </div>
-              </div>
-              <div class="content__cabinet cabinet">
-                <div class="content__header">
-                  <div class="content__date">
-                    <input type="date" name="start-date" class="input input-white" value="2023-05-03">
-                    <span class="content__date-separator">
-                      –
-                    </span>
-                    <input type="date" name="end-date" class="input input-white" value="2023-05-21">
-                  </div>
-                  <form action="#" class="content__search search">
-                    <button class="search__btn icon-search"></button>
-                    <input type="text" name="search" class="search__input" placeholder="Поиск">
-                  </form>
-                </div>
-                <div class="cabinet__body">
-                  <table class="cabinet__table">
-                    <tr>
-                      <th>Дата</th>
-                      <th>Поступление</th>
-                      <th>Списание</th>
-                      <th>Примечание</th>
-                    </tr>
-                    <tr>
-                      <td>21.05.2023 – 22.06.2023</td>
-                      <td></td>
-                      <td>-2000 ₽</td>
-                      <td>Показы по рекламной компании “Недельный месячный план”</td>
-                    </tr>
-                    <tr>
-                      <td>03.05.2023 – 06.06.2023</td>
-                      <td></td>
-                      <td>-968 ₽</td>
-                      <td>Клики по рекламной компании “Тестовая”</td>
-                    </tr>
-                    <tr>
-                      <td>03.05.2023</td>
-                      <td>+10.000 ₽</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -548,9 +539,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

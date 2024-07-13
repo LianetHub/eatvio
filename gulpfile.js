@@ -15,8 +15,7 @@ import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
-import { scss } from "./gulp/tasks/scss.js";
-import { normalize } from "./gulp/tasks/scss.js";
+import { scss, tailwindTask, normalize } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import {
@@ -31,7 +30,7 @@ import { php } from "./gulp/tasks/php.js";
 
 function watcher() {
     gulp.watch(path.watch.files, copy);
-    gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.html,  gulp.parallel(html, tailwindTask));
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.normalize, normalize);
     gulp.watch(path.watch.js, js);
@@ -44,7 +43,7 @@ const fonts = gulp.series(otf2ttf, ttfToWoff, copyWoff, fontsStyle);
 
 const mainTasks = gulp.series(
     fonts,
-    gulp.parallel(copy, html, normalize, scss, php, js, json, images)
+    gulp.parallel(copy, html, normalize, tailwindTask, scss, php, js, json, images)
 );
 // const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, normalize, scss, js, images));
 

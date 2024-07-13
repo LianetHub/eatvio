@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Профиль</span></a>
+                            <div class="settings__person-title title ">
+                                Рейтинг и статистика
+                            </div>
+                            <div class="settings__person pc-only">
+                                <div class="settings__person-content">
+                                    <div class="settings__person-name">
+                                        Анна Власова
+                                    </div>
+                                </div>
+                                <div class="settings__person-thumb">
+                                    <img src="@img/user-2.png" alt="avatar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body">
+                            <aside class="content__side content__side-xs">
+                                <div class="rating">
+                                    <div class="rating__main">
+                                        <div class="rating__current">11 из 20</div>
+                                        <div class="rating__subtite">Ваш рейтинг</div>
+                                    </div>
+                                    <a href="" class="rating__link">Что такое рейтинг <br class="pc-only"> и на что он влияет?</a>
+                                    <a href="" class="rating__btn l-btn l-btn-primary l-btn-fullwidth">Пригласительная ссылка</a>
+                                    <a href="" class="rating__link">Ссылка</a>
+                                </div>
+                            </aside>
+                            <div class="content__main">
+                                <div class="stats">
+                                    <div class="stats__header">
+                                        <div class="stats__title title">Статистика</div>
+                                        <div class="stats__header-info">?</div>
+                                    </div>
+                                    <div class="stats__calendar icon-calendar">
+                                        <div class="select">
+                                            <select>
+                                                <option value="0">Текущий месяц</option>
+                                                <option value="1">Прошлое полугодие</option>
+                                                <option value="2">Прошлый год</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <ul class="stats__list">
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                100
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во приглашенных по&nbsp;ссылке
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                11
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Количество постов
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                9999
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во опубликованных рецептов
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                40
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во опубликованных публичных диет
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                2
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во проведенных консультаций
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                1
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во активных консультаций
+                                            </div>
+                                        </li>
+                                        <li class="stats__item">
+                                            <div class="stats__item-num">
+                                                40
+                                            </div>
+                                            <div class="stats__item-desc">
+                                                Кол-во опубликованных публичных диет
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stats">
+                                    <div class="stats__header">
+                                        <div class="stats__title title">Начисление рейтинга</div>
+                                        <div class="stats__header-info">?</div>
+                                    </div>
+                                    <div class="stats__calendar icon-calendar">
+                                        <div class="select">
+                                            <select>
+                                                <option value="0">Текущий месяц</option>
+                                                <option value="1">Прошлое полугодие</option>
+                                                <option value="2">Прошлый год</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <table class="stats__table">
+                                        <tr>
+                                            <td>Регистрация по реф. ссылке</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление продукта в глоссарий</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление рецепта</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление публичной диеты</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление поста 2к символов</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Регистрация по реф. ссылке</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление продукта в глоссарий</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление рецепта</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление рецепта</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление публичной диеты</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добавление поста 2к символов</td>
+                                            <td>01.01.2024</td>
+                                            <td class="green-color">+5</td>
+                                        </tr>
+                                    </table>
+                                    <div class="stats__pagintion">
+                                        <button disabled class="stats__pagintion-prev icon-prev"></button>
+                                        <a href="" class="stats__pagintion-item active">1</a>
+                                        <a href="" class="stats__pagintion-item">2</a>
+                                        <span class="stats__pagintion-item">...</span>
+                                        <a href="" class="stats__pagintion-item">9</a>
+                                        <a href="" class="stats__pagintion-item">10</a>
+                                        <button class="stats__pagintion-next icon-next"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

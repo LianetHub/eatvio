@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,264 +393,176 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="settings">
-        <div class="settings__container container-sm">
-          <div class="settings__header">
-            <a href="" class="settings__back icon-arrow-short-left">
-              <span>Планы питания консультанта</span>
-            </a>
-            <div class="settings__actions">
-              <div class="settings__action setting__person">
-                <div class="settings__person-content">
-                  <a href="" class="setting__person-name">
-                    Анна Власова
-                  </a>
-                </div>
-                <a href="" class="settings__person-thumb">
-                  <img src="img/user-2.png" alt="thumb">
-                </a>
-              </div>
-              <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square">
-                <span>Написать</span>
-              </a>
-            </div>
-          </div>
-          <div class="settings__plans">
-            <div class="settings__plans-body">
-              <div class="settings__plans-announcement announcement">
-                <div class="announcement__header">
-                  <div class="announcement__header-title title">
-                    Лёгкий
-                  </div>
-                  <div class="announcement__header-stats">
-                    <div class="announcement__header-stat icon-eye-fill">200</div>
-                    <div class="announcement__header-stat icon-heart-fill">64</div>
-                    <div class="announcement__header-stat icon-message-square">200</div>
-                  </div>
-                </div>
-                <div class="announcement__image">
-                  <img src="img/announcement.png" class="cover-image" alt="announcement">
-                </div>
-                <div class="announcement__details">
-                  <div class="announcement__details-rows">
-                    <div class="announcement__details-row">
-                      <div class="announcement__details-caption">
-                        Время прохождения плана:
-                      </div>
-                      <div class="announcement__details-value">
-                        7 дней
-                      </div>
+</header> <main class="page">
+            <section class="settings">
+                <div class="settings__container container-sm">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
+                        <div class="settings__actions">
+                            <div class="settings__action setting__person">
+                                <div class="settings__person-content">
+                                    <a href="" class="setting__person-name"> Анна Власова </a>
+                                </div>
+                                <a href="" class="settings__person-thumb">
+                                    <img src="img/user-2.png" alt="thumb">
+                                </a>
+                            </div>
+                            <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
+                        </div>
                     </div>
-                    <div class="announcement__details-row">
-                      <div class="announcement__details-caption">
-                        Проходят план:
-                      </div>
-                      <div class="announcement__details-value">
-                        2 пользователя
-                      </div>
+                    <div class="settings__plans">
+                        <div class="settings__plans-body">
+                            <div class="settings__plans-announcement announcement">
+                                <div class="announcement__header">
+                                    <div class="announcement__header-title title"> Лёгкий </div>
+                                    <div class="announcement__header-stats">
+                                        <div class="announcement__header-stat icon-eye-fill">200</div>
+                                        <div class="announcement__header-stat icon-heart-fill">64</div>
+                                        <div class="announcement__header-stat icon-message-square">200</div>
+                                    </div>
+                                </div>
+                                <div class="announcement__image">
+                                    <img src="img/announcement.png" class="cover-image" alt="announcement">
+                                </div>
+                                <div class="announcement__details">
+                                    <div class="announcement__details-rows">
+                                        <div class="announcement__details-row">
+                                            <div class="announcement__details-caption"> Время прохождения плана: </div>
+                                            <div class="announcement__details-value"> 7 дней </div>
+                                        </div>
+                                        <div class="announcement__details-row">
+                                            <div class="announcement__details-caption"> Проходят план: </div>
+                                            <div class="announcement__details-value"> 2 пользователя </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="announcement__details-btn icon-heart"></button>
+                                </div>
+                                <p class="announcement__desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu, urna, quis in at. Elementum varius amet id faucibus pellentesque tincidunt sit cras convallis. Varius pretium euismod justo bibendum est, sapien. Mattis ultrices mi diam vitae. At eu porttitor aenean libero eleifend. </p>
+                                <div class="announcement__footer">
+                                    <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                    <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                    <button type="button" class="announcement__footer-action icon-share">Поделится</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings__price" data-spollers data-one-spoller>
+                            <div class="settings__price-item">
+                                <button class="settings__price-btn _active" data-spoller>
+                                    <strong> 2 500 ₽ </strong> Начальный </button>
+                                <div class="settings__price-body">
+                                    <div class="settings__price-desc"> Отлично подходит если вы основательно решили изменить свою жизнь. </div>
+                                    <ul class="settings__price-list">
+                                        <li> Комментирование отчетов <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon">-</span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> Consectetur adipiscing elit <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 2 500 ₽</button>
+                                </div>
+                            </div>
+                            <div class="settings__price-item">
+                                <button class="settings__price-btn" data-spoller>
+                                    <strong> 3 500 ₽ </strong> Самое то </button>
+                                <div class="settings__price-body">
+                                    <div class="settings__price-desc"> Отлично подходит если вы основательно решили изменить свою жизнь. </div>
+                                    <ul class="settings__price-list">
+                                        <li> Комментирование отчетов <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon">-</span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> Consectetur adipiscing elit <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 3 500 ₽</button>
+                                </div>
+                            </div>
+                            <div class="settings__price-item">
+                                <button class="settings__price-btn" data-spoller>
+                                    <strong> 5 000 ₽ </strong> Эксперт </button>
+                                <div class="settings__price-body">
+                                    <div class="settings__price-desc"> Отлично подходит если вы основательно решили изменить свою жизнь. </div>
+                                    <ul class="settings__price-list">
+                                        <li> Комментирование отчетов <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon">-</span>
+                                        </li>
+                                        <li> 24\7 на связи <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                        <li> Consectetur adipiscing elit <span class="settings__price-icon icon-check-square"></span>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 5 000 ₽</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <button type="button" class="announcement__details-btn icon-heart"></button>
                 </div>
-                <p class="announcement__desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu, urna, quis in at. Elementum varius amet id faucibus pellentesque tincidunt sit cras convallis. Varius pretium euismod justo bibendum est, sapien. Mattis ultrices mi diam vitae. At eu porttitor aenean libero eleifend.
-                </p>
-                <div class="announcement__footer">
-                  <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
-                  <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
-                  <button type="button" class="announcement__footer-action icon-share">Поделится</button>
-                </div>
-              </div>
-            </div>
-            <div class="settings__price" data-spollers data-one-spoller>
-              <div class="settings__price-item">
-                <button class="settings__price-btn _active" data-spoller>
-                  <strong>
-                    2 500 ₽
-                  </strong>
-                  Начальный
-                </button>
-                <div class="settings__price-body">
-                  <div class="settings__price-desc">
-                    Отлично подходит если вы основательно решили изменить свою жизнь.
-                  </div>
-                  <ul class="settings__price-list">
-                    <li>
-                      Комментирование отчетов
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon">-</span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      Consectetur adipiscing elit
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                  </ul>
-                  <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 2 500 ₽</button>
-                </div>
-              </div>
-              <div class="settings__price-item">
-                <button class="settings__price-btn" data-spoller>
-                  <strong>
-                    3 500 ₽
-                  </strong>
-                  Самое то
-                </button>
-                <div class="settings__price-body">
-                  <div class="settings__price-desc">
-                    Отлично подходит если вы основательно решили изменить свою жизнь.
-                  </div>
-                  <ul class="settings__price-list">
-                    <li>
-                      Комментирование отчетов
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon">-</span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      Consectetur adipiscing elit
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                  </ul>
-                  <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 3 500 ₽</button>
-                </div>
-              </div>
-              <div class="settings__price-item">
-                <button class="settings__price-btn" data-spoller>
-                  <strong>
-                    5 000 ₽
-                  </strong>
-                  Эксперт
-                </button>
-                <div class="settings__price-body">
-                  <div class="settings__price-desc">
-                    Отлично подходит если вы основательно решили изменить свою жизнь.
-                  </div>
-                  <ul class="settings__price-list">
-                    <li>
-                      Комментирование отчетов
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon">-</span>
-                    </li>
-                    <li>
-                      24\7 на связи
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                    <li>
-                      Consectetur adipiscing elit
-                      <span class="settings__price-icon icon-check-square"></span>
-                    </li>
-                  </ul>
-                  <button type="button" class="settings__price-bid l-btn l-btn-green">Заказать за 5 000 ₽</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="reviews">
-        <div class="reviews__container">
-          <h2 class="reviews__title title">
-            ОТЗЫВЫ
-          </h2>
-          <div class="reviews__tabs tabs">
-            <div class="tablist" role="tablist" aria-labelledby="label">
-              <button class="tab" role="tab" type="button" id="tab-1" aria-selected="true" aria-controls="tabpanel-1">Положительные 2</button>
-              <button class="tab" role="tab" type="button" id="tab-2" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">Негативные 1</button>
-            </div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
-              <div class="reviews__items">
-                <div class="review">
-                  <div class="review__thumb">
-                    <img src="img/user.png" class="cover-image" alt="user">
-                  </div>
-                  <div class="review__content">
-                    <div class="review__name">
-                      Артём
+            </section>
+            <section class="reviews">
+                <div class="reviews__container">
+                    <h2 class="reviews__title title"> ОТЗЫВЫ </h2>
+                    <div class="reviews__tabs tabs">
+                        <div class="tablist" role="tablist" aria-labelledby="label">
+                            <button class="tab" role="tab" type="button" id="tab-1" aria-selected="true" aria-controls="tabpanel-1">Положительные 2</button>
+                            <button class="tab" role="tab" type="button" id="tab-2" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">Негативные 1</button>
+                        </div>
+                        <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
+                            <div class="reviews__items">
+                                <div class="review">
+                                    <div class="review__thumb">
+                                        <img src="img/user.png" class="cover-image" alt="user">
+                                    </div>
+                                    <div class="review__content">
+                                        <div class="review__name"> Артём </div>
+                                        <blockquote class="review__quote"> После данного плана питания стал чувствовать себя куда лучше! Обязательно продолжу работать с Дмитрием! </blockquote>
+                                    </div>
+                                    <div class="review__info">
+                                        <div class="review__programm"> Лёгкий </div>
+                                        <div class="review__rate icon-star"> 5.0 </div>
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <div class="review__thumb">
+                                        <img src="img/user.png" class="cover-image" alt="user">
+                                    </div>
+                                    <div class="review__content">
+                                        <div class="review__name"> Артём </div>
+                                        <blockquote class="review__quote"> После данного плана питания стал чувствовать себя куда лучше! Обязательно продолжу работать с Дмитрием! </blockquote>
+                                    </div>
+                                    <div class="review__info">
+                                        <div class="review__programm"> Лёгкий </div>
+                                        <div class="review__rate icon-star"> 5.0 </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
+                            <div class="reviews__items">
+                                <div class="review">
+                                    <div class="review__thumb">
+                                        <img src="img/user.png" class="cover-image" alt="user">
+                                    </div>
+                                    <div class="review__content">
+                                        <div class="review__name"> Артём </div>
+                                        <blockquote class="review__quote"> Курить план – это плохо! Гласит лозунг и кричит Минздрав. Ну, конечно …Ничем не хуже водки, а водку везде продают и ничего.. ... Говорят, некоторые годами курят план и живут нормальной жизнью…Ну, если они считают это нормальной жизнью, то пусть и дальше существуют…Я не хочу…Я теперь спрашиваю себя – а зачем мне жить, что б просто курить траву?..Теперь мне плохо и траву курить, Проклятый мир! Даже год не покурил… Мне нужно что-то получше.. почище….ярче!!! </blockquote>
+                                    </div>
+                                    <div class="review__info">
+                                        <div class="review__programm"> Лёгкий </div>
+                                        <div class="review__rate icon-star"> 5.0 </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <blockquote class="review__quote">
-                      После данного плана питания стал чувствовать себя куда лучше! Обязательно продолжу работать с Дмитрием!
-                    </blockquote>
-                  </div>
-                  <div class="review__info">
-                    <div class="review__programm">
-                      Лёгкий
-                    </div>
-                    <div class="review__rate icon-star">
-                      5.0
-                    </div>
-                  </div>
-                </div>
-                <div class="review">
-                  <div class="review__thumb">
-                    <img src="img/user.png" class="cover-image" alt="user">
-                  </div>
-                  <div class="review__content">
-                    <div class="review__name">
-                      Артём
-                    </div>
-                    <blockquote class="review__quote">
-                      После данного плана питания стал чувствовать себя куда лучше! Обязательно продолжу работать с Дмитрием!
-                    </blockquote>
-                  </div>
-                  <div class="review__info">
-                    <div class="review__programm">
-                      Лёгкий
-                    </div>
-                    <div class="review__rate icon-star">
-                      5.0
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
-              <div class="reviews__items">
-                <div class="review">
-                  <div class="review__thumb">
-                    <img src="img/user.png" class="cover-image" alt="user">
-                  </div>
-                  <div class="review__content">
-                    <div class="review__name">
-                      Артём
-                    </div>
-                    <blockquote class="review__quote">
-                      Курить план – это плохо! Гласит лозунг и кричит Минздрав. Ну, конечно …Ничем не хуже водки, а водку везде продают и ничего.. ... Говорят, некоторые годами курят план и живут нормальной жизнью…Ну, если они считают это нормальной жизнью, то пусть и дальше существуют…Я не хочу…Я теперь спрашиваю себя – а зачем мне жить, что б просто курить траву?..Теперь мне плохо и траву курить, Проклятый мир! Даже год не покурил… Мне нужно что-то получше.. почище….ярче!!!
-                    </blockquote>
-                  </div>
-                  <div class="review__info">
-                    <div class="review__programm">
-                      Лёгкий
-                    </div>
-                    <div class="review__rate icon-star">
-                      5.0
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <form action="" class="reviews__form">
-            <textarea class="textarea textarea-white" placeholder="Введите отзыв"></textarea>
-            <div class="reviews__form-column">
-              <div class="reviews__form-rate star-rating">
+                    <form action="" class="reviews__form">
+                        <textarea class="textarea textarea-white" placeholder="Введите отзыв"></textarea>
+                        <div class="reviews__form-column"> <div class="reviews__form-rate star-rating">
     <input type="radio" name="rate" id="rate-5" value="5" class="star-rating__input hidden" hidden>
     <label class="star-rating__label" for="rate-5"></label>
     <input type="radio" name="rate" id="rate-4" value="4" class="star-rating__input hidden" hidden>
@@ -660,23 +573,19 @@
     <label class="star-rating__label" for="rate-2"></label>
     <input type="radio" name="rate" id="rate-1" value="1" class="star-rating__input hidden" hidden>
     <label class="star-rating__label" for="rate-1"></label>
-</div>
-              <button type="button" class="btn l-btn-primary">Оставть отзыв</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+</div> <button type="button" class="btn l-btn-primary">Оставть отзыв</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -730,9 +639,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

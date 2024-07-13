@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,165 +393,125 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="consults">
-        <div class="consults__container container-sm">
-          <div class="consults__header">
-            <h2 class="consults__title title">
-              КОНСУЛЬТАЦИИ
-            </h2>
-            <div class="consults__column">
-              <div class="consults__column-caption">
-                Мест свободно
-              </div>
-              <div class="consults__column-value blue">
-                1 из 3
-              </div>
-            </div>
-            <div class="consults__column">
-              <div class="consults__column-caption">
-                Баланс
-              </div>
-              <div class="consults__column-value">
-                1 000 ₽
-              </div>
-            </div>
-          </div>
-          <div class="consults__body">
-            <div class="consults__item">
-              <div class="consults__item-person">
-                <div class="consults__item-thumb">
-                  <img src="img/user.png" class="cover-image" alt="user">
+</header> <main class="page">
+            <section class="consults">
+                <div class="consults__container container-sm">
+                    <div class="consults__header">
+                        <h2 class="consults__title title"> КОНСУЛЬТАЦИИ </h2>
+                        <div class="consults__column">
+                            <div class="consults__column-caption"> Мест свободно </div>
+                            <div class="consults__column-value blue"> 1 из 3 </div>
+                        </div>
+                        <div class="consults__column">
+                            <div class="consults__column-caption"> Баланс </div>
+                            <div class="consults__column-value"> 1 000 ₽ </div>
+                        </div>
+                    </div>
+                    <div class="consults__body">
+                        <div class="consults__item">
+                            <div class="consults__item-person">
+                                <div class="consults__item-thumb">
+                                    <img src="img/user.png" class="cover-image" alt="user">
+                                </div>
+                                <div class="consults__item-info">
+                                    <a href="" class="consults__item-name"> Анна Власова </a>
+                                    <div class="consults__item-plan"> План: <strong>Легкий</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consults__progress">
+                                <div class="consults__progress-caption"> Прогресс: <strong>7 дней из 14</strong>
+                                </div>
+                                <div class="consults__progress-items">
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                </div>
+                            </div>
+                            <div class="consults__price">
+                                <div class="consults__price-caption"> Заработок: </div>
+                                <div class="consults__price-value"> 1 000 ₽ </div>
+                            </div>
+                            <a href="" class="consults__btn l-btn btn-md btn-primary"> Коментировать отчет <span> 1 </span>
+                            </a>
+                        </div>
+                        <div class="consults__item">
+                            <div class="consults__item-person">
+                                <div class="consults__item-thumb">
+                                    <img src="img/user.png" class="cover-image" alt="user">
+                                </div>
+                                <div class="consults__item-info">
+                                    <a href="" class="consults__item-name"> Дмитрий Коваль </a>
+                                    <div class="consults__item-plan"> План: <strong>Опытный</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consults__progress">
+                                <div class="consults__progress-caption"> Прогресс: <strong>10 дней из 28</strong>
+                                </div>
+                                <div class="consults__progress-items consults__progress-items-lg">
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active current"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item active"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                    <span class="consults__progress-item"></span>
+                                </div>
+                            </div>
+                            <div class="consults__price">
+                                <div class="consults__price-caption"> Заработок: </div>
+                                <div class="consults__price-value"> 1 000 ₽ </div>
+                            </div>
+                            <a href="" class="consults__btn l-btn btn-md btn-gray"> Подробнее </a>
+                        </div>
+                        <div class="consults__item free"> Свободное место </div>
+                    </div>
+                    <button type="button" class="consults__add icon-plus">ПРИОБРЕСТИ БОЛЬШЕ МЕСТ</button>
+                    <div class="consults__more"> Заранее купленные места позволяют не терять клиентов! </div>
+                    <a href="" class="consults__archive l-btn btn-gray">Архив консультаций</a>
                 </div>
-                <div class="consults__item-info">
-                  <a href="" class="consults__item-name">
-                    Анна Власова
-                  </a>
-                  <div class="consults__item-plan">
-                    План: <strong>Легкий</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="consults__progress">
-                <div class="consults__progress-caption">
-                  Прогресс: <strong>7 дней из 14</strong>
-                </div>
-                <div class="consults__progress-items">
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                </div>
-              </div>
-              <div class="consults__price">
-                <div class="consults__price-caption">
-                  Заработок:
-                </div>
-                <div class="consults__price-value">
-                  1 000 ₽
-                </div>
-              </div>
-              <a href="" class="consults__btn l-btn btn-md btn-primary">
-                Коментировать отчет
-                <span>
-                  1
-                </span>
-              </a>
-            </div>
-            <div class="consults__item">
-              <div class="consults__item-person">
-                <div class="consults__item-thumb">
-                  <img src="img/user.png" class="cover-image" alt="user">
-                </div>
-                <div class="consults__item-info">
-                  <a href="" class="consults__item-name">
-                    Дмитрий Коваль
-                  </a>
-                  <div class="consults__item-plan">
-                    План: <strong>Опытный</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="consults__progress">
-                <div class="consults__progress-caption">
-                  Прогресс: <strong>10 дней из 28</strong>
-                </div>
-                <div class="consults__progress-items consults__progress-items-lg">
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active current"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item active"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                  <span class="consults__progress-item"></span>
-                </div>
-              </div>
-              <div class="consults__price">
-                <div class="consults__price-caption">
-                  Заработок:
-                </div>
-                <div class="consults__price-value">
-                  1 000 ₽
-                </div>
-              </div>
-              <a href="" class="consults__btn l-btn btn-md btn-gray">
-                Подробнее
-              </a>
-            </div>
-            <div class="consults__item free">
-              Свободное место
-            </div>
-          </div>
-          <button type="button" class="consults__add icon-plus">ПРИОБРЕСТИ БОЛЬШЕ МЕСТ</button>
-          <div class="consults__more">
-            Заранее купленные места позволяют не терять клиентов!
-          </div>
-          <a href="" class="consults__archive l-btn btn-gray">Архив консультаций</a>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -654,9 +615,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

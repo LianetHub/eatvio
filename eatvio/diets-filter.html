@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -432,341 +433,254 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="content">
-        <div class="content__container">
-          <div class="content__header">
-            <div class="content__header-title title">
-              Популярные диеты
-            </div>
-            <form action="#" class="content__header-search search">
-              <div class="search__box">
-                <button class="search__btn icon-search"></button>
-                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск диет">
-              </div>
-              <button class="search__send l-btn l-btn-primary l-btn-sm">Найти диету</button>
-            </form>
-          </div>
-          <div class="content__tabs">
-            <div class="content__tabs-wrapper">
-              <a href="" class="content__filter">Все</a>
-              <a href="" class="content__filter">Рецепты</a>
-              <a href="" class="content__filter active">Диеты</a>
-              <a href="" class="content__filter">Планы питания</a>
-              <a href="" class="content__filter">Консультанты</a>
-            </div>
-          </div>
-          <div class="content__body">
-            <aside class="content__side content__side-sm" data-spollers="576, max">
-              <button type="button" data-spoller class="content__settings-spoller ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
-                  <rect x="1.7998" width="1.2" height="24" fill="#323F4B" />
-                  <rect x="9.60059" width="1.2" height="24" fill="#323F4B" />
-                  <circle cx="10.1998" cy="19.2" r="2.4" fill="#323F4B" />
-                  <circle cx="2.4" cy="7.20002" r="2.4" fill="#323F4B" />
-                </svg>
-                Фильтр
-              </button>
-              <div class="content__side-filter">
-                <div class="content__side-block">
-                  <div class="content__side-caption spoller-mobile">Порядок</div>
-                  <div class="content__side-row">
-                    <div class="select">
-                      <select>
-                        <option value="0">По умолчанию</option>
-                        <option value="1">Популярные</option>
-                        <option value="2">Название: А—Я</option>
-                        <option value="3">Название: Я—А</option>
-                        <option value="4">Порядок: сперва новые</option>
-                        <option value="5">Порядок: сперва старые</option>
-                      </select>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__header">
+                        <div class="content__header-title title"> Популярные диеты </div>
+                        <form action="#" class="content__header-search search">
+                            <div class="search__box">
+                                <button class="search__btn icon-search"></button>
+                                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск диет">
+                            </div>
+                            <button class="search__send l-btn l-btn-primary l-btn-sm">Найти диету</button>
+                        </form>
                     </div>
-                  </div>
-                </div>
-                <div class="content__side-block">
-                  <div class="content__side-caption spoller-mobile">Время прохождения</div>
-                  <div class="content__side-column">
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="time" checked value="1" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        7 дней
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="time" value="2" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        14 дней
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="time" value="3" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        21 день
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="content__side-block">
-                  <div class="content__side-caption spoller-mobile">Тип диеты</div>
-                  <div class="content__side-column">
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" checked value="1" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Легкая
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" checked value="2" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Средняя
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" value="3" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        С мясом
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" value="4" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        С мясом
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" value="5" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Овощная
-                      </span>
-                    </label>
-                    <label class="checkbox checkbox-sm">
-                      <input type="checkbox" name="diet" value="6" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Веганская
-                      </span>
-                    </label>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-            <div class="content__main">
-              <div class="content__grid">
-                <div class="plan">
-                  <div class="plan__image">
-                    <img src="img/dishes/01.png" class="cover-image" alt="dish">
-                    <div class="announcement__stats">
-                      <div class="announcement__stat icon-eye-fill">
-                        200
-                      </div>
-                      <div class="announcement__stat icon-heart-fill">
-                        64
-                      </div>
-                      <div class="announcement__stat icon-message-fill">
-                        2
-                      </div>
-                    </div>
-                  </div>
-                  <div class="plan__body">
-                    <div class="plan__stats">
-                      <div class="plan__stat icon-clock">
-                        7 дней
-                      </div>
-                      <div class="plan__stat icon-users">
-                        132
-                      </div>
-                      <a href="" class="plan__favorite icon-heart"></a>
-                    </div>
-                    <div class="plan__person">
-                      <div class="plan__thumb">
-                        <img src="img/user.png" alt="user">
-                      </div>
-                      <div class="plan__person-info">
-                        <div class="plan__person-name">Дмитрий Коваль</div>
-                        <div class="consultant__rate icon-star">
-                          <span>
-                            4.6
-                          </span>
-                          (32)
+                    <div class="content__tabs">
+                        <div class="content__tabs-wrapper">
+                            <a href="" class="content__filter">Все</a>
+                            <a href="" class="content__filter">Рецепты</a>
+                            <a href="" class="content__filter active">Диеты</a>
+                            <a href="" class="content__filter">Планы питания</a>
+                            <a href="" class="content__filter">Консультанты</a>
                         </div>
-                      </div>
-                      <div class="plan__person-icon">
-                        <img src="img/broccoli.svg" alt="broccoli">
-                      </div>
-                      <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
                     </div>
-                    <div class="plan__name">
-                      Лёгкая диета
-                    </div>
-                    <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
-                  </div>
-                </div>
-                <div class="plan">
-                  <div class="plan__image">
-                    <img src="img/dishes/02.png" class="cover-image" alt="dish">
-                    <div class="announcement__stats">
-                      <div class="announcement__stat icon-eye-fill">
-                        200
-                      </div>
-                      <div class="announcement__stat icon-heart-fill">
-                        64
-                      </div>
-                      <div class="announcement__stat icon-message-fill">
-                        2
-                      </div>
-                    </div>
-                  </div>
-                  <div class="plan__body">
-                    <div class="plan__stats">
-                      <div class="plan__stat icon-clock">
-                        7 дней
-                      </div>
-                      <div class="plan__stat icon-users">
-                        53
-                      </div>
-                      <a href="" class="plan__favorite icon-heart"></a>
-                    </div>
-                    <div class="plan__person">
-                      <div class="plan__thumb">
-                        <img src="img/user.png" alt="user">
-                      </div>
-                      <div class="plan__person-info">
-                        <div class="plan__person-name">Дмитрий Коваль</div>
-                        <div class="consultant__rate icon-star">
-                          <span>
-                            4.6
-                          </span>
-                          (32)
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm" data-spollers="576, max">
+                            <button type="button" data-spoller class="content__settings-spoller ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                    <rect x="1.7998" width="1.2" height="24" fill="#323F4B" />
+                                    <rect x="9.60059" width="1.2" height="24" fill="#323F4B" />
+                                    <circle cx="10.1998" cy="19.2" r="2.4" fill="#323F4B" />
+                                    <circle cx="2.4" cy="7.20002" r="2.4" fill="#323F4B" />
+                                </svg> Фильтр </button>
+                            <div class="content__side-filter">
+                                <div class="content__side-block">
+                                    <div class="content__side-caption spoller-mobile">Порядок</div>
+                                    <div class="content__side-row">
+                                        <div class="select">
+                                            <select>
+                                                <option value="0">По умолчанию</option>
+                                                <option value="1">Популярные</option>
+                                                <option value="2">Название: А—Я</option>
+                                                <option value="3">Название: Я—А</option>
+                                                <option value="4">Порядок: сперва новые</option>
+                                                <option value="5">Порядок: сперва старые</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__side-block">
+                                    <div class="content__side-caption spoller-mobile">Время прохождения</div>
+                                    <div class="content__side-column">
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="time" checked value="1" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> 7 дней </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="time" value="2" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> 14 дней </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="time" value="3" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> 21 день </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="content__side-block">
+                                    <div class="content__side-caption spoller-mobile">Тип диеты</div>
+                                    <div class="content__side-column">
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" checked value="1" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Легкая </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" checked value="2" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Средняя </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" value="3" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> С мясом </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" value="4" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> С мясом </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" value="5" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Овощная </span>
+                                        </label>
+                                        <label class="checkbox checkbox-sm">
+                                            <input type="checkbox" name="diet" value="6" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Веганская </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <div class="content__main">
+                            <div class="content__grid">
+                                <div class="plan">
+                                    <div class="plan__image">
+                                        <img src="img/dishes/01.png" class="cover-image" alt="dish">
+                                        <div class="announcement__stats">
+                                            <div class="announcement__stat icon-eye-fill"> 200 </div>
+                                            <div class="announcement__stat icon-heart-fill"> 64 </div>
+                                            <div class="announcement__stat icon-message-fill"> 2 </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan__body">
+                                        <div class="plan__stats">
+                                            <div class="plan__stat icon-clock"> 7 дней </div>
+                                            <div class="plan__stat icon-users"> 132 </div>
+                                            <a href="" class="plan__favorite icon-heart"></a>
+                                        </div>
+                                        <div class="plan__person">
+                                            <div class="plan__thumb">
+                                                <img src="img/user.png" alt="user">
+                                            </div>
+                                            <div class="plan__person-info">
+                                                <div class="plan__person-name">Дмитрий Коваль</div>
+                                                <div class="consultant__rate icon-star">
+                                                    <span> 4.6 </span> (32)
+                                                </div>
+                                            </div>
+                                            <div class="plan__person-icon">
+                                                <img src="img/broccoli.svg" alt="broccoli">
+                                            </div>
+                                            <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
+                                        </div>
+                                        <div class="plan__name"> Лёгкая диета </div>
+                                        <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                    </div>
+                                </div>
+                                <div class="plan">
+                                    <div class="plan__image">
+                                        <img src="img/dishes/02.png" class="cover-image" alt="dish">
+                                        <div class="announcement__stats">
+                                            <div class="announcement__stat icon-eye-fill"> 200 </div>
+                                            <div class="announcement__stat icon-heart-fill"> 64 </div>
+                                            <div class="announcement__stat icon-message-fill"> 2 </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan__body">
+                                        <div class="plan__stats">
+                                            <div class="plan__stat icon-clock"> 7 дней </div>
+                                            <div class="plan__stat icon-users"> 53 </div>
+                                            <a href="" class="plan__favorite icon-heart"></a>
+                                        </div>
+                                        <div class="plan__person">
+                                            <div class="plan__thumb">
+                                                <img src="img/user.png" alt="user">
+                                            </div>
+                                            <div class="plan__person-info">
+                                                <div class="plan__person-name">Дмитрий Коваль</div>
+                                                <div class="consultant__rate icon-star">
+                                                    <span> 4.6 </span> (32)
+                                                </div>
+                                            </div>
+                                            <div class="plan__person-icon">
+                                                <img src="img/broccoli.svg" alt="broccoli">
+                                            </div>
+                                            <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
+                                        </div>
+                                        <div class="plan__name"> Лёгкая диета </div>
+                                        <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                    </div>
+                                </div>
+                                <div class="plan">
+                                    <div class="plan__image">
+                                        <img src="img/dishes/03.png" class="cover-image" alt="dish">
+                                        <div class="announcement__stats">
+                                            <div class="announcement__stat icon-eye-fill"> 200 </div>
+                                            <div class="announcement__stat icon-heart-fill"> 64 </div>
+                                            <div class="announcement__stat icon-message-fill"> 2 </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan__body">
+                                        <div class="plan__stats">
+                                            <div class="plan__stat icon-clock"> 7 дней </div>
+                                            <div class="plan__stat icon-users"> 15 </div>
+                                            <a href="" class="plan__favorite icon-heart"></a>
+                                        </div>
+                                        <div class="plan__person">
+                                            <div class="plan__thumb">
+                                                <img src="img/user.png" alt="user">
+                                            </div>
+                                            <div class="plan__person-info">
+                                                <div class="plan__person-name">Дмитрий Коваль</div>
+                                                <div class="consultant__rate icon-star">
+                                                    <span> 4.6 </span> (32)
+                                                </div>
+                                            </div>
+                                            <div class="plan__person-icon">
+                                                <img src="img/broccoli.svg" alt="broccoli">
+                                            </div>
+                                            <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
+                                        </div>
+                                        <div class="plan__name"> Лёгкая диета </div>
+                                        <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                    </div>
+                                </div>
+                                <div class="plan">
+                                    <div class="plan__image">
+                                        <img src="img/dishes/04.png" class="cover-image" alt="dish">
+                                        <div class="announcement__stats">
+                                            <div class="announcement__stat icon-eye-fill"> 200 </div>
+                                            <div class="announcement__stat icon-heart-fill"> 64 </div>
+                                            <div class="announcement__stat icon-message-fill"> 2 </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan__body">
+                                        <div class="plan__stats">
+                                            <div class="plan__stat icon-clock"> 14 дней </div>
+                                            <div class="plan__stat icon-users"> 7 </div>
+                                            <a href="" class="plan__favorite icon-heart"></a>
+                                        </div>
+                                        <div class="plan__person">
+                                            <div class="plan__thumb">
+                                                <img src="img/user.png" alt="user">
+                                            </div>
+                                            <div class="plan__person-info">
+                                                <div class="plan__person-name">Дмитрий Коваль</div>
+                                                <div class="consultant__rate icon-star">
+                                                    <span> 4.6 </span> (32)
+                                                </div>
+                                            </div>
+                                            <div class="plan__person-icon">
+                                                <img src="img/broccoli.svg" alt="broccoli">
+                                            </div>
+                                            <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
+                                        </div>
+                                        <div class="plan__name"> Лёгкая диета </div>
+                                        <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="plan__person-icon">
-                        <img src="img/broccoli.svg" alt="broccoli">
-                      </div>
-                      <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
                     </div>
-                    <div class="plan__name">
-                      Лёгкая диета
-                    </div>
-                    <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
-                  </div>
                 </div>
-                <div class="plan">
-                  <div class="plan__image">
-                    <img src="img/dishes/03.png" class="cover-image" alt="dish">
-                    <div class="announcement__stats">
-                      <div class="announcement__stat icon-eye-fill">
-                        200
-                      </div>
-                      <div class="announcement__stat icon-heart-fill">
-                        64
-                      </div>
-                      <div class="announcement__stat icon-message-fill">
-                        2
-                      </div>
-                    </div>
-                  </div>
-                  <div class="plan__body">
-                    <div class="plan__stats">
-                      <div class="plan__stat icon-clock">
-                        7 дней
-                      </div>
-                      <div class="plan__stat icon-users">
-                        15
-                      </div>
-                      <a href="" class="plan__favorite icon-heart"></a>
-                    </div>
-                    <div class="plan__person">
-                      <div class="plan__thumb">
-                        <img src="img/user.png" alt="user">
-                      </div>
-                      <div class="plan__person-info">
-                        <div class="plan__person-name">Дмитрий Коваль</div>
-                        <div class="consultant__rate icon-star">
-                          <span>
-                            4.6
-                          </span>
-                          (32)
-                        </div>
-                      </div>
-                      <div class="plan__person-icon">
-                        <img src="img/broccoli.svg" alt="broccoli">
-                      </div>
-                      <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
-                    </div>
-                    <div class="plan__name">
-                      Лёгкая диета
-                    </div>
-                    <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
-                  </div>
-                </div>
-                <div class="plan">
-                  <div class="plan__image">
-                    <img src="img/dishes/04.png" class="cover-image" alt="dish">
-                    <div class="announcement__stats">
-                      <div class="announcement__stat icon-eye-fill">
-                        200
-                      </div>
-                      <div class="announcement__stat icon-heart-fill">
-                        64
-                      </div>
-                      <div class="announcement__stat icon-message-fill">
-                        2
-                      </div>
-                    </div>
-                  </div>
-                  <div class="plan__body">
-                    <div class="plan__stats">
-                      <div class="plan__stat icon-clock">
-                        14 дней
-                      </div>
-                      <div class="plan__stat icon-users">
-                        7
-                      </div>
-                      <a href="" class="plan__favorite icon-heart"></a>
-                    </div>
-                    <div class="plan__person">
-                      <div class="plan__thumb">
-                        <img src="img/user.png" alt="user">
-                      </div>
-                      <div class="plan__person-info">
-                        <div class="plan__person-name">Дмитрий Коваль</div>
-                        <div class="consultant__rate icon-star">
-                          <span>
-                            4.6
-                          </span>
-                          (32)
-                        </div>
-                      </div>
-                      <div class="plan__person-icon">
-                        <img src="img/broccoli.svg" alt="broccoli">
-                      </div>
-                      <a href="" class="plan__person-chat icon-message-square l-btn l-btn-primary"></a>
-                    </div>
-                    <div class="plan__name">
-                      Лёгкая диета
-                    </div>
-                    <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

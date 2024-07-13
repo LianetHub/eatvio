@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,18 +8,20 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body class="dark-theme">
-  <div class="wrapper">
-    <main class="page">
-      <section class="arm">
-        <div class="arm__container">
-          <div class="arm__content">
-            <aside class="arm__sidebar">
-              <nav class="arm__sidebar-menu person-menu active">
+    <div class="wrapper">
+        <main class="page">
+            <section class="arm">
+                <div class="arm__container">
+                    <div class="arm__content">
+                        <aside class="arm__sidebar"> <nav class="arm__sidebar-menu person-menu active">
     <ul class="person-menu__list">
         <li class="person-menu__item">
             <a href="" class="person-menu__link">
@@ -140,196 +141,162 @@
             Чат
         </span>
     </a>
-</nav>
-            </aside>
-            <div class="arm__header">
-              <div class="arm__title">
-                Новые консультанты
-              </div>
-              <form action="#" class="arm__search">
-                <button type="submit" class="arm__search-btn icon-search"></button>
-                <input type="text" name="search" class="input input-white" placeholder="Поиск">
-              </form>
-            </div>
-            <div class="arm__body">
-              <div class="arm__body-main">
-                <div class="arm__body-block">
-                  <div class="arm__body-header">
-                    <div class="arm__body-thumb">
-                      <img src="img/user-2.png" class="cover-image" alt="thumb">
+</nav> </aside>
+                        <div class="arm__header">
+                            <div class="arm__title"> Новые консультанты </div>
+                            <form action="#" class="arm__search">
+                                <button type="submit" class="arm__search-btn icon-search"></button>
+                                <input type="text" name="search" class="input input-white" placeholder="Поиск">
+                            </form>
+                        </div>
+                        <div class="arm__body">
+                            <div class="arm__body-main">
+                                <div class="arm__body-block">
+                                    <div class="arm__body-header">
+                                        <div class="arm__body-thumb">
+                                            <img src="img/user-2.png" class="cover-image" alt="thumb">
+                                        </div>
+                                        <div class="arm__body-name">Фамилия Имя</div>
+                                        <div class="arm__body-status">Индивидуальный предприниматель</div>
+                                    </div>
+                                    <div class="arm__body-caption"> Дипломы и сертификаты </div>
+                                    <ul class="arm__docs">
+                                        <li class="arm__docs-item">
+                                            <div class="arm__docs-name"> Курс диетологии при НИИ Москвы </div>
+                                            <div class="arm__docs-time"> 30.01.1998 </div>
+                                        </li>
+                                        <li class="arm__docs-item">
+                                            <div class="arm__docs-name"> Профессиональное образование в области фитнеса и диетологии </div>
+                                            <div class="arm__docs-time"> 20.12.1977 </div>
+                                        </li>
+                                    </ul>
+                                    <div class="arm__certs">
+                                        <div class="arm__certs-title"> Фото или сканы дипломов и сертификатов </div>
+                                        <ul class="arm__certs-list">
+                                            <li class="arm__certs-item">
+                                                <img src="img/cert-1.png" alt="cert">
+                                            </li>
+                                            <li class="arm__certs-item">
+                                                <img src="img/cert-2.png" alt="cert">
+                                            </li>
+                                            <li class="arm__certs-item">
+                                                <img src="img/cert-1.png" alt="cert">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="arm__body-checkbox">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="education" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Медицинское образование </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="arm__body-block">
+                                    <div class="arm__body-caption"> Ссылки на соц сети </div>
+                                    <ul class="arm__body-socials">
+                                        <li class="arm__body-social">
+                                            <div class="arm__body-label">ВКонтакте</div>
+                                            <a href="vk.com/username" class="arm__body-link">vk.com/username</a>
+                                        </li>
+                                        <li class="arm__body-social">
+                                            <div class="arm__body-label">Телеграм</div>
+                                            <a href="t.me/@username" class="arm__body-link">t.me/@username</a>
+                                        </li>
+                                        <li class="arm__body-social">
+                                            <div class="arm__body-label">Персональный сайт</div>
+                                            <a href="website.ru" class="arm__body-link">website.ru</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="arm__body-block">
+                                    <div class="arm__body-caption"> Данные юридического лица </div>
+                                    <div class="arm__body-type">
+                                        <div class="arm__body-type-text"> Тип юридического лица: </div>
+                                        <div class="arm__body-type-value">Индивидуальный предприниматель</div>
+                                    </div>
+                                    <ul class="arm__body-list">
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">ИНН</div>
+                                            <div class="arm__body-value">123456789</div>
+                                        </li>
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">Номер записи в ЕГРИП</div>
+                                            <div class="arm__body-value">123456789</div>
+                                        </li>
+                                    </ul>
+                                    <div class="arm__body-caption"> Банковские реквизиты </div>
+                                    <ul class="arm__body-list">
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">Лицевой счет</div>
+                                            <div class="arm__body-value">12345678901234567890</div>
+                                        </li>
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">Корреспондентский счет</div>
+                                            <div class="arm__body-value">12345678901234567890</div>
+                                        </li>
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">БИК</div>
+                                            <div class="arm__body-value">123456789</div>
+                                        </li>
+                                        <li class="arm__body-item">
+                                            <div class="arm__body-label">Полное название Банка</div>
+                                            <div class="arm__body-value">ПАО “Сбербанк”</div>
+                                        </li>
+                                    </ul>
+                                    <a href="" class="arm__body-btn blue">Проверить Индивидуального предпринимателя</a>
+                                </div>
+                                <div class="arm__body-btns">
+                                    <a href="" class="arm__body-btn reject">Отклонить</a>
+                                    <a href="" class="arm__body-btn confirm">Подтвердить</a>
+                                </div>
+                            </div>
+                            <div class="arm__body-side">
+                                <div class="arm__body-caption">Чек лист</div>
+                                <ul class="arm__check-list">
+                                    <li class="arm__check-item">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checklist" value="1" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Сертификаты и&nbsp;дипломы актуальны </span>
+                                        </label>
+                                    </li>
+                                    <li class="arm__check-item">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checklist" value="2" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Ссылки на&nbsp;соц&nbsp;сети ведут на&nbsp;профили консультанта </span>
+                                        </label>
+                                    </li>
+                                    <li class="arm__check-item">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checklist" value="3" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Юридическое лицо проверено и&nbsp;актуально </span>
+                                        </label>
+                                    </li>
+                                    <li class="arm__check-item">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checklist" value="4" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content"> Реквизиты заполнены верно </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="arm__body-name">Фамилия Имя</div>
-                    <div class="arm__body-status">Индивидуальный предприниматель</div>
-                  </div>
-                  <div class="arm__body-caption">
-                    Дипломы и сертификаты
-                  </div>
-                  <ul class="arm__docs">
-                    <li class="arm__docs-item">
-                      <div class="arm__docs-name">
-                        Курс диетологии при НИИ Москвы
-                      </div>
-                      <div class="arm__docs-time">
-                        30.01.1998
-                      </div>
-                    </li>
-                    <li class="arm__docs-item">
-                      <div class="arm__docs-name">
-                        Профессиональное образование в области фитнеса и диетологии
-                      </div>
-                      <div class="arm__docs-time">
-                        20.12.1977
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="arm__certs">
-                    <div class="arm__certs-title">
-                      Фото или сканы дипломов и сертификатов
-                    </div>
-                    <ul class="arm__certs-list">
-                      <li class="arm__certs-item">
-                        <img src="img/cert-1.png" alt="cert">
-                      </li>
-                      <li class="arm__certs-item">
-                        <img src="img/cert-2.png" alt="cert">
-                      </li>
-                      <li class="arm__certs-item">
-                        <img src="img/cert-1.png" alt="cert">
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="arm__body-checkbox">
-                    <label class="checkbox">
-                      <input type="checkbox" name="education" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Медицинское образование
-                      </span>
-                    </label>
-                  </div>
                 </div>
-                <div class="arm__body-block">
-                  <div class="arm__body-caption">
-                    Ссылки на соц сети
-                  </div>
-                  <ul class="arm__body-socials">
-                    <li class="arm__body-social">
-                      <div class="arm__body-label">ВКонтакте</div>
-                      <a href="vk.com/username" class="arm__body-link">vk.com/username</a>
-                    </li>
-                    <li class="arm__body-social">
-                      <div class="arm__body-label">Телеграм</div>
-                      <a href="t.me/@username" class="arm__body-link">t.me/@username</a>
-                    </li>
-                    <li class="arm__body-social">
-                      <div class="arm__body-label">Персональный сайт</div>
-                      <a href="website.ru" class="arm__body-link">website.ru</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="arm__body-block">
-                  <div class="arm__body-caption">
-                    Данные юридического лица
-                  </div>
-                  <div class="arm__body-type">
-                    <div class="arm__body-type-text">
-                      Тип юридического лица:
-                    </div>
-                    <div class="arm__body-type-value">Индивидуальный предприниматель</div>
-                  </div>
-                  <ul class="arm__body-list">
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">ИНН</div>
-                      <div class="arm__body-value">123456789</div>
-                    </li>
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">Номер записи в ЕГРИП</div>
-                      <div class="arm__body-value">123456789</div>
-                    </li>
-                  </ul>
-                  <div class="arm__body-caption">
-                    Банковские реквизиты
-                  </div>
-                  <ul class="arm__body-list">
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">Лицевой счет</div>
-                      <div class="arm__body-value">12345678901234567890</div>
-                    </li>
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">Корреспондентский счет</div>
-                      <div class="arm__body-value">12345678901234567890</div>
-                    </li>
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">БИК</div>
-                      <div class="arm__body-value">123456789</div>
-                    </li>
-                    <li class="arm__body-item">
-                      <div class="arm__body-label">Полное название Банка</div>
-                      <div class="arm__body-value">ПАО “Сбербанк”</div>
-                    </li>
-                  </ul>
-                  <a href="" class="arm__body-btn blue">Проверить Индивидуального предпринимателя</a>
-                </div>
-                <div class="arm__body-btns">
-                  <a href="" class="arm__body-btn reject">Отклонить</a>
-                  <a href="" class="arm__body-btn confirm">Подтвердить</a>
-                </div>
-              </div>
-              <div class="arm__body-side">
-                <div class="arm__body-caption">Чек лист</div>
-                <ul class="arm__check-list">
-                  <li class="arm__check-item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="checklist" value="1" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Сертификаты и&nbsp;дипломы актуальны
-                      </span>
-                    </label>
-                  </li>
-                  <li class="arm__check-item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="checklist" value="2" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Ссылки на&nbsp;соц&nbsp;сети ведут на&nbsp;профили консультанта
-                      </span>
-                    </label>
-                  </li>
-                  <li class="arm__check-item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="checklist" value="3" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Юридическое лицо проверено и&nbsp;актуально
-                      </span>
-                    </label>
-                  </li>
-                  <li class="arm__check-item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="checklist" value="4" class="checkbox__input hidden" hidden>
-                      <span class="checkbox__content">
-                        Реквизиты заполнены верно
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-  <div id="logout" class="popup">
+            </section>
+        </main>
+    </div> <div id="logout" class="popup">
     <div class="popup__content">
         <div class="popup__logout">
             <div class="popup__caption title">Вы уверены что хотите выйти?</div>
             <div class="popup__btns">
-                <button type="button" data-close-modal class="l-btn l-btn-outline-primary l-btn-sm">Остаться</button>
-                <button type="button" class="l-btn btn-primary l-btn-sm">Выйти</button>
+                <button type="button" data-close-modal class="l-btn l-btn-primary-outline l-btn-sm">Остаться</button>
+                <button type="button" class="l-btn l-btn-primary l-btn-sm">Выйти</button>
             </div>
         </div>
     </div>
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

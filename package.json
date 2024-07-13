@@ -15,7 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.19",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "fs": "^0.0.1-security",
@@ -28,11 +28,13 @@
     "gulp-fonter": "^0.3.0",
     "gulp-format-html": "^1.5.0",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.1.0",
@@ -48,6 +50,7 @@
     "gulp-zip": "^5.1.0",
     "sass": "^1.45.2",
     "swiper": "^6.8.4",
+    "tailwindcss": "^3.4.4",
     "vanillajs-datepicker": "^1.3.4",
     "webp-converter": "2.2.3",
     "webpack": "^5.65.0",
@@ -55,7 +58,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.0-alpha1",
+    "dart-sass": "^1.25.0",
     "gsap": "^3.11.5",
+    "postcss": "^8.4.39",
     "smooth-scroll": "^16.1.3",
     "smooth-scrollbar": "^8.8.1"
   }

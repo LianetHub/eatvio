@@ -507,6 +507,18 @@ input[type="date"] {
 			}
 		}
 	}
+	&.l-btn-primary-outline {
+		border-radius: 8px;
+		border: 2px solid #2f80ed;
+		color: #fff;
+		background: rgba(217, 217, 217, 0.01);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #2f80ed;
+				color: #fff;
+			}
+		}
+	}
 	&.l-btn-secondary-outline {
 		border: 1px solid #e6e6e6;
 		background: #fff;

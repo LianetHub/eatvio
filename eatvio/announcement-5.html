@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -397,100 +398,83 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="content">
-        <div class="content__container container-sm">
-          <div class="content__header">
-            <div class="content__header-title title">
-              популярные записи
-            </div>
-            <form action="#" class="content__header-search search">
-              <div class="search__box">
-                <button class="search__btn icon-search"></button>
-                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск записи">
-              </div>
-              <button class="search__send l-btn l-btn-primary l-btn-sm">найти запись</button>
-            </form>
-          </div>
-          <div class="content__filters content__filters-xl">
-            <a href="" class="content__filter active">Все</a>
-            <a href="" class="content__filter">Рецепты</a>
-            <a href="" class="content__filter">Диеты</a>
-            <a href="" class="content__filter">Планы питания</a>
-            <a href="" class="content__filter">Консультанты</a>
-          </div>
-          <div class="content__announcements">
-            <div class="content__announcement announcement">
-              <div class="announcement__header">
-                <div class="announcement__thumb">
-                  <img src="img/user-2.png" alt="user">
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container container-sm">
+                    <div class="content__header">
+                        <div class="content__header-title title"> популярные записи </div>
+                        <form action="#" class="content__header-search search">
+                            <div class="search__box">
+                                <button class="search__btn icon-search"></button>
+                                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск записи">
+                            </div>
+                            <button class="search__send l-btn l-btn-primary l-btn-sm">найти запись</button>
+                        </form>
+                    </div>
+                    <div class="content__filters content__filters-xl">
+                        <a href="" class="content__filter active">Все</a>
+                        <a href="" class="content__filter">Рецепты</a>
+                        <a href="" class="content__filter">Диеты</a>
+                        <a href="" class="content__filter">Планы питания</a>
+                        <a href="" class="content__filter">Консультанты</a>
+                    </div>
+                    <div class="content__announcements">
+                        <div class="content__announcement announcement">
+                            <div class="announcement__header">
+                                <div class="announcement__thumb">
+                                    <img src="img/user-2.png" alt="user">
+                                </div>
+                                <div class="announcement__person">
+                                    <div class="announcement__person-name"> Анна Власова </div>
+                                    <div class="announcement__person-subtitle"> Вчера в 12:11 </div>
+                                </div>
+                                <div class="announcement__actions">
+                                    <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+                                    <ul class="announcement__actions-list">
+                                        <li class="announcement__actions-item">
+                                            <button type="button" class="announcement__action">О рекламодателе</button>
+                                        </li>
+                                        <li class="announcement__actions-item">
+                                            <button type="button" class="announcement__action">Не интересно</button>
+                                        </li>
+                                        <li class="announcement__actions-item">
+                                            <button type="button" class="announcement__action">Пожаловаться</button>
+                                        </li>
+                                        <li class="announcement__actions-item">
+                                            <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="announcement__title"> 10 Trending Nutrition Research Articles of 2021 </div>
+                            <p class="announcement__desc"> As 2020 begins, we took a look back at nutrition in the news during 2019. The most popular diet search according to Google was intermittent fasting, which we can attest was a popular search term in American Society for Nutrition’s content as well. But there’s much more to nutrition than trending diets and many more areas in the field of nutrition were researched and discussed this past year. Below we share 10 articles from ASN’s four peer reviewed journals that received high levels of attention in the news and social media. </p>
+                            <a href="" class="announcement__more icon-arrow-right">Подробнее</a>
+                            <div class="announcement__image">
+                                <img src="img/announcement.png" class="cover-image" alt="announcement">
+                                <div class="announcement__stats">
+                                    <div class="announcement__stat icon-eye-fill"> 200 </div>
+                                    <div class="announcement__stat icon-heart-fill"> 64 </div>
+                                </div>
+                            </div>
+                            <div class="announcement__footer">
+                                <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                <button type="button" class="announcement__footer-action icon-share">Поделится</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="announcement__person">
-                  <div class="announcement__person-name">
-                    Анна Власова
-                  </div>
-                  <div class="announcement__person-subtitle">
-                    Вчера в 12:11
-                  </div>
-                </div>
-                <div class="announcement__actions">
-                  <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
-                  <ul class="announcement__actions-list">
-                    <li class="announcement__actions-item">
-                      <button type="button" class="announcement__action">О рекламодателе</button>
-                    </li>
-                    <li class="announcement__actions-item">
-                      <button type="button" class="announcement__action">Не интересно</button>
-                    </li>
-                    <li class="announcement__actions-item">
-                      <button type="button" class="announcement__action">Пожаловаться</button>
-                    </li>
-                    <li class="announcement__actions-item">
-                      <div class="announcement__actions-id">ID: 2jkfk45JG</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="announcement__title">
-                10 Trending Nutrition Research Articles of 2021
-              </div>
-              <p class="announcement__desc">
-                As 2020 begins, we took a look back at nutrition in the news during 2019. The most popular diet search according to Google was intermittent fasting, which we can attest was a popular search term in American Society for Nutrition’s content as well. But there’s much more to nutrition than trending diets and many more areas in the field of nutrition were researched and discussed this past year. Below we share 10 articles from ASN’s four peer reviewed journals that received high levels of attention in the news and social media.
-              </p>
-              <a href="" class="announcement__more icon-arrow-right">Подробнее</a>
-              <div class="announcement__image">
-                <img src="img/announcement.png" class="cover-image" alt="announcement">
-                <div class="announcement__stats">
-                  <div class="announcement__stat icon-eye-fill">
-                    200
-                  </div>
-                  <div class="announcement__stat icon-heart-fill">
-                    64
-                  </div>
-                </div>
-              </div>
-              <div class="announcement__footer">
-                <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
-                <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
-                <button type="button" class="announcement__footer-action icon-share">Поделится</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

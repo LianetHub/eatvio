@@ -1860,6 +1860,7 @@
 	&__product-fields {
 		grid-column: span 2;
 		display: grid;
+
 		gap: 0.5rem;
 		grid-template-columns: repeat(2, 1fr);
 		padding-right: 1rem;
@@ -1953,6 +1954,9 @@
 	}
 	// .diary__product-name
 	&__product-name {
+		.input {
+			min-height: 100%;
+		}
 		& .checkbox__content {
 			font-size: inherit;
 		}
@@ -2057,11 +2061,13 @@
 		transform: translateY(-50%);
 		right: 0;
 		width: 190px;
+		min-width: 0;
+		overflow: hidden;
 		@media (min-width: $md5) {
-			width: 217px;
+			max-width: 217px;
 		}
-		background: #fff;
 		height: 212px;
+		background: #fff;
 		display: flex;
 		flex-direction: column;
 		border: 1px solid #dadada;
@@ -2140,11 +2146,10 @@
 		}
 	}
 	&__tooltip-content {
-		// margin: rem(10) 0;
 	}
 	&__tooltip-item {
 		padding: em(10);
-		height: 34px;
+		height: 34px !important;
 		font-size: 14px;
 		cursor: pointer;
 		line-height: 100%;
@@ -2154,7 +2159,7 @@
 			border-bottom: 1px solid #f6f6f6;
 		}
 		@media (min-width: $md5) {
-			height: 36px;
+			height: 36px !important;
 			font-size: 16px;
 		}
 		@media (any-hover: hover) {
@@ -2165,6 +2170,7 @@
 		}
 	}
 	&__product-slider {
+		min-width: 0;
 		@media (min-width: $md3) {
 			flex: 0 0 370px;
 		}

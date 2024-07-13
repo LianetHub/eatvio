@@ -101,6 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.nextElementSibling?.classList.toggle('active');
         }
 
+        if (e.target.hasAttribute('data-popover-close')) {
+            const popover = e.target.closest('[data-popover]');
+            if (popover) {
+                popover.classList.add('invisible', 'opacity-0');
+            }
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

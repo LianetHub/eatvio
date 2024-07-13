@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,112 +393,96 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="settings">
-        <div class="settings__container container-sm">
-          <div class="settings__header">
-            <a href="" class="settings__back icon-arrow-short-left">
-              <span class="pc-only">Профиль</span>
-            </a>
-            <div class="settings__person-title title">
-              Настройки
-            </div>
-            <div class="settings__person pc-only">
-              <div class="settings__person-content">
-                <div class="settings__person-name">
-                  Дмитрий Коваль
+</header> <main class="page">
+            <section class="settings">
+                <div class="settings__container container-sm">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Профиль</span></a>
+                        <div class="settings__person-title title"> Настройки </div>
+                        <div class="settings__person pc-only">
+                            <div class="settings__person-content">
+                                <div class="settings__person-name"> Дмитрий Коваль </div>
+                                <div class="settings__person-position"> Консультант </div>
+                            </div>
+                            <div class="settings__person-thumb">
+                                <img src="img/user.png" alt="avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings__body settings__body_change">
+                        <form action="#" class="settings__form">
+                            <div class="settings__form-row">
+                                <div class="settings__form-text">Язык:</div>
+                                <div class="select">
+                                    <select name="language">
+                                        <option value="0" selected>English</option>
+                                        <option value="1">Русский</option>
+                                        <option value="2">Казахстанский</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <span class="settings__form-separator"></span>
+                            <div class="settings__form-row align-start">
+                                <div class="settings__form-text">Уведомления:</div>
+                                <div class="settings__form-column">
+                                    <div class="settings__body-item">
+                                        <div class="settings__body-name">Уведомление о новых обновлениях</div>
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher__input hidden" hidden>
+                                            <span class="switcher__btn"></span>
+                                        </label>
+                                    </div>
+                                    <div class="settings__body-item">
+                                        <div class="settings__body-name">Напоминание о заполнении дневника</div>
+                                        <label class="switcher">
+                                            <input type="checkbox" checked class="switcher__input hidden" hidden>
+                                            <span class="switcher__btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="settings__form-separator"></span>
+                            <div class="settings__form-row align-start">
+                                <div class="settings__form-text">Доп. <br class="pc-only"> информация:</div>
+                                <div class="settings__form-column">
+                                    <div class="settings__body-item">
+                                        <a href="" class="settings__body-link icon-triangle">Персональные данные</a>
+                                    </div>
+                                    <div class="settings__body-item">
+                                        <a href="" class="settings__body-link icon-triangle">Сменить пароль</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="settings__form-separator"></span>
+                            <div class="settings__form-row align-start">
+                                <div class="settings__form-text">О Eatvio:</div>
+                                <div class="settings__form-column">
+                                    <div class="settings__body-item">
+                                        <a href="" class="settings__body-link icon-triangle">О компании</a>
+                                    </div>
+                                    <div class="settings__body-item">
+                                        <a href="" class="settings__body-link icon-triangle">Пользовательское соглашение</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="settings__footer">
+                        <button type="button" class="settings__btn btn l-btn-primary"> Стать консультантом </button>
+                        <button type="button" class="settings__btn btn l-btn-light icon-delete"></button>
+                    </div>
                 </div>
-                <div class="settings__person-position">
-                  Консультант
-                </div>
-              </div>
-              <div class="settings__person-thumb">
-                <img src="img/user.png" alt="avatar">
-              </div>
-            </div>
-          </div>
-          <div class="settings__body settings__body_change">
-            <form action="#" class="settings__form">
-              <div class="settings__form-row">
-                <div class="settings__form-text">Язык:</div>
-                <div class="select">
-                  <select name="language">
-                    <option value="0" selected>English</option>
-                    <option value="1">Русский</option>
-                    <option value="2">Казахстанский</option>
-                  </select>
-                </div>
-              </div>
-              <span class="settings__form-separator"></span>
-              <div class="settings__form-row align-start">
-                <div class="settings__form-text">Уведомления:</div>
-                <div class="settings__form-column">
-                  <div class="settings__body-item">
-                    <div class="settings__body-name">Уведомление о новых обновлениях</div>
-                    <label class="switcher">
-                      <input type="checkbox" class="switcher__input hidden" hidden>
-                      <span class="switcher__btn"></span>
-                    </label>
-                  </div>
-                  <div class="settings__body-item">
-                    <div class="settings__body-name">Напоминание о заполнении дневника</div>
-                    <label class="switcher">
-                      <input type="checkbox" checked class="switcher__input hidden" hidden>
-                      <span class="switcher__btn"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <span class="settings__form-separator"></span>
-              <div class="settings__form-row align-start">
-                <div class="settings__form-text">Доп.
-                  <br class="pc-only"> информация:
-                </div>
-                <div class="settings__form-column">
-                  <div class="settings__body-item">
-                    <a href="" class="settings__body-link icon-triangle">Персональные данные</a>
-                  </div>
-                  <div class="settings__body-item">
-                    <a href="" class="settings__body-link icon-triangle">Сменить пароль</a>
-                  </div>
-                </div>
-              </div>
-              <span class="settings__form-separator"></span>
-              <div class="settings__form-row align-start">
-                <div class="settings__form-text">О Eatvio:</div>
-                <div class="settings__form-column">
-                  <div class="settings__body-item">
-                    <a href="" class="settings__body-link icon-triangle">О компании</a>
-                  </div>
-                  <div class="settings__body-item">
-                    <a href="" class="settings__body-link icon-triangle">Пользовательское соглашение</a>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="settings__footer">
-            <button type="button" class="settings__btn btn l-btn-primary">
-              Стать консультантом
-            </button>
-            <button type="button" class="settings__btn btn l-btn-light icon-delete"></button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

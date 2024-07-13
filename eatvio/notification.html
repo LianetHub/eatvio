@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,75 +393,59 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="diet">
-        <div class="diet__container">
-          <div class="diet__header">
-            <button class="diet__back icon-arrow-short-left">
-              <span>Мой блог</span>
-            </button>
-            <h1 class="diet__title">
-              Уведомления
-            </h1>
-          </div>
-          <div class="diet__notification notification">
-            <div class="notification__content">
-              <div class="notification__list">
-                <a href="" class="notification__item new">
-                  <span class="notification__thumb">
-                    <img src="img/user.png" class="cover-image" alt="avatar">
-                  </span>
-                  <span class="notification__text">На вас подписались Иван Иванов</span>
-                </a>
-                <a href="" class="notification__item new">
-                  <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item succes">
-                  <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item new">
-                  <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item new">
-                  <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item">
-                  <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item">
-                  <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item">
-                  <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span>
-                  </span>
-                </a>
-                <a href="" class="notification__item">
-                  <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+</header> <main class="page">
+            <section class="diet">
+                <div class="diet__container">
+                    <div class="diet__header">
+                        <button class="diet__back icon-arrow-short-left"><span>Мой блог</span></button>
+                        <h1 class="diet__title"> Уведомления </h1>
+                    </div>
+                    <div class="diet__notification notification">
+                        <div class="notification__content">
+                            <div class="notification__list">
+                                <a href="" class="notification__item new">
+                                    <span class="notification__thumb">
+                                        <img src="img/user.png" class="cover-image" alt="avatar">
+                                    </span>
+                                    <span class="notification__text">На вас подписались Иван Иванов</span>
+                                </a>
+                                <a href="" class="notification__item new">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                </a>
+                                <a href="" class="notification__item succes">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                </a>
+                                <a href="" class="notification__item new">
+                                    <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
+                                </a>
+                                <a href="" class="notification__item new">
+                                    <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
+                                </a>
+                                <a href="" class="notification__item">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                </a>
+                                <a href="" class="notification__item">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                </a>
+                                <a href="" class="notification__item">
+                                    <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
+                                </a>
+                                <a href="" class="notification__item">
+                                    <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -564,9 +549,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

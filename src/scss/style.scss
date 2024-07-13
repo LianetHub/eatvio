@@ -277,6 +277,13 @@ body {
 				order: 0;
 			}
 		}
+		&.content__side-xs {
+			order: -1;
+			@media (min-width: $md3) {
+				flex: 0 0 rem(270);
+				order: 0;
+			}
+		}
 	}
 	&__side-content {
 		@media (max-width: $md5) {
@@ -3221,3 +3228,4 @@ body {
 @import "./pages/subscribers.scss";
 @import "./pages/comment.scss";
 @import "./pages/search-page";
+@import "./pages/rating";

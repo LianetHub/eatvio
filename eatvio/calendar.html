@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,366 +393,288 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="diary">
-        <div class="diary__container container-sm">
-          <div class="diary__header">
-            <a href="" class="diary__back icon-arrow-short-left">
-              <span>Моя страница</span>
-            </a>
-            <div class="diary__info">
-              <strong class="diary__info-current">
-                10 день
-              </strong>
-              <div class="diary__info-date">
-                План - Легкий
-              </div>
-            </div>
-            <div class="diary__actions">
-              <div class="diary__person">
-                <div class="diary__person-main">
-                  <a href="" class="diary__person-name">
-                    Максим Крац
-                  </a>
-                  <span class="diary__person-position">
-                    Консультант
-                  </span>
-                </div>
-                <a href="" class="diary__person-thumb">
-                  <img src="img/user.png" alt="thumb">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="diary__calendar calendar">
-            <div class="calendar__header">
-              <button type="button" class="calendar__prev icon-arrow-left"></button>
-              <div class="calendar__date">
-                <span class="calendar__mounth">
-                  Март
-                </span>
-                <strong class="calendar__year">2022</strong>
-              </div>
-              <div class="calendar__plan">
-                <div class="calendar__plan-title">
-                  План:
-                </div>
-                <div class="calendar__plan-value">
-                  Легкий
-                </div>
-              </div>
-              <button type="button" class="calendar__next icon-arrow-right"></button>
-            </div>
-            <div class="calendar__cells">
-              <div class="calendar__cell day">Пн</div>
-              <div class="calendar__cell day">Вт</div>
-              <div class="calendar__cell day">Ср</div>
-              <div class="calendar__cell day">Чт</div>
-              <div class="calendar__cell day">Пт</div>
-              <div class="calendar__cell day">Сб</div>
-              <div class="calendar__cell day">Вс</div>
-              <div class="calendar__cell inactive">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">28</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell succes">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">01</div>
-                  <span class="calendar__cell-progress">Старт</span>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label green">
-                      Готово
+</header> <main class="page">
+            <section class="diary">
+                <div class="diary__container container-sm">
+                    <div class="diary__header">
+                        <a href="" class="diary__back icon-arrow-short-left"><span>Моя страница</span></a>
+                        <div class="diary__info">
+                            <strong class="diary__info-current"> 10 день </strong>
+                            <div class="diary__info-date"> План - Легкий </div>
+                        </div>
+                        <div class="diary__actions">
+                            <div class="diary__person">
+                                <div class="diary__person-main">
+                                    <a href="" class="diary__person-name"> Максим Крац </a>
+                                    <span class="diary__person-position"> Консультант </span>
+                                </div>
+                                <a href="" class="diary__person-thumb">
+                                    <img src="img/user.png" alt="thumb">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="calendar__cell-label green">
-                      Просмотрено
+                    <div class="diary__calendar calendar">
+                        <div class="calendar__header">
+                            <button type="button" class="calendar__prev icon-arrow-left"></button>
+                            <div class="calendar__date">
+                                <span class="calendar__mounth"> Март </span>
+                                <strong class="calendar__year">2022</strong>
+                            </div>
+                            <div class="calendar__plan">
+                                <div class="calendar__plan-title"> План: </div>
+                                <div class="calendar__plan-value"> Легкий </div>
+                            </div>
+                            <button type="button" class="calendar__next icon-arrow-right"></button>
+                        </div>
+                        <div class="calendar__cells">
+                            <div class="calendar__cell day">Пн</div>
+                            <div class="calendar__cell day">Вт</div>
+                            <div class="calendar__cell day">Ср</div>
+                            <div class="calendar__cell day">Чт</div>
+                            <div class="calendar__cell day">Пт</div>
+                            <div class="calendar__cell day">Сб</div>
+                            <div class="calendar__cell day">Вс</div>
+                            <div class="calendar__cell inactive">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">28</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell succes">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">01</div>
+                                    <span class="calendar__cell-progress">Старт</span>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label green"> Готово </div>
+                                        <div class="calendar__cell-label green"> Просмотрено </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell succes">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">02</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label green"> Готово </div>
+                                        <div class="calendar__cell-label green"> Просмотрено </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell primary">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">03</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label green"> Готово </div>
+                                        <a href="" class="calendar__cell-label blue"> Посмотреть ответ <span class="calendar__cell-quantity">1</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell warning">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">04</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label brown"> В процессе </div>
+                                        <a href="" class="calendar__cell-label blue"> Заполнить отчет <span class="calendar__cell-quantity">1</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">05</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">06</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">07</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">08</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">09</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">10</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">11</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">12</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">13</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">14</div>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell selected">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">15</div>
+                                    <span class="calendar__cell-progress">Конец</span>
+                                    <div class="calendar__cell-labels">
+                                        <div class="calendar__cell-label gray"> Скоро </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">16</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">17</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">18</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">19</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">20</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">21</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">22</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">23</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">24</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">25</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">26</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">27</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">28</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">29</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">30</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">31</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell inactive">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">01</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell inactive">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">02</div>
+                                </div>
+                            </div>
+                            <div class="calendar__cell inactive">
+                                <div class="calendar__cell-content">
+                                    <div class="calendar__cell-date">03</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="calendar__cell succes">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">02</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label green">
-                      Готово
-                    </div>
-                    <div class="calendar__cell-label green">
-                      Просмотрено
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell primary">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">03</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label green">
-                      Готово
-                    </div>
-                    <a href="" class="calendar__cell-label blue">
-                      Посмотреть ответ
-                      <span class="calendar__cell-quantity">1</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell warning">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">04</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label brown">
-                      В процессе
-                    </div>
-                    <a href="" class="calendar__cell-label blue">
-                      Заполнить отчет
-                      <span class="calendar__cell-quantity">1</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">05</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">06</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">07</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">08</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">09</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">10</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">11</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">12</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">13</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">14</div>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell selected">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">15</div>
-                  <span class="calendar__cell-progress">Конец</span>
-                  <div class="calendar__cell-labels">
-                    <div class="calendar__cell-label gray">
-                      Скоро
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">16</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">17</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">18</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">19</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">20</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">21</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">22</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">23</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">24</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">25</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">26</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">27</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">28</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">29</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">30</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">31</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell inactive">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">01</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell inactive">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">02</div>
-
-                </div>
-              </div>
-              <div class="calendar__cell inactive">
-                <div class="calendar__cell-content">
-                  <div class="calendar__cell-date">03</div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -805,9 +728,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

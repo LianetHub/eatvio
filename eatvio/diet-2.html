@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,108 +393,87 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="diet">
-        <div class="diet__container">
-          <div class="settings__header">
-            <a href="" class="settings__back icon-arrow-short-left">
-              <span class="pc-only">Все диеты</span>
-            </a>
-            <div class="settings__person-title title ">
-              Легкая диета
-            </div>
-          </div>
-          <div class="diet__body">
-            <div class="diet__body-column">
-              <div class="diet__person">
-                <div class="diet__person-thumb">
-                  <img src="img/user-2.png" class="cover-image" alt="thumb">
-                </div>
-                <div class="diet__person-body">
-                  <div class="diet__person-name">Дмитрий Коваль</div>
-                  <div class="consultant__rate icon-star">
-                    <span>
-                      4.6
-                    </span>
-                    (32)
-                  </div>
-                </div>
-              </div>
-              <div class="diet__info">
-                <div class="diet__info-rows">
-                  <div class="diet__info-row">
-                    <div class="diet__info-title">
-                      Время прохождения диеты:
+</header> <main class="page">
+            <section class="diet">
+                <div class="diet__container">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Все диеты</span></a>
+                        <div class="settings__person-title title "> Легкая диета </div>
                     </div>
-                    <div class="diet__info-value">
-                      7 дней
+                    <div class="diet__body">
+                        <div class="diet__body-column">
+                            <div class="diet__person">
+                                <div class="diet__person-thumb">
+                                    <img src="img/user-2.png" class="cover-image" alt="thumb">
+                                </div>
+                                <div class="diet__person-body">
+                                    <div class="diet__person-name">Дмитрий Коваль</div>
+                                    <div class="consultant__rate icon-star">
+                                        <span> 4.6 </span> (32)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="diet__info">
+                                <div class="diet__info-rows">
+                                    <div class="diet__info-row">
+                                        <div class="diet__info-title"> Время прохождения диеты: </div>
+                                        <div class="diet__info-value"> 7 дней </div>
+                                    </div>
+                                    <div class="diet__info-row">
+                                        <div class="diet__info-title"> Диете придерживаются: </div>
+                                        <div class="diet__info-value"> 10 </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="diet__info-favorite icon-heart"></button>
+                            </div>
+                            <div class="diet__desc">
+                                <div class="diet__desc-caption"> Об этой диете </div>
+                                <div class="diet__desc-text">Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . </div>
+                                <button type="button" class="diet__desc-full icon-triangle">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="diet__body-column">
+                            <div class="diet__body-image">
+                                <img src="img/diet.png" class="cover-image" alt="diet">
+                                <div class="diet__body-stats">
+                                    <div class="diet__body-stat icon-eye-fill">200</div>
+                                    <div class="diet__body-stat icon-heart-fill">64</div>
+                                    <div class="diet__body-stat icon-message-square">3</div>
+                                </div>
+                            </div>
+                            <div class="diet__body-list">
+                                <div class="diet__body-item">
+                                    <div class="diet__body-icon">
+                                        <img src="img/broccoli.svg" alt="icon">
+                                    </div>
+                                    <div class="diet__body-text">Веганская</div>
+                                </div>
+                                <div class="diet__body-item">
+                                    <div class="diet__body-icon">
+                                        <img src="img/bread.svg" alt="icon">
+                                    </div>
+                                    <div class="diet__body-text">Мучное</div>
+                                </div>
+                                <div class="diet__body-item">
+                                    <div class="diet__body-icon">
+                                        <img src="img/meat.svg" alt="icon">
+                                    </div>
+                                    <div class="diet__body-text">Мясо</div>
+                                </div>
+                                <div class="diet__body-item">
+                                    <div class="diet__body-icon">
+                                        <img src="img/wine.svg" alt="icon">
+                                    </div>
+                                    <div class="diet__body-text">Алкоголь</div>
+                                </div>
+                            </div>
+                            <button class="diet__body-start l-btn l-btn-green">Начать диету</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="diet__info-row">
-                    <div class="diet__info-title">
-                      Диете придерживаются:
-                    </div>
-                    <div class="diet__info-value">
-                      10
-                    </div>
-                  </div>
-                </div>
-                <button type="button" class="diet__info-favorite icon-heart"></button>
-              </div>
-              <div class="diet__desc">
-                <div class="diet__desc-caption">
-                  Об этой диете
-                </div>
-                <div class="diet__desc-text">Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . </div>
-                <button type="button" class="diet__desc-full icon-triangle">Развернуть</button>
-              </div>
-            </div>
-            <div class="diet__body-column">
-              <div class="diet__body-image">
-                <img src="img/diet.png" class="cover-image" alt="diet">
-                <div class="diet__body-stats">
-                  <div class="diet__body-stat icon-eye-fill">200</div>
-                  <div class="diet__body-stat icon-heart-fill">64</div>
-                  <div class="diet__body-stat icon-message-square">3</div>
-                </div>
-              </div>
-              <div class="diet__body-list">
-                <div class="diet__body-item">
-                  <div class="diet__body-icon">
-                    <img src="img/broccoli.svg" alt="icon">
-                  </div>
-                  <div class="diet__body-text">Веганская</div>
-                </div>
-                <div class="diet__body-item">
-                  <div class="diet__body-icon">
-                    <img src="img/bread.svg" alt="icon">
-                  </div>
-                  <div class="diet__body-text">Мучное</div>
-                </div>
-                <div class="diet__body-item">
-                  <div class="diet__body-icon">
-                    <img src="img/meat.svg" alt="icon">
-                  </div>
-                  <div class="diet__body-text">Мясо</div>
-                </div>
-                <div class="diet__body-item">
-                  <div class="diet__body-icon">
-                    <img src="img/wine.svg" alt="icon">
-                  </div>
-                  <div class="diet__body-text">Алкоголь</div>
-                </div>
-              </div>
-              <button class="diet__body-start l-btn l-btn-green">Начать диету</button>
-            </div>
-          </div>
-          <div class="diet__footer">
-            <div class="diet__footer-caption">
-              План диеты (7 дней)
-            </div>
-            <div class="diet__footer-body">
-              <div class="diet__footer-grid">
-                <div class="diet__day" data-tabs>
+                    <div class="diet__footer">
+                        <div class="diet__footer-caption"> План диеты (7 дней) </div>
+                        <div class="diet__footer-body">
+                            <div class="diet__footer-grid"> <div class="diet__day" data-tabs>
     <div class="diet__day-header">
         <div class="diet__day-num">
             День 1
@@ -1224,11 +1204,9 @@
             </div>
         </div>
     </div>
-</div>
-              </div>
-            </div>
-          </div>
-          <div class="comment-block">
+</div> </div>
+                        </div>
+                    </div> <div class="comment-block">
     <div class="comment-block__caption title">
         Комментарии пользователей
     </div>
@@ -1394,19 +1372,16 @@
         </div>
     </div>
 </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -1510,9 +1485,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

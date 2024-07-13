@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <head>
     <title>Fitness</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,13 +8,15 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -392,699 +393,611 @@
             </div>
         </div>
     </div>
-</header>
-    <main class="page">
-      <section class="content">
-        <div class="content__container">
-          <div class="content__body">
-            <aside class="content__side content__side-sm">
-              <nav class="content__menu">
-                <ul class="content__menu-list">
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-mouthpiece active">Компании</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-stats">Статистика</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-wallet">Бюджет</a>
-                  </li>
-                  <li class="content__menu-separator"></li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-gear">Настройки</a>
-                  </li>
-                  <li class="content__menu-item">
-                    <a href="" class="content__menu-link icon-logout">Выход</a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
-            <div class="content__main">
-              <div class="content__block">
-                <div class="content__breadcrumbs">
-                  <a href="rk.html" class="content__breadcrumbs-link">Компании</a>
-                  <a href="create.html" class="content__breadcrumbs-link active">Создание компании</a>
-                </div>
-                <div class="content__title title">
-                  Создание рекламной компании
-                </div>
-                <div class="content__row">
-                  <div class="content__row-caption title title-sm">
-                    Выберите стратегию рекламной компании
-                  </div>
-                  <div class="content__row-items">
-                    <label class="content__row-item option-btn">
-                      <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
-                      <span class="option-btn__text icon-click">
-                        Оплата за клики
-                        <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый клик по вашему объявению">i</span>
-                      </span>
-                    </label>
-                    <label class="content__row-item option-btn">
-                      <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
-                      <span class="option-btn__text icon-eye">
-                        Оплата за показы
-                        <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый показ вашего объявения">i</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="content__block">
-                <div class="content__row">
-                  <div class="content__row-caption title title-sm">
-                    Название компании
-                  </div>
-                  <div class="content__row-item">
-                    <div class="label">
-                      <div class="label__quantity" id="message-1">
-                        <span class="label__quantity-current">0</span>
-                        /
-                        <span class="label__quantity-total">150</span>
-                      </div>
-                    </div>
-                    <input type="text" name="title" data-maxlength="message-1" maxlength="150" class="input" placeholder="Новая кампания 27.06.2023 18:28:49">
-                  </div>
-                </div>
-              </div>
-              <div class="content__block">
-                <div class="content__title title title-sm">
-                  Распределение бюджета
-                </div>
-                <div class="content__row">
-                  <div class="content__row-item content-columns">
-                    <div class="content__row-title">
-                      Выбранная стратегия:
-                    </div>
-                    <a href="" class="content__row-link">Оплата за показы</a>
-                  </div>
-                  <div class="content__row-item content-columns">
-                    <div class="content__row-title">
-                      Бюджет в день, ₽:
-                    </div>
-                    <input type="text" name="budget-day" class="input" placeholder="100 ₽">
-                  </div>
-                  <div class="content__row-item content-columns">
-                    <div class="content__row-title">
-                      Общий бюджет, ₽:
-                    </div>
-                    <input type="text" name="budget-all" class="input" placeholder="1000 ₽">
-                  </div>
-                </div>
-              </div>
-              <div class="content__block">
-                <div class="content__title title title-sm">
-                  География показов
-                </div>
-                <div class="content__columns">
-                  <div class="content__column">
-                    <form action="#" class="content__column-search search">
-                      <button class="search__btn icon-search"></button>
-                      <input type="text" name="search" class="search__input" placeholder="Поиск">
-                    </form>
-                    <div class="content__column-list" data-spollers>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="russia" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Россия</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__menu">
+                                <ul class="content__menu-list">
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-mouthpiece active">Компании</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-stats">Статистика</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-wallet">Бюджет</a>
+                                    </li>
+                                    <li class="content__menu-separator"></li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-gear">Настройки</a>
+                                    </li>
+                                    <li class="content__menu-item">
+                                        <a href="" class="content__menu-link icon-logout">Выход</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <div class="content__block">
+                                <div class="content__breadcrumbs">
+                                    <a href="rk.html" class="content__breadcrumbs-link">Компании</a>
+                                    <a href="create.html" class="content__breadcrumbs-link active">Создание компании</a>
+                                </div>
+                                <div class="content__title title"> Создание рекламной компании </div>
+                                <div class="content__row">
+                                    <div class="content__row-caption title title-sm"> Выберите стратегию рекламной компании </div>
+                                    <div class="content__row-items">
+                                        <label class="content__row-item option-btn">
+                                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                                            <span class="option-btn__text icon-click"> Оплата за клики <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый клик по вашему объявению">i</span>
+                                            </span>
+                                        </label>
+                                        <label class="content__row-item option-btn">
+                                            <input type="radio" name="payment" value="click" class="option-btn__input hidden" hidden>
+                                            <span class="option-btn__text icon-eye"> Оплата за показы <span class="option-btn__info info-block" data-tooltip="Вы платите за каждый показ вашего объявения">i</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
+                            <div class="content__block">
+                                <div class="content__row">
+                                    <div class="content__row-caption title title-sm"> Название компании </div>
+                                    <div class="content__row-item">
+                                        <div class="label">
+                                            <div class="label__quantity" id="message-1">
+                                                <span class="label__quantity-current">0</span> / <span class="label__quantity-total">150</span>
+                                            </div>
+                                        </div>
+                                        <input type="text" name="title" data-maxlength="message-1" maxlength="150" class="input" placeholder="Новая кампания 27.06.2023 18:28:49">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
+                            <div class="content__block">
+                                <div class="content__title title title-sm"> Распределение бюджета </div>
+                                <div class="content__row">
+                                    <div class="content__row-item content-columns">
+                                        <div class="content__row-title"> Выбранная стратегия: </div>
+                                        <a href="" class="content__row-link">Оплата за показы</a>
+                                    </div>
+                                    <div class="content__row-item content-columns">
+                                        <div class="content__row-title"> Бюджет в день, ₽: </div>
+                                        <input type="text" name="budget-day" class="input" placeholder="100 ₽">
+                                    </div>
+                                    <div class="content__row-item content-columns">
+                                        <div class="content__row-title"> Общий бюджет, ₽: </div>
+                                        <input type="text" name="budget-all" class="input" placeholder="1000 ₽">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__block">
+                                <div class="content__title title title-sm"> География показов </div>
+                                <div class="content__columns">
+                                    <div class="content__column">
+                                        <form action="#" class="content__column-search search">
+                                            <button class="search__btn icon-search"></button>
+                                            <input type="text" name="search" class="search__input" placeholder="Поиск">
+                                        </form>
+                                        <div class="content__column-list" data-spollers>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="russia" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Россия</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="sssr" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Бывший СССР</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="euro" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Европа</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="asia" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Азия</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="america" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Северная Америка</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="america" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Южная Америка</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="afric" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Африка</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="ocean" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Австралия и Океания</span>
+                                                </label>
+                                                <button type="button" class="content__column-btn" data-spoller></button>
+                                                <div class="content__column-sublist">
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Центр</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Москва</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content__column-checkbox">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
+                                                            <span class="checkbox__content">Северо-Запад</span>
+                                                        </label>
+                                                        <button type="button" class="content__column-btn" data-spoller></button>
+                                                        <div class="content__column-sublist">
+                                                            <div class="content__column-checkbox">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
+                                                                    <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
+                                                                </label>
+                                                                <button type="button" class="content__column-btn"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content__column-checkbox">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="country" value="ocean" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content">Остальной мир</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__column content__column-gray">
+                                        <div class="content__column-header">
+                                            <div class="content__column-title"> Выбрано: 1 </div>
+                                            <button type="button" class="content__column-clear"> Очистить всё </button>
+                                        </div>
+                                        <ul class="content__column-list">
+                                            <li class="content__column-item">
+                                                <div class="content__column-text"> Россия </div>
+                                                <button type="button" class="content__column-delete icon-close"></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__block">
+                                <div class="content__title title title-sm"> Демография </div>
+                                <div class="content__row">
+                                    <div class="content__row-title"> Пол: </div>
+                                    <div class="content__row-options">
+                                        <label class="content__row-option option">
+                                            <input type="radio" checked name="sex" value="all" class="option__input hidden" hidden="">
+                                            <span class="option__text"> Любой </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="sex" value="man" class="option__input hidden" hidden="">
+                                            <span class="option__text"> Мужчины </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="sex" value="woman" class="option__input hidden" hidden="">
+                                            <span class="option__text"> Женщины </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="content__row">
+                                    <div class="content__row-title"> Возраст: </div>
+                                    <div class="content__row-options">
+                                        <label class="content__row-option option">
+                                            <input type="radio" checked name="age" value="all" class="option__input hidden" hidden="">
+                                            <span class="option__text"> Любой возраст </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="age" value="14-18" class="option__input hidden" hidden="">
+                                            <span class="option__text"> 14 - 18 </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="age" value="18-25" class="option__input hidden" hidden="">
+                                            <span class="option__text"> 18 - 25 </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="age" value="25-40" class="option__input hidden" hidden="">
+                                            <span class="option__text"> 25 - 40 </span>
+                                        </label>
+                                        <label class="content__row-option option">
+                                            <input type="radio" name="age" value="40-65" class="option__input hidden" hidden="">
+                                            <span class="option__text"> 40 - 65 </span>
+                                        </label>
+                                        <input type="radio" name="age" id="variant" value="variant" class="option__input hidden" hidden="">
+                                        <label for="variant" class="content__row-option option">
+                                            <span class="option__text"> Свой вариант </span>
+                                        </label>
+                                        <div class="options-hidden">
+                                            <input type="text" name="start-age" class="input" placeholder="Возраст, от">
+                                            <input type="text" name="end-age" class="input" placeholder="Возраст, до">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__block">
+                                <div class="content__title title title-sm"> Расписание показов </div>
+                                <div class="content__row">
+                                    <div class="content__row-item">
+                                        <div class="select">
+                                            <select>
+                                                <option value="0" selected>Почасовая настройка</option>
+                                                <option value="1">Каждый день, круглосуточно</option>
+                                                <option value="2">По будням с 08:00 до 20:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="content__row-item">
+                                        <div class="label"> Расписание показов (выбрано&nbsp;<span data-checking-value="">6</span>&nbsp;дней) </div>
+                                        <div class="popup__checkboxes">
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Mon" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> ПН </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Tue" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> ВТ </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Wed" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> СР </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Thu" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> ЧТ </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Fri" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> ПТ </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked="" data-checking-item="" name="day" value="Sat" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> СБ </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" data-checking-item="" name="day" value="Sun" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content"> ВС </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="content__row-item content__columns">
+                                        <div class="content__row-column">
+                                            <div class="label"> Время старта </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option value="1" selected>00:00</option>
+                                                    <option value="2">06:00</option>
+                                                    <option value="3">12:00</option>
+                                                    <option value="4">18:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content__row-column">
+                                            <div class="label"> Время окончания </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option value="1" selected>00:00</option>
+                                                    <option value="2">06:00</option>
+                                                    <option value="3">12:00</option>
+                                                    <option value="4">18:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__block">
+                                <div class="content__title title title-sm"> Ретаргетинг <span class="info-block" data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro accusantium eos facilis ullam fugit, possimus nisi commodi minus, nostrum repellendus ad itaque numquam natus. Voluptatibus in harum praesentium quia">i</span>
+                                </div>
+                                <div class="content__row">
+                                    <div class="content__row-item">
+                                        <div class="label"> Лимит показов уникальному пользователю </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="1" selected>В день</option>
+                                                <option value="2">В неделю</option>
+                                                <option value="3">В месяц</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="content__row-item">
+                                        <div class="label"> Частота показов одного объявления уникальному пользователю </div>
+                                        <div class="select">
+                                            <select>
+                                                <option value="1" selected> Без ограничений</option>
+                                                <option value="2">1 раз</option>
+                                                <option value="3">5 раз</option>
+                                                <option value="3">10 раз</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__footer">
+                                <button type="button" class="content__footer-btn l-btn btn-light"> Сохранить </button>
+                                <button type="button" class="content__footer-btn l-btn btn-primary"> Продолжить </button>
+                            </div>
                         </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="sssr" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Бывший СССР</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="euro" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Европа</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="asia" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Азия</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="america" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Северная Америка</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="america" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Южная Америка</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="afric" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Африка</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="ocean" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Австралия и Океания</span>
-                        </label>
-                        <button type="button" class="content__column-btn" data-spoller></button>
-                        <div class="content__column-sublist">
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="center" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Центр</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="msk" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Москва</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content__column-checkbox">
-                            <label class="checkbox">
-                              <input type="checkbox" name="district" value="sz" class="checkbox__input hidden" hidden>
-                              <span class="checkbox__content">Северо-Запад</span>
-                            </label>
-                            <button type="button" class="content__column-btn" data-spoller></button>
-                            <div class="content__column-sublist">
-                              <div class="content__column-checkbox">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="city" value="spb" class="checkbox__input hidden" hidden>
-                                  <span class="checkbox__content">Санкт-Петербург и Лен. область</span>
-                                </label>
-                                <button type="button" class="content__column-btn"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content__column-checkbox">
-                        <label class="checkbox">
-                          <input type="checkbox" name="country" value="ocean" class="checkbox__input hidden" hidden>
-                          <span class="checkbox__content">Остальной мир</span>
-                        </label>
-                      </div>
                     </div>
-                  </div>
-                  <div class="content__column content__column-gray">
-                    <div class="content__column-header">
-                      <div class="content__column-title">
-                        Выбрано: 1
-                      </div>
-                      <button type="button" class="content__column-clear">
-                        Очистить всё
-                      </button>
-                    </div>
-                    <ul class="content__column-list">
-                      <li class="content__column-item">
-                        <div class="content__column-text">
-                          Россия
-                        </div>
-                        <button type="button" class="content__column-delete icon-close"></button>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
-              <div class="content__block">
-                <div class="content__title title title-sm">
-                  Демография
-                </div>
-                <div class="content__row">
-                  <div class="content__row-title">
-                    Пол:
-                  </div>
-                  <div class="content__row-options">
-                    <label class="content__row-option option">
-                      <input type="radio" checked name="sex" value="all" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        Любой
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="sex" value="man" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        Мужчины
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="sex" value="woman" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        Женщины
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="content__row">
-                  <div class="content__row-title">
-                    Возраст:
-                  </div>
-                  <div class="content__row-options">
-                    <label class="content__row-option option">
-                      <input type="radio" checked name="age" value="all" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        Любой возраст
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="age" value="14-18" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        14 - 18
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="age" value="18-25" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        18 - 25
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="age" value="25-40" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        25 - 40
-                      </span>
-                    </label>
-                    <label class="content__row-option option">
-                      <input type="radio" name="age" value="40-65" class="option__input hidden" hidden="">
-                      <span class="option__text">
-                        40 - 65
-                      </span>
-                    </label>
-                    <input type="radio" name="age" id="variant" value="variant" class="option__input hidden" hidden="">
-                    <label for="variant" class="content__row-option option">
-                      <span class="option__text">
-                        Свой вариант
-                      </span>
-                    </label>
-                    <div class="options-hidden">
-                      <input type="text" name="start-age" class="input" placeholder="Возраст, от">
-                      <input type="text" name="end-age" class="input" placeholder="Возраст, до">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content__block">
-                <div class="content__title title title-sm">
-                  Расписание показов
-                </div>
-                <div class="content__row">
-                  <div class="content__row-item">
-                    <div class="select">
-                      <select>
-                        <option value="0" selected>Почасовая настройка</option>
-                        <option value="1">Каждый день, круглосуточно</option>
-                        <option value="2">По будням с 08:00 до 20:00</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="content__row-item">
-                    <div class="label">
-                      Расписание показов (выбрано&nbsp;<span data-checking-value="">6</span>&nbsp;дней)
-                    </div>
-                    <div class="popup__checkboxes">
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Mon" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          ПН
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Tue" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          ВТ
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Wed" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          СР
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Thu" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          ЧТ
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Fri" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          ПТ
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" checked="" data-checking-item="" name="day" value="Sat" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          СБ
-                        </span>
-                      </label>
-                      <label class="checkbox-btn">
-                        <input type="checkbox" data-checking-item="" name="day" value="Sun" class="checkbox-btn__input hidden" hidden="">
-                        <span class="checkbox-btn__content">
-                          ВС
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="content__row-item content__columns">
-                    <div class="content__row-column">
-                      <div class="label">
-                        Время старта
-                      </div>
-                      <div class="select">
-                        <select>
-                          <option value="1" selected>00:00</option>
-                          <option value="2">06:00</option>
-                          <option value="3">12:00</option>
-                          <option value="4">18:00</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="content__row-column">
-                      <div class="label">
-                        Время окончания
-                      </div>
-                      <div class="select">
-                        <select>
-                          <option value="1" selected>00:00</option>
-                          <option value="2">06:00</option>
-                          <option value="3">12:00</option>
-                          <option value="4">18:00</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content__block">
-                <div class="content__title title title-sm">
-                  Ретаргетинг
-                  <span class="info-block" data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro accusantium eos facilis ullam fugit, possimus nisi commodi minus, nostrum repellendus ad itaque numquam natus. Voluptatibus in harum praesentium quia">i</span>
-                </div>
-                <div class="content__row">
-                  <div class="content__row-item">
-                    <div class="label">
-                      Лимит показов уникальному пользователю
-                    </div>
-                    <div class="select">
-                      <select>
-                        <option value="1" selected>В день</option>
-                        <option value="2">В неделю</option>
-                        <option value="3">В месяц</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="content__row-item">
-                    <div class="label">
-                      Частота показов одного объявления уникальному пользователю
-                    </div>
-                    <div class="select">
-                      <select>
-                        <option value="1" selected> Без ограничений</option>
-                        <option value="2">1 раз</option>
-                        <option value="3">5 раз</option>
-                        <option value="3">10 раз</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content__footer">
-                <button type="button" class="content__footer-btn l-btn btn-light">
-                  Сохранить
-                </button>
-                <button type="button" class="content__footer-btn l-btn btn-primary">
-                  Продолжить
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-  </div>
-  
+</footer> </div> 
 
 
 
@@ -1188,9 +1101,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 

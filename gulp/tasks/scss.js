@@ -7,6 +7,8 @@ import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
 import shorthand from 'gulp-shorthand';
+import postcss from 'gulp-postcss';
+import tailwindcss from 'tailwindcss';
 
 const sass = gulpSass(dartSass);
 
@@ -27,15 +29,6 @@ export const scss = () => {
                 groupCssMediaQueries()
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         webpcss({
-        //             webpClass: '.webp',
-        //             noWebpClass: '.no-webp'
-        //         })
-        //     )
-        // )
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -46,12 +39,6 @@ export const scss = () => {
                 })
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         shorthand()
-        //     )
-        // )
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
@@ -106,5 +93,31 @@ export const normalize = () => {
             extname: ".min.css"
         }))
         .pipe(app.gulp.dest(app.path.build.normalize))
+        .pipe(app.plugins.browsersync.stream());
+}
+
+export const tailwindTask = () => {
+    return app.gulp.src(app.path.src.tailwind, { sourcemaps: app.isDev })
+        .pipe(app.plugins.plumber(
+            app.plugins.notify.onError({
+                title: "SCSS Tailwind Error",
+                message: "Error: <%= error.message %>"
+            }))
+        )
+        .pipe(postcss([
+            tailwindcss,
+            autoprefixer
+        ]))
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                cleanCss()
+            )
+        )
+        .pipe(rename({
+            extname: ".min.css"
+        }))
+        .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browsersync.stream());
 }

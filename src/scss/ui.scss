@@ -34,6 +34,19 @@
 	cursor: help;
 }
 
+[data-popover] {
+	background: #f7faff;
+	color: #323f4b;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 120%;
+}
+
+[data-popover-close] {
+	color: #7c8388;
+	font-size: 0.65rem;
+}
+
 .info-block {
 	width: 15px;
 	height: 15px;
@@ -160,6 +173,10 @@
 
 .red-color {
 	color: #f00;
+}
+
+.green-color {
+	color: #019a3e !important;
 }
 
 .notification-btn {

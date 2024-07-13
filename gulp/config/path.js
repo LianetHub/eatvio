@@ -20,6 +20,7 @@ export const path = {
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
 		scss: `${srcFolder}/scss/style.scss`,
+		tailwind: `${srcFolder}/scss/tailwind.css`,
 		normalize: `${srcFolder}/scss/reset.scss`,
 		js: `${srcFolder}/js/app.js`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
