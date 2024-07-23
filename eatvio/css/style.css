@@ -1779,6 +1779,16 @@ body.dark-theme {
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 
+.info-block.dark {
+  background: #323f4b;
+  color: #f7faff;
+}
+
+.info-block.blue {
+  background: #2f80ed;
+  color: #fff;
+}
+
 .tooltip {
   position: fixed;
   z-index: 11;
