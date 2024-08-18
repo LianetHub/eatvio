@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body class="dark-theme">
+        <div class="wrapper">
+            <main class="page">
+                <section class="arm">
+                    <div class="arm__container">
+                        <div class="arm__content">
+                            <aside class="arm__sidebar">
+                                @@include('./html/_arm-menu.html', {
+                                "active": 7
+                                })
+                            </aside>
+                            <div class="arm__header">
+                                <span class="arm__header-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M1.8918 0.122933C1.13308 0.388935 0.436929 1.07741 0.139698 1.85976C-0.00891815 2.25094 -0.00891815 2.46218 0.00672561 6.77296L0.0301913 11.2872L0.296135 11.78C0.616832 12.3668 1.10179 12.8362 1.69625 13.1101L2.1421 13.3213H9.18179H16.2215L16.6908 13.0944C17.2853 12.7971 17.8093 12.2729 18.1066 11.6783L18.3334 11.2089V6.67126V2.13359L18.1222 1.68765C17.8484 1.09306 17.3791 0.607994 16.7925 0.287228L16.2997 0.0212269L9.29912 0.00557977C2.73656 -0.0100674 2.27507 -0.00224379 1.8918 0.122933ZM15.5566 2.58736L15.7522 2.68906L15.7756 6.60867C15.7913 10.098 15.7756 10.5439 15.6661 10.6535C15.5566 10.763 14.8761 10.7786 9.1505 10.7786C3.29192 10.7786 2.73656 10.7708 2.6427 10.6456C2.54884 10.5439 2.53319 9.81633 2.53319 6.65561V2.78295L2.72092 2.6343C2.893 2.49347 3.11201 2.48565 9.13486 2.48565C14.0001 2.48565 15.4002 2.50912 15.5566 2.58736Z" fill="white" />
+                                        <path d="M23.6762 0.0921202C22.8784 0.381592 22.2526 0.944889 21.9006 1.69595L21.6973 2.13407V11.6788V21.2236L21.9241 21.693C22.2213 22.2876 22.7454 22.8118 23.3399 23.1091L23.8092 23.3359H30.8489H37.8886L38.3344 23.1247C38.9289 22.8509 39.4138 22.3815 39.7345 21.7947L40.0005 21.3018V11.6788V2.05584L39.7893 1.62554C39.5155 1.07007 38.9523 0.506769 38.397 0.232944L37.9668 0.0217081L30.9662 0.00606099C25.3423 -0.00958615 23.9109 0.00606099 23.6762 0.0921202ZM37.3097 2.63478L37.4975 2.78343V11.6632C37.4975 19.0643 37.4818 20.5586 37.388 20.6603C37.2941 20.7855 36.7387 20.7933 30.8802 20.7933C25.1624 20.7933 24.474 20.7776 24.3645 20.6681C24.2472 20.5586 24.2394 19.6589 24.255 11.6162L24.2785 2.68954L24.474 2.58784C24.6305 2.5096 26.0306 2.48613 30.8958 2.48613C36.9186 2.48613 37.1377 2.49396 37.3097 2.63478Z" fill="white" />
+                                        <path d="M2.04734 16.7562C1.27298 17.0065 0.655047 17.5307 0.24831 18.3052L0.0292969 18.7199V28.3429V37.9659L0.240488 38.3962C0.514253 38.9516 1.07743 39.5149 1.63278 39.7888L2.06299 40H9.1809H16.2988L16.7916 39.734C17.3782 39.4132 17.8475 38.9282 18.1213 38.3336L18.3325 37.8876V28.3429V18.7981L18.1057 18.3287C17.8084 17.7341 17.2844 17.2099 16.6899 16.9127L16.2206 16.6858L9.29823 16.6701C3.72905 16.6623 2.31329 16.6779 2.04734 16.7562ZM15.6652 19.3536C15.7747 19.4631 15.7904 20.3863 15.7904 28.3742C15.7904 36.5655 15.7826 37.293 15.6574 37.3869C15.5557 37.4808 14.4294 37.4965 9.22001 37.5199C3.07983 37.5356 2.89993 37.5356 2.72002 37.3869L2.5323 37.2383V28.3585C2.5323 20.9574 2.54794 19.4631 2.6418 19.3614C2.73567 19.2363 3.29102 19.2284 9.14961 19.2284C14.8596 19.2284 15.5557 19.2441 15.6652 19.3536Z" fill="white" />
+                                        <path d="M23.6295 26.8173C23.0507 27.0285 22.5345 27.4197 22.1825 27.9126C21.6428 28.6871 21.6506 28.6324 21.6741 33.5143L21.6975 37.8876L21.9087 38.3336C22.1825 38.9282 22.6518 39.4132 23.2384 39.734L23.7312 40H30.8491H37.967L38.3972 39.7888C38.9526 39.5149 39.5158 38.9516 39.7895 38.3962L40.0007 37.9659V33.35V28.7341L39.7348 28.2412C39.4141 27.6544 38.9291 27.185 38.3347 26.9112L37.8888 26.6999L30.9665 26.6843C24.31 26.6686 24.0285 26.6686 23.6295 26.8173ZM37.3882 29.3756C37.4821 29.4773 37.4977 30.2049 37.4977 33.3656V37.2383L37.31 37.3869C37.1379 37.5278 36.9189 37.5356 30.8961 37.5356C26.0309 37.5356 24.6307 37.5121 24.4743 37.4339L24.2788 37.3322L24.2553 33.4126C24.2396 29.9232 24.2553 29.4773 24.3648 29.3678C24.4743 29.2582 25.1548 29.2426 30.8804 29.2426C36.739 29.2426 37.2944 29.2504 37.3882 29.3756Z" fill="white" />
+                                    </svg>
+                                </span>
+                                <a href="" class="arm__header-back icon-arrow-left"></a>
+                                <div class="arm__title">
+                                    Бейджи
+                                </div>
+                                <div class="arm__actions">
+                                    <form action="#" class="arm__search">
+                                        <button type="submit" class="arm__search-btn icon-search"></button>
+                                        <input type="text" name="search" class="input input-white" placeholder="Поиск">
+                                    </form>
+                                    <a href="" class="arm__add l-btn l-btn-primary l-btn-md">Найти консультанта</a>
+                                </div>
+                                <div class="arm__select select select-dark-outline">
+                                    <select>
+                                        <option value="1">Порядок: по умолчанию</option>
+                                        <option value="2">Порядок: по возрастанию</option>
+                                        <option value="3">Порядок: по убыванию</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="arm__badges">
+                                <div class="arm__complaint-categories">
+                                    <a href="" class="arm__complaint-category active">Обычные</a>
+                                    <a href="" class="arm__complaint-category">Эволюционные</a>
+                                    <a href="" class="arm__complaint-category">Специальные</a>
+                                </div>
+                                <div class="arm__badges-table">
+                                    <table class="arm__table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <label class="checkbox checkbox-white checkbox-reverse">
+                                                        <input type="checkbox" name="badge" value="all" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__content"></span>
+                                                    </label>
+                                                </th>
+                                                <th>Иконка</th>
+                                                <th>Заголовок</th>
+                                                <th>
+                                                    <div class="arm__badges-add">
+                                                        <p>
+                                                            Опиcание
+                                                        </p>
+                                                        <a href="" class="arm__badges-btn l-btn l-btn-md l-btn-primary">Добавить новый бейдж</a>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/slim 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/checklist_1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/dumbbell 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox checkbox-white checkbox-reverse">
+                                                    <input type="checkbox" name="badge" value="1" class="checkbox__input hidden" hidden>
+                                                    <span class="checkbox__content"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge arm__badge_lg">
+                                                    <img src="@img/diet 1.png" alt="badge" data-tooltip="&lt;b&gt;Заголовок бейджа&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Длинный&nbsp;заголовок
+                                            </td>
+                                            <td>
+                                                <div class="arm__badge-desc">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur. Amet tortor imperdiet cursus tellus. Bibendum nisl amet nunc elementum. Magna lacinia nibh commodo mattis mi. Diam risus amet amet ...
+                                                    </p>
+                                                    <a href="" class="l-btn l-btn-sm l-btn-primary-outline">
+                                                        Редактировать
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <div class="arm__badges-selected">
+                                    <div class="arm__badges-selected-main">
+                                        <div class="arm__badges-selected-caption">
+                                            Количество выбранных консультантов: <span class="arm__badges-selected-quantity">0</span>
+                                        </div>
+                                        <div class="arm__badges-selected-actions">
+                                            <a href="" class="arm__badges-selected-action">Удалить бейджи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="arm__footer">
+                                    <div class="arm__footer-sort">
+                                        Показывать:
+                                        <div class="arm__footer-select select select-sm">
+                                            <select>
+                                                <option value="20">20</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <a href="" class="arm__footer-loadmore l-btn l-btn-primary">
+                                        Загрузить ещё
+                                    </a>
+                                    <div class="arm__footer-pagination pagination">
+                                        <a href="" aria-disabled="true" class="pagination__prev icon-prev"></a>
+                                        <a href="" class="pagination__item">1</a>
+                                        <a href="" class="pagination__item">2</a>
+                                        <span class="pagination__item">...</span>
+                                        <a href="" class="pagination__item">9</a>
+                                        <a href="" class="pagination__item">10</a>
+                                        <a href="" class="pagination__next icon-next"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        @@include('html/_logout.html')
+        @@include('html/_js.html', {})
+    </body>
+</html>

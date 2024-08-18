@@ -25,6 +25,11 @@
 		background: #fff;
 		border: 1px solid #e6e6e6;
 	}
+	&.input-dark {
+		background: #383a51;
+		border-color: #383a51;
+		color: #fff;
+	}
 	&.input-lg {
 		padding: em(7, 18) em(16, 18);
 	}
@@ -96,6 +101,11 @@ input[type="date"] {
 		background: #fff;
 		border-color: #e9e9ea;
 	}
+	&.textarea-dark {
+		background: #383a51;
+		border-color: #383a51;
+		color: #fff;
+	}
 	&.textarea-sm {
 		font-size: 16px;
 		height: 7.1875rem;
@@ -121,7 +131,6 @@ input[type="date"] {
 
 .label {
 	display: flex;
-	// justify-content: space-between;
 	align-items: center;
 	margin: em(0) em(0) rem(10) rem(0);
 	font-size: 14px;
@@ -129,6 +138,11 @@ input[type="date"] {
 		justify-content: center;
 		font-weight: 700;
 		font-size: 16px;
+	}
+	&.label-md {
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 130%;
 	}
 	// .label__quantity
 	&__quantity {
@@ -361,6 +375,15 @@ input[type="date"] {
 			font-size: rem(14);
 		}
 	}
+	&.checkbox-lg {
+		.checkbox__content {
+			&::before {
+				font-size: rem(18);
+				width: 1.875rem;
+				height: 1.875rem;
+			}
+		}
+	}
 	// .checkbox__input
 	&__input {
 		&:checked {
@@ -545,6 +568,24 @@ input[type="date"] {
 			&:hover {
 				color: #fff;
 				background: #7b8794;
+			}
+		}
+	}
+	&.l-btn-red {
+		border: 1px solid #ff3b3b;
+		color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #ff3b3b;
+			}
+		}
+	}
+	&.l-btn-green-outline {
+		border: 1px solid #0bb450;
+		color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #0bb450;
 			}
 		}
 	}

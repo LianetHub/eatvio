@@ -209,101 +209,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // if (document.querySelector("#diaryChart")) {
+    // badges
+
+    if (document.querySelector('.arm__badges-selected')) {
+        const checkboxes = document.querySelectorAll('.arm__table input[type="checkbox"]');
+        const selectAllCheckbox = document.querySelector('input[type="checkbox"][value="all"]');
+        const badgesSelectedBlock = document.querySelector('.arm__badges-selected');
+        const selectedQuantitySpan = document.querySelectorAll('.arm__badges-selected-quantity');
+        const badgesAppointmentBlock = document.querySelector('.arm__badges-appointment');
+        const badgesSelectedMain = document.querySelector('.arm__badges-selected-main');
+        const addBadgesBtn = document.querySelector('.add-badges-btn');
+        const backBtns = document.querySelectorAll('.arm__badges-appointment-back');
+        const badgesSelect = document.querySelector('select[name="badges"]');
+        const applyBtn = document.querySelector('.arm__badges-appointment-btn');
+
+        function updateSelectedConsultants() {
+            const selectedCheckboxes = document.querySelectorAll('.arm__table input[type="checkbox"]:checked:not([value="all"])');
+            const selectedCount = selectedCheckboxes.length;
 
 
-
-    //     var options = {
-    //         series: [50, 15, 22, 150],
-    //         chart: {
-    //             type: 'radialBar',
-    //             height: '375',
-    //             width: '100%',
-    //             redrawOnParentResize: true,
-    //             events: {
-    //                 // mounted: function (chartContext, config) {
-    //                 //     var maxIndex = config.config.series.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
-    //                 //     chartContext.toggleDataPointSelection(maxIndex);
-
-    //                 // },
-
-    //                 dataPointMouseEnter: function (event, chartContext, config) {
-
-    //                     if (chartContext.w.globals.selectedDataPoints.length > 0 &&
-    //                         chartContext.w.globals.selectedDataPoints[config.seriesIndex] &&
-    //                         chartContext.w.globals.selectedDataPoints[config.seriesIndex].indexOf(config.dataPointIndex) !== -1) {
-
-    //                         return;
-    //                     }
-    //                     chartContext.toggleDataPointSelection(config.dataPointIndex);
-    //                 }
-
-    //             }
-    //         },
-    //         plotOptions: {
-    //             radialBar: {
-    //                 startAngle: -90,
-    //                 endAngle: 90,
-    //                 hollow: {
-    //                     margin: 5,
-    //                     size: '25%',
-    //                     background: 'transparent',
-    //                     image: undefined,
-    //                 },
-    //                 dataLabels: {
-    //                     show: true,
-    //                     name: {
-    //                         show: true,
-    //                         fontSize: '16px',
-    //                         fontFamily: undefined,
-    //                         color: undefined,
-    //                         offsetY: -10
-    //                     },
-    //                     value: {
-    //                         show: true,
-    //                         fontSize: '14px',
-    //                         fontFamily: undefined,
-    //                         color: undefined,
-    //                         offsetY: 16,
-    //                         formatter: function (val) {
-    //                             return val + "%";
-    //                         }
-    //                     },
-    //                     // total: {
-    //                     //     show: true,
-    //                     //     label: 'Всего',
-    //                     //     color: '#373d3f',
-    //                     //     formatter: function (w) {
-    //                     //         return w.globals.seriesTotals.reduce((a, b) => {
-    //                     //             return a + b
-    //                     //         }, 0) + '%'
-    //                     //     }
-    //                     // }
-    //                 },
-    //                 track: {
-    //                     background: '#F6FAFF',
-    //                     margin: 5,
-    //                     borderRadius: 10,
-    //                     dropShadow: {
-    //                         enabled: false
-    //                     }
-    //                 }
-    //             }
-    //         },
-    //         colors: ['#2F80ED', '#2F80ED', '#2F80ED', '#C82222'],
-    //         labels: ['Калории', 'Белки', 'Жиры', 'Углеводы'],
-    //         responsive: [{
-    //             breakpoint: undefined,
-    //             options: {},
-    //         }]
-
-    //     };
-
-    //     let chart = new ApexCharts(document.querySelector("#diaryChart"), options);
-    //     chart.render();
+            selectedQuantitySpan.forEach(span => {
+                span.textContent = selectedCount;
+            });
 
 
-    // }
+            if (selectedCount > 0) {
+                badgesSelectedBlock.classList.add('visible');
+            } else {
+                badgesSelectedBlock.classList.remove('visible');
+            }
+        }
+
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+
+                if (this.value === 'all') {
+                    const allChecked = this.checked;
+                    checkboxes.forEach(cb => {
+                        if (cb !== selectAllCheckbox) {
+                            cb.checked = allChecked;
+                        }
+                    });
+                }
+
+                updateSelectedConsultants();
+            });
+        });
+
+
+        addBadgesBtn?.addEventListener('click', function () {
+            badgesSelectedMain.classList.add('hidden');
+            badgesAppointmentBlock.classList.remove('hidden');
+        });
+
+
+        backBtns?.forEach(btn => {
+            btn.addEventListener('click', function () {
+                badgesSelectedMain.classList.remove('hidden');
+                badgesAppointmentBlock.classList.add('hidden');
+            });
+        });
+
+        badgesSelect?.addEventListener('change', function () {
+            if (badgesSelect.value === "0") {
+                applyBtn.setAttribute('disabled', 'disabled');
+            } else {
+                applyBtn.removeAttribute('disabled');
+            }
+        });
+    }
 
 
 

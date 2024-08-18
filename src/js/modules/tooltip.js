@@ -5,15 +5,36 @@ export const initTooltips = () => {
     document.onmouseover = function (event) {
         let target = event.target;
 
-        // если у нас есть подсказка...
+        // Получаем HTML для подсказки
         let tooltipHtml = target.dataset.tooltip;
         if (!tooltipHtml) return;
 
+        // Создаем элемент для подсказки
         tooltipElem = document.createElement('div');
         tooltipElem.className = 'tooltip';
+
+
         tooltipElem.innerHTML = tooltipHtml;
         document.body.append(tooltipElem);
 
+        updateTooltipPosition(event);
+    };
+
+    document.onmousemove = function (event) {
+        if (tooltipElem) {
+            updateTooltipPosition(event);
+        }
+    };
+
+    document.onmouseout = function () {
+        if (tooltipElem) {
+            tooltipElem.remove();
+            tooltipElem = null;
+        }
+    };
+
+    function updateTooltipPosition(event) {
+        let target = event.target;
         let coords = target.getBoundingClientRect();
 
         let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
@@ -26,14 +47,6 @@ export const initTooltips = () => {
 
         tooltipElem.style.left = left + 'px';
         tooltipElem.style.top = top + 'px';
-    };
+    }
 
-    document.onmouseout = function (e) {
-
-        if (tooltipElem) {
-            tooltipElem.remove();
-            tooltipElem = null;
-        }
-
-    };
 }

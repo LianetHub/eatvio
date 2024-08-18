@@ -182,6 +182,42 @@
 			background: #f6faff;
 		}
 	}
+	&.select-dark {
+		& select {
+			background: #252736;
+			border-color: #252736;
+			color: #fff;
+		}
+		&::before {
+			filter: grayscale(1) brightness(0) invert(1);
+		}
+	}
+	&.select-dark-outline {
+		& select {
+			background: #252736;
+			color: #fff;
+		}
+		&::before {
+			filter: grayscale(1) brightness(0) invert(1);
+		}
+	}
+	&.select-lg {
+		select {
+			font-size: 1.25rem;
+			option {
+				font-size: 1.25rem;
+			}
+		}
+	}
+	&.select-sm {
+		& select {
+			padding: 0.12rem 1.25rem 0.12rem 0.38rem;
+			font-size: 1rem;
+		}
+		&::before {
+			right: 0.37rem;
+		}
+	}
 	& select {
 		appearance: none;
 		width: 100%;

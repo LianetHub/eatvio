@@ -557,6 +557,9 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.text-right {
+  text-align: right;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
