@@ -426,6 +426,23 @@
 			}
 		}
 	}
+	// .popup__examples
+	&__examples {
+		margin-top: 0.5rem;
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	// .popup__example
+	&__example {
+		color: #687380;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 130%;
+		padding: 0.25rem 0.62rem;
+		border-radius: 6.25rem;
+		background: #f6faff;
+	}
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

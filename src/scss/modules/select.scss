@@ -182,6 +182,16 @@
 			background: #f6faff;
 		}
 	}
+	&.select-accent {
+		& select {
+			background: #2f80ed;
+			color: #fff;
+			border-color: #2f80ed;
+		}
+		&::before {
+			filter: grayscale(1) brightness(100);
+		}
+	}
 	&.select-dark {
 		& select {
 			background: #252736;

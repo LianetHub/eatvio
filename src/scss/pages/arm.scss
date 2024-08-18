@@ -804,6 +804,9 @@
 		flex-direction: column;
 		grid-column: span 2;
 	}
+	&__chat-header {
+		padding: 0.87rem;
+	}
 	// .arm__chat-body
 	&__chat-body {
 		height: 18.19rem;
@@ -1076,6 +1079,41 @@
 	}
 	&__fin-questions {
 		margin-top: 2rem;
+	}
+	// .arm__fin-card
+	&__fin-card {
+		border-radius: 1.25rem;
+		background: #252736;
+		padding: 1.56rem 1.62rem;
+		.arm__chat {
+			margin-top: 2.5rem;
+			max-width: 46.5rem;
+		}
+	}
+	// .arm__fin-header
+	&__fin-header {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr;
+	}
+	// .arm__fin-complaint
+	&__fin-complaint {
+		display: grid;
+		align-items: end;
+		gap: 1.88rem;
+		grid-template-columns: 1.5fr 2fr;
+	}
+
+	// .arm__fin-actions
+	&__fin-actions {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.87rem;
+	}
+	// .arm__fin-text
+	&__fin-text {
+		font-size: 1.25rem;
+
+		font-weight: 700;
 	}
 	&__fin-table {
 		overflow-x: auto;
