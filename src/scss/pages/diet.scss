@@ -1,5 +1,5 @@
 .diet {
-	padding: em(40) em(0);
+	padding: em(30) em(0);
 	// .diet__container
 	&__container {
 		max-width: rem(970);
@@ -57,11 +57,11 @@
 	}
 	// .diet__form
 	&__form {
-		margin: em(40) em(0) em(0) em(0);
+		margin: em(24) em(0) em(0) em(0);
 		background: #fff;
 		padding: em(16);
-		border-radius: 8px;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		border-radius: rem(8);
+		box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.15);
 	}
 	// .diet__form-row
 	&__form-row {
@@ -85,25 +85,70 @@
 	}
 	&__form-checkboxes {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-auto-rows: 1fr;
-		gap: rem(10);
+		order: 1;
+		gap: rem(5);
+		@media (min-width: $md4) {
+			gap: 1rem;
+			margin-top: 1.5rem;
+			order: 0;
+		}
 		.checkbox-btn {
 			&__content {
-				border: 1px solid #e6e6e6;
+				border-radius: 0.3125rem;
+
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				font-size: 1rem;
+				font-size: 0.875rem;
 				text-align: center;
-				height: rem(150);
+				height: 5.125rem;
+				@media (min-width: $md5) {
+					height: 6rem;
+				}
 				& img {
-					height: 50px;
-					margin-bottom: 1rem;
+					height: 35px;
+					@media (min-width: $md6) {
+						height: 50px;
+					}
+					width: auto;
 				}
 			}
 		}
+	}
+	// .diet__form-body
+	&__form-body {
+		margin-top: 1rem;
+		display: grid;
+		gap: 1rem;
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr) 1.1fr;
+		}
+	}
+	// .diet__form-footer
+	&__form-footer {
+		margin-top: 1rem;
+	}
+	// .diet__form-main
+	&__form-main {
+		display: contents;
+		@media (min-width: $md4) {
+			display: block;
+			grid-column: span 2;
+		}
+	}
+	// .diet__form-header
+	&__form-header {
+		display: grid;
+		gap: 1rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .diet__form-block
+	&__form-block {
 	}
 	// .diet__form-columns
 	&__form-columns {
@@ -223,9 +268,9 @@
 	}
 	// .diet__footer
 	&__footer {
-		margin: em(30) em(0) rem(60);
+		margin: 1.5rem em(0) rem(24);
 		@media (min-width: $md4) {
-			margin: em(40) em(0) rem(60);
+			margin: em(24) em(0) rem(36);
 		}
 	}
 	// .diet__footer-btn
@@ -235,18 +280,12 @@
 		font-weight: 700;
 		width: 100%;
 		background: #fff;
-		padding: rem(24);
-		font-size: 1.5rem;
+		padding: rem(16);
 		text-align: center;
-		border-radius: 8px;
-		&::before {
-			position: absolute;
-			top: calc(50% - 0.75rem);
-			right: 24px;
-			font-weight: 700;
-			font-size: 24px;
-			transition: transform 0.3s ease 0s;
-			transform: rotate(180deg);
+		border-radius: rem(8);
+		font-size: 1.25rem;
+		@media (min-width: $md4) {
+			font-size: 1.5rem;
 		}
 	}
 	&__footer-caption {
@@ -254,56 +293,151 @@
 		font-weight: 700;
 		width: 100%;
 		background: #fff;
-		padding: rem(24);
+		padding: rem(19);
 		text-align: center;
-		border-radius: 8px;
+		border-radius: rem(8);
 		font-size: 1.25rem;
+		line-height: normal;
 		@media (min-width: $md4) {
 			font-size: 1.5rem;
 		}
 	}
 	// .diet__footer-body
 	&__footer-body {
-		margin: 1.25rem em(0) em(0) em(0);
+		margin: 1rem em(0) em(0) em(0);
+		@media (min-width: $md4) {
+			margin: 1.25rem em(0) em(0) em(0);
+		}
 	}
 	// .diet__footer-grid
 	&__footer-grid {
 		display: grid;
-		gap: 30px;
+		gap: 1rem;
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 40px;
+			gap: 1.25rem;
 		}
 	}
 	// .diet__day
 	&__day {
-		background: #fff;
-		padding: em(16);
 		border-radius: 0.5rem;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-		min-height: 21.375rem;
 		display: flex;
 		flex-direction: column;
-		max-width: calc(100vw - rem(30));
+		border-top: rem(1) solid #f1f2f6;
+		border-right: rem(1) solid #f1f2f6;
+		border-left: rem(1) solid #f1f2f6;
+		background: #fff;
+		padding: rem(12);
 		@media (min-width: $md4) {
-			max-width: calc(50vw - rem(40));
-		}
-		@media (min-width: $md3) {
-			max-width: 29.375rem;
+			padding: em(16);
 		}
 	}
 	// .diet__day-header
 	&__day-header {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 1rem;
+		border-bottom: 0.0625rem solid #f1f2f6;
+		line-height: normal;
+		font-weight: 700;
+		font-size: rem(18);
+		padding-bottom: 0.75rem;
+		@media (min-width: $md4) {
+			padding-bottom: 1rem;
+			font-size: rem(20);
+		}
+		&[data-spoller] {
+			@media (max-width: $md4) {
+				&:not(._active) {
+					padding-bottom: 0;
+					border-bottom: 0;
+					.diet__day-actions {
+						display: none;
+					}
+				}
+			}
+			&::before {
+				@extend %ic, .icon-down;
+				order: 1;
+				font-size: 0.75em;
+				margin-left: 1rem;
+				transition: transform 0.3s ease 0s;
+				@media (min-width: $md4) {
+					display: none;
+				}
+			}
+			&._active {
+				&::before {
+					transform: rotate(180deg);
+				}
+			}
+		}
 	}
-	// .diet__day-num
-	&__day-num {
-		font-size: 1.1875rem;
-		font-weight: 500;
+	// .diet__day-actions
+	&__day-actions {
+		display: flex;
+		font-size: rem(24);
+		gap: rem(12);
+		margin-left: auto;
 	}
-
+	// .diet__day-action
+	&__day-action {
+		color: #6d6f71;
+		transition: color 0.3s ease 0s;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #2f80ed;
+			}
+		}
+	}
+	// .diet__day-content
+	&__day-content {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		margin-top: 0.5rem;
+		@media (min-width: $md4) {
+			margin-top: 1rem;
+			display: flex !important;
+		}
+	}
+	// .diet__day-caption
+	&__day-caption {
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+	// .diet__day-tabs
+	&__day-tabs {
+		margin-top: 0.63rem;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		border-bottom: 0.0625rem solid #f1f2f6;
+		gap: 0.45rem;
+		padding-bottom: 0.75rem;
+		@media (min-width: $md4) {
+			padding-bottom: 1rem;
+			gap: 1rem;
+		}
+	}
+	// .diet__day-tab
+	&__day-tab {
+		background: #f1f2f6;
+		color: #6d6f71;
+		line-height: 100%;
+		font-size: 1rem;
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+		@media (min-width: $md4) {
+			padding: 0.63rem;
+			border-radius: 0.5rem;
+			font-size: 1.25rem;
+		}
+		&[aria-selected='true'] {
+			background-color: #2f80ed;
+			color: #fff;
+		}
+	}
 	// .diet__day-copy
 	&__day-copy {
 		color: #2f80ed;
@@ -321,24 +455,39 @@
 			}
 		}
 	}
+
 	// .diet__day-form
 	&__day-form {
-		margin: em(30) em(0) em(0) em(0);
 		display: flex;
-		flex-wrap: wrap;
-		gap: rem(10);
-		.input {
-			flex: 0 1 auto;
-			width: auto;
-			font-size: 16px;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	// .diet__day-row
+	&__day-row {
+		gap: rem(12);
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		@media (min-width: $md4) {
+			grid-template-columns: 1fr 5.5rem 4.5rem;
 		}
-		.icon-gear {
-			font-size: 40px;
-			color: #2f80ed;
+		.input {
+			padding: rem(12);
+			&:first-child {
+				@media (max-width: $md4) {
+					grid-column: span 2;
+				}
+			}
+		}
+		.select {
+			flex-shrink: 0;
+		}
+		.remove-row {
+			margin-left: auto;
+			font-size: 1.25rem;
 			transition: color 0.3s ease 0s;
 			@media (any-hover: hover) {
 				&:hover {
-					color: darken($color: #2f80ed, $amount: 10);
+					color: $red;
 				}
 			}
 		}
@@ -346,8 +495,6 @@
 	// .diet__btns
 	&__btns {
 		margin: em(40) em(0) em(0) em(0);
-		// display: grid;
-		// grid-template-columns: repeat(3, 1fr);
 		display: flex;
 		gap: 20px;
 		flex-wrap: wrap;
@@ -414,30 +561,22 @@
 	// .diet__body
 	&__body {
 		display: grid;
-		gap: 1rem;
+		gap: 1.75rem;
 		background: #fff;
 		border-radius: 0.5rem;
-		padding: rem(15);
-		margin-top: rem(30);
+		padding: rem(12);
+		margin-top: rem(20);
 		@media (min-width: $md4) {
-			margin-top: rem(40);
+			margin-top: rem(24);
 			padding: rem(20);
-			grid-template-columns: 1.2fr 1fr;
+			gap: rem(30);
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 	// .diet__body-column
 	&__body-column {
 		display: flex;
 		flex-direction: column;
-	}
-	&__body-footer {
-		margin-top: 1rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.l-btn {
-			padding: 0.5em 1.5em;
-		}
 	}
 	// .diet__content
 	&__content {
@@ -500,6 +639,16 @@
 			padding: 0;
 		}
 	}
+	// .diet__rate
+	&__rate {
+		margin-top: rem(3);
+		color: #2f80ed;
+		font-size: rem(14);
+		font-weight: 600;
+		padding: rem(6.5) rem(10);
+		border-radius: rem(12);
+		background: #f6faff;
+	}
 	&__person-message {
 		margin-top: 0.13rem;
 		display: flex;
@@ -537,12 +686,14 @@
 	&__info {
 		margin-top: 0.75rem;
 		border-radius: 0.25rem;
-		background: #e8f2ff;
+		background: #f6faff;
+		border-radius: rem(4);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: rem(10);
 		@media (min-width: $md4) {
+			width: fit-content;
 			padding: 0.87rem 2.5rem 0.87rem 1rem;
 		}
 		&.diet__info_sm {
@@ -560,19 +711,20 @@
 	// .diet__info-row
 	&__info-row {
 		display: flex;
+		flex-wrap: wrap;
 		font-size: 0.875rem;
 		gap: 0.25rem;
 		@media (min-width: $md4) {
-			gap: 1rem;
+			gap: 0.75rem;
+			row-gap: 0.25rem;
 			font-size: 1.125rem;
 		}
 		&:not(:last-child) {
-			margin-bottom: 0.55rem;
+			margin-bottom: 0.45rem;
 		}
 	}
 	// .diet__info-title
 	&__info-title {
-		flex: 0 0 73%;
 	}
 	// .diet__info-value
 	&__info-value {
@@ -584,32 +736,24 @@
 			font-size: 1.5rem;
 		}
 	}
-	// .diet__info-favorite
-	&__info-favorite {
-		transition: color 0.3s ease 0s;
-		margin-left: 0.5rem;
-		font-size: 1.75rem;
-		@media (min-width: $md4) {
-			font-size: 2rem;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
-		}
-	}
+
 	// .diet__desc
 	&__desc {
 		position: relative;
-		margin-top: 1.62rem;
 		overflow: hidden;
 		flex: 1 1 auto;
-		min-height: 21rem;
+		margin-top: rem(16);
+		min-height: 19.5rem;
+		@media (min-width: $md4) {
+			min-height: 18rem;
+			margin-top: rem(20);
+		}
 	}
 	// .diet__desc-caption
 	&__desc-caption {
 		font-weight: 600;
-		font-size: 1.1875rem;
+		font-size: rem(20);
+		line-height: normal;
 		@media (min-width: $md4) {
 			font-size: 1.375rem;
 		}
@@ -617,12 +761,12 @@
 	// .diet__desc-text
 	&__desc-text {
 		font-weight: 600;
-		line-height: 1.4;
 		position: absolute;
 		max-width: 100%;
-		margin-top: 0.75rem;
+		margin-top: 0.5rem;
+		line-height: 1.4;
 		@media (min-width: $md4) {
-			margin-top: 0.88rem;
+			margin-top: rem(12);
 			font-size: 1.125rem;
 		}
 		&.active {
@@ -632,7 +776,7 @@
 	// .diet__desc-full
 	&__desc-full {
 		position: absolute;
-		bottom: 0;
+		bottom: -1rem;
 		left: 0;
 		width: 100%;
 		color: #2f80ed;
@@ -645,7 +789,7 @@
 		background: #fff;
 		padding: 1.19rem;
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 100%;
 			left: 0;
@@ -678,8 +822,13 @@
 	// .diet__body-image
 	&__body-image {
 		position: relative;
+		height: 0;
+		padding-bottom: 75%;
+		@media (min-width: $md4) {
+			padding-bottom: 66.66%;
+		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -687,9 +836,50 @@
 			height: 100%;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 			border-radius: 0.25rem;
+			z-index: 2;
 		}
 		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
 			border-radius: 0.25rem;
+			z-index: 1;
+		}
+	}
+	// .diet__favorite
+	&__favorite {
+		position: absolute;
+		z-index: 3;
+		top: rem(8);
+		right: rem(8);
+		border-radius: rem(4);
+		background: #fff;
+		width: rem(38);
+		height: rem(38);
+		font-size: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 0.125rem;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		@media (min-width: $md4) {
+			top: rem(12);
+			right: rem(12);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #2f80ed;
+				color: #fff;
+			}
+		}
+		&.active {
+			@extend .icon-heart-fill;
+			color: #2f80ed;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
+			}
 		}
 	}
 	// .diet__body-stats
@@ -714,57 +904,97 @@
 		&::before {
 			font-size: 1.25rem;
 		}
+		&.icon-message-square {
+			&::before {
+				font-size: 1.125rem;
+			}
+		}
 	}
 	// .diet__body-list
 	&__body-list {
 		margin-top: 0.87rem;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		align-items: end;
+		display: flex;
+		justify-content: space-between;
+		@media (min-width: $md4) {
+			justify-content: space-evenly;
+		}
 	}
 	// .diet__body-item
 	&__body-item {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 0.5rem;
 	}
 	// .diet__body-icon
 	&__body-icon {
-		max-width: 2.25rem;
-		height: 2.25rem;
+		width: rem(36);
+		height: rem(36);
 		@media (min-width: $md4) {
-			max-width: 3.125rem;
-			height: 3.125rem;
+			width: rem(50);
+			height: rem(50);
 		}
-		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		& img {
 			width: 100%;
+			height: auto;
 		}
 	}
 	// .diet__body-text
 	&__body-text {
 		font-weight: 600;
 		line-height: 140%;
-		margin-top: 0.38rem;
+		margin-top: 0.81rem;
 		font-size: 0.875rem;
 		@media (min-width: $md4) {
 			font-size: 1rem;
-			margin-top: 0.81rem;
+		}
+	}
+	// .diet__body-footer
+	&__body-footer {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1.25rem;
+		@media (min-width: $md4) {
+			margin-top: 1.65rem;
 		}
 	}
 	// .diet__body-start
 	&__body-start {
-		margin-top: 1.55rem;
-		@media (max-width: $md4) {
-			padding-block: 0.5rem;
-		}
-		@media (min-width: $md4) {
-			margin-top: 1.87rem;
-		}
 		width: 100%;
+		&.l-btn {
+			padding-block: 0.7rem;
+		}
+	}
+	// .diet__save
+	&__save {
+		width: rem(50);
+		height: rem(50);
+		flex-shrink: 0;
+		padding: rem(10);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: rem(4);
+		background: #f6faff;
+		color: #323f4b;
+		font-size: 1.5rem;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #2f80ed;
+				color: #fff;
+			}
+		}
+		&.active {
+			color: #2f80ed;
+			@extend .icon-bookmark-fill;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
 	}
 }

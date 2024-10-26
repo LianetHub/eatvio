@@ -14,86 +14,76 @@
                             <div class="settings__person-title title ">
                                 Регистрация <br class="mobile-only"> консультанта
                             </div>
-                            <div class="settings__person pc-only">
-                                <div class="settings__person-content">
-                                    <div class="settings__person-name">
-                                        Дмитрий Коваль
-                                    </div>
-                                    <div class="settings__person-position">
-                                        Консультант
-                                    </div>
-                                </div>
-                                <div class="settings__person-thumb">
-                                    <img src="@img/user.png" alt="avatar">
-                                </div>
-                            </div>
                         </div>
                         <div class="settings__body">
-                            <div class="settings__body-caption title title-lg">Дипломы и сертификаты</div>
+                            <div class="settings__body-caption title">Дипломы и сертификаты</div>
                             <form action="#" class="settings__form">
-                                <div class="settings__form-header">
-                                    <input type="text" name="name" class="input" placeholder="Введите наименование диплома или сертификата">
-                                    <input type="date" name="date" class="input uppercase-text">
-                                    <button type="button" class="l-btn l-btn-primary icon-plus"></button>
-                                </div>
-                                <div class="settings__files">
-                                    <div class="settings__files-caption">
-                                        Фото или сканы дипломов <span class="pc-only">и сертификатов</span>
+                                <div class="settings__form-main">
+                                    <div class="settings__form-header">
+                                        <div class="settings__form-block">
+                                            <div class="label">Наименование дипломов и сертификатов</div>
+                                            <input type="text" name="name" class="input" placeholder="Диплом о повышении квалификации">
+                                        </div>
+                                        <div class="settings__form-block">
+                                            <div class="label">Дата выдачи</div>
+                                            <input type="date" name="date" class="input">
+                                        </div>
                                     </div>
-                                    <label class="settings__files-btn file-btn">
-                                        <input type="file" name="files[]" class="file-btn__input hidden" hidden>
-                                        <span class="file-btn__content l-btn l-btn-primary icon-upload">
-                                            <span>Загрузить <span class="pc-only">одно или несколько</span> фото</span>
-                                        </span>
-                                    </label>
+                                    <button type="submit" class="settings__add l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                                    <div class="settings__checkboxes">
+                                        <label class="settings__checkbox checkbox">
+                                            <input type="checkbox" name="publish" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content">
+                                                Опубликовать дипломы и сертификаты в профиле
+                                            </span>
+                                        </label>
+                                        <label class="settings__checkbox checkbox">
+                                            <input type="checkbox" name="education" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__content">
+                                                У меня есть медицинское образование
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="settings__form-block">
+                                    <div class="label pc-only">Фото или сканы дипломов и сертификатов</div>
+                                    @@include('./html/_file-upload.html', {
+                                    "className": "settings__form-file",
+                                    "title": "Добавьте фото или сканы"
+                                    })
                                 </div>
                             </form>
-                            <div class="settings__checkboxes">
-                                <label class="settings__checkbox checkbox checkbox-gray checkbox-reverse">
-                                    <input type="checkbox" name="publish" class="checkbox__input hidden" hidden>
-                                    <span class="checkbox__content">
-                                        Опубликовать в профиле
-                                    </span>
-                                </label>
-                                <label class="settings__checkbox checkbox checkbox-gray checkbox-reverse">
-                                    <input type="checkbox" name="education" class="checkbox__input hidden" hidden>
-                                    <span class="checkbox__content">
-                                        У меня есть медицинское образование
-                                    </span>
-                                </label>
-                            </div>
                         </div>
                         <div class="settings__body">
-                            <div class="settings__body-caption title title-lg">Ссылки на социальные сети</div>
+                            <div class="settings__body-caption title">Ссылки на социальные сети</div>
                             <div class="settings__grid">
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
-                                        Профиль во ВКонтакте
+                                    <div class="settings__grid-label label">
+                                        Профиль в ВКонтакте
                                     </div>
                                     <input type="text" name="vk" class="input input-white" placeholder="https://vk.com/username">
                                 </div>
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
+                                    <div class="settings__grid-label label">
                                         Профиль в Telegram
                                     </div>
                                     <input type="text" name="telegram" class="input input-white" placeholder="https://t.me/@username">
                                 </div>
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
-                                        Личный сайт (если есть)
+                                    <div class="settings__grid-label label">
+                                        Личный профиль (если есть)
                                     </div>
                                     <input type="text" name="site" class="input input-white" placeholder="www.top-konsultant.ru">
                                 </div>
                             </div>
                         </div>
                         <div class="settings__body">
-                            <div class="settings__body-caption title title-lg">Тип юридического лица</div>
+                            <div class="settings__body-caption title">Тип юридического лица</div>
                             <div class="settings__tabs tabs" data-tabs>
-                                <div class="settings__tablist" role="tablist" aria-labelledby="label">
-                                    <button class="l-tab l-btn" role="tab" type="button" id="self-employed" aria-selected="true" aria-controls="tabpanel-1">Самозанятый</button>
-                                    <button class="l-tab l-btn" role="tab" type="button" id="individual" aria-selected="true" aria-controls="tabpanel-2">Физическое лицо</button>
-                                    <button class="l-tab l-btn" role="tab" type="button" id="IP" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1"><span class="pc-only">Индивидуальный предприниматель</span><span class="mobile-only">ИП</span></button>
-                                    <button class="l-tab l-btn" role="tab" type="button" id="OOO" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">ООО</button>
+                                <div class="settings__tablist" role="tablist" aria-labelledby="settings__grid-label label">
+                                    <button class="settings__tabs-btn" role="tab" type="button" id="self-employed" aria-selected="true" aria-controls="tabpanel-1">Самозанятый</button>
+                                    <button class="settings__tabs-btn" role="tab" type="button" id="IP" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">Индивидуальный предприниматель</button>
+                                    <button class="settings__tabs-btn" role="tab" type="button" id="OOO" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">ООО</button>
                                 </div>
                                 <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="self-employed">
                                     <div class="settings__hint">
@@ -110,36 +100,14 @@
                                     </div>
                                     <div class="settings__grid">
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ИНН
                                             </div>
                                             <input type="text" name="inn" class="input input-white" placeholder="Введите ИНН">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="individual">
-                                    <div class="settings__hint">
-                                        <div class="settings__hint-title">
-                                            Рекомендуемый метод
-                                        </div>
-                                        <a href="" class="settings__hint-link">Информация как стать сомозанятым</a>
-                                    </div>
-                                    <div class="settings__warning">
-                                        Самозанятые платят налог при&nbsp;работе с&nbsp;Итвио всего 6%.
-                                        Итвио при&nbsp;выплатах автоматически оплатит налог и&nbsp;подготовит чек&nbsp;для&nbsp;себя.
-                                        Вы&nbsp;сможете отследить все&nbsp;операции в&nbsp;официальном приложении «Мой&nbsp;Налог»
-                                        Перестать быть самозанятым можно в&nbsp;любой момент
-                                    </div>
-                                    <div class="settings__grid">
-                                        <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
-                                                ИНН
-                                            </div>
-                                            <input type="text" name="inn" class="input input-white" placeholder="Введите ИНН">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tabpanel" role="tabpanel" id="tabpanel-3" tabindex="0" aria-labelledby="IP">
+                                <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="IP">
                                     <div class="settings__warning">
                                         При&nbsp;работе с&nbsp;индивидуальными предпринимателями выплаты происходят
                                         в&nbsp;полуавтоматическом режиме, от&nbsp;вас&nbsp;потребуется иметь доступ в&nbsp;любую
@@ -148,68 +116,68 @@
                                     </div>
                                     <div class="settings__grid">
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ИНН
                                             </div>
                                             <input type="text" name="inn" class="input input-white" placeholder="Введите ИНН">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 Номер записи в ЕГРИП
                                             </div>
                                             <input type="text" name="egrip" class="input input-white" placeholder="Введите номер записи в ЕГРИП">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tabpanel" role="tabpanel" id="tabpanel-4" tabindex="0" aria-labelledby="OOO">
+                                <div class="tabpanel" role="tabpanel" id="tabpanel-3" tabindex="0" aria-labelledby="OOO">
                                     <div class="settings__warning">
                                         При&nbsp;работе с&nbsp;юридическими лицами (ООО) выплаты происходят в&nbsp;полуавтоматическом режиме, от&nbsp;вас&nbsp;потребуется иметь доступ в&nbsp;любую систему электронного документооборота, более подробно о&nbsp;порядках рассчета написано здесь(ссылка будет)
                                     </div>
                                     <div class="settings__grid">
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 Название
                                             </div>
                                             <input type="text" name="name-ooo" class="input input-white" placeholder="Введите название ООО">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ИНН
                                             </div>
                                             <input type="text" name="inn" class="input input-white" placeholder="Введите ИНН">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 КПП
                                             </div>
                                             <input type="text" name="kpp" class="input input-white" placeholder="Введите КПП">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ОГРН
                                             </div>
                                             <input type="text" name="ogrn" class="input input-white" placeholder="Введите ОГРН">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 Юридический адрес
                                             </div>
                                             <input type="text" name="yur-address" class="input input-white" placeholder="Введите юридический адрес">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 Почтовый адрес
                                             </div>
                                             <input type="text" name="post" class="input input-white" placeholder="Введите почтовый адрес">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ОКВЭД
                                             </div>
                                             <input type="text" name="okved" class="input input-white" placeholder="Введите ОКВЭД">
                                         </div>
                                         <div class="settings__grid-item">
-                                            <div class="settings__grid-label">
+                                            <div class="settings__grid-label label">
                                                 ФИО Генерального директора
                                             </div>
                                             <input type="text" name="fullname" class="input input-white" placeholder="Введите ФИО Генерального директора">
@@ -217,30 +185,30 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="settings__caption title">Банковские реквизиты</div>
+                            <div class="settings__caption">Банковские реквизиты</div>
                             <div class="settings__grid">
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
+                                    <div class="settings__grid-label label">
                                         Лицевой счет
                                         <a href="" class="settings__grid-hint">Подсказка</a>
                                     </div>
                                     <input type="text" name="person" class="input input-white" placeholder="12345678901234567890">
                                 </div>
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
+                                    <div class="settings__grid-label label">
                                         Корреспондентский счет
                                     </div>
                                     <input type="text" name="person" class="input input-white" placeholder="12345678901234567890">
                                 </div>
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
-                                        Бик
+                                    <div class="settings__grid-label label">
+                                        БИК
                                     </div>
                                     <input type="text" name="person" class="input input-white" placeholder="123456789">
                                 </div>
                                 <div class="settings__grid-item">
-                                    <div class="settings__grid-label">
-                                        Полное название банка
+                                    <div class="settings__grid-label label">
+                                        Наименование банка
                                     </div>
                                     <input type="text" name="bank" class="input input-white" placeholder="ПАО “Сбербанк”">
                                 </div>
@@ -260,7 +228,7 @@
                         </div>
                         <div class="settings__footer">
                             <a href="#succes" data-modal class="settings__btn l-btn l-btn-primary">
-                                Готово
+                                Зарегистрироваться
                             </a>
                         </div>
                     </div>

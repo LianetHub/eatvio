@@ -157,7 +157,7 @@
 		align-items: center;
 		column-gap: rem(8);
 		&::before {
-			content: "";
+			content: '';
 			width: 10px;
 			height: 10px;
 			flex-shrink: 0;
@@ -247,6 +247,9 @@
 		margin: em(16) em(0) em(0) em(0);
 		@media (min-width: $md5) {
 			flex: 0 1 auto;
+		}
+		& img {
+			max-width: 1.5rem;
 		}
 	}
 	// .person__main-body
@@ -555,7 +558,7 @@
 			border-radius: 10px;
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;

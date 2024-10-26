@@ -403,13 +403,11 @@
                         <div class="diet__body-column">
                             <div class="diet__person">
                                 <div class="diet__person-thumb">
-                                    <img src="img/user-2.png" class="cover-image" alt="thumb">
+                                    <img src="img/user.png" class="cover-image" alt="thumb">
                                 </div>
                                 <div class="diet__person-body">
                                     <div class="diet__person-name">Дмитрий Коваль</div>
-                                    <div class="consultant__rate icon-star">
-                                        <span> 4.6 </span> (32)
-                                    </div>
+                                    <div class="diet__rate"> 128-й в рейтинге </div>
                                 </div>
                             </div>
                             <div class="diet__info">
@@ -420,10 +418,9 @@
                                     </div>
                                     <div class="diet__info-row">
                                         <div class="diet__info-title"> Диете придерживаются: </div>
-                                        <div class="diet__info-value"> 10 </div>
+                                        <div class="diet__info-value"> 10 человек </div>
                                     </div>
                                 </div>
-                                <button type="button" class="diet__info-favorite icon-heart"></button>
                             </div>
                             <div class="diet__desc">
                                 <div class="diet__desc-caption"> Об этой диете </div>
@@ -433,6 +430,7 @@
                         </div>
                         <div class="diet__body-column">
                             <div class="diet__body-image">
+                                <button type="button" class="diet__favorite icon-heart"></button>
                                 <img src="img/diet.png" class="cover-image" alt="diet">
                                 <div class="diet__body-stats">
                                     <div class="diet__body-stat icon-eye-fill">200</div>
@@ -466,7 +464,10 @@
                                     <div class="diet__body-text">Алкоголь</div>
                                 </div>
                             </div>
-                            <button class="diet__body-start l-btn l-btn-green">Начать диету</button>
+                            <div class="diet__body-footer">
+                                <button type="button" class="diet__body-start l-btn l-btn-green">Начать диету</button>
+                                <button type="button" class="diet__save icon-bookmark"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="diet__footer">
@@ -474,732 +475,753 @@
                         <div class="diet__footer-body">
                             <div class="diet__footer-grid"> <div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 1
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-1" aria-selected="true" aria-controls="tabpanel-day-1-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-2" aria-selected="false" aria-controls="tabpanel-day-1-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-3" aria-selected="false" aria-controls="tabpanel-day-1-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-4" aria-selected="false" aria-controls="tabpanel-day-1-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-5" aria-selected="false" aria-controls="tabpanel-day-1-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-1" tabindex="0" aria-labelledby="tab-day-1-1">
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-1" aria-selected="true" aria-controls="tabpanel-day-1-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-2" aria-selected="false" aria-controls="tabpanel-day-1-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-3" aria-selected="false" aria-controls="tabpanel-day-1-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-4" aria-selected="false" aria-controls="tabpanel-day-1-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-5" aria-selected="false" aria-controls="tabpanel-day-1-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-2" tabindex="0" aria-labelledby="tab-day-1-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-3" tabindex="0" aria-labelledby="tab-day-1-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-4" tabindex="0" aria-labelledby="tab-day-1-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-5" tabindex="0" aria-labelledby="tab-day-1-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                210
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-1" tabindex="0" aria-labelledby="tab-day-1-1">
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-2" tabindex="0" aria-labelledby="tab-day-1-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-3" tabindex="0" aria-labelledby="tab-day-1-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-4" tabindex="0" aria-labelledby="tab-day-1-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-5" tabindex="0" aria-labelledby="tab-day-1-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    210
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                11
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    11
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                20
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    20
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 2
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-1" aria-selected="true" aria-controls="tabpanel-day-2-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-2" aria-selected="false" aria-controls="tabpanel-day-2-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-3" aria-selected="false" aria-controls="tabpanel-day-2-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-4" aria-selected="false" aria-controls="tabpanel-day-2-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-5" aria-selected="false" aria-controls="tabpanel-day-2-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-1" tabindex="0" aria-labelledby="tab-day-2-1">
-            
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-1" aria-selected="true" aria-controls="tabpanel-day-2-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-2" aria-selected="false" aria-controls="tabpanel-day-2-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-3" aria-selected="false" aria-controls="tabpanel-day-2-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-4" aria-selected="false" aria-controls="tabpanel-day-2-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-5" aria-selected="false" aria-controls="tabpanel-day-2-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-2" tabindex="0" aria-labelledby="tab-day-2-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-3" tabindex="0" aria-labelledby="tab-day-2-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-4" tabindex="0" aria-labelledby="tab-day-2-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-5" tabindex="0" aria-labelledby="tab-day-2-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                440
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-1" tabindex="0" aria-labelledby="tab-day-2-1">
+                
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-2" tabindex="0" aria-labelledby="tab-day-2-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-3" tabindex="0" aria-labelledby="tab-day-2-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-4" tabindex="0" aria-labelledby="tab-day-2-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-5" tabindex="0" aria-labelledby="tab-day-2-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    440
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                8
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    8
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                9
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    9
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 3
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-1" aria-selected="true" aria-controls="tabpanel-day-3-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-2" aria-selected="false" aria-controls="tabpanel-day-3-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-3" aria-selected="false" aria-controls="tabpanel-day-3-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-4" aria-selected="false" aria-controls="tabpanel-day-3-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-5" aria-selected="false" aria-controls="tabpanel-day-3-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-1" tabindex="0" aria-labelledby="tab-day-3-1">
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-1" aria-selected="true" aria-controls="tabpanel-day-3-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-2" aria-selected="false" aria-controls="tabpanel-day-3-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-3" aria-selected="false" aria-controls="tabpanel-day-3-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-4" aria-selected="false" aria-controls="tabpanel-day-3-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-5" aria-selected="false" aria-controls="tabpanel-day-3-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-2" tabindex="0" aria-labelledby="tab-day-3-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-3" tabindex="0" aria-labelledby="tab-day-3-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-4" tabindex="0" aria-labelledby="tab-day-3-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-5" tabindex="0" aria-labelledby="tab-day-3-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                645
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-1" tabindex="0" aria-labelledby="tab-day-3-1">
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-2" tabindex="0" aria-labelledby="tab-day-3-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-3" tabindex="0" aria-labelledby="tab-day-3-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-4" tabindex="0" aria-labelledby="tab-day-3-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-5" tabindex="0" aria-labelledby="tab-day-3-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                21
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    645
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    21
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                3
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    3
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                18
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    18
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 4
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-1" aria-selected="true" aria-controls="tabpanel-day-4-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-2" aria-selected="false" aria-controls="tabpanel-day-4-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-3" aria-selected="false" aria-controls="tabpanel-day-4-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-4" aria-selected="false" aria-controls="tabpanel-day-4-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-5" aria-selected="false" aria-controls="tabpanel-day-4-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-1" tabindex="0" aria-labelledby="tab-day-4-1">
-            
-            
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Хлеб</div>
-                    <div class="diary__stats-quantity">1000 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Йогурт</div>
-                    <div class="diary__stats-quantity">500 гр</div>
-                </li>
-            </ul>
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-1" aria-selected="true" aria-controls="tabpanel-day-4-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-2" aria-selected="false" aria-controls="tabpanel-day-4-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-3" aria-selected="false" aria-controls="tabpanel-day-4-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-4" aria-selected="false" aria-controls="tabpanel-day-4-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-5" aria-selected="false" aria-controls="tabpanel-day-4-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-2" tabindex="0" aria-labelledby="tab-day-4-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-3" tabindex="0" aria-labelledby="tab-day-4-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-4" tabindex="0" aria-labelledby="tab-day-4-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-5" tabindex="0" aria-labelledby="tab-day-4-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                210
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-1" tabindex="0" aria-labelledby="tab-day-4-1">
+                
+                
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Хлеб</div>
+                        <div class="diary__stats-quantity">1000 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Йогурт</div>
+                        <div class="diary__stats-quantity">500 гр</div>
+                    </li>
+                </ul>
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-2" tabindex="0" aria-labelledby="tab-day-4-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-3" tabindex="0" aria-labelledby="tab-day-4-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-4" tabindex="0" aria-labelledby="tab-day-4-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-5" tabindex="0" aria-labelledby="tab-day-4-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    210
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                11
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    11
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                20
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    20
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 5
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-1" aria-selected="true" aria-controls="tabpanel-day-5-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-2" aria-selected="false" aria-controls="tabpanel-day-5-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-3" aria-selected="false" aria-controls="tabpanel-day-5-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-4" aria-selected="false" aria-controls="tabpanel-day-5-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-5" aria-selected="false" aria-controls="tabpanel-day-5-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-1" tabindex="0" aria-labelledby="tab-day-5-1">
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-1" aria-selected="true" aria-controls="tabpanel-day-5-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-2" aria-selected="false" aria-controls="tabpanel-day-5-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-3" aria-selected="false" aria-controls="tabpanel-day-5-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-4" aria-selected="false" aria-controls="tabpanel-day-5-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-5" aria-selected="false" aria-controls="tabpanel-day-5-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-2" tabindex="0" aria-labelledby="tab-day-5-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-3" tabindex="0" aria-labelledby="tab-day-5-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-4" tabindex="0" aria-labelledby="tab-day-5-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-5" tabindex="0" aria-labelledby="tab-day-5-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                210
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-1" tabindex="0" aria-labelledby="tab-day-5-1">
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-2" tabindex="0" aria-labelledby="tab-day-5-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-3" tabindex="0" aria-labelledby="tab-day-5-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-4" tabindex="0" aria-labelledby="tab-day-5-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-5" tabindex="0" aria-labelledby="tab-day-5-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    210
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                11
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    11
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                20
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    20
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 6
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-1" aria-selected="true" aria-controls="tabpanel-day-6-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-2" aria-selected="false" aria-controls="tabpanel-day-6-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-3" aria-selected="false" aria-controls="tabpanel-day-6-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-4" aria-selected="false" aria-controls="tabpanel-day-6-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-5" aria-selected="false" aria-controls="tabpanel-day-6-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-1" tabindex="0" aria-labelledby="tab-day-6-1">
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-1" aria-selected="true" aria-controls="tabpanel-day-6-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-2" aria-selected="false" aria-controls="tabpanel-day-6-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-3" aria-selected="false" aria-controls="tabpanel-day-6-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-4" aria-selected="false" aria-controls="tabpanel-day-6-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-5" aria-selected="false" aria-controls="tabpanel-day-6-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-2" tabindex="0" aria-labelledby="tab-day-6-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-3" tabindex="0" aria-labelledby="tab-day-6-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-4" tabindex="0" aria-labelledby="tab-day-6-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-5" tabindex="0" aria-labelledby="tab-day-6-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                210
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-1" tabindex="0" aria-labelledby="tab-day-6-1">
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-2" tabindex="0" aria-labelledby="tab-day-6-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-3" tabindex="0" aria-labelledby="tab-day-6-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-4" tabindex="0" aria-labelledby="tab-day-6-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-5" tabindex="0" aria-labelledby="tab-day-6-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    210
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                11
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    11
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                20
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    20
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
     <div class="diet__day-header">
-        <div class="diet__day-num">
+        <div class="diet__day-title">
             День 7
         </div>
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-1" aria-selected="true" aria-controls="tabpanel-day-7-1">Прием 1</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-2" aria-selected="false" aria-controls="tabpanel-day-7-2" tabindex="-1">Прием 2</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-3" aria-selected="false" aria-controls="tabpanel-day-7-3" tabindex="-1">Прием 3</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-4" aria-selected="false" aria-controls="tabpanel-day-7-4" tabindex="-1">Прием 4</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-5" aria-selected="false" aria-controls="tabpanel-day-7-5" tabindex="-1">Прием 5</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-1" tabindex="0" aria-labelledby="tab-day-7-1">
-            
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Молоко</div>
-                    <div class="diary__stats-quantity">200 мл</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Яйца</div>
-                    <div class="diary__stats-quantity">3 шт</div>
-                </li>
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Сервелат</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-            
-            
-            
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-1" aria-selected="true" aria-controls="tabpanel-day-7-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-2" aria-selected="false" aria-controls="tabpanel-day-7-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-3" aria-selected="false" aria-controls="tabpanel-day-7-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-4" aria-selected="false" aria-controls="tabpanel-day-7-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-5" aria-selected="false" aria-controls="tabpanel-day-7-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-2" tabindex="0" aria-labelledby="tab-day-7-2">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Курица</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-3" tabindex="0" aria-labelledby="tab-day-7-3">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Рыба</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-4" tabindex="0" aria-labelledby="tab-day-7-4">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Кефир</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-5" tabindex="0" aria-labelledby="tab-day-7-5">
-            <ul class="diary__stats-list">
-                <li class="diary__stats-item">
-                    <div class="diary__stats-product">Амлет</div>
-                    <div class="diary__stats-quantity">200 гр</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="diary__total">
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                210
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-1" tabindex="0" aria-labelledby="tab-day-7-1">
+                
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Молоко</div>
+                        <div class="diary__stats-quantity">200 мл</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Яйца</div>
+                        <div class="diary__stats-quantity">3 шт</div>
+                    </li>
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Сервелат</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
-            <div class="diary__total-unit">
-                Калории
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-2" tabindex="0" aria-labelledby="tab-day-7-2">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Курица</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-3" tabindex="0" aria-labelledby="tab-day-7-3">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Рыба</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-4" tabindex="0" aria-labelledby="tab-day-7-4">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Кефир</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-5" tabindex="0" aria-labelledby="tab-day-7-5">
+                <ul class="diary__stats-list">
+                    <li class="diary__stats-item">
+                        <div class="diary__stats-product">Амлет</div>
+                        <div class="diary__stats-quantity">200 гр</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                7
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    210
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Белки
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    7
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
             </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                11
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    11
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
             </div>
-            <div class="diary__total-unit">
-                Жиры
-            </div>
-        </div>
-        <div class="diary__total-item">
-            <div class="diary__total-val">
-                20
-            </div>
-            <div class="diary__total-unit">
-                Углеводы
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    20
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
             </div>
         </div>
     </div>

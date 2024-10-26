@@ -164,7 +164,7 @@
 .select {
 	position: relative;
 	&::before {
-		content: "";
+		content: '';
 		transition: transform 0.3s ease 0s;
 		position: absolute;
 		top: 50%;
@@ -226,6 +226,15 @@
 		}
 		&::before {
 			right: 0.37rem;
+		}
+	}
+	&.select-md {
+		& select {
+			padding: rem(9) 1.25rem rem(9) rem(12);
+			font-size: rem(14);
+		}
+		&::before {
+			right: 0.55rem;
 		}
 	}
 	& select {

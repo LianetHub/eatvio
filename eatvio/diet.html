@@ -395,38 +395,35 @@
 </header> <main class="page">
             <section class="diet">
                 <div class="diet__container">
-                    <div class="diet__header">
-                        <button class="diet__back icon-arrow-short-left"><span>Мои планы</span></button>
-                        <h1 class="diet__title"> Добавление диеты </h1>
-                        <div class="select">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои диеты</span></a>
+                        <h1 class="settings__person-title title"> Создание диеты </h1>
+                        <div class="settings__select select select-md pc-only">
                             <select>
-                                <option value="">Копировать диету</option>
-                                <option value="">Копировать диету</option>
-                                <option value="">Копировать диету</option>
+                                <option value="">Скопировать диету</option>
+                                <option value="">Название диеты (7 дней)</option>
+                                <option value="">Название диеты (14 дней)</option>
+                                <option value="">Название диеты (21 дней)</option>
                             </select>
                         </div>
                     </div>
+                    <div class="settings__select select select-md mobile-only">
+                        <select>
+                            <option value="">Скопировать диету</option>
+                            <option value="">Название диеты (7 дней)</option>
+                            <option value="">Название диеты (14 дней)</option>
+                            <option value="">Название диеты (21 дней)</option>
+                        </select>
+                    </div>
                     <form action="#" class="diet__form">
-                        <div class="diet__form-row">
+                        <div class="diet__form-block">
                             <div class="label"> Название </div>
-                            <input type="text" name="name" class="input" placeholder="Введите название диеты">
+                            <input type="text" name="name" class="input input-white" placeholder="Введите название диеты">
                         </div>
-                        <div class="diet__form-row">
-                            <div class="diet__form-columns">
-                                <div class="diet__form-column">
-                                    <div class="label"> Изображение </div>
-                                    <label class="file">
-                                        <input type="file" name="file" class="file__input hidden" hidden="">
-                                        <span class="file__content">
-                                            <span class="file__formats">
-                                                <img src="img/formats-2.svg" alt="formats">
-                                            </span>
-                                            <span class="file__title"> Нажмите для&nbsp;выбора или&nbsp;перетащите изображание </span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="diet__form-column">
-                                    <div class="diet__form-row">
+                        <div class="diet__form-body">
+                            <div class="diet__form-main">
+                                <div class="diet__form-header">
+                                    <div class="diet__form-block">
                                         <div class="label"> Срок диеты </div>
                                         <div class="select">
                                             <select>
@@ -436,23 +433,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="diet__form-row">
-                                        <div class="diet__form-checkboxes">
-                                            <label class="checkbox-btn">
-                                                <input type="checkbox" name="meat" class="checkbox-btn__input hidden" hidden>
-                                                <span class="checkbox-btn__content">
-                                                    <img src="img/bread.svg" alt="icon bread"> Meat </span>
-                                            </label>
-                                            <label class="checkbox-btn">
-                                                <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
-                                                <span class="checkbox-btn__content">
-                                                    <img src="img/broccoli.svg" alt="icon broccoli"> Veg </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="diet__form-column">
-                                    <div class="diet__form-row">
+                                    <div class="diet__form-block">
                                         <div class="label"> Статус </div>
                                         <div class="select">
                                             <select>
@@ -461,500 +442,994 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="diet__form-row">
-                                        <div class="diet__form-checkboxes">
-                                            <label class="checkbox-btn">
-                                                <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
-                                                <span class="checkbox-btn__content">
-                                                    <img src="img/bread.svg" alt="icon bread"> Bread </span>
-                                            </label>
-                                            <label class="checkbox-btn">
-                                                <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
-                                                <span class="checkbox-btn__content">
-                                                    <img src="img/wine.svg" alt="icon broccoli"> Alko </span>
-                                            </label>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
+                                <div class="diet__form-checkboxes">
+                                    <label class="checkbox-btn">
+                                        <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
+                                        <span class="checkbox-btn__content">
+                                            <img src="img/broccoli.svg" alt="icon broccoli">
+                                            <span>Веган<span class="pc-only">ская</span></span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-btn">
+                                        <input type="checkbox" checked name="meat" class="checkbox-btn__input hidden" hidden>
+                                        <span class="checkbox-btn__content">
+                                            <img src="img/meat.svg" alt="icon meat"> Мясо </span>
+                                    </label>
+                                    <label class="checkbox-btn">
+                                        <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
+                                        <span class="checkbox-btn__content">
+                                            <img src="img/bread.svg" alt="icon bread"> Мучное </span>
+                                    </label>
+                                    <label class="checkbox-btn">
+                                        <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
+                                        <span class="checkbox-btn__content">
+                                            <img src="img/wine.svg" alt="icon broccoli"> Алкоголь </span>
+                                    </label>
+                                </div>
+                            </div> <label class="file diet__form-file">
+    <input type="file" name="file" class="file__input hidden" hidden>
+    <span class="file__content">
+        <span class="file__formats">
+            <img src="img/logo-gray.svg" alt="logo">
+        </span>
+        <span class="file__title">
+            Добавьте фото обложку
+        </span>
+    </span>
+</label>
                         </div>
-                        <div class="diet__form-row">
+                        <div class="diet__form-footer">
                             <div class="label"> Описание </div>
-                            <div class="wysiwyg">
-                                <div class="wysiwyg__caption">
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/bold.svg" alt="icon bold">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/italic.svg" alt="icon italic">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/underline.svg" alt="icon underline">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/strike.svg" alt="icon strike">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/h1.svg" alt="icon h1">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/h2.svg" alt="icon h2">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/h3.svg" alt="icon h3">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/smile.svg" alt="icon smile">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/paragraph.svg" alt="icon paragraph">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/align-center.svg" alt="icon align">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/align-left.svg" alt="icon align">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/align-right.svg" alt="icon align">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/list-num.svg" alt="icon list">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/list.svg" alt="icon list">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/image.svg" alt="icon image">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/link.svg" alt="icon link">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/file.svg" alt="icon file">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/undo.svg" alt="icon undo">
-                                    </button>
-                                    <button type="button" class="l-btn l-btn-white">
-                                        <img src="img/wysiwyg/redo.svg" alt="icon redo">
-                                    </button>
-                                </div>
-                                <textarea name="wysiwyg" placeholder="Введите описание диеты" class="textarea"></textarea>
-                            </div>
+                            <textarea name="desc" placeholder="Введите описание диеты" class="textarea textarea-white"></textarea>
                         </div>
                     </form>
                     <div class="diet__footer">
-                        <button class="diet__footer-btn icon-down"> 7 дней </button>
+                        <div class="diet__footer-btn"> План диеты (7 дней) </div>
                         <div class="diet__footer-body">
-                            <div class="diet__footer-grid"> <div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 1
+                            <div class="diet__footer-grid" data-spollers="768, max" data-one-spoller> <div class="diet__day" data-tabs>
+    <div class="diet__day-header _active" data-spoller>
+        <div class="diet__day-title">
+            День 1
         </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
+        
+        <div class="diet__day-actions">
+            <button type="button" data-tooltip="Скопировать" class="diet__day-action icon-copy"></button>
+            <button type="button" data-tooltip="Вставить" class="diet__day-action icon-paste"></button>
+        </div>
+        
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-1" aria-selected="true" aria-controls="tabpanel-day-1-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-2" aria-selected="false" aria-controls="tabpanel-day-1-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-3" aria-selected="false" aria-controls="tabpanel-day-1-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-4" aria-selected="false" aria-controls="tabpanel-day-1-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-1-5" aria-selected="false" aria-controls="tabpanel-day-1-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-1" tabindex="0" aria-labelledby="tab-day-1-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-1" aria-selected="true" aria-controls="tabpanel-day-1-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-2" aria-selected="false" aria-controls="tabpanel-day-1-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-3" aria-selected="false" aria-controls="tabpanel-day-1-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-4" aria-selected="false" aria-controls="tabpanel-day-1-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-1-5" aria-selected="false" aria-controls="tabpanel-day-1-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-2" tabindex="0" aria-labelledby="tab-day-1-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-1" tabindex="0" aria-labelledby="tab-day-1-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-2" tabindex="0" aria-labelledby="tab-day-1-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-3" tabindex="0" aria-labelledby="tab-day-1-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-4" tabindex="0" aria-labelledby="tab-day-1-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-5" tabindex="0" aria-labelledby="tab-day-1-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-3" tabindex="0" aria-labelledby="tab-day-1-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-4" tabindex="0" aria-labelledby="tab-day-1-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-1-5" tabindex="0" aria-labelledby="tab-day-1-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-    </div>
-</div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 2
-        </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
-    </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-1" aria-selected="true" aria-controls="tabpanel-day-2-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-2" aria-selected="false" aria-controls="tabpanel-day-2-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-3" aria-selected="false" aria-controls="tabpanel-day-2-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-4" aria-selected="false" aria-controls="tabpanel-day-2-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-2-5" aria-selected="false" aria-controls="tabpanel-day-2-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-1" tabindex="0" aria-labelledby="tab-day-2-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-2" tabindex="0" aria-labelledby="tab-day-2-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-3" tabindex="0" aria-labelledby="tab-day-2-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-4" tabindex="0" aria-labelledby="tab-day-2-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-5" tabindex="0" aria-labelledby="tab-day-2-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-    </div>
-</div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 3
-        </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
-    </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-1" aria-selected="true" aria-controls="tabpanel-day-3-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-2" aria-selected="false" aria-controls="tabpanel-day-3-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-3" aria-selected="false" aria-controls="tabpanel-day-3-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-4" aria-selected="false" aria-controls="tabpanel-day-3-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-3-5" aria-selected="false" aria-controls="tabpanel-day-3-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-1" tabindex="0" aria-labelledby="tab-day-3-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-2" tabindex="0" aria-labelledby="tab-day-3-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-3" tabindex="0" aria-labelledby="tab-day-3-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-4" tabindex="0" aria-labelledby="tab-day-3-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-5" tabindex="0" aria-labelledby="tab-day-3-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 4
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 2
         </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
+        
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-1" aria-selected="true" aria-controls="tabpanel-day-4-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-2" aria-selected="false" aria-controls="tabpanel-day-4-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-3" aria-selected="false" aria-controls="tabpanel-day-4-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-4" aria-selected="false" aria-controls="tabpanel-day-4-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-4-5" aria-selected="false" aria-controls="tabpanel-day-4-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-1" tabindex="0" aria-labelledby="tab-day-4-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-1" aria-selected="true" aria-controls="tabpanel-day-2-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-2" aria-selected="false" aria-controls="tabpanel-day-2-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-3" aria-selected="false" aria-controls="tabpanel-day-2-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-4" aria-selected="false" aria-controls="tabpanel-day-2-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-2-5" aria-selected="false" aria-controls="tabpanel-day-2-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-2" tabindex="0" aria-labelledby="tab-day-4-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-1" tabindex="0" aria-labelledby="tab-day-2-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-2" tabindex="0" aria-labelledby="tab-day-2-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-3" tabindex="0" aria-labelledby="tab-day-2-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-4" tabindex="0" aria-labelledby="tab-day-2-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-2-5" tabindex="0" aria-labelledby="tab-day-2-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-3" tabindex="0" aria-labelledby="tab-day-4-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-4" tabindex="0" aria-labelledby="tab-day-4-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-5" tabindex="0" aria-labelledby="tab-day-4-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-    </div>
-</div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 5
-        </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
-    </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-1" aria-selected="true" aria-controls="tabpanel-day-5-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-2" aria-selected="false" aria-controls="tabpanel-day-5-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-3" aria-selected="false" aria-controls="tabpanel-day-5-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-4" aria-selected="false" aria-controls="tabpanel-day-5-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-5-5" aria-selected="false" aria-controls="tabpanel-day-5-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-1" tabindex="0" aria-labelledby="tab-day-5-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-2" tabindex="0" aria-labelledby="tab-day-5-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-3" tabindex="0" aria-labelledby="tab-day-5-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-4" tabindex="0" aria-labelledby="tab-day-5-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-5" tabindex="0" aria-labelledby="tab-day-5-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-    </div>
-</div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 6
-        </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
-    </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-1" aria-selected="true" aria-controls="tabpanel-day-6-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-2" aria-selected="false" aria-controls="tabpanel-day-6-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-3" aria-selected="false" aria-controls="tabpanel-day-6-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-4" aria-selected="false" aria-controls="tabpanel-day-6-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-6-5" aria-selected="false" aria-controls="tabpanel-day-6-5" tabindex="-1">Перекусы</button>
-    </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-1" tabindex="0" aria-labelledby="tab-day-6-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-2" tabindex="0" aria-labelledby="tab-day-6-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-3" tabindex="0" aria-labelledby="tab-day-6-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-4" tabindex="0" aria-labelledby="tab-day-6-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-5" tabindex="0" aria-labelledby="tab-day-6-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
         </div>
     </div>
 </div><div class="diet__day" data-tabs>
-    <div class="diet__day-header">
-        <div class="diet__day-num">
-            День: 7
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 3
         </div>
-        <button class="diet__day-copy icon-copy">
-            Копировать
-        </button>
+        
     </div>
-    <div class="diary__stats-tablist" role="tablist" aria-labelledby="label">
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-1" aria-selected="true" aria-controls="tabpanel-day-7-1">Завтрак</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-2" aria-selected="false" aria-controls="tabpanel-day-7-2" tabindex="-1">Обед</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-3" aria-selected="false" aria-controls="tabpanel-day-7-3" tabindex="-1">Ужин</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-4" aria-selected="false" aria-controls="tabpanel-day-7-4" tabindex="-1">Ланч</button>
-        <button class="l-btn l-btn-sm" role="tab" type="button" id="tab-day-7-5" aria-selected="false" aria-controls="tabpanel-day-7-5" tabindex="-1">Перекусы</button>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-1" aria-selected="true" aria-controls="tabpanel-day-3-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-2" aria-selected="false" aria-controls="tabpanel-day-3-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-3" aria-selected="false" aria-controls="tabpanel-day-3-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-4" aria-selected="false" aria-controls="tabpanel-day-3-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-3-5" aria-selected="false" aria-controls="tabpanel-day-3-5" tabindex="-1">5</button>
+        </div>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-1" tabindex="0" aria-labelledby="tab-day-3-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-2" tabindex="0" aria-labelledby="tab-day-3-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-3" tabindex="0" aria-labelledby="tab-day-3-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-4" tabindex="0" aria-labelledby="tab-day-3-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-3-5" tabindex="0" aria-labelledby="tab-day-3-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+        </div>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="diary__stats-body">
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-1" tabindex="0" aria-labelledby="tab-day-7-1">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+</div><div class="diet__day" data-tabs>
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 4
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-2" tabindex="0" aria-labelledby="tab-day-7-2">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        
+    </div>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-1" aria-selected="true" aria-controls="tabpanel-day-4-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-2" aria-selected="false" aria-controls="tabpanel-day-4-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-3" aria-selected="false" aria-controls="tabpanel-day-4-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-4" aria-selected="false" aria-controls="tabpanel-day-4-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-4-5" aria-selected="false" aria-controls="tabpanel-day-4-5" tabindex="-1">5</button>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-3" tabindex="0" aria-labelledby="tab-day-7-3">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-1" tabindex="0" aria-labelledby="tab-day-4-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-2" tabindex="0" aria-labelledby="tab-day-4-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-3" tabindex="0" aria-labelledby="tab-day-4-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-4" tabindex="0" aria-labelledby="tab-day-4-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-4-5" tabindex="0" aria-labelledby="tab-day-4-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-4" tabindex="0" aria-labelledby="tab-day-7-4">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
         </div>
-        <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-5" tabindex="0" aria-labelledby="tab-day-7-5">
-            <form action="#" class="diet__day-form">
-                <input type="text" class="input" name="name" placeholder="Введите название продукта">
-                <input type="text" class="input" name="ccal" placeholder="Порция">
-                <button type="button" class="icon-gear"></button>
-                <button class="l-btn l-btn-primary icon-plus"></button>
-            </form>
+    </div>
+</div><div class="diet__day" data-tabs>
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 5
+        </div>
+        
+    </div>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-1" aria-selected="true" aria-controls="tabpanel-day-5-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-2" aria-selected="false" aria-controls="tabpanel-day-5-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-3" aria-selected="false" aria-controls="tabpanel-day-5-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-4" aria-selected="false" aria-controls="tabpanel-day-5-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-5-5" aria-selected="false" aria-controls="tabpanel-day-5-5" tabindex="-1">5</button>
+        </div>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-1" tabindex="0" aria-labelledby="tab-day-5-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-2" tabindex="0" aria-labelledby="tab-day-5-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-3" tabindex="0" aria-labelledby="tab-day-5-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-4" tabindex="0" aria-labelledby="tab-day-5-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-5-5" tabindex="0" aria-labelledby="tab-day-5-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+        </div>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="diet__day" data-tabs>
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 6
+        </div>
+        
+    </div>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-1" aria-selected="true" aria-controls="tabpanel-day-6-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-2" aria-selected="false" aria-controls="tabpanel-day-6-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-3" aria-selected="false" aria-controls="tabpanel-day-6-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-4" aria-selected="false" aria-controls="tabpanel-day-6-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-6-5" aria-selected="false" aria-controls="tabpanel-day-6-5" tabindex="-1">5</button>
+        </div>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-1" tabindex="0" aria-labelledby="tab-day-6-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-2" tabindex="0" aria-labelledby="tab-day-6-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-3" tabindex="0" aria-labelledby="tab-day-6-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-4" tabindex="0" aria-labelledby="tab-day-6-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-6-5" tabindex="0" aria-labelledby="tab-day-6-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+        </div>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="diet__day" data-tabs>
+    <div class="diet__day-header " data-spoller>
+        <div class="diet__day-title">
+            День 7
+        </div>
+        
+    </div>
+    <div class="diet__day-content">
+        <div class="diet__day-caption">Приём пищи</div>
+        <div class="diet__day-tabs" role="tablist" aria-labelledby="label">
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-1" aria-selected="true" aria-controls="tabpanel-day-7-1">1</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-2" aria-selected="false" aria-controls="tabpanel-day-7-2" tabindex="-1">2</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-3" aria-selected="false" aria-controls="tabpanel-day-7-3" tabindex="-1">3</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-4" aria-selected="false" aria-controls="tabpanel-day-7-4" tabindex="-1">4</button>
+            <button class="diet__day-tab" role="tab" type="button" id="tab-day-7-5" aria-selected="false" aria-controls="tabpanel-day-7-5" tabindex="-1">5</button>
+        </div>
+        <div class="diary__stats-body">
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-1" tabindex="0" aria-labelledby="tab-day-7-1">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-2" tabindex="0" aria-labelledby="tab-day-7-2">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-3" tabindex="0" aria-labelledby="tab-day-7-3">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-4" tabindex="0" aria-labelledby="tab-day-7-4">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="tabpanel-day-7-5" tabindex="0" aria-labelledby="tab-day-7-5">
+                <form action="#" class="diet__day-form">
+                    <div class="diet__day-row">
+                        <input type="text" class="input input-white" name="name" placeholder="Блюдо\продукт">
+                        <input type="number" class="input input-white" name="ccal" placeholder="Порция">
+                        <div class="select">
+                            <select name="unit">
+                                <option value="гр.">гр.</option>
+                                <option value="мл.">мл.</option>
+                                <option value="шт.">шт.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                </form>
+            </div>
+        </div>
+        <div class="diary__total">
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Калории
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Белки
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Жиры
+                </div>
+            </div>
+            <div class="diary__total-item">
+                <div class="diary__total-val">
+                    0
+                </div>
+                <div class="diary__total-unit">
+                    Углеводы
+                </div>
+            </div>
         </div>
     </div>
 </div> </div>
                         </div>
+                    </div>
+                    <div class=" diet__btns">
+                        <button type="button" class="diet__btn l-btn l-btn-black">В черновик</button>
+                        <button type="button" class="diet__btn l-btn l-btn-black">Превью</button>
+                        <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
                     </div>
                 </div>
             </section>

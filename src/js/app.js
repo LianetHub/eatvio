@@ -108,6 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+        if (e.target.classList.contains('diet__favorite')) {
+            e.target.classList.toggle('active')
+        }
+
+        if (e.target.classList.contains('diet__save')) {
+            e.target.classList.toggle('active')
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {
@@ -280,6 +288,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // создание приёма пиши - страница diet.html
+    document.querySelectorAll('.diet__day-form')?.forEach(form => {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = form.elements.name.value.trim();
+            const portion = form.elements.ccal.value.trim();
+            const unit = form.elements.unit.value;
+
+
+            if (name && portion) {
+
+                const newRow = document.createElement('div');
+                newRow.classList.add('diet__day-row');
+
+                newRow.innerHTML = `
+                    <span>${name}</span>
+                    <span>${portion} ${unit}</span>
+                    <button type="button" class="remove-row icon-delete"></button>
+                `;
+
+                form.insertBefore(newRow, form.firstChild);
+
+
+                form.elements.name.value = '';
+                form.elements.ccal.value = '';
+
+                newRow.querySelector('.remove-row').addEventListener('click', function () {
+                    newRow.remove();
+                });
+            } else {
+                alert("Заполните все поля!");
+            }
+        });
+    });
 
 
 

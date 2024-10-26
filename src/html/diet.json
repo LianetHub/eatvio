@@ -1,23 +1,30 @@
 [
     {
-        "day": 1
+        "day": 1,
+        "hasBtns": true
     },
     {
-        "day": 2
+        "day": 2,
+        "hasBtns": false
     },
     {
-        "day": 3
+        "day": 3,
+        "hasBtns": false
     },
     {
-        "day": 4
+        "day": 4,
+        "hasBtns": false
     },
     {
-        "day": 5
+        "day": 5,
+        "hasBtns": false
     },
     {
-        "day": 6
+        "day": 6,
+        "hasBtns": false
     },
     {
-        "day": 7
+        "day": 7,
+        "hasBtns": false
     }
 ]

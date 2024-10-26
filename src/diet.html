@@ -9,46 +9,39 @@
             <main class="page">
                 <section class="diet">
                     <div class="diet__container">
-                        <div class="diet__header">
-                            <button class="diet__back icon-arrow-short-left"><span>Мои планы</span></button>
-                            <h1 class="diet__title">
-                                Добавление диеты
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои диеты</span></a>
+                            <h1 class="settings__person-title title">
+                                Создание диеты
                             </h1>
-                            <div class="select">
+                            <div class="settings__select select select-md pc-only">
                                 <select>
-                                    <option value="">Копировать диету</option>
-                                    <option value="">Копировать диету</option>
-                                    <option value="">Копировать диету</option>
+                                    <option value="">Скопировать диету</option>
+                                    <option value="">Название диеты (7 дней)</option>
+                                    <option value="">Название диеты (14 дней)</option>
+                                    <option value="">Название диеты (21 дней)</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="settings__select select select-md mobile-only">
+                            <select>
+                                <option value="">Скопировать диету</option>
+                                <option value="">Название диеты (7 дней)</option>
+                                <option value="">Название диеты (14 дней)</option>
+                                <option value="">Название диеты (21 дней)</option>
+                            </select>
+                        </div>
                         <form action="#" class="diet__form">
-                            <div class="diet__form-row">
+                            <div class="diet__form-block">
                                 <div class="label">
                                     Название
                                 </div>
-                                <input type="text" name="name" class="input" placeholder="Введите название диеты">
+                                <input type="text" name="name" class="input input-white" placeholder="Введите название диеты">
                             </div>
-                            <div class="diet__form-row">
-                                <div class="diet__form-columns">
-                                    <div class="diet__form-column">
-                                        <div class="label">
-                                            Изображение
-                                        </div>
-                                        <label class="file">
-                                            <input type="file" name="file" class="file__input hidden" hidden="">
-                                            <span class="file__content">
-                                                <span class="file__formats">
-                                                    <img src="img/formats-2.svg" alt="formats">
-                                                </span>
-                                                <span class="file__title">
-                                                    Нажмите для&nbsp;выбора или&nbsp;перетащите изображание
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="diet__form-column">
-                                        <div class="diet__form-row">
+                            <div class="diet__form-body">
+                                <div class="diet__form-main">
+                                    <div class="diet__form-header">
+                                        <div class="diet__form-block">
                                             <div class="label">
                                                 Срок диеты
                                             </div>
@@ -60,27 +53,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="diet__form-row">
-                                            <div class="diet__form-checkboxes">
-                                                <label class="checkbox-btn">
-                                                    <input type="checkbox" name="meat" class="checkbox-btn__input hidden" hidden>
-                                                    <span class="checkbox-btn__content">
-                                                        <img src="@img/bread.svg" alt="icon bread">
-                                                        Meat
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox-btn">
-                                                    <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
-                                                    <span class="checkbox-btn__content">
-                                                        <img src="@img/broccoli.svg" alt="icon broccoli">
-                                                        Veg
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="diet__form-column">
-                                        <div class="diet__form-row">
+                                        <div class="diet__form-block">
                                             <div class="label">
                                                 Статус
                                             </div>
@@ -91,104 +64,64 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="diet__form-row">
-                                            <div class="diet__form-checkboxes">
-                                                <label class="checkbox-btn">
-                                                    <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
-                                                    <span class="checkbox-btn__content">
-                                                        <img src="@img/bread.svg" alt="icon bread">
-                                                        Bread
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox-btn">
-                                                    <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
-                                                    <span class="checkbox-btn__content">
-                                                        <img src="@img/wine.svg" alt="icon broccoli">
-                                                        Alko
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
+                                    </div>
+                                    <div class="diet__form-checkboxes">
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="@img/broccoli.svg" alt="icon broccoli">
+                                                <span>Веган<span class="pc-only">ская</span></span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked name="meat" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="@img/meat.svg" alt="icon meat">
+                                                Мясо
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="@img/bread.svg" alt="icon bread">
+                                                Мучное
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="@img/wine.svg" alt="icon broccoli">
+                                                Алкоголь
+                                            </span>
+                                        </label>
                                     </div>
                                 </div>
+                                @@include('./html/_file-upload.html', {
+                                "className": "diet__form-file",
+                                "title": "Добавьте фото обложку"
+                                })
                             </div>
-                            <div class="diet__form-row">
+                            <div class="diet__form-footer">
                                 <div class="label">
                                     Описание
                                 </div>
-                                <div class="wysiwyg">
-                                    <div class="wysiwyg__caption">
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/bold.svg" alt="icon bold">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/italic.svg" alt="icon italic">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/underline.svg" alt="icon underline">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/strike.svg" alt="icon strike">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/h1.svg" alt="icon h1">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/h2.svg" alt="icon h2">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/h3.svg" alt="icon h3">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/smile.svg" alt="icon smile">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/paragraph.svg" alt="icon paragraph">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/align-center.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/align-left.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/align-right.svg" alt="icon align">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/list-num.svg" alt="icon list">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/list.svg" alt="icon list">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/image.svg" alt="icon image">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/link.svg" alt="icon link">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/file.svg" alt="icon file">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/undo.svg" alt="icon undo">
-                                        </button>
-                                        <button type="button" class="l-btn l-btn-white">
-                                            <img src="@img/wysiwyg/redo.svg" alt="icon redo">
-                                        </button>
-                                    </div>
-                                    <textarea name="wysiwyg" placeholder="Введите описание диеты" class="textarea"></textarea>
-                                </div>
+                                <textarea name="desc" placeholder="Введите описание диеты" class="textarea textarea-white"></textarea>
                             </div>
                         </form>
                         <div class="diet__footer">
-                            <button class="diet__footer-btn icon-down">
-                                7 дней
-                            </button>
+                            <div class="diet__footer-btn">
+                                План диеты (7 дней)
+                            </div>
                             <div class="diet__footer-body">
-                                <div class="diet__footer-grid">
+                                <div class="diet__footer-grid" data-spollers="768, max" data-one-spoller>
                                     @@loop('./html/_diet-day.html', './html/diet.json')
                                 </div>
                             </div>
+                        </div>
+                        <div class=" diet__btns">
+                            <button type="button" class="diet__btn l-btn l-btn-black">В черновик</button>
+                            <button type="button" class="diet__btn l-btn l-btn-black">Превью</button>
+                            <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
                         </div>
                     </div>
                 </section>
