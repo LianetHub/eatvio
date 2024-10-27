@@ -1,25 +1,25 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 // ======================================ШРИФТЫ===============================================
 
 // &display=swap&subset=cyrillic-ext
-@import "fonts";
+@import 'fonts';
 
 // ======================================ШРИФТЫ===============================================
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
-@import "icons";
+@import 'icons';
 
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Mulish";
-$font-open-sans: "OpenSans";
+$fontfamily: 'Mulish';
+$font-open-sans: 'OpenSans';
 
 // Шрифт по умолчанию
 
@@ -76,7 +76,7 @@ body {
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	padding: 0 em(16);
 	box-sizing: content-box;
@@ -90,12 +90,12 @@ body {
 
 //=================Подключаем файлы стилей
 //================Общий файл для элементов страницы
-@import "ui";
-@import "common";
-@import "forms";
+@import 'ui';
+@import 'common';
+@import 'forms';
 //================Общий файл для элементов страницы
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
 //=======================================
 
 // =======================ОСНОВНОЙ БЛОК==================
@@ -380,7 +380,7 @@ body {
 		font-size: 40px;
 		font-weight: 600;
 		&::after {
-			content: "₽";
+			content: '₽';
 			font-size: 30px;
 			color: #79828f;
 		}
@@ -542,7 +542,7 @@ body {
 			grid-template-columns: repeat(3, 1fr);
 			position: relative;
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 				inset: 12px 16px;
 				border: 1px solid #e6e6e6;
@@ -609,7 +609,7 @@ body {
 			}
 		}
 		&.active,
-		&[aria-selected="true"] {
+		&[aria-selected='true'] {
 			background: #2f80ed;
 			color: #fff;
 		}
@@ -617,6 +617,37 @@ body {
 	// .content__announcements
 	&__announcements {
 		margin: em(32) em(0) em(0) em(0);
+	}
+	// .content__add
+	&__add {
+		border-radius: 0.5rem;
+		background: #fff;
+		box-shadow: 0px 2px 2px 0px rgba(50, 63, 75, 0.05);
+		padding: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	// .content__add-btn
+	&__add-btn {
+		background: #f0f2f5;
+		color: #2f80ed;
+		font-weight: 600;
+		padding-block: 0.4rem;
+		@media (any-hover: hover) {
+			&:hover {
+				background: darken($color: #f0f2f5, $amount: 10);
+			}
+		}
+		&::before {
+			width: rem(18);
+			height: rem(18);
+			font-size: 0.5rem;
+			font-weight: 700;
+			border: rem(1) solid currentColor;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	// .content__announcement
 	&__announcement {
@@ -2172,7 +2203,7 @@ body {
 		}
 		&:not(.no-cover) {
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 				bottom: 0;
 				left: 0;
@@ -2543,8 +2574,8 @@ body {
 	}
 }
 
-@import "pages/diary.scss";
-@import "pages/person.scss";
+@import 'pages/diary.scss';
+@import 'pages/person.scss';
 
 .tablist {
 	display: flex;
@@ -2560,7 +2591,7 @@ body {
 	color: #0d6efd;
 	font-weight: 400;
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -2570,13 +2601,13 @@ body {
 		background: #019a3e;
 		transition: width 0.3s ease 0s;
 	}
-	&[aria-selected="true"] {
+	&[aria-selected='true'] {
 		color: #495057;
 		&::before {
 			width: 100%;
 		}
 	}
-	&[aria-selected="false"] {
+	&[aria-selected='false'] {
 		&::before {
 			width: 0;
 		}
@@ -2605,7 +2636,7 @@ body {
 		&::before {
 			display: none;
 		}
-		&[aria-selected="true"] {
+		&[aria-selected='true'] {
 			background: #2f80ed;
 			color: #fff;
 		}
@@ -2625,7 +2656,7 @@ body {
 	color: #0d6efd;
 	font-weight: 400;
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -2635,13 +2666,13 @@ body {
 		background: #019a3e;
 		transition: width 0.3s ease 0s;
 	}
-	&[aria-selected="true"] {
+	&[aria-selected='true'] {
 		color: #495057;
 		&::before {
 			width: 100%;
 		}
 	}
-	&[aria-selected="false"] {
+	&[aria-selected='false'] {
 		&::before {
 			width: 0;
 		}
@@ -2670,7 +2701,7 @@ body {
 		&::before {
 			display: none;
 		}
-		&[aria-selected="true"] {
+		&[aria-selected='true'] {
 			background: #2f80ed;
 			color: #fff;
 		}
@@ -2984,7 +3015,7 @@ body {
 			border-radius: rem(8) rem(8) 0 0;
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -3133,7 +3164,7 @@ body {
 			font-size: 0.875rem;
 			font-weight: 700;
 			&::before {
-				content: "";
+				content: '';
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -3219,13 +3250,14 @@ body {
 	}
 }
 
-@import "./pages/login.scss";
-@import "./pages/chat.scss";
-@import "./pages/consults.scss";
-@import "./pages/diet.scss";
-@import "./pages/archive.scss";
-@import "./pages/arm.scss";
-@import "./pages/subscribers.scss";
-@import "./pages/comment.scss";
-@import "./pages/search-page";
-@import "./pages/rating";
+@import './pages/login.scss';
+@import './pages/chat.scss';
+@import './pages/consults.scss';
+@import './pages/diet.scss';
+@import './pages/archive.scss';
+@import './pages/arm.scss';
+@import './pages/subscribers.scss';
+@import './pages/comment.scss';
+@import './pages/search-page';
+@import './pages/rating';
+@import './pages/stats';

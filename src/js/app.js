@@ -156,6 +156,45 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    if (document.querySelector('.person__side-checklist')) {
+
+        new Swiper('.person__side-checklist', {
+            speed: 800,
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            grabCursor: true
+        });
+
+
+    }
+
+    if (document.querySelector('.person__certs')) {
+
+        const thumbSlider = new Swiper('.person__certs-thumbs-slider', {
+            slidesPerView: 4,
+            spaceBetween: 12,
+            direction: "vertical",
+            navigation: {
+                nextEl: '.person__certs-next',
+                prevEl: '.person__certs-prev',
+            },
+        })
+
+        const mainSlider = new Swiper('.person__certs-main', {
+            speed: 800,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.person__certs-next',
+                prevEl: '.person__certs-prev',
+            },
+            thumbs: {
+                swiper: thumbSlider
+            }
+        });
+
+
+    }
+
     if (document.querySelectorAll('.diary__tooltip').length > 0) {
 
         document.querySelectorAll('.diary__tooltip').forEach(slider => {

@@ -135,7 +135,7 @@
 		@media (min-width: $md2) {
 			padding: 0 em(14, 14);
 			&::after {
-				content: "";
+				content: '';
 				position: absolute;
 				top: calc(100% + rem(7));
 				left: 0;
@@ -380,6 +380,26 @@
 	&__box {
 		flex: 1 1 auto;
 		position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 1rem;
+			color: #7b8794;
+		}
+	}
+	&__filter {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 1rem;
+		color: #7b8794;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #2f80ed;
+			}
+		}
 	}
 	// .search__btn
 	&__btn {

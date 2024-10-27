@@ -1,0 +1,33 @@
+.statistics {
+	padding: rem(40) 0;
+	// .statistics__container
+	&__container {
+		display: flex;
+		gap: rem(12);
+	}
+	// .statistics__content
+	&__content {
+		flex: 1 1 auto;
+		.content__filters {
+			margin: 0;
+		}
+		.content__filter {
+			flex: 0 0 50%;
+		}
+	}
+	// .statistics__thumb
+	&__thumb {
+		flex: 0 0 rem(88);
+	}
+}
+.content {
+	// .content__filters
+	&__filters {
+	}
+	// .content__filter
+	&__filter {
+	}
+	// .content__header-search
+	&__header-search {
+	}
+}
