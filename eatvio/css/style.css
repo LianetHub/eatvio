@@ -1126,15 +1126,12 @@ body.dark-theme {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  max-width: 25.375rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .popup__selecting-btn {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 12.1875rem;
+          flex: 0 1 12.1875rem;
 }
 
 .popup__subtitle {
@@ -11614,12 +11611,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .plans__item-user {
   margin-top: 1rem;
   color: #323f4b;
-  font-size: 0.875rem;
-  padding: 0.38rem 1.25rem;
+  font-size: 1rem;
+  padding: 0.94rem 2.78rem;
   font-weight: 600;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   display: inline-block;
-  border: 1px solid #2f80ed;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
@@ -12997,10 +12993,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__time {
-  font-size: 0.75rem;
   font-weight: 500;
   line-height: 120%;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.01875rem;
+  font-size: 0.625rem;
 }
 
 .chat__actions {
@@ -13163,9 +13160,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-column-gap: 0.3125rem;
      -moz-column-gap: 0.3125rem;
           column-gap: 0.3125rem;
@@ -20403,7 +20400,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .chat__time {
     color: #7b8794;
-    font-size: 0.875rem;
     margin-left: 0.25rem;
     font-weight: normal;
     letter-spacing: normal;

@@ -472,7 +472,7 @@
                             <div class="chat__content">
                                 <div class="chat__caption pc-only">
                                     <div class="chat__steps">
-                                        <div class="chat__steps-item complete">Выбрана дата старта</div>
+                                        <div class="chat__steps-item">Выбрана дата старта</div>
                                         <div class="chat__steps-item">Заказ оплачен</div>
                                         <div class="chat__steps-item">Заказ в работе</div>
                                         <div class="chat__steps-item">Завершен</div>
@@ -488,11 +488,13 @@
                                     </div>
                                     <div class="chat__message">
                                         <div class="chat__heading">
-                                            <a href="" class="chat__name"> Дмитрий </a>
+                                            <div class="chat__heading-column">
+                                                <a href="" class="chat__name"> Дмитрий </a>
+                                                <p class="chat__message-badge">Пользователь заказал план</p>
+                                            </div>
                                             <div class="chat__time"> 13:47</div>
                                         </div>
                                         <div class="chat__message-body">
-                                            <p class="chat__message-badge">Вы заказали план</p>
                                             <div class="plans__item">
                                                 <div class="plans__item-image">
                                                     <img src="img/posts/05.png" class="cover-image" alt="post">
@@ -506,6 +508,7 @@
                                                 <div class="plans__item-body">
                                                     <div class="plans__item-header">
                                                         <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                                        <button class="plans__item-delete">Отказаться от заказа</button>
                                                     </div>
                                                     <div class="plans__item-option"> Опция: Самое то </div>
                                                     <ul class="plans__item-list">
@@ -514,11 +517,12 @@
                                                         <li>Консультации</li>
                                                         <li>Общие рекомендации</li>
                                                     </ul>
-                                                    <p class="plans__item-text"> his course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me. This course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me. This course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me. </p>
+                                                    <a href="" class="plans__item-user l-btn l-btn-primary">Анкета пользователя</a>
                                                 </div>
                                             </div>
                                             <div class="chat__banner">
-                                                <div class="chat__banner-caption">Консультант выбрал дату старта плана — <strong>25.03</strong> </div>
+                                                <div class="chat__banner-caption">Выберите дату старта плана питания</div>
+                                                <a href="#date-select" data-modal class="chat__banner-link">Выбрать дату</a>
                                             </div>
                                         </div>
                                     </div>
@@ -658,7 +662,92 @@
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="date-select" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body ofsset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-lg">
+                Название плана
+            </div>
+            <div class="popup__subtitle">
+                Выбор даты старта плана
+            </div>
+            <div class="popup__selecting">
+                <div class="label">
+                    Март
+                </div>
+                <div class="popup__checkboxes">
+                    <label class="checkbox-btn">
+                        <input type="radio" checked name="day-start" value="22" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            22
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="23" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            23
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="24" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            24
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="25" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            25
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="26" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            26
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="27" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            27
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="28" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            28
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__selecting-btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
