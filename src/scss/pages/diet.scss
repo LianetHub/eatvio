@@ -57,7 +57,10 @@
 	}
 	// .diet__form
 	&__form {
-		margin: em(24) em(0) em(0) em(0);
+		margin: em(12) em(0) em(0) em(0);
+		@media (min-width: $md4) {
+			margin: em(24) em(0) em(0) em(0);
+		}
 		background: #fff;
 		padding: em(16);
 		border-radius: rem(8);
@@ -639,9 +642,22 @@
 			padding: 0;
 		}
 	}
+	// .diet__person-hint
+	&__person-hint {
+		color: #6d6f71;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
 	// .diet__rate
 	&__rate {
-		margin-top: rem(3);
+		margin-top: 0.5rem;
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		gap: 0.81rem;
+	}
+	// .diet__rate-value
+	&__rate-value {
 		color: #2f80ed;
 		font-size: rem(14);
 		font-weight: 600;

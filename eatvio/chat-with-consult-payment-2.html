@@ -392,161 +392,261 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="content">
-                <div class="content__container">
-                    <div class="content__body">
-                        <aside class="content__side content__side-sm">
-                            <nav class="content__menu">
-                                <ul class="content__menu-list">
-                                    <li class="content__menu-item">
-                                        <a href="" class="content__menu-link icon-mouthpiece">Компании</a>
-                                    </li>
-                                    <li class="content__menu-item">
-                                        <a href="" class="content__menu-link icon-stats active">Статистика</a>
-                                    </li>
-                                    <li class="content__menu-item">
-                                        <a href="" class="content__menu-link icon-wallet">Бюджет</a>
-                                    </li>
-                                    <li class="content__menu-separator"></li>
-                                    <li class="content__menu-item">
-                                        <a href="" class="content__menu-link icon-gear">Настройки</a>
-                                    </li>
-                                    <li class="content__menu-item">
-                                        <a href="" class="content__menu-link icon-logout">Выход</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </aside>
-                        <div class="content__main">
-                            <div class="content__block">
-                                <div class="content__title title"> Сквозная аналитика </div>
-                                <div class="content__header content__header-offset">
-                                    <div class="content__date">
-                                        <input type="date" name="start-date" class="input input-white" value="2023-05-03">
-                                        <span class="content__date-separator"> – </span>
-                                        <input type="date" name="end-date" class="input input-white" value="2023-05-21">
+</header> <main class="page left-mobile-gap">
+            <section class="chat">
+                <div class="chat__container active">
+                    <div class="chat__contacts">
+                        <form action="#" class="chat__contacts-search search">
+                            <button class="search__btn icon-search"></button>
+                            <input type="text" name="search" class="search__input" placeholder="Поиск">
+                        </form>
+                        <ul class="chat__contacts-list">
+                            <li class="chat__contacts-item active">
+                                <div class="chat__contacts-thumb">
+                                    <img src="img/user-2.png" alt="thumbs">
+                                </div>
+                                <div class="chat__contacts-info">
+                                    <div class="chat__contacts-name"> Иван Долгунов </div>
+                                    <div class="chat__contacts-text"> image.jpeg </div>
+                                </div>
+                                <div class="chat__contacts-side">
+                                    <div class="chat__contacts-date"> Пт </div>
+                                </div>
+                            </li>
+                            <li class="chat__contacts-item delivered">
+                                <div class="chat__contacts-thumb">
+                                    <img src="img/user-2.png" alt="thumbs">
+                                </div>
+                                <div class="chat__contacts-info">
+                                    <div class="chat__contacts-name"> Ксения Обрамова </div>
+                                    <div class="chat__contacts-text"> Привет, хорошая статья </div>
+                                    <div class="chat__contacts-text chat-file"> GIF </div>
+                                </div>
+                                <div class="chat__contacts-side">
+                                    <div class="chat__contacts-date"> 9/29 </div>
+                                    <ul class="chat__contacts-progress">
+                                        <li>Проходит план</li>
+                                        <li>4 из 14 дней</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="chat__contacts-item read">
+                                <div class="chat__contacts-thumb">
+                                    <img src="img/user-2.png" alt="thumbs">
+                                </div>
+                                <div class="chat__contacts-info">
+                                    <div class="chat__contacts-name"> Данил Иванов </div>
+                                    <div class="chat__contacts-text"> Посоветуй пожалуйста рецепт вкусного завтрака. </div>
+                                </div>
+                                <div class="chat__contacts-side">
+                                    <div class="chat__contacts-date"> 9/29 </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat__body">
+                        <div class="chat__block active">
+                            <div class="chat__header">
+                                <button type="button" class="chat__back icon-down"></button>
+                                <div class="chat__person">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="user">
                                     </div>
-                                    <form action="#" class="content__search search">
-                                        <button class="search__btn icon-search"></button>
-                                        <input type="text" name="search" class="search__input" placeholder="Поиск">
-                                    </form>
+                                    <div class="chat__info">
+                                        <div class="chat__name"> Иван Долгунов </div>
+                                        <div class="chat__time"> был в сети 37 минут назад </div>
+                                    </div>
                                 </div>
-                                <div class="content__chart-filters">
-                                    <label class="content__chart-filter checkbox">
-                                        <input type="checkbox" name="clicks" checked class="checkbox__input hidden" hidden="">
-                                        <span class="checkbox__content">
-                                            <span class="checkbox__column"> Клики <br>
-                                                <small>167 <span class="green">+27</span></small>
-                                            </span>
-                                        </span>
-                                    </label>
-                                    <label class="content__chart-filter checkbox checkbox-orange">
-                                        <input type="checkbox" checked name="views" checked class="checkbox__input hidden" hidden="">
-                                        <span class="checkbox__content">
-                                            <span class="checkbox__column"> Показы <br>
-                                                <small>2045 <span class="green">+1024</span></small>
-                                            </span>
-                                        </span>
-                                    </label>
-                                    <label class="content__chart-filter checkbox checkbox-purple">
-                                        <input type="checkbox" checked name="expenses" checked class="checkbox__input hidden" hidden="">
-                                        <span class="checkbox__content">
-                                            <span class="checkbox__column"> Расходы <br>
-                                                <small>1087₽ <span class="red">-2045₽</span></small>
-                                            </span>
-                                        </span>
-                                    </label>
-                                    <label class="content__chart-filter checkbox checkbox-green">
-                                        <input type="checkbox" checked name="conversion" checked class="checkbox__input hidden" hidden="">
-                                        <span class="checkbox__content">
-                                            <span class="checkbox__column"> Конверсия <br>
-                                                <small>10 <span class="green">+3</span></small>
-                                            </span>
-                                        </span>
-                                    </label>
+                                <div class="chat__actions">
+                                    <button type="button" class="chat__actions-btn icon-dotts"></button>
+                                    <ul class="chat__actions-list">
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-muted">Отключить звук</button>
+                                        </li>
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-trash">Удалить чат</button>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="content__chart">
-                                    <img src="img/chart.svg" alt="chart">
+                            </div>
+                            <div class="chat__content">
+                                <div class="chat__caption pc-only">
+                                    <div class="chat__steps">
+                                        <div class="chat__steps-item complete">Выбрана дата старта</div>
+                                        <div class="chat__steps-item complete">Заказ оплачен</div>
+                                        <div class="chat__steps-item">Заказ в работе</div>
+                                        <div class="chat__steps-item">Завершен</div>
+                                    </div>
+                                    <a href="" class="chat__more">
+                                        <span class="icon-down"></span>
+                                    </a>
                                 </div>
-                                <div class="cabinet__table">
-                                    <table class="cabinet__table-body">
-                                        <tr>
-                                            <td class="cabinet__table-wrapper">
-                                                <table class="cabinet__table-content fixed-columns">
-                                                    <tr>
-                                                        <th class="fixed-column">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="select" value="all" class="checkbox__input hidden" hidden>
-                                                                <span class="checkbox__content"></span>
-                                                            </label>
-                                                        </th>
-                                                        <th class="fixed-column"> Название компании </th>
-                                                        <th>
-                                                            <div class="cabinet__table-cell"> Показы <span class="info-block" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">i</span>
-                                                            </div>
-                                                        </th>
-                                                        <th>
-                                                            <div class="cabinet__table-cell"> Клики <span class="info-block" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">i</span>
-                                                            </div>
-                                                        </th>
-                                                        <th>
-                                                            <div class="cabinet__table-cell"> Расход, ₽ </div>
-                                                        </th>
-                                                        <th>
-                                                            <div class="cabinet__table-cell"> CPC, ₽ <span class="info-block" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">i</span>
-                                                            </div>
-                                                        </th>
-                                                        <th>
-                                                            <div class="cabinet__table-cell"> CTR, % <span class="info-block" data-tooltip="Кликабельность. Отношение числа кликов на объявление к числу его показов.">i</span>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fixed-column"></td>
-                                                        <td class="fixed-column">Итого</td>
-                                                        <td>5478</td>
-                                                        <td>123</td>
-                                                        <td>578,86</td>
-                                                        <td>43,55</td>
-                                                        <td>11,11</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fixed-column">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="select-1" value="1" class="checkbox__input hidden" hidden>
-                                                                <span class="checkbox__content"></span>
-                                                            </label>
-                                                        </td>
-                                                        <td class="fixed-column"> Тестовая компания <small> № 123456789 </small>
-                                                        </td>
-                                                        <td>3012</td>
-                                                        <td>64</td>
-                                                        <td>341,44</td>
-                                                        <td>50,07</td>
-                                                        <td>14</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fixed-column">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="select-1" value="1" class="checkbox__input hidden" hidden>
-                                                                <span class="checkbox__content"></span>
-                                                            </label>
-                                                        </td>
-                                                        <td class="fixed-column"> Название компании в&nbsp;две сроки <small> № 987654321 </small>
-                                                        </td>
-                                                        <td>2466</td>
-                                                        <td>59</td>
-                                                        <td>237,42</td>
-                                                        <td>38,88</td>
-                                                        <td>8,78</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <div class="chat__date"> 21 марта 2024 </div>
+                                <div class="chat__item">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="thumb">
+                                    </div>
+                                    <div class="chat__message">
+                                        <div class="chat__heading">
+                                            <a href="" class="chat__name"> Дмитрий </a>
+                                            <div class="chat__time"> 13:47</div>
+                                        </div>
+                                        <div class="chat__message-body">
+                                            <p class="chat__message-badge">Пользователь заказал план</p>
+                                            <div class="plans__item">
+                                                <div class="plans__item-image">
+                                                    <img src="img/posts/05.png" class="cover-image" alt="post">
+                                                    <div class="plans__item-info">
+                                                        <div class="plans__item-stats">
+                                                            <div class="plans__item-stat"> 14 Дней </div>
+                                                            <div class="plans__item-stat"> от 2500₽ </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="plans__item-body">
+                                                    <div class="plans__item-header">
+                                                        <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                                        <button class="plans__item-delete">Отказаться от заказа</button>
+                                                    </div>
+                                                    <div class="plans__item-option"> Опция: Самое то </div>
+                                                    <ul class="plans__item-list">
+                                                        <li>14 дневный план</li>
+                                                        <li>Ежедневное наблюдение за рационом</li>
+                                                        <li>Консультации</li>
+                                                        <li>Общие рекомендации</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="chat__banner">
+                                                <div class="chat__banner-caption">Консультация оплачена, ожидаем вашего подтверждения</div>
+                                                <a href="" class="chat__banner-link">Подтвердить</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="" download class="cabinet__save icon-download">Скачать отчёт</a>
+                            </div>
+                            <div class="chat__footer">
+                                <label class="chat__file">
+                                    <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                    <span class="chat__file-btn icon-clip"></span>
+                                </label>
+                                <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                <button type="button" class="chat__voice icon-voice"></button>
+                            </div>
+                        </div>
+                        <div class="chat__block">
+                            <div class="chat__header">
+                                <button type="button" class="chat__back icon-down"></button>
+                                <div class="chat__person">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="user">
+                                    </div>
+                                    <div class="chat__info">
+                                        <div class="chat__name"> Ксения Обрамова </div>
+                                        <div class="chat__time"> был в сети 37 минут назад </div>
+                                    </div>
+                                </div>
+                                <div class="chat__actions">
+                                    <button type="button" class="chat__actions-btn icon-dotts"></button>
+                                    <ul class="chat__actions-list">
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-muted">Отключить звук</button>
+                                        </li>
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-trash">Удалить чат</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat__content">
+                                <div class="chat__item">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="thumb">
+                                    </div>
+                                    <div class="chat__message">
+                                        <div class="chat__heading">
+                                            <a href="" class="chat__name"> Ксения </a>
+                                            <div class="chat__time">13:45</div>
+                                        </div>
+                                        <div class="chat__message-body">
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu. </p>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat__footer">
+                                <label class="chat__file">
+                                    <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                    <span class="chat__file-btn icon-clip"></span>
+                                </label>
+                                <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                <button type="button" class="chat__voice icon-voice"></button>
+                            </div>
+                        </div>
+                        <div class="chat__block">
+                            <div class="chat__header">
+                                <button type="button" class="chat__back icon-down"></button>
+                                <div class="chat__person">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="user">
+                                    </div>
+                                    <div class="chat__info">
+                                        <div class="chat__name"> Данил Иванов </div>
+                                        <div class="chat__time"> был в сети 37 минут назад </div>
+                                    </div>
+                                </div>
+                                <div class="chat__actions">
+                                    <button type="button" class="chat__actions-btn icon-dotts"></button>
+                                    <ul class="chat__actions-list">
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-muted">Отключить звук</button>
+                                        </li>
+                                        <li class="chat__actions-item">
+                                            <button type="button" class="chat__action icon-trash">Удалить чат</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat__content">
+                                <div class="chat__item">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="thumb">
+                                    </div>
+                                    <div class="chat__message">
+                                        <div class="chat__heading">
+                                            <a href="" class="chat__name"> Данил </a>
+                                            <div class="chat__time">13:45</div>
+                                        </div>
+                                        <div class="chat__message-body">
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu. </p>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat__item">
+                                    <div class="chat__thumb">
+                                        <img src="img/user-2.png" alt="thumb">
+                                    </div>
+                                    <div class="chat__message">
+                                        <div class="chat__heading">
+                                            <a href="" class="chat__name"> Данил </a>
+                                            <div class="chat__time">13:45</div>
+                                        </div>
+                                        <div class="chat__message-body">
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu. </p>
+                                            <img src="img/dish.jpg" alt="dish">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat__footer">
+                                <label class="chat__file">
+                                    <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                    <span class="chat__file-btn icon-clip"></span>
+                                </label>
+                                <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                <button type="button" class="chat__voice icon-voice"></button>
                             </div>
                         </div>
                     </div>
@@ -559,112 +659,7 @@
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
-
-
-
-
-
-
-
-
-
-
-<div id="settings" class="popup">
-    <div class="popup__content">
-        <div class="popup__body popup__body-sm">
-            <div class="popup__step">
-                <div class="popup__header">
-                    <div class="popup__header-title">
-                        Настройки отображения
-                    </div>
-                    <button type="button" class="popup__close icon-close" data-close-modal></button>
-                </div>
-                <div class="popup__step-body">
-                    <div class="popup__step-subtitle">Чтобы изменить список отображаемых колонок, выберите нужный вам вид и&nbsp;отметьте интересующие галочкой</div>
-                    <div class="popup__step-checkboxes">
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Выбрать всё
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="total" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Показывать “Итого”
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="status" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Статус компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="type" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Тип компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="rate" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Ставка
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="budget" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Дневной бюджет
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="1" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="2" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="3" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="4" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="popup__footer">
-                    <button type="button" class="l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
-                    <button type="button" class="l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>

@@ -53,6 +53,9 @@
 		&.popup__body-lg {
 			max-width: 970px;
 		}
+		&.popup__body_xmd {
+			max-width: rem(570);
+		}
 		&.ofsset {
 			padding: rem(30);
 		}
@@ -814,5 +817,21 @@
 		flex-shrink: 0;
 		width: 1.875rem;
 		height: 1.875rem;
+	}
+	// .popup__add-recipe
+	&__add-recipe {
+		display: flex;
+		flex-direction: column;
+		color: #323f4b;
+		text-align: center;
+		padding: rem(20);
+	}
+	// .popup__add
+	&__add {
+		margin-top: rem(20);
+	}
+	// .popup__desc
+	&__desc {
+		margin-top: 1rem;
 	}
 }

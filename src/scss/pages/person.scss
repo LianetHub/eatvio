@@ -25,7 +25,7 @@
 			margin: 0;
 			background: #fff;
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-			padding: em(24) em(16) 0.75rem;
+			padding: rem(16);
 			border-radius: 8px;
 			gap: rem(16);
 			grid-template-columns: 1fr rem(220);
@@ -412,10 +412,12 @@
 	// .person__main-info
 	&__main-info {
 		margin: rem(12) em(0) em(0) em(0);
-		font-size: 0.75rem;
+		font-size: rem(14);
 		flex: 0 0 100%;
 		max-width: 48rem;
 		@media (min-width: $md4) {
+			flex: 0 1 auto;
+			margin-bottom: auto;
 			font-size: 1.125rem;
 		}
 		line-height: normal;
@@ -428,6 +430,9 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: 0.75rem;
 			flex: 0 0 100%;
+			@media (min-width: $md4) {
+				flex: 0 1 auto;
+			}
 			.person__btn {
 				padding: 0.44rem;
 				border-radius: 1.25rem;
@@ -654,7 +659,8 @@
 	&__main-body {
 		display: contents;
 		@media (min-width: $md5) {
-			display: block;
+			display: flex;
+			flex-direction: column;
 			flex: 1 1 auto;
 		}
 	}
@@ -1354,14 +1360,13 @@
 		margin: rem(16) em(0) em(0) em(0);
 		& li {
 			font-size: 0.875rem;
-			font-weight: 700;
 			display: flex;
 			align-items: center;
 			column-gap: rem(5);
 			&::before {
-				@extend %ic, .icon-check-circle;
+				@extend %ic, .icon-check-square;
 				color: #019a3e;
-				font-size: 1em;
+				font-size: 1.5rem;
 			}
 			&:not(:last-child) {
 				margin-bottom: 0.1rem;
@@ -1408,6 +1413,10 @@
 	// .plans__item-btn
 	&__item-btn {
 		font-size: 12px;
+	}
+	// .plans__item-body
+	&__item-body {
+		flex: 1 1 auto;
 	}
 }
 

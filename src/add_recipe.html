@@ -149,13 +149,18 @@
                             </div>
                             <button type="button" class="settings__steps-btn l-btn l-btn-primary">Добавить шаг</button>
                         </div>
+                        <div class="settings__footer">
+                            <a href="#add-recipe" data-modal class="settings__btn l-btn l-btn-primary">
+                                Опубликовать рецепт
+                            </a>
+                        </div>
                     </div>
                 </section>
             </main>
             @@include('html/_footer.html')
         </div>
         @@include('html/_modal.html', {
-        "modal": "settings"
+        "modal": "add-recipe"
         })
         @@include('html/_js.html', {})
     </body>

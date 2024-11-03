@@ -116,6 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle('active')
         }
 
+        if (e.target.classList.contains('settings__person-menu-btn')) {
+            e.target.classList.toggle('active');
+            e.target.nextElementSibling?.classList.toggle('active');
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

@@ -537,6 +537,9 @@
                         </div>
                         <button type="button" class="settings__steps-btn l-btn l-btn-primary">Добавить шаг</button>
                     </div>
+                    <div class="settings__footer">
+                        <a href="#add-recipe" data-modal class="settings__btn l-btn l-btn-primary"> Опубликовать рецепт </a>
+                    </div>
                 </div>
             </section>
         </main> <footer class="footer">
@@ -557,99 +560,33 @@
 
 
 
-<div id="settings" class="popup">
+
+
+
+
+
+
+
+
+
+
+
+<div id="add-recipe" class="popup">
     <div class="popup__content">
-        <div class="popup__body popup__body-sm">
-            <div class="popup__step">
-                <div class="popup__header">
-                    <div class="popup__header-title">
-                        Настройки отображения
-                    </div>
-                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Публикация рецепта
                 </div>
-                <div class="popup__step-body">
-                    <div class="popup__step-subtitle">Чтобы изменить список отображаемых колонок, выберите нужный вам вид и&nbsp;отметьте интересующие галочкой</div>
-                    <div class="popup__step-checkboxes">
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Выбрать всё
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="total" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Показывать “Итого”
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="status" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Статус компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="type" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Тип компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="rate" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Ставка
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="budget" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Дневной бюджет
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="1" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="2" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="3" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="4" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="popup__footer">
-                    <button type="button" class="l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
-                    <button type="button" class="l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
-                </div>
+                <p class="popup__desc">Вы уверенны, что хотите опубликовать рецепт?</p>
+                <a href="" class="popup__add l-btn l-btn-primary l-btn-lg l-btn-fullwidth">
+                    Опубликовать
+                </a>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>

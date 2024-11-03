@@ -77,6 +77,7 @@
 .diet__content-list li::before,
 .diet__day-header[data-spoller]::before,
 .bid__block-step.complete::before,
+.chat__steps-item.complete::before,
 .chat__contacts-item.sent .chat__contacts-date::before,
 .chat__contacts-item.read .chat__contacts-date::before,
 .chat__contacts-item.delivered .chat__contacts-date::before,
@@ -111,6 +112,10 @@
   display: block;
 }
 
+.icon-share-arrow:before {
+  content: "\e952";
+}
+
 .icon-globe:before {
   content: "\e94f";
 }
@@ -141,8 +146,7 @@
 }
 
 .icon-check-circle:before,
-.diet__content-list li:before,
-.plans__item-list li:before {
+.diet__content-list li:before {
   content: "\e949";
 }
 
@@ -252,12 +256,14 @@
 
 .icon-check:before,
 .bid__block-step.complete:before,
+.chat__steps-item.complete:before,
 .chat__contacts-item.sent .chat__contacts-date:before,
 .checkbox__input:checked + .checkbox__content:before {
   content: "\e90a";
 }
 
-.icon-check-square:before {
+.icon-check-square:before,
+.plans__item-list li:before {
   content: "\e90b";
 }
 
@@ -567,6 +573,10 @@ body.dark-theme {
 
 .popup__body.popup__body-lg {
   max-width: 970px;
+}
+
+.popup__body.popup__body_xmd {
+  max-width: 35.625rem;
 }
 
 .popup__body.ofsset {
@@ -1347,6 +1357,27 @@ body.dark-theme {
       flex-shrink: 0;
   width: 1.875rem;
   height: 1.875rem;
+}
+
+.popup__add-recipe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #323f4b;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.popup__add {
+  margin-top: 1.25rem;
+}
+
+.popup__desc {
+  margin-top: 1rem;
 }
 
 .select {
@@ -3089,8 +3120,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .checkbox__content::before {
   content: "";
   color: #fff;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   font-size: 14px;
   border-radius: 3px;
   -ms-flex-negative: 0;
@@ -6595,7 +6624,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .settings__body-caption {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   line-height: normal;
 }
 
@@ -7207,9 +7236,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .settings__link {
   color: #323f4b;
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
-  text-decoration-color: #2f80ed;
   font-size: 0.8125rem;
 }
 
@@ -7312,6 +7338,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 1.25rem;
   margin-right: -0.75rem;
   padding-right: 0.75rem;
+  overflow-x: auto;
 }
 
 .settings__tablist::-webkit-scrollbar {
@@ -7412,6 +7439,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 0.75rem;
   height: 0;
   padding-bottom: 68%;
+  cursor: pointer;
 }
 
 .settings__photos-main img {
@@ -7439,6 +7467,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   background: #f1f2f6;
   font-size: 0.6rem;
+  padding: 0.125rem 0.125rem 0 0;
   z-index: 2;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
@@ -7454,6 +7483,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .settings__photos-thumb {
   height: 4rem;
+  cursor: pointer;
 }
 
 .settings__photos-thumb img {
@@ -7503,7 +7533,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
-  padding: 1.25rem;
+  padding: 0.75rem;
 }
 
 .settings__recipe-row {
@@ -7514,11 +7544,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .settings__recipe-row:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .settings__recipe-block {
@@ -7566,9 +7596,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .settings__recipe-file {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 21.875rem;
-          flex: 0 0 21.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7601,7 +7628,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .settings__recipe-steps {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .settings__step:not(:last-child) {
@@ -7609,7 +7636,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .settings__step-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -7658,6 +7685,67 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.settings__person-menu {
+  position: relative;
+  z-index: 4;
+}
+
+.settings__person-menu-btn::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 1.25rem;
+}
+
+.settings__person-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 0.75rem;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.2);
+  width: 17rem;
+  display: none;
+}
+
+.settings__person-list.active {
+  display: block;
+}
+
+.settings__person-item:not(:last-child) {
+  border-bottom: 0.0625rem solid #f1f2f6;
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.55rem;
+}
+
+.settings__person-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+.settings__person-link::before {
+  color: #2f80ed;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 1.25rem;
+}
+
+.settings__person-link.icon-info::before {
+  color: #eb555c;
+  font-size: 1.5rem;
 }
 
 .file-btn {
@@ -8060,6 +8148,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .cabinet__table-content td > .icon-fail,
 .cabinet__table-content td > .icon-check,
 .cabinet__table-content td > .bid__block-step.complete::before,
+.cabinet__table-content td > .chat__steps-item.complete::before,
 .cabinet__table-content .chat__contacts-item.sent td > .chat__contacts-date::before,
 .chat__contacts-item.sent .cabinet__table-content td > .chat__contacts-date::before,
 .cabinet__table-content td > .checkbox__input:checked + .checkbox__content::before {
@@ -8075,6 +8164,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .cabinet__table-content td > .icon-fail::before,
 .cabinet__table-content td > .icon-check::before,
 .cabinet__table-content td > .bid__block-step.complete::before,
+.cabinet__table-content td > .chat__steps-item.complete::before,
 .cabinet__table-content .chat__contacts-item.sent td > .chat__contacts-date::before,
 .chat__contacts-item.sent .cabinet__table-content td > .chat__contacts-date::before,
 .cabinet__table-content td > .checkbox__input:checked + .checkbox__content::before {
@@ -8679,6 +8769,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__product-action.icon-check,
 .diary__product-action.bid__block-step.complete::before,
+.diary__product-action.chat__steps-item.complete::before,
 .chat__contacts-item.sent .diary__product-action.chat__contacts-date::before,
 .checkbox__input:checked + .diary__product-action.checkbox__content::before,
 .diary__product-action.icon-back {
@@ -9593,6 +9684,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__stats-btn.icon-check,
 .diary__stats-btn.bid__block-step.complete::before,
+.diary__stats-btn.chat__steps-item.complete::before,
 .chat__contacts-item.sent .diary__stats-btn.chat__contacts-date::before,
 .checkbox__input:checked + .diary__stats-btn.checkbox__content::before {
   color: #3a8c1d;
@@ -10437,7 +10529,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .person__main-info {
   margin: 0.75rem 0em 0em 0em;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -10532,6 +10624,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .person__main-benefit.icon-check::before,
 .person__main-benefit.bid__block-step.complete::before,
+.person__main-benefit.chat__steps-item.complete::before,
 .chat__contacts-item.sent .person__main-benefit.chat__contacts-date::before,
 .checkbox__input:checked + .person__main-benefit.checkbox__content::before {
   color: #019a3e;
@@ -11492,7 +11585,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plans__item-list li {
   font-size: 0.875rem;
-  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11506,7 +11598,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plans__item-list li::before {
   color: #019a3e;
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
 .plans__item-list li:not(:last-child) {
@@ -11559,6 +11651,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plans__item-btn {
   font-size: 12px;
+}
+
+.plans__item-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .posts {
@@ -12711,6 +12809,145 @@ input[type=date]::-webkit-calendar-picker-indicator {
           column-gap: 0.25rem;
 }
 
+.chat__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  margin-top: 0 !important;
+  margin-bottom: auto !important;
+}
+
+.chat__more {
+  background: #f6faff;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 4.375rem;
+  height: 4.375rem;
+  min-height: 100%;
+  border-radius: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat__more span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat__more span::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #2f80ed;
+}
+
+.chat__steps {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 2rem;
+  background: #f6faff;
+  padding: 0.75rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 1.25rem;
+}
+
+.chat__steps-item {
+  position: relative;
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  font-size: 0.875rem;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat__steps-item::before {
+  content: "";
+  width: 1.875rem;
+  height: 1.875rem;
+  background: #d4dae2;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0.44rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.chat__steps-item::after {
+  content: "";
+  position: absolute;
+  top: 0.9375rem;
+  right: calc(50% + 0.9375rem);
+  width: 100vw;
+  height: 0.0625rem;
+  background: #d4dae2;
+}
+
+.chat__steps-item:first-child::after {
+  background: #f6faff;
+  top: 0.5rem;
+  height: 1rem;
+  z-index: 10;
+}
+
+.chat__steps-item.complete::before {
+  background: #019a3e;
+  z-index: 3;
+}
+
+.chat__steps-item.complete:not(:first-child)::after {
+  background: #019a3e;
+  z-index: 2;
+}
+
 .chat__back {
   font-size: 1.125rem;
   padding: 0.5rem;
@@ -12864,6 +13101,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
           flex: 1 1 auto;
   overflow-y: auto;
   overflow-x: hidden;
+  gap: 1rem;
 }
 
 .chat__content > :first-child:not(.chat__step) {
@@ -12917,6 +13155,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-bottom: 1.44rem;
 }
 
+.chat__message {
+  width: 100%;
+}
+
 .chat__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12955,6 +13197,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex: 0 0 120px;
           flex: 0 0 120px;
   padding-bottom: 120px;
+}
+
+.chat__message-body .plans__item .plans__item-stat {
+  font-size: 0.75rem;
+}
+
+.chat__message-badge {
+  color: #323f4b;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem 1rem 1rem 1rem;
+  background: rgba(212, 218, 226, 0.2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .chat__footer {
@@ -13050,7 +13307,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__banner-caption {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .chat__banner-caption strong {
@@ -13616,7 +13873,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .diet__form {
-  margin: 1.5em 0em 0em 0em;
+  margin: 0.75em 0em 0em 0em;
   background: #fff;
   padding: 1em;
   border-radius: 0.5rem;
@@ -14190,8 +14447,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0;
 }
 
+.diet__person-hint {
+  color: #6d6f71;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 .diet__rate {
-  margin-top: 0.1875rem;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  gap: 0.81rem;
+}
+
+.diet__rate-value {
   color: #2f80ed;
   font-size: 0.875rem;
   font-weight: 600;
@@ -18537,7 +18811,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .person__main-body {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -19360,6 +19640,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     text-align: left;
   }
 
+  .settings__body-caption {
+    margin-bottom: 1rem;
+  }
+
   .settings__body-title:last-child {
     color: #000;
     border-radius: 0;
@@ -19483,7 +19767,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .settings__tablist {
     margin-right: -1.25rem;
     padding-right: 1.25rem;
-    overflow-x: auto;
   }
 
   .settings__tabs-btn {
@@ -19506,13 +19789,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin-top: 1.37rem;
   }
 
+  .settings__recipe {
+    padding: 1.25rem;
+  }
+
   .settings__recipe-row {
+    gap: 1rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+
+  .settings__recipe-row:not(:first-child) {
+    margin-top: 1rem;
   }
 
   .settings__recipe-block.sm-row {
@@ -19525,6 +19817,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+  }
+
+  .settings__recipe-file {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 21.875rem;
+            flex: 0 0 21.875rem;
+  }
+
+  .settings__recipe-steps {
+    margin-top: 1rem;
+  }
+
+  .settings__step-title {
+    font-size: 1.25rem;
   }
 
   .settings__step-body {
@@ -19823,7 +20129,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background: #fff;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    padding: 1.5em 1em 0.75rem;
+    padding: 1rem;
     border-radius: 8px;
     gap: 1rem;
     -ms-grid-columns: 1fr 13.75rem;
@@ -19875,7 +20181,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .person__main-info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-bottom: auto;
     font-size: 1.125rem;
+  }
+
+  .person__main-info + .person__btns {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 
   .person__main-info + .person__btns .person__btn {
@@ -20065,6 +20381,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding: 0.5rem 1rem;
   }
 
+  .chat__caption {
+    -webkit-column-gap: 0.5rem;
+       -moz-column-gap: 0.5rem;
+            column-gap: 0.5rem;
+  }
+
   .chat__back {
     display: none;
   }
@@ -20088,13 +20410,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .chat__content {
-    padding: 1em 1.5em;
+    padding: 0.75em 1em 1.25rem;
     background: #fff;
     height: calc(100vh - 242px);
   }
 
   .chat__footer {
     border-radius: 0 0 8px 8px;
+  }
+
+  .diet__form {
+    margin: 1.5em 0em 0em 0em;
   }
 
   .diet__form-checkboxes {
@@ -20982,6 +21308,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background: #fff;
   }
 
+  .settings__recipe-caption {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
   .diary__product-fields + .diary__product-actions {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -21671,7 +22002,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .settings__link:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-color: #2f80ed;
   }
 
   .settings__grid-hint:hover {
