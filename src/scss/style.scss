@@ -501,6 +501,7 @@ body {
 	&__header-search {
 		@media (min-width: $md5) {
 			flex: 1 1 auto;
+			align-items: stretch;
 		}
 	}
 	&__chart {

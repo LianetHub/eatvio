@@ -396,17 +396,648 @@
             <section class="statistics">
                 <div class="statistics__container">
                     <div class="statistics__content">
-                        <div class="content__filters">
-                            <a href="" class="content__filter active">Пользователи</a>
-                            <a href="" class="content__filter">Консультанты</a>
+                        <div class="content__filters" role="tablist">
+                            <button type="button" class="content__filter" role="tab" id="tab-1" aria-selected="true" aria-controls="tabpanel-1">Пользователи</button>
+                            <button type="button" class="content__filter" role="tab" id="tab-2" aria-selected="false" aria-controls="tabpanel-2">Консультанты</button>
                         </div>
-                        <form action="#" class="content__header-search search">
-                            <div class="search__box icon-search">
-                                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск записи">
-                                <button type="button" class="search__filter icon-filters"></button>
+                        <div class="statistics__tabs">
+                            <div class="statistics__tabs-block tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
+                                <div class="statistics__row">
+                                    <div class="statistics__block lg-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Статистика</div>
+                                            <div class="statistics__block-filters">
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time" checked value="1" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">24 ч.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time" value="7" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">7 д.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time" value="30" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">30 д.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time" value="inter" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">Интервал</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block sm-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Сервис похудел на:</div>
+                                            <div class="statistics__block-value title accent-color">24 кг</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="#" class="content__header-search search">
+                                    <div class="search__box icon-search">
+                                        <input type="text" name="search" class="search__input search__input-white" placeholder="Введите запрос">
+                                        <button type="button" class="search__filter icon-filters"></button>
+                                    </div>
+                                    <button class="search__send l-btn l-btn-primary l-btn-sm">найти</button>
+                                </form>
+                                <div class="statistics__row">
+                                    <div class="statistics__block lg-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Всего пользователей</div>
+                                            <div class="statistics__block-value">2323626246</div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block sm-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">За <span class="accent-color">24 ч.</span></div>
+                                            <div class="statistics__block-value">102</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics__row">
+                                    <div class="statistics__block">
+                                        <div class="statistics__block-title title">Прирост за год</div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-1.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block">
+                                        <div class="statistics__block-title title">Прирост за <span class="accent-color">24 ч.</span></div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-1.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-title title">Последние 5 зарегистрированных пользователей</div>
+                                    <ul class="statistics__list">
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Иванов Иван </div>
+                                            <div class="statistics__item-block"> Москва </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> 30 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Петров Пётр </div>
+                                            <div class="statistics__item-block"> не указано </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> 18 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Фёдоров Антон </div>
+                                            <div class="statistics__item-block"> Санкт-Петербург </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> не указано
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Антонова Антонина </div>
+                                            <div class="statistics__item-block"> Петропавловск Камчатский </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">Ж</span> 25 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Акопян Акоп </div>
+                                            <div class="statistics__item-block"> Сочи </div>
+                                            <div class="statistics__item-block"> не указано </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="statistics__btn l-btn l-btn-md uppercase-text l-btn-primary">показать еще</button>
+                                </div>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-title title">Финансовые операции</div>
+                                    <div class="statistics__table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Дата</th>
+                                                    <th>Время</th>
+                                                    <th>Кто оплатил</th>
+                                                    <th>Кому оплатил</th>
+                                                    <th>Сколько</th>
+                                                    <th>Комиссия</th>
+                                                    <th>Прибыль</th>
+                                                    <th>Статус</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="grey-color">20.12</td>
+                                                    <td class="grey-color">15:30</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>1100</td>
+                                                    <td>-100</td>
+                                                    <td>+1000</td>
+                                                    <td class="green-color">Успешно</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="grey-color">20.12</td>
+                                                    <td class="grey-color">15:30</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>11 000</td>
+                                                    <td>-1000</td>
+                                                    <td>+10 000</td>
+                                                    <td class="red-color">Провал</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="grey-color">20.12</td>
+                                                    <td class="grey-color">15:30</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>110 000</td>
+                                                    <td>-10 000</td>
+                                                    <td>+100 000</td>
+                                                    <td class="yellow-color">Внимание</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="grey-color">20.12</td>
+                                                    <td class="grey-color">15:30</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>1100</td>
+                                                    <td>-100</td>
+                                                    <td>+1000</td>
+                                                    <td class="accent-color">Ожидание</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="grey-color">20.12</td>
+                                                    <td class="grey-color">15:30</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>Фамилия Имя</td>
+                                                    <td>11 000</td>
+                                                    <td>-1000</td>
+                                                    <td>+10 000</td>
+                                                    <td class="accent-color">Ожидание</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button type="button" class="statistics__btn l-btn l-btn-md uppercase-text l-btn-primary">показать еще</button>
+                                </div>
+                                <form action="#" class="content__header-search search">
+                                    <div class="search__box icon-search">
+                                        <input type="text" name="search" class="search__input search__input-white" placeholder="Населенный пункт">
+                                    </div>
+                                    <button class="search__send l-btn l-btn-primary l-btn-sm">Показать</button>
+                                </form>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-header">
+                                            <div class="statistics__block-column">
+                                                <div class="statistics__block-title title">г. Тверь</div>
+                                                <div class="statistics__block-chart">
+                                                    <img src="img/pie.svg" alt="pie">
+                                                </div>
+                                            </div>
+                                            <div class="statistics__block-column">
+                                                <div class="statistics__block-title title">Пользователей <span class="font-normal">5023857</span></div>
+                                                <ul class="statistics__info">
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Мужчины </div>
+                                                        <div class="statistics__item-block"> 12740 </div>
+                                                    </li>
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Женщины </div>
+                                                        <div class="statistics__item-block"> 1523626 </div>
+                                                    </li>
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Не указано </div>
+                                                        <div class="statistics__item-block"> 253 </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Возрастное распределение</div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-3.svg" alt="chart">
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Популярные продукты</div>
+                                        <div class="statistics__select select select-blue">
+                                            <select>
+                                                <option value="0">Выбрать группы проодуктов</option>
+                                                <option value="">Алкогольные напитки</option>
+                                                <option value="">Безалкогольные напитки</option>
+                                                <option value="">Грибы</option>
+                                                <option value="">Готовы блюда из ресторанов и магазинов</option>
+                                                <option value="">Конфеты</option>
+                                                <option value="">Консервированные продукты</option>
+                                                <option value="">Колбасы и сосиски</option>
+                                                <option value="">Крупы</option>
+                                                <option value="">Куриные продукты</option>
+                                                <option value="">Макароны</option>
+                                                <option value="">Масла</option>
+                                                <option value="">Мясные продукты</option>
+                                                <option value="">Молочные продукты</option>
+                                                <option value="">Овощи</option>
+                                                <option value="">Орехи, семечки, сухофрукты</option>
+                                                <option value="">Полуфабрикаты</option>
+                                                <option value="">Прочие продукты</option>
+                                                <option value="">Рыба и морепродукты</option>
+                                                <option value="">Салаты</option>
+                                                <option value="">Снеки</option>
+                                                <option value="">Специи пряности и соусы</option>
+                                                <option value="">Спортивное питание</option>
+                                                <option value="">Сухие завтраки</option>
+                                                <option value="">Супы</option>
+                                                <option value="">Сыры</option>
+                                                <option value="">Фрукты и ягоды</option>
+                                                <option value="">Хлеб и сдобные изделия</option>
+                                                <option value="">Чай, кофе, сухие смеси для напитков</option>
+                                                <option value="">Яйца</option>
+                                            </select>
+                                        </div>
+                                        <div class="statistics__products">
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Масла</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Курятина </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Форель </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Говядина </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Утка </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Яйца </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                                <button type="button" class="statistics__products-more icon-arrow-left">Показать еще</button>
+                                            </div>
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Молочные продукты</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Гречка </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Помидоры </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Огурцы </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Сухофрукты </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Масло слив. </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                                <button type="button" class="statistics__products-more icon-arrow-left">Показать еще</button>
+                                            </div>
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Яйца</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Хлеб </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Булочка с маком </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Сахар </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Рис </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Макароны </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                                <button type="button" class="statistics__products-more icon-arrow-left">Показать еще</button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="statistics__btn l-btn l-btn-md uppercase-text l-btn-primary">показать еще</button>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="search__send l-btn l-btn-primary l-btn-sm">найти запись</button>
-                        </form>
+                            <div class="statistics__tabs-block tabpanel tabpanel--hidden" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
+                                <div class="statistics__row">
+                                    <div class="statistics__block lg-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Статистика</div>
+                                            <div class="statistics__block-filters">
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time-2" checked value="1" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">24 ч.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time-2" value="7" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">7 д.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time-2" value="30" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">30 д.</span>
+                                                </label>
+                                                <label class="statistics__block-filter">
+                                                    <input type="radio" name="time-2" value="inter" class="statistics__block-filter-input hidden" hidden>
+                                                    <span class="statistics__block-filter-item">Интервал</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block sm-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Сервис похудел на:</div>
+                                            <div class="statistics__block-value title accent-color">24 кг</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="#" class="content__header-search search">
+                                    <div class="search__box icon-search">
+                                        <input type="text" name="search" class="search__input search__input-white" placeholder="Введите запрос">
+                                        <button type="button" class="search__filter icon-filters"></button>
+                                    </div>
+                                    <button class="search__send l-btn l-btn-primary l-btn-sm">найти</button>
+                                </form>
+                                <div class="statistics__row">
+                                    <div class="statistics__block lg-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">Всего пользователей</div>
+                                            <div class="statistics__block-value">2323626246</div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block sm-block">
+                                        <div class="statistics__block-row">
+                                            <div class="statistics__block-title title">За <span class="accent-color">24 ч.</span></div>
+                                            <div class="statistics__block-value">102</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics__row">
+                                    <div class="statistics__block">
+                                        <div class="statistics__block-title title">Прирост за год</div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-1.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block">
+                                        <div class="statistics__block-title title">Прирост за <span class="accent-color">24 ч.</span></div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-1.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Активные консультации <span class="font-normal">5023857</span></div>
+                                        <div class="statistics__grid">
+                                            <ul class="statistics__info">
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Мужчины </div>
+                                                    <div class="statistics__item-block"> 12740 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Женщины </div>
+                                                    <div class="statistics__item-block"> 1523626 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Не указано </div>
+                                                    <div class="statistics__item-block"> 253 </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="statistics__info">
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> ПП 7 дней </div>
+                                                    <div class="statistics__item-block"> 140 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> ПП 14 дней </div>
+                                                    <div class="statistics__item-block"> 12740 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> ПП 21 дней </div>
+                                                    <div class="statistics__item-block"> 253 </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="statistics__info">
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Заявки </div>
+                                                    <div class="statistics__item-block"> 500 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> В работе </div>
+                                                    <div class="statistics__item-block"> 14300 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Повторные </div>
+                                                    <div class="statistics__item-block"> 300 </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="statistics__info">
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Сумма </div>
+                                                    <div class="statistics__item-block"> 34636 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Выплата - Gross </div>
+                                                    <div class="statistics__item-block"> 14300 </div>
+                                                </li>
+                                                <li class="statistics__item">
+                                                    <div class="statistics__item-block"> Разница </div>
+                                                    <div class="statistics__item-block"> 300 </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Возрастное распределение консультируемых</div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-3.svg" alt="chart">
+                                        </div>
+                                        <button type="button" class="statistics__btn l-btn l-btn-md uppercase-text l-btn-primary">Полный отчет</button>
+                                    </div>
+                                </div>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-title title">Последние 5 зарегистрированных пользователей</div>
+                                    <ul class="statistics__list">
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Иванов Иван </div>
+                                            <div class="statistics__item-block"> Москва </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> 30 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Петров Пётр </div>
+                                            <div class="statistics__item-block"> не указано </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> 18 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Фёдоров Антон </div>
+                                            <div class="statistics__item-block"> Санкт-Петербург </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">М</span> не указано
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Антонова Антонина </div>
+                                            <div class="statistics__item-block"> Петропавловск Камчатский </div>
+                                            <div class="statistics__item-block">
+                                                <span class="accent-color">Ж</span> 25 лет
+                                            </div>
+                                        </li>
+                                        <li class="statistics__item">
+                                            <div class="statistics__item-block"> Акопян Акоп </div>
+                                            <div class="statistics__item-block"> Сочи </div>
+                                            <div class="statistics__item-block"> не указано </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="statistics__btn l-btn l-btn-md uppercase-text l-btn-primary">показать еще</button>
+                                </div>
+                                <form action="#" class="content__header-search search">
+                                    <div class="search__box icon-search">
+                                        <input type="text" name="search" class="search__input search__input-white" placeholder="Населенный пункт">
+                                    </div>
+                                    <button class="search__send l-btn l-btn-primary l-btn-sm">Показать</button>
+                                </form>
+                                <div class="statistics__block">
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-header">
+                                            <div class="statistics__block-column">
+                                                <div class="statistics__block-title title">г. Тверь</div>
+                                                <div class="statistics__block-chart">
+                                                    <img src="img/pie.svg" alt="pie">
+                                                </div>
+                                            </div>
+                                            <div class="statistics__block-column">
+                                                <div class="statistics__block-title title">Пользователей <span class="font-normal">5023857</span></div>
+                                                <ul class="statistics__info">
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Мужчины </div>
+                                                        <div class="statistics__item-block"> 12740 </div>
+                                                    </li>
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Женщины </div>
+                                                        <div class="statistics__item-block"> 1523626 </div>
+                                                    </li>
+                                                    <li class="statistics__item">
+                                                        <div class="statistics__item-block"> Не указано </div>
+                                                        <div class="statistics__item-block"> 253 </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Возрастное распределение</div>
+                                        <div class="statistics__block-chart">
+                                            <img src="img/stats-chart-3.svg" alt="chart">
+                                        </div>
+                                    </div>
+                                    <div class="statistics__block-item">
+                                        <div class="statistics__block-title title">Популярные продукты</div>
+                                        <div class="statistics__products">
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Масла</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Курятина </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Форель </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Говядина </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Утка </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Яйца </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Молочные продукты</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Гречка </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Помидоры </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Огурцы </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Сухофрукты </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Масло слив. </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <div class="statistics__products-block">
+                                                <div class="statistics__products-title">Яйца</div>
+                                                <ol class="statistics__products-list">
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Хлеб </div>
+                                                        <div class="statistics__products-value"> 240кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Булочка с маком </div>
+                                                        <div class="statistics__products-value"> 11кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Сахар </div>
+                                                        <div class="statistics__products-value"> 10,5кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Рис </div>
+                                                        <div class="statistics__products-value"> 10кг </div>
+                                                    </li>
+                                                    <li class="statistics__products-item">
+                                                        <div class="statistics__products-name"> Макароны </div>
+                                                        <div class="statistics__products-value"> 9кг </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="statistics__thumb">
                         <img src="img/pepe.jpg" alt="thumb">

@@ -1,9 +1,9 @@
 //============ МОДУЛИ ====================
-@import "modules/popup";
-@import "modules/select";
-@import "modules/star-rating.scss";
-@import "modules/pagination";
-@import "modules/datepicker/datepicker.scss";
+@import 'modules/popup';
+@import 'modules/select';
+@import 'modules/star-rating.scss';
+@import 'modules/pagination';
+@import 'modules/datepicker/datepicker.scss';
 
 //============ МОДУЛИ ====================
 
@@ -207,6 +207,13 @@
 	color: #019a3e !important;
 }
 
+.grey-color {
+	color: #6d6f71;
+}
+.yellow-color {
+	color: #ff9500;
+}
+
 .notification-btn {
 	position: relative;
 	// .notification-btn__quantity
@@ -373,7 +380,7 @@
 		cursor: pointer;
 		transition: background-color 0.3s ease 0s;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: rem(2);
 			left: rem(2);
@@ -495,7 +502,7 @@
 		}
 		&.new {
 			&::before {
-				content: "";
+				content: '';
 				width: 0.5rem;
 				height: 0.5rem;
 				flex-shrink: 0;
@@ -507,7 +514,7 @@
 		}
 		&.succes {
 			&::before {
-				content: "";
+				content: '';
 				width: 0.5rem;
 				height: 0.5rem;
 				flex-shrink: 0;

@@ -1339,6 +1339,12 @@
 		max-width: 21.875rem;
 		width: 100%;
 	}
+	// .settings__pagination
+	&__pagination {
+		margin-top: 1.75rem;
+		margin-left: auto;
+		justify-content: flex-end;
+	}
 }
 
 .file-btn {

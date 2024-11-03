@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="diet">
+                    <div class="diet__container">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title ">
+                                Финансовые операции
+                            </div>
+                        </div>
+                        <div class="settings__body">
+                            <div class="statistics__filters">
+                                <div class="statistics__filters-row">
+                                    <label class="statistics__filter">
+                                        <input type="radio" name="filter" value="today" checked class="statistics__filter-input hidden" hidden>
+                                        <span class="statistics__filter-btn">Сегодня</span>
+                                    </label>
+                                    <label class="statistics__filter">
+                                        <input type="radio" name="filter" value="yesterday" class="statistics__filter-input hidden" hidden>
+                                        <span class="statistics__filter-btn">Вчера</span>
+                                    </label>
+                                    <label class="statistics__filter">
+                                        <input type="radio" name="filter" value="week" class="statistics__filter-input hidden" hidden>
+                                        <span class="statistics__filter-btn">Неделя</span>
+                                    </label>
+                                    <label class="statistics__filter">
+                                        <input type="radio" name="filter" value="interval" class="statistics__filter-input hidden" hidden>
+                                        <span class="statistics__filter-btn">Интервал</span>
+                                    </label>
+                                </div>
+                                <div class="statistics__filters-side">
+                                    Итого: 20 2042₽
+                                </div>
+                            </div>
+                            <div class="statistics__table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Время</th>
+                                            <th>Кто оплатил</th>
+                                            <th>Кому оплатил</th>
+                                            <th>Сколько</th>
+                                            <th>Комиссия</th>
+                                            <th>Прибыль</th>
+                                            <th>Статус</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="green-color">Успешно</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="red-color">Провал</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>110 000</td>
+                                            <td>-10 000</td>
+                                            <td>+100 000</td>
+                                            <td class="yellow-color">Внимание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="green-color">Успешно</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="red-color">Провал</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>110 000</td>
+                                            <td>-10 000</td>
+                                            <td>+100 000</td>
+                                            <td class="yellow-color">Внимание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="green-color">Успешно</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="red-color">Провал</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>110 000</td>
+                                            <td>-10 000</td>
+                                            <td>+100 000</td>
+                                            <td class="yellow-color">Внимание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="green-color">Успешно</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="red-color">Провал</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>110 000</td>
+                                            <td>-10 000</td>
+                                            <td>+100 000</td>
+                                            <td class="yellow-color">Внимание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="green-color">Успешно</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="red-color">Провал</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>110 000</td>
+                                            <td>-10 000</td>
+                                            <td>+100 000</td>
+                                            <td class="yellow-color">Внимание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>1100</td>
+                                            <td>-100</td>
+                                            <td>+1000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="grey-color">20.12</td>
+                                            <td class="grey-color">15:30</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>Фамилия Имя</td>
+                                            <td>11 000</td>
+                                            <td>-1000</td>
+                                            <td>+10 000</td>
+                                            <td class="accent-color">Ожидание</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="settings__pagination pagination">
+                                <a href="" aria-disabled="true" class="pagination__prev icon-prev"></a>
+                                <a href="" class="pagination__item">1</a>
+                                <a href="" class="pagination__item">2</a>
+                                <span class="pagination__item">...</span>
+                                <a href="" class="pagination__item">9</a>
+                                <a href="" class="pagination__item">10</a>
+                                <a href="" class="pagination__next icon-next"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html')
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -380,6 +380,9 @@
 	&__box {
 		flex: 1 1 auto;
 		position: relative;
+		input {
+			min-height: 100%;
+		}
 		&::before {
 			position: absolute;
 			top: 50%;

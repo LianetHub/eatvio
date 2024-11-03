@@ -13,15 +13,17 @@
 		font-size: 0.75rem;
 		padding: 0.3125rem 0.25rem;
 		color: #8c969f;
-		transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
+		border: rem(1) solid #dfe3e8;
+		transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: #2f80ed;
+				border-color: #2f80ed;
 				color: #fff;
 			}
 		}
 		&:disabled,
-		&[aria-disabled="true"] {
+		&[aria-disabled='true'] {
 			background: #d4d7db;
 			opacity: 0.5;
 			pointer-events: none;
@@ -39,11 +41,12 @@
 		height: 2rem;
 		padding: 0.3125rem 0.25rem;
 		&[href] {
-			transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s;
+			transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
 			@media (any-hover: hover) {
 				&:hover {
 					background: #2f80ed;
 					border-color: #2f80ed;
+					color: #fff;
 				}
 			}
 		}
