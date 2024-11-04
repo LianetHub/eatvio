@@ -452,11 +452,10 @@
 	// .notification__body
 	&__body {
 		position: absolute;
-
 		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
 		opacity: 0;
-		padding: 0 0 2.12rem 0;
 		visibility: hidden;
+		padding: 0 0 2.12rem 0;
 		bottom: 100%;
 		right: 0;
 		width: calc(100vw - 3.5rem);
@@ -495,34 +494,89 @@
 		gap: 0.63rem;
 		align-items: center;
 		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #2f80ed;
+		&[href] {
+			@media (any-hover: hover) {
+				&:hover {
+					color: #2f80ed;
+				}
+			}
+		}
+		&:has(.notification__item-body) {
+			&::before {
+				align-self: flex-start;
+			}
+		}
+		&:not([href]) {
+			&::before {
+				align-self: flex-start;
+			}
+		}
+		&::before {
+			content: '';
+			width: 0.5rem;
+			height: 0.5rem;
+			flex-shrink: 0;
+			border-radius: 50%;
+			order: 1;
+			margin-left: auto;
+		}
+		&.fail {
+			&::before {
+				background: #d01717;
 			}
 		}
 		&.new {
 			&::before {
-				content: '';
-				width: 0.5rem;
-				height: 0.5rem;
-				flex-shrink: 0;
-				border-radius: 50%;
 				background: #2f80ed;
-				order: 1;
-				margin-left: auto;
 			}
 		}
 		&.succes {
 			&::before {
-				content: '';
-				width: 0.5rem;
-				height: 0.5rem;
-				flex-shrink: 0;
-				border-radius: 50%;
 				background: #00be13;
-				order: 1;
-				margin-left: auto;
 			}
+		}
+	}
+	// .notification__item-body
+	&__item-body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		.notification__text {
+			font-weight: 600;
+		}
+	}
+	// .notification__btn
+	&__btn {
+		margin-top: 0.75rem;
+		width: 100%;
+		@media (min-width: $md5) {
+			max-width: 11.25rem;
+		}
+		& + .notification__hint {
+			font-size: 0.875rem;
+			@media (min-width: $md4) {
+				font-size: 1rem;
+			}
+		}
+	}
+	// .notification__hint
+	&__hint {
+	}
+	// .notification__link
+	&__link {
+		margin-top: 0.25rem;
+		font-weight: 600;
+		color: #2f80ed;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&.red-color {
+			color: #d01717;
 		}
 	}
 	// .notification__thumb
@@ -541,6 +595,14 @@
 	&__text {
 		& span {
 			font-weight: 600;
+		}
+		&[href] {
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accent;
+				}
+			}
 		}
 	}
 	// .notification__more

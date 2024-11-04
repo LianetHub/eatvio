@@ -52,6 +52,22 @@
 			}
 			.notification__item {
 				font-size: 1.25rem;
+				&::before {
+					width: 0.75rem;
+					height: 0.75rem;
+				}
+			}
+			.notification__item-body {
+				font-size: 1.25rem;
+			}
+			.notification__hint {
+				font-size: 1rem;
+			}
+			.notification__link {
+				font-size: 1.125rem;
+				&.red-color {
+					font-size: 1rem;
+				}
 			}
 		}
 	}

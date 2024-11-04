@@ -827,7 +827,7 @@
 </div>
 }
 @@if (modal==="date-select") {
-<div id="date-select" class="popup open">
+<div id="date-select" class="popup">
     <div class="popup__content">
         <div class="popup__body ofsset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
@@ -838,8 +838,14 @@
                 Выбор даты старта плана
             </div>
             <div class="popup__selecting">
-                <div class="label">
-                    Март
+                <div class="popup__selecting-header">
+                    <div class="popup__selecting-label">
+                        Март
+                    </div>
+                    <div class="popup__selecting-controls">
+                        <button class="popup__selecting-prev icon-down"></button>
+                        <button class="popup__selecting-next icon-down"></button>
+                    </div>
                 </div>
                 <div class="popup__checkboxes">
                     <label class="checkbox-btn">
@@ -895,29 +901,39 @@
 </div>
 }
 @@if (modal==="cancel-bid") {
-<div id="cancel-bid" class="popup ">
+<div id="cancel-bid" class="popup">
     <div class="popup__content">
-        <div class="popup__body ofsset">
+        <div class="popup__body popup__body-xmd ofsset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
             <div class="popup__caption title title-lg">
-                Отказ от прохожения плана
+                Отмена заказа
             </div>
-            <div class="popup__subtitle">
-                Вкраце напишите причину отказа
-            </div>
-            <div class="popup__selecting">
-                <input type="text" name="reason" class="input input-white" placeholder="Причина отказа">
-                <div class="popup__selecting-btns">
-                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
-                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Продолжить</button>
+            <form action="#" class="popup__cancel">
+                <div class="popup__cancel-rows">
+                    <div class="popup__cancel-row">
+                        <div class="label">Опишите причину отказа</div>
+                        <textarea name="reason" class="textarea textarea-sm textarea-white" placeholder="Заказал по ошибке"></textarea>
+                    </div>
+                    <div class="popup__cancel-row">
+                        <div class="label">Укажите сумму которую вы хотите вернуть</div>
+                        <input type="text" name="value" class="input input-white" placeholder="0 ₽">
+                    </div>
                 </div>
+                <div class="popup__cancel-options">
+                    <div class="popup__cancel-option">2000 ₽</div>
+                    <div class="popup__cancel-option">1000 ₽</div>
+                </div>
+            </form>
+            <div class="popup__btns">
+                <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary">Не отменять</button>
+                <button type="button" class="popup__selecting-btn l-btn l-btn-danger">Отменить</button>
             </div>
         </div>
     </div>
 </div>
 }
 @@if (modal==="cancel-diet") {
-<div id="cancel-diet" class="popup ">
+<div id="cancel-diet" class="popup">
     <div class="popup__content">
         <div class="popup__body ofsset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
@@ -1230,6 +1246,63 @@
                 <a href="" class="popup__add l-btn l-btn-primary l-btn-lg l-btn-fullwidth">
                     Опубликовать
                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="plan-complete") {
+<div id="plan-complete" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подтверждение плана
+                </div>
+                <p class="popup__subtitle">Вы уверенны что хотите подтвердить прохождения&nbsp;плана?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="cancel-order") {
+<div id="cancel-order" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Отмена заказа
+                </div>
+                <p class="popup__subtitle">Вы уверенны, что хотите отменить заказ?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Не отменять</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-danger l-btn-sm">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="refusal-order") {
+<div id="refusal-order" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Отказ от заказа
+                </div>
+                <p class="popup__subtitle">Вы уверены, что хотите отказаться от заказа?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Не отказываться</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-danger l-btn-sm">Отказаться</button>
+                </div>
             </div>
         </div>
     </div>

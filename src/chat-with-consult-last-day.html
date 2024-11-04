@@ -112,7 +112,7 @@
                                         <div class="chat__steps">
                                             <div class="chat__steps-item complete">Выбрана дата старта</div>
                                             <div class="chat__steps-item complete">Заказ оплачен</div>
-                                            <div class="chat__steps-item">Заказ в работе</div>
+                                            <div class="chat__steps-item complete">Заказ в работе</div>
                                             <div class="chat__steps-item">Завершен</div>
                                         </div>
                                         <a href="" class="chat__more">
@@ -134,7 +134,7 @@
                                                 <div class="chat__time"> 13:47</div>
                                             </div>
                                             <div class="chat__message-body">
-                                                <p class="chat__message-badge">Пользователь заказал план</p>
+                                                <p class="chat__message-badge">Вы заказали план</p>
                                                 <div class="plans__item">
                                                     <div class="plans__item-image">
                                                         <img src="img/posts/05.png" class="cover-image" alt="post">
@@ -152,7 +152,7 @@
                                                     <div class="plans__item-body">
                                                         <div class="plans__item-header">
                                                             <h3 class="plans__item-title title title-md">Лёгкий</h3>
-                                                            <button class="plans__item-delete">Отказаться от заказа</button>
+                                                            <a href="#refusal-order" data-modal class="plans__item-delete">Отказаться от заказа</a>
                                                         </div>
                                                         <div class="plans__item-option">
                                                             Опция: Самое то
@@ -166,8 +166,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="chat__banner">
-                                                    <div class="chat__banner-caption">Консультация оплачена, ожидаем вашего подтверждения</div>
-                                                    <a href="" class="chat__banner-link">Подтвердить</a>
+                                                    <div class="chat__banner-caption">Сегодня последний день прохождения плана «Название&nbsp;плана»</div>
+                                                    <p class="chat__banner-subtitle">Вам придет уведомление, когда консультант заполнит последний отчет</p>
+                                                    <a href="" class="chat__banner-link">Заполнить отчет</a>
+                                                    <button type="button" class="chat__banner-remove icon-close"></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -328,7 +330,9 @@
             </main>
             @@include('html/_footer.html')
         </div>
-
+        @@include('html/_modal.html', {
+        "modal": "refusal-order"
+        })
         @@include('html/_js.html', {})
     </body>
 </html>

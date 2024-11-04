@@ -154,7 +154,7 @@
                                                     <div class="plans__item-body">
                                                         <div class="plans__item-header">
                                                             <h3 class="plans__item-title title title-md">Лёгкий</h3>
-                                                            <button class="plans__item-delete">Отменить заказ</button>
+                                                            <a href="#cancel-order" data-modal class="plans__item-delete">Отменить заказ</a>
                                                         </div>
                                                         <div class="plans__item-option">
                                                             Опция: Самое то
@@ -326,7 +326,9 @@
             </main>
             @@include('html/_footer.html')
         </div>
-
+        @@include('html/_modal.html', {
+        "modal": "cancel-order"
+        })
         @@include('html/_js.html', {})
     </body>
 </html>

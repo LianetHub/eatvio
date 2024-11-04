@@ -154,7 +154,7 @@
                                                     <div class="plans__item-body">
                                                         <div class="plans__item-header">
                                                             <h3 class="plans__item-title title title-md">Лёгкий</h3>
-                                                            <button class="plans__item-delete">Отказаться от заказа</button>
+                                                            <a href="#refusal-order" data-modal class="plans__item-delete">Отказаться от заказа</a>
                                                         </div>
                                                         <div class="plans__item-option">
                                                             Опция: Самое то
@@ -333,6 +333,9 @@
         </div>
         @@include('html/_modal.html', {
         "modal": "date-select"
+        })
+        @@include('html/_modal.html', {
+        "modal": "refusal-order"
         })
         @@include('html/_js.html', {})
     </body>

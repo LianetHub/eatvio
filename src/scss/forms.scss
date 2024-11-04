@@ -112,6 +112,7 @@ input[type='date'] {
 		line-height: 100%;
 		padding: 0.75rem 0.88rem;
 	}
+
 	&:focus {
 		border-color: #2f80ed;
 	}
@@ -485,24 +486,27 @@ input[type='date'] {
 	&__input {
 		&:checked {
 			& + .checkbox-btn__content {
-				border: rem(1) solid #2f80ed;
-				background: #d5e6fb;
+				border: 2px solid #2f80ed;
+				background: #f6faff;
 			}
 		}
 	}
 	// .checkbox-btn__content
 	&__content {
 		display: block;
-		border-radius: 0.3125rem;
-		border: rem(1) solid #e9e9ea;
-		background: #fff;
+		border: rem(2) solid #f6faff;
+		border-radius: 0.5rem;
+		background: #f6faff;
 		cursor: pointer;
 		padding: em(12, 18) em(2, 18);
 		@media (min-width: $md5) {
 			padding: em(12, 18);
 		}
-		font-size: 0.875rem;
+		color: #323f4b;
+		font-size: 1.125rem;
+		line-height: 1;
 		font-weight: 600;
+		transition: all 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				border: rem(1) solid #2f80ed;
@@ -596,6 +600,15 @@ input[type='date'] {
 		@media (any-hover: hover) {
 			&:hover {
 				background: #ff3b3b;
+			}
+		}
+	}
+	&.l-btn-danger {
+		background: #d01717;
+		color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color: #d01717, $amount: 10);
 			}
 		}
 	}

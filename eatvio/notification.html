@@ -302,11 +302,26 @@
                 <div class="notification__body">
                     <div class="notification__content">
                         <div class="notification__list">
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
+                                    <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
+                                </div>
+                            </div>
                             <a href="" class="notification__item new">
                                 <span class="notification__thumb">
                                     <img src="img/user.png" class="cover-image" alt="avatar">
                                 </span>
                                 <span class="notification__text">На вас подписались Иван Иванов</span>
+                            </a>
+                            <a href="" class="notification__item fail">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">
+                                        Консультанта отказался от заказа
+                                    </span>
+                                    <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                </span>
                             </a>
                             <a href="" class="notification__item new">
                                 <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
@@ -395,18 +410,40 @@
 </header> <main class="page">
             <section class="diet">
                 <div class="diet__container">
-                    <div class="diet__header">
-                        <button class="diet__back icon-arrow-short-left"><span>Мой блог</span></button>
-                        <h1 class="diet__title"> Уведомления </h1>
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">На главную</span></a>
+                        <div class="settings__person-title title "> Уведомления </div>
                     </div>
                     <div class="diet__notification notification">
                         <div class="notification__content">
                             <div class="notification__list">
+                                <div class="notification__item new">
+                                    <div class="notification__item-body">
+                                        <a href="" class="notification__text">Сегодня последний день прохождения плана «Название плана»</a>
+                                        <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
+                                    </div>
+                                </div>
+                                <div class="notification__item succes">
+                                    <div class="notification__item-body">
+                                        <a href="" class="notification__text">Сегодня последний день плана «Название плана»</a>
+                                        <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
+                                        <a href="" class="notification__link">Заполнить отчет</a>
+                                    </div>
+                                </div>
+                                <div class="notification__item new">
+                                    <div class="notification__item-body">
+                                        <a href="" class="notification__text">Поздравляем, вы прошли «Название плана». Просим вас подтвердить <br> прохождение плана</a>
+                                        <p class="notification__hint">Если вы не подтвердите, то план через три дня подтвердится автоматически</p>
+                                        <a href="" class="notification__btn l-btn l-btn-primary l-btn-sm">Подтвердить</a>
+                                        <p class="notification__hint">Если вас что-то не устроило, вы можете подать жалобу</p>
+                                        <a href="" class="notification__link red-color">Подать жалобу</a>
+                                    </div>
+                                </div>
                                 <a href="" class="notification__item new">
                                     <span class="notification__thumb">
                                         <img src="img/user.png" class="cover-image" alt="avatar">
                                     </span>
-                                    <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    <span class="notification__text">На вас подписались <span>Иван Иванов</span></span>
                                 </a>
                                 <a href="" class="notification__item new">
                                     <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
@@ -432,6 +469,18 @@
                                 <a href="" class="notification__item">
                                     <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
                                 </a>
+                                <div class="notification__item fail">
+                                    <div class="notification__item-body">
+                                        <a href="" class="notification__text">Консультант отказался от заказа</a>
+                                        <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
+                                    </div>
+                                </div>
+                                <div class="notification__item fail">
+                                    <div class="notification__item-body">
+                                        <a href="" class="notification__text">Пользователь Имя Фамилия отказался от прохождения плана «Название плана»</a>
+                                        <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -538,6 +587,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 

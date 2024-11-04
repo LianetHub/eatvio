@@ -480,6 +480,7 @@
 	}
 	// .popup__checkboxes
 	&__checkboxes {
+		margin-top: rem(4);
 		display: flex;
 		gap: 11px;
 		flex-wrap: wrap;
@@ -589,6 +590,69 @@
 			text-align: center;
 		}
 	}
+	// .popup__selecting-header
+	&__selecting-header {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .popup__selecting-label
+	&__selecting-label {
+		color: #323f4b;
+		font-size: 1.125rem;
+	}
+	// .popup__selecting-controls
+	&__selecting-controls {
+		display: flex;
+		gap: 0.5rem;
+	}
+	// .popup__selecting-prev
+	&__selecting-prev {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		background: #f6faff;
+		padding-right: 0.65rem;
+		flex-shrink: 0;
+		&::before {
+			transform: rotate(90deg);
+			font-size: 0.75rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid #2f80ed;
+				background: #d5e6fb;
+			}
+		}
+	}
+	// .popup__selecting-next
+	&__selecting-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		background: #f6faff;
+		flex-shrink: 0;
+		padding-left: 0.65rem;
+		&::before {
+			transform: rotate(-90deg);
+			font-size: 0.75rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid #2f80ed;
+				background: #d5e6fb;
+			}
+		}
+	}
 	// .popup__selecting-btn
 	&__selecting-btns {
 		margin-top: 2.69rem;
@@ -600,6 +664,9 @@
 	// .popup__selecting-btn
 	&__selecting-btn {
 		flex: 0 1 rem(195);
+		&.l-btn.l-btn-secondary {
+			color: #323f4b;
+		}
 	}
 	// .popup__subtitle
 	&__subtitle {
@@ -682,7 +749,7 @@
 		border-radius: rem(20);
 	}
 	&__btns {
-		margin-top: rem(40);
+		margin-top: rem(28);
 		display: grid;
 		gap: rem(20);
 		grid-template-columns: repeat(2, 1fr);
@@ -830,5 +897,30 @@
 	// .popup__desc
 	&__desc {
 		margin-top: 1rem;
+	}
+	// .popup__cancel
+	&__cancel {
+	}
+	// .popup__cancel-row
+	&__cancel-row {
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	// .popup__cancel-options
+	&__cancel-options {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	// .popup__cancel-option
+	&__cancel-option {
+		border-radius: 0.375rem;
+		border: 1px solid #2f80ed;
+		padding: 0.25rem 0.88rem;
+		font-size: 0.75rem;
+		font-weight: 500;
+		cursor: pointer;
 	}
 }

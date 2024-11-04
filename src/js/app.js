@@ -121,6 +121,10 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.nextElementSibling?.classList.toggle('active');
         }
 
+        if (e.target.classList.contains('chat__banner-remove')) {
+            e.target.closest('.chat__banner').remove()
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {
