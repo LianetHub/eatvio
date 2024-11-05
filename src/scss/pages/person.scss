@@ -1335,7 +1335,7 @@
 	}
 	// .plans__item-title
 	&__item-title {
-		font-weight: 700;
+		font-weight: 600;
 	}
 	// .plans__item-header
 	&__item-header {
@@ -1357,7 +1357,7 @@
 	}
 	// .plans__item-list
 	&__item-list {
-		margin: rem(16) em(0) em(0) em(0);
+		margin: rem(8) em(0) em(0) em(0);
 		& li {
 			font-size: 0.875rem;
 			display: flex;

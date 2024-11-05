@@ -261,6 +261,8 @@
 		border-bottom: 1px solid #e9e9ea;
 		padding: 0.63rem;
 		column-gap: 0.25rem;
+		position: relative;
+		z-index: 3;
 		@media (min-width: $md4) {
 			column-gap: rem(8);
 			padding: 0.5rem 1rem;
@@ -325,13 +327,13 @@
 		align-items: center;
 		&::before {
 			content: '';
-			width: 1.875rem;
-			height: 1.875rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			background: #d4dae2;
 			border-radius: 50%;
 			position: relative;
 			z-index: 2;
-			margin-bottom: 0.44rem;
+			margin-bottom: 0.5rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -404,13 +406,14 @@
 		}
 		.chat__time {
 			margin: 0 0 0 0.25rem;
+			font-size: rem(14);
 		}
 	}
 	// .chat__name
 	&__name {
 		color: #2f80ed;
 		font-size: 0.875rem;
-		font-weight: 700;
+		font-weight: 600;
 	}
 	// .chat__time
 	&__time {
@@ -564,6 +567,7 @@
 	}
 	// .chat__heading
 	&__heading {
+		margin-top: rem(-5);
 		display: flex;
 		align-items: flex-end;
 		column-gap: rem(5);
@@ -589,6 +593,7 @@
 			}
 		}
 		& .plans__item {
+			padding: rem(16);
 			.plans__item-image {
 				flex: 0 0 120px;
 				padding-bottom: 120px;
@@ -607,6 +612,7 @@
 		border-radius: 0.25rem 1rem 1rem 1rem;
 		background: rgba(212, 218, 226, 0.2);
 		width: fit-content;
+		margin-top: rem(12);
 	}
 	// .chat__footer
 	&__footer {
@@ -659,23 +665,22 @@
 	}
 	// .chat__banner
 	&__banner {
-		margin-top: 1rem;
+		margin-top: 1.25rem;
 		border-radius: 0.5rem;
 		min-height: 5.75rem;
 		background: #f6faff;
-		padding: 1.38rem 1rem 1.38rem 5.75rem;
+		padding: 1rem 1rem 1rem 5.75rem;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		gap: rem(12);
+		gap: rem(6);
 		&::before {
 			content: 'i';
 			position: absolute;
 			left: 1rem;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 1rem;
 			width: 3.75rem;
 			height: 3.75rem;
 			flex-shrink: 0;
@@ -723,9 +728,11 @@
 	&__banner-caption {
 		font-size: 1rem;
 		padding-right: 1rem;
-		max-width: 29.125rem;
 		@media (min-width: $md4) {
 			font-size: 1.25rem;
+		}
+		&.sm-caption {
+			font-size: 1rem;
 		}
 		& strong {
 			color: #2f80ed;
@@ -742,9 +749,13 @@
 	&__banner-subtitle {
 		font-size: 0.875rem;
 		max-width: 24.4375rem;
+		@media (min-width: $md4) {
+			font-size: 1rem;
+		}
 	}
 	// .chat__banner-link
 	&__banner-link {
+		margin-top: 0.25rem;
 		color: #2f80ed;
 		font-size: 1rem;
 		font-weight: 600;

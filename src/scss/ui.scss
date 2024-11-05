@@ -32,6 +32,11 @@
 			font-size: 21px;
 		}
 	}
+	&.title-md {
+		@media (min-width: $md4) {
+			font-size: 20px;
+		}
+	}
 	&.title-bold {
 		font-weight: 700;
 	}
