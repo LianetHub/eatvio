@@ -125,6 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.closest('.chat__banner').remove()
         }
 
+        if (e.target.classList.contains('chat-notification-btn')) {
+            e.target.classList.toggle('active');
+            if (e.target.classList.contains('active')) {
+                e.target.textContent = "Включить оповещения";
+            } else {
+                e.target.textContent = "Отключить оповещения";
+            }
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

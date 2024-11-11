@@ -111,19 +111,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__item">
@@ -236,19 +229,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__item">
@@ -297,19 +283,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__item">
@@ -378,17 +357,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
 
@@ -428,7 +397,9 @@
                     </div>
                 </section>
             </main>
-            @@include('html/_footer.html')
+            @@include('html/_footer.html', {
+            "className": " pc-only"
+            })
         </div>
 
         @@include('html/_js.html', {})

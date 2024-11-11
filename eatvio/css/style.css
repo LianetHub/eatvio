@@ -78,6 +78,8 @@
 .diet__day-header[data-spoller]::before,
 .bid__plan-list li::before,
 .bid__block-step.complete::before,
+.chat__action.chat-notification-btn.active::before,
+.chat__action.chat-notification-btn::before,
 .chat__steps-item.complete::before,
 .chat__contacts-item.sent .chat__contacts-date::before,
 .chat__contacts-item.read .chat__contacts-date::before,
@@ -111,6 +113,16 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-sound:before,
+.chat__action.chat-notification-btn.active:before {
+  content: "\e953";
+}
+
+.icon-sound-off:before,
+.chat__action.chat-notification-btn:before {
+  content: "\e954";
 }
 
 .icon-share-arrow:before {
@@ -474,6 +486,7 @@ body {
   background: #f0f2f5;
   min-height: 100%;
   line-height: normal;
+  min-width: 320px;
   padding: 0em var(--lock-padding, 0) 0em 0em;
 }
 
@@ -11824,24 +11837,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 2.5rem;
 }
 
-.plans__item-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.plans__item-header .plans__item-text {
-  margin-top: 0;
-}
-
-.plans__item-header:not(:first-child) {
-  gap: 2rem;
-  margin-top: 0.5rem;
-}
-
 .plans__item-favorite {
   font-size: 1.5rem;
   -ms-flex-item-align: start;
@@ -11853,15 +11848,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .plans__item-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: contents;
+}
+
+.plans__item-header .plans__item-text {
+  margin-top: 0;
+}
+
+.plans__item-header:not(:first-child) {
+  gap: 2rem;
+  margin-top: 0.5rem;
 }
 
 .plans__item-option {
@@ -11871,9 +11867,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .plans__item-delete {
+  margin-top: 0.75rem;
   color: #d01717;
   font-size: 0.875rem;
   line-height: 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .plans__item-list {
@@ -11953,6 +11953,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .posts {
@@ -12903,6 +12910,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .chat {
   height: calc(100vh - 4rem);
+  background: #f0f2f5;
 }
 
 .chat__container {
@@ -13082,7 +13090,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  background: #fff;
   border-radius: 8px;
 }
 
@@ -13098,13 +13105,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #e9e9ea;
-  padding: 0.63rem;
-  -webkit-column-gap: 0.25rem;
-     -moz-column-gap: 0.25rem;
-          column-gap: 0.25rem;
   position: relative;
   z-index: 3;
+  background: #f0f2f5;
+  padding: 0.75rem 0.375rem 0.75rem 0.375rem;
+  -webkit-column-gap: 0.75rem;
+     -moz-column-gap: 0.75rem;
+          column-gap: 0.75rem;
 }
 
 .chat__caption {
@@ -13222,8 +13229,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .chat__steps-item::after {
   content: "";
   position: absolute;
-  top: 0.9375rem;
-  right: calc(50% + 0.9375rem);
+  top: 0.75rem;
+  right: calc(50% + 0.75rem);
   width: 100vw;
   height: 0.0625rem;
   background: #d4dae2;
@@ -13254,6 +13261,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  color: #2f80ed;
 }
 
 .chat__person {
@@ -13293,6 +13301,33 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 0.875rem;
 }
 
+.chat__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #888;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  gap: 0.25rem;
+}
+
+.chat__status::before {
+  content: "";
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.chat__status.online::before {
+  background: #21c004;
+}
+
 .chat__name {
   color: #2f80ed;
   font-size: 0.875rem;
@@ -13305,6 +13340,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-bottom: 0.25rem;
   letter-spacing: -0.01875rem;
   font-size: 0.625rem;
+  display: inline-block;
 }
 
 .chat__actions {
@@ -13325,14 +13361,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 100%;
   right: 0;
-  border-radius: 0.5rem;
+  padding: 0.75rem;
   background: #fff;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  border: 1px solid #e9e9ea;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 15.6875rem;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
@@ -13353,24 +13390,33 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='9' viewBox='0 0 30 9' fill='none'%3E%3Cpath d='M22.3291 7.97849C22.3977 8.05977 22.455 8.12803 22.5 8.18164L22.5 8.5L7.5 8.5L7.5 8.19246C7.5481 8.13935 7.60897 8.07225 7.68135 7.99267C7.87965 7.77465 8.16428 7.463 8.50922 7.08897C9.19934 6.34066 10.1298 5.34373 11.0928 4.34751C12.0572 3.34983 13.0484 2.35901 13.8613 1.61997C14.2689 1.24943 14.6226 0.950613 14.9005 0.747264C15.04 0.645134 15.15 0.574897 15.2309 0.532302C15.2438 0.525541 15.2549 0.519996 15.2645 0.515463C15.2719 0.519213 15.2804 0.523622 15.2899 0.528791C15.3653 0.56995 15.4686 0.638706 15.6004 0.740061C15.8627 0.94184 16.1949 1.23924 16.5773 1.6093C17.3398 2.34719 18.264 3.33705 19.1617 4.33448C20.0579 5.33031 20.9217 6.32691 21.5617 7.07505C21.8817 7.44898 22.1454 7.76053 22.3291 7.97849Z' fill='white' stroke='%23E9E9EA'/%3E%3Cpath d='M7.50006 9L8.34651 8H21.7029L22.5804 9H7.50006Z' fill='white'/%3E%3C/svg%3E");
 }
 
+.chat__actions-item:not(:last-child) {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 0.0625rem solid #f1f2f6;
+}
+
 .chat__action {
-  font-size: 0.875rem;
-  line-height: 1.2857142857;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.0125rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.5rem;
   padding: 0 0.5rem 0 0;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
 .chat__action::before {
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13380,19 +13426,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #7b8794;
+  color: #2f80ed;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-}
-
-.chat__action.icon-muted::before {
-  font-size: 1.5rem;
 }
 
 .chat__content {
   padding: 1em;
   height: calc(100dvh - 180px);
-  background: #f0f2f5;
+  background: #fff;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13421,10 +13464,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           column-gap: 0.5rem;
 }
 
-.chat__item:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
 .chat__item.chat__item-input {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -13439,24 +13478,31 @@ input[type=date]::-webkit-calendar-picker-indicator {
           justify-content: flex-end;
 }
 
+.chat__item.chat__item-input .chat__message-block {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .chat__date {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   color: #323f4b;
   font-size: 0.875rem;
-  padding: 0.25rem 0.62rem;
   border-radius: 6.25rem;
-  border: 1px solid #323f4b;
+  border: 0.0625rem solid #323f4b;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
+  padding: 0.125rem 0.62rem;
 }
 
 .chat__date:not(:last-child) {
-  margin-bottom: 1.44rem;
+  margin-bottom: 0.25rem;
 }
 
 .chat__message {
@@ -13464,7 +13510,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__heading {
-  margin-top: -0.3125rem;
+  margin-top: -0.15625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13506,6 +13552,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex: 0 0 120px;
           flex: 0 0 120px;
   padding-bottom: 120px;
+  min-height: 12.5rem;
 }
 
 .chat__message-body .plans__item .plans__item-stat {
@@ -13513,42 +13560,73 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 0rem 3.125rem 3.125rem 0rem;
 }
 
+.chat__message-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.chat__message-block:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
 .chat__message-badge {
   color: #323f4b;
   padding: 0.25rem 0.5rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   border-radius: 0.25rem 1rem 1rem 1rem;
   background: rgba(212, 218, 226, 0.2);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  max-width: 82%;
+  line-height: normal;
+}
+
+.chat__message-badge img {
+  border-radius: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.chat__message-badge.lg-badge {
+  font-size: 1rem;
 }
 
 .chat__footer {
-  background-color: #f6faff;
-  border-top: 1px solid #f3f3f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5em 1em;
-  -webkit-column-gap: 1.25rem;
-     -moz-column-gap: 1.25rem;
-          column-gap: 1.25rem;
+  padding: 0.5em 1em 0.75rem;
+  background: #fff;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
 }
 
 .chat__file {
-  width: 2rem;
-  height: 2rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .chat__file-btn {
-  font-size: 30px;
+  font-size: 1.5rem;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -13561,7 +13639,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__voice {
-  font-size: 30px;
+  font-size: 1.5rem;
   color: #7b8794;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -19425,6 +19503,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border-radius: 0.625rem;
   }
 
+  .plans__item-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .plans__item-delete {
+    margin-top: 0;
+  }
+
   .reviews__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19530,6 +19624,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .chat__message-badge {
+    max-width: 29.4375rem;
   }
 
   .chat__step-title {
@@ -20953,6 +21051,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .chat__body {
+    background: #fff;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     -webkit-box-flex: 1;
@@ -20962,10 +21061,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .chat__header {
+    padding: 0.63rem;
+    border-bottom: 1px solid #e9e9ea;
+    background: #fff;
     -webkit-column-gap: 0.5rem;
        -moz-column-gap: 0.5rem;
             column-gap: 0.5rem;
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .chat__caption {
@@ -20988,21 +21091,47 @@ input[type=date]::-webkit-calendar-picker-indicator {
             flex-direction: row;
   }
 
+  .chat__status {
+    display: none;
+  }
+
   .chat__time {
     color: #7b8794;
-    margin-left: 0.25rem;
     font-weight: normal;
     letter-spacing: normal;
   }
 
   .chat__content {
+    border-radius: 0;
     padding: 0.75em 1em 1.25rem;
-    background: #fff;
     height: calc(100vh - 242px);
   }
 
+  .chat__date {
+    padding: 0.25rem 0.62rem;
+  }
+
   .chat__footer {
+    padding: 0.5em 1em;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+    background-color: #f6faff;
+    border-top: 1px solid #f3f3f3;
     border-radius: 0 0 8px 8px;
+  }
+
+  .chat__file {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .chat__file-btn {
+    font-size: 30px;
+  }
+
+  .chat__voice {
+    font-size: 30px;
   }
 
   .chat__banner-caption {
@@ -22042,6 +22171,24 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+
+  .chat__header .chat__thumb {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .chat__info .chat__time {
+    display: none;
+  }
+
+  .chat__item .chat__thumb,
+  .chat__item .chat__heading {
+    display: none;
+  }
+
+  .chat__textarea {
+    border-radius: 6.25rem;
   }
 
   .bid__block .diet__rate-value {

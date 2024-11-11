@@ -93,19 +93,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__caption pc-only">
@@ -131,10 +124,12 @@
                                                 <a href="" class="chat__name">
                                                     Дмитрий
                                                 </a>
-                                                <div class="chat__time"> 13:47</div>
                                             </div>
                                             <div class="chat__message-body">
-                                                <p class="chat__message-badge">Вы заказали план</p>
+                                                <div class="chat__message-block">
+                                                    <p class="chat__message-badge lg-badge">Вы заказали план</p>
+                                                    <div class="chat__time">13:47</div>
+                                                </div>
                                                 <div class="plans__item">
                                                     <div class="plans__item-image">
                                                         <img src="img/posts/05.png" class="cover-image" alt="post">
@@ -200,19 +195,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__item">
@@ -261,19 +249,12 @@
                                             <div class="chat__time">
                                                 был в сети 37 минут назад
                                             </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="chat__actions">
-                                        <button type="button" class="chat__actions-btn icon-dotts"></button>
-                                        <ul class="chat__actions-list">
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-muted">Отключить звук</button>
-                                            </li>
-                                            <li class="chat__actions-item">
-                                                <button type="button" class="chat__action icon-trash">Удалить чат</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
                                     <div class="chat__item">
@@ -330,7 +311,9 @@
                     </div>
                 </section>
             </main>
-            @@include('html/_footer.html')
+            @@include('html/_footer.html', {
+            "className": " pc-only"
+            })
         </div>
         @@include('html/_modal.html', {
         "modal": "plan-complete"
