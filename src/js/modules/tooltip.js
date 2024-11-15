@@ -11,7 +11,11 @@ export const initTooltips = () => {
 
         // Создаем элемент для подсказки
         tooltipElem = document.createElement('div');
-        tooltipElem.className = 'tooltip';
+        tooltipElem.classList.add('tooltip');
+
+        if (target.classList.contains('tooltip-lg')) {
+            tooltipElem.classList.add('tooltip-lg');
+        }
 
 
         tooltipElem.innerHTML = tooltipHtml;

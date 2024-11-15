@@ -114,7 +114,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: rem(20) rem(10);
+		min-height: rem(64);
 		@media (min-width: $md4) {
+			min-height: rem(74);
 			padding: em(17) em(16);
 		}
 	}
@@ -208,6 +210,7 @@
 		display: block;
 		width: 100%;
 		padding-right: rem(24);
+		margin: 0 auto;
 		@media (max-width: $md4) {
 			font-size: rem(22);
 		}
@@ -1042,7 +1045,7 @@
 			padding: 1rem 1.25rem;
 			font-size: 1.125rem;
 		}
-		&[aria-selected='true'] {
+		&[aria-selected="true"] {
 			color: #fff;
 			background: #2f80ed;
 		}
@@ -1826,7 +1829,7 @@
 				visibility: visible;
 				position: relative;
 				&::before {
-					content: '';
+					content: "";
 					position: absolute;
 					inset: -1px;
 					pointer-events: none;
@@ -2729,7 +2732,7 @@
 		height: auto;
 		position: relative;
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -2923,32 +2926,32 @@
 	}
 	// .diary__color-input
 	&__color-input {
-		&[data-value='darkred'] {
+		&[data-value="darkred"] {
 			& + .diary__color-content {
 				--satiety-bg: #cd1414;
 			}
 		}
-		&[data-value='red'] {
+		&[data-value="red"] {
 			& + .diary__color-content {
 				--satiety-bg: #ff3e3e;
 			}
 		}
-		&[data-value='orange'] {
+		&[data-value="orange"] {
 			& + .diary__color-content {
 				--satiety-bg: #f8c926;
 			}
 		}
-		&[data-value='yellow'] {
+		&[data-value="yellow"] {
 			& + .diary__color-content {
 				--satiety-bg: #fff3bf;
 			}
 		}
-		&[data-value='lightgreen'] {
+		&[data-value="lightgreen"] {
 			& + .diary__color-content {
 				--satiety-bg: #62e833;
 			}
 		}
-		&[data-value='green'] {
+		&[data-value="green"] {
 			& + .diary__color-content {
 				--satiety-bg: #4dce20;
 			}
@@ -3583,7 +3586,7 @@
 				padding: 0.9rem 0.82rem;
 			}
 
-			&[aria-selected='true'] {
+			&[aria-selected="true"] {
 				@extend .l-btn-primary;
 			}
 		}
@@ -3700,7 +3703,7 @@
 				}
 			}
 			&::before {
-				content: '';
+				content: "";
 				right: 0.35rem;
 				font-size: 5px;
 				width: rem(6);
@@ -4013,7 +4016,7 @@
 	z-index: 1;
 	&__content {
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			width: calc(286px + 52px);
 			height: 147px;

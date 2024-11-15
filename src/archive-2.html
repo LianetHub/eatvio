@@ -27,9 +27,12 @@
                                 </div>
                                 <div class="archive__column">
                                     <div class="archive__caption">Привязанные карты</div>
-                                    <div class="archive__desc">
-                                        Привязанные карты отсутствуют
-                                        <span class="info-block dark-outline" data-tooltip="Карта привязывается при первой выплате">?</span>
+                                    <div class="archive__card">
+                                        <div class="archive__card-logo">
+                                            <img src="@img/mir-logo.svg" alt="MIR">
+                                        </div>
+                                        <div class="archive__card-num">MIR **0278</div>
+                                        <a href="#untie-card" data-modal class="archive__card-delete icon-delete"></a>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +129,7 @@
         "className": ""
         })
         @@include('html/_modal.html', {
-        "modal": "settings"
+        "modal": "untie-card"
         })
         @@include('html/_js.html', {})
     </body>
