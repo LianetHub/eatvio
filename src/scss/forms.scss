@@ -12,7 +12,7 @@
 	border: 1px solid #e6e6e6;
 	background: #f6faff;
 	color: #000;
-	&[type='time'] {
+	&[type="time"] {
 		text-align: center;
 		font-weight: 600;
 		color: #2f80ed;
@@ -63,7 +63,7 @@
 	}
 }
 
-input[type='date'] {
+input[type="date"] {
 	&::placeholder {
 		color: #909fba;
 	}
@@ -171,6 +171,14 @@ input[type='date'] {
 			}
 		}
 	}
+	&.file-dark {
+		.file__content {
+			background: #383a51;
+		}
+		.file__title {
+			color: #fff;
+		}
+	}
 	// .file__input
 	&__input {
 	}
@@ -192,7 +200,7 @@ input[type='date'] {
 			padding: em(45) em(30);
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			inset: rem(8);
 			border-radius: 0.375rem;
@@ -261,7 +269,7 @@ input[type='date'] {
 		cursor: pointer;
 		user-select: none;
 		&::before {
-			content: '';
+			content: "";
 			width: 22px;
 			height: 22px;
 			border: 3px solid #fff;
@@ -426,7 +434,7 @@ input[type='date'] {
 		user-select: none;
 		cursor: pointer;
 		&::before {
-			content: '';
+			content: "";
 			color: #fff;
 			font-size: 14px;
 			border-radius: 3px;
@@ -671,9 +679,15 @@ input[type='date'] {
 	&.l-btn-fullwidth {
 		width: 100%;
 	}
-
+	&.l-btn-icon {
+		aspect-ratio: 1;
+		width: 3.25rem;
+		height: 3.25rem;
+		flex-shrink: 0;
+		padding: 1rem;
+	}
 	&:disabled,
-	&[aria-disabled='true'] {
+	&[aria-disabled="true"] {
 		cursor: default;
 		color: #fff;
 		background: #dfe0e1;

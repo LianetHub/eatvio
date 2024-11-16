@@ -1327,3 +1327,90 @@
     </div>
 </div>
 }
+@@if (modal==="add-group") {
+<div id="add-group" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Добавление группы
+                </div>
+                <input type="text" name="group" class="popup__add-input input" placeholder="Введите название группы" value="Свинина">
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-red l-btn-sm">Отменить</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-green-outline l-btn-sm">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="edit-word") {
+<div id="edit-word" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Редактирование
+                </div>
+                <input type="text" name="group" class="popup__add-input input" placeholder="Введите название группы" value="Свинина">
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-red l-btn-sm">Отменить</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-green-outline l-btn-sm">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="edit-synonym") {
+<div id="edit-synonym" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_md">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__edit-product">
+                <div class="title title-xl font-bold">
+                    Редактирование
+                </div>
+                <form action="#" class="arm__product-form">
+                    <div class="label">Основное название продукта</div>
+                    <div class="arm__product-form-row">
+                        <input type="text" name="product" placeholder="Введите название" class="input" value="Свинина">
+                        <button type="submit" class="l-btn l-btn-icon l-btn-primary">OK</button>
+                    </div>
+                </form>
+                <form action="#" class="arm__product-form">
+                    <div class="label">Добавьте синоним</div>
+                    <div class="arm__product-form-row">
+                        <input type="text" name="product" placeholder="Введите название" class="input" value="Свининочка">
+                        <button type="submit" class="l-btn l-btn-icon l-btn-primary icon-plus"></button>
+                    </div>
+                    <div class="arm__product-form-labels">
+                        <div class="arm__product-form-label icon-close">
+                            Свинина
+                        </div>
+                        <div class="arm__product-form-label icon-close">
+                            Свинка
+                        </div>
+                        <div class="arm__product-form-label icon-close">
+                            Свинюшка
+                        </div>
+                        <div class="arm__product-form-label icon-close">
+                            Пепа
+                        </div>
+                        <div class="arm__product-form-label icon-close">
+                            Боров
+                        </div>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-red">Отменить</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-green-outline">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

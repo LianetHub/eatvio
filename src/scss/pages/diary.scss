@@ -257,7 +257,8 @@
 		@media (min-width: $md4) {
 			padding: em(20);
 		}
-		&.settings__body_change {
+		&.settings__body_change,
+		&.settings__body_main {
 			padding: 0;
 			border-radius: 0;
 			background: none;
@@ -293,6 +294,15 @@
 					margin-bottom: 0.87rem;
 					border-bottom: 1px solid #9aa5b1;
 				}
+			}
+		}
+		&.settings__body_main {
+			.settings__form {
+				grid-template-columns: 1fr;
+			}
+			.settings__form-row {
+				width: 100%;
+				max-width: 100%;
 			}
 		}
 	}

@@ -373,6 +373,24 @@
 }
 
 .switcher {
+	&.switcher-lg {
+		.switcher__btn {
+			width: rem(51);
+			height: rem(31);
+			&::before {
+				width: rem(27);
+			}
+		}
+		.switcher__input {
+			&:checked {
+				& + .switcher__btn {
+					&::before {
+						left: rem(21);
+					}
+				}
+			}
+		}
+	}
 	// .switcher__input
 	&__input {
 		&:checked {
