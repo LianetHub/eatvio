@@ -1414,3 +1414,150 @@
     </div>
 </div>
 }
+@@if (modal==="withdrawal-plan") {
+<div id="withdrawal-plan" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_md">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__edit-product">
+                <div class="title title-xl font-bold">
+                    Снятие с публикации
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите снять диету «название диеты» с&nbsp;публикации?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Не снимать с публикации</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-secondary">Снять с публикации</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="publish-plan") {
+<div id="publish-plan" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_md">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__edit-product">
+                <div class="title title-xl font-bold">
+                    Публикация плана
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите опубликовать план <br> «название плана»?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary">Не опубликовывать</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary">Опубликовать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="publish-diet") {
+<div id="publish-diet" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_md">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__edit-product">
+                <div class="title title-xl font-bold">
+                    Публикация диеты
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите опубликовать диету индейку <br> «название диеты»?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary">Не опубликовывать</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary">Опубликовать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="delete-plan") {
+<div id="delete-plan" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_md">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__edit-product">
+                <div class="title title-xl font-bold">
+                    Удаление диеты
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите удалить диету <br> «Название диеты»?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Не удалять</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-secondary">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="offer-plan") {
+<div id="offer-plan" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-diet">
+                <div class="title title-xl font-bold sm-offset">
+                    Предложение диеты
+                </div>
+                <p class="popup__subtitle">
+                    «Название диеты»
+                </p>
+                <ul class="popup__persons">
+                    <li class="popup__person">
+                        <div class="popup__person-thumb">
+                            <img src="@img/user-7.png" alt="thumb">
+                        </div>
+                        <div class="popup__person-column">
+                            <div class="popup__person-name">Имя Фамилия</div>
+                            <div class="popup__person-desc">Название плана</div>
+                            <div class="popup__person-time">Старт: 10 Ноября</div>
+                        </div>
+                        <button type="button" class="l-btn l-btn-sm l-btn-primary">Предложить</button>
+                    </li>
+                    <li class="popup__person">
+                        <div class="popup__person-thumb">
+                            <img src="@img/user-8.png" alt="thumb">
+                        </div>
+                        <div class="popup__person-column">
+                            <div class="popup__person-name">Имя Длиннная Фамилия</div>
+                            <div class="popup__person-desc">Длинное название плана</div>
+                            <div class="popup__person-time">Старт: 10 Ноября</div>
+                        </div>
+                        <button type="button" class="l-btn l-btn-sm l-btn-primary">Предложить</button>
+                    </li>
+                </ul>
+                <ul class="popup__persons popup__persons_bottom">
+                    <li class="popup__person">
+                        <div class="popup__person-thumb">
+                            <img src="@img/user-2.png" alt="thumb">
+                        </div>
+                        <div class="popup__person-column">
+                            <div class="popup__person-name">Имя Фамилия</div>
+                            <div class="popup__person-desc">Название плана</div>
+                        </div>
+                        <button type="button" class="l-btn l-btn-sm l-btn-gray">Заменить</button>
+                    </li>
+                    <li class="popup__person">
+                        <div class="popup__person-thumb">
+                            <img src="@img/user-3.png" alt="thumb">
+                        </div>
+                        <div class="popup__person-column">
+                            <div class="popup__person-name">Имя Длиннная Фамилия</div>
+                            <div class="popup__person-desc">Длинное название плана</div>
+                        </div>
+                        <button type="button" class="l-btn l-btn-sm l-btn-gray">Заменить</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+}

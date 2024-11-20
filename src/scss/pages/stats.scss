@@ -283,7 +283,7 @@
 	// .statistics__products-name
 	&__products-name {
 		&::before {
-			content: counter(num) '.';
+			content: counter(num) ".";
 		}
 		flex: 1 1 auto;
 	}

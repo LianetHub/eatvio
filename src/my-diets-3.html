@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "consults"
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__header">
+                            <div class="content__header-title title">
+                                Популярные диеты
+                            </div>
+                            <form action="#" class="content__header-search search">
+                                <div class="search__box">
+                                    <button class="search__btn icon-search"></button>
+                                    <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск диет">
+                                </div>
+                                <div class="search__btns">
+                                    <button class="search__send l-btn l-btn-primary l-btn-sm">найти диету</button>
+                                    <button type="button" class="search__add l-btn l-btn-primary l-btn-sm icon-plus"></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="content__tabs">
+                            <div class="content__tabs-wrapper lg-items">
+                                <a href="" class="content__filter">Публичные</a>
+                                <a href="" class="content__filter active">Черновики</a>
+                                <a href="" class="content__filter">Персональные</a>
+                            </div>
+                        </div>
+                        <div class="content__body">
+                            <aside class="content__side content__side-sm" data-spollers="576, max">
+                                <button type="button" data-spoller class="content__settings-spoller ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                        <rect x="1.7998" width="1.2" height="24" fill="#323F4B" />
+                                        <rect x="9.60059" width="1.2" height="24" fill="#323F4B" />
+                                        <circle cx="10.1998" cy="19.2" r="2.4" fill="#323F4B" />
+                                        <circle cx="2.4" cy="7.20002" r="2.4" fill="#323F4B" />
+                                    </svg>
+                                    Фильтр
+                                </button>
+                                <div class="content__side-filter">
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Порядок</div>
+                                        <div class="content__side-row">
+                                            <div class="select select-blue">
+                                                <select>
+                                                    <option value="0">По умолчанию</option>
+                                                    <option value="1">Популярные</option>
+                                                    <option value="2">Название: А—Я</option>
+                                                    <option value="3">Название: Я—А</option>
+                                                    <option value="4">Порядок: сперва новые</option>
+                                                    <option value="5">Порядок: сперва старые</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Время прохождения</div>
+                                        <div class="content__side-column">
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="time" checked value="1" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    7 дней
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="time" value="2" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    14 дней
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="time" value="3" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    21 день
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Тип диеты</div>
+                                        <div class="content__side-column">
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="diet" checked value="1" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    Легкая
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="diet" checked value="2" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    Средняя
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="diet" value="4" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    С мясом
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="diet" value="5" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    Овощная
+                                                </span>
+                                            </label>
+                                            <label class="checkbox checkbox-sm">
+                                                <input type="checkbox" name="diet" value="6" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    Веганская
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </aside>
+                            <div class="content__main">
+                                <div class="content__grid content__grid_sm">
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/dishes/01.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    7 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    132
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__person-main">
+                                                    <div class="plan__thumb">
+                                                        <img src="@img/user.png" alt="user">
+                                                    </div>
+                                                    <div class="plan__person-info">
+                                                        <div class="plan__person-name">Дмитрий Коваль</div>
+                                                        <div class="diet__rate-value">
+                                                            128-й в рейтинге
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/broccoli.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/broccoli.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/bread.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/bread.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Мучное</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Если вы любите мучные продукты, но хотите придерживаться диеты, вам подходит диета с добавленим мучных блюд на основе цельнозерновых вариантов. В них больше сложных углеводов и клетчатки, что способствует длительному чувству сытости и поддерживает здоровье пищеварительной системы.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/meat.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/meat.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">С мясом</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета с мясом полезная и сбалансированная. Включает в себя нежирное мясо: курицу, индейку, кролика или говядину. В сочетании с овощами получаете все необходимые витамины и минералы. Не забывайте о порциях и старайтесь есть медленно, прислушиваясь к своему организму.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/wine.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/wine.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Алкоголь</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    С некоторыми видами диет можно употреблять алкоголь в умеренных количествах. Рекомендуется совмещать вместе с низкокалорийными закусками
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__bottom plan__bottom-visible">
+                                                <button type="button" class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary">Редактировать</button>
+                                                <a href="#publish-diet" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Опубликовать</a>
+                                                <a href="#delete-plan" data-modal class="plan__bottom-delete icon-delete"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/dishes/02.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    14 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    46
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__person-main">
+                                                    <div class="plan__thumb">
+                                                        <img src="@img/user.png" alt="user">
+                                                    </div>
+                                                    <div class="plan__person-info">
+                                                        <div class="plan__person-name">Дмитрий Коваль</div>
+                                                        <div class="diet__rate-value">
+                                                            11-й в рейтинге
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/broccoli.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/broccoli.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__bottom plan__bottom-visible">
+                                                <button type="button" class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary">Редактировать</button>
+                                                <a href="#publish-diet" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Опубликовать</a>
+                                                <a href="#delete-plan" data-modal class="plan__bottom-delete icon-delete"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/dishes/03.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    7 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    132
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__person-main">
+                                                    <div class="plan__thumb">
+                                                        <img src="@img/user.png" alt="user">
+                                                    </div>
+                                                    <div class="plan__person-info">
+                                                        <div class="plan__person-name">Дмитрий Коваль</div>
+                                                        <div class="diet__rate-value">
+                                                            1208-й в рейтинге
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/broccoli.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/broccoli.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/meat.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/meat.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">С мясом</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета с мясом полезная и сбалансированная. Включает в себя нежирное мясо: курицу, индейку, кролика или говядину. В сочетании с овощами получаете все необходимые витамины и минералы. Не забывайте о порциях и старайтесь есть медленно, прислушиваясь к своему организму.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/wine.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/wine.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Алкоголь</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    С некоторыми видами диет можно употреблять алкоголь в умеренных количествах. Рекомендуется совмещать вместе с низкокалорийными закусками
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__bottom plan__bottom-visible">
+                                                <button type="button" class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary">Редактировать</button>
+                                                <a href="#publish-diet" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Опубликовать</a>
+                                                <a href="#delete-plan" data-modal class="plan__bottom-delete icon-delete"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/dishes/04.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    14 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    46
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__person-main">
+                                                    <div class="plan__thumb">
+                                                        <img src="@img/user.png" alt="user">
+                                                    </div>
+                                                    <div class="plan__person-info">
+                                                        <div class="plan__person-name">Дмитрий Коваль</div>
+                                                        <div class="diet__rate-value">
+                                                            45678-й в рейтинге
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/broccoli.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/broccoli.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/bread.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/bread.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Мучное</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Если вы любите мучные продукты, но хотите придерживаться диеты, вам подходит диета с добавленим мучных блюд на основе цельнозерновых вариантов. В них больше сложных углеводов и клетчатки, что способствует длительному чувству сытости и поддерживает здоровье пищеварительной системы.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/meat.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/meat.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">С мясом</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/wine.svg" alt="broccoli">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/wine.svg" alt="broccoli">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Алкогольная</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__bottom plan__bottom-visible">
+                                                <button type="button" class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary">Редактировать</button>
+                                                <a href="#publish-diet" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Опубликовать</a>
+                                                <a href="#delete-plan" data-modal class="plan__bottom-delete icon-delete"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "publish-diet"
+        })
+        @@include('html/_modal.html', {
+        "modal": "delete-plan"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

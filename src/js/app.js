@@ -134,6 +134,41 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+        if (e.target.closest('.plan__type-btn')) {
+
+            const button = e.target.closest('.plan__type-btn');
+            const tooltip = button.closest('.plan__type').querySelector('.plan__type-tootlip');
+
+            const isOpen = tooltip?.classList.contains('open');
+            document.querySelectorAll('.plan__type-tootlip.open').forEach((openTooltip) => {
+                const openButton = openTooltip.closest('.plan__type').querySelector('.plan__type-btn');
+                openTooltip.classList.remove('open');
+                openButton?.classList.remove('active');
+            });
+
+            if (!isOpen) {
+                button.classList.add('active');
+                tooltip?.classList.add('open');
+            }
+
+        }
+
+        if (e.target.classList.contains('plan__type-tootlip-close')) {
+            const tooltip = e.target.closest('.plan__type-tootlip');
+            const button = tooltip.closest('.plan__type').querySelector('.plan__type-btn');
+            tooltip.classList.remove('open');
+            button?.classList.remove('active');
+        }
+
+        if (!e.target.closest('.plan__type')) {
+            document.querySelectorAll('.plan__type-tootlip.open').forEach((tooltip) => {
+                const button = tooltip.closest('.plan__type').querySelector('.plan__type-btn');
+
+                tooltip.classList.remove('open');
+                button?.classList.remove('active');
+            });
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

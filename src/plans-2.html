@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "consults"
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__header">
+                            <div class="content__header-title title">
+                                Популярные планы
+                            </div>
+                            <form action="#" class="content__header-search search">
+                                <div class="search__box">
+                                    <button class="search__btn icon-search"></button>
+                                    <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск плана">
+                                </div>
+                                <button class="search__send l-btn l-btn-primary l-btn-sm">найти план</button>
+                            </form>
+                        </div>
+                        <div class="content__tabs">
+                            <div class="content__tabs-wrapper">
+                                <a href="" class="content__filter">Все</a>
+                                <a href="" class="content__filter">Рецепты</a>
+                                <a href="" class="content__filter">Диеты</a>
+                                <a href="" class="content__filter active">Планы питания</a>
+                                <a href="" class="content__filter">Консультанты</a>
+                            </div>
+                        </div>
+                        <div class="content__body">
+                            <div class="content__main">
+                                <div class="content__grid">
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/plans/01.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    7 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    132
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__thumb">
+                                                    <img src="@img/user.png" alt="user">
+                                                </div>
+                                                <div class="plan__person-info">
+                                                    <div class="plan__person-name">Дмитрий Коваль</div>
+                                                    <div class="diet__rate-value">
+                                                        45678-й в рейтинге
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/slim.png" alt="slim">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/slim.png" alt="slim">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                План “Худеем за неделю”
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__footer">
+                                                <div class="plan__footer-price">от 2500₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/plans/02.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    7 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    132
+                                                </div>
+                                                <button type="button" class="plan__action icon-heart"></button>
+                                                <button type="button" class="plan__action icon-bookmark"></button>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__thumb">
+                                                    <img src="@img/user.png" alt="user">
+                                                </div>
+                                                <div class="plan__person-info">
+                                                    <div class="plan__person-name">Дмитрий Коваль</div>
+                                                    <div class="diet__rate-value">
+                                                        45678-й в рейтинге
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/fit.png" alt="slim">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/fit.png" alt="slim">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__footer">
+                                                <div class="plan__footer-price">от 2500₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/plans/03.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    7 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    15
+                                                </div>
+                                                <a href="" class="plan__favorite icon-heart"></a>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__thumb">
+                                                    <img src="@img/user.png" alt="user">
+                                                </div>
+                                                <div class="plan__person-info">
+                                                    <div class="plan__person-name">Дмитрий Коваль</div>
+                                                    <div class="diet__rate-value">
+                                                        45678-й в рейтинге
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/wellness.png" alt="slim">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/wellness.png" alt="slim">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__footer">
+                                                <div class="plan__footer-price">от 2500₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan">
+                                        <div class="plan__image">
+                                            <img src="@img/plans/04.png" class="cover-image" alt="dish">
+                                            <div class="announcement__stats">
+                                                <div class="announcement__stat icon-eye-fill">
+                                                    200
+                                                </div>
+                                                <div class="announcement__stat icon-heart-fill">
+                                                    64
+                                                </div>
+                                                <div class="announcement__stat icon-message-fill">
+                                                    2
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan__body">
+                                            <div class="plan__stats">
+                                                <div class="plan__stat icon-clock">
+                                                    14 дней
+                                                </div>
+                                                <div class="plan__stat icon-users">
+                                                    7
+                                                </div>
+                                                <a href="" class="plan__favorite icon-heart"></a>
+                                            </div>
+                                            <div class="plan__person">
+                                                <div class="plan__thumb">
+                                                    <img src="@img/user.png" alt="user">
+                                                </div>
+                                                <div class="plan__person-info">
+                                                    <div class="plan__person-name">Дмитрий Коваль</div>
+                                                    <div class="diet__rate-value">
+                                                        45678-й в рейтинге
+                                                    </div>
+                                                </div>
+                                                <div class="plan__person-icons">
+                                                    <div class="plan__type">
+                                                        <button type="button" class="plan__type-btn">
+                                                            <img src="@img/behavior.png" alt="slim">
+                                                        </button>
+                                                        <div class="plan__type-tootlip">
+                                                            <div class="plan__type-tootlip-icon">
+                                                                <img src="@img/behavior.png" alt="slim">
+                                                            </div>
+                                                            <div class="plan__type-tootlip-body">
+                                                                <div class="plan__type-tootlip-header">
+                                                                    <div class="plan__type-tootlip-name">Вегетарианская</div>
+                                                                    <button class="plan__type-tootlip-close icon-close"></button>
+                                                                </div>
+                                                                <div class="plan__type-tootlip-desc">
+                                                                    Диета основана на потреблении растительной пищи и отказе от продуктов животного происхождения. Такой тип питания может быть разнообразным и вкусным, а также полезным для здоровья.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plan__name">
+                                                Лёгкая диета
+                                            </div>
+                                            <p class="plan__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere amet, ultrices augue quis consectetur est nibh duis non....</p>
+                                            <div class="plan__footer">
+                                                <div class="plan__footer-price">от 2500₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <aside class="content__side content__side-sm" data-spollers="576, max">
+                                <button type="button" data-spoller class="content__settings-spoller ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                        <rect x="1.7998" width="1.2" height="24" fill="#323F4B" />
+                                        <rect x="9.60059" width="1.2" height="24" fill="#323F4B" />
+                                        <circle cx="10.1998" cy="19.2" r="2.4" fill="#323F4B" />
+                                        <circle cx="2.4" cy="7.20002" r="2.4" fill="#323F4B" />
+                                    </svg>
+                                    Фильтр
+                                </button>
+                                <div class="content__side-content">
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Длительность плана</div>
+                                        <div class="content__side-row">
+                                            <input type="text" name="start-plan" class="input input-white" placeholder="от">
+                                            -
+                                            <input type="text" name="edn-plan" class="input input-white" placeholder="до">
+                                            <button type="button" class="content__settings-ok">ОК</button>
+                                        </div>
+                                    </div>
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Стоимость плана</div>
+                                        <div class="content__side-row">
+                                            <input type="text" name="start-price" class="input input-white" placeholder="от">
+                                            -
+                                            <input type="text" name="edn-price" class="input input-white" placeholder="до">
+                                            <button type="button" class="content__settings-ok">ОК</button>
+                                        </div>
+                                    </div>
+                                    <div class="content__side-block">
+                                        <div class="content__side-caption spoller-mobile">Проходит план</div>
+                                        <div class="content__side-row">
+                                            <input type="text" name="start-time" class="input input-white" placeholder="от">
+                                            -
+                                            <input type="text" name="edn-time" class="input input-white" placeholder="до">
+                                            <button type="button" class="content__settings-ok">ОК</button>
+                                        </div>
+                                    </div>
+                                    <div class="content__side-block">
+                                        <div class="content__side-options">
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" name="fat-burn" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content">
+                                                    <img src="img/slim.png" alt="icon slim">
+                                                    Похудения
+                                                </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" checked name="sport" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content">
+                                                    <img src="img/fit.png" alt="icon fit">
+                                                    Спортивное питание
+                                                </span>
+                                            </label>
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" name="state" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content">
+                                                    <img src="img/wellness.png" alt="icon wellness">
+                                                    Улучшения состояния
+                                                </span>
+                                            </label>
+
+                                            <label class="checkbox-btn">
+                                                <input type="checkbox" name="correct" class="checkbox-btn__input hidden" hidden="">
+                                                <span class="checkbox-btn__content">
+                                                    <img src="img/behavior.png" alt="icon behavior">
+                                                    Корректировка пищевого поведения
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>

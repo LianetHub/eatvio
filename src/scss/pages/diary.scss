@@ -225,6 +225,9 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
+		&.fw-bold {
+			font-weight: 700;
+		}
 	}
 	// .settings__person-content
 	&__person-content {

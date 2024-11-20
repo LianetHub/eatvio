@@ -135,7 +135,7 @@
 		@media (min-width: $md2) {
 			padding: 0 em(14, 14);
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: calc(100% + rem(7));
 				left: 0;
@@ -467,11 +467,11 @@
 		}
 	}
 	&__add {
-		width: rem(40);
+		min-width: rem(44);
 		min-height: rem(40);
-		align-self: stretch;
+		aspect-ratio: 1;
 		flex-shrink: 0;
-		font-size: 1.5rem;
+		font-size: 1.25rem !important;
 		padding: 0.5rem !important;
 	}
 	// .search__bar

@@ -371,6 +371,9 @@ input[type="date"] {
 	&.checkbox-gray {
 		--checkbox-color: #e6e6e6;
 	}
+	&.checkbox-dark {
+		--checkbox-color: #6d6f71;
+	}
 	&.checkbox-white {
 		--checkbox-color: #2f80ed;
 		.checkbox__content {
