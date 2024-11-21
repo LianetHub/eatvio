@@ -62,6 +62,7 @@
 		overflow-x: hidden;
 		height: calc(100vh - 14.625rem);
 		margin: rem(20) em(0) em(0) em(0);
+		padding-right: 0.25rem;
 		@media (min-width: $md3) {
 			margin: rem(32) em(0) em(0) em(0);
 		}
