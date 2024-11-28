@@ -9799,6 +9799,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 700;
   font-size: 1.125rem;
   padding: 0.45em 1.1111111111em;
+  width: 100%;
 }
 
 .diary__column-icon {
@@ -20047,7 +20048,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .diary__main-row .input {
     padding: 0.7em 1.1111111111em;
     padding-left: 3rem;
-    width: 123px;
   }
 
   .diary__product-bottom {

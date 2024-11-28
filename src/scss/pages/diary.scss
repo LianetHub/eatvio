@@ -2238,7 +2238,6 @@
 			@media (min-width: $md5) {
 				padding: 0.7em 1.1111111111em;
 				padding-left: rem(48);
-				width: 123px;
 			}
 		}
 	}
@@ -3301,6 +3300,7 @@
 			font-weight: 700;
 			font-size: 1.125rem;
 			padding: 0.45em 1.1111111111em;
+			width: 100%;
 			@media (min-width: $md4) {
 				padding: 0.7em 1.1111111111em;
 			}
