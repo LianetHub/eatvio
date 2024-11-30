@@ -13452,6 +13452,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__caption {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13460,6 +13464,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
           column-gap: 1rem;
   margin-top: 0 !important;
   margin-bottom: auto !important;
+  z-index: 4;
+}
+
+.chat__caption::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  right: -20px;
+  bottom: -12px;
+  background: #fff;
 }
 
 .chat__more {
@@ -13769,6 +13784,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .chat__content {
+  position: relative;
   padding: 1em;
   height: calc(100dvh - 180px);
   background: #fff;
@@ -22639,6 +22655,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .settings__recipe-row {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+
+  .diary__main-header {
+    width: calc(100% - 400px);
+  }
+
+  .diary__main-header .diary__main-column:last-child {
+    width: 100%;
   }
 
   .diary__product {
