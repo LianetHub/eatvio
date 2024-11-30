@@ -9506,6 +9506,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__main-name {
   position: relative;
+  min-height: 100%;
+}
+
+.diary__main-name .input {
+  min-height: 100%;
 }
 
 .diary__main-side {
