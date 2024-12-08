@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 6
+            })
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <div class="settings__person-title title fw-bold">
+                                Информация о заказе
+                            </div>
+                        </div>
+                        <div class="bid">
+                            <div class="bid__banner fail">
+                                <div class="bid__banner-title">Что-то пошло нет так, оплата не прошла</div>
+                                <p class="bid__banner-desc">Попробуйте еще раз</p>
+                                <a href="" class="bid__banner-btn l-btn l-btn-primary">Оплатить</a>
+                            </div>
+                            <div class="bid__header">
+                                <div class="bid__block">
+                                    <div class="bid__block-body">
+                                        <div class="bid__block-thumb">
+                                            <img src="img/user.png" alt="user">
+                                        </div>
+                                        <div class="bid__block-info">
+                                            <div class="bid__block-position">Продавец</div>
+                                            <div class="bid__block-name">Дмитрий Коваль</div>
+                                            <div class="diet__rate-value pc-only">
+                                                128-й в рейтинге
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="diet__rate-value mobile-only">
+                                        128-й в рейтинге
+                                    </div>
+                                </div>
+                                <div class="bid__block">
+                                    <ul class="bid__list">
+                                        <li class="bid__item">
+                                            <div class="bid__name">Статус заказа</div>
+                                            <div class="bid__status fail">Оплата не прошла</div>
+                                        </li>
+                                        <li class="bid__item">
+                                            <div class="bid__name">Цена заказа</div>
+                                            <div class="bid__value">2500₽</div>
+                                        </li>
+                                        <li class="bid__item">
+                                            <div class="bid__name">Время выполнения плана</div>
+                                            <div class="bid__value">7 дней</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bid__body">
+                                <div class="bid__title">
+                                    Название плана
+                                </div>
+                                <div class="bid__plan">
+                                    <div class="bid__plan-main">
+                                        <div class="bid__plan-image">
+                                            <img src="img/posts/09.png" class="cover-image" alt="">
+                                        </div>
+                                        <p class="bid__plan-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu, urna, quis in at. Elementum varius amet id faucibus pellentesque tincidunt sit cras convallis. Varius pretium euismod justo bibendum est, sapien. Mattis ultrices mi diam vitae. At eu porttitor aenean libero eleifend.</p>
+                                    </div>
+                                    <div class="bid__plan-side">
+                                        <div class="bid__plan-caption">Самое то</div>
+                                        <p class="bid__plan-subtitle">
+                                            Отлично подходит если вы основательно решили изменить свою жизнь.
+                                        </p>
+                                        <ul class="bid__plan-list">
+                                            <li>Комментирование отчетов</li>
+                                            <li>Подробный план</li>
+                                            <li>Consectetur adipiscing elit</li>
+                                            <li>Комментирование отчетов</li>
+                                            <li>Подробный план</li>
+                                            <li>Consectetur adipiscing elit</li>
+                                            <li>Комментирование отчетов</li>
+                                            <li>Подробный план</li>
+                                            <li>Комментирование отчетов</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bid__footer">
+                                <div class="bid__block-steps">
+                                    <div class="bid__block-step complete">Заказ создан</div>
+                                    <div class="bid__block-step complete">Выбрана дата старта</div>
+                                    <div class="bid__block-step complete">Заказ оплачен</div>
+                                    <div class="bid__block-step">В процессе</div>
+                                    <div class="bid__block-step">Завершен</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+
+        @@include('html/_modal.html', {
+        "modal": "cancel-bid"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="consults">
+                    <div class="consults__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Мои финансы
+                            </div>
+                        </div>
+                        <div class="archive">
+                            <div class="archive__body">
+                                <div class="archive__filters">
+                                    <div class="archive__select select">
+                                        <select>
+                                            <option value="0">За всё время</option>
+                                            <option value="1">За последнюю неделю</option>
+                                            <option value="2">За последний месяц</option>
+                                            <option value="3">За последний год</option>
+                                        </select>
+                                    </div>
+                                    <a href="" class="archive__btn l-btn l-btn-primary icon-arrow-right">Управление картами</a>
+                                </div>
+                                <div class="archive__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Дата</th>
+                                                <th>id транзакции</th>
+                                                <th>План питания</th>
+                                                <th>Покупатель</th>
+                                                <th>Дней</th>
+                                                <th>Сумма</th>
+                                                <th>Статус</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="archive__date">30.10.2024</td>
+                                                <td class="archive__id"><span class="tooltip-lg" data-tooltip="b1324f30-e128-432a-b0e6-6e609928fcb8">b132...fcb8</span></td>
+                                                <td class="archive__plan">Название плана</td>
+                                                <td class="archive__name">Иван Иванов</td>
+                                                <td class="archive__days">7 <span class="mobily-only">дней</span></td>
+                                                <td class="archive__price">100 000₽</td>
+                                                <td class="archive__status green-color">Успешно</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="archive__date">30.10.2024</td>
+                                                <td class="archive__id"><span class="tooltip-lg" data-tooltip="asd24f30-e128-432a-b0e6-6e6099283231">asd2...3231</span></td>
+                                                <td class="archive__plan">Название плана</td>
+                                                <td class="archive__name">Иван Иванов</td>
+                                                <td class="archive__days">21 <span class="mobily-only">день</span></td>
+                                                <td class="archive__price">10 000₽</td>
+                                                <td class="archive__status accent-color">В процессе</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="archive__date">30.10.2024</td>
+                                                <td class="archive__id"><span class="tooltip-lg" data-tooltip="jghd4f30-e128-432a-b0e6-6e6099284edf">jghd...4edf</span></td>
+                                                <td class="archive__plan">Название плана</td>
+                                                <td class="archive__name">Иван Иванов</td>
+                                                <td class="archive__days">14 <span class="mobily-only">дней</span></td>
+                                                <td class="archive__price">1000₽</td>
+                                                <td class="archive__status green-color">Успешно</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="archive__date">30.10.2024</td>
+                                                <td class="archive__id"><span class="tooltip-lg" data-tooltip="b1324f30-e128-432a-b0e6-6e609928fcb8">b132...fcb8</span></td>
+                                                <td class="archive__plan">Название плана</td>
+                                                <td class="archive__name">Иван Иванов</td>
+                                                <td class="archive__days">7 <span class="mobily-only">дней</span></td>
+                                                <td class="archive__price">100 000₽</td>
+                                                <td class="archive__status accent-color">В процессе</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="archive__date">30.10.2024</td>
+                                                <td class="archive__id"><span class="tooltip-lg" data-tooltip="asd24f30-e128-432a-b0e6-6e6099283231">asd2...3231</span></td>
+                                                <td class="archive__plan">Название плана</td>
+                                                <td class="archive__name">Иван Иванов</td>
+                                                <td class="archive__days">14 <span class="mobily-only">дней</span></td>
+                                                <td class="archive__price">10 000₽</td>
+                                                <td class="archive__status green-color">Успешно</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_logout.html')
+        </div>
+        @@include('html/_footer.html', {
+        "className": ""
+        })
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

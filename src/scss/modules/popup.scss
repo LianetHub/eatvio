@@ -936,7 +936,7 @@
 	}
 	// .popup__edit-product
 	&__edit-product {
-		padding: rem(30) rem(50) rem(50);
+		padding: rem(30) rem(50);
 		.title {
 			font-size: 1.75rem;
 			margin-bottom: 1.88rem;
@@ -949,6 +949,34 @@
 		}
 		.label {
 			opacity: 0.8;
+		}
+	}
+	// .popup__wrapper
+	&__wrapper {
+		padding: rem(30) rem(50);
+		.title {
+			font-size: 1.75rem;
+			margin-bottom: 1.88rem;
+			text-align: center;
+			color: #323f4b;
+			margin-bottom: 0;
+			&.sm-offset {
+				margin-bottom: 0;
+			}
+		}
+		.label {
+			opacity: 0.8;
+		}
+		& .popup__subtitle {
+			+ .l-btn {
+				margin-top: rem(28);
+			}
+		}
+		& > .l-btn {
+			min-width: rem(240);
+			margin: 2rem auto 0;
+			align-self: center;
+			display: flex;
 		}
 	}
 	// .popup__persons

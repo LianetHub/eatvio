@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="consults">
+                    <div class="consults__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left">
+                                <span class="pc-only">Мои финансы</span>
+                            </a>
+                            <div class="settings__person-title title">
+                                Мои карты
+                            </div>
+                        </div>
+                        <div class="receiving">
+                            <div class="receiving__title">
+                                Привязанные карты
+                            </div>
+                            <div class="receiving__subtitle">
+                                Выплаты будут производится на карту *0278
+                            </div>
+                            <div class="receiving__cards">
+                                <label class="receiving__card">
+                                    <input type="radio" name="card" checked value="card-1" class="receiving__card-input hidden" hidden>
+                                    <span class="receiving__card-body">
+                                        <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
+                                        <span class="receiving__card-logo">
+                                            <img src="@img/mir-logo.svg" alt="MIR">
+                                        </span>
+                                        <span class="receiving__card-num">** 0278</span>
+                                    </span>
+                                </label>
+                                <label class="receiving__card">
+                                    <input type="radio" name="card" value="card-2" class="receiving__card-input hidden" hidden>
+                                    <span class="receiving__card-body">
+                                        <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
+                                        <span class="receiving__card-logo">
+                                            <img src="@img/mir-logo.svg" alt="MIR">
+                                        </span>
+                                        <span class="receiving__card-num">** 5048</span>
+                                    </span>
+                                </label>
+                                <button type="button" class="receiving__card-add icon-add-card">
+                                    Добавить карту
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "unlink-card"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

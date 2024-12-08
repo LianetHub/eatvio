@@ -596,6 +596,16 @@
 			}
 		}
 	}
+	// .notification__item-btn
+	&__item-btn {
+		margin-top: rem(12);
+		min-width: rem(260);
+		&:not(.l-btn-md) {
+			font-size: 1rem;
+			font-weight: 600;
+			min-height: rem(50);
+		}
+	}
 	// .notification__hint
 	&__hint {
 	}

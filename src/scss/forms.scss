@@ -540,7 +540,6 @@ input[type="date"] {
 	padding: em(14, 18) em(50, 18);
 	border-radius: 8px;
 	column-gap: 10px;
-	// color: #fff;
 	font-size: 18px;
 	font-weight: 700;
 	&.l-btn-primary {
@@ -670,11 +669,10 @@ input[type="date"] {
 		}
 	}
 	&.l-btn-md {
-		font-size: 18px;
-		padding: em(8, 18) em(34, 18);
-	}
-	&.l-btn-md {
 		font-size: 16px;
+		line-height: normal;
+		padding: em(10, 16) em(34, 16);
+		font-weight: 600;
 	}
 	&.l-btn-lg {
 		padding: em(16, 20) em(33, 20);

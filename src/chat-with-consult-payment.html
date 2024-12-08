@@ -101,17 +101,9 @@
                                     @@include('./html/_chat-actions.html',{})
                                 </div>
                                 <div class="chat__content">
-                                    <div class="chat__caption pc-only">
-                                        <div class="chat__steps">
-                                            <div class="chat__steps-item complete">Выбрана дата старта</div>
-                                            <div class="chat__steps-item complete">Заказ оплачен</div>
-                                            <div class="chat__steps-item">Заказ в работе</div>
-                                            <div class="chat__steps-item">Завершен</div>
-                                        </div>
-                                        <a href="" class="chat__more">
-                                            <span class="icon-down"></span>
-                                        </a>
-                                    </div>
+                                    @@include('./html/_chat-caption.html',{
+                                    'active': 2
+                                    })
                                     <div class="chat__date">
                                         21 марта 2024
                                     </div>

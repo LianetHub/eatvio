@@ -1,68 +1,49 @@
 {
 	// EXAMPLE
-		"Print to console": {
+	"Print to console": {
 		"scope": "javascript,typescript",
 		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
+		"body": ["console.log('$1');", "$2"],
 		"description": "Log output to console"
 	},
 	"Внешний отступ top": {
 		"prefix": "mmt",
-		"body": [
-			"margin: em($1) em(0) em(0) em(0);"
-		],
+		"body": ["margin: em($1) em(0) em(0) em(0);"],
 		"description": "Внешний отступ top"
 	},
 	"Внешний отступ bottom": {
 		"prefix": "mmb",
-		"body": [
-			"margin: em(0) em(0) em($1) rem(0);"
-		],
+		"body": ["margin: em(0) em(0) em($1) rem(0);"],
 		"description": "Внешний отступ bottom"
 	},
 	"Внешний отступ left": {
 		"prefix": "mml",
-		"body": [
-			"margin: em(0) em(0) em(0) em($1);"
-		],
+		"body": ["margin: em(0) em(0) em(0) em($1);"],
 		"description": "Внешний отступ left"
 	},
 	"Внешний отступ right": {
 		"prefix": "mmr",
-		"body": [
-			"margin: em(0) em($1) em(0) em(0);"
-		],
+		"body": ["margin: em(0) em($1) em(0) em(0);"],
 		"description": "Внешний отступ right"
 	},
 	"Внутренний отступ top": {
 		"prefix": "ppt",
-		"body": [
-			"padding: em($1) em(0) em(0) em(0);"
-		],
+		"body": ["padding: em($1) em(0) em(0) em(0);"],
 		"description": "Внутренний отступ top"
 	},
 	"Внутренний отступ borrom": {
 		"prefix": "ppb",
-		"body": [
-			"padding: em(0) em(0) em($1) em(0);"
-		],
+		"body": ["padding: em(0) em(0) em($1) em(0);"],
 		"description": "Внутренний отступ bottom"
 	},
 	"Внутренний отступ left": {
 		"prefix": "ppl",
-		"body": [
-			"padding: em(0) em(0) em(0) em($1);"
-		],
+		"body": ["padding: em(0) em(0) em(0) em($1);"],
 		"description": "Внутренний отступ left"
 	},
 	"Внутренний отступ right": {
 		"prefix": "ppr",
-		"body": [
-			"padding: em(0) em($1) em(0) em(0);"
-		],
+		"body": ["padding: em(0) em($1) em(0) em(0);"],
 		"description": "Внутренний отступ right"
 	},
 	"Бургер HTML": {
@@ -74,65 +55,47 @@
 	},
 	"Контейнер": {
 		"prefix": "cnt",
-		"body": [
-			"<div class=\"$2__container\">\n\t\n</div>"
-		],
+		"body": ["<div class=\"$2__container\">\n\t\n</div>"],
 		"description": "container"
 	},
 	"transition": {
 		"prefix": "trn",
-		"body": [
-			"transition: all$2 0.3s ease 0s;"
-		],
+		"body": ["transition: all$2 0.3s ease 0s;"],
 		"description": "transition"
 	},
 	"mediaqueries max": {
 		"prefix": "md",
-		"body": [
-			"@media (max-width:$$md$2) {\n\n}"
-		],
+		"body": ["@media (max-width:$$md$2) {\n\n}"],
 		"description": "mediaqueries max"
 	},
 	"mediaqueries min": {
 		"prefix": "mn",
-		"body": [
-			"@media (min-width:$$md$2) {\n\n}"
-		],
+		"body": ["@media (min-width:$$md$2) {\n\n}"],
 		"description": "mediaqueries min"
 	},
 	"hover": {
 		"prefix": "hov",
-		"body": [
-			"@media (any-hover: hover) {\n\t&:hover {\n\t\t$1\n\t}\n}"
-		],
+		"body": ["@media (any-hover: hover) {\n\t&:hover {\n\t\t$1\n\t}\n}"],
 		"description": "hover"
 	},
 	"adaptive value": {
 		"prefix": "adap",
-		"body": [
-			"@include adaptiv-value(\"$1\", , , 1);"
-		],
+		"body": ["@include adaptiv-value(\"$1\", , , 1);"],
 		"description": "adaptive value"
 	},
 	"adaptive font-size": {
 		"prefix": "afz",
-		"body": [
-			"@include adaptiv-value(\"font-size\", $1, , 1);"
-		],
+		"body": ["@include adaptiv-value(\"font-size\", $1, , 1);"],
 		"description": "adaptive fontsize"
 	},
 	"not last-child": {
 		"prefix": "not",
-		"body": [
-			"&:not(:last-child) {\n\t$1\n}"
-		],
+		"body": ["&:not(:last-child) {\n\t$1\n}"],
 		"description": "not last-child"
 	},
 	"line-height": {
 		"prefix": "lh",
-		"body": [
-			"line-height: math.div($2, );"
-		],
+		"body": ["line-height: math.div($2, );"],
 		"description": "line-height"
 	},
 	"swiper": {
@@ -228,23 +191,17 @@
 	},
 	"before": {
 		"prefix": "bef",
-		"body": [
-			"&::before {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\t$2\n}"
-		],
+		"body": ["&::before {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\t$2\n}"],
 		"description": "before"
 	},
 	"after": {
 		"prefix": "aft",
-		"body": [
-			"&::after {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\t$2\n}"
-		],
+		"body": ["&::after {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\t$2\n}"],
 		"description": "after"
 	},
 	"background": {
 		"prefix": "bgu",
-		"body": [
-			"background: url(\"$1\") 0 0 / cover no-repeat;"
-		],
+		"body": ["background: url(\"$1\") 0 0 / cover no-repeat;"],
 		"description": "background"
 	},
 	"submenu": {
@@ -284,28 +241,22 @@
 	},
 	"lgcolor": {
 		"prefix": "lgcolor",
-		"body": [
-			"-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nbackground-clip: text;\ntext-fill-color: transparent;\n"
-		],
+		"body": ["-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nbackground-clip: text;\ntext-fill-color: transparent;\n"],
 		"description": "lgcolor"
 	},
 	"corr": {
 		"prefix": "corr",
-		"body": [
-			"math.round($0 * math.div(375, 960))"
-		],
+		"body": ["math.round($0 * math.div(375, 960))"],
 		"description": "corr"
 	},
 	"corr": {
 		"prefix": "fff2",
-		"body": [
-			"font-family: $$font2;"
-		],
+		"body": ["font-family: $$font2;"],
 		"description": "fff2"
+	},
+	"has": {
+		"prefix": "has",
+		"body": ["@supports (selector(:has(*))) {\n\t&:has($0) {\n\t}\n}\n@supports not (selector(:has(*))) {\n}"],
+		"description": "has support"
 	}
 }
-
-
-
-
-

@@ -1,0 +1,37 @@
+<div class="chat__caption pc-only">
+    <div class="chat__steps">
+        @@if(active==0){
+        <div class="chat__steps-item">Выбрана дата старта</div>
+        <div class="chat__steps-item">Заказ оплачен</div>
+        <div class="chat__steps-item">Заказ в работе</div>
+        <div class="chat__steps-item">Завершен</div>
+        }
+        @@if(active==1){
+        <div class="chat__steps-item complete">Выбрана дата старта</div>
+        <div class="chat__steps-item">Заказ оплачен</div>
+        <div class="chat__steps-item">Заказ в работе</div>
+        <div class="chat__steps-item">Завершен</div>
+        }
+        @@if(active==2){
+        <div class="chat__steps-item complete">Выбрана дата старта</div>
+        <div class="chat__steps-item complete">Заказ оплачен</div>
+        <div class="chat__steps-item">Заказ в работе</div>
+        <div class="chat__steps-item">Завершен</div>
+        }
+        @@if(active==3){
+        <div class="chat__steps-item complete">Выбрана дата старта</div>
+        <div class="chat__steps-item complete">Заказ оплачен</div>
+        <div class="chat__steps-item complete">Заказ в работе</div>
+        <div class="chat__steps-item">Завершен</div>
+        }
+        @@if(active==4){
+        <div class="chat__steps-item complete">Выбрана дата старта</div>
+        <div class="chat__steps-item complete">Заказ оплачен</div>
+        <div class="chat__steps-item complete">Заказ в работе</div>
+        <div class="chat__steps-item complete">Завершен</div>
+        }
+    </div>
+    <a href="" class="chat__more">
+        <span class="icon-attention"></span>
+    </a>
+</div>

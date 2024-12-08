@@ -1561,3 +1561,53 @@
     </div>
 </div>
 }
+@@if (modal==="unlink-card") {
+<div id="unlink-card" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title title-xl font-bold">
+                    Отвязать карту
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите отвязать карту?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-sm l-btn-secondary">Отмена</button>
+                    <a href="#unlink-card-success" data-modal class="popup__selecting-btn l-btn l-btn-sm l-btn-primary">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="unlink-card-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title title-xl font-bold">
+                    Карта **** успешно отвязана
+                </div>
+                <button type="button" data-close-modal class="l-btn l-btn-sm l-btn-primary">Хорошо</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="payment-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title title-xl font-bold">
+                    Выплата одобрена
+                </div>
+                <p class="popup__subtitle">
+                    Средства отправлены на карту **0278
+                </p>
+                <button type="button" data-close-modal class="l-btn l-btn-sm l-btn-primary">Хорошо</button>
+            </div>
+        </div>
+    </div>
+</div>
+}

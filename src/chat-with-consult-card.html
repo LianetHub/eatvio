@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Fitness' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page left-mobile-gap">
+                <section class="chat">
+                    <div class="chat__container active">
+                        <div class="chat__contacts">
+                            <form action="#" class="chat__contacts-search search">
+                                <button class="search__btn icon-search"></button>
+                                <input type="text" name="search" class="search__input" placeholder="Поиск">
+                            </form>
+                            <ul class="chat__contacts-list">
+                                <li class="chat__contacts-item active">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="@img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Иван Долгунов
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            image.jpeg
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            Пт
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="chat__contacts-item delivered">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="@img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Ксения Обрамова
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            Привет, хорошая статья
+                                        </div>
+                                        <div class="chat__contacts-text chat-file">
+                                            GIF
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            9/29
+                                        </div>
+                                        <ul class="chat__contacts-progress">
+                                            <li>Проходит план</li>
+                                            <li>4 из 14 дней</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="chat__contacts-item read">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="@img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Данил Иванов
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            Посоветуй пожалуйста рецепт вкусного завтрака.
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            9/29
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat__body">
+                            <div class="chat__block active">
+                                <div class="chat__header">
+                                    <button type="button" class="chat__back icon-down"></button>
+                                    <div class="chat__person">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="user">
+                                        </div>
+                                        <div class="chat__info">
+                                            <div class="chat__name">
+                                                Иван Долгунов
+                                            </div>
+                                            <div class="chat__time">
+                                                был в сети 37 минут назад
+                                            </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
+                                </div>
+                                <div class="chat__content">
+                                    @@include('./html/_chat-caption.html',{
+                                    'active': 0
+                                    })
+                                    <div class="chat__date">
+                                        21 марта 2024
+                                    </div>
+                                    <div class="chat__item">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="thumb">
+                                        </div>
+                                        <div class="chat__message">
+                                            <div class="chat__heading">
+                                                <a href="" class="chat__name">
+                                                    Дмитрий
+                                                </a>
+                                            </div>
+                                            <div class="chat__message-body">
+                                                <div class="chat__message-block">
+                                                    <p class="chat__message-badge lg-badge">Пользователь заказал план</p>
+                                                    <div class="chat__time">13:47</div>
+                                                </div>
+                                                <div class="plans__item">
+                                                    <div class="plans__item-image">
+                                                        <img src="img/posts/05.png" class="cover-image" alt="post">
+                                                        <div class="plans__item-info">
+                                                            <div class="plans__item-stats">
+                                                                <div class="plans__item-stat">
+                                                                    14 Дней
+                                                                </div>
+                                                                <div class="plans__item-stat">
+                                                                    от 2500₽
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plans__item-body">
+                                                        <div class="plans__item-header">
+                                                            <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                                            <a href="#refusal-order" data-modal class="plans__item-delete">Отказаться от заказа</a>
+                                                        </div>
+                                                        <div class="plans__item-option">
+                                                            Опция: Самое то
+                                                        </div>
+                                                        <ul class="plans__item-list">
+                                                            <li>14 дневный план</li>
+                                                            <li>Ежедневное наблюдение за рационом</li>
+                                                            <li>Консультации</li>
+                                                            <li>Общие рекомендации</li>
+                                                        </ul>
+                                                        <a href="" class="plans__item-user l-btn l-btn-primary">Анкета пользователя</a>
+                                                        <div class="plans__item-notify">
+                                                            <div class="plans__item-notify-title">
+                                                                Не привязана карта для выплаты
+                                                            </div>
+                                                            <a href="" class="plans__item-notify-link">Привязать карту</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat__banner">
+                                                    <div class="chat__banner-caption">Дату старта плана невозможно выбрать, пока&nbsp;Вы не привяжите карту</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat__footer">
+                                    <label class="chat__file">
+                                        <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                        <span class="chat__file-btn icon-clip"></span>
+                                    </label>
+                                    <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                    <button type="button" class="chat__voice icon-voice"></button>
+                                </div>
+                            </div>
+                            <div class="chat__block">
+                                <div class="chat__header">
+                                    <button type="button" class="chat__back icon-down"></button>
+                                    <div class="chat__person">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="user">
+                                        </div>
+                                        <div class="chat__info">
+                                            <div class="chat__name">
+                                                Ксения Обрамова
+                                            </div>
+                                            <div class="chat__time">
+                                                был в сети 37 минут назад
+                                            </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
+                                </div>
+                                <div class="chat__content">
+                                    <div class="chat__item">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="thumb">
+                                        </div>
+                                        <div class="chat__message">
+                                            <div class="chat__heading">
+                                                <a href="" class="chat__name">
+                                                    Ксения
+                                                </a>
+                                                <div class="chat__time">13:45</div>
+                                            </div>
+                                            <div class="chat__message-body">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu.
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="chat__footer">
+                                    <label class="chat__file">
+                                        <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                        <span class="chat__file-btn icon-clip"></span>
+                                    </label>
+                                    <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                    <button type="button" class="chat__voice icon-voice"></button>
+                                </div>
+                            </div>
+                            <div class="chat__block">
+                                <div class="chat__header">
+                                    <button type="button" class="chat__back icon-down"></button>
+                                    <div class="chat__person">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="user">
+                                        </div>
+                                        <div class="chat__info">
+                                            <div class="chat__name">
+                                                Данил Иванов
+                                            </div>
+                                            <div class="chat__time">
+                                                был в сети 37 минут назад
+                                            </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('./html/_chat-actions.html',{})
+                                </div>
+                                <div class="chat__content">
+                                    <div class="chat__item">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="thumb">
+                                        </div>
+                                        <div class="chat__message">
+                                            <div class="chat__heading">
+                                                <a href="" class="chat__name">
+                                                    Данил
+                                                </a>
+                                                <div class="chat__time">13:45</div>
+                                            </div>
+                                            <div class="chat__message-body">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu.
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__item">
+                                        <div class="chat__thumb">
+                                            <img src="@img/user-2.png" alt="thumb">
+                                        </div>
+                                        <div class="chat__message">
+                                            <div class="chat__heading">
+                                                <a href="" class="chat__name">
+                                                    Данил
+                                                </a>
+                                                <div class="chat__time">13:45</div>
+                                            </div>
+                                            <div class="chat__message-body">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum diam diam ac egestas commodo laoreet aliquet. Netus ac ipsum consequat, augue nisl rhoncus pulvinar ut donec. Pretium mattis urna, ullamcorper at libero, faucibus. Eu tortor consequat risus, risus amet eu.
+                                                </p>
+                                                <img src="@img/dish.jpg" alt="dish">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat__footer">
+                                    <label class="chat__file">
+                                        <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                        <span class="chat__file-btn icon-clip"></span>
+                                    </label>
+                                    <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                    <button type="button" class="chat__voice icon-voice"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": " pc-only"
+            })
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "date-select"
+        })
+        @@include('html/_modal.html', {
+        "modal": "refusal-order"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

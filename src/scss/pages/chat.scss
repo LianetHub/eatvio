@@ -314,17 +314,23 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		span {
-			width: rem(32);
-			height: rem(32);
-			border-radius: 50%;
+		position: relative;
+		z-index: 2;
+		& span {
+			width: 2rem;
+			height: 2rem;
 			background: #fff;
+			border-radius: 50%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&::before {
-				transform: rotate(-90deg);
-				color: #2f80ed;
+			font-size: 1.25rem;
+			color: #2f80ed;
+		}
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: darken($color: #f6faff, $amount: 10);
 			}
 		}
 	}
@@ -681,7 +687,9 @@
 			.plans__item-image {
 				flex: 0 0 120px;
 				padding-bottom: 120px;
-				min-height: 12.5rem;
+				@media (max-width: $md5) {
+					min-height: 12.5rem;
+				}
 			}
 			.plans__item-stat {
 				font-size: 0.75rem;
@@ -851,8 +859,8 @@
 	// .chat__banner-caption
 	&__banner-caption {
 		font-size: 1rem;
-		padding-right: 1rem;
 		@media (min-width: $md4) {
+			padding-right: 1rem;
 			font-size: 1.25rem;
 		}
 		&.sm-caption {
@@ -890,6 +898,16 @@
 		}
 		&.red-color {
 			color: #d01717;
+		}
+	}
+	// .chat__banner-btn
+	&__banner-btn {
+		margin-top: 1rem;
+		font-size: 1rem;
+		font-weight: 600;
+		@media (max-width: $md5) {
+			padding-inline: 0.5rem;
+			width: 100%;
 		}
 	}
 	// .chat__step
@@ -968,6 +986,11 @@
 				margin-top: 1.5rem;
 			}
 		}
+		&.fail {
+			&::before {
+				background: #d01717;
+			}
+		}
 	}
 	// .bid__banner-title
 	&__banner-title {
@@ -997,12 +1020,36 @@
 			margin-top: 0.75rem;
 		}
 	}
+	// .bid__banner-btns
+	&__banner-btns {
+		display: flex;
+		flex-direction: column;
+		gap: rem(8);
+		margin-top: rem(20);
+		@media (min-width: $md5) {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		.bid__banner-btn {
+			margin-top: 0;
+			font-size: 1rem;
+			font-weight: 600;
+			padding: 0.75rem;
+		}
+	}
+
 	// .bid__banner-btn
 	&__banner-btn {
 		margin-top: 0.75rem;
 		width: 100%;
+		font-size: 1rem;
+		font-weight: 600;
+		min-height: rem(50);
 		@media (min-width: $md5) {
 			max-width: 15.875rem;
+		}
+		&.l-btn-secondary {
+			color: #323f4b;
 		}
 	}
 	// .bid__banner-complaint
@@ -1075,6 +1122,9 @@
 		font-size: 0.75rem;
 		@media (min-width: $md5) {
 			font-size: 1rem;
+		}
+		&.fail {
+			background: #d01717;
 		}
 	}
 	// .bid__value

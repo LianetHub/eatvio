@@ -1391,12 +1391,43 @@
 		font-weight: 600;
 		border-radius: 0.5rem;
 		display: inline-block;
+		align-self: flex-start;
 		transition: background-color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #2f80ed;
 				color: #fff;
 			}
+		}
+	}
+	// .plans__item-notify
+	&__item-notify {
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: rem(1) solid #f1f2f6;
+		order: 2;
+	}
+	// .plans__item-notify-title
+	&__item-notify-title {
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+	}
+	// .plans__item-notify-link
+	&__item-notify-link {
+		margin-top: 0.5rem;
+		color: #2f80ed;
+		font-weight: 600;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: darken($color: #2f80ed, $amount: 10);
+			}
+		}
+		font-size: 1.125rem;
+		@media (min-width: $md4) {
+			font-size: 1rem;
 		}
 	}
 	// .plans__item-footer
