@@ -995,7 +995,7 @@
 	// .bid__banner-title
 	&__banner-title {
 		font-weight: 500;
-		font-size: 1rem;
+		font-size: rem(18);
 		@media (min-width: $md4) {
 			font-size: 1.25rem;
 		}
@@ -1007,26 +1007,26 @@
 		font-size: 0.875rem;
 		@media (min-width: $md4) {
 			font-size: 1rem;
-			margin-top: 1rem;
+			margin-top: rem(12);
 		}
 	}
 	// .bid__banner-subtitle
 	&__banner-subtitle {
 		font-weight: 500;
-		font-size: 0.875rem;
+		font-size: 1rem;
 		margin-top: 0.5rem;
 		@media (min-width: $md4) {
-			font-size: 1rem;
 			margin-top: 0.75rem;
 		}
 	}
 	// .bid__banner-btns
 	&__banner-btns {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: rem(8);
-		margin-top: rem(20);
+		margin-top: rem(12);
 		@media (min-width: $md5) {
+			margin-top: rem(16);
 			flex-wrap: wrap;
 			flex-direction: row;
 		}
@@ -1040,7 +1040,7 @@
 
 	// .bid__banner-btn
 	&__banner-btn {
-		margin-top: 0.75rem;
+		margin-top: 1rem;
 		width: 100%;
 		font-size: 1rem;
 		font-weight: 600;
@@ -1117,7 +1117,7 @@
 	&__status {
 		color: #fff;
 		padding: 0.38rem 0.63rem;
-		border-radius: 0.25rem;
+		border-radius: 0.5rem;
 		background: #019a3e;
 		font-size: 0.75rem;
 		@media (min-width: $md5) {

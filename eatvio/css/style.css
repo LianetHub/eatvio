@@ -4331,7 +4331,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding-bottom: 6.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .page.left-mobile-gap {
@@ -14275,7 +14275,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .bid__banner-title {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .bid__banner-desc {
@@ -14286,7 +14286,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .bid__banner-subtitle {
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -14295,11 +14295,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   gap: 0.5rem;
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
 }
 
 .bid__banner-btns .bid__banner-btn {
@@ -14310,7 +14310,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .bid__banner-btn {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   width: 100%;
   font-size: 1rem;
   font-weight: 600;
@@ -14370,7 +14370,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .bid__status {
   color: #fff;
   padding: 0.38rem 0.63rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   background: #019a3e;
   font-size: 0.75rem;
 }
@@ -14928,12 +14928,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .receiving__title {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .receiving__subtitle {
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 0.25rem;
   line-height: normal;
 }
@@ -15036,8 +15036,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   border-radius: 0.5rem;
   border: 0.0625rem solid #f1f2f6;
-  -webkit-box-shadow: inset 0 0 0 0.25rem #fff;
-          box-shadow: inset 0 0 0 0.25rem #fff;
   background: rgba(217, 217, 217, 0.01);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15065,7 +15063,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .receiving__card-add::after {
   content: "";
   position: absolute;
-  inset: 0.25rem;
+  inset: 0.125rem;
   border-radius: 0.25rem;
   background: #f1f2f6;
   -webkit-transition: background-color 0.3s ease 0s;
@@ -16377,7 +16375,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .archive__body:not(:first-child) {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 @supports (selector(:has(*))) {
@@ -16434,7 +16432,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .archive__btn {
   width: 100%;
-  padding: 0.9375rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   font-size: 1rem;
 }
 
@@ -16442,6 +16440,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.archive__select select {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
 }
 
 .archive__table {
@@ -20795,6 +20798,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .bid__banner-btns {
+    margin-top: 1rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
@@ -22378,11 +22382,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .bid__banner-desc {
     font-size: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
 
   .bid__banner-subtitle {
-    font-size: 1rem;
     margin-top: 0.75rem;
   }
 
@@ -22493,7 +22496,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .receiving__subtitle {
     margin-top: 0.5rem;
-    font-size: 1rem;
   }
 
   .diet__form {

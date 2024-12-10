@@ -281,7 +281,7 @@
 	// .receiving__title
 	&__title {
 		font-weight: 500;
-		font-size: 1rem;
+		font-size: 1.125rem;
 		@media (min-width: $md4) {
 			font-size: 1.25rem;
 		}
@@ -289,12 +289,11 @@
 	// .receiving__subtitle
 	&__subtitle {
 		font-weight: 500;
-		font-size: 0.875rem;
+		font-size: 1rem;
 		margin-top: 0.25rem;
 		line-height: normal;
 		@media (min-width: $md4) {
 			margin-top: 0.5rem;
-			font-size: 1rem;
 		}
 	}
 	// .receiving__cards
@@ -393,7 +392,6 @@
 		cursor: pointer;
 		border-radius: 0.5rem;
 		border: rem(1) solid #f1f2f6;
-		box-shadow: inset 0 0 0 0.25rem #fff;
 		background: rgba(217, 217, 217, 0.01);
 		display: flex;
 		flex-direction: column;
@@ -409,7 +407,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			inset: 0.25rem;
+			inset: 0.125rem;
 			border-radius: 0.25rem;
 			background: #f1f2f6;
 			transition: background-color 0.3s ease 0s;

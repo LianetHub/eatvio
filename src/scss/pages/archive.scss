@@ -86,7 +86,7 @@
 	// .archive__body
 	&__body {
 		&:not(:first-child) {
-			margin-top: 1.5rem;
+			margin-top: 1rem;
 		}
 		border-radius: 0.5rem;
 		background: #fff;
@@ -149,7 +149,7 @@
 			margin-left: auto;
 			width: auto;
 		}
-		padding: rem(15) rem(20);
+		padding: rem(12) rem(20);
 		font-size: 1rem;
 		&::before {
 			order: 1;
@@ -159,6 +159,10 @@
 	&__select {
 		@media (min-width: $md4) {
 			width: 16rem;
+		}
+		select {
+			padding: rem(12) rem(20);
+			font-size: 1rem;
 		}
 	}
 	// .archive__table
