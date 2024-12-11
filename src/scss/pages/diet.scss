@@ -83,10 +83,15 @@
 		box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.15);
 		.textarea {
 			font-size: 16px;
+			height: rem(132);
 			&::placeholder {
 				color: #909fba;
 				opacity: 1;
 			}
+		}
+		.input,
+		.select select {
+			min-height: rem(52);
 		}
 	}
 	// .diet__form-row
@@ -555,16 +560,25 @@
 	}
 	// .diet__services-tablist
 	&__services-tablist {
-		display: flex;
 		border-radius: rem(8);
 		overflow: hidden;
+		display: flex;
+		width: 100%;
+		@media (min-width: $md5) {
+			width: auto;
+		}
 		.l-tab {
 			font-size: 1rem;
 			font-weight: 600;
-			padding: 1.06rem rem(50);
+			padding: 0.875rem rem(50);
+			min-height: rem(50);
 			background: #fff;
 			border: 0;
 			border-radius: 0;
+			flex: 1 1 auto;
+			@media (min-width: $md5) {
+				flex: 0 1 auto;
+			}
 		}
 	}
 	// .diet__services-body
@@ -631,8 +645,12 @@
 				flex-shrink: 0;
 			}
 		}
+		.input {
+			min-height: rem(52);
+		}
 		.textarea {
 			font-size: 16px;
+			height: rem(92);
 			&::placeholder {
 				color: #909fba;
 				opacity: 1;
@@ -641,9 +659,11 @@
 		.checkbox__content {
 			font-size: 1rem;
 		}
+
 		.l-btn {
 			font-size: 1rem;
 			min-width: rem(313);
+			min-height: rem(52);
 		}
 		& > .diet__services-row {
 			@media (min-width: $md4) {

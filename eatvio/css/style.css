@@ -12834,7 +12834,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plan__body {
   position: relative;
-  padding: 1rem 0.5rem 0.75rem;
+  padding: 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12910,8 +12910,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .plan__thumb {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.875rem;
+  height: 2.875rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -12933,13 +12933,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plan__person-info .diet__rate-value {
   margin-top: 0.25rem;
-  font-size: 0.75rem;
   padding: 0.25rem 0.625rem;
 }
 
 .plan__person-name {
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .plan__person-icons {
@@ -13069,7 +13068,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plan__name {
   margin-top: 0.5rem;
-  font-size: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13080,6 +13078,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.125rem;
 }
 
 .plan__name .plan__person-icon {
@@ -13088,7 +13087,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plan__desc {
   margin-top: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-bottom: auto;
 }
 
@@ -13175,7 +13174,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -ms-flexbox;
   display: flex;
   margin-top: 0.75rem;
-  padding: 0.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 0.63rem;
@@ -13519,7 +13517,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  z-index: 3;
+  z-index: 5;
   background: #f0f2f5;
   padding: 0.75rem 0.375rem 0.75rem 0.375rem;
   -webkit-column-gap: 0.75rem;
@@ -15152,6 +15150,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diet__form .textarea {
   font-size: 16px;
+  height: 8.25rem;
 }
 
 .diet__form .textarea::-webkit-input-placeholder {
@@ -15177,6 +15176,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .diet__form .textarea::placeholder {
   color: #909fba;
   opacity: 1;
+}
+
+.diet__form .input,
+.diet__form .select select {
+  min-height: 3.25rem;
 }
 
 .diet__form-row:not(:last-child) {
@@ -15626,20 +15630,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .diet__services-tablist {
+  border-radius: 0.5rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.5rem;
-  overflow: hidden;
+  width: 100%;
 }
 
 .diet__services-tablist .l-tab {
   font-size: 1rem;
   font-weight: 600;
-  padding: 1.06rem 3.125rem;
+  padding: 0.875rem 3.125rem;
+  min-height: 3.125rem;
   background: #fff;
   border: 0;
   border-radius: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .diet__services-body {
@@ -15699,8 +15708,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
       flex-shrink: 0;
 }
 
+.diet__services-column .input {
+  min-height: 3.25rem;
+}
+
 .diet__services-column .textarea {
   font-size: 16px;
+  height: 5.75rem;
 }
 
 .diet__services-column .textarea::-webkit-input-placeholder {
@@ -15735,6 +15749,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .diet__services-column .l-btn {
   font-size: 1rem;
   min-width: 19.5625rem;
+  min-height: 3.25rem;
 }
 
 .diet__services-list {
@@ -20739,10 +20754,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: inline;
   }
 
-  .plan__body {
-    padding: 1rem 0.5rem;
-  }
-
   .plan__person {
     margin-top: 1rem;
     display: -webkit-box;
@@ -20767,6 +20778,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .plan__person-chat {
     margin-left: 1rem;
+  }
+
+  .plan__name {
+    font-size: 1.25rem;
   }
 
   .plan__footer {
@@ -20967,6 +20982,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
   .diet__form-column {
     width: auto;
+  }
+
+  .diet__services-tablist {
+    width: auto;
+  }
+
+  .diet__services-tablist .l-tab {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 
   .subscribers__search {
