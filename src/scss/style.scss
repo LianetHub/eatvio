@@ -3377,7 +3377,7 @@ body {
 				flex: 0 0 100%;
 			}
 		}
-		&.l-btn {
+		&.l-btn.l-btn-sm {
 			font-size: 1rem;
 			font-weight: 400;
 			padding: 0.62rem 0.53rem;
@@ -3399,9 +3399,10 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		align-self: stretch;
 		border-radius: 0.5rem;
-		font-size: 1.25rem;
-		border: rem(1) solid #2f80ed;
+		font-size: 1.5rem;
+		border: rem(2) solid #2f80ed;
 		background: rgba(255, 255, 255, 0.01);
 		transition: all 0.3s ease 0s;
 		@media (any-hover: hover) {

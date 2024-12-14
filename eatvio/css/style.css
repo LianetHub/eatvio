@@ -13179,7 +13179,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 0.63rem;
 }
 
-.plan__bottom-btn.l-btn {
+.plan__bottom-btn.l-btn.l-btn-sm {
   font-size: 1rem;
   font-weight: 400;
   padding: 0.62rem 0.53rem;
@@ -13205,9 +13205,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   border-radius: 0.5rem;
-  font-size: 1.25rem;
-  border: 0.0625rem solid #2f80ed;
+  font-size: 1.5rem;
+  border: 0.125rem solid #2f80ed;
   background: rgba(255, 255, 255, 0.01);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
