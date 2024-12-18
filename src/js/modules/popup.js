@@ -16,7 +16,6 @@ export const popup = () => {
 				? targetBtn.getAttribute('href').replace("#", '')
 				: targetBtn.getAttribute('data-href');
 
-			console.log('click', popupName);
 
 			const modal = document.getElementById(popupName);
 
