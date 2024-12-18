@@ -49,6 +49,7 @@
                                     Добавить карту
                                 </button>
                             </div>
+                            <button type="button" disabled data-modal data-href="default-card" class="receiving__action l-btn l-btn-primary">Сделать основной</button>
                         </div>
                     </div>
                 </section>
@@ -59,6 +60,9 @@
         </div>
         @@include('html/_modal.html', {
         "modal": "unlink-card"
+        })
+        @@include('html/_modal.html', {
+        "modal": "default-card"
         })
         @@include('html/_js.html', {})
     </body>

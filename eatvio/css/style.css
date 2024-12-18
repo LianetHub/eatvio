@@ -15078,6 +15078,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   min-height: 3.125rem;
 }
 
+.receiving__action {
+  margin-top: 1.25rem;
+  width: 100%;
+  min-height: 3.125rem;
+}
+
 .diet {
   padding: 1.875em 0em;
 }
@@ -20925,6 +20931,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 
   .receiving__btn {
+    min-width: 14.9375rem;
+    width: auto;
+  }
+
+  .receiving__action {
     min-width: 14.9375rem;
     width: auto;
   }

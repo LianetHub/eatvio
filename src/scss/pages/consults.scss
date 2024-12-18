@@ -431,4 +431,14 @@
 			width: auto;
 		}
 	}
+	// .receiving__action
+	&__action {
+		margin-top: rem(20);
+		width: 100%;
+		min-height: 3.125rem;
+		@media (min-width: $md5) {
+			min-width: 14.9375rem;
+			width: auto;
+		}
+	}
 }

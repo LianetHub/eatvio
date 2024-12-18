@@ -307,7 +307,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
+    if (document.querySelectorAll('.receiving__card-input').length > 0 && document.querySelector('.receiving__action')) {
+        document.querySelectorAll('.receiving__card-input')?.forEach(input => {
+            input.addEventListener('change', (e) => {
+                document.querySelector('.receiving__action').removeAttribute('disabled')
+            })
+        })
+    }
 
     // badges
 

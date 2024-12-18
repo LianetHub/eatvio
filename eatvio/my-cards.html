@@ -454,6 +454,7 @@
                             </label>
                             <button type="button" class="receiving__card-add icon-add-card"> Добавить карту </button>
                         </div>
+                        <button type="button" disabled data-modal data-href="default-card" class="receiving__action l-btn l-btn-primary">Сделать основной</button>
                     </div>
                 </div>
             </section>
@@ -539,6 +540,76 @@
                 <p class="popup__subtitle">
                     Средства отправлены на карту **0278
                 </p>
+                <button type="button" data-close-modal class="l-btn l-btn-sm l-btn-primary">Хорошо</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="default-card" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title title-xl font-bold">
+                    Карта по умолчанию
+                </div>
+                <p class="popup__subtitle">
+                    Вы уверенны, что хотите сделать <br> карту **** для выплат по умолчанию?
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-sm l-btn-secondary">Отмена</button>
+                    <a href="#default-card-success" data-modal class="popup__selecting-btn l-btn l-btn-sm l-btn-primary">Да</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="default-card-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title title-xl font-bold">
+                    Карта по умолчанию обновленна
+                </div>
+                <p class="popup__subtitle">
+                    Выплаты будут приходить на карту ****
+                </p>
+
                 <button type="button" data-close-modal class="l-btn l-btn-sm l-btn-primary">Хорошо</button>
             </div>
         </div>
