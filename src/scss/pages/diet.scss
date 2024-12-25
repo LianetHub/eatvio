@@ -151,6 +151,15 @@
 			}
 		}
 	}
+	&__image {
+		display: flex;
+		flex-direction: column;
+		border-radius: rem(15);
+		& img {
+			flex: 1 1 auto;
+			border-radius: rem(15);
+		}
+	}
 	// .diet__form-body
 	&__form-body {
 		margin-top: 1rem;
