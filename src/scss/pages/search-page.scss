@@ -2,7 +2,7 @@
 	padding: rem(21) 0;
 	display: flex;
 	align-items: flex-start;
-	gap: 1.88rem;
+	gap: 1rem;
 	flex-direction: column-reverse;
 	@media (min-width: $md3) {
 		flex-direction: row;
@@ -195,7 +195,7 @@
 		padding: 0.5rem;
 		width: 100%;
 		@media (min-width: $md3) {
-			width: 16.875rem;
+			width: rem(250);
 		}
 	}
 	// .search-page__navbar
