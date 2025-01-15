@@ -2969,6 +2969,7 @@
 		margin-bottom: auto;
 		&.l-btn.l-btn-sm {
 			font-size: 17px;
+			min-height: 100%;
 			padding: em(10.25, 17) em(14, 17);
 		}
 	}

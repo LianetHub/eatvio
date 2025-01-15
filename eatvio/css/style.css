@@ -9679,6 +9679,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__main-btn.l-btn.l-btn-sm {
   font-size: 17px;
+  min-height: 100%;
   padding: 0.6029411765em 0.8235294118em;
 }
 
