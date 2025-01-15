@@ -709,6 +709,12 @@
 		padding: 1.5rem;
 		border-radius: 0.625rem;
 	}
+	&__complaint-content {
+		flex: 0 0 calc(100% - 17.5rem);
+		.arm__chat {
+			min-height: 27.625rem;
+		}
+	}
 	&__complaint-caption {
 		flex: 0 0 100%;
 		display: flex;
@@ -724,7 +730,9 @@
 	}
 	// .arm__complaint-category
 	&__complaint-category {
-		padding: 0.94rem 5.31rem;
+		padding: 0.94rem 1.5rem;
+		min-width: rem(235);
+		text-align: center;
 		font-size: 1.25rem;
 		font-weight: 600;
 		line-height: 100%;
@@ -748,6 +756,17 @@
 					background: lighten($color: #252736, $amount: 10);
 				}
 			}
+		}
+	}
+	// .arm__questions-blocks
+	&__questions-blocks {
+		margin-top: 2rem;
+	}
+	// .arm__questions-block
+	&__questions-block {
+		display: none;
+		&.active {
+			display: block;
 		}
 	}
 	// .arm__complaint-grid
@@ -861,8 +880,7 @@
 	&__chat-body {
 		height: 18.19rem;
 		overflow-y: auto;
-		display: flex;
-		flex-direction: column;
+		align-content: end;
 		flex: 1 1 auto;
 		padding: 1.19rem 1rem;
 	}
@@ -872,17 +890,63 @@
 		align-items: flex-start;
 		gap: 0.5rem;
 		&:not(:last-child) {
-			margin-bottom: 1.25rem;
+			margin-bottom: 1.5rem;
 		}
+		&._input {
+			flex-direction: row-reverse;
+			text-align: right;
+			.arm__chat-main {
+				flex-direction: row-reverse;
+			}
+			.arm__chat-message {
+				border-radius: 1rem 0.25rem 1rem 1rem;
+			}
+		}
+	}
+	&__chat-title {
+		font-size: 0.875rem;
+		font-weight: 600;
 	}
 	// .arm__chat-thumb
 	&__chat-thumb {
 		width: 2rem;
 		height: 2rem;
 		flex-shrink: 0;
+		background: #fff;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& img {
+			border-radius: 50%;
+		}
 	}
 	// .arm__chat-content
 	&__chat-content {
+		width: min-content;
+		min-width: 75%;
+	}
+	// .arm__chat-main
+	&__chat-main {
+		margin-top: 0.25rem;
+		display: flex;
+		align-items: flex-end;
+		gap: 0.25rem;
+	}
+	// .arm__chat-date
+	&__chat-date {
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+	// .arm__chat-message
+	&__chat-message {
+		border-radius: 0.25rem 1rem 1rem 1rem;
+		background: rgba(212, 218, 226, 0.2);
+		padding: 0.25rem 0.5rem;
+		max-width: 36rem;
+		width: min-content;
+		min-width: 75%;
+		text-align: left;
 	}
 	// .arm__chat-heading
 	&__chat-heading {
@@ -948,6 +1012,15 @@
 	// .arm__complaint-filter
 	&__complaint-filter {
 		flex: 0 0 17.25rem;
+		display: flex;
+		flex-direction: column;
+		&:has(.arm__question-btn) {
+			flex: 0 0 15.5rem;
+		}
+		.arm__question-btn {
+			margin-top: auto;
+			min-height: rem(45);
+		}
 	}
 	// .arm__complaint-filter-title
 	&__complaint-filter-title {
@@ -1060,6 +1133,7 @@
 	}
 	// .arm__question
 	&__question {
+		position: relative;
 		border-radius: 1.25rem;
 		background: #252736;
 		padding: 1rem 1.5rem 1.75rem 1rem;
@@ -1067,10 +1141,28 @@
 			margin-bottom: 1.87rem;
 		}
 	}
+	&__question-info {
+		position: absolute;
+		top: 0.75rem;
+		right: 0.75rem;
+		border-radius: 50%;
+		background: #0bb450;
+		width: 1.5rem;
+		height: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	&__question-id {
 		color: #2f80ed;
 		font-size: 1.125rem;
 		font-weight: 700;
+	}
+	&__question-responsible {
+		margin-top: 0.5rem;
+		color: #7b8794;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 	// .arm__user
 	&__user {
@@ -1125,7 +1217,8 @@
 	// .arm__question-btn
 	&__question-btn {
 		min-width: 10rem;
-		padding-block: 0.5rem !important;
+		padding-block: 0.3rem !important;
+		min-height: rem(36);
 	}
 	&__fin-questions {
 		margin-top: 2rem;
@@ -1739,6 +1832,34 @@
 		border-radius: 1.25rem;
 		background: #252736;
 		padding: 1.25rem;
+	}
+	// .arm__person
+	&__person {
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+		& + .arm__chat {
+			margin-top: 1.25rem;
+		}
+	}
+	// .arm__person-thumb
+	&__person-thumb {
+		flex: 0 0 rem(60);
+		& img {
+			border-radius: 50%;
+		}
+	}
+	// .arm__person-main
+	&__person-main {
+	}
+	// .arm__person-name
+	&__person-name {
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+	// .arm__person-time
+	&__person-time {
+		color: #7b8794;
 	}
 }
 

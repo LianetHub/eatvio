@@ -169,6 +169,27 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        if (e.target.matches('.arm__complaint-category')) {
+
+            document.querySelectorAll('.arm__complaint-category').forEach((btn) => {
+                btn.classList.remove('active');
+            });
+
+            document.querySelectorAll('.arm__questions-block').forEach((block) => {
+                block.classList.remove('active');
+            });
+
+            e.target.classList.add('active');
+            let currentIndex = getIndexInParent(e.target);
+
+            const targetBlock = document.querySelectorAll('.arm__questions-block')[currentIndex];
+            if (targetBlock) {
+                targetBlock.classList.add('active');
+            }
+
+
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {
