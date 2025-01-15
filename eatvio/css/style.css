@@ -8955,6 +8955,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .diary__main .select select {
   font-size: 18px;
+  height: 100%;
   padding: 0.5em 1.625em 0.5em 0.5em;
 }
 
@@ -8988,11 +8989,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .diary__main-column .select select {
-  min-height: 100%;
-  min-width: 4.375rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+  min-width: 4.6875rem;
 }
 
 .diary__main-row {
@@ -9666,7 +9677,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-bottom: auto;
 }
 
-.diary__main-btn.l-btn-sm {
+.diary__main-btn.l-btn.l-btn-sm {
   font-size: 17px;
   padding: 0.6029411765em 0.8235294118em;
 }

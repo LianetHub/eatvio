@@ -2176,6 +2176,7 @@
 		}
 		.select select {
 			font-size: 18px;
+			height: 100%;
 			padding: 0.5em 1.625em 0.5em 0.5em;
 		}
 	}
@@ -2215,9 +2216,12 @@
 		}
 		.select {
 			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
 			select {
-				min-height: 100%;
-				min-width: rem(70);
+				flex: 1 1 auto;
+				height: 100%;
+				min-width: rem(75);
 			}
 		}
 	}
@@ -2963,7 +2967,7 @@
 	// .diary__main-btn
 	&__main-btn {
 		margin-bottom: auto;
-		&.l-btn-sm {
+		&.l-btn.l-btn-sm {
 			font-size: 17px;
 			padding: em(10.25, 17) em(14, 17);
 		}
