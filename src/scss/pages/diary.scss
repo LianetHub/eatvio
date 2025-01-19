@@ -2183,17 +2183,15 @@
 	// .diary__main-header
 	&__main-header {
 		display: flex;
-		gap: 20px;
+		gap: rem(20);
 		flex-direction: column-reverse;
-
 		@media (min-width: $md4) {
 			flex-direction: row;
-			gap: 30px;
 		}
 
 		& .diary__main-column:first-child {
 			@media (min-width: $md4) {
-				flex: 0 0 rem(160);
+				flex: 0 0 rem(170);
 			}
 		}
 		& .diary__main-column:last-child {
@@ -2221,7 +2219,7 @@
 			select {
 				flex: 1 1 auto;
 				height: 100%;
-				min-width: rem(75);
+				min-width: rem(73);
 			}
 		}
 	}
@@ -2232,14 +2230,6 @@
 		align-items: center;
 		gap: rem(12);
 
-		&::before {
-			font-size: 20px;
-			color: #7b8794;
-			display: none;
-			@media (min-width: $md5) {
-				display: block;
-			}
-		}
 		@media (min-width: $md4) {
 			flex: 1 1 auto;
 		}
@@ -2255,17 +2245,25 @@
 	&__main-block {
 		flex: 0 0 calc(50% - rem(5));
 		@media (min-width: $md5) {
-			flex: 0 1 auto;
+			flex: 0 0 rem(153);
 			&:not(:last-child) {
 				margin-right: 0.5rem;
 			}
 		}
 		display: flex;
-		gap: rem(12);
+		gap: rem(11);
 		flex-direction: column;
 		@media (min-width: 375px) {
 			align-items: center;
 			flex-direction: row;
+		}
+		&::before {
+			font-size: rem(20);
+			color: #7b8794;
+			display: none;
+			@media (min-width: $md5) {
+				display: block;
+			}
 		}
 	}
 	// .diary__main-block-title
@@ -2424,6 +2422,7 @@
 		grid-template-columns: 50% 1fr auto;
 		font-weight: 500;
 		letter-spacing: 0.2px;
+		min-height: rem(46);
 		transition: box-shadow 0.3s ease 0s;
 		@media (min-width: $md4) {
 			gap: 10px;
@@ -2759,6 +2758,7 @@
 	}
 	&__product-slider {
 		position: relative;
+		min-width: 0;
 		border-radius: 8px;
 		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 	}

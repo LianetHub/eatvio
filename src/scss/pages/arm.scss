@@ -701,6 +701,7 @@
 	&__complaint-body {
 		margin-top: 2rem;
 		display: flex;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1.5rem;
 		row-gap: 0;
