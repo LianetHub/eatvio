@@ -164,7 +164,7 @@
 .select {
 	position: relative;
 	&::before {
-		content: '';
+		content: "";
 		transition: transform 0.3s ease 0s;
 		position: absolute;
 		top: 50%;
@@ -237,6 +237,11 @@
 			right: 0.55rem;
 		}
 	}
+	&:has(select.error) {
+		&::before {
+			filter: grayscale(1) brightness(0);
+		}
+	}
 	& select {
 		appearance: none;
 		width: 100%;
@@ -251,5 +256,8 @@
 		font-family: $fontfamily;
 		white-space: nowrap;
 		user-select: none;
+		&.error {
+			border-color: #cd4141;
+		}
 	}
 }

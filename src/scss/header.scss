@@ -32,14 +32,17 @@
 	&__content {
 		position: relative;
 		flex: 1;
+		@media (min-width: $md4) {
+			padding-right: rem(24);
+		}
 		@media (min-width: $md3) {
 			margin-left: auto;
-			flex: 0 0 calc(100% - 370px);
+			flex: 0 0 calc(100% - rem(370));
 		}
 		@media (min-width: $md2) {
-			transform: translateX(-370px);
+			transform: translateX(rem(-370));
 			flex: 0 0 100%;
-			padding-left: 370px;
+			padding-left: rem(370);
 		}
 	}
 	// .header__container

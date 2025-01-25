@@ -5,7 +5,8 @@
 	background: none;
 
 	font-size: 16px;
-	padding: em(12.6, 18) em(20, 18);
+	padding: em(13, 18) em(20, 18);
+	min-height: rem(46);
 	line-height: normal;
 	font-weight: 500;
 	border-radius: 8px;
@@ -54,8 +55,8 @@
 		}
 	}
 	&.error {
-		border-color: #cd4141;
-		background: #ffdbdb;
+		border-color: #cd4141 !important;
+		background: #fff;
 		color: #000;
 		&::placeholder {
 			color: inherit;
@@ -125,6 +126,14 @@ input[type="date"] {
 	&:disabled {
 		background: #dfe0e1;
 		border-color: #dfe0e1;
+	}
+	&.error {
+		border-color: #cd4141 !important;
+		background: #fff;
+		color: #000;
+		&::placeholder {
+			color: inherit;
+		}
 	}
 }
 
