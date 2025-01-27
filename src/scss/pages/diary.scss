@@ -249,6 +249,11 @@
 			height: 42px;
 			margin: em(0) em(0) em(0) rem(7);
 		}
+		& img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
 	}
 	// .settings__body
 	&__body {
@@ -2349,6 +2354,7 @@
 	}
 	&__product-column {
 		flex: 1 1 auto;
+		min-width: 50%;
 		margin: em(0) em(0) em(30) rem(0);
 		@media (min-width: $md3) {
 			margin: em(0) em(30) em(0) em(0);

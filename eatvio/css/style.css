@@ -7047,6 +7047,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+.settings__person-thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 .settings__body {
   margin: 1.5em 0em 0em 0em;
   padding: 0.75rem;
@@ -9171,6 +9177,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  min-width: 50%;
   margin: 0em 0em 1.875em 0rem;
 }
 
@@ -11162,6 +11169,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-right: -0.75rem;
 }
 
+.person__side-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
 .person__main {
   position: relative;
   background: #fff;
@@ -11330,6 +11345,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   margin-top: -2.1875rem;
+}
+
+.person__thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 .person__rate {
@@ -13061,6 +13084,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .plan__thumb img {
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .plan__person-info {
@@ -14563,6 +14590,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
       flex-shrink: 0;
   width: 3.4375rem;
   height: 3.4375rem;
+}
+
+.bid__block-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 .bid__block-info {
