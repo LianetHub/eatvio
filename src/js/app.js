@@ -190,6 +190,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
+        if (e.target.matches('.favorite-btn')) {
+            e.target.classList.toggle('active');
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

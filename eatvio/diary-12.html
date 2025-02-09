@@ -1223,18 +1223,32 @@
 
 
 
-<div id="cancel-diet" class="popup">
+<div id="cancel-diet" class="popup open">
     <div class="popup__content">
-        <div class="popup__body ofsset">
+        <div class="popup__body popup__body_xmd offset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
-            <div class="popup__caption title title-lg">
-                Вы уверены то хотите отменить диету <br>
+            <div class="popup__caption title title">
+                Вы уверены то хотите отменить диету
                 <span class="accent-color">“легкая диета для похудения”?</span>
             </div>
             <div class="popup__selecting">
                 <div class="popup__selecting-btns">
-                    <button type="button" class="popup__selecting-btn l-btn l-btn-light">Отменить диету</button>
-                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Вернутся назад</button>
+                    <a href="#cancel-diet-success" data-modal class="popup__selecting-btn l-btn l-btn-primary">Отменить диету</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cancel-diet-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd offset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title">
+                Диета успешно отмененна
+            </div>
+            <div class="popup__selecting">
+                <div class="popup__selecting-btns">
+                    <button data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Хорошо</button>
                 </div>
             </div>
         </div>

@@ -631,6 +631,16 @@ input[type="date"] {
 			}
 		}
 	}
+	&.l-btn-danger-outline {
+		border: 1px solid #ff3b3b;
+		color: #323f4b;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #d01717;
+				color: #fff;
+			}
+		}
+	}
 	&.l-btn-green-outline {
 		border: 1px solid #0bb450;
 		color: #fff;

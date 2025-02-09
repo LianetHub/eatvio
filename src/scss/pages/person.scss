@@ -769,6 +769,9 @@
 		display: grid;
 		gap: 16px;
 		grid-template-columns: repeat(2, 1fr);
+		.l-btn {
+			padding-inline: 0;
+		}
 	}
 	// .person__social
 	&__social {

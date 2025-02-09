@@ -79,6 +79,19 @@
 		margin-bottom: rem(4);
 		font-size: rem(18);
 	}
+	&__desc-header {
+		width: 100%;
+		display: flex;
+		.favorite-btn {
+			font-size: rem(20);
+			&.active {
+				&::before {
+					@extend %ic, .icon-bookmark-fill;
+					color: $accent;
+				}
+			}
+		}
+	}
 	// .dish__desc-visible
 	&__desc-visible {
 		font-size: rem(14);
@@ -1964,15 +1977,15 @@
 		&:not(:first-child) {
 			margin-top: rem(24);
 		}
-		border-radius: 8px;
+		border-radius: rem(8);
 		background: #fff;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.15);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: em(11) 1.5rem em(11) em(11);
 		@media (min-width: $md4) {
-			padding: em(15) 1.8rem em(15) em(16);
+			padding: em(15) em(16);
 		}
 		&.diary__header-wrap {
 			flex-wrap: wrap;
@@ -2108,7 +2121,6 @@
 	// .diary__person-name
 	&__person-name {
 		font-weight: 700;
-		margin-bottom: rem(4);
 	}
 	// .diary__person-money
 	&__person-money {
@@ -2126,6 +2138,9 @@
 		flex-shrink: 0;
 		& img {
 			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 	// .diary__person-comment
@@ -2143,6 +2158,9 @@
 
 	// .diary__info-current
 	&__info-current {
+		&:is(strong) {
+			font-weight: 900;
+		}
 		font-weight: 600;
 		font-size: 15px;
 		letter-spacing: 0.2px;
@@ -2160,6 +2178,47 @@
 		@media (min-width: $md5) {
 			margin-top: 0;
 			font-size: 16px;
+		}
+	}
+	// .diary__info-name
+	&__info-name {
+		font-size: rem(18);
+		line-height: math.div(23, 18);
+		color: $accent;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(8);
+		text-align: center;
+		&:first-child:last-child {
+			font-size: rem(20);
+			width: 100%;
+			justify-content: center;
+			padding-left: 1rem;
+			line-height: 1.5;
+			.diary__info-icon {
+				width: rem(20);
+				height: rem(20);
+			}
+		}
+	}
+
+	&__info-icon {
+		color: $accent;
+		border-radius: 50%;
+		width: rem(17);
+		height: rem(17);
+		flex-shrink: 0;
+		font-size: 0.875rem;
+		border: rem(1) solid $accent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $accent;
+				color: #fff;
+			}
 		}
 	}
 
@@ -3925,17 +3984,25 @@
 	background: #fff;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 	padding: em(16);
-	border-radius: 8px;
+	border-radius: rem(8);
 	// .calendar__header
 	&__header {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		column-gap: rem(30);
+		justify-content: space-between;
+		column-gap: rem(16);
+		max-width: rem(342);
+		margin-left: auto;
+		margin-right: auto;
 	}
 	// .calendar__prev
 	&__prev {
 		transition: color 0.3s ease 0s;
+		width: rem(40);
+		height: rem(40);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		@media (any-hover: hover) {
 			&:hover {
 				color: #0d6efd;
@@ -3944,6 +4011,8 @@
 	}
 	// .calendar__date
 	&__date {
+		text-align: center;
+		font-size: rem(18);
 	}
 	// .calendar__mounth
 	&__mounth {
@@ -3966,12 +4035,7 @@
 	}
 	// .calendar__next
 	&__next {
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #0d6efd;
-			}
-		}
+		@extend .calendar__prev;
 	}
 	// .calendar__cells
 	&__cells {
