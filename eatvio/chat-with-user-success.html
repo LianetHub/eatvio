@@ -554,7 +554,7 @@
                                                 <p class="chat__banner-subtitle">Если вы не подтвердите, то план через три дня подтвердится&nbsp;автоматически</p>
                                                 <a href="#plan-complete" data-modal class="chat__banner-btn l-btn l-btn-primary l-btn-sm">Подтвердить</a>
                                                 <p class="chat__banner-subtitle"> Если вас что-то не устроило, вы можете подать жалобу <br>
-                                                    <a href="" class="chat__banner-link red-color">Подать жалобу</a>
+                                                    <a href="#add-complaint" data-modal class="chat__banner-link red-color">Подать жалобу</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -745,7 +745,9 @@
 
 
 
+
  
+
 
 
 
@@ -783,6 +785,106 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="add-complaint" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <p class="popup__subtitle">Вы уверенны, что хотите подать жалобу?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-xl">Отмена</button>
+                    <a href="#add-complaint-2" data-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl">Подать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="add-complaint-2" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <form action="#" class="popup__cancel">
+                    <div class="popup__cancel-rows">
+                        <div class="popup__cancel-row">
+                            <div class="label">Опишите причину жалобы</div>
+                            <textarea name="reason" class="textarea textarea-sm textarea-white" placeholder="Заказал по ошибке"></textarea>
+                        </div>
+                        <div class="popup__cancel-row">
+                            <div class="label">Укажите сумму которую вы хотите вернуть</div>
+                            <input type="text" name="value" class="input input-white" placeholder="0 ₽">
+                        </div>
+                    </div>
+                    <div class="popup__cancel-options">
+                        <div class="popup__cancel-option">Всю сумму</div>
+                        <div class="popup__cancel-option">2000 ₽</div>
+                        <div class="popup__cancel-option">1000 ₽</div>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-xl">Отмена</button>
+                    <a href="#add-complaint-success" data-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl">Подать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="add-complaint-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <p class="popup__desc">Жалоба отправлена на рассмотрение. Обычно это занимает <br> до трёх рабочих дней. Вам поступит уведомление <br> о результате рассмотрения</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl l-btn-fullwidth">Хорошо</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

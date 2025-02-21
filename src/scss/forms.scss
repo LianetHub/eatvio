@@ -696,6 +696,11 @@ input[type="date"] {
 	&.l-btn-lg {
 		padding: em(16, 20) em(33, 20);
 	}
+	&.l-btn-xl {
+		min-height: rem(50);
+		font-size: rem(16);
+		padding: em(12, 20);
+	}
 	&.l-btn-fullwidth {
 		width: 100%;
 	}

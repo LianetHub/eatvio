@@ -1352,6 +1352,11 @@ body.dark-theme {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.popup__btns .popup__selecting-btn:first-child:last-child {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
 .popup__certs {
   margin-top: 2rem;
   display: -webkit-box;
@@ -1494,6 +1499,11 @@ body.dark-theme {
 
 .popup__desc {
   margin-top: 1rem;
+  line-height: 1.25;
+}
+
+.popup__cancel {
+  margin-top: 1.25rem;
 }
 
 .popup__cancel-row:not(:last-child) {
@@ -1513,10 +1523,15 @@ body.dark-theme {
 .popup__cancel-option {
   border-radius: 0.375rem;
   border: 1px solid #2f80ed;
-  padding: 0.25rem 0.88rem;
+  padding: 0.15rem 0.88rem;
   font-size: 0.75rem;
+  min-height: 1.4375rem;
+  vertical-align: middle;
+  line-height: 1.25;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .popup__edit-product {
@@ -3763,6 +3778,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .l-btn.l-btn-lg {
   padding: 0.8em 1.65em;
+}
+
+.l-btn.l-btn-xl {
+  min-height: 3.125rem;
+  font-size: 1rem;
+  padding: 0.6em;
 }
 
 .l-btn.l-btn-fullwidth {
@@ -24586,6 +24607,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-transform: translateX(0.5rem) rotate(-90deg);
         -ms-transform: translateX(0.5rem) rotate(-90deg);
             transform: translateX(0.5rem) rotate(-90deg);
+  }
+
+  .popup__cancel-option:hover {
+    background-color: #2f80ed;
+    color: #fff;
   }
 
   .star-rating__input:not(:checked) ~ .star-rating__label:hover {

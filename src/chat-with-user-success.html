@@ -158,7 +158,7 @@
                                                     <a href="#plan-complete" data-modal class="chat__banner-btn l-btn l-btn-primary l-btn-sm">Подтвердить</a>
                                                     <p class="chat__banner-subtitle">
                                                         Если вас что-то не устроило, вы можете подать жалобу <br>
-                                                        <a href="" class="chat__banner-link red-color">Подать жалобу</a>
+                                                        <a href="#add-complaint" data-modal class="chat__banner-link red-color">Подать жалобу</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -313,6 +313,9 @@
         })
         @@include('html/_modal.html', {
         "modal": "cancel-order"
+        })
+        @@include('html/_modal.html', {
+        "modal": "add-complaint"
         })
         @@include('html/_js.html', {})
     </body>
