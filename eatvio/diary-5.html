@@ -9,12 +9,19 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/common.min.css" />
     <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/diary.min.css" />
+    <!-- Current Page Styles -->
+
+    
 
 </head>
 
-<body>
+<body class="lock">
     <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
@@ -310,9 +317,9 @@
                         <div class="notification__list">
                             <div class="notification__item succes">
                                 <div class="notification__item-body">
-                                    <a href="" class="notification__text">Поздравляем, Вы закончили план «Название плана»</a>
-                                    <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
-                                    <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <a href="" class="notification__text">Подтвердите сделку</a>
+                                    <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -1282,6 +1289,62 @@
 
 
 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="last-day" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title">
+                    Вы комментируете последний день <br>
+                    в рамках этой консультации
+                </div>
+                <p class="popup__subtitle font-medium">
+                    После этого возможность комментировать дни этого <br> пользователя будет закрыта
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-light">Отменить</button>
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>

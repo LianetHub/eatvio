@@ -1,3 +1,6 @@
+@use "sass:math";
+@import "../config.scss";
+
 .diet {
 	padding: em(30) em(0);
 	// .diet__container
@@ -43,34 +46,7 @@
 		flex: 1 1 auto;
 		text-align: center;
 	}
-	&__notification {
-		margin-top: 1.88rem;
-		@media (min-width: $md5) {
-			.notification__thumb {
-				width: 3.75rem;
-				height: 3.75rem;
-			}
-			.notification__item {
-				font-size: 1.25rem;
-				&::before {
-					width: 0.75rem;
-					height: 0.75rem;
-				}
-			}
-			.notification__item-body {
-				font-size: 1.25rem;
-			}
-			.notification__hint {
-				font-size: 1rem;
-			}
-			.notification__link {
-				font-size: 1.125rem;
-				&.red-color {
-					font-size: 1rem;
-				}
-			}
-		}
-	}
+
 	// .diet__form
 	&__form {
 		margin: em(12) em(0) em(0) em(0);
@@ -399,7 +375,16 @@
 				}
 			}
 			&::before {
-				@extend %ic, .icon-down;
+				content: "\e915";
+				font-family: "icons";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				speak: never;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 				order: 1;
 				font-size: 0.75em;
 				margin-left: 1rem;
@@ -442,6 +427,56 @@
 		@media (min-width: $md4) {
 			margin-top: 1rem;
 			display: flex !important;
+		}
+		.diary__stats-body {
+			margin: 0.75rem em(0) auto em(0);
+			@media (min-width: $md4) {
+				margin: 1rem em(0) auto em(0);
+			}
+		}
+		.diary__total {
+			margin: 1rem -1rem -1rem -1rem;
+			display: flex;
+			justify-content: space-between;
+			border-radius: 0 0 0.5rem 0.5rem;
+			background: #f7faff;
+			padding: 0.63rem 1.25rem;
+		}
+		.diary__total-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			line-height: normal;
+		}
+		.diary__total-val {
+			font-size: 1.125rem;
+			font-weight: 600;
+		}
+		.diary__total-unit {
+			font-weight: 500;
+			font-size: 0.875rem;
+			@media (min-width: $md4) {
+				font-size: 1rem;
+			}
+		}
+
+		.diary__stats-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: normal;
+			&:not(:last-child) {
+				margin-bottom: 0.75rem;
+			}
+			@media (min-width: $md4) {
+				font-size: 1.125rem;
+				&:not(:last-child) {
+					margin-bottom: 1rem;
+				}
+			}
 		}
 	}
 	// .diet__day-caption
@@ -783,7 +818,16 @@
 			gap: 0.5rem;
 
 			&::before {
-				@extend %ic, .icon-check-circle;
+				content: "\e949";
+				font-family: "icons";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				speak: never;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 				color: #019a3e;
 				font-size: 1rem;
 			}
@@ -1061,7 +1105,9 @@
 			}
 		}
 		&.active {
-			@extend .icon-heart-fill;
+			&::before {
+				content: "\e91f";
+			}
 			color: #2f80ed;
 			@media (any-hover: hover) {
 				&:hover {
@@ -1177,7 +1223,9 @@
 		}
 		&.active {
 			color: #2f80ed;
-			@extend .icon-bookmark-fill;
+			&::before {
+				content: "\e94d";
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff;

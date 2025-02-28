@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Личный кабинет',
+    "stylesName": ["arm"]
+    })
     <body class="dark-theme">
         <div class="wrapper">
             <main class="page">
                 <section class="arm">
                     <div class="arm__container">
-                        <aside class="arm__sidebar">
-                            @@include('./html/_arm-menu.html', {
-                            "active": 0
-                            })
-                        </aside>
                         <div class="arm__content">
+                            <aside class="arm__sidebar">
+                                @@include('./html/_arm-menu.html', {
+                                "active": 0
+                                })
+                            </aside>
                             <div class="arm__grid">
                                 <div class="arm__block">
                                     <div class="arm__block-header">

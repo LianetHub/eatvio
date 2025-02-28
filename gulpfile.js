@@ -30,7 +30,7 @@ import { php } from "./gulp/tasks/php.js";
 
 function watcher() {
     gulp.watch(path.watch.files, copy);
-    gulp.watch(path.watch.html,  gulp.parallel(html, tailwindTask));
+    gulp.watch(path.watch.html, gulp.parallel(html, tailwindTask));
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.normalize, normalize);
     gulp.watch(path.watch.js, js);

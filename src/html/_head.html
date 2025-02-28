@@ -8,7 +8,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/common.min.css" />
     <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    @@if(typeof stylesName !== 'undefined' && stylesName.length > 0) {
+    <!-- Current Page Styles -->
+    @@for (var i = 0; i
+    < stylesName.length; i++) { <link rel="stylesheet" href="css/`+stylesName[i]+`.min.css" />}
+    <!-- Current Page Styles -->
+
+    }
 
 </head>

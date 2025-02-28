@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Чат',
+    "stylesName": ["chat", "plans"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -154,7 +157,9 @@
                                                 </div>
                                                 <div class="chat__banner completed">
                                                     <div class="chat__banner-caption">Поздравляем, Вы закончили план «Название плана»</div>
-                                                    <p class="chat__banner-subtitle">Пользователь подтвердил прохождения плана. <br> Вы можете получить выплату</p>
+                                                    <p class="chat__banner-subtitle">Пользователь подтвердил прохождения плана. <br>
+                                                        Получите выплату, или она будет автоматически переведена на&nbsp;вашу основную карту через три дня ХХ.ХХ.ХХХ
+                                                    </p>
                                                     <a href="" class="chat__banner-btn l-btn l-btn-green ">Получить выплату</a>
                                                 </div>
                                             </div>
@@ -309,6 +314,9 @@
         })
         @@include('html/_modal.html', {
         "modal": "cancel-order"
+        })
+        @@include('html/_modal.html', {
+        "modal": "add-complaint"
         })
         @@include('html/_js.html', {})
     </body>

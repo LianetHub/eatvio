@@ -1,0 +1,38 @@
+// ======================================МИКСИНЫ==============================================
+@import "mixins";
+// ======================================МИКСИНЫ==============================================
+// Шрифт по умолчанию
+$fontfamily: "Mulish";
+$font-open-sans: "OpenSans";
+
+// Шрифт по умолчанию
+
+// ПЕРЕМЕННЫЕ
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина макета
+$maxWidthContainer: 1170; // Максимальная ширина ограничивающего контейнера
+$containerPadding: 30;
+
+$md0: 1599.98px;
+$md1: 1439.98px;
+$md2: 1199.98px;
+$md3: 991.98px;
+$md4: 767.98px;
+$md5: 575.98px;
+$md6: 459.98px;
+
+$mainColor: #323f4b;
+$accent: #2f80ed;
+$red: #eb555c;
+
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

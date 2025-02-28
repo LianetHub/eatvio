@@ -1731,3 +1731,25 @@
     </div>
 </div>
 }
+@@if (modal==="last-day") {
+<div id="last-day" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__wrapper">
+                <div class="title">
+                    Вы комментируете последний день <br>
+                    в рамках этой консультации
+                </div>
+                <p class="popup__subtitle font-medium">
+                    После этого возможность комментировать дни этого <br> пользователя будет закрыта
+                </p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-light">Отменить</button>
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

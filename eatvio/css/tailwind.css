@@ -494,9 +494,6 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-.visible {
-  visibility: visible;
-}
 .invisible {
   visibility: hidden;
 }

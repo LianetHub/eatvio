@@ -9,8 +9,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/common.min.css" />
     <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/chat.min.css" /> <link rel="stylesheet" href="css/plans.min.css" />
+    <!-- Current Page Styles -->
+
+    
 
 </head>
 
@@ -304,9 +311,9 @@
                         <div class="notification__list">
                             <div class="notification__item succes">
                                 <div class="notification__item-body">
-                                    <a href="" class="notification__text">Поздравляем, Вы закончили план «Название плана»</a>
-                                    <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
-                                    <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <a href="" class="notification__text">Подтвердите сделку</a>
+                                    <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -491,6 +498,9 @@
             <button type="button" class="chat__action chat-notification-btn">Отключить оповещения</button>
         </li>
         <li class="chat__actions-item">
+            <a href="#add-complaint" data-modal class="chat__action icon-info">Подать жалобу</a>
+        </li>
+        <li class="chat__actions-item">
             <button type="button" class="chat__action icon-trash">Удалить чат</button>
         </li>
     </ul>
@@ -589,6 +599,9 @@
             <button type="button" class="chat__action chat-notification-btn">Отключить оповещения</button>
         </li>
         <li class="chat__actions-item">
+            <a href="#add-complaint" data-modal class="chat__action icon-info">Подать жалобу</a>
+        </li>
+        <li class="chat__actions-item">
             <button type="button" class="chat__action icon-trash">Удалить чат</button>
         </li>
     </ul>
@@ -637,6 +650,9 @@
     <ul class="chat__actions-list">
         <li class="chat__actions-item">
             <button type="button" class="chat__action chat-notification-btn">Отключить оповещения</button>
+        </li>
+        <li class="chat__actions-item">
+            <a href="#add-complaint" data-modal class="chat__action icon-info">Подать жалобу</a>
         </li>
         <li class="chat__actions-item">
             <button type="button" class="chat__action icon-trash">Удалить чат</button>
@@ -746,6 +762,7 @@
 
 
 
+
  
 
 
@@ -785,6 +802,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -884,6 +902,7 @@
         </div>
     </div>
 </div>
+
 
 
 

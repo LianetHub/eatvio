@@ -1,3 +1,6 @@
+@use "sass:math";
+@import "../config.scss";
+
 .archive {
 	padding: rem(20) 0;
 	// .archive__header

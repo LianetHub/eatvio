@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Рекламный кабинет',
+    "stylesName": ["cabinet"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -38,7 +41,7 @@
                                         Рекламный кабинет
                                     </div>
                                     <div class="cabinet__header">
-                                        <a href="create.html" class="cabinet__btn l-btn btn-primary">Создать компанию</a>
+                                        <a href="create.html" class="cabinet__btn l-btn l-btn-primary">Создать компанию</a>
                                         <div class="select">
                                             <select>
                                                 <option value="0" selected>Все компании</option>

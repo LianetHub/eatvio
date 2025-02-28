@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Создание диеты',
+    "stylesName": ["announcement", "person", "reviews"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -265,7 +268,7 @@
                                 className: "reviews__form-rate",
                                 name: "rate"
                                 })
-                                <button type="button" class="btn l-btn-primary">Оставть отзыв</button>
+                                <button type="button" class="l-btn l-btn-primary">Оставть отзыв</button>
                             </div>
                         </form>
                     </div>

@@ -57,7 +57,7 @@
 	&.error {
 		border-color: #cd4141 !important;
 		background: #fff;
-		color: #000;
+		color: #323f4b;
 		&::placeholder {
 			color: inherit;
 		}
@@ -130,7 +130,7 @@ input[type="date"] {
 	&.error {
 		border-color: #cd4141 !important;
 		background: #fff;
-		color: #000;
+		color: #323f4b;
 		&::placeholder {
 			color: inherit;
 		}
@@ -506,7 +506,7 @@ input[type="date"] {
 	&__input {
 		&:checked {
 			& + .checkbox-btn__content {
-				border: 2px solid #2f80ed;
+				border: rem(2) solid #2f80ed;
 				background: #f6faff;
 			}
 		}
@@ -529,8 +529,32 @@ input[type="date"] {
 		transition: all 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				border: rem(1) solid #2f80ed;
+				border: rem(2) solid #2f80ed;
 				background: #d5e6fb;
+			}
+		}
+	}
+}
+
+.file-btn {
+	display: block;
+	// .file-btn__input
+	&__input {
+	}
+	// .file-btn__content
+	&__content {
+		width: 100%;
+		@media (min-width: $md5) {
+			width: auto;
+		}
+		cursor: pointer;
+		&.l-btn {
+			padding: 0.5rem 1.25rem;
+			font-size: 1rem;
+			font-weight: 400;
+			&::before {
+				font-size: 1.25rem;
+				order: 1;
 			}
 		}
 	}

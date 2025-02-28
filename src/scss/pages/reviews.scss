@@ -1,0 +1,115 @@
+@use "sass:math";
+@import "../config.scss";
+
+.reviews {
+	padding: em(20) 0;
+	// .reviews__container
+	&__container {
+	}
+	// .reviews__title
+	&__title {
+		color: #7b8794;
+	}
+	// .reviews__tabs
+	&__tabs {
+		margin: em(20) em(0) em(0) em(0);
+	}
+	&__form {
+		margin: em(20) em(0) em(0) em(0);
+		@media (min-width: $md5) {
+			display: flex;
+		}
+		background: #fff;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+		padding: em(16);
+		border-radius: 8px;
+		column-gap: rem(20);
+		& .textarea {
+			flex: 1 1 auto;
+		}
+	}
+	&__form-column {
+		margin: em(20) em(0) em(0) em(0);
+		@media (min-width: $md5) {
+			margin: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		.l-btn {
+			margin: em(20) em(0) em(0) em(0);
+			@media (min-width: $md5) {
+				margin-top: auto;
+			}
+		}
+	}
+	// .reviews__items
+	&__items {
+		margin: em(20) em(0) em(0) em(0);
+	}
+}
+
+.review {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	column-gap: 16px;
+	background: #fff;
+	padding: em(16);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+	flex-wrap: wrap;
+	@media (min-width: $md5) {
+		flex-wrap: nowrap;
+	}
+	// .review__thumb
+	&__thumb {
+		width: 60px;
+		height: 60px;
+		flex-shrink: 0;
+		& img {
+			border-radius: 50%;
+		}
+	}
+	// .review__content
+	&__content {
+		margin: em(10) em(0) em(0) em(0);
+		order: 1;
+		flex: 0 0 100%;
+		@media (min-width: $md5) {
+			margin: 0;
+			flex: 1 1 auto;
+			order: 0;
+		}
+	}
+	// .review__name
+	&__name {
+		font-weight: 700;
+	}
+	// .review__quote
+	&__quote {
+		margin: em(4) em(0) em(0) em(0);
+	}
+	// .review__info
+	&__info {
+		display: flex;
+		align-items: center;
+	}
+	// .review__programm
+	&__programm {
+		font-size: 0.875em;
+		font-weight: 700;
+		margin: em(0) em(10) em(0) em(0);
+	}
+	// .review__rate
+	&__rate {
+		display: flex;
+		align-items: center;
+		column-gap: 5px;
+		font-weight: 700;
+		color: #ffb100;
+	}
+}

@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.19",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
@@ -48,6 +49,7 @@
     "gulp-webp-html-nosvg": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "purgecss": "^7.0.2",
     "sass": "^1.45.2",
     "swiper": "^6.8.4",
     "tailwindcss": "^3.4.4",

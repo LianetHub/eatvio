@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
-    <body>
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Создание диеты',
+    "stylesName": ["diet", "comment"]
+    })
+    <body class="lock">
         <div class="wrapper">
             @@include('html/_header.html', {
             "active": 3
             })
             <main class="page">
-                <section class="diet">
-                    <div class="diet__container">
+                <section class="settings">
+                    <div class="settings__container">
                         <div class="settings__header">
                             <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Все диеты</span></a>
                             <div class="settings__person-title title ">

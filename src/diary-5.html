@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Дневник',
+    "stylesName": ["diary"]
+    })
 
-    <body>
+    <body class="lock">
         <div class="wrapper">
             @@include('html/_header.html', {
             "active": 1234
@@ -991,6 +994,9 @@
         </div>
         @@include('html/_modal.html', {
         "modal": "product"
+        })
+        @@include('html/_modal.html', {
+        "modal": "last-day"
         })
         @@include('html/_js.html', {})
     </body>

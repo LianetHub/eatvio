@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Чат',
+    "stylesName": ["chat"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -401,7 +404,9 @@
             "className": " pc-only"
             })
         </div>
-
+        @@include('html/_modal.html', {
+        "modal": "add-complaint"
+        })
         @@include('html/_js.html', {})
     </body>
 </html>

@@ -19,7 +19,7 @@ export const path = {
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
-		scss: `${srcFolder}/scss/style.scss`,
+		scss: `${srcFolder}/scss/pages/*.scss`,
 		tailwind: `${srcFolder}/scss/tailwind.css`,
 		normalize: `${srcFolder}/scss/reset.scss`,
 		js: `${srcFolder}/js/app.js`,

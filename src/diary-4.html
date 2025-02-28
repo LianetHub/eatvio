@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
-
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Дневник',
+    "stylesName": ["diary"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -12,6 +14,12 @@
                     <div class="diary__container container-sm">
                         <div class="diary__header">
                             <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
+                            <div class="diary__info pc-only">
+                                <div class="diary__info-name">
+                                    Power Of Beef Diet
+                                    <a href="" class="diary__info-icon">?</a>
+                                </div>
+                            </div>
                             <div class="diary__info">
                                 <div class="diary__info-current">
                                     10 день
@@ -19,6 +27,12 @@
                                 <time datetime="2023-08-03" class="diary__info-date">
                                     03-08-2023
                                 </time>
+                            </div>
+                        </div>
+                        <div class="diary__header mobile-only">
+                            <div class="diary__info-name">
+                                Power Of Beef Diet
+                                <a href="" class="diary__info-icon">?</a>
                             </div>
                         </div>
                         <div class="diary__spoller" data-spollers>
@@ -59,390 +73,93 @@
                             </div>
                         </div>
                         <div class="diary__main">
-                            <div class="diary__main-header">
-                                <div class="diary__main-column">
-                                    <div class="label tablet-only">
-                                        Прием пищи
-                                    </div>
-                                    <div class="select">
-                                        <select>
-                                            <option value="1" selected>Завтрак</option>
-                                            <option value="2">Обед</option>
-                                            <option value="3">Ужин</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="diary__main-column">
-                                    <div class="label">
-                                        Время приема пищи
-                                    </div>
-                                    <div class="diary__main-row icon-clock">
-                                        <input type="time" name="time" class="input input-white" value="14:52">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="diary__main-filters">
-                                <div class="diary__main-content">
-                                    <div class="diary__main-name">
-                                        <input type="text" name="product-name" class="input input-white" placeholder="Введите название продукта">
-                                        <div class="diary__tooltip">
-                                            <button type="button" class="diary__tooltip-close icon-close"></button>
-                                            <div class="diary__tooltip-prev swiper-button-prev"></div>
-                                            <div class="diary__tooltip-content swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="diary__tooltip-item swiper-slide">Картофель жаренный</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Картофель варенный</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Карпаччо</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Карп жаренный</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Карп свежий</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Карп</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Лосось</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Окунь</div>
-                                                    <div class="diary__tooltip-item swiper-slide">Щука</div>
-                                                </div>
-                                            </div>
-                                            <div class="diary__tooltip-next swiper-button-next"></div>
-                                        </div>
-                                    </div>
+                            @@include('./html/_diary-form.html')
+                            <div class="diary__main-bottom">
+                                <div class="diary__main-products">
+                                    Тут появятся добавленные продукты
                                 </div>
                                 <div class="diary__main-side">
-                                    <input type="text" name="quantity" class="input input-white" placeholder="Кол-во">
-                                    <div class="content__row-dropdown select">
-                                        <select>
-                                            <option value="0">Порция</option>
-                                            <option value="1">200g</option>
-                                            <option value="2">400g</option>
-                                            <option value="3">800g</option>
-                                        </select>
-                                    </div>
+                                    @@include('./html/_file-upload.html', {
+                                    "className": "diary__main-file",
+                                    "title": "Добавьте изображение"
+                                    })
                                 </div>
                             </div>
-                            <div class="diary__product">
-                                <div class="diary__product-column">
-                                    <ul class="diary__product-list">
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Сырный суп
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    400мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Фильтр кофе
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Спагетти болоньеза
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Спагетти болоньеза
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Сырный суп
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    400мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Фильтр кофе
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Спагетти болоньеза
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                        <li class="diary__product-item">
-                                            <div class="diary__product-content">
-                                                <div class="diary__product-name">
-                                                    Спагетти болоньеза
-                                                </div>
-                                                <div class="diary__product-unit">
-                                                    1000мл
-                                                </div>
-                                                <div class="diary__product-actions">
-                                                    <div class="diary__product-action">
-                                                        <button type="button" class="diary__product-edit icon-edit-bold"></button>
-                                                    </div>
-                                                    <button type="button" class="diary__product-action icon-close"></button>
-                                                </div>
-                                            </div>
-                                            <div class="diary__product-info" ЧТО МНЕ ДЕЛАТЬ?>
-                                                <p class="diary__product-text">
-                                                    Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                                </p>
-                                                <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="diary__product-slider swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="diary__product-image swiper-slide">
-                                            <img src="@img/product.png" class="cover-image" alt="product">
-                                            <div class="diary__product-btns">
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-picture.svg" alt="picture">
-                                                    <span>
-                                                        Добавить изображение
-                                                    </span>
-                                                </button>
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-delete.svg" alt="delete">
-                                                    <span>
-                                                        Удалить изображение
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="diary__product-image swiper-slide">
-                                            <img src="@img/product.png" class="cover-image" alt="product">
-                                            <div class="diary__product-btns">
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-picture.svg" alt="picture">
-                                                    <span>
-                                                        Добавить изображение
-                                                    </span>
-                                                </button>
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-delete.svg" alt="delete">
-                                                    <span>
-                                                        Удалить изображение
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="diary__product-image swiper-slide">
-                                            <img src="@img/product.png" class="cover-image" alt="product">
-                                            <div class="diary__product-btns">
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-picture.svg" alt="picture">
-                                                    <span>
-                                                        Добавить изображение
-                                                    </span>
-                                                </button>
-                                                <button class="diary__product-btn">
-                                                    <img src="@img/icon-delete.svg" alt="delete">
-                                                    <span>
-                                                        Удалить изображение
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="diary__product-prev swiper-button-prev"></div>
-                                    <div class="diary__product-next swiper-button-next"></div>
-                                </div>
-                            </div>
-                            <div class="diary__main-bottom">
-                                <div class="diary__main-content diary__main-column">
-                                    <a href="" class="diary__main-btn l-btn l-btn-primary l-btn-sm l-btn-fullwidth">
-                                        Добавить продукт
-                                    </a>
-                                    <div class="diary__main-satiety">
-                                        <div class="diary__main-title">
-                                            Ваша сытость после приёма пищи
-                                        </div>
-                                        <div class="diary__main-line">
-                                            <div class="diary__main-emoji">
-                                                <img src="@img/emoji.svg" alt="emoji">
-                                            </div>
-                                            <div class="diary__main-colors">
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="darkred" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="red" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="orange" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="yellow" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="lightgreen" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                                <label class="diary__color">
-                                                    <input type="radio" name="color" data-value="green" class="diary__color-input hidden" hidden>
-                                                    <span class="diary__color-content"></span>
-                                                </label>
-                                            </div>
-                                            <div class="diary__main-emoji">
-                                                <img src="@img/emoji-2.svg" alt="emoji">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="diary__spoller" data-spollers>
-                            <div class="diary__spoller-title title" data-spoller>
-                                Ваше настроение после&nbsp;приема пищи
-                            </div>
-                            <div class="diary__spoller-content">
-                                <div class="diary__main-title tablet-only">
-                                    Настроение
+                            <div class="diary__main-satiety">
+                                <div class="diary__main-title">
+                                    Ваша сытость после приёма пищи 1
                                 </div>
                                 <div class="diary__main-line">
                                     <div class="diary__main-emoji">
-                                        <img src="img/emoji.svg" alt="emoji">
+                                        <img src="@img/emoji.svg" alt="emoji">
                                     </div>
                                     <div class="diary__main-colors">
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="darkred" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" data-value="darkred" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="red" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" checked data-value="red" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="orange" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" data-value="orange" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="yellow" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" data-value="yellow" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="lightgreen" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" data-value="lightgreen" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                         <label class="diary__color">
-                                            <input type="radio" name="color" data-value="green" class="diary__color-input hidden" hidden>
+                                            <input type="radio" name="satiety-1" data-value="green" class="diary__color-input hidden" hidden>
                                             <span class="diary__color-content"></span>
                                         </label>
                                     </div>
                                     <div class="diary__main-emoji">
-                                        <img src="img/emoji-3.svg" alt="emoji">
+                                        <img src="@img/emoji-2.svg" alt="emoji">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="diary__main-satiety">
+                                <div class="diary__main-title">
+                                    Ваша сытость после приёма пищи 2
+                                </div>
+                                <div class="diary__main-line">
+                                    <div class="diary__main-emoji">
+                                        <img src="@img/emoji-4.svg" alt="emoji">
+                                    </div>
+                                    <div class="diary__main-colors">
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" data-value="darkred" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" data-value="red" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" data-value="orange" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" checked data-value="yellow" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" data-value="lightgreen" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                        <label class="diary__color">
+                                            <input type="radio" name="satiety-2" data-value="green" class="diary__color-input hidden" hidden>
+                                            <span class="diary__color-content"></span>
+                                        </label>
+                                    </div>
+                                    <div class="diary__main-emoji">
+                                        <img src="@img/emoji-3.svg" alt="emoji">
                                     </div>
                                 </div>
                             </div>
@@ -547,6 +264,8 @@
                                     </li>
                                 </ul>
                             </div>
+
+
                         </div>
                         <div class="diary__extras">
                             <div class="diary__extras-caption">

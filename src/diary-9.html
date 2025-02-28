@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
-
-    <body>
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Дневник',
+    "stylesName": ["diary"]
+    })
+    <body class="lock">
         <div class="wrapper">
             @@include('html/_header.html', {
             "active": 1234
@@ -402,56 +404,52 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="diary__product-info">
-                                        <p class="diary__product-text">
-                                            Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
-                                        </p>
-                                        <a href="#product" data-modal class="diary__product-write">Записать</a>
-                                    </div>
                                 </div>
-                                <div class="diary__main-bottom">
-                                    <div class="diary__main-content diary__main-column">
-                                        <a href="" class="diary__main-btn l-btn l-btn-primary l-btn-sm l-btn-fullwidth">
-                                            Добавить продукт
-                                        </a>
-                                        <div class="diary__main-satiety">
-                                            <div class="diary__main-title">
-                                                Ваша сытость после приёма пищи
-                                            </div>
-                                            <div class="diary__main-line">
-                                                <div class="diary__main-emoji">
-                                                    <img src="@img/emoji.svg" alt="emoji">
-                                                </div>
-                                                <div class="diary__main-colors">
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="darkred" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="red" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="orange" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="yellow" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="lightgreen" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                    <label class="diary__color">
-                                                        <input type="radio" name="satiety" data-value="green" class="diary__color-input hidden" hidden>
-                                                        <span class="diary__color-content"></span>
-                                                    </label>
-                                                </div>
-                                                <div class="diary__main-emoji">
-                                                    <img src="@img/emoji-2.svg" alt="emoji">
-                                                </div>
-                                            </div>
+                                <div class="diary__product-info">
+                                    <p class="diary__product-text">
+                                        Оу... а у нас нет в базе каллорийности такого продукта. если вы знаете, давайте её запишем?
+                                    </p>
+                                    <a href="#product" data-modal class="diary__product-write">Записать</a>
+                                </div>
+                                <a href="" class="diary__main-btn l-btn l-btn-primary l-btn-sm l-btn-fullwidth">
+                                    Добавить продукт
+                                </a>
+                                <div class="diary__main-satiety">
+                                    <div class="diary__main-title">
+                                        Ваша сытость после приёма пищи
+                                    </div>
+                                    <div class="diary__main-line">
+                                        <div class="diary__main-emoji">
+                                            <img src="@img/emoji.svg" alt="emoji">
+                                        </div>
+                                        <div class="diary__main-colors">
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="darkred" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="red" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="orange" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="yellow" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="lightgreen" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                            <label class="diary__color">
+                                                <input type="radio" name="satiety" data-value="green" class="diary__color-input hidden" hidden>
+                                                <span class="diary__color-content"></span>
+                                            </label>
+                                        </div>
+                                        <div class="diary__main-emoji">
+                                            <img src="@img/emoji-2.svg" alt="emoji">
                                         </div>
                                     </div>
                                 </div>

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
-    <body>
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Страница пользователя',
+    "stylesName": ["person", "announcement"]
+    })
+    <body class="lock">
         <div class="wrapper">
             @@include('html/_header.html', {
             "active": 2
@@ -23,7 +26,6 @@
                                         <div class="person__thumb">
                                             <img src="@img/user-2.png" class="cover-image" alt="thumb">
                                         </div>
-
                                         <div class="person__activity icon-clock pc-only">
                                             с 3 апреля 2022
                                         </div>

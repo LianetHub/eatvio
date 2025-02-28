@@ -1,0 +1,125 @@
+@use "sass:math";
+@import "../config.scss";
+
+.dish {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	// .dish__image
+	&__image {
+		height: 0;
+		padding-bottom: 47%;
+		position: relative;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 10px 10px 0 0;
+		}
+	}
+	// .dish__video
+	&__video {
+		position: absolute;
+		right: 0.65em;
+		top: 0.65em;
+		display: flex;
+		width: 32px;
+		height: 32px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.75);
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: background-color 0.3s ease 0s;
+		z-index: 3;
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+	// .dish__stats
+	&__stats {
+		padding: em(8);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		font-weight: 700;
+		gap: rem(10);
+		width: 100%;
+		order: 1;
+		@media (min-width: $md4) {
+			order: 0;
+		}
+	}
+	// .dish__stat
+	&__stat {
+		display: flex;
+		align-items: center;
+		column-gap: rem(5);
+		&::before {
+			font-size: 1.25em;
+		}
+	}
+	// .dish__desc
+	&__desc {
+		margin-top: 0.25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 rem(8) rem(8);
+	}
+	// .dish__desc-caption
+	&__desc-caption {
+		width: 100%;
+		font-weight: 700;
+		margin-bottom: rem(4);
+		font-size: rem(18);
+	}
+	&__desc-header {
+		width: 100%;
+		display: flex;
+		.favorite-btn {
+			font-size: rem(20);
+			&.active {
+				&::before {
+					content: "\e94d";
+					font-family: "icons";
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					line-height: 1;
+					speak: never;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					color: $accent;
+				}
+			}
+		}
+	}
+	// .dish__desc-visible
+	&__desc-visible {
+		font-size: rem(14);
+	}
+	// .dish__desc-btn
+	&__desc-btn {
+		margin-top: rem(5);
+		order: 1;
+		color: #0d6efd;
+		transition: transform 0.3s ease 0s;
+		&._active {
+			transform: rotate(180deg);
+		}
+	}
+	// .dish__desc-more
+	&__desc-more {
+		font-size: rem(14);
+	}
+}

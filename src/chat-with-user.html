@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.html', { 'title': 'Fitness' })
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Чат',
+    "stylesName": ["chat", "plans"]
+    })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
@@ -149,7 +152,7 @@
                                                         <p class="plans__item-text">
                                                             his course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me. This course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me. This course is suitable for consultants who have doubts about the work, in three weeks you will understand how comfortable it is for you to work with me.
                                                         </p>
-                                                        <a href="" class="plans__item-user ">Анкета пользователя</a>
+                                                        <a href="" class="plans__item-user l-btn l-btn-primary l-btn-sm">Анкета пользователя</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -299,7 +302,9 @@
             "className": " pc-only"
             })
         </div>
-
+        @@include('html/_modal.html', {
+        "modal": "add-complaint"
+        })
         @@include('html/_js.html', {})
     </body>
 </html>

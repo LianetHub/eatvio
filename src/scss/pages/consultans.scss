@@ -1,0 +1,229 @@
+@use "sass:math";
+@import "../config.scss";
+
+.consultant {
+	position: relative;
+	background: #fff;
+	padding: em(16);
+	border-radius: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.62rem;
+	@media (min-width: $md5) {
+		gap: 1rem;
+		display: grid;
+		grid-template-columns: 100px 1fr;
+	}
+	// .consultant__main
+	&__main {
+		display: contents;
+		@media (min-width: $md5) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .consultant__thumb
+	&__thumb {
+		height: 3.75rem;
+		min-width: 3.75rem;
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		@media (min-width: $md5) {
+			position: static;
+			top: auto;
+			left: auto;
+			height: 6.25rem;
+			min-width: 6.25rem;
+		}
+		& img {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .consultant__rate
+	&__rate {
+		display: flex;
+		align-items: center;
+		column-gap: rem(5);
+		font-size: 0.875rem;
+		padding-left: 4.5rem;
+		margin-top: -0.5rem;
+		&::before {
+			color: #ffb100;
+		}
+		& span {
+			font-size: 1.125rem;
+			font-weight: 700;
+			color: #ffb100;
+			@media (min-width: $md5) {
+				font-size: 1.25rem;
+			}
+		}
+		@media (min-width: $md5) {
+			padding-left: 0;
+			margin-top: 0.25rem;
+			margin-bottom: 0.75rem;
+		}
+	}
+	// .consultant__comment
+	&__comment {
+		order: 1;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		flex: 0 0 calc(50% - 0.32rem);
+		@media (min-width: $md5) {
+			flex: 0 1 auto;
+			width: 100%;
+			margin-top: auto;
+		}
+	}
+	// .consultant__body
+	&__body {
+		display: contents;
+		@media (min-width: $md5) {
+			display: block;
+		}
+	}
+	// .consultant__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		order: -1;
+		flex: 0 0 100%;
+		align-self: flex-start;
+		padding-left: 4.5rem;
+		@media (min-width: $md5) {
+			padding-left: 0rem;
+			order: 0;
+			flex: 0 1 auto;
+		}
+	}
+	// .consultant__name
+	&__name {
+		font-weight: 700;
+		font-size: 1.125rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+	}
+	// .consultant__favorite
+	&__favorite {
+		margin-top: -1rem;
+		margin-right: -1rem;
+		@media (min-width: $md5) {
+			margin-top: -0.38rem;
+			margin-right: -0.38rem;
+		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #0d6efd;
+			}
+		}
+		& path {
+			stroke: currentColor;
+		}
+		&.active {
+			color: #2f80ed;
+			& path {
+				fill: currentColor;
+			}
+		}
+	}
+	// .consultant__desc
+	&__desc {
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+		max-width: 24.625rem;
+	}
+	// .consultant__benefits
+	&__benefits {
+		margin-top: 0.5rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(32);
+		row-gap: 0.81rem;
+	}
+	// .consultant__benefit
+	&__benefit {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 700;
+		column-gap: rem(5);
+		align-items: center;
+		&::before {
+			order: 1;
+			color: #019a3e;
+		}
+		& span {
+			color: #2f80ed;
+			font-size: 20px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__certs {
+		font-size: 14px;
+		font-weight: 700;
+		color: #2f80ed;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .consultant__footer
+	&__footer {
+		display: contents;
+		@media (min-width: $md5) {
+			margin-top: 0.15rem;
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+		.person__checklist {
+			order: 1;
+			display: flex;
+			gap: rem(8);
+			flex-wrap: wrap;
+
+			margin: em(16) em(0) em(0) em(0);
+			@media (min-width: $md5) {
+				flex: 0 1 auto;
+			}
+			& img {
+				max-width: 1.5rem;
+			}
+		}
+	}
+	// .consultant__footer-price
+	&__footer-price {
+		font-size: 1rem;
+		padding: 0.5rem 1.5rem;
+		background: #198754;
+		color: #fff;
+		border-radius: 0.5rem;
+		font-weight: 700;
+		min-width: rem(120);
+		text-align: center;
+		order: 1;
+		flex: 0 0 calc(50% - 0.32rem);
+		@media (min-width: $md5) {
+			flex: 0 1 auto;
+		}
+		&.disabled {
+			background: #a4a4a4;
+		}
+	}
+}

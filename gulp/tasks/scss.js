@@ -9,50 +9,71 @@ import groupCssMediaQueries from 'gulp-group-css-media-queries';
 import shorthand from 'gulp-shorthand';
 import postcss from 'gulp-postcss';
 import tailwindcss from 'tailwindcss';
+import fs from 'fs';
+import path from 'path';
+import merge from 'merge-stream';
+
 
 const sass = gulpSass(dartSass);
 
+
+
 export const scss = () => {
-    return app.gulp.src(app.path.src.scss, { sourcemaps: app.isDev })
-        .pipe(app.plugins.plumber(
-            app.plugins.notify.onError({
-                title: "SCSS",
-                message: "Error: <%= error.message %>"
-            }))
-        )
-        .pipe(sass({
-            outputStyle: 'expanded'
-        }))
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                groupCssMediaQueries()
-            )
-        )
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                autoprefixer({
-                    grid: true,
-                    overrideBrowserslist: ['last 3 versions'],
-                    cascade: true
+    const scssDir = path.dirname(app.path.src.scss);
+    let scssFiles = [];
+
+    if (fs.existsSync(scssDir)) {
+        scssFiles = fs.readdirSync(scssDir).filter(file => file.endsWith('.scss'));
+    }
+
+    if (scssFiles.length === 0) {
+        console.log('Нет SCSS файлов для обработки.');
+        return;
+    }
+
+    const streams = scssFiles.map(() => {
+        return app.gulp.src(app.path.src.scss, { sourcemaps: app.isDev })
+            .pipe(app.plugins.plumber(
+                app.plugins.notify.onError({
+                    title: "SCSS",
+                    message: "Error: <%= error.message %>"
                 })
+            ))
+            .pipe(sass({ outputStyle: 'expanded' }))
+            .pipe(
+                app.plugins.if(
+                    app.isBuild,
+                    groupCssMediaQueries()
+                )
             )
-        )
-        .pipe(app.plugins.replace(/@img\//g, '../img/'))
-        .pipe(app.gulp.dest(app.path.build.css))
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                cleanCss()
+            .pipe(
+                app.plugins.if(
+                    app.isBuild,
+                    autoprefixer({
+                        grid: true,
+                        overrideBrowserslist: ['last 3 versions'],
+                        cascade: true
+                    })
+                )
             )
-        )
-        .pipe(rename({
-            extname: ".min.css"
-        }))
-        .pipe(app.gulp.dest(app.path.build.css))
-        .pipe(app.plugins.browsersync.stream());
-}
+            .pipe(app.plugins.replace(/@img\//g, '../img/'))
+            .pipe(app.gulp.dest(app.path.build.css))
+            .pipe(
+                app.plugins.if(
+                    app.isBuild,
+                    cleanCss()
+                )
+            )
+            .pipe(rename({ extname: ".min.css" }))
+            .pipe(app.gulp.dest(app.path.build.css))
+            .pipe(app.plugins.browsersync.stream());
+    });
+
+    return merge(streams);
+};
+
+
+
 
 export const normalize = () => {
     return app.gulp.src(app.path.src.normalize, { sourcemaps: app.isDev })
