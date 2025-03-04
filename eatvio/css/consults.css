@@ -97,8 +97,9 @@
 }
 
 .consults__item-person {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 .consults__item-header {
@@ -131,10 +132,22 @@
 
 .consults__item-name {
   font-weight: 700;
+  font-size: 1rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .consults__item-plan {
   font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 0.25rem;
+     -moz-column-gap: 0.25rem;
+          column-gap: 0.25rem;
 }
 
 .consults__item-plan strong {
@@ -156,7 +169,7 @@
 }
 
 .consults__progress-items {
-  margin: 0.5rem 0em 0em 0em;
+  margin: 0.25rem 0em 0em 0em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,6 +177,18 @@
      -moz-column-gap: 0.25rem;
           column-gap: 0.25rem;
   height: 1.125rem;
+}
+
+.consults__progress-items.consults__progress-items-sm {
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.consults__progress-items.consults__progress-items-sm .consults__progress-item {
+  -webkit-transform: skew(-20deg);
+      -ms-transform: skew(-20deg);
+          transform: skew(-20deg);
 }
 
 .consults__progress-item {
@@ -193,6 +218,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  margin-right: 0.25rem;
 }
 
 .consults__price-caption {
@@ -206,15 +232,30 @@
   color: #00be13;
 }
 
-.consults__btn {
-  font-size: 1rem;
-  padding: 0.68rem 1.2rem;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+.consults__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.consults__btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 2.75rem;
+}
+
+.consults__btn.l-btn-primary-outline {
+  color: #323f4b;
 }
 
 .consults__status {
@@ -264,7 +305,7 @@
 }
 
 .consults__archive {
-  margin: 1.5rem auto 0em;
+  margin: 2.5rem auto 0em;
   min-height: 2.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,6 +315,56 @@
 
 .consults__archive.l-btn.l-btn-md {
   padding-inline: 3.5rem;
+}
+
+.consults__chat {
+  position: relative;
+  border-radius: 0.5rem;
+  background: #f6f6f6;
+  border: 0.0625rem solid #f6f6f6;
+  width: 2.75rem;
+  height: 2.75rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.consults__chat svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.consults__chat:hover {
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+  color: #fff;
+}
+
+.consults__chat:active {
+  border-color: #2f80ed;
+  background-color: #fff;
+  color: #323f4b;
+}
+
+.consults__chat.new::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5625rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #d01717;
+  border-radius: 50%;
 }
 
 @media (min-width: 575.98px) {
@@ -303,7 +394,22 @@
     padding: 1em;
   }
 
+  .consults__item-person {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
   .consults__price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .consults__btns {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -316,10 +422,8 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    min-width: 13.5rem;
+    min-width: 13.25rem;
+    font-weight: 600;
   }
 
   .consults__status {
@@ -339,6 +443,14 @@
   }
 }
 
+@media (min-width: 767.98px) {
+  .consults__item-person {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 29.5%;
+            flex: 0 0 29.5%;
+  }
+}
+
 @media (min-width: 991.98px) {
   .consults__item {
     -ms-flex-wrap: nowrap;
@@ -349,7 +461,7 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    margin: 0 auto;
+    margin-right: auto;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -357,19 +469,17 @@
 
   .consults__progress-items {
     width: 15.75rem;
-  }
-}
-
-@media (min-width: 1199.98px) {
-  .consults__item {
-    -webkit-column-gap: 2.625rem;
-       -moz-column-gap: 2.625rem;
-            column-gap: 2.625rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
 }
 
 @media (any-hover: hover) {
   .consults__title[href]:hover {
+    color: #2f80ed;
+  }
+
+  .consults__item-name:hover {
     color: #2f80ed;
   }
 

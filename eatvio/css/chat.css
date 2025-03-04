@@ -816,6 +816,41 @@
   transition: color 0.3s ease 0s;
 }
 
+.chat__submit {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #2f80ed;
+  border-radius: 50%;
+  color: #fff;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.chat__submit::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 1.25rem;
+}
+
+.chat__voice {
+  font-size: 1.5rem;
+  color: #7b8794;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
 .chat__banner {
   margin-top: 1.25rem;
   border-radius: 0.5rem;
@@ -1106,6 +1141,10 @@
     font-size: 30px;
   }
 
+  .chat__voice {
+    font-size: 30px;
+  }
+
   .chat__banner-caption {
     padding-right: 1rem;
     font-size: 1.25rem;
@@ -1224,6 +1263,14 @@
 
   .chat__file-btn:hover {
     color: #2f80ed;
+  }
+
+  .chat__voice:hover {
+    color: #2f80ed;
+  }
+
+  .chat__submit:hover {
+    background-color: #1366d6;
   }
 
   .chat__voice:hover {

@@ -850,6 +850,42 @@
 			}
 		}
 	}
+	// .chat__submit
+	&__submit {
+		width: rem(40);
+		height: rem(40);
+		background: $accent;
+		border-radius: 50%;
+		color: #fff;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background-color 0.3s ease;
+		&::before {
+			transform: rotate(90deg);
+			font-size: 1.25rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color: $accent, $amount: 10);
+			}
+		}
+	}
+	// .chat__voice
+	&__voice {
+		font-size: 1.5rem;
+		@media (min-width: $md4) {
+			font-size: 30px;
+		}
+		color: #7b8794;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #2f80ed;
+			}
+		}
+	}
 	// .chat__banner
 	&__banner {
 		margin-top: 1.25rem;
