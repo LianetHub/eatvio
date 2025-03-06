@@ -19,6 +19,23 @@
           align-items: center;
 }
 
+.announcement__header .consultant__rate {
+  margin-top: 0.25rem;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.3125rem;
+     -moz-column-gap: 0.3125rem;
+          column-gap: 0.3125rem;
+  font-size: 0.875rem;
+  padding-left: 4.5rem;
+  margin-top: -0.5rem;
+}
+
 .announcement__header-stats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,6 +272,7 @@
 }
 
 .announcement__body {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
