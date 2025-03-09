@@ -17,6 +17,13 @@
 		display: block;
 	}
 }
+
+.icon-download-fill:before {
+	content: "\e958";
+}
+.icon-edit-underline:before {
+	content: "\e957";
+}
 .icon-add-card:before {
 	content: "\e956";
 }

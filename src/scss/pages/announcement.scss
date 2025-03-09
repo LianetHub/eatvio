@@ -154,13 +154,45 @@
 		&:not(:last-child) {
 			margin: em(0) em(0) rem(8) rem(0);
 		}
+		&:has(.announcement__action[class*="icon-"]) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
 	}
 	// .announcement__action
 	&__action {
 		display: flex;
 		align-items: center;
 		transition: color 0.3s ease 0s;
+		gap: rem(12);
+		&[class*="icon-"] {
+			padding: rem(7) rem(6);
+			border-radius: rem(4);
 
+			width: 100%;
+			transition: background-color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #323f4b;
+					background-color: #f2f2f2;
+				}
+			}
+		}
+		&.icon-delete {
+			&::before {
+				color: #ff3b3b;
+			}
+		}
+		&::before {
+			width: rem(18);
+			height: rem(18);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(18);
+			color: #2f80ed;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: #2f80ed;
