@@ -10,12 +10,6 @@ export const images = () => {
             }))
         )
         .pipe(app.plugins.newer(app.path.build.images))
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         webp()
-        //     )
-        // )
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -34,20 +28,22 @@ export const images = () => {
                 app.plugins.newer(app.path.build.images)
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         imagemin({
-        //             progressive: true,
-        //             svgoPlugins: [{ removeViewBox: false }],
-        //             interlaced: true,
-        //             optimizationLevel: 1
-        //         })
-        //     )
-        // )
         .pipe(app.gulp.dest(app.path.build.images))
         .pipe(app.gulp.src(app.path.src.svg))
         .pipe(app.gulp.dest(app.path.build.images))
+        .pipe(app.plugins.browsersync.stream());
+}
+
+export const articlesImages = () => {
+    return app.gulp.src(app.path.src.articlesImages)
+        .pipe(app.plugins.plumber(
+            app.plugins.notify.onError({
+                title: "Images",
+                message: "Error: <%= error.message %>"
+            }))
+        )
+        .pipe(app.plugins.newer(app.path.build.articlesImages))
+        .pipe(app.gulp.dest(app.path.build.articlesImages))
         .pipe(app.plugins.browsersync.stream());
 }
 

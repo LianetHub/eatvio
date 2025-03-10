@@ -15,6 +15,12 @@ export const path = {
 		fonts: `${buildFolder}/fonts/`,
 		json: `${buildFolder}/json/`,
 		php: `${buildFolder}/`,
+
+		articles: `${buildFolder}/articles/`,
+		articlesCss: `${buildFolder}/articles/css/`,
+		articlesJs: `${buildFolder}/articles/js/`,
+		articlesImages: `${buildFolder}/articles/img/`,
+		articlesFonts: `${buildFolder}/articles/fonts/`,
 	},
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
@@ -27,6 +33,11 @@ export const path = {
 		svg: `${srcFolder}/img/**/*.svg`,
 		json: `${srcFolder}/json/*.*`,
 		php: `${srcFolder}/*.php`,
+
+		articlesHtml: `${srcFolder}/articles/*.html`,
+		articlesScss: `${srcFolder}/articles/scss/style.scss`,
+		articlesJs: `${srcFolder}/articles/js/app.js`,
+		articlesImages: `${srcFolder}/articles/img/**/*.{jpg,jpeg,png,svg,gif,webp}`,
 	},
 	watch: {
 		files: `${srcFolder}/files/**/*.*`,
@@ -38,9 +49,14 @@ export const path = {
 		json: `${srcFolder}/json/*.*`,
 		php: `${srcFolder}/**/*.php`,
 
+		articlesHtml: `${srcFolder}/articles/**/*.html`,
+		articlesCss: `${srcFolder}/articles/scss/**/*.scss`,
+		articlesJs: `${srcFolder}/articles/js/**/*.js`,
+		articlesImages: `${srcFolder}/articles/img/**/*.{jpg,jpeg,png,svg,gif,webp}`,
+
 	},
 	clean: buildFolder,
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
 	ftp: ``
-}
+};

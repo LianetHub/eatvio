@@ -96,6 +96,11 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1 1 auto;
+		&:last-child {
+			@media (min-width: $md2) {
+				padding-right: 18rem;
+			}
+		}
 		@media (min-width: $md2) {
 			padding-right: 9rem;
 		}
