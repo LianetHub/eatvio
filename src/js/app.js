@@ -269,8 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 swiper: thumbSlider
             }
         });
-
-
     }
 
     if (document.querySelectorAll('.diary__tooltip').length > 0) {
@@ -304,6 +302,11 @@ document.addEventListener("DOMContentLoaded", () => {
             productItem.querySelector('[data-product-more]').slideDown(0);
         })
     }
+
+
+
+
+
 
 
     function getIndexInParent(node) {

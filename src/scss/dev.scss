@@ -1,0 +1,65 @@
+@use "sass:math";
+
+// ======================================МИКСИНЫ==============================================
+@import "mixins";
+// ======================================МИКСИНЫ==============================================
+// Шрифт по умолчанию
+$fontfamily: "Mulish";
+$font-open-sans: "OpenSans";
+
+// Шрифт по умолчанию
+
+// ПЕРЕМЕННЫЕ
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина макета
+$maxWidthContainer: 1170; // Максимальная ширина ограничивающего контейнера
+$containerPadding: 30;
+
+$md0: 1599.98px;
+$md1: 1439.98px;
+$md2: 1199.98px;
+$md3: 991.98px;
+$md4: 767.98px;
+$md5: 575.98px;
+$md6: 459.98px;
+
+$mainColor: #323f4b;
+$accent: #2f80ed;
+$red: #eb555c;
+
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@import "style.scss";
+@import "pages/announcement.scss";
+@import "pages/archive.scss";
+@import "pages/arm.scss";
+@import "pages/article.scss";
+@import "pages/bid.scss";
+@import "pages/cabinet.scss";
+@import "pages/chat.scss";
+@import "pages/comment.scss";
+@import "pages/common.scss";
+@import "pages/consultans.scss";
+@import "pages/consults.scss";
+@import "pages/diary.scss";
+@import "pages/diet.scss";
+@import "pages/dish.scss";
+@import "pages/login.scss";
+@import "pages/person.scss";
+@import "pages/plans.scss";
+@import "pages/rating.scss";
+@import "pages/receiving.scss";
+@import "pages/reviews.scss";
+@import "pages/search.scss";
+@import "pages/stats.scss";
+@import "pages/subscribers.scss";

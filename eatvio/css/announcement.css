@@ -47,6 +47,10 @@
   font-weight: 700;
 }
 
+.announcement__header-stats .announcement__actions {
+  margin-left: 0;
+}
+
 .announcement__header-stat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +283,7 @@
 
 .announcement__image img {
   border-radius: 8px;
+  max-height: 70vh;
 }
 
 .announcement__image:not(.no-cover)::before {
@@ -436,8 +441,8 @@
 .announcement__details-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1.25fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
 }
 
 .announcement__details-row:not(:last-child) {
@@ -449,6 +454,8 @@
 }
 
 .announcement__details-btns {
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,6 +695,29 @@
   font-size: 1.5em;
 }
 
+.announcement__share {
+  margin-top: 5.6875rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.announcement__share::before {
+  font-size: 2.5rem;
+}
+
 @media (min-width: 575.98px) {
   .announcement__video {
     width: 4.375rem;
@@ -868,5 +898,9 @@
   .announcement__footer-action:hover {
     background-color: #2f80ed;
     color: #fff;
+  }
+
+  .announcement__share:hover {
+    color: #2f80ed;
   }
 }

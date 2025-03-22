@@ -19,6 +19,26 @@ const sass = gulpSass(dartSass);
 
 
 export const scss = () => {
+
+    if (app.isDev) {
+        return app.gulp.src(app.path.src.scssDev, { sourcemaps: true })
+            .pipe(app.plugins.plumber(
+                app.plugins.notify.onError({
+                    title: "SCSS",
+                    message: "Error: <%= error.message %>"
+                })
+            ))
+            .pipe(sass({ outputStyle: 'expanded' }))
+            .pipe(autoprefixer({
+                grid: true,
+                overrideBrowserslist: ['last 3 versions'],
+                cascade: true
+            }))
+            .pipe(app.plugins.replace(/@img\//g, '../img/'))
+            .pipe(app.gulp.dest(app.path.build.css))
+            .pipe(app.plugins.browsersync.stream());
+    }
+
     const scssDir = path.dirname(app.path.src.scss);
     let scssFiles = [];
 

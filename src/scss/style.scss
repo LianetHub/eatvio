@@ -34,7 +34,7 @@ body {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
-	overflow: hidden;
+	overflow-x: сlip;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
@@ -166,7 +166,7 @@ body {
 	}
 	// .content__body
 	&__body {
-		gap: 1rem;
+		gap: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		@media (min-width: $md3) {
@@ -186,6 +186,9 @@ body {
 			@media (min-width: $md3) {
 				grid-template-columns: repeat(3, 1fr);
 			}
+		}
+		.article {
+			padding: 0;
 		}
 	}
 	&__grid {
@@ -244,6 +247,14 @@ body {
 	// .content__side
 	&__side {
 		flex: 0 0 31.6%;
+		@media (max-width: $md4) {
+			margin-left: rem(-16);
+			margin-right: rem(-16);
+			padding: 0 rem(16);
+		}
+		@media (max-width: $md4) {
+			overflow: hidden;
+		}
 		&.content__side-sm {
 			order: -1;
 			@media (min-width: $md3) {
@@ -256,6 +267,85 @@ body {
 			@media (min-width: $md3) {
 				flex: 0 0 rem(270);
 				order: 0;
+			}
+		}
+	}
+	// .content__nav
+	&__nav {
+		overflow: visible;
+
+		@media (min-width: $md4) {
+			border-radius: rem(20);
+			background: #fff;
+			margin-left: 0;
+			margin-right: 0;
+			padding: em(4) 0;
+			position: sticky;
+			top: 1rem;
+		}
+		.swiper-wrapper {
+			@media (min-width: $md4) {
+				display: contents;
+			}
+		}
+	}
+	// .content__nav-item
+	&__nav-item {
+		@media (min-width: $md4) {
+			padding: 0.75rem 0;
+			&:not(:last-child) {
+				border-bottom: rem(1) solid #f9f9f9;
+			}
+		}
+		@media (max-width: $md4) {
+			width: fit-content;
+		}
+	}
+	// .content__nav-link
+	&__nav-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		padding: 0.5rem 1rem;
+		font-size: 0.75rem;
+		white-space: nowrap;
+		@media (min-width: $md4) {
+			line-height: math.div(25, 20);
+			font-size: rem(18);
+			padding: 0 em(16, 18);
+		}
+		transition: background-color 0.3s ease 0s;
+		&::before {
+			margin: em(0) rem(14) em(0) em(0);
+			color: #2f80ed;
+		}
+		@media (max-width: $md4) {
+			background: #fff;
+			border-radius: 6.25rem;
+		}
+		&.active {
+			@media (max-width: $md4) {
+				background: #2f80ed;
+				color: #fff;
+			}
+			@media (min-width: $md4) {
+				color: #2f80ed;
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 0.125rem;
+					height: 100%;
+					border-radius: 0rem 0.125rem 0.125rem 0rem;
+					background: #2f80ed;
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #2f80ed;
 			}
 		}
 	}
@@ -885,9 +975,11 @@ body {
 	}
 	// .content__menu
 	&__menu {
-		border-radius: 8px;
+		border-radius: rem(20);
 		background: #fff;
-		padding: em(10);
+		padding: em(4) 0;
+		position: sticky;
+		top: 1rem;
 	}
 	// .content__menu-list
 	&__menu-list {
@@ -904,25 +996,27 @@ body {
 	&__menu-link {
 		display: flex;
 		align-items: center;
-		font-size: 20px;
+		font-size: rem(18);
 		font-weight: 500;
 		line-height: math.div(25, 20);
-		padding: em(10, 20);
+		padding: em(12, 18) em(16, 18);
 		border-radius: 4px;
 		transition: background-color 0.3s ease 0s;
 		&::before {
 			margin: em(0) rem(14) em(0) em(0);
 			color: #2f80ed;
 		}
-		&.active {
-			background: #2f80ed;
-			color: #fff;
-			&::before {
+		&[class*="icon"] {
+			&.active {
+				background: #2f80ed;
 				color: #fff;
-			}
-			@media (any-hover: hover) {
-				&:hover {
-					background: #2f80ed;
+				&::before {
+					color: #fff;
+				}
+				@media (any-hover: hover) {
+					&:hover {
+						background: #2f80ed;
+					}
 				}
 			}
 		}
@@ -3063,7 +3157,7 @@ body {
 	// .settings__price-btn
 	&__price-btn {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		font-size: 1.25rem;
 		@media (min-width: $md5) {
 			font-size: 1.5rem;
@@ -3084,13 +3178,28 @@ body {
 			-moz-osx-font-smoothing: grayscale;
 			order: 1;
 			font-size: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			margin-left: auto;
+
 			transition: transform 0.3s ease 0s;
 		}
 		&._active {
 			&::before {
 				transform: rotate(180deg);
 			}
+		}
+	}
+	&__price-main {
+		flex: 1 1 auto;
+		display: flex;
+		text-align: left;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(8);
+		& strong {
+			font-weight: 600;
+			color: #137c3d;
 		}
 	}
 	// .settings__price-body

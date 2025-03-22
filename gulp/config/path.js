@@ -25,6 +25,7 @@ export const path = {
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
+		scssDev: `${srcFolder}/scss/dev.scss`,
 		scss: `${srcFolder}/scss/pages/*.scss`,
 		tailwind: `${srcFolder}/scss/tailwind.css`,
 		normalize: `${srcFolder}/scss/reset.scss`,

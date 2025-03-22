@@ -34,7 +34,7 @@ import { php } from "./gulp/tasks/php.js";
 function watcher() {
     gulp.watch(path.watch.files, copy);
     gulp.watch(path.watch.html, gulp.parallel(html, tailwindTask));
-    gulp.watch(path.watch.scss, scss);
+    gulp.watch(path.watch.scss, gulp.parallel(scss, articlesScss));
     gulp.watch(path.watch.normalize, normalize);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.json, json);
@@ -42,7 +42,7 @@ function watcher() {
     gulp.watch(path.watch.php, php);
 
     gulp.watch(path.watch.articlesHtml, articlesHtml);
-    gulp.watch(path.watch.articlesCss, articlesScss);
+    // gulp.watch(path.watch.articlesCss, articlesScss);
     gulp.watch(path.watch.articlesJs, articlesJs);
     gulp.watch(path.watch.articlesImages, articlesImages);
 }

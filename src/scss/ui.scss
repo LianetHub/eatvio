@@ -372,6 +372,7 @@
 .grey-color {
 	color: #6d6f71;
 }
+
 .yellow-color {
 	color: #ff9500;
 }
@@ -847,6 +848,18 @@
 
 .accent-color {
 	color: #2f80ed;
+}
+
+.formula {
+	margin-top: 1.5rem;
+	border-radius: rem(12);
+	border: rem(2) solid #2f80ed;
+	background: rgba(47, 128, 237, 0.1);
+	text-align: center;
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: 120%;
+	padding: 0.94rem;
 }
 
 // .mobile-menu {

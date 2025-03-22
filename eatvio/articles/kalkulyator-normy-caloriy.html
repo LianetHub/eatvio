@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Калькулятор нормы калорий и БЖУ</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Нутрициолог — это ваш проводник в мире правильного питания. Он помогает не просто скорректировать рацион, но и понять, как еда влияет на ваше здоровье, энергию и настроение" />
+    <meta name="keywords" content="нутрициолог, работа с нутрициологом" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <div class="wrapper"> <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="../img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="../img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__nav swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Итвио дневник питания</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор ИМТ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link active">Калькулятор КБЖУ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <article class="article">
+                                <div class="article__block">
+                                    <h1>Калькулятор нормы калорий и БЖУ</h1>
+                                    <p> Калькулятор для подсчета БЖУ поможет вам определить дневную потребность вашего тела в энергию, учитывая ваши индивидуальные характеристики — вес, рост, возраст и уровень физической активности. </p>
+                                    <form action="#" class="article__form">
+                                        <div class="article__form-row">
+                                            <div class="article__form-column">
+                                                <h2>Общая информация</h2>
+                                                <div class="article__form-row">
+                                                    <label class="option">
+                                                        <input type="radio" name="sex" checked value="female" class="option__input hidden" hidden>
+                                                        <span class="option__btn">Женщина</span>
+                                                    </label>
+                                                    <label class="option">
+                                                        <input type="radio" name="sex" value="male" class="option__input hidden" hidden>
+                                                        <span class="option__btn">Мужчина</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="article__form-logo">
+                                                <img src="../img/logo-vertical-russia.svg" alt="logo">
+                                            </div>
+                                        </div>
+                                        <div class="article__form-grid">
+                                            <input type="number" name="age" class="input" placeholder="Возраст">
+                                            <input type="number" name="height" class="input" placeholder="Рост, в см">
+                                            <input type="number" name="weight" class="input" placeholder="Вес, в кг">
+                                        </div>
+                                        <span class="article__form-separator"></span>
+                                        <h2>Физическая активность</h2>
+                                        <div class="select select-blue">
+                                            <select>
+                                                <option value="1.2" selected>1.2 - минимальный (сидячая работа, отсутствие физических нагрузок)</option>
+                                                <option value="1.375">1.375 - низкий (легкие тренировки 1-3 раза в неделю)</option>
+                                                <option value="1.55">1.55 - средний (умеренные тренировки 3-5 раз в неделю)</option>
+                                                <option value="1.725">1.725 - высокий (интенсивные тренировки 6-7 раз в неделю)</option>
+                                                <option value="1.9">1.9 - очень высокий (профессиональные спортсмены, тяжелая физическая работа)</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="article__form-submit l-btn l-btn-primary"> Рассчитать </button>
+                                        <span class="article__form-separator"></span>
+                                    </form>
+                                    <div class="article__result">
+                                        <h2>Результат</h2>
+                                        <div class="article__result-content">
+                                            <div class="article__result-subtitle">Ваша суточная норма калорий и&nbsp;БЖУ</div>
+                                            <div class="article__form-logo mobile-only">
+                                                <img src="../img/logo-vertical-russia.svg" alt="logo">
+                                            </div>
+                                        </div>
+                                        <div class="article__calories">
+                                            <div class="article__calories-value">— кКал*</div>
+                                            <div class="article__calories-details">
+                                                <div class="article__calories-caption">Из которых:</div>
+                                                <div class="article__calories-row">
+                                                    <div class="article__calories-block">
+                                                        <div class="article__calories-header">
+                                                            <div class="article__calories-value">—</div>
+                                                            <div class="article__calories-unit">гр</div>
+                                                        </div>
+                                                        <div class="article__calories-name">Белки</div>
+                                                    </div>
+                                                    <div class="article__calories-block">
+                                                        <div class="article__calories-header">
+                                                            <div class="article__calories-value">—</div>
+                                                            <div class="article__calories-unit">гр</div>
+                                                        </div>
+                                                        <div class="article__calories-name">Жиры</div>
+                                                    </div>
+                                                    <div class="article__calories-block">
+                                                        <div class="article__calories-header">
+                                                            <div class="article__calories-value">—</div>
+                                                            <div class="article__calories-unit">гр</div>
+                                                        </div>
+                                                        <div class="article__calories-name">Углеводы</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="article__result-hint">* Данные результаты являются рекомендацией, для более точных результатов обратитесь к специалистам.</div>
+                                    </div>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Подсчет КБЖУ от вашей дневной суточной нормы</h2>
+                                    <p> Чтобы рассчитать потребление КБЖУ за день, добавьте ваш рацион </p>
+                                    <form action="#" class="article__form">
+                                        <div class="article__form-line">
+                                            <input type="text" name="name" class="input" placeholder="Введите название продукта">
+                                            <div class="article__form-field">
+                                                <input type="number" name="height" class="input" placeholder="Кол-во">
+                                                <div class="article__form-unit"> гр </div>
+                                            </div>
+                                            <button type="submit" class="l-btn l-btn-primary">Добавить продукт</button>
+                                        </div>
+                                    </form>
+                                    <div class="article__visual">
+                                        <div class="article__ration">
+                                            <div class="article__ration-title">Рацион</div>
+                                            <div class="article__ration-text">Похоже, Вы не добавили <br> ни одного блюда</div>
+                                        </div>
+                                        <div class="article__diagram">
+                                            <div class="article__diagram-body">
+                                                <img src="../img/diagram-empty.svg" alt="diagram">
+                                            </div>
+                                            <ul class="article__diagram-list">
+                                                <li class="article__diagram-row">
+                                                    <div class="article__diagram-name">Калории</div>
+                                                    <div class="article__diagram-value grey-color">0 из 0 Ккал</div>
+                                                </li>
+                                                <li class="article__diagram-row">
+                                                    <div class="article__diagram-name">Белки</div>
+                                                    <div class="article__diagram-value grey-color">0 из 0 Ккал</div>
+                                                </li>
+                                                <li class="article__diagram-row">
+                                                    <div class="article__diagram-name">Жиры</div>
+                                                    <div class="article__diagram-value grey-color">0 из 0 Ккал</div>
+                                                </li>
+                                                <li class="article__diagram-row">
+                                                    <div class="article__diagram-name">Углеводы</div>
+                                                    <div class="article__diagram-value grey-color">0 из 0 Ккал</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="article__block">
+                                    <h2>КБЖУ: Основа Правильного Питания</h2>
+                                    <ol>
+                                        <li>
+                                            <strong>Калории</strong> — это единицы измерения энергии, которые наш организм получает от пищи и напитков и использует для поддержания основных жизненных функций: работы органов, движения, теплопроизводства и т.д.
+                                        </li>
+                                        <li>
+                                            <strong>Белки:</strong> это основные строительные блоки наших клеток. Они необходимы для роста, восстановления тканей, производства антител и гормонов. Белки содержатся в продуктах, таких как мясо, рыба, яйца, молочные продукты, бобы и орехи.
+                                        </li>
+                                        <li>
+                                            <strong>Жиры:</strong> играют важную роль в поддержании здоровья кожи и волос, а также участвуют в производстве некоторых витаминов. Жиры могут быть насыщенными, мононенасыщенными и полиненасыщенными. Оливковое масло, авокадо и орехи — источники здоровых жиров.
+                                        </li>
+                                        <li>
+                                            <strong>Углеводы:</strong> основной источник энергии для нашего организма. Они делятся на простые (сахара) и сложные (крахмалы). Продукты, такие как хлеб, макароны, рис и картофель, богаты углеводами.
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    <p> Баланс БЖУ: Для поддержания здоровья и достижения своих физических целей важно учитывать баланс между этими макроэлементами. Например, активные спортсмены могут потреблять больше углеводов, чтобы обеспечить энергией свои тренировки, в то время как те, кто стремится похудеть, могут сократить потребление простых углеводов. </p>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Формула Харриса-Бенедикта <br> для расчета дневной нормы КБЖУ</h2>
+                                    <p>Как можно рассчитать свою дневную норму калорий? Самая распространённая формула, используемая для этого — формула Харриса-Бенедикта.</p>
+                                    <p>Норма калорий рассчитывается индивидуально и зависит от пола, веса, возраста, образа жизни и от физической активности в течение дня. Рекомендуется не переходить минимальную границу калорий в день — для женщин 1200 ккал, для мужчин 1800 ккал. Существуют специальные диеты с пониженной калорийностью, но перед их применением лучше проконсультироваться со специалистом.</p>
+                                    <p>
+                                        <strong>Формула для мужчин:</strong> <br> BMR = 88,36 + (13,4 × вес в кг) + (4,8 × рост в см) – (5,7 × возраст в годах).
+                                    </p>
+                                    <p>
+                                        <strong>Формула для женщин:</strong> <br> BMR = 447,6 + (9,2 × вес в кг) + (3,1 × рост в см) – (4,3 × возраст в годах).
+                                    </p>
+                                    <p> Например, 25-летнему мужчине с весом 72 кг и ростом 178 см нужно 1765 калорий для обеспечения всего организма энергией. </p>
+                                    <p>
+                                        <strong>Не забываем про нагрузку!</strong> <br> С помощью данной формулы определяется лишь базовый уровень калорий.
+                                    </p>
+                                    <p>Но потребности организма зависят от физической нагрузки человека:</p>
+                                    <ul>
+                                        <li>Сидячий образ жизни без нагрузок — BMR умножить на 1,2.</li>
+                                        <li>Тренировки 1–3 раза в неделю — BMR умножить на 1,375.</li>
+                                        <li>Занятия 3–5 дней в неделю — BMR умножить на 1,55.</li>
+                                        <li>Интенсивные тренировки 6–7 раз в неделю — BMR умножить на 1,725.</li>
+                                        <li>Спортсмены, выполняющие упражнения чаще, чем раз в день — BMR умножить на 1,9.</li>
+                                    </ul>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Определение вашей дневной потребности в БЖУ</h2>
+                                    <p>Ваша суточная потребность в КБЖУ не является статичной цифрой; она зависит от множества переменных, которые учитывают как внутренние особенности организма, так и внешние обстоятельства вашей жизни. В основе этой потребности лежат два ключевых компонента: базовый обмен веществ (BMR) и уровень вашей физической активности.</p>
+                                    <p>BMR — это то количество калорий, которое ваше тело сжигает ежедневно, находясь в полном покое, чтобы поддерживать витальные функции, такие как дыхание, кровообращение и регуляция температуры. Он изменяется в зависимости от вашего возраста, пола, веса и ряда других факторов.</p>
+                                </div>
+                                <div class="article__block blue">
+                                    <p>BMR (Basal Metabolic Rate) переводится как «базовый обмен веществ» или «базовая метаболическая скорость». Это показатель количества энергии (выраженной в калориях), которое ваше тело расходует в состоянии покоя за 24 часа для поддержания основных жизненных функций: дыхания, работы сердца, поддержания температуры тела и т.д.</p>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Рекомендации ВОЗ по расчёту калорийности суточного рациона</h2>
+                                    <p> Всемирная организация здравоохранения дает рекомендации, как рассчитать калорийность суточного рациона с учётом возрастных особенностей метаболизма и уровня ежедневной физической активности.  </p>
+                                    <p>
+                                        <strong>Для женщин:</strong> <br> 18 - 30 лет (0,062 х вес в кг + 2,036) х 240 х КФА; <br> 31 - 60 лет (0,034 х вес в кг + 3,538) х 240 х КФА; <br> > 60 лет (0,038 х вес в кг + 2,755) × 240 х КФА;
+                                    </p>
+                                    <p>
+                                        <strong> Для мужчин: </strong> <br> 18 - 30 лет (0,063 х вес тела в кг + 2,896) х 240 х КФА; <br> 31 - 60 лет (0,0484 х вес тела в кг + 3,653) х 240 х КФА; <br> > 60 лет (0,0491 х вес тела в кг + 2,459) х 240 х КФА.
+                                    </p>
+                                    <p> Где КФА – коэффициент физической активности: 1,1 - низкая, 1,3 – средняя, 1,5 – высокая. </p>
+                                    <p> К примеру, женщине в возрасте 29 лет с весом 58 килограмм и средним коэффициентом физической активности для поддержания веса и профилактики неинфекционных заболеваний необходимо потреблять примерно 1760 калорий. </p>
+                                    <p> (0,062 × 58 + 2,036) ×240 ×1,3 = 1757 </p>
+                                    <p> Если целью подсчёта калорий является снижение массы тела до нормальных показателей, допускается создание дефицита калорий не более 10% от полученной цифры. </p>
+                                </div>
+                                <div class="article__footer">
+                                    <h2>Инструменты</h2>
+                                    <div class="article__tags">
+                                        <a href="" class="article__tag">Калькулятор ИМТ днвеной нормы КБЖУ</a>
+                                        <a href="" class="article__tag">Итвио</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
