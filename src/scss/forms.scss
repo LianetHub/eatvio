@@ -81,6 +81,7 @@
 	&[readonly],
 	&:read-only {
 		cursor: default;
+		&:hover,
 		&:focus {
 			border-color: inherit;
 		}
@@ -144,6 +145,7 @@
 	&[readonly],
 	&:read-only {
 		cursor: default;
+		&:hover,
 		&:focus {
 			border-color: inherit;
 		}

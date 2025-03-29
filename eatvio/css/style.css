@@ -3585,11 +3585,13 @@ body.dark-theme {
   cursor: default;
 }
 
-.input:-moz-read-only:focus {
+.input:-moz-read-only:hover, .input:-moz-read-only:focus {
   border-color: inherit;
 }
 
+.input[readonly]:hover,
 .input[readonly]:focus,
+.input:read-only:hover,
 .input:read-only:focus {
   border-color: inherit;
 }
@@ -3701,11 +3703,13 @@ body.dark-theme {
   cursor: default;
 }
 
-.textarea:-moz-read-only:focus {
+.textarea:-moz-read-only:hover, .textarea:-moz-read-only:focus {
   border-color: inherit;
 }
 
+.textarea[readonly]:hover,
 .textarea[readonly]:focus,
+.textarea:read-only:hover,
 .textarea:read-only:focus {
   border-color: inherit;
 }
