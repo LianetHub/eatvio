@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="css/common.min.css" />
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
+    <!-- 
+    <link rel="stylesheet" href="css/dev.css" /> -->
+
     
     <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/announcement.min.css" /> <link rel="stylesheet" href="css/person.min.css" />
+     <link rel="stylesheet" href="css/announcement.min.css" />
+     <link rel="stylesheet" href="css/person.min.css" />
+     <link rel="stylesheet" href="css/comment.min.css" />
+    
     <!-- Current Page Styles -->
 
     
@@ -494,7 +500,11 @@
                                     </div>
                                 </div>
                                 <p class="announcement__desc"> Если вы или ваши близкие столкнулись с этим диагнозом, важно понимать: диабет — это не приговор, а возможность пересмотреть свои привычки и научиться управлять своим здоровьем через правильное питание. Почему важно формировать пищевое поведение? Диабет требует особого внимания к тому, что и как мы едим. Но это не значит, что нужно отказываться от вкусной еды или жить в постоянных ограничениях. Главное — научиться выстраивать гармоничные отношения с едой, понимать, как она влияет на ваш организм, и делать выбор в пользу здоровья без стресса и дискомфорта. Как я могу вам помочь? Индивидуальный подход: Я помогу вам сформировать пищевые привычки, которые будут работать именно для вас. Мы учтем ваш образ жизни, вкусовые предпочтения и медицинские особенности. Обучение и поддержка: Я научу вас, как планировать рацион, выбирать полезные продукты и готовить блюда, которые будут не только полезными, но и вкусными. Вы поймете, как контролировать уровень сахара в крови, не отказываясь от удовольствия от еды. Постепенные изменения: Мы не будем резко менять ваши привычки. Я помогу вам внедрять новые правила питания постепенно, чтобы они стали частью вашей жизни без стресса. Психологическая поддержка: Я знаю, как сложно менять привычки, особенно когда речь идет о диабете. Я буду рядом, чтобы поддерживать вас на каждом этапе. Что вы получите в результате? Устойчивые пищевые привычки, которые помогут вам контролировать уровень сахара в крови. Уверенность в своем выборе и понимание, как питание влияет на ваше здоровье. Больше энергии, легкости и улучшение общего самочувствия. Возможность наслаждаться едой без чувства вины или страха. </p>
-                                <button type="button" class="announcement__share icon-share">Поделиться</button>
+                                <div class="announcement__footer">
+                                    <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                    <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                    <button type="button" class="announcement__footer-action icon-share"> <span>Поделится </span> </button>
+                                </div>
                             </div>
                         </div>
                         <div class="settings__price" data-spollers data-one-spoller>
@@ -557,7 +567,172 @@
                                 </div>
                             </div>
                         </div>
+                    </div> <div class="comment-block">
+    <div class="comment-block__caption title">
+        Комментарии пользователей
+    </div>
+    <form action="#" class="comment-block__form">
+        <textarea name="message" class="textarea textarea-white" placeholder="Оставить свой комментарий"></textarea>
+        <button type="submit" class="l-btn l-btn-primary l-btn-sm">Оставить отзыв</button>
+    </form>
+    <div class="comment-block__body">
+        <div class="comment-block__item">
+            <div class="comment-block__item-main">
+                <div class="comment-block__item-thumb">
+                    <img src="img/user-2.png" class="cover-image" alt="thumb">
+                </div>
+                <div class="comment-block__item-body">
+                    <div class="comment-block__item-header">
+                        <div class="comment-block__item-name">
+                            Артём
+                        </div>
                     </div>
+                    <div class="comment-block__item-message">
+                        Отличный рецепт, простой, быстрый и очень сытный!
+                    </div>
+                    <div class="comment-block__item-footer">
+                        <div class="comment-block__item-time">
+                            Вчера в 10:25
+                        </div>
+                    </div>
+                </div>
+                <button class="comment-block__item-answer icon-send">
+                    <span class="pc-only">
+                        Ответить
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="comment-block__item">
+            <div class="comment-block__item-main">
+                <div class="comment-block__item-thumb">
+                    <img src="img/user-2.png" class="cover-image" alt="thumb">
+                </div>
+                <div class="comment-block__item-body">
+                    <div class="comment-block__item-header">
+                        <div class="comment-block__item-name">
+                            Елана
+                        </div>
+                    </div>
+                    <div class="comment-block__item-message">
+                        Отличный рецепт, простой, быстрый и очень сытный!
+                    </div>
+                    <div class="comment-block__item-footer">
+                        <div class="comment-block__item-time">
+                            Вчера в 10:25
+                        </div>
+                    </div>
+                </div>
+                <button class="comment-block__item-answer icon-send">
+                    <span class="pc-only">
+                        Ответить
+                    </span>
+                </button>
+            </div>
+            <div class="comment-block__item-discussion">
+                <div class="comment-block__item-row">
+                    <div class="comment-block__item-thumb">
+                        <img src="img/user-8.png" class="cover-image" alt="thumb">
+                    </div>
+                    <div class="comment-block__item-body">
+                        <div class="comment-block__item-header">
+                            <div class="comment-block__item-name">
+                                Елана
+                            </div>
+                        </div>
+                        <div class="comment-block__item-message">
+                            Lorem ipsum dolor sit amet consectetur. Lectus ut massa arcu proin luctus imperdiet pulvinar arcu iaculis. Pharetra eu ipsum blandit viverra in elementum.
+                        </div>
+                        <div class="comment-block__item-footer">
+                            <div class="comment-block__item-time">
+                                Вчера в 10:25
+                            </div>
+                            <button class="comment-block__item-write">Ответить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-block__item-row">
+                    <div class="comment-block__item-thumb">
+                        <img src="img/user-3.png" class="cover-image" alt="thumb">
+                    </div>
+                    <div class="comment-block__item-body">
+                        <div class="comment-block__item-header">
+                            <div class="comment-block__item-name">
+                                Валентин
+                            </div>
+                            <div class="comment-block__item-rewrite">
+                                Ответил Игорю
+                            </div>
+                        </div>
+                        <div class="comment-block__item-message">
+                            Lorem ipsum dolor sit amet consectetur. Lectus ut massa arcu proin luctus imperdiet pulvinar arcu iaculis. Pharetra eu ipsum blandit viverra in elementum.
+                        </div>
+                        <div class="comment-block__item-footer">
+                            <div class="comment-block__item-time">
+                                Вчера в 10:25
+                            </div>
+                            <button class="comment-block__item-write">Ответить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-block__item">
+            <div class="comment-block__item-main">
+                <div class="comment-block__item-thumb">
+                    <img src="img/user-5.png" class="cover-image" alt="thumb">
+                </div>
+                <div class="comment-block__item-body">
+                    <div class="comment-block__item-header">
+                        <div class="comment-block__item-name">
+                            Павел
+                        </div>
+                    </div>
+                    <div class="comment-block__item-message">
+                        Отличный рецепт, простой, быстрый и очень сытный!
+                    </div>
+                    <div class="comment-block__item-footer">
+                        <div class="comment-block__item-time">
+                            Вчера в 10:25
+                        </div>
+                    </div>
+                </div>
+                <button class="comment-block__item-answer icon-send">
+                    <span class="pc-only">
+                        Ответить
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="comment-block__item">
+            <div class="comment-block__item-main">
+                <div class="comment-block__item-thumb">
+                    <img src="img/user-7.png" class="cover-image" alt="thumb">
+                </div>
+                <div class="comment-block__item-body">
+                    <div class="comment-block__item-header">
+                        <div class="comment-block__item-name">
+                            Сергей
+                        </div>
+                    </div>
+                    <div class="comment-block__item-message">
+                        Отличный рецепт, простой, быстрый и очень сытный!
+                    </div>
+                    <div class="comment-block__item-footer">
+                        <div class="comment-block__item-time">
+                            Вчера в 10:25
+                        </div>
+                    </div>
+                </div>
+                <button class="comment-block__item-answer icon-send">
+                    <span class="pc-only">
+                        Ответить
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
             </section>
         </main> <footer class="footer">

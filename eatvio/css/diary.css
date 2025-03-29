@@ -2313,10 +2313,6 @@
             flex: 0 1 auto;
   }
 
-  .diary__title:last-child {
-    padding-right: 6rem;
-  }
-
   .diary__cancel {
     font-size: 1rem;
   }

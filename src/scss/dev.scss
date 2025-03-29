@@ -39,6 +39,7 @@ $red: #eb555c;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@import "reset.scss";
 @import "style.scss";
 @import "pages/announcement.scss";
 @import "pages/archive.scss";

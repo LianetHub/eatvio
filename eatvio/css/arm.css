@@ -1471,6 +1471,22 @@
 .arm__fin-text {
   font-size: 1.25rem;
   font-weight: 700;
+  text-align: center;
+}
+
+.arm__fin-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.arm__fin-column .arm__fin-text {
+  text-align: right;
 }
 
 .arm__fin-table {

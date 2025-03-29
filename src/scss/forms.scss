@@ -78,6 +78,13 @@
 			color: inherit;
 		}
 	}
+	&[readonly],
+	&:read-only {
+		cursor: default;
+		&:focus {
+			border-color: inherit;
+		}
+	}
 }
 
 .textarea {
@@ -132,6 +139,13 @@
 		color: #323f4b;
 		&::placeholder {
 			color: inherit;
+		}
+	}
+	&[readonly],
+	&:read-only {
+		cursor: default;
+		&:focus {
+			border-color: inherit;
 		}
 	}
 }

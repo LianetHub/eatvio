@@ -424,29 +424,6 @@
 	}
 }
 
-.chat-btn {
-	position: relative;
-	display: inline-flex;
-	// .chat-btn__quantity
-	&__quantity {
-		position: absolute;
-		top: -3px;
-		right: -3px;
-		width: rem(14);
-		height: rem(14);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #fff;
-		background: #ed2f2f;
-		border-radius: 50%;
-		font-size: 10px;
-		font-weight: 500;
-		line-height: 100%;
-		letter-spacing: 0.2px;
-	}
-}
-
 .rate {
 	display: inline-flex;
 	align-items: center;

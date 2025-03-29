@@ -684,6 +684,12 @@
 		& + .textarea {
 			margin-top: 1.88rem;
 		}
+		&.popup__subtitle_row {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: rem(23);
+		}
 	}
 	// .popup__text
 	&__text {

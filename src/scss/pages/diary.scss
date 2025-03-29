@@ -46,11 +46,6 @@
 		text-align: center;
 		font-weight: 600;
 		flex: 1 1 auto;
-		&:last-child {
-			@media (min-width: $md4) {
-				padding-right: 6rem;
-			}
-		}
 	}
 	// .diary__title-caption
 	&__title-caption {

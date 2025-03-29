@@ -1259,8 +1259,16 @@
 	// .arm__fin-text
 	&__fin-text {
 		font-size: 1.25rem;
-
 		font-weight: 700;
+		text-align: center;
+	}
+	&__fin-column {
+		display: flex;
+		flex-direction: column;
+		gap: rem(14);
+		.arm__fin-text {
+			text-align: right;
+		}
 	}
 	&__fin-table {
 		overflow-x: auto;

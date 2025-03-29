@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Создание диеты',
-    "stylesName": ["announcement", "person"]
+    "stylesName": ["announcement", "person", "comment"]
     })
     <body>
         <div class="wrapper">
@@ -113,8 +113,11 @@
                                         легкости и улучшение общего самочувствия. Возможность наслаждаться едой
                                         без чувства вины или страха.
                                     </p>
-                                    <button type="button" class="announcement__share icon-share">Поделиться</button>
-
+                                    <div class="announcement__footer">
+                                        <button type="button" class="announcement__footer-action icon-message-square">Комментировать</button>
+                                        <button type="button" class="announcement__footer-action icon-heart">Нравится</button>
+                                        <button type="button" class="announcement__footer-action icon-share"> <span>Поделится </span> </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="settings__price" data-spollers data-one-spoller>
@@ -222,6 +225,7 @@
                                 </div>
                             </div>
                         </div>
+                        @@include('./html/_comment-block.html')
                     </div>
                 </section>
 

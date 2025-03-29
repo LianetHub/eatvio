@@ -54,6 +54,7 @@
 .person__chart-btn {
   color: #6d6f71;
   background: #f1f2f6;
+  border-radius: 12.5rem;
 }
 
 .person__chart-btn.active {

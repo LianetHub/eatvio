@@ -18,7 +18,8 @@
 
     
     <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/diet.min.css" />
+     <link rel="stylesheet" href="css/person.min.css" />
+     <link rel="stylesheet" href="css/announcement.min.css" />
     
     <!-- Current Page Styles -->
 
@@ -432,319 +433,200 @@
         </div>
     </div>
 </header> <main class="page">
-            <section class="diet">
-                <div class="diet__container">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left">
-                            <span class="pc-only">Мои планы</span>
-                        </a>
-                        <div class="settings__person-title title fw-bold"> Добавление плана </div>
+            <section class="person-block">
+                <div class="person-block__container container-sm">
+                    <div class="diary__header">
+                        <a href="" class="diary__back icon-arrow-short-left"></a>
+                        <div class="diary__title title"> Данные пользователя Имя Фамилия </div>
                     </div>
-                    <form action="#" class="diet__form">
-                        <div class="diet__form-block">
-                            <div class="label"> Название </div>
-                            <input type="text" name="name" class="input input-white" placeholder="Введите название плана">
-                        </div>
-                        <div class="diet__form-body">
-                            <div class="diet__form-main">
-                                <div class="diet__form-header">
-                                    <div class="diet__form-block">
-                                        <div class="label"> Срок плана </div>
-                                        <div class="select">
-                                            <select>
-                                                <option value="" selected>7 дней</option>
-                                                <option value="">14 дней</option>
-                                                <option value="">21 день</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="diet__form-block">
-                                        <div class="label"> Статус </div>
-                                        <div class="select">
-                                            <select>
-                                                <option value="">Активна</option>
-                                                <option value="">Черновик</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                    <div class="person">
+                        <div class="person__chart">
+                            <div class="person__chart-caption">
+                                <div class="person__chart-btns">
+                                    <button class="person__chart-btn l-btn l-btn-sm active">Вес</button>
+                                    <button class="person__chart-btn l-btn l-btn-sm">Замеры</button>
+                                    <button class="person__chart-btn l-btn l-btn-sm">ИМТ</button>
                                 </div>
-                                <div class="diet__form-checkboxes">
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/slim.png" alt="icon broccoli">
-                                            <span>Похудение</span>
-                                        </span>
+                                <div class="person__chart-filters">
+                                    <label class="person__chart-filter">
+                                        <input readonly type="radio" name="period" checked value="1" class="person__chart-filter-input hidden" hidden>
+                                        <span class="person__chart-filter-btn">1м</span>
                                     </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" checked name="meat" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/fit.png" alt="icon meat"> Поддержка формы </span>
+                                    <label class="person__chart-filter">
+                                        <input readonly type="radio" name="period" value="2" class="person__chart-filter-input hidden" hidden>
+                                        <span class="person__chart-filter-btn">3м</span>
                                     </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/wellness.png" alt="icon bread"> Улучшение самочувствия </span>
+                                    <label class="person__chart-filter">
+                                        <input readonly type="radio" name="period" value="3" class="person__chart-filter-input hidden" hidden>
+                                        <span class="person__chart-filter-btn">6м</span>
                                     </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/behavior.png" alt="icon"> Форм. пищевого поведения </span>
+                                    <label class="person__chart-filter">
+                                        <input readonly type="radio" name="period" value="4" class="person__chart-filter-input hidden" hidden>
+                                        <span class="person__chart-filter-btn">1г</span>
+                                    </label>
+                                    <label class="person__chart-filter">
+                                        <input readonly type="radio" name="period" value="5" class="person__chart-filter-input hidden" hidden>
+                                        <span class="person__chart-filter-btn">ВСЁ ВРЕМЯ</span>
                                     </label>
                                 </div>
-                            </div> <label class="file diet__form-file">
-    <input type="file" name="file" class="file__input hidden" hidden>
-    <span class="file__content">
-        <span class="file__formats">
-            <img src="img/logo-gray.svg" alt="logo">
-        </span>
-        <span class="file__title">
-            Добавьте фото обложку
-        </span>
-    </span>
-</label>
-                        </div>
-                        <div class="diet__form-footer">
-                            <div class="label"> Описание </div>
-                            <textarea name="desc" placeholder="Введите описание плана" class="textarea textarea-white"></textarea>
-                        </div>
-                    </form>
-                    <div class="diet__services">
-                        <div class="diet__services-caption">
-                            <div class="diet__services-title title"> Оказание услуг </div>
-                            <div class="diet__services-tablist" role="tablist" aria-labelledby="label">
-                                <button class="l-tab l-btn" role="tab" type="button" id="tab-1" aria-selected="true" aria-controls="tabpanel-1"> 1 опция </button>
-                                <button class="l-tab l-btn" role="tab" type="button" id="tab-2" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1"> 3 опции </button>
                             </div>
-                        </div>
-                        <div class="diet__services-body">
-                            <div class="tabpanel" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1">
-                                <form action="#" class="diet__services-form">
-                                    <div class="diet__services-row">
-                                        <div class="diet__services-column">
-                                            <div class="label"> Заголовок опции </div>
-                                            <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                        </div>
-                                        <div class="diet__services-column">
-                                            <div class="diet__services-row">
-                                                <div class="diet__services-column">
-                                                    <div class="label"> Вы получите <span class="info-block dark-outline tooltip-lg" data-tooltip="Разница в ценах, это комиссия Итвио">?</span>
-                                                    </div>
-                                                    <input type="num" name="price" class="input input-white" placeholder="995₽">
-                                                </div>
-                                                <div class="diet__services-column">
-                                                    <div class="label"> Цена для покупателя <span class="info-block dark-outline" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">?</span>
-                                                    </div>
-                                                    <input type="num" name="price" class="input input-white" placeholder="1200₽">
-                                                </div>
-                                            </div>
-                                            <div class="diet__services-hint">Минимальная цена для покупателя: 1200₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="diet__services-row">
-                                        <div class="diet__services-column">
-                                            <div class="label"> Описание опции </div>
-                                            <textarea name="service" placeholder="Введите описание опции" class="textarea textarea-white"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="diet__services-row">
-                                        <div class="diet__services-column">
-                                            <div class="label"> Содержание опций </div>
-                                            <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                        </div>
-                                    </div>
-                                    <div class="diet__services-row">
-                                        <div class="diet__services-column">
-                                            <button type="button" class="l-btn l-btn-primary">Добавить опцию</button>
-                                        </div>
-                                    </div>
-                                    <div class="diet__services-row">
-                                        <div class="diet__services-column">
-                                            <label class="checkbox checkbox-dark">
-                                                <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                <span class="checkbox__content"> Опция подразумевает создание индивидуальной диеты </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="person__chart-current up"> 62.0 кг <span class="icon-triangle"></span>
                             </div>
-                            <div class="tabpanel" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby="tab-2">
-                                <div class="diet__services-block">
-                                    <div class="diet__services-title title"> Опция 1 </div>
-                                    <form action="#" class="diet__services-form">
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Заголовок опции </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                            <div class="diet__services-column">
-                                                <div class="diet__services-row">
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Вы получите <span class="info-block dark-outline tooltip-lg" data-tooltip="Разница в ценах, это комиссия Итвио">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="995₽">
-                                                    </div>
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Цена для покупателя <span class="info-block dark-outline" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="1200₽">
-                                                    </div>
-                                                </div>
-                                                <div class="diet__services-hint">Минимальная цена для покупателя: 1200₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Описание опции </div>
-                                                <textarea name="service" placeholder="Введите описание опции" class="textarea textarea-white"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Содержание опций </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <button type="button" class="l-btn l-btn-primary">Добавить опцию</button>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <label class="checkbox checkbox-dark">
-                                                    <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content"> Опция подразумевает создание индивидуальной диеты </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="diet__services-block">
-                                    <div class="diet__services-title title"> Опция 2 </div>
-                                    <form action="#" class="diet__services-form">
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Заголовок опции </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                            <div class="diet__services-column">
-                                                <div class="diet__services-row">
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Вы получите <span class="info-block dark-outline tooltip-lg" data-tooltip="Разница в ценах, это комиссия Итвио">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="995₽">
-                                                    </div>
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Цена для покупателя <span class="info-block dark-outline" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="1200₽">
-                                                    </div>
-                                                </div>
-                                                <div class="diet__services-hint">Минимальная цена для покупателя: 1200₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Описание опции </div>
-                                                <textarea name="service" placeholder="Введите описание опции" class="textarea textarea-white"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Содержание опций </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <button type="button" class="l-btn l-btn-primary">Добавить опцию</button>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <label class="checkbox checkbox-dark">
-                                                    <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content"> Опция подразумевает создание индивидуальной диеты </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <label class="checkbox checkbox-dark">
-                                                    <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content"> Добавить +7 дней к прохождению плана </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="diet__services-block">
-                                    <div class="diet__services-title title"> Опция 3 </div>
-                                    <form action="#" class="diet__services-form">
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Заголовок опции </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                            <div class="diet__services-column">
-                                                <div class="diet__services-row">
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Вы получите <span class="info-block dark-outline tooltip-lg" data-tooltip="Разница в ценах, это комиссия Итвио">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="995₽">
-                                                    </div>
-                                                    <div class="diet__services-column">
-                                                        <div class="label"> Цена для покупателя <span class="info-block dark-outline" data-tooltip="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat quos? Assumenda, est exercitationem! Fuga.">?</span>
-                                                        </div>
-                                                        <input type="num" name="price" class="input input-white" placeholder="1200₽">
-                                                    </div>
-                                                </div>
-                                                <div class="diet__services-hint">Минимальная цена для покупателя: 1200₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Описание опции </div>
-                                                <textarea name="service" placeholder="Введите описание опции" class="textarea textarea-white"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <div class="label"> Содержание опций </div>
-                                                <input type="text" name="desc" class="input input-white" placeholder="Введите заголовок опции">
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <button type="button" class="l-btn l-btn-primary">Добавить опцию</button>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <label class="checkbox checkbox-dark">
-                                                    <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content"> Опция подразумевает создание индивидуальной диеты </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="diet__services-row">
-                                            <div class="diet__services-column">
-                                                <label class="checkbox checkbox-dark">
-                                                    <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content"> Добавить +7 дней к прохождению плана </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                            <div class="person__chart-body">
+                                <img src="img/chart-person-1.svg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="diet__btns">
-                        <button type="button" class="diet__btn l-btn l-btn-black">В черновик</button>
-                        <button type="button" class="diet__btn l-btn l-btn-black">Превью</button>
-                        <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
+                    <div class="settings__body settings__body_change">
+                        <div class="settings__content">
+                            <div class="settings__block">
+                                <div class="settings__block-wrapper white-mobile">
+                                    <div class="settings__block-caption "> Общая информация </div>
+                                    <div class="settings__block-body">
+                                        <ul class="settings__list settings__list-grid">
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Дата рождения: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="birthday" class="input input-white" value="30.01.1998">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Пол </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="birthday" class="input input-white" value="Мужской">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__block">
+                                <div class="settings__block-wrapper white-mobile">
+                                    <div class="settings__block-caption"> Физическая форма </div>
+                                    <div class="settings__block-body">
+                                        <ul class="settings__list settings__list-grid">
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Рост: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="number" name="height" class="input input-white" value="185">
+                                                    <span class="settings__item-def-unit">см</span>
+                                                </div>
+                                            </li>
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Вес: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="number" name="weight" class="input input-white" value="92">
+                                                    <span class="settings__item-def-unit">кг</span>
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-grid">
+                                                    <div class="settings__item-column">
+                                                        <div class="settings__item-termin"> Обхват груди: </div>
+                                                        <div class="settings__item-def">
+                                                            <input readonly type="number" name="breast" class="input input-white" value="90">
+                                                        </div>
+                                                    </div>
+                                                    <div class="settings__item-column">
+                                                        <div class="settings__item-termin"> Обхват талии: </div>
+                                                        <div class="settings__item-def">
+                                                            <input readonly type="number" name="waist" class="input input-white" value="60">
+                                                        </div>
+                                                    </div>
+                                                    <div class="settings__item-column">
+                                                        <div class="settings__item-termin"> Обхват бедер: </div>
+                                                        <div class="settings__item-def">
+                                                            <input readonly type="number" name="hips" class="input input-white" value="90">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-text"> Физическая нагрузка 1,2 — минимальный (сидячая работа, отсутствие физических нагрузок); </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__block">
+                                <div class="settings__block-wrapper white-mobile">
+                                    <div class="settings__block-caption"> Давление </div>
+                                    <div class="settings__block-body">
+                                        <ul class="settings__list settings__list-grid">
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Верхнее: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="number" name="upper-pressure" class="input input-white" value="185">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Нижнее: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="number" name="low-pressure" class="input input-white" value="92">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Склонность к гипотонии </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="hypotension" class="input input-white" value="Да">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item">
+                                                <div class="settings__item-termin"> Склонность к гипертонии </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="hypotension" class="input input-white" value="Да">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__block">
+                                <div class="settings__block-wrapper white-mobile">
+                                    <div class="settings__block-caption"> Прочая информация </div>
+                                    <div class="settings__block-body">
+                                        <ul class="settings__list settings__list-grid">
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Наличие аллергии: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="allergy" class="input input-white" value="Орехи, мёд, сухофрукты">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Принимаемые лекарства </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="medicine" class="input input-white" value="Нет">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Ваши спортивные увлечения: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="sport" class="input input-white" value="Киберспорт">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Любимые продукты: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="products" class="input input-white" value="Пельмени">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Не любимые продукты: </div>
+                                                <div class="settings__item-def">
+                                                    <input readonly type="text" name="not-like-products" class="input input-white" value="Пельмени">
+                                                </div>
+                                            </li>
+                                            <li class="settings__item settings__item-lg">
+                                                <div class="settings__item-termin"> Дополнительная информация: </div>
+                                                <div class="settings__item-def">
+                                                    <textarea readonly type="text" name="extras" class="textarea textarea-sm textarea-white">Дополнительная информация</textarea>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -766,92 +648,38 @@
 
 
 
-<div id="settings" class="popup">
+
+
+
+
+<div id="certs" class="popup">
     <div class="popup__content">
-        <div class="popup__body popup__body-sm">
+        <div class="popup__body popup__body-lg">
             <div class="popup__step">
                 <div class="popup__header">
                     <div class="popup__header-title">
-                        Настройки отображения
+                        Сертификаты
                     </div>
                     <button type="button" class="popup__close icon-close" data-close-modal></button>
                 </div>
-                <div class="popup__step-body">
-                    <div class="popup__step-subtitle">Чтобы изменить список отображаемых колонок, выберите нужный вам вид и&nbsp;отметьте интересующие галочкой</div>
-                    <div class="popup__step-checkboxes">
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="all" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Выбрать всё
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="total" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Показывать “Итого”
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="status" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Статус компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="type" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Тип компаний
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" checked name="setting" value="rate" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Ставка
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="budget" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Дневной бюджет
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="1" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="2" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="3" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
-                        <label class="popup__step-checkbox checkbox">
-                            <input type="checkbox" name="setting" value="4" class="checkbox__input hidden" hidden>
-                            <span class="checkbox__content">
-                                Lorem, ipsum dolor.
-                            </span>
-                        </label>
+                <div class="popup__certs">
+                    <div class="popup__cert">
+                        <img src="img/certs/03.png" alt="cert">
                     </div>
-                </div>
-                <div class="popup__footer">
-                    <button type="button" class="l-btn l-btn-light l-btn-sm">ОТМЕНА</button>
-                    <button type="button" class="l-btn l-btn-primary l-btn-sm">СОХРАНИТЬ</button>
+                    <div class="popup__cert">
+                        <img src="img/certs/02.png" alt="cert">
+                    </div>
+                    <div class="popup__cert">
+                        <img src="img/certs/01.png" alt="cert">
+                    </div>
+                    <div class="popup__cert">
+                        <img src="img/certs/04.png" alt="cert">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 
 
 

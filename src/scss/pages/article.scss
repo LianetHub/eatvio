@@ -314,6 +314,12 @@
 		@media (min-width: $md4) {
 			flex-direction: row;
 		}
+		.input {
+			align-items: stretch;
+			border-radius: rem(12);
+			background: #f8f8f8;
+			border: 0;
+		}
 	}
 	&__form-field {
 		position: relative;
@@ -321,7 +327,6 @@
 		align-self: stretch;
 		min-width: 10.5625rem;
 		.input {
-			align-items: stretch;
 			padding-right: 3.25rem;
 		}
 	}
@@ -350,6 +355,9 @@
 		grid-template-columns: repeat(2, 1fr);
 		.input {
 			align-self: stretch;
+			border-radius: rem(12);
+			background: #f8f8f8;
+			border: 0;
 		}
 		.l-btn {
 			@media (max-width: $md4) {
@@ -360,6 +368,11 @@
 			width: 100%;
 			&:not(:last-child) {
 				margin-bottom: 0;
+			}
+			&__btn {
+				border-radius: rem(12);
+				background: #f8f8f8;
+				border: rem(1) solid #f8f8f8;
 			}
 		}
 		.article__form-column {
@@ -386,6 +399,9 @@
 		gap: 0.75rem;
 		grid-template-columns: repeat(3, 1fr);
 		.input {
+			border-radius: rem(12);
+			background: #f8f8f8;
+			border: rem(1) solid #f8f8f8;
 			@media (max-width: $md5) {
 				padding-inline: 0.75rem;
 			}

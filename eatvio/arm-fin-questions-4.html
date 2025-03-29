@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="css/common.min.css" />
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
+    <!-- 
+    <link rel="stylesheet" href="css/dev.css" /> -->
+
     
     <!-- Current Page Styles -->
      <link rel="stylesheet" href="css/arm.min.css" />
+    
     <!-- Current Page Styles -->
 
     
@@ -180,8 +184,11 @@
                                             <div class="arm__user-time">Вчера в 12:11</div>
                                         </div>
                                     </div>
-                                    <div class="arm__fin-text">Сумма спора: 99 999₽</div>
                                     <div class="arm__fin-text">Номер обращения: 63841</div>
+                                    <div class="arm__fin-column">
+                                        <div class="arm__fin-text">Сумма спора: 99 999₽</div>
+                                        <div class="arm__fin-text">Стоимость плана: 99 999₽</div>
+                                    </div>
                                 </div>
                                 <div class="arm__fin-complaint">
                                     <div class="arm__complaint">
@@ -238,7 +245,10 @@
                 <button type="button" class="popup__close icon-close" data-close-modal></button>
                 <form action="#" class="popup__form">
                     <div class="popup__caption title title-xl">Возврат средств</div>
-                    <div class="popup__subtitle ">Сумма спора: 99 999₽</div>
+                    <div class="popup__subtitle popup__subtitle_row">
+                        <span>Сумма спора: 99 999₽</span>
+                        <span>Стоимость плана: 99 999₽ </span>
+                    </div>
                     <div class="popup__rows">
                         <div class="popup__row">
                             <div class="label label-md"> Введите сумму возрата </div>
