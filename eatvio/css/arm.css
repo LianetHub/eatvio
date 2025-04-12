@@ -772,6 +772,130 @@
   margin-top: 2rem;
 }
 
+.arm__complaint + .arm__chat {
+  margin-top: 1.25rem;
+}
+
+.arm__complaint .diary__stats {
+  background: #252736;
+  color: #fff;
+  padding-top: 1.31rem;
+}
+
+.arm__complaint .diary__comment-body {
+  color: #323f4b;
+}
+
+.arm__complaint .diary__product-unit {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.arm__complaint .selected {
+  background: #fffdd8 !important;
+}
+
+.arm__complaint .diary__product-content {
+  background: #383a51;
+  color: #fff;
+}
+
+.arm__complaint .diary__product-comment-text {
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+
+.arm__complaint .diary__stats-header {
+  margin-top: 1.25rem;
+}
+
+.arm__complaint .diary__stats-item {
+  padding: 0.5rem 0.75rem;
+  background: #383a51;
+  border-radius: 0.5rem;
+}
+
+.arm__complaint .diary__stats-text {
+  color: #fff;
+}
+
+.arm__complaint-heading {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 16.875rem;
+  grid-template-columns: 1fr 16.875rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 1.875rem;
+}
+
+.arm__complaint-main {
+  border-radius: 1.25rem;
+  background: #252736;
+  padding: 1.5rem;
+}
+
+.arm__side {
+  border-radius: 1.25rem;
+  background: #252736;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0em 0em 1rem 0em;
+}
+
+.arm__side .arm__complaint-btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-height: 2.75rem;
+  width: calc(100% - 2rem);
+  vertical-align: middle;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arm__side-caption {
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.arm__side-list {
+  margin-top: 1rem;
+  border-top: 0.0625rem solid #383a51;
+}
+
+.arm__side-row {
+  padding: 1rem;
+  border-bottom: 0.0625rem solid #383a51;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.arm__side-title {
+  color: #8c8d97;
+}
+
+.arm__side-text {
+  margin-top: 0.25rem;
+}
+
 .arm__complaint-body {
   margin-top: 2rem;
   display: -webkit-box;
@@ -788,6 +912,19 @@
   background: #252736;
   padding: 1.5rem;
   border-radius: 0.625rem;
+}
+
+.arm__btns {
+  margin-top: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.arm__btns .l-btn {
+  padding-inline: 1rem;
 }
 
 .arm__complaint-content {
@@ -1202,16 +1339,13 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 100%;
+  margin-bottom: 1.62rem;
 }
 
 .arm__complaint-filter-body {
   border-radius: 0.625rem;
   background: #383a51;
   padding: 0.81rem 1rem;
-}
-
-.arm__complaint-filter-body:not(:first-child) {
-  margin-top: 1.62rem;
 }
 
 .arm__complaint-filter-caption {
@@ -1363,12 +1497,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.5rem;
 }
 
 .arm__user-thumb {
-  width: 2.625rem;
-  height: 2.625rem;
+  width: 3.75rem;
+  height: 3.75rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -1378,13 +1515,13 @@
 }
 
 .arm__user-name {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .arm__user-time {
   color: #7b8794;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .arm__question-body {

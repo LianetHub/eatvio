@@ -699,7 +699,106 @@
 	// .arm__complaint
 	&__complaint {
 		margin-top: 2rem;
+		& + .arm__chat {
+			margin-top: 1.25rem;
+		}
+		.diary__stats {
+			background: #252736;
+			color: #fff;
+			padding-top: 1.31rem;
+		}
+		.diary__comment-body {
+			color: #323f4b;
+		}
+		.diary__product-unit {
+			justify-content: flex-end;
+		}
+		.selected {
+			background: #fffdd8 !important;
+		}
+		.diary__product-content {
+			background: #383a51;
+			color: #fff;
+		}
+		.diary__product-comment-text {
+			font-size: 1rem;
+			letter-spacing: normal;
+		}
+		.diary__stats-header {
+			margin-top: 1.25rem;
+		}
+		.diary__stats-item {
+			padding: 0.5rem 0.75rem;
+			background: #383a51;
+			border-radius: 0.5rem;
+		}
+		.diary__stats-text {
+			color: #fff;
+		}
 	}
+	// .arm__complaint-heading
+	&__complaint-heading {
+		display: grid;
+		grid-template-columns: 1fr rem(270);
+		align-items: start;
+		gap: rem(30);
+	}
+	// .arm__complaint-main
+	&__complaint-main {
+		border-radius: 1.25rem;
+		background: #252736;
+		padding: 1.5rem;
+	}
+	&__complaint-wrapper {
+	}
+	// .arm__side
+	&__side {
+		border-radius: 1.25rem;
+		background: #252736;
+		display: flex;
+		flex-direction: column;
+		padding: em(0) em(0) rem(16) em(0);
+		.arm__complaint-btn {
+			margin-left: 1rem;
+			margin-right: 1rem;
+			min-height: 2.75rem;
+			width: calc(100% - 2rem);
+			vertical-align: middle;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	// .arm__side-caption
+	&__side-caption {
+		padding: 1rem;
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 130%;
+	}
+	// .arm__side-list
+	&__side-list {
+		margin-top: 1rem;
+		border-top: rem(1) solid #383a51;
+	}
+	// .arm__side-row
+	&__side-row {
+		padding: 1rem;
+		border-bottom: rem(1) solid #383a51;
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 130%;
+	}
+	// .arm__side-title
+	&__side-title {
+		color: #8c8d97;
+	}
+	// .arm__side-text
+	&__side-text {
+		margin-top: 0.25rem;
+	}
+
 	// .arm__complaint-body
 	&__complaint-body {
 		margin-top: 2rem;
@@ -712,6 +811,16 @@
 		background: #252736;
 		padding: 1.5rem;
 		border-radius: 0.625rem;
+	}
+	// .arm__btns
+	&__btns {
+		margin-top: 1.5rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		.l-btn {
+			padding-inline: 1rem;
+		}
 	}
 	&__complaint-content {
 		flex: 0 0 calc(100% - 17.5rem);
@@ -1031,15 +1140,13 @@
 		font-size: 1.25rem;
 		font-weight: 600;
 		line-height: 100%;
+		margin-bottom: 1.62rem;
 	}
 	// .arm__complaint-filter-body
 	&__complaint-filter-body {
 		border-radius: 0.625rem;
 		background: #383a51;
 		padding: 0.81rem 1rem;
-		&:not(:first-child) {
-			margin-top: 1.62rem;
-		}
 	}
 	// .arm__complaint-fil ter-caption
 	&__complaint-filter-caption {
@@ -1171,12 +1278,13 @@
 	// .arm__user
 	&__user {
 		display: flex;
+		align-items: center;
 		gap: 0.5rem;
 	}
 	// .arm__user-thumb
 	&__user-thumb {
-		width: 2.625rem;
-		height: 2.625rem;
+		width: 3.75rem;
+		height: 3.75rem;
 		flex-shrink: 0;
 		& img {
 			border-radius: 50%;
@@ -1187,13 +1295,13 @@
 	}
 	// .arm__user-name
 	&__user-name {
-		font-size: 0.875rem;
+		font-size: 1.25rem;
 		font-weight: 700;
 	}
 	// .arm__user-time
 	&__user-time {
 		color: #7b8794;
-		font-size: 0.875rem;
+		font-size: 1rem;
 	}
 
 	// .arm__question-body

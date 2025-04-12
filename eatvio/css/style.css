@@ -1678,6 +1678,29 @@ body.dark-theme {
   padding: 1.87rem;
 }
 
+.popup__complaint .popup__cancel {
+  margin-top: 2.875rem;
+  max-width: 35.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup__complaint .popup__cancel .label {
+  font-size: 1.125rem;
+}
+
+.popup__complaint .popup__btns {
+  max-width: 35.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup__complaint-caption {
+  max-width: 33.125rem;
+  margin: 0 auto;
+  color: #323f4b;
+}
+
 .popup__complaint-title {
   text-align: center;
   color: #323f4b;
@@ -3359,6 +3382,15 @@ body.dark-theme {
 .notification__text[href] {
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+}
+
+.notification__text a {
+  color: #2f80ed;
+}
+
+.notification__text.sm-width {
+  line-height: 1;
+  max-width: 45rem;
 }
 
 .notification__more {
@@ -9204,7 +9236,9 @@ body.dark-theme {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  min-width: 10.5625rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .article__form-field .input {
@@ -9743,6 +9777,118 @@ body.dark-theme {
 
 .article__diagram-value {
   text-align: right;
+}
+
+.graph {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  height: 159px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.graph__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.graph__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(52px, 52px);
+      -ms-transform: translate(52px, 52px);
+          transform: translate(52px, 52px);
+}
+
+.graph__circle span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.graph__circle span b {
+  font-weight: 500;
+  display: block;
+}
+
+.graph__first span {
+  top: 20.5%;
+  left: 20%;
+}
+
+.graph__first-second {
+  stroke-dasharray: 333;
+  stroke-dashoffset: 0;
+  stroke: #c82222;
+}
+
+.graph__second {
+  top: -59px;
+  left: -58px;
+}
+
+.graph__second span {
+  top: 24%;
+  left: 16.5%;
+}
+
+.graph__second-second {
+  stroke-dasharray: 333;
+  stroke-dashoffset: 0;
+}
+
+.graph__third {
+  top: -123px;
+  left: -120px;
+}
+
+.graph__third span {
+  top: 25.5%;
+  left: 15.5%;
+}
+
+.graph__third-second {
+  stroke-dasharray: 333;
+  stroke-dashoffset: 130;
+}
+
+.graph__foure {
+  top: -188px;
+  left: -182px;
+}
+
+.graph__foure span {
+  top: 25.5%;
+  left: 15.7%;
+}
+
+.graph__foure-second {
+  stroke-dasharray: 333;
+  stroke-dashoffset: 90;
 }
 
 @media (min-width: 575.98px) {
@@ -11040,10 +11186,10 @@ body.dark-theme {
   }
 
   .article__form-line {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .article__form-row {
@@ -11403,6 +11549,28 @@ body.dark-theme {
         -ms-flex: 0 0 8.5625rem;
             flex: 0 0 8.5625rem;
   }
+
+  .article__form-line {
+    -ms-grid-columns: calc(50% - 1rem) 1fr 1fr;
+    grid-template-columns: calc(50% - 1rem) 1fr 1fr;
+  }
+
+  .article__form-line .l-btn {
+    padding-inline: 2rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .graph {
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transform-origin: center 0;
+        -ms-transform-origin: center 0;
+            transform-origin: center 0;
+    margin-bottom: 80px;
+  }
 }
 
 @media (min-width: 1439.98px) {
@@ -11514,6 +11682,17 @@ body.dark-theme {
 
   .article__calories-header .article__calories-value {
     font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .graph__content {
+    margin: 0 auto;
+  }
+
+  .graph__content::before {
+    height: 170px;
+    bottom: -100px;
   }
 }
 
@@ -11763,6 +11942,10 @@ body.dark-theme {
 
   .notification__text[href]:hover {
     color: #2f80ed;
+  }
+
+  .notification__text a:hover {
+    text-decoration: underline;
   }
 
   .notification__more:hover {

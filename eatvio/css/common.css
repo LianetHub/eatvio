@@ -1383,6 +1383,29 @@ body.dark-theme {
   padding: 1.87rem;
 }
 
+.popup__complaint .popup__cancel {
+  margin-top: 2.875rem;
+  max-width: 35.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup__complaint .popup__cancel .label {
+  font-size: 1.125rem;
+}
+
+.popup__complaint .popup__btns {
+  max-width: 35.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup__complaint-caption {
+  max-width: 33.125rem;
+  margin: 0 auto;
+  color: #323f4b;
+}
+
 .popup__complaint-title {
   text-align: center;
   color: #323f4b;
@@ -3064,6 +3087,15 @@ body.dark-theme {
 .notification__text[href] {
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+}
+
+.notification__text a {
+  color: #2f80ed;
+}
+
+.notification__text.sm-width {
+  line-height: 1;
+  max-width: 45rem;
 }
 
 .notification__more {
@@ -10361,6 +10393,10 @@ body.dark-theme {
 
   .notification__text[href]:hover {
     color: #2f80ed;
+  }
+
+  .notification__text a:hover {
+    text-decoration: underline;
   }
 
   .notification__more:hover {
