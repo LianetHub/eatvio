@@ -194,6 +194,21 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle('active');
         }
 
+        if (e.target.matches('.diary__days-item')) {
+            const tabs = document.querySelectorAll('.diary__days-item');
+            const contents = document.querySelectorAll('.diary__tabs-content');
+            const clickedIndex = Array.from(tabs).indexOf(e.target);
+
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            e.target.classList.add('active');
+            if (contents[clickedIndex]) {
+                contents[clickedIndex].classList.add('active');
+            }
+        }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {

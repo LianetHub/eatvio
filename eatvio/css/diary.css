@@ -631,8 +631,10 @@
 }
 
 .diary__product-unit .input.input-sm {
+  margin-top: -0.175rem;
+  margin-bottom: -0.175rem;
   width: 100%;
-  padding: 0.325rem 0.625rem;
+  padding: 0.25rem 0.625rem;
   border-color: #2f80ed;
   font-size: inherit;
   max-width: 3.375rem;
@@ -1851,10 +1853,13 @@
   line-height: 100%;
   border-radius: 0.625rem;
   padding: 0.62rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
 
 .diary__days-item.active {
-  background: #2f80ed;
+  background: #2f80ed !important;
+  color: #fff !important;
 }
 
 .diary__days-item.selected {
@@ -1916,8 +1921,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.31rem;
+  padding: 0.5rem;
+  width: 13.375rem;
+}
+
+.diary__routine-item:last-child {
+  width: 14rem;
 }
 
 .diary__routine-icon {
@@ -1941,6 +1954,14 @@
   line-height: 1.375rem;
   letter-spacing: -0.02688rem;
   padding: 0.38rem 1rem;
+}
+
+.diary__tabs-content {
+  display: none;
+}
+
+.diary__tabs-content.active {
+  display: block;
 }
 
 .calendar {
@@ -2919,6 +2940,10 @@
 
   .diary__stats-tablist .l-btn[aria-selected=true]:hover {
     background: #0b5ed7;
+  }
+
+  .diary__days-item:hover {
+    background: #2f80ed;
   }
 
   .calendar__prev:hover,

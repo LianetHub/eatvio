@@ -698,16 +698,18 @@
 	}
 	// .arm__complaint
 	&__complaint {
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 		& + .arm__chat {
 			margin-top: 1.25rem;
 		}
 		.diary__stats {
 			background: #252736;
 			color: #fff;
+			border-radius: rem(20);
 			padding-top: 1.31rem;
 		}
 		.diary__comment-body {
+			margin-top: rem(12);
 			color: #323f4b;
 		}
 		.diary__product-unit {
@@ -716,13 +718,8 @@
 		.selected {
 			background: #fffdd8 !important;
 		}
-		.diary__product-content {
-			background: #383a51;
-			color: #fff;
-		}
-		.diary__product-comment-text {
-			font-size: 1rem;
-			letter-spacing: normal;
+		.diary__comment {
+			margin-top: rem(20);
 		}
 		.diary__stats-header {
 			margin-top: 1.25rem;
@@ -734,6 +731,18 @@
 		}
 		.diary__stats-text {
 			color: #fff;
+		}
+		.diary__product {
+			margin-top: rem(20);
+		}
+		.diary__product-content {
+			background: #383a51;
+			color: #fff;
+			border-radius: rem(8);
+		}
+		.diary__product-comment-text {
+			font-size: 1rem;
+			letter-spacing: normal;
 		}
 	}
 	// .arm__complaint-heading
@@ -779,16 +788,19 @@
 	}
 	// .arm__side-list
 	&__side-list {
-		margin-top: 1rem;
 		border-top: rem(1) solid #383a51;
 	}
 	// .arm__side-row
 	&__side-row {
 		padding: 1rem;
-		border-bottom: rem(1) solid #383a51;
+		padding-bottom: 0rem;
 		font-size: 1.125rem;
 		font-weight: 500;
 		line-height: 130%;
+		&:not(:last-child) {
+			padding-bottom: 1rem;
+			border-bottom: rem(1) solid #383a51;
+		}
 	}
 	// .arm__side-title
 	&__side-title {
@@ -816,7 +828,7 @@
 	&__btns {
 		margin-top: 1.5rem;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
 		.l-btn {
 			padding-inline: 1rem;
@@ -898,7 +910,7 @@
 		font-size: 1.25rem;
 		font-weight: 600;
 		line-height: 100%;
-		margin-bottom: 1.5rem;
+		margin-bottom: rem(12);
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
@@ -913,7 +925,7 @@
 	// .arm__complaint-object-text
 	&__complaint-object-text {
 		&:not(:first-child) {
-			margin-top: 1.5rem;
+			margin-top: rem(12);
 		}
 		border-radius: 0.625rem;
 		background: #383a51;
@@ -991,7 +1003,7 @@
 	}
 	// .arm__chat-body
 	&__chat-body {
-		height: 18.19rem;
+		height: 13.5rem;
 		overflow-y: auto;
 		align-content: end;
 		flex: 1 1 auto;

@@ -769,7 +769,7 @@
 }
 
 .arm__complaint {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .arm__complaint + .arm__chat {
@@ -779,10 +779,12 @@
 .arm__complaint .diary__stats {
   background: #252736;
   color: #fff;
+  border-radius: 1.25rem;
   padding-top: 1.31rem;
 }
 
 .arm__complaint .diary__comment-body {
+  margin-top: 0.75rem;
   color: #323f4b;
 }
 
@@ -796,14 +798,8 @@
   background: #fffdd8 !important;
 }
 
-.arm__complaint .diary__product-content {
-  background: #383a51;
-  color: #fff;
-}
-
-.arm__complaint .diary__product-comment-text {
-  font-size: 1rem;
-  letter-spacing: normal;
+.arm__complaint .diary__comment {
+  margin-top: 1.25rem;
 }
 
 .arm__complaint .diary__stats-header {
@@ -818,6 +814,21 @@
 
 .arm__complaint .diary__stats-text {
   color: #fff;
+}
+
+.arm__complaint .diary__product {
+  margin-top: 1.25rem;
+}
+
+.arm__complaint .diary__product-content {
+  background: #383a51;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.arm__complaint .diary__product-comment-text {
+  font-size: 1rem;
+  letter-spacing: normal;
 }
 
 .arm__complaint-heading {
@@ -876,16 +887,20 @@
 }
 
 .arm__side-list {
-  margin-top: 1rem;
   border-top: 0.0625rem solid #383a51;
 }
 
 .arm__side-row {
   padding: 1rem;
-  border-bottom: 0.0625rem solid #383a51;
+  padding-bottom: 0rem;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 130%;
+}
+
+.arm__side-row:not(:last-child) {
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #383a51;
 }
 
 .arm__side-title {
@@ -918,8 +933,8 @@
   margin-top: 1.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1018,7 +1033,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,7 +1056,7 @@
 }
 
 .arm__complaint-object-text:not(:first-child) {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .arm__complaint-subject {
@@ -1134,7 +1149,7 @@
 }
 
 .arm__chat-body {
-  height: 18.19rem;
+  height: 13.5rem;
   overflow-y: auto;
   -ms-flex-line-pack: end;
       align-content: end;
