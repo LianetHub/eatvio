@@ -834,6 +834,9 @@
 			padding-inline: 1rem;
 		}
 	}
+	&__btn {
+		min-height: rem(52);
+	}
 	&__complaint-content {
 		flex: 0 0 calc(100% - 17.5rem);
 		.arm__chat {

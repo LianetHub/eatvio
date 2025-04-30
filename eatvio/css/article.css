@@ -382,91 +382,6 @@
   font-size: 1.125rem;
 }
 
-.article__form-field .products-block {
-  width: 100%;
-}
-
-.article__form-field .products-block.focused .products-block__input {
-  border: 0.0625rem solid #2f80ed;
-  border-bottom-color: transparent;
-  border-radius: 0.75rem 0.75rem 0 0;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.article__form-field .products-block.focused .products-block__list {
-  display: block;
-}
-
-.article__form-field .products-block__input {
-  width: 100%;
-  border: 0.0625rem solid #f8f8f8;
-}
-
-.article__form-field .products-block__list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #f8f8f8;
-  z-index: 2;
-  padding: 1rem;
-  width: 100%;
-  border-radius: 0 0 0.75rem 0.75rem;
-  border: 0.0625rem solid #2f80ed;
-  display: none;
-}
-
-.article__form-field .products-block__list-body {
-  max-height: 20rem;
-  overflow-y: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
-}
-
-.article__form-field .products-block__list-body::-webkit-scrollbar {
-  width: 6px;
-}
-
-.article__form-field .products-block__list-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.article__form-field .products-block__list-body::-webkit-scrollbar-thumb {
-  background: #939393;
-  border-radius: 6px;
-}
-
-.article__form-field .products-block__list-item {
-  padding: 0;
-  width: 100%;
-  cursor: pointer;
-  -webkit-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
-}
-
-.article__form-field .products-block__list-item mark {
-  background: transparent;
-  color: #2f80ed;
-}
-
-.article__form-field .products-block__list-item::before {
-  display: none;
-}
-
-.article__form-field .products-block__list-item.hidden {
-  display: none;
-}
-
-.article__form-field .products-block__not-found.hidden {
-  display: none;
-}
-
 .article__form-unit {
   position: absolute;
   top: 50%;
@@ -1001,6 +916,95 @@
   text-align: right;
 }
 
+.autocomplete-block {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-block.focused .autocomplete-block__input {
+  border: 0.0625rem solid #2f80ed !important;
+  border-bottom-color: transparent !important;
+  border-radius: 0.75rem 0.75rem 0 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.autocomplete-block.focused .autocomplete-block__list {
+  display: block;
+}
+
+.autocomplete-block__input {
+  width: 100%;
+  font-size: 1.125rem;
+  background: #f8f8f8;
+  border: 0.0625rem solid #f8f8f8 !important;
+}
+
+.autocomplete-block__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f8f8f8;
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0 0 0.75rem 0.75rem;
+  border: 0.0625rem solid #2f80ed;
+  display: none;
+}
+
+.autocomplete-block__list-body {
+  max-height: 20rem;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.autocomplete-block__list-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.autocomplete-block__list-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.autocomplete-block__list-body::-webkit-scrollbar-thumb {
+  background: #939393;
+  border-radius: 6px;
+}
+
+.autocomplete-block__list-item {
+  padding: 0;
+  padding-left: 0 !important;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.autocomplete-block__list-item mark {
+  background: transparent;
+  color: #2f80ed;
+}
+
+.autocomplete-block__list-item::before {
+  display: none;
+}
+
+.autocomplete-block__list-item.hidden {
+  display: none;
+}
+
+.autocomplete-block__not-found.hidden {
+  display: none;
+}
+
 .graph {
   position: relative;
   width: 320px;
@@ -1344,14 +1348,6 @@
     text-decoration: none;
   }
 
-  .article__form-field .products-block__list-body::-webkit-scrollbar-thumb:hover {
-    background: #7a7a7a;
-  }
-
-  .article__form-field .products-block__list-item:hover {
-    color: #2f80ed;
-  }
-
   .article__result-more:hover {
     color: #1366d6;
   }
@@ -1359,5 +1355,13 @@
   .article__tag:hover {
     background-color: #2f80ed;
     color: #fff;
+  }
+
+  .autocomplete-block__list-body::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+  }
+
+  .autocomplete-block__list-item:hover {
+    color: #2f80ed;
   }
 }

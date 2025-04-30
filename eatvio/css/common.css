@@ -1407,6 +1407,10 @@ body.dark-theme {
   color: #323f4b;
 }
 
+.popup__complaint-caption.fw-bold {
+  font-weight: 700;
+}
+
 .popup__complaint-title {
   text-align: center;
   color: #323f4b;
@@ -8592,6 +8596,39 @@ body.dark-theme {
   font-size: 1rem;
 }
 
+.cookies-block {
+  border-radius: 0.625rem;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  -webkit-box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 1rem 1.25rem;
+}
+
+.cookies-block__body {
+  margin-top: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.cookies-block__text {
+  line-height: 1;
+}
+
+.cookies-block__btn {
+  font-weight: 400;
+}
+
 @media (min-width: 575.98px) {
   .popup {
     padding: 0.9375em;
@@ -9809,6 +9846,28 @@ body.dark-theme {
     font-size: 1.25rem;
     margin-right: 1.25rem;
   }
+
+  .cookies-block {
+    padding: 1.25rem 1rem;
+    bottom: 2.125rem;
+    left: 1rem;
+    max-width: 36.25rem;
+  }
+
+  .cookies-block__body {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .cookies-block__btn {
+    font-size: 1rem;
+    padding: 0.5625rem 1.875rem;
+  }
 }
 
 @media (min-width: 767.98px) and (any-hover: hover) {
@@ -10010,6 +10069,10 @@ body.dark-theme {
   .settings__recipe-row {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+
+  .cookies-block {
+    left: calc((100vw - 978px) / 2);
   }
 }
 
@@ -10214,6 +10277,10 @@ body.dark-theme {
     gap: 0.625rem;
     -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
             box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .cookies-block__title {
+    font-size: 1.25rem;
   }
 }
 

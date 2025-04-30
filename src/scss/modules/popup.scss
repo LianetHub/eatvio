@@ -820,6 +820,9 @@
 		max-width: rem(530);
 		margin: 0 auto;
 		color: #323f4b;
+		&.fw-bold {
+			font-weight: 700;
+		}
 	}
 	// .popup__close
 	&__close {
