@@ -3412,6 +3412,8 @@ body {
 		.select {
 			flex: 1 1 auto;
 		}
+		&.settings__form-row--small {
+		}
 	}
 	// .settings__form-text
 	&__form-text {
@@ -4160,6 +4162,43 @@ body {
 					font-size: 1rem;
 				}
 			}
+		}
+	}
+	// .settings__phone-binding
+	&__phone-binding {
+		display: flex;
+		align-items: center;
+		max-width: rem(760);
+		padding: rem(20) 0;
+		margin: 0 auto;
+		gap: rem(20);
+		@media (max-width: $md4) {
+			flex-direction: column;
+			align-items: stretch;
+			background: #fff;
+			padding: rem(12);
+			gap: rem(10);
+			box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+		}
+		.l-btn {
+			width: 100%;
+			@media (min-width: $md4) {
+				max-width: rem(295);
+			}
+		}
+		.input {
+			font-size: rem(18);
+		}
+	}
+	// .settings__phone-binding-caption
+	&__phone-binding-caption {
+		font-weight: 500;
+		flex-shrink: 0;
+		line-height: 100%;
+		font-size: rem(16);
+		@media (min-width: $md4) {
+			font-size: rem(20);
+			margin-right: rem(20);
 		}
 	}
 }

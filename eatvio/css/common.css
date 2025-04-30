@@ -1358,7 +1358,8 @@ body.dark-theme {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.popup__btns .popup__selecting-btn:first-child:last-child {
+.popup__btns .popup__selecting-btn:first-child:last-child,
+.popup__btns .l-btn:first-child:last-child {
   -ms-grid-column-span: 2;
   grid-column: span 2;
 }
@@ -1597,6 +1598,10 @@ body.dark-theme {
 
 .popup__wrapper .title.sm-offset {
   margin-bottom: 0;
+}
+
+.popup__wrapper .title.fw-bold {
+  font-weight: 700;
 }
 
 .popup__wrapper .label {
@@ -8558,6 +8563,35 @@ body.dark-theme {
   margin-top: 1.88rem;
 }
 
+.settings__phone-binding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 47.5rem;
+  padding: 1.25rem 0;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.settings__phone-binding .l-btn {
+  width: 100%;
+}
+
+.settings__phone-binding .input {
+  font-size: 1.125rem;
+}
+
+.settings__phone-binding-caption {
+  font-weight: 500;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  line-height: 100%;
+  font-size: 1rem;
+}
+
 @media (min-width: 575.98px) {
   .popup {
     padding: 0.9375em;
@@ -9090,6 +9124,14 @@ body.dark-theme {
   .popup__cert img {
     height: 100%;
     width: auto;
+  }
+
+  .popup__wrapper.popup__wrapper--lg {
+    padding: 1.25rem 4.375rem;
+  }
+
+  .popup__wrapper.popup__wrapper--sm {
+    padding: 1.25rem 1.875rem;
   }
 
   .title {
@@ -9758,6 +9800,15 @@ body.dark-theme {
     margin-top: 0.75rem;
     font-size: 1rem;
   }
+
+  .settings__phone-binding .l-btn {
+    max-width: 18.4375rem;
+  }
+
+  .settings__phone-binding-caption {
+    font-size: 1.25rem;
+    margin-right: 1.25rem;
+  }
 }
 
 @media (min-width: 767.98px) and (any-hover: hover) {
@@ -10148,6 +10199,21 @@ body.dark-theme {
   .settings__recipe-caption {
     font-size: 1.25rem;
     font-weight: 500;
+  }
+
+  .settings__phone-binding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    background: #fff;
+    padding: 0.75rem;
+    gap: 0.625rem;
+    -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   }
 }
 

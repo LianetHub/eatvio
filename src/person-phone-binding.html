@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Настройки',
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 6
+            })
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Профиль</span></a>
+                            <div class="settings__person-title title">
+                                Привяжите номер телефона
+                            </div>
+                            <div class="settings__person pc-only">
+                                <div class="settings__person-content">
+                                    <div class="settings__person-name">
+                                        Дмитрий Коваль
+                                    </div>
+                                    <div class="settings__person-position">
+                                        Консультант
+                                    </div>
+                                </div>
+                                <div class="settings__person-thumb">
+                                    <img src="@img/user.png" alt="avatar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings__body settings__body_main">
+                            <form action="#" class="settings__phone-binding">
+                                <div class="settings__phone-binding-caption">Ваш номер:</div>
+                                <input type="text" class="input" placeholder="+7 999 999 99 99">
+                                <button class="l-btn l-btn-primary">Привязать</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

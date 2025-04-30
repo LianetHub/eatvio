@@ -766,7 +766,8 @@
 		display: grid;
 		gap: rem(20);
 		grid-template-columns: repeat(2, 1fr);
-		.popup__selecting-btn {
+		.popup__selecting-btn,
+		.l-btn {
 			&:first-child:last-child {
 				grid-column: span 2;
 			}
@@ -996,6 +997,16 @@
 	// .popup__wrapper
 	&__wrapper {
 		padding: rem(30) rem(50);
+		&.popup__wrapper--lg {
+			@media (min-width: $md4) {
+				padding: rem(20) rem(70);
+			}
+		}
+		&.popup__wrapper--sm {
+			@media (min-width: $md4) {
+				padding: rem(20) rem(30);
+			}
+		}
 		.title {
 			font-size: 1.75rem;
 			margin-bottom: 1.88rem;
@@ -1004,6 +1015,9 @@
 			margin-bottom: 0;
 			&.sm-offset {
 				margin-bottom: 0;
+			}
+			&.fw-bold {
+				font-weight: 700;
 			}
 		}
 		.label {
