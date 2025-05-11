@@ -6266,6 +6266,24 @@ body.dark-theme {
   padding: 0.65rem 2.125rem;
 }
 
+.content__wrapper {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.content__pagination {
+  margin-top: 1.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content__pagination .pagination__item {
+  background: #fff;
+}
+
 .steps {
   padding: 2.5em 0em;
 }
@@ -8983,6 +9001,12 @@ body.dark-theme {
 
   .content__settings-ok {
     display: none;
+  }
+
+  .content__pagination {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .steps__item {

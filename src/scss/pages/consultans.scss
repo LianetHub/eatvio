@@ -9,6 +9,20 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.62rem;
+	&.consultant-grey {
+		background: #f6f6f6;
+		padding: em(12) em(16) em(12) em(12);
+	}
+	&:has(.consultant__plan) {
+		display: flex;
+		flex-wrap: wrap;
+		@media (min-width: $md4) {
+			flex-wrap: nowrap;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
 	@media (min-width: $md5) {
 		gap: 1rem;
 		display: grid;
@@ -30,6 +44,14 @@
 		position: absolute;
 		top: 1rem;
 		left: 1rem;
+		&.consultant__thumb-sm {
+			min-width: rem(40);
+			height: rem(40);
+			@media (min-width: $md5) {
+				min-width: rem(80);
+				height: rem(80);
+			}
+		}
 		@media (min-width: $md5) {
 			position: static;
 			top: auto;
@@ -86,6 +108,7 @@
 		display: contents;
 		@media (min-width: $md5) {
 			display: block;
+			flex: 1 1 auto;
 		}
 	}
 	// .consultant__header
@@ -107,10 +130,18 @@
 	&__name {
 		font-weight: 700;
 		font-size: 1.125rem;
+		&.consultant__name-sm {
+			font-weight: 600;
+			font-size: rem(18);
+			@media (min-width: $md5) {
+				font-size: rem(20);
+			}
+		}
 		@media (min-width: $md5) {
 			font-size: 1.5rem;
 		}
 	}
+
 	// .consultant__favorite
 	&__favorite {
 		margin-top: -1rem;
@@ -137,7 +168,6 @@
 	}
 	// .consultant__desc
 	&__desc {
-		margin-top: 0.5rem;
 		font-size: 0.875rem;
 		max-width: 24.625rem;
 	}
@@ -172,6 +202,7 @@
 			}
 		}
 	}
+	// .consultant__certs
 	&__certs {
 		font-size: 14px;
 		font-weight: 700;
@@ -224,6 +255,250 @@
 		}
 		&.disabled {
 			background: #a4a4a4;
+		}
+	}
+	// .consultant__plan
+	&__plan {
+		flex: 0 0 100%;
+		@media (min-width: $md4) {
+			flex: 0 0 50%;
+		}
+		&.plans__item {
+			box-shadow: none;
+			padding: rem(6);
+			flex-direction: column-reverse;
+			gap: 1rem;
+			@media (min-width: $md3) {
+				gap: 0;
+				flex-direction: row;
+			}
+			.plans__item-image {
+				@media (max-width: $md5) {
+					margin: 0;
+					height: 0;
+					width: 0;
+					display: contents;
+					&::before {
+						display: none;
+					}
+					& img {
+						display: none;
+					}
+				}
+				@media (min-width: $md3) {
+					flex: 0 0 50%;
+					min-height: 100%;
+				}
+				padding-bottom: 192px;
+			}
+			@media (max-width: $md5) {
+				display: flex;
+				flex-direction: column;
+				.plans__item-info {
+					position: static;
+					order: 1;
+				}
+				.plans__item-stats {
+					flex-direction: row;
+					gap: rem(8);
+				}
+				.plans__item-stat {
+					padding: rem(4) rem(12);
+					font-weight: 500;
+					font-size: rem(12);
+					line-height: 100%;
+					border-radius: rem(4);
+					&:not(:last-child) {
+						margin-bottom: 0;
+					}
+				}
+				.plans__item-header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				.plans__item-favorite {
+					display: none;
+				}
+				.plans__item-desc {
+					display: none;
+				}
+				.plans__item-complete {
+					display: none;
+				}
+			}
+			.plans__item-body {
+				padding: rem(6);
+			}
+		}
+	}
+	// .consultant__plan-empty
+	&__plan-empty {
+		background: #ffffff;
+		border-radius: rem(5);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1rem;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		color: #6d6f71;
+		padding: rem(20);
+		& img {
+			max-width: rem(140);
+			width: 100%;
+		}
+		@media (max-width: $md5) {
+			display: none;
+		}
+	}
+	// .consultant__order
+	&__order {
+		position: relative;
+		border-radius: rem(4);
+		padding: rem(7) rem(6);
+		background: #fff;
+		align-self: flex-start;
+		color: #2f80ed;
+		font-weight: 600;
+		line-height: 100%;
+		letter-spacing: 0.2px;
+		text-align: center;
+		order: -1;
+		font-size: rem(20);
+		@media (min-width: $md4) {
+			font-size: rem(24);
+		}
+	}
+	// .consultant__order-icon
+	&__order-icon {
+		position: absolute;
+		width: rem(26);
+		height: rem(26);
+		top: -0.75rem;
+		right: -0.75rem;
+		@media (min-width: $md4) {
+			top: -1rem;
+			right: -1rem;
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+	// .person__achives
+	&__achives {
+		margin-top: 1rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(12);
+	}
+	// .person__achive
+	&__achive {
+		width: rem(28);
+		height: rem(28);
+		@media (min-width: $md5) {
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+	// .person__achive-more
+	&__achive-more {
+		font-weight: 700;
+		line-height: 100%;
+		color: #2f80ed;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: rem(28);
+		height: rem(28);
+		font-size: rem(12);
+		@media (min-width: $md5) {
+			font-size: rem(14);
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+	// .consultant__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+		@media (min-width: $md5) {
+			flex: 1 1 auto;
+			display: grid;
+			grid-template-columns: min-content rem(80) auto;
+			align-self: flex-start;
+			.consultant__body {
+				grid-column: 3/4;
+			}
+		}
+		.consultant__thumb {
+			position: static;
+			top: auto;
+			left: auto;
+		}
+		.consultant__desc {
+			max-width: 100%;
+		}
+	}
+	// .consultant__heading
+	&__heading {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(8);
+		@media (min-width: $md5) {
+			display: contents;
+		}
+		.consultant__favorite {
+			margin-left: auto;
+			font-size: rem(20);
+			margin-top: 0;
+			margin-right: 0;
+			@media (min-width: $md5) {
+				display: none;
+			}
+		}
+	}
+	// .consultant__person
+	&__person {
+		align-self: center;
+	}
+	&__person-info {
+		margin-top: rem(2);
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: rem(2);
+		@media (min-width: $md5) {
+			justify-content: flex-start;
+			flex-direction: column;
+		}
+	}
+	// .consultant__rating
+	&__rating {
+		font-weight: 500;
+		line-height: 100%;
+		color: #2f80ed;
+		font-size: rem(12);
+		@media (min-width: $md5) {
+			font-size: rem(18);
+		}
+	}
+	// .consultant__location
+	&__location {
+		font-weight: 500;
+		line-height: 100%;
+		color: #6d6f71;
+		font-size: rem(12);
+		@media (min-width: $md5) {
+			font-size: 1rem;
 		}
 	}
 }

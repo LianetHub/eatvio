@@ -1852,6 +1852,23 @@ body {
 			display: none;
 		}
 	}
+	// .content__wrapper
+	&__wrapper {
+		margin-top: rem(32);
+		padding: rem(16);
+		border-radius: rem(12);
+		background: #fff;
+	}
+	&__pagination {
+		margin-top: rem(28);
+		justify-content: center;
+		@media (min-width: $md5) {
+			justify-content: flex-end;
+		}
+		.pagination__item {
+			background: #fff;
+		}
+	}
 }
 
 .steps {

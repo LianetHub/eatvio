@@ -363,6 +363,48 @@
           flex-direction: column;
 }
 
+.plans__item-desc {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 100%;
+  color: #6d6f71;
+}
+
+.plans__item-complete {
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #6d6f71;
+}
+
+.plans__item-complete span {
+  font-weight: 600;
+  color: #323f4b;
+}
+
+.plans__item-link {
+  background-color: #f6f6f6;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0747132 0.909366C0.113849 0.973406 0.199235 1.05523 0.263275 1.09793C0.380682 1.16908 0.426933 1.16908 3.18776 1.16908L5.99484 1.16908L3.21267 3.95126C0.188562 6.98248 0.316641 6.83661 0.377123 7.1746C0.409143 7.35249 0.647514 7.59086 0.825403 7.62288C1.16339 7.68336 1.01752 7.81144 4.04518 4.78733L6.83092 2.00516L6.83092 4.81224C6.83092 7.58018 6.83092 7.61932 6.90563 7.73673C7.01236 7.91461 7.17958 8 7.40728 8C7.63853 8 7.80219 7.9075 7.91248 7.71538C7.98719 7.59086 7.98719 7.54816 7.99787 4.09357C8.00498 1.61736 7.99431 0.553589 7.96585 0.446856C7.91604 0.261852 7.73815 0.0839639 7.55314 0.0341549C7.44641 0.00569296 6.38264 -0.00498009 3.90643 0.0021348C0.451837 0.0128083 0.409143 0.0128083 0.284622 0.0875216C0.0889444 0.20137 0 0.36147 0 0.596282C0 0.735035 0.0213466 0.831095 0.0747132 0.909366Z' fill='%23323F4B'/%3E%3C/svg%3E%0A");
+}
+
 @media (min-width: 575.98px) {
   .plans__item {
     display: -webkit-box;
@@ -403,6 +445,10 @@
 
   .plans__item-delete {
     margin-top: 0;
+  }
+
+  .plans__item-link {
+    display: none;
   }
 }
 
