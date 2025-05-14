@@ -572,6 +572,9 @@ body.dark-theme {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .popup__body {
@@ -584,6 +587,7 @@ body.dark-theme {
           transform: scale(0);
   max-width: 770px;
   width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
 .popup__body.popup__body-sm {
@@ -1247,7 +1251,6 @@ body.dark-theme {
   margin-top: 1rem;
   text-align: center;
   color: #323f4b;
-  font-size: 1.25rem;
 }
 
 .popup__subtitle + .textarea {
@@ -1354,8 +1357,6 @@ body.dark-theme {
   display: -ms-grid;
   display: grid;
   gap: 1.25rem;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .popup__btns .popup__selecting-btn:first-child:last-child,
@@ -1589,7 +1590,11 @@ body.dark-theme {
 }
 
 .popup__wrapper {
-  padding: 1.875rem 3.125rem;
+  padding: 1.875rem 1.875rem;
+}
+
+.popup__wrapper.popup__wrapper--lg {
+  padding: 1.25rem 1.875rem;
 }
 
 .popup__wrapper .title {
@@ -2369,9 +2374,9 @@ body.dark-theme {
 .info-block {
   width: 15px;
   height: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2400,7 +2405,7 @@ body.dark-theme {
 .info-block.dark-outline {
   border: 1px solid #323f4b;
   color: #323f4b;
-  background: #fff;
+  background: transparent;
 }
 
 .tooltip {
@@ -8704,6 +8709,11 @@ body.dark-theme {
             flex: 1 1 auto;
   }
 
+  .popup__btns {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .wysiwyg__caption .l-btn {
     padding: 0.8em;
   }
@@ -9167,6 +9177,13 @@ body.dark-theme {
 }
 
 @media (min-width: 767.98px) {
+  .popup__subtitle {
+    font-size: 1.25rem;
+    max-width: 31.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .popup__certs {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -10299,6 +10316,7 @@ body.dark-theme {
     background: #fff;
     padding: 0.75rem;
     gap: 0.625rem;
+    border-radius: 0.5rem;
     -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
             box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   }

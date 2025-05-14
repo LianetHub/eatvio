@@ -24,13 +24,20 @@
 	&__container {
 		padding: 0;
 		display: flex;
+		@media (max-width: $md4) {
+			max-width: 100%;
+			overflow-x: hidden;
+			gap: 2rem;
+		}
 		@media (min-width: $md4) {
 			padding: 0 em(16);
 		}
 		@media (max-width: $md4) {
-			transition: transform 0.3s ease 0s;
 			&.active {
-				transform: translateX(-100%);
+				.chat__contacts,
+				.chat__body {
+					transform: translateX(-100vw);
+				}
 			}
 		}
 	}
@@ -49,8 +56,11 @@
 		padding: em(8) em(0);
 
 		padding: rem(12);
-		flex: 0 0 calc(100% - 2rem);
-		margin: rem(30) 1rem;
+		flex: 0 0 100%;
+		margin: rem(30) 0;
+		@media (max-width: $md4) {
+			transition: transform 0.3s ease 0s;
+		}
 		@media (min-width: $md4) {
 			margin: em(0) rem(16) em(0) em(0);
 			flex: 0 0 40%;
@@ -277,6 +287,9 @@
 		// display: none;
 		flex: 0 0 100%;
 		border-radius: 8px;
+		@media (max-width: $md4) {
+			transition: transform 0.3s ease 0s;
+		}
 		@media (min-width: $md4) {
 			background: #fff;
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -782,6 +795,12 @@
 		}
 		& .plans__item {
 			padding: rem(16);
+			@media (max-width: $md3) {
+				@media (min-width: $md4) {
+					flex-wrap: wrap;
+					gap: 1rem;
+				}
+			}
 			.plans__item-image {
 				flex: 0 0 120px;
 				padding-bottom: 120px;
@@ -823,6 +842,7 @@
 		& img {
 			border-radius: rem(8);
 			margin: rem(4) 0;
+			max-height: 25vh;
 		}
 		&.lg-badge {
 			font-size: 1rem;

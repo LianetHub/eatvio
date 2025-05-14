@@ -989,6 +989,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 1rem 0em 0em 0em;
 }
 
 .diary__main-products {

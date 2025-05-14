@@ -2,7 +2,7 @@
 @import "../config.scss";
 
 .person-block {
-	padding: 0 0 0.25rem 0;
+	padding: 1rem 0 0.25rem 0;
 	@media (min-width: $md5) {
 		padding: 2.5rem 0 0.25rem 0;
 	}

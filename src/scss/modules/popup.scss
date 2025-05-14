@@ -29,6 +29,7 @@
 		min-height: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: flex-end;
 		@media (min-width: $md5) {
 			align-items: center;
 		}
@@ -37,9 +38,6 @@
 	&__body {
 		background: #fff;
 		color: #000;
-		@media (min-width: $md5) {
-			border-radius: 8px;
-		}
 		transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
 		transform: scale(0);
 		max-width: 770px;
@@ -58,6 +56,10 @@
 		}
 		&.offset {
 			padding: rem(40) rem(24);
+		}
+		border-radius: 8px 8px 0 0;
+		@media (min-width: $md5) {
+			border-radius: 8px;
 		}
 	}
 	// .popup__close
@@ -680,7 +682,12 @@
 		margin-top: 1rem;
 		text-align: center;
 		color: #323f4b;
-		font-size: 1.25rem;
+		@media (min-width: $md4) {
+			font-size: 1.25rem;
+			max-width: rem(500);
+			margin-left: auto;
+			margin-right: auto;
+		}
 		& + .textarea {
 			margin-top: 1.88rem;
 		}
@@ -765,7 +772,9 @@
 		margin-top: rem(28);
 		display: grid;
 		gap: rem(20);
-		grid-template-columns: repeat(2, 1fr);
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 		.popup__selecting-btn,
 		.l-btn {
 			&:first-child:last-child {
@@ -999,8 +1008,9 @@
 	}
 	// .popup__wrapper
 	&__wrapper {
-		padding: rem(30) rem(50);
+		padding: rem(30) rem(30);
 		&.popup__wrapper--lg {
+			padding: rem(20) rem(30);
 			@media (min-width: $md4) {
 				padding: rem(20) rem(70);
 			}

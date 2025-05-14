@@ -84,13 +84,16 @@
                                         </div>
                                         <div class="article__form-grid">
                                             <div class="article__form-grid-column">
-                                                <input type="number" name="age" class="input" step="1" placeholder="Возраст" value="27">
+                                                <input type="number" name="age" class="input error" step="1" placeholder="Возраст" value="27">
+                                                <div class="error-message icon-info"> Возраст не может быть меньше 10 </div>
                                             </div>
                                             <div class="article__form-grid-column">
-                                                <input type="number" name="height" class="input" step="1" placeholder="Рост, в см" value="185">
+                                                <input type="number" name="height" class="input error" step="1" placeholder="Рост, в см" value="185">
+                                                <div class="error-message icon-info"> Рост не может быть меньше 50 см </div>
                                             </div>
                                             <div class="article__form-grid-column">
-                                                <input type="number" name="weight" class="input" step="1" placeholder="Вес, в кг" value="92">
+                                                <input type="number" name="weight" class="input error" step="1" placeholder="Вес, в кг" value="92">
+                                                <div class="error-message icon-info"> Вес не может быть меньше 20 кг </div>
                                             </div>
                                         </div>
                                         <span class="article__form-separator"></span>
@@ -104,6 +107,7 @@
                                                 <option value="1.9"> 1.9 - очень высокий (профессиональные спортсмены, тяжелая физическая работа) </option>
                                             </select>
                                         </div>
+                                        <div class="error-message icon-info"> Поле «Физическая активность» обязательно для заполнения </div>
                                         <button type="submit" class="article__form-submit l-btn l-btn-primary"> Рассчитать </button>
                                         <span class="article__form-separator"></span>
                                     </form>
@@ -256,6 +260,7 @@
                                             </div>
                                             <button type="submit" class="l-btn l-btn-primary">Добавить продукт</button>
                                         </div>
+                                        <div class="error-message icon-info"> Для подсчета КБЖУ нужны ваши параметры! Заполните вес, рост, возраст, активность и нажмите кнопку «Рассчитать». </div>
                                     </form>
                                     <div class="article__visual">
                                         <div class="article__ration">

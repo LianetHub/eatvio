@@ -267,12 +267,20 @@
 			box-shadow: none;
 			padding: rem(6);
 			flex-direction: column-reverse;
-			gap: 1rem;
+			gap: rem(6);
+			border-radius: rem(5);
 			@media (min-width: $md3) {
 				gap: 0;
 				flex-direction: row;
 			}
 			.plans__item-image {
+				& img {
+					border-radius: rem(4);
+				}
+				&::before {
+					border-radius: rem(4);
+				}
+				margin-right: rem(8);
 				@media (max-width: $md5) {
 					margin: 0;
 					height: 0;
@@ -331,6 +339,11 @@
 				padding: rem(6);
 			}
 		}
+		&:has(.consultant__plan-empty) {
+			@media (max-width: $md5) {
+				display: none;
+			}
+		}
 	}
 	// .consultant__plan-empty
 	&__plan-empty {
@@ -351,9 +364,6 @@
 		& img {
 			max-width: rem(140);
 			width: 100%;
-		}
-		@media (max-width: $md5) {
-			display: none;
 		}
 	}
 	// .consultant__order
@@ -390,7 +400,9 @@
 	}
 	// .person__achives
 	&__achives {
-		margin-top: 1rem;
+		@media (min-width: $md5) {
+			margin-top: 1rem;
+		}
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
@@ -475,7 +487,7 @@
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 		flex-wrap: wrap;
-		gap: rem(2);
+		gap: rem(4);
 		@media (min-width: $md5) {
 			justify-content: flex-start;
 			flex-direction: column;

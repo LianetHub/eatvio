@@ -33,7 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll('.autocomplete-block')?.forEach(block => {
         const input = block.querySelector('.autocomplete-block__input');
+
         const list = block.querySelector('.autocomplete-block__list');
+        console.log(block);
+
+
         const items = Array.from(block.querySelectorAll('.autocomplete-block__list-item'));
 
         const notFoundEl = document.createElement('div');
