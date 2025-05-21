@@ -117,6 +117,8 @@
 .consultant__name {
   font-weight: 700;
   font-size: 1.125rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .consultant__name.consultant__name-sm {
@@ -267,6 +269,18 @@
 
 .consultant__plan.plans__item .plans__item-image::before {
   border-radius: 0.25rem;
+  pointer-events: none;
+}
+
+.consultant__plan.plans__item .plans__item-image-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .consultant__plan.plans__item .plans__item-body {
@@ -297,11 +311,18 @@
   line-height: 100%;
   color: #6d6f71;
   padding: 1.25rem;
+  position: relative;
 }
 
 .consultant__plan-empty img {
   max-width: 8.75rem;
   width: 100%;
+}
+
+.consultant__plan-empty .plans__item-favorite {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
 }
 
 .consultant__order {
@@ -550,6 +571,12 @@
             flex: 0 1 auto;
   }
 
+  .consultant__plan.plans__item .plans__item-info {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .consultant__achives {
     margin-top: 1rem;
   }
@@ -664,7 +691,7 @@
     display: none;
   }
 
-  .consultant__plan.plans__item .plans__item-image img {
+  .consultant__plan.plans__item .plans__item-image .plans__item-image-link {
     display: none;
   }
 
@@ -735,6 +762,10 @@
 }
 
 @media (any-hover: hover) {
+  .consultant__name:hover {
+    color: #2f80ed;
+  }
+
   .consultant__favorite:hover {
     color: #0d6efd;
   }

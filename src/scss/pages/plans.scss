@@ -184,6 +184,14 @@
 	// .plans__item-title
 	&__item-title {
 		font-weight: 600;
+		& a {
+			transition: color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
 	}
 	// .plans__item-header
 	&__item-header {
