@@ -361,6 +361,11 @@
 				padding: rem(6);
 			}
 		}
+		@media (min-width: $md4) {
+			.plans__item-header {
+				flex-wrap: nowrap;
+			}
+		}
 		&:has(.consultant__plan-empty) {
 			@media (max-width: $md5) {
 				display: none;

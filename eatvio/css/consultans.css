@@ -650,6 +650,11 @@
             flex: 0 0 50%;
   }
 
+  .consultant__plan .plans__item-header {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
   .consultant__order {
     font-size: 1.5rem;
   }
