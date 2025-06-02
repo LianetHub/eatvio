@@ -5,9 +5,12 @@ export const initTooltips = () => {
     document.onmouseover = function (event) {
         let target = event.target;
 
+
         // Получаем HTML для подсказки
         let tooltipHtml = target.dataset.tooltip;
         if (!tooltipHtml) return;
+
+        console.log(tooltipHtml);
 
         // Создаем элемент для подсказки
         tooltipElem = document.createElement('div');

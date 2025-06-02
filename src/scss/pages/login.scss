@@ -8,21 +8,31 @@
 	display: flex;
 	// .login__container
 	&__container {
-		display: grid;
-		align-items: center;
+	}
+	// .login__columns
+	&__columns {
+		display: flex;
+		justify-content: space-between;
 		gap: rem(20);
+		flex-direction: column;
 		@media (min-width: $md4) {
+			align-items: center;
+			flex-direction: row;
 			gap: rem(40);
 			column-gap: rem(70);
-			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 	// .login__column
 	&__column {
+		display: contents;
+		@media (min-width: $md4) {
+			max-width: rem(470);
+			display: block;
+		}
 	}
 	// .login__logo
 	&__logo {
-		width: 250px;
+		max-width: rem(234);
 		& img {
 			width: 100%;
 		}
@@ -31,35 +41,78 @@
 	&__subtitle {
 		margin: rem(48) em(0) em(0) em(0);
 		font-weight: 700;
-		font-size: 20px;
+		font-size: rem(24);
 		line-height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(10);
 	}
 	// .login__btns
 	&__btns {
-		margin: rem(48) em(0) em(0) em(0);
+		margin: rem(40) em(0) em(0) em(0);
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
-		column-gap: rem(24);
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(12);
+		order: 1;
+		@media (min-width: $md4) {
+			justify-content: flex-start;
+		}
 	}
 	// .login__btn
 	&__btn {
+		width: rem(160);
+		height: rem(54);
+		flex-shrink: 0;
 	}
 	// .login__form
 	&__form {
 		padding: 1.2em;
 		background: #fff;
-		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-		border-radius: 8px;
+		box-shadow: 0 rem(5) rem(10) 0 rgba(0, 0, 0, 0.25);
+		border-radius: rem(8);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		.l-btn {
+			text-transform: uppercase;
+		}
+		@media (min-width: $md4) {
+			max-width: rem(393);
+		}
 	}
 	// .login__form-main
 	&__form-main {
 		display: grid;
-		gap: 20px;
+		gap: rem(18);
 		width: 100%;
+		.input {
+			min-height: rem(46);
+		}
+	}
+	// .login__form-field
+	&__form-field {
+		position: relative;
+	}
+	// .login__form-eye
+	&__form-eye {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
+		padding: 0.56rem;
+		border-left: rem(1) solid #dee2e6;
+		transition: background-color 0.3s ease 0s;
+		border-radius: 0rem 0.2rem 0.2rem 0rem;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #dee2e6;
+			}
+		}
 	}
 	// .login__form-link
 	&__form-link {
@@ -76,10 +129,13 @@
 	}
 	// .login__form-bottom
 	&__form-bottom {
-		margin: rem(16) em(0) em(0) em(0);
-		padding: rem(16) rem(16) em(0);
-		border-top: 1px solid #7b8794;
+		margin: rem(16) 0 em(0);
+		padding: rem(16) 0 em(0);
+		border-top: rem(1) solid rgba($color: #7b8794, $alpha: 0.25);
 		width: 100%;
+		.l-btn-black {
+			background: #323f4b;
+		}
 	}
 	// .login__link
 	&__link {

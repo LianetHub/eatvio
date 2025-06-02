@@ -2352,6 +2352,7 @@ body.dark-theme {
 
 [data-tooltip] {
   cursor: help;
+  position: relative;
 }
 
 [data-popover] {
@@ -2432,7 +2433,7 @@ body.dark-theme {
 
 .tooltip b {
   color: #323f4b;
-  font-size: 1.25rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   line-height: 100%;
 }
@@ -3145,6 +3146,10 @@ body.dark-theme {
   font-weight: 500;
   line-height: 120%;
   padding: 0.94rem;
+}
+
+.font-weight-normal {
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {

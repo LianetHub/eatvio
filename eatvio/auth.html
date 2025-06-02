@@ -31,33 +31,58 @@
         <main class="page">
             <section class="login">
                 <div class="login__container container-sm">
-                    <div class="login__column">
-                        <div class="login__logo">
-                            <img src="img/logo.svg" alt="logo">
-                        </div>
-                        <p class="login__subtitle"> Eatvio - lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices orci mauris velit lacus, massa. At velit erat erat nisi. </p>
-                        <div class="login__btns">
-                            <a href="" class="login__btn">
-                                <img src="img/android.svg" alt="android">
-                            </a>
-                            <a href="" class="login__btn">
-                                <img src="img/apple.svg" alt="apple">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="login__column">
-                        <form action="#" class="login__form form">
-                            <div class="login__form-main">
-                                <input type="text" name="login" class="input" placeholder="Электронный адрес или номер телефона">
-                                <input type="password" name="psw" class="input" placeholder="Пароль">
-                                <button class="l-btn l-btn-primary">ВХОД</button>
+                    <div class="login__columns">
+                        <div class="login__column">
+                            <div class="login__logo">
+                                <img src="img/logo-vertical-russia-sm.svg" alt="logo">
                             </div>
-                            <a href="" class="login__form-link">Забыли пароль?</a>
-                            <div class="login__form-bottom">
-                                <a href="#register" data-modal class="l-btn l-btn-fullwidth l-btn-black"> Создать новый аккаунт </a>
+                            <div class="login__subtitle">
+                                <h1>Итвио - это полезная привычка</h1>
+                                <p>Cовременный инструмент для диетологов, нутрициологов и тех, кто хочет правильно питаться.</p>
+                                <p>Упростите ведение дневника питания. Расчет КБЖУ и консультации.</p>
                             </div>
-                        </form>
-                        <a href="" class="login__link">Я КОНСУЛЬТАНТ</a>
+                            <div class="login__btns">
+                                <a href="" class="login__btn">
+                                    <img src="img/RuStore.svg" alt="RuStore">
+                                </a>
+                                <a href="" class="login__btn">
+                                    <img src="img/AppStore.svg" alt="AppStore">
+                                </a>
+                                <a href="" class="login__btn">
+                                    <img src="img/GetApps.svg" alt="GetApps">
+                                </a>
+                                <a href="" class="login__btn">
+                                    <img src="img/AppGallery.svg" alt="AppGallery">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="login__column">
+                            <form action="#" class="login__form form">
+                                <div class="login__form-main">
+                                    <div class="login__form-field">
+                                        <input type="text" name="login" class="input input-white" placeholder="Электронный адрес (email)">
+                                    </div>
+                                    <div class="login__form-field">
+                                        <input type="password" name="psw" class="input input-white" placeholder="Пароль">
+                                        <button type="button" class="login__form-eye">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                <path d="M10.2392 11.3532L8.83917 9.95322C8.27917 10.1399 7.71139 10.171 7.13583 10.0466C6.56028 9.92211 6.0625 9.64989 5.6425 9.22989C5.2225 8.80989 4.95028 8.31211 4.82583 7.73655C4.70139 7.161 4.7325 6.59322 4.91917 6.03322L3.14583 4.21322C2.67917 4.61766 2.24361 5.06878 1.83917 5.56655C1.55917 5.90878 1.31028 6.26655 1.0925 6.63989L0.8125 7.05989L1.13917 7.57322C1.38806 7.97766 1.68361 8.36655 2.02583 8.73989C2.4925 9.29989 2.97472 9.78211 3.4725 10.1866C4.09472 10.6843 4.7325 11.0732 5.38583 11.3532C6.19472 11.6954 7.01139 11.8666 7.83583 11.8666C8.66028 11.8666 9.46139 11.6954 10.2392 11.3532ZM5.38583 2.76655C6.16361 2.42433 6.96472 2.25322 7.78917 2.25322C8.61361 2.25322 9.43028 2.42433 10.2392 2.76655C10.8925 3.04655 11.5303 3.43544 12.1525 3.93322C12.6503 4.33766 13.1325 4.81989 13.5992 5.37989C13.9414 5.75322 14.2369 6.14211 14.4858 6.54655L14.8125 7.05989L14.5325 7.47989C14.3147 7.85322 14.0658 8.211 13.7858 8.55322C13.3814 9.051 12.9458 9.50211 12.4792 9.90655L10.7058 8.08655C10.8925 7.52655 10.9236 6.95878 10.7992 6.38322C10.6747 5.80766 10.4025 5.30989 9.9825 4.88989C9.5625 4.46989 9.06472 4.19766 8.48917 4.07322C7.91361 3.94878 7.34583 3.97989 6.78583 4.16655L5.38583 2.76655ZM5.66583 6.73322C5.60361 7.07544 5.62694 7.40989 5.73583 7.73655C5.84472 8.06322 6.02361 8.351 6.2725 8.59989C6.52139 8.84878 6.80917 9.02766 7.13583 9.13655C7.4625 9.24544 7.79694 9.26878 8.13917 9.20655L5.66583 6.73322ZM9.95917 7.38655L7.48583 4.91322C7.82806 4.851 8.1625 4.87433 8.48917 4.98322C8.81583 5.09211 9.10361 5.271 9.3525 5.51989C9.60139 5.76878 9.78028 6.05655 9.88917 6.38322C9.99806 6.70989 10.0214 7.04433 9.95917 7.38655ZM12.7592 12.6132L2.25917 2.11322L2.86583 1.50655L13.3658 12.0066L12.7592 12.6132Z" fill="#212529" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <label class="checkbox checkbox-gray">
+                                        <input type="checkbox" name="remember" class="checkbox__input hidden" hidden>
+                                        <span class="checkbox__content"> Запомнить меня </span>
+                                    </label>
+                                    <button class="l-btn l-btn-primary">ВХОД</button>
+                                </div>
+                                <a href="" class="login__form-link">Забыли пароль?</a>
+                                <div class="login__form-bottom">
+                                    <a href="#register" data-modal class="l-btn l-btn-fullwidth l-btn-black"> Создать новый аккаунт </a>
+                                </div>
+                            </form>
+                            <a href="" class="login__link">Я КОНСУЛЬТАНТ</a>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -44,6 +44,7 @@
 
 [data-tooltip] {
 	cursor: help;
+	position: relative;
 }
 
 [data-popover] {
@@ -112,7 +113,7 @@
 	}
 	& b {
 		color: #323f4b;
-		font-size: 1.25rem;
+		font-size: rem(13);
 		font-weight: 700;
 		line-height: 100%;
 	}
@@ -849,6 +850,10 @@
 	font-weight: 500;
 	line-height: 120%;
 	padding: 0.94rem;
+}
+
+.font-weight-normal {
+	font-weight: 400;
 }
 
 // .mobile-menu {

@@ -420,16 +420,11 @@
 	// .consultant__order-icon
 	&__order-icon {
 		position: absolute;
-		width: rem(26);
-		height: rem(26);
-		top: -0.75rem;
-		right: -0.75rem;
-		@media (min-width: $md4) {
-			top: -1rem;
-			right: -1rem;
-			width: 2rem;
-			height: 2rem;
-		}
+		top: -0.5rem;
+		right: -0.5rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		transform: rotate(20deg);
 	}
 	// .person__achives
 	&__achives {
@@ -444,6 +439,7 @@
 	// .person__achive
 	&__achive {
 		width: rem(28);
+		display: block;
 		height: rem(28);
 		@media (min-width: $md5) {
 			width: rem(40);

@@ -345,10 +345,13 @@
 
 .consultant__order-icon {
   position: absolute;
-  width: 1.625rem;
-  height: 1.625rem;
-  top: -0.75rem;
-  right: -0.75rem;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .consultant__achives {
@@ -365,6 +368,7 @@
 
 .consultant__achive {
   width: 1.75rem;
+  display: block;
   height: 1.75rem;
 }
 
@@ -657,13 +661,6 @@
 
   .consultant__order {
     font-size: 1.5rem;
-  }
-
-  .consultant__order-icon {
-    top: -1rem;
-    right: -1rem;
-    width: 2rem;
-    height: 2rem;
   }
 }
 
