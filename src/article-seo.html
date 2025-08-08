@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Eatvio',
+    "stylesName": ["article"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <div class="content">
+                    <div class="content__container">
+                        <div class="markdown-body">
+                            <h1>Тестовая статья: проверка стилей GitHub Markdown CSS</h1>
+
+                            <blockquote>
+                                <p>Эта статья создана для тестирования отображения элементов Markdown</p>
+                            </blockquote>
+
+                            <br>
+
+                            <h2>1. Заголовки</h2>
+
+                            <h1>Заголовок H1</h1>
+                            <h2>Заголовок H2</h2>
+                            <h3>Заголовок H3</h3>
+                            <h4>Заголовок H4</h4>
+                            <h5>Заголовок H5</h5>
+                            <h6>Заголовок H6</h6>
+
+                            <br>
+
+                            <h2>2. Абзацы и выделения</h2>
+
+                            <p>Обычный текст с <strong>жирным</strong>, <em>курсивом</em> и <u>подчеркиванием</u>.<br>
+                                Также можно сделать <strong><em>жирный курсив</em></strong> или <code>инлайн-код</code>.</p>
+
+                            <br>
+
+                            <h2>3. Списки</h2>
+
+                            <p><strong>Маркированный список:</strong></p>
+                            <ul>
+                                <li>Пункт 1</li>
+                                <li>Пункт 2
+                                    <ul>
+                                        <li>Подпункт 2.1</li>
+                                        <li>Подпункт 2.2</li>
+                                    </ul>
+                                </li>
+                                <li>Пункт 3</li>
+                            </ul>
+
+                            <p><strong>Нумерованный список:</strong></p>
+                            <ol>
+                                <li>Первый</li>
+                                <li>Второй</li>
+                                <li>Третий</li>
+                            </ol>
+
+                            <br>
+
+                            <h2>4. Цитаты</h2>
+                            <blockquote>
+                                <p>Это пример цитаты.<br>Можно делать несколько строк, и они будут красиво оформлены.</p>
+                            </blockquote>
+
+                            <br>
+
+                            <h2>5. Код</h2>
+
+                            <p>HTML пример:</p>
+                            <pre><code class="language-html">&lt;!-- HTML пример --&gt;
+                                    &lt;div class="example"&gt;
+                                    &lt;p&gt;Привет, мир!&lt;/p&gt;
+                                    &lt;/div&gt;
+                                </code></pre>
+
+                            <p>JavaScript пример:</p>
+                            <pre><code class="language-javascript">// JavaScript пример
+                                    function greet(name) {
+                                    console.log(`Привет, ${name}!`);
+                                    }
+                                    greet("Мир");
+                                </code></pre>
+
+                            <br>
+
+                            <h2>6. Таблица</h2>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Имя</th>
+                                        <th>Возраст</th>
+                                        <th>Город</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Иван</td>
+                                        <td>25</td>
+                                        <td>Москва</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ольга</td>
+                                        <td>31</td>
+                                        <td>Санкт-Петербург</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Алексей</td>
+                                        <td>29</td>
+                                        <td>Казань</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+
+                            <h2>7. Ссылки и изображения</h2>
+
+                            <p><a href="https://github.com" target="_blank">Перейти на GitHub</a></p>
+
+                            <figure>
+                                <img alt="Пример изображения" src="@img/article/01.jpg" />
+                                <figcaption>Пример изображения</figcaption>
+                            </figure>
+
+                            <br>
+
+
+                            <p>Конец статьи </p>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "settings"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

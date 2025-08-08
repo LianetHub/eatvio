@@ -1,5 +1,6 @@
 @use "sass:math";
 @import "../config.scss";
+@import "../modules/seo-article";
 
 .article {
 	padding: em(35) em(0);
