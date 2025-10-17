@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Калькулятор нормы калорий и БЖУ</title>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Нутрициолог — это ваш проводник в мире правильного питания. Он помогает не просто скорректировать рацион, но и понять, как еда влияет на ваше здоровье, энергию и настроение" />
+        <meta name="keywords" content="нутрициолог, работа с нутрициологом" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="css/style.min.css" />
+
+    </head>
+    <body>
+        <div class="wrapper">
+            @@include('./html/_articleHeader.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__body">
+                            <aside class="content__side content__side-sm">
+                                <nav class="content__nav swiper">
+                                    <ul class="swiper-wrapper">
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link">Итвио дневник питания</a>
+                                        </li>
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link">Калькулятор ИМТ</a>
+                                        </li>
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link">Калькулятор КБЖУ</a>
+                                        </li>
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link active">Калькулятор TyG</a>
+                                        </li>
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link">Индекс округлости тела (BRI)</a>
+                                        </li>
+                                        <li class="content__nav-item swiper-slide">
+                                            <a href="" class="content__nav-link">Индекс висцерального ожирения (VAI)</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <div class="content__main">
+                                <article class="article">
+                                    <div class="article__block">
+                                        <h1>Индекс TyG (Triglyceride-glucose index) калькулятор</h1>
+                                        <h2>Что такое Индекс TyG?</h2>
+                                        <p>Это расчетный показатель, основанный на результатах двух стандартных биохимических анализов крови:</p>
+                                        <ul>
+                                            <li><strong>Триглицериды (TG</strong>)</li>
+                                            <li><strong>Глюкоза натощак (Glucose)</strong></li>
+                                        </ul>
+                                        <form action="#" class="article__form">
+                                            <div class="article__form-row">
+                                                <input type="number" name="triglycerides" class="input" placeholder="Триглицериды (мг/дл)">
+                                                <input type="number" name="glucose" class="input" placeholder="Глюкоза натощак (мг/дл)">
+                                                <button type="submit" class="l-btn l-btn-primary">Рассчитать</button>
+                                            </div>
+                                        </form>
+                                        <div class="article__result">
+                                            <h2>Результат</h2>
+                                            <div class="article__result-body">
+                                                <div class="article__result-value">—</div>
+                                                <a href="https://pro.eatvio.ru/" target="_blank" class="l-btn l-btn-primary-outline">Итвио для специалистов</a>
+                                            </div>
+                                            <div class="article__result-content">
+                                                <div class="article__result-main">
+                                                    <div class="article__result-info">
+                                                        <p>Если индекс TyG <strong>меньше 4.49</strong>, его принято считать оптимальным</p>
+                                                        <p>Если индекс TyG <strong>больше 4.49</strong>, предполагается инсулинорезистентность</p>
+                                                        <br>
+                                                        <p><strong>Важно:</strong> Интерпретацию результатов индексаTyG и постановку диагноза должен проводить только врач-эндокринолог или терапевт, учитывая все данные о пациенте.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="article__result-logo">
+                                                    <img src="../img/logo-vertical-russia.svg" alt="Логотип">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__block article__block--grey-text">
+                                        <h2>
+                                            Основная цель: Оценка инсулинорезистентности
+                                        </h2>
+                                        <h3>
+                                            1. Что такое инсулинорезистентность (ИР)?
+                                        </h3>
+                                        <p>Это состояние, при котором клетки организма плохо реагируют на гормон инсулин. Инсулин нужен, чтобы "открывать" клетки для глюкозы и давать им энергию. При ИР клетки "не пускают" глюкозу внутрь, и она остается в крови.</p>
+                                        <h3>2. Почему ИР — это опасно?</h3>
+                                        <p>Инсулинорезистентность — это ключевой механизм, лежащий в основе:</p>
+                                        <ul>
+                                            <li>Сахарного диабета 2 типа: Поджелудочная железа сначала вырабатывает все больше инсулина, чтобы преодолеть резистентность, но со временем истощается, и уровень сахара в крови неконтролируемо растет.</li>
+                                            <li>Метаболического синдрома: Комплекс нарушений, включающий ожирение, высокое давление, нарушение липидного профиля.</li>
+                                            <li>Сердечно-сосудистых заболеваний: ИР напрямую связана с атеросклерозом, инфарктами и инсультами.</li>
+                                        </ul>
+                                        <h3>3. Как TyG помогает оценить ИР?</h3>
+                                        <ul>
+                                            <li>Высокие триглицериды — это прямое следствие инсулинорезистентности. Когда клетки не реагируют на инсулин, в печени усиливается производство липопротеинов очень низкой плотности (ЛПОНП), которые богаты триглицеридами.</li>
+                                            <li>Высокая глюкоза натощак — еще один ключевой признак ИР. </li>
+                                        </ul>
+                                        <br>
+                                        <p>
+                                            Объединяя эти два показателя, индекс TyG становится мощным инструментом, который точно отражает, что в организме происходит метаболический сдвиг, характерный для инсулинорезистентности.
+                                        </p>
+                                    </div>
+                                    <div class="article__block article__block--grey-text">
+                                        <h2>Зачем нужен Индекс TyG? Главные преимущества и цели:</h2>
+                                        <ol class="article__grid">
+                                            <li class="article__grid-item">
+                                                <div class="article__grid-caption">Простота и доступность</div>
+                                                <p class="article__grid-desc">Это главное преимущество. Для расчёта не нужны сложные и дорогие тесты (например, гипергликемический клэмп — «золотой стандарт» диагностики ИР, который проводится только в научных целях). Анализы на глюкозу и триглицериды входят в стандартную биохимию крови и делаются в любой лаборатории</p>
+                                            </li>
+                                            <li class="article__grid-item">
+                                                <div class="article__grid-caption">Высокая точность</div>
+                                                <p class="article__grid-desc">Многочисленные исследования показали, что индекс TyG очень хорошо коррелирует с данными прямых методов оценки инсулинорезистентности и является надёжным прогностическим маркёром</p>
+                                            </li>
+                                            <li class="article__grid-item">
+                                                <div class="article__grid-caption">Ранняя диагностика</div>
+                                                <p class="article__grid-desc">TyG может выявить инсулинорезистентность на ранней стадии, ещё до того, как уровень глюкозы в крови достигнет диагностических критериев для преддиабета или диабета. Это позволяет вовремя принять меры</p>
+                                            </li>
+                                            <li class="article__grid-item">
+                                                <div class="article__grid-caption">Оценка кардиометаболического риска</div>
+                                                <div class="article__grid-desc">
+                                                    <p>Высокий индекс TyG ассоциирован</p>
+                                                    <ul>
+                                                        <li>с повышенным риском развития:</li>
+                                                        <li>Сахарного диабета 2 типа</li>
+                                                        <li>Атеросклероза</li>
+                                                        <li>Неалкогольной жировой болезни печени (НАЖБП)</li>
+                                                        <li>Сердечно-сосудистых событий (инфаркт, инсульт)</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="article__grid-item">
+                                                <div class="article__grid-caption">Мониторинг эффективности лечения</div>
+                                                <p class="article__grid-desc">Врач может отслеживать динамику индекса TyG на фоне изменения образа жизни (диета, физическая активность) или приёма лекарств, чтобы оценить, снижается ли инсулинорезистентность</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="article__block article__block--grey-text">
+                                        <h2>Кому особенно полезно знать свой индекс TyG?</h2>
+                                        <ul>
+                                            <li>Людям <strong>с избыточным весом и ожирением</strong>, особенно абдоминальным (жир на животе)</li>
+                                            <li>Тем, у кого в семье есть <strong>случаи сахарного диабета 2 типа</strong></li>
+                                            <li>Людям с <strong>высоким артериальным давлением</strong></li>
+                                            <li>Пациентам с диагностированным <strong>метаболическим синдромом</strong> или <strong>неалкогольной жировой болезнью печени</strong></li>
+                                        </ul>
+                                        <br>
+                                        <p><strong>Индекс TyG нужен как простой информативный инструмент для скрининга и оценки инсулинорезистентности.</strong> Он помогает "увидеть" скрытый метаболический дисбаланс, который годами может не проявляться явными симптомами, но при этом значительно повышает риски серьезных заболеваний.</p>
+                                    </div>
+                                    <div class="article__footer">
+                                        <h2>Инструменты</h2>
+                                        <div class="article__tags">
+                                            <a href="https://eatvio.ru/articles/kalkulyator-indeksa-massy-tela.html" target="_blank" class="article__tag">Калькулятор днвеной нормы КБЖУ</a>
+                                            <a href="https://eatvio.ru/" target="_blank" class="article__tag">Итвио</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('../html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('../html/_js.html', {})
+    </body>
+</html>

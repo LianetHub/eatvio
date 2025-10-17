@@ -2560,6 +2560,35 @@ body.dark-theme {
   display: none;
 }
 
+.yandex-btn {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 0.5625rem 4.4375rem;
+  border-radius: 0.4375rem;
+  background-color: #2f80ed;
+  background-image: url("../img/yandex.svg");
+  background-repeat: no-repeat;
+  background-size: 1.625rem;
+  background-position: 0.75rem center;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.yandex-btn__thumb {
+  width: 1.625rem;
+  height: 1.625rem;
+  right: 0.75rem;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .wysiwyg__caption {
   margin-bottom: 0.5rem;
 }
@@ -6294,6 +6323,38 @@ body.dark-theme {
   background: #fff;
 }
 
+.content__fields {
+  margin-top: 2rem;
+}
+
+.content__field:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+
+.content__field-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.content__field-subtitle {
+  font-size: 1.125rem;
+}
+
+.content__field-link {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2f80ed;
+}
+
 .steps {
   padding: 2.5em 0em;
 }
@@ -9735,6 +9796,7 @@ body.dark-theme {
     line-height: 1.25;
     font-size: 1.125rem;
     padding: 0 0.8888888889em;
+    white-space: initial;
   }
 
   .content__nav-link.active {
@@ -9868,6 +9930,10 @@ body.dark-theme {
 
   .content__settings-filtres {
     padding: 1.25em 1.5em 1.25em 4em;
+  }
+
+  .content__field:not(:last-child) {
+    margin-bottom: 5rem;
   }
 
   .steps__item {
@@ -10899,6 +10965,10 @@ body.dark-theme {
     color: #fff;
   }
 
+  .yandex-btn:hover {
+    background-color: #1366d6;
+  }
+
   .header-list__link:hover {
     background: #f2f2f2;
   }
@@ -11157,6 +11227,10 @@ body.dark-theme {
 
   .content__settings-archive:hover {
     color: #0d6efd;
+  }
+
+  .content__field-link:hover {
+    color: #1366d6;
   }
 
   .recipe__link:hover {

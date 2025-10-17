@@ -314,6 +314,7 @@ body {
 			line-height: math.div(25, 20);
 			font-size: rem(18);
 			padding: 0 em(16, 18);
+			white-space: initial;
 		}
 		transition: background-color 0.3s ease 0s;
 		&::before {
@@ -1867,6 +1868,44 @@ body {
 		}
 		.pagination__item {
 			background: #fff;
+		}
+	}
+	// .content__fields
+	&__fields {
+		margin-top: rem(32);
+	}
+	// .content__field
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: rem(60);
+			@media (min-width: $md4) {
+				margin-bottom: rem(80);
+			}
+		}
+	}
+	// .content__field-header
+	&__field-header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(12);
+	}
+	// .content__field-title
+	&__field-title {
+	}
+	// .content__field-subtitle
+	&__field-subtitle {
+		font-size: rem(18);
+	}
+	// .content__field-link
+	&__field-link {
+		font-weight: 600;
+		font-size: rem(20);
+		color: #2f80ed;
+		@media (any-hover: hover) {
+			&:hover {
+				color: darken($color: #2f80ed, $amount: 10);
+			}
 		}
 	}
 }

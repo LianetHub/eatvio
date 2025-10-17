@@ -542,4 +542,38 @@
 			font-size: 1rem;
 		}
 	}
+	// .consultant__btn
+	&__btn {
+		margin-top: rem(20);
+		&.l-btn {
+			color: #323f4b;
+			border-width: 1px;
+			&.l-btn-md {
+				padding-inline: rem(57);
+				padding-block: rem(8);
+			}
+		}
+	}
+	// .consultant__actions
+	&__actions {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		gap: rem(8);
+	}
+	// .consultant__action
+	&__action {
+		&:first-child:last-child {
+			grid-column: span 2;
+		}
+		&.l-btn {
+			color: #323f4b;
+			width: 100%;
+			border-width: 1px;
+			&.l-btn-md {
+				padding-inline: rem(15);
+				padding-block: rem(8);
+			}
+		}
+	}
 }

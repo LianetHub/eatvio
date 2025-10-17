@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Калькулятор нормы калорий и БЖУ</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Нутрициолог — это ваш проводник в мире правильного питания. Он помогает не просто скорректировать рацион, но и понять, как еда влияет на ваше здоровье, энергию и настроение" />
+    <meta name="keywords" content="нутрициолог, работа с нутрициологом" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <div class="wrapper"> <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="../img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="../img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__nav swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Итвио дневник питания</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор ИМТ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор КБЖУ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор TyG</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Индекс округлости тела (BRI)</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link active">Индекс висцерального ожирения (VAI)</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <article class="article">
+                                <div class="article__block">
+                                    <h1>Индекс висцерального ожирения (VAI)</h1>
+                                    <p>
+                                        <strong>Индекс висцерального ожирения</strong> (англ. Visceral Adiposity Index, сокр. VAI) — математический показатель, используемый в клинической практике и медицинских исследованиях для косвенной оценки распределения жировой ткани и функциональной активности висцерального жира. В отличие от антропометрических измерений, таких как индекс массы тела (ИМТ) или окружность талии, VAI является комплексным интегральным показателем, учитывающим как морфологические, так и метаболические параметры.
+                                    </p>
+                                    <form action="#" class="article__form">
+                                        <div class="article__form-row article__form-row--extralarge">
+                                            <div class="article__form-field">
+                                                <input type="number" name="waist_circumference" class="input" placeholder="Окружность талии">
+                                                <div class="article__form-unit"> см </div>
+                                            </div>
+                                            <div class="article__form-field">
+                                                <input type="number" name="height" class="input" placeholder="Рост">
+                                                <div class="article__form-unit"> см </div>
+                                            </div>
+                                            <div class="article__form-field">
+                                                <input type="number" name="weight" class="input" placeholder="Вес">
+                                                <div class="article__form-unit"> кг </div>
+                                            </div>
+                                            <div class="article__form-field large-item">
+                                                <input type="number" name="triglycerides" class="input" placeholder="Уровень триглицеридов">
+                                                <div class="article__form-unit"> в ммоль/л </div>
+                                            </div>
+                                            <div class="article__form-field large-item">
+                                                <input type="number" name="сholesterol" class="input" placeholder="Холестерин ЛПВП («хороший»)">
+                                                <div class="article__form-unit"> в ммоль/л </div>
+                                            </div>
+                                            <button type="submit" class="l-btn l-btn-primary">Рассчитать</button>
+                                        </div>
+                                    </form>
+                                    <div class="article__result">
+                                        <div class="article__result-content">
+                                            <div class="article__result-main">
+                                                <h2>Результат</h2>
+                                                <div class="article__result-body">
+                                                    <div class="article__result-value">—</div>
+                                                </div>
+                                            </div>
+                                            <div class="article__result-side">
+                                                <div class="article__result-logo">
+                                                    <img src="../img/logo-vertical-russia.svg" alt="Логотип">
+                                                </div>
+                                                <a href="https://pro.eatvio.ru/" target="_blank" class="l-btn l-btn-primary-outline">Итвио для специалистов</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h2> Метод расчёта </h2>
+                                    <p> Расчёт VAI проводится по формулам, которые различаются для лиц мужского и женского пола. Формулы включают в себя антропометрические и биохимические параметры. </p>
+                                    <h3> Формула для мужчин: </h3>
+                                    <div class="formula"> VAI = (ОТ / 39.68 + [1.88 × ИМТ]) × (ТГ / 1.03) × (1.31 / ЛПВП) </div>
+                                    <h3> Формула для женщин: </h3>
+                                    <div class="formula"> VAI = (ОТ / 36.58 + [1.89 × ИМТ]) × (ТГ / 0.81) × (1.52 / ЛПВП) </div>
+                                    <h3>Где</h3>
+                                    <ul>
+                                        <li><strong>ОТ</strong> — окружность талии (в сантиметрах);</li>
+                                        <li><strong>ИМТ</strong> — индекс массы тела (в кг/м²);</li>
+                                        <li><strong>ТГ</strong> — концентрация триглицеридов в плазме крови (в ммоль/л);</li>
+                                        <li><strong>ЛПВП</strong> — концентрация липопротеинов высокой плотности в плазме крови (в ммоль/л).</li>
+                                    </ul>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Клиническая интерпретация</h2>
+                                    <p> Повышенные значения VAI ассоциированы с повышенным риском развития ряда заболеваний: </p>
+                                    <ul>
+                                        <li>Сахарный диабет 2-го типа;</li>
+                                        <li>Сердечно-сосудистые заболевания (включая атеросклероз, ишемическую болезнь сердца, инфаркт миокарда);</li>
+                                        <li>Метаболический синдром;</li>
+                                        <li>Неалкогольная жировая болезнь печени.</li>
+                                    </ul><br>
+                                    <p> Интерпретация результатов проводится врачом с учётом пола, возраста пациента и других клинических данных. Референсные значения могут варьироваться в зависимости от популяции и метода исследования. </p>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Критика и ограничения</h2>
+                                    <p>VAI имеет ограничения. Точность показателя зависит от корректности исходных измерений (окружности талии) и лабораторных анализов. Как и любой расчётный индекс, он может быть менее точен у отдельных групп пациентов (например, у профессиональных спортсменов с высокой мышечной массой или у лиц пожилого возраста). Валидация индекса в различных этнических группах также требует дальнейшего изучения.</p>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Историческая справка и значение</h2>
+                                    <p>Индекс был предложен итальянскими исследователями (Amato M.C. et al.) в 2010 году в качестве более точного маркера кардиометаболического риска, связанного именно с висцеральным, а не подкожным ожирением. Висцеральная жировая ткань обладает высокой эндокринной и метаболической активностью, выделяя свободные жирные кислоты и адипокины, что способствует развитию инсулинорезистентности, системного воспаления и дислипидемии. Таким образом, VAI рассматривается как индикатор не только количества, но и «качества» жировой ткани.</p>
+                                    <p>
+                                        <strong>Примечание:</strong> Информация представлена в ознакомительных целях и не является руководством для самодиагностики и самолечения. Диагностику и лечение заболеваний должен проводить квалифицированный медицинский работник.
+                                    </p>
+                                </div>
+                                <div class="article__footer">
+                                    <h2>Инструменты</h2>
+                                    <div class="article__tags">
+                                        <a href="https://eatvio.ru/articles/kalkulyator-indeksa-massy-tela.html" target="_blank" class="article__tag">Калькулятор днвеной нормы КБЖУ</a>
+                                        <a href="https://eatvio.ru/" target="_blank" class="article__tag">Итвио</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

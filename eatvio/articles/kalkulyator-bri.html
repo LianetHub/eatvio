@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Калькулятор нормы калорий и БЖУ</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Нутрициолог — это ваш проводник в мире правильного питания. Он помогает не просто скорректировать рацион, но и понять, как еда влияет на ваше здоровье, энергию и настроение" />
+    <meta name="keywords" content="нутрициолог, работа с нутрициологом" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <div class="wrapper"> <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="../img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="../img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__nav swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Итвио дневник питания</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор ИМТ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор КБЖУ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор TyG</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link active">Индекс округлости тела (BRI)</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Индекс висцерального ожирения (VAI)</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <article class="article">
+                                <div class="article__block">
+                                    <h1>Индекс округлости тела (BRI)</h1>
+                                    <p>
+                                        <strong>Индекс округлости тела</strong> (англ. Body Roundness Index, сокр. BRI) — антропометрический показатель, разработанный для оценки состава тела человека и распределения жировой массы. В отличие от классического Индекса массы тела (ИМТ), который учитывает только рост и вес, BRI вводит в расчёт окружность талии, что позволяет точнее оценить риски для здоровья, связанные с абдоминальным (висцеральным) ожирением.
+                                    </p>
+                                    <form action="#" class="article__form">
+                                        <div class="article__form-row article__form-row--large">
+                                            <input type="number" name="waist_circumference" class="input" placeholder="Окружность талии">
+                                            <div class="article__form-field">
+                                                <input type="number" name="height" class="input" placeholder="Рост">
+                                                <div class="article__form-unit"> см </div>
+                                            </div>
+                                            <div class="select">
+                                                <select name="sex">
+                                                    <option selected value="">Пол</option>
+                                                    <option value="male">Мужской</option>
+                                                    <option value="female">Женский</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="l-btn l-btn-primary">Рассчитать</button>
+                                        </div>
+                                    </form>
+                                    <div class="article__result">
+                                        <div class="article__result-content">
+                                            <div class="article__result-main">
+                                                <h2>Результат</h2>
+                                                <div class="article__result-body">
+                                                    <div class="article__result-value">—</div>
+                                                </div>
+                                            </div>
+                                            <div class="article__result-side">
+                                                <div class="article__result-logo">
+                                                    <img src="../img/logo-vertical-russia.svg" alt="Логотип">
+                                                </div>
+                                                <a href="https://pro.eatvio.ru/" target="_blank" class="l-btn l-btn-primary-outline">Итвио для специалистов</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h2> Метод расчёта </h2>
+                                    <p> Формула для расчёта BRI является более сложной по сравнению с ИМТ и требует использования специального калькулятора или математических функций. </p>
+                                    <h3> Формула </h3>
+                                    <div class="formula"> BRI = 364.2 - 365.5 × √(1 - (Окружность талии (cм) / (2π))² / (0.5 × Рост (cм))²)` </div>
+                                    <h3>Где</h3>
+                                    <ul>
+                                        <li><strong>Окружность талии</strong> измеряется в метрах (см);</li>
+                                        <li>
+                                            <strong>Рост</strong> измеряется в метрах (см);
+                                        </li>
+                                        <li>
+                                            <strong>π</strong> — математическая константа "пи" (~3.1416);
+                                        </li>
+                                        <li>
+                                            <strong>√</strong> — символ квадратного корня.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Клиническая интерпретация</h2>
+                                    <p> BRI оценивает форму тела по шкале, где более высокие значения соответствуют более округлой (яблоковидной) форме, связанной с абдоминальным ожирением. Низкие значения указывают на менее округлую форму. </p>
+                                    <p>
+                                        <strong> Условные категории (могут незначительно варьироваться): </strong>
+                                    </p>
+                                    <ul>
+                                        <li><strong>Недостаточная округлость:</strong> BRI < 2</li>
+                                        <li><strong>Нормальная округлость:</strong> BRI от 2 до 5</li>
+                                        <li><strong>Повышенная округлость:</strong> BRI от 5 до 9</li>
+                                        <li><strong>Высокая округлость:</strong> BRI от 9 до 12</li>
+                                        <li><strong>Очень высокая округлость:</strong> BRI> 12</li>
+                                    </ul>
+                                    <br>
+                                    <p>Повышенные значения BRI ассоциированы с повышенным риском развития:</p>
+                                    <ul>
+                                        <li>Сердечно-сосудистых заболеваний;</li>
+                                        <li>Сахарного диабета 2-го типа;</li>
+                                        <li>Метаболического синдрома;</li>
+                                        <li>Общей смертности от всех причин.</li>
+                                    </ul>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Преимущества и ограничения</h2>
+                                    <ul class="article__grid">
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Преимущества</div>
+                                            <div class="article__grid-desc">
+                                                <ul>
+                                                    <li><strong>Точность:</strong> Учитывает распределение жира, что делает его более точным предиктором кардиометаболических рисков по сравнению с ИМТ.</li>
+                                                    <li><strong>Наглядность:</strong> Прямо коррелирует с визуальной формой тела.</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Ограничения</div>
+                                            <div class="article__grid-desc">
+                                                <ul>
+                                                    <li>
+                                                        <strong>Сложность расчёта:</strong> Формула неудобна для быстрого ментального расчёта.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Неразличение тканей:</strong> Как и ИМТ, не различает массу жира и мышечную массу, что может давать неточные результаты у спортсменов.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Популяционные особенности:</strong> Референсные значения могут варьироваться для разных этнических групп.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>Сравнение с другими антропометрическими индексами</h2>
+                                    <p>BRI был разработан как альтернатива или дополнение к следующим показателям:</p>
+                                    <ul>
+                                        <li>
+                                            <strong>Индекс массы тела (ИМТ):</strong> Учитывает только вес и рост.
+                                        </li>
+                                        <li>
+                                            <strong>Отношение объёма талии к росту (WHtR):</strong> Простой показатель, но без учёта объёмной геометрии тела.
+                                        </li>
+                                        <li>
+                                            <strong>Окружность талии (ОТ):</strong> Прямое измерение, но без учёта роста.
+                                        </li>
+                                    </ul>
+                                    <p> Исследования показывают, что BRI часто превосходит ИМТ в прогнозировании рисков для здоровья, связанных с ожирением </p>
+                                </div>
+                                <div class="article__block article__block--grey-text">
+                                    <h2>История и обоснование</h2>
+                                    <p>Индекс был предложен американскими исследователями (Томас и др.) в 2013 году. Его создание было мотивировано необходимостью найти более точный, чем ИМТ, инструмент для оценки рисков смертности, связанных с ожирением. Математическая модель BRI основана на геометрической концепции, которая рассматривает тело человека не как двумерный объект (как в ИМТ), а как тримерный цилиндр. Это позволяет лучше учесть распределение жира в области талии — ключевой маркёр висцерального ожирения.</p>
+                                    <p>
+                                        <strong>Примечание:</strong> Информация представлена в ознакомительных целях. Для оценки состояния здоровья, диагностики и лечения необходимо обратиться к квалифицированному медицинскому специалисту.
+                                    </p>
+                                </div>
+                                <div class="article__footer">
+                                    <h2>Инструменты</h2>
+                                    <div class="article__tags">
+                                        <a href="https://eatvio.ru/articles/kalkulyator-indeksa-massy-tela.html" target="_blank" class="article__tag">Калькулятор днвеной нормы КБЖУ</a>
+                                        <a href="https://eatvio.ru/" target="_blank" class="article__tag">Итвио</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

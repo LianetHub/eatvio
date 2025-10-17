@@ -12,14 +12,17 @@
 	// .plans__items
 	&__items {
 		margin: 1rem em(0) em(0) em(0);
+		.plans__item {
+			&:not(:last-child) {
+				margin-bottom: rem(24);
+			}
+		}
 	}
 	// .plans__item
 	&__item {
 		background: #fff;
 		padding: em(16);
-		&:not(:last-child) {
-			margin-bottom: rem(24);
-		}
+
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 		border-radius: 8px;
 		@media (min-width: $md5) {
@@ -326,6 +329,24 @@
 	&__item-btn {
 		font-size: 12px;
 	}
+	// .plans__item-order
+	&__item-order {
+		margin-top: rem(10);
+		width: 100%;
+		&.l-btn {
+			color: #323f4b;
+			border-width: 1px;
+			&.l-btn-md {
+				padding-block: rem(8);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+
 	// .plans__item-body
 	&__item-body {
 		flex: 1 1 auto;
