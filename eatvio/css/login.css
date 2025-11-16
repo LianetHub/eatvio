@@ -2,6 +2,7 @@
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
   min-height: 100vh;
+  max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,6 +28,9 @@
 
 .login__logo {
   max-width: 14.625rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .login__logo img {
@@ -96,6 +100,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
 }
 
 .login__form .l-btn {
@@ -183,6 +188,11 @@
   .login__column {
     max-width: 29.375rem;
     display: block;
+  }
+
+  .login__logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 
   .login__btns {

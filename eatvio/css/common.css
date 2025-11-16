@@ -511,7 +511,7 @@ body.dark-theme {
   position: relative;
   width: 100%;
   min-height: 100%;
-  overflow-x: сlip;
+  overflow-x: clip;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7553,7 +7553,7 @@ body.dark-theme {
   margin: 0em 0.5rem 0em 0em;
 }
 
-.settings__content:not(:last-child) {
+.settings__content:not(:first-child) {
   margin-top: 1.125rem;
 }
 
@@ -10913,6 +10913,10 @@ body.dark-theme {
 }
 
 @media (max-width: 575.98px) {
+  .l-btn.l-btn-fullwidth {
+    padding-inline: 0.5rem;
+  }
+
   .content__side-content {
     margin-top: 1rem;
     padding-top: 0.5rem;

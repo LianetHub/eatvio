@@ -34,7 +34,7 @@ body {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
-	overflow-x: сlip;
+	overflow-x: clip;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
@@ -71,6 +71,7 @@ body {
 .page {
 	flex: 1 1 auto;
 	padding-bottom: rem(20);
+
 	@media (min-width: $md4) {
 		padding-bottom: 0;
 	}
@@ -2964,15 +2965,15 @@ body {
 	}
 	// .settings__content
 	&__content {
-		&:not(:last-child) {
+		&:not(:first-child) {
 			margin-top: rem(18);
 		}
 		@media (min-width: $md4) {
-			columns: 2;
-			column-gap: 0;
 			&:not(:first-child) {
 				margin-top: rem(30);
 			}
+			columns: 2;
+			column-gap: 0;
 			margin-left: rem(-10);
 			margin-right: rem(-10);
 		}

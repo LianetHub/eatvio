@@ -762,6 +762,9 @@
 	}
 	&.l-btn-fullwidth {
 		width: 100%;
+		@media (max-width: $md5) {
+			padding-inline: 0.5rem;
+		}
 	}
 	&.l-btn-icon {
 		aspect-ratio: 1;
