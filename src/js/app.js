@@ -208,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 contents[clickedIndex].classList.add('active');
             }
         }
-
     })
 
     if (document.querySelector('.content__recipes-select')) {

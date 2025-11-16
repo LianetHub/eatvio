@@ -4390,7 +4390,7 @@ body.dark-theme {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 1px solid #7b8794;
+  border-top: 1px solid rgba(123, 135, 148, 0.5);
   padding: 0.75em 1em 0.625em;
 }
 
@@ -4423,12 +4423,11 @@ body.dark-theme {
      -moz-column-gap: 10px;
           column-gap: 10px;
   padding: 0;
+  width: 100%;
+  position: relative;
 }
 
 .header__logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 43px;
-          flex: 0 0 43px;
   margin: 0em 0.9375em 0em 0em;
 }
 
@@ -4599,9 +4598,18 @@ body.dark-theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.25rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  gap: 0.9375rem;
+  margin-left: auto;
+}
+
+.header__action {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.header__action--input {
+  background: #f6f6f6;
 }
 
 .header__btn {
@@ -4612,6 +4620,147 @@ body.dark-theme {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.header__login {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__login.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__login-form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  background: #fff;
+  -webkit-box-shadow: 0 247px 69px 0 rgba(0, 0, 0, 0), 0 158px 63px 0 rgba(0, 0, 0, 0.01), 0 89px 53px 0 rgba(0, 0, 0, 0.05), 0 40px 40px 0 rgba(0, 0, 0, 0.09), 0 10px 22px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 247px 69px 0 rgba(0, 0, 0, 0), 0 158px 63px 0 rgba(0, 0, 0, 0.01), 0 89px 53px 0 rgba(0, 0, 0, 0.05), 0 40px 40px 0 rgba(0, 0, 0, 0.09), 0 10px 22px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.header__login-logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 148px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__login-logo img {
+  width: 100%;
+}
+
+.header__login-caption {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header__login-btns {
+  margin-top: 1.25rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.header__login-btn {
+  border-radius: 0.75rem;
+  border: 1px solid #dbdbdb;
+  background: rgba(217, 217, 217, 0.01);
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.header__login-fields {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.header__login-submit {
+  min-height: 3rem;
+  font-weight: 400;
+  font-size: 1.1875rem;
+}
+
+.header__login-forgot {
+  margin-top: 0.75rem;
+  color: #2f80ed;
+  font-size: 1rem;
+  text-decoration-line: underline;
+}
+
+.header__login-sign {
+  margin-top: 0.75rem;
+}
+
+.header__login-sign a {
+  color: #2f80ed;
+  font-size: 1rem;
+  text-decoration-line: underline;
+}
+
+.header__login-download {
+  margin-top: 1.25rem;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.header__login-hint {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+}
+
+.header__login-hint a {
+  color: #2f80ed;
+  text-decoration: underline;
+}
+
+.header__login-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .header-list {
@@ -12021,12 +12170,6 @@ body.dark-theme {
             column-gap: 20px;
   }
 
-  .header__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 105px;
-            flex: 0 0 105px;
-  }
-
   .header__logo-desktop {
     display: block;
   }
@@ -12057,6 +12200,17 @@ body.dark-theme {
 
   .header__btn span {
     display: none;
+  }
+
+  .header__login {
+    max-width: 392px;
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 1rem;
+  }
+
+  .header__login-form {
+    border-radius: 12px;
   }
 
   .header-list {
@@ -13239,16 +13393,32 @@ body.dark-theme {
     display: none !important;
   }
 
-  .header__actions {
-    border-bottom: 1px solid #7b8794;
+  .header__action {
+    padding: 0.625rem 1.75rem;
+  }
+
+  .header__action--input {
+    display: none;
+  }
+
+  .header__login {
+    border-radius: 12px;
     position: fixed;
-    top: 0;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    padding: 1rem 1.25rem;
-    background: #fff;
+    right: 0;
+    top: 0;
+    background: rgba(19, 19, 38, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .content__side {
@@ -13718,6 +13888,35 @@ body.dark-theme {
   .header__user:hover .header-list {
     opacity: 1;
     visibility: visible;
+  }
+
+  .header__action--input:hover {
+    background-color: #dddddd;
+  }
+
+  .header__login-btn:hover {
+    background-color: #d9d9d9;
+  }
+
+  .header__login-forgot:hover {
+    text-decoration: none;
+  }
+
+  .header__login-sign a:hover {
+    text-decoration: none;
+  }
+
+  .header__login-download:hover {
+    text-decoration: underline;
+    color: #2f80ed;
+  }
+
+  .header__login-hint a:hover {
+    text-decoration: none;
+  }
+
+  .header__login-close:hover {
+    opacity: 1;
   }
 
   .header-list__link:hover {
