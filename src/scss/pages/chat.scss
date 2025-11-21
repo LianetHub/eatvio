@@ -22,12 +22,12 @@
 	}
 	// .chat__container
 	&__container {
-		padding: 0;
 		display: flex;
 		@media (max-width: $md4) {
 			max-width: 100%;
 			overflow-x: hidden;
 			gap: 2rem;
+			box-sizing: border-box;
 		}
 		@media (min-width: $md4) {
 			padding: 0 em(16);

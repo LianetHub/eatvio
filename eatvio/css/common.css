@@ -5006,6 +5006,9 @@ body.dark-theme {
   border-radius: 8px;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 1rem;
 }
 
 .content__section:not(:last-child) {
@@ -7199,7 +7202,6 @@ body.dark-theme {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: -2rem;
 }
 
 .plan__footer-icon {
@@ -9350,6 +9352,11 @@ body.dark-theme {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .content__section {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
   .content__settings-spoller {
     display: none;
   }
@@ -9644,10 +9651,6 @@ body.dark-theme {
 
   .plan__name {
     font-size: 1.25rem;
-  }
-
-  .plan__footer {
-    margin-bottom: 0;
   }
 
   .plan__bottom {

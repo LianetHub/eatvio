@@ -423,7 +423,7 @@
 	&__main-info {
 		margin: rem(12) em(0) em(0) em(0);
 		font-size: rem(14);
-		flex: 0 0 100%;
+		// flex: 0 0 100%;
 		max-width: 48rem;
 		@media (min-width: $md4) {
 			flex: 0 1 auto;
