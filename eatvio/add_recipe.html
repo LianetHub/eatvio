@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,14 +15,14 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -313,6 +314,7 @@
                                     <a href="" class="notification__text">Подтвердите сделку</a>
                                     <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -320,6 +322,7 @@
                                     <a href="" class="notification__text">Поздравляем, «Название плана» завершен</a>
                                     <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
                                     <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -327,13 +330,19 @@
                                     <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
                                     <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <a href="" class="notification__item new">
-                                <span class="notification__thumb">
-                                    <img src="img/user.png" class="cover-image" alt="avatar">
+                                <span class="notification__item-body">
+                                    <span class="notification__row">
+                                        <span class="notification__thumb">
+                                            <img src="img/user.png" class="cover-image" alt="avatar">
+                                        </span>
+                                        <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    </span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
-                                <span class="notification__text">На вас подписались Иван Иванов</span>
                             </a>
                             <a href="" class="notification__item fail">
                                 <span class="notification__item-body">
@@ -341,18 +350,21 @@
                                         Консультанта отказался от заказа
                                     </span>
                                     <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
                             </a>
                             <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
                             <a href="" class="notification__item succes">
-                                <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
-                            <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
-                            </a>
-
                         </div>
                         <button type="button" class="notification__more">Показать все</button>
                     </div>
@@ -425,73 +437,81 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои рецепты</span></a>
-                        <h1 class="settings__person-title title"> Добавление рецепта </h1>
-                    </div>
-                    <div class="settings__recipe">
-                        <div class="settings__recipe-row">
-                            <div class="settings__recipe-block">
-                                <div class="label">Название</div>
-                                <input type="text" name="name" class="input input-white" placeholder="Например: Тар-тар из говядины">
-                            </div>
-                            <div class="settings__recipe-block sm-row">
-                                <div class="label">Тип блюда</div>
-                                <div class="select">
-                                    <select name="type">
-                                        <option value="1">Первые блюда</option>
-                                        <option value="2">Вторые блюда</option>
-                                        <option value="3">Третьи блюда</option>
-                                    </select>
-                                </div>
-                            </div>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои рецепты</span></a>
+                            <h1 class="settings__person-title title">
+                                Добавление рецепта
+                            </h1>
                         </div>
-                        <div class="settings__recipe-row">
-                            <div class="settings__recipe-block">
-                                <div class="label"> Общее время приготовления <span class="info-block" data-tooltip="Общее время приготовления - это длительность готовки блюда с момента начала и до подачи на стол.">?</span>
+                        <div class="settings__recipe">
+                            <div class="settings__recipe-row">
+                                <div class="settings__recipe-block">
+                                    <div class="label">Название</div>
+                                    <input type="text" name="name" class="input input-white" placeholder="Например: Тар-тар из говядины">
                                 </div>
-                                <div class="settings__recipe-inputs">
-                                    <input type="text" name="hours" class="input input-white" placeholder="Часов">
-                                    <input type="text" name="minutes" class="input input-white" placeholder="Минут">
-                                </div>
-                            </div>
-                            <div class="settings__recipe-block">
-                                <div class="label"> Активное время приготовления <span class="info-block" data-tooltip="Активное время приготовления — это отрезок времени, когда вы непосредственно занимаетесь готовкой: моете и чистите продукты, режете, шинкуете, взбиваете, смешиваете, готовите и т. д.">?</span>
-                                </div>
-                                <div class="settings__recipe-inputs">
-                                    <input type="text" name="hours" class="input input-white" placeholder="Часов">
-                                    <input type="text" name="minutes" class="input input-white" placeholder="Минут">
-                                </div>
-                            </div>
-                            <div class="settings__recipe-block sm-row">
-                                <div class="settings__recipe-inputs">
-                                    <div class="settings__recipe-block">
-                                        <div class="label">Кол-во порций</div>
-                                        <input type="number" name="quantity" class="input input-white" placeholder="1">
-                                    </div>
-                                    <div class="settings__recipe-block">
-                                        <div class="label">Каллории в одной порции</div>
-                                        <input type="number" name="quantity" class="input input-white" placeholder="100">
+                                <div class="settings__recipe-block sm-row">
+                                    <div class="label">Тип блюда</div>
+                                    <div class="select">
+                                        <select name="type">
+                                            <option value="1">Первые блюда</option>
+                                            <option value="2">Вторые блюда</option>
+                                            <option value="3">Третьи блюда</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="settings__recipe-row">
-                            <div class="settings__recipe-column">
+                            <div class="settings__recipe-row">
                                 <div class="settings__recipe-block">
-                                    <div class="label">Описание</div>
-                                    <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Расскажите, почему вы выбрали именно этот рецепт? Опишите, каким будет готовое блюдо и в чём его достоинства."></textarea>
+                                    <div class="label">
+                                        Общее время приготовления
+                                        <span class="info-block" data-tooltip="Общее время приготовления - это длительность готовки блюда с момента начала и до подачи на стол.">?</span>
+                                    </div>
+                                    <div class="settings__recipe-inputs">
+                                        <input type="text" name="hours" class="input input-white" placeholder="Часов">
+                                        <input type="text" name="minutes" class="input input-white" placeholder="Минут">
+                                    </div>
                                 </div>
                                 <div class="settings__recipe-block">
-                                    <div class="label">Ссылка на виде (YouTube) *если есть</div>
-                                    <input type="text" name="link" class="input input-white" placeholder="Прикрепите ссылку на видео YouTube">
+                                    <div class="label">
+                                        Активное время приготовления
+                                        <span class="info-block" data-tooltip="Активное время приготовления — это отрезок времени, когда вы непосредственно занимаетесь готовкой: моете и чистите продукты, режете, шинкуете, взбиваете, смешиваете, готовите и т. д.">?</span>
+                                    </div>
+                                    <div class="settings__recipe-inputs">
+                                        <input type="text" name="hours" class="input input-white" placeholder="Часов">
+                                        <input type="text" name="minutes" class="input input-white" placeholder="Минут">
+                                    </div>
+                                </div>
+                                <div class="settings__recipe-block sm-row">
+                                    <div class="settings__recipe-inputs">
+                                        <div class="settings__recipe-block">
+                                            <div class="label">Кол-во порций</div>
+                                            <input type="number" name="quantity" class="input input-white" placeholder="1">
+                                        </div>
+                                        <div class="settings__recipe-block">
+                                            <div class="label">Каллории в одной порции</div>
+                                            <input type="number" name="quantity" class="input input-white" placeholder="100">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="settings__recipe-file">
-                                <div class="label">Фото готового блюда</div> <label class="file settings__recipe-file-block">
+                            <div class="settings__recipe-row">
+                                <div class="settings__recipe-column">
+                                    <div class="settings__recipe-block">
+                                        <div class="label">Описание</div>
+                                        <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Расскажите, почему вы выбрали именно этот рецепт? Опишите, каким будет готовое блюдо и в чём его достоинства."></textarea>
+                                    </div>
+                                    <div class="settings__recipe-block">
+                                        <div class="label">Ссылка на виде (YouTube) *если есть</div>
+                                        <input type="text" name="link" class="input input-white" placeholder="Прикрепите ссылку на видео YouTube">
+                                    </div>
+                                </div>
+                                <div class="settings__recipe-file">
+                                    <div class="label">Фото готового блюда</div>
+                                    <label class="file settings__recipe-file-block">
     <input type="file" name="file" class="file__input hidden" hidden>
     <span class="file__content">
         <span class="file__formats">
@@ -502,87 +522,104 @@
         </span>
     </span>
 </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="settings__recipe">
-                        <div class="settings__recipe-caption title"> Добавьте ингредиенты </div>
-                        <div class="settings__recipe-more">
-                            <div class="settings__recipe-block">
-                                <div class="label">Укажите ингредиент</div>
-                                <input type="text" name="name" class="input input-white" placeholder="Говядина">
+                        <div class="settings__recipe">
+                            <div class="settings__recipe-caption title">
+                                Добавьте ингредиенты
                             </div>
-                            <div class="settings__recipe-row">
-                                <div class="settings__recipe-block md-row">
-                                    <div class="label">Количество</div>
-                                    <input type="text" name="quantity" class="input input-white" placeholder="100">
+                            <div class="settings__recipe-more">
+                                <div class="settings__recipe-block">
+                                    <div class="label">Укажите ингредиент</div>
+                                    <input type="text" name="name" class="input input-white" placeholder="Говядина">
                                 </div>
-                                <div class="settings__recipe-block md-row">
-                                    <div class="label">Единица измерения</div>
-                                    <div class="select">
-                                        <select name="unit">
-                                            <option value="1">гр.</option>
-                                            <option value="2">шт.</option>
-                                            <option value="3">мл.</option>
-                                        </select>
+                                <div class="settings__recipe-row">
+                                    <div class="settings__recipe-block md-row">
+                                        <div class="label">Количество</div>
+                                        <input type="text" name="quantity" class="input input-white" placeholder="100">
+                                    </div>
+                                    <div class="settings__recipe-block md-row">
+                                        <div class="label">Единица измерения</div>
+                                        <div class="select">
+                                            <select name="unit">
+                                                <option value="1">гр.</option>
+                                                <option value="2">шт.</option>
+                                                <option value="3">мл.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="settings__recipe-btn l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                            </div>
+                        </div>
+                        <div class="settings__recipe">
+                            <div class="settings__recipe-caption title">
+                                Пошаговая инструкция
+                            </div>
+                            <div class="settings__recipe-steps">
+                                <div class="settings__step">
+                                    <div class="settings__step-title">
+                                        Шаг 1
+                                    </div>
+                                    <div class="settings__step-body">
+                                        <label class="file settings__step-file file-sm">
+    <input type="file" name="file" class="file__input hidden" hidden>
+    <span class="file__content">
+        <span class="file__formats">
+            <img src="img/logo-gray.svg" alt="logo">
+        </span>
+        <span class="file__title">
+            Добавьте фото
+        </span>
+    </span>
+</label>
+                                        <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Например: Подготовьте ингредиенты. Почистите и нарежьте овощи"></textarea>
+                                    </div>
+                                </div>
+                                <div class="settings__step">
+                                    <div class="settings__step-header">
+                                        <div class="settings__step-title">
+                                            Шаг 2
+                                        </div>
+                                        <button type="button" class="settings__step-remove icon-close"></button>
+                                    </div>
+                                    <div class="settings__step-body">
+                                        <label class="file settings__step-file file-sm">
+    <input type="file" name="file" class="file__input hidden" hidden>
+    <span class="file__content">
+        <span class="file__formats">
+            <img src="img/logo-gray.svg" alt="logo">
+        </span>
+        <span class="file__title">
+            Добавьте фото
+        </span>
+    </span>
+</label>
+                                        <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Например: Подготовьте ингредиенты. Почистите и нарежьте овощи"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="settings__recipe-btn l-btn l-btn-primary l-btn-fullwidth">Добавить</button>
+                            <button type="button" class="settings__steps-btn l-btn l-btn-primary">Добавить шаг</button>
+                        </div>
+                        <div class="settings__footer">
+                            <a href="#add-recipe" data-modal class="settings__btn l-btn l-btn-primary">
+                                Опубликовать рецепт
+                            </a>
                         </div>
                     </div>
-                    <div class="settings__recipe">
-                        <div class="settings__recipe-caption title"> Пошаговая инструкция </div>
-                        <div class="settings__recipe-steps">
-                            <div class="settings__step">
-                                <div class="settings__step-title"> Шаг 1 </div>
-                                <div class="settings__step-body"> <label class="file settings__step-file file-sm">
-    <input type="file" name="file" class="file__input hidden" hidden>
-    <span class="file__content">
-        <span class="file__formats">
-            <img src="img/logo-gray.svg" alt="logo">
-        </span>
-        <span class="file__title">
-            Добавьте фото
-        </span>
-    </span>
-</label> <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Например: Подготовьте ингредиенты. Почистите и нарежьте овощи"></textarea>
-                                </div>
-                            </div>
-                            <div class="settings__step">
-                                <div class="settings__step-header">
-                                    <div class="settings__step-title"> Шаг 2 </div>
-                                    <button type="button" class="settings__step-remove icon-close"></button>
-                                </div>
-                                <div class="settings__step-body"> <label class="file settings__step-file file-sm">
-    <input type="file" name="file" class="file__input hidden" hidden>
-    <span class="file__content">
-        <span class="file__formats">
-            <img src="img/logo-gray.svg" alt="logo">
-        </span>
-        <span class="file__title">
-            Добавьте фото
-        </span>
-    </span>
-</label> <textarea name="desc" class="textarea textarea-white textarea-sm" placeholder="Например: Подготовьте ингредиенты. Почистите и нарежьте овощи"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="settings__steps-btn l-btn l-btn-primary">Добавить шаг</button>
-                    </div>
-                    <div class="settings__footer">
-                        <a href="#add-recipe" data-modal class="settings__btn l-btn l-btn-primary"> Опубликовать рецепт </a>
-                    </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -633,9 +670,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

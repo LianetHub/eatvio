@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
     <!-- Current Page Styles -->
@@ -26,9 +27,9 @@
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -320,6 +321,7 @@
                                     <a href="" class="notification__text">Подтвердите сделку</a>
                                     <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -327,6 +329,7 @@
                                     <a href="" class="notification__text">Поздравляем, «Название плана» завершен</a>
                                     <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
                                     <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -334,13 +337,19 @@
                                     <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
                                     <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <a href="" class="notification__item new">
-                                <span class="notification__thumb">
-                                    <img src="img/user.png" class="cover-image" alt="avatar">
+                                <span class="notification__item-body">
+                                    <span class="notification__row">
+                                        <span class="notification__thumb">
+                                            <img src="img/user.png" class="cover-image" alt="avatar">
+                                        </span>
+                                        <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    </span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
-                                <span class="notification__text">На вас подписались Иван Иванов</span>
                             </a>
                             <a href="" class="notification__item fail">
                                 <span class="notification__item-body">
@@ -348,18 +357,21 @@
                                         Консультанта отказался от заказа
                                     </span>
                                     <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
                             </a>
                             <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
                             <a href="" class="notification__item succes">
-                                <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
-                            <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
-                            </a>
-
                         </div>
                         <button type="button" class="notification__more">Показать все</button>
                     </div>
@@ -432,104 +444,124 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Все диеты</span></a>
-                        <div class="settings__person-title title "> Легкая диета </div>
-                        <div class="settings__person-menu mobile-only">
-                            <button type="button" class="settings__person-menu-btn icon-dotts"></button>
-                            <ul class="settings__person-list">
-                                <li class="settings__person-item">
-                                    <a href="" class="settings__person-link icon-copy">Скопировать ссылку</a>
-                                </li>
-                                <li class="settings__person-item">
-                                    <a href="" class="settings__person-link icon-share-arrow">Поделиться</a>
-                                </li>
-                                <li class="settings__person-item">
-                                    <a href="" class="settings__person-link icon-info">Пожаловаться</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="diet__body">
-                        <div class="diet__body-column">
-                            <div class="diet__person">
-                                <div class="diet__person-thumb">
-                                    <img src="img/user.png" class="cover-image" alt="thumb">
-                                </div>
-                                <div class="diet__person-body">
-                                    <div class="diet__person-hint">Автор диеты</div>
-                                    <div class="diet__person-name">Дмитрий Коваль</div>
-                                </div>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Все диеты</span></a>
+                            <div class="settings__person-title title ">
+                                Легкая диета
                             </div>
-                            <div class="diet__rate"> Консультант <div class="diet__rate-value"> 128-й в рейтинге </div>
-                            </div>
-                            <div class="diet__info">
-                                <div class="diet__info-rows">
-                                    <div class="diet__info-row">
-                                        <div class="diet__info-title"> Время прохождения диеты: </div>
-                                        <div class="diet__info-value"> 7 дней </div>
-                                    </div>
-                                    <div class="diet__info-row">
-                                        <div class="diet__info-title"> Диете придерживаются: </div>
-                                        <div class="diet__info-value"> 10 человек </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="diet__desc">
-                                <div class="diet__desc-caption"> Об этой диете </div>
-                                <div class="diet__desc-text">Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . </div>
-                                <button type="button" class="diet__desc-full icon-triangle">Развернуть</button>
+                            <div class="settings__person-menu mobile-only">
+                                <button type="button" class="settings__person-menu-btn icon-dotts"></button>
+                                <ul class="settings__person-list">
+                                    <li class="settings__person-item">
+                                        <a href="" class="settings__person-link icon-copy">Скопировать ссылку</a>
+                                    </li>
+                                    <li class="settings__person-item">
+                                        <a href="" class="settings__person-link icon-share-arrow">Поделиться</a>
+                                    </li>
+                                    <li class="settings__person-item">
+                                        <a href="" class="settings__person-link icon-info">Пожаловаться</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="diet__body-column">
-                            <div class="diet__body-image">
-                                <button type="button" class="diet__favorite icon-heart"></button>
-                                <img src="img/diet.png" class="cover-image" alt="diet">
-                                <div class="diet__body-stats">
-                                    <div class="diet__body-stat icon-eye-fill">200</div>
-                                    <div class="diet__body-stat icon-heart-fill">64</div>
-                                    <div class="diet__body-stat icon-message-square">3</div>
+                        <div class="diet__body">
+                            <div class="diet__body-column">
+                                <div class="diet__person">
+                                    <div class="diet__person-thumb">
+                                        <img src="img/user.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="diet__person-body">
+                                        <div class="diet__person-hint">Автор диеты</div>
+                                        <div class="diet__person-name">Дмитрий Коваль</div>
+                                    </div>
+                                </div>
+                                <div class="diet__rate">
+                                    Консультант
+                                    <div class="diet__rate-value">
+                                        128-й в рейтинге
+                                    </div>
+                                </div>
+                                <div class="diet__info">
+                                    <div class="diet__info-rows">
+                                        <div class="diet__info-row">
+                                            <div class="diet__info-title">
+                                                Время прохождения диеты:
+                                            </div>
+                                            <div class="diet__info-value">
+                                                7 дней
+                                            </div>
+                                        </div>
+                                        <div class="diet__info-row">
+                                            <div class="diet__info-title">
+                                                Диете придерживаются:
+                                            </div>
+                                            <div class="diet__info-value">
+                                                10 человек
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diet__desc">
+                                    <div class="diet__desc-caption">
+                                        Об этой диете
+                                    </div>
+                                    <div class="diet__desc-text">Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit commodo. Congue nunc eu ut ac scelerisque blandit. Vulputate vel id duis at in fermentum eros at adipiscing. Lorem ipsum dolor sit amet consectetur. At eu mauris gravida in. Duis neque lorem in pellentesque mauris arcu ornare proin. Tincidunt ipsum magna consequat sit . </div>
+                                    <button type="button" class="diet__desc-full icon-triangle">Развернуть</button>
                                 </div>
                             </div>
-                            <div class="diet__body-list">
-                                <div class="diet__body-item">
-                                    <div class="diet__body-icon">
-                                        <img src="img/broccoli.svg" alt="icon">
+                            <div class="diet__body-column">
+                                <div class="diet__body-image">
+                                    <button type="button" class="diet__favorite icon-heart"></button>
+                                    <img src="img/diet.png" class="cover-image" alt="diet">
+                                    <div class="diet__body-stats">
+                                        <div class="diet__body-stat icon-eye-fill">200</div>
+                                        <div class="diet__body-stat icon-heart-fill">64</div>
+                                        <div class="diet__body-stat icon-message-square">3</div>
                                     </div>
-                                    <div class="diet__body-text">Веганская</div>
                                 </div>
-                                <div class="diet__body-item">
-                                    <div class="diet__body-icon">
-                                        <img src="img/bread.svg" alt="icon">
+                                <div class="diet__body-list">
+                                    <div class="diet__body-item">
+                                        <div class="diet__body-icon">
+                                            <img src="img/broccoli.svg" alt="icon">
+                                        </div>
+                                        <div class="diet__body-text">Веганская</div>
                                     </div>
-                                    <div class="diet__body-text">Мучное</div>
-                                </div>
-                                <div class="diet__body-item">
-                                    <div class="diet__body-icon">
-                                        <img src="img/meat.svg" alt="icon">
+                                    <div class="diet__body-item">
+                                        <div class="diet__body-icon">
+                                            <img src="img/bread.svg" alt="icon">
+                                        </div>
+                                        <div class="diet__body-text">Мучное</div>
                                     </div>
-                                    <div class="diet__body-text">Мясо</div>
-                                </div>
-                                <div class="diet__body-item">
-                                    <div class="diet__body-icon">
-                                        <img src="img/wine.svg" alt="icon">
+                                    <div class="diet__body-item">
+                                        <div class="diet__body-icon">
+                                            <img src="img/meat.svg" alt="icon">
+                                        </div>
+                                        <div class="diet__body-text">Мясо</div>
                                     </div>
-                                    <div class="diet__body-text">Алкоголь</div>
+                                    <div class="diet__body-item">
+                                        <div class="diet__body-icon">
+                                            <img src="img/wine.svg" alt="icon">
+                                        </div>
+                                        <div class="diet__body-text">Алкоголь</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="diet__body-footer">
-                                <a href="#cancel-diet" data-modal class="diet__body-start l-btn l-btn-danger-outline">Отменить диету</a>
-                                <button type="button" class="diet__save icon-bookmark"></button>
+                                <div class="diet__body-footer">
+                                    <a href="#cancel-diet" data-modal class="diet__body-start l-btn l-btn-danger-outline">Отменить диету</a>
+                                    <button type="button" class="diet__save icon-bookmark"></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="diet__footer">
-                        <div class="diet__footer-caption"> План диеты (7 дней) </div>
-                        <div class="diet__footer-body">
-                            <div class="diet__footer-grid"> <div class="diet__day" data-tabs>
+                        <div class="diet__footer">
+                            <div class="diet__footer-caption">
+                                План диеты (7 дней)
+                            </div>
+                            <div class="diet__footer-body">
+                                <div class="diet__footer-grid">
+                                    <div class="diet__day" data-tabs>
     <div class="diet__day-header">
         <div class="diet__day-title">
             День 1
@@ -1281,9 +1313,11 @@
             </div>
         </div>
     </div>
-</div> </div>
+</div>
+                                </div>
+                            </div>
                         </div>
-                    </div> <div class="comment-block">
+                        <div class="comment-block">
     <div class="comment-block__caption title">
         Комментарии пользователей
     </div>
@@ -1449,16 +1483,19 @@
         </div>
     </div>
 </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -1524,9 +1561,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

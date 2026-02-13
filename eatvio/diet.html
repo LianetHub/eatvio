@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
     <!-- Current Page Styles -->
@@ -25,9 +26,9 @@
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -319,6 +320,7 @@
                                     <a href="" class="notification__text">Подтвердите сделку</a>
                                     <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -326,6 +328,7 @@
                                     <a href="" class="notification__text">Поздравляем, «Название плана» завершен</a>
                                     <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
                                     <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <div class="notification__item succes">
@@ -333,13 +336,19 @@
                                     <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
                                     <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
                                     <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </div>
                             </div>
                             <a href="" class="notification__item new">
-                                <span class="notification__thumb">
-                                    <img src="img/user.png" class="cover-image" alt="avatar">
+                                <span class="notification__item-body">
+                                    <span class="notification__row">
+                                        <span class="notification__thumb">
+                                            <img src="img/user.png" class="cover-image" alt="avatar">
+                                        </span>
+                                        <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    </span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
-                                <span class="notification__text">На вас подписались Иван Иванов</span>
                             </a>
                             <a href="" class="notification__item fail">
                                 <span class="notification__item-body">
@@ -347,18 +356,21 @@
                                         Консультанта отказался от заказа
                                     </span>
                                     <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                 </span>
                             </a>
                             <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
                             <a href="" class="notification__item succes">
-                                <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
                             </a>
-                            <a href="" class="notification__item new">
-                                <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
-                            </a>
-
                         </div>
                         <button type="button" class="notification__more">Показать все</button>
                     </div>
@@ -431,13 +443,25 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои диеты</span></a>
-                        <h1 class="settings__person-title title"> Создание диеты </h1>
-                        <div class="settings__select select select-md pc-only">
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">Мои диеты</span></a>
+                            <h1 class="settings__person-title title">
+                                Создание диеты
+                            </h1>
+                            <div class="settings__select select select-md pc-only">
+                                <select>
+                                    <option value="">Скопировать диету</option>
+                                    <option value="">Название диеты (7 дней)</option>
+                                    <option value="">Название диеты (14 дней)</option>
+                                    <option value="">Название диеты (21 дней)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="settings__select select select-md mobile-only">
                             <select>
                                 <option value="">Скопировать диету</option>
                                 <option value="">Название диеты (7 дней)</option>
@@ -445,68 +469,72 @@
                                 <option value="">Название диеты (21 дней)</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="settings__select select select-md mobile-only">
-                        <select>
-                            <option value="">Скопировать диету</option>
-                            <option value="">Название диеты (7 дней)</option>
-                            <option value="">Название диеты (14 дней)</option>
-                            <option value="">Название диеты (21 дней)</option>
-                        </select>
-                    </div>
-                    <form action="#" class="diet__form">
-                        <div class="diet__form-block">
-                            <div class="label"> Название </div>
-                            <input type="text" name="name" class="input input-white" placeholder="Введите название диеты">
-                        </div>
-                        <div class="diet__form-body">
-                            <div class="diet__form-main">
-                                <div class="diet__form-header">
-                                    <div class="diet__form-block">
-                                        <div class="label"> Срок диеты </div>
-                                        <div class="select">
-                                            <select>
-                                                <option value="" selected>7 дней</option>
-                                                <option value="">14 дней</option>
-                                                <option value="">21 день</option>
-                                            </select>
+                        <form action="#" class="diet__form">
+                            <div class="diet__form-block">
+                                <div class="label">
+                                    Название
+                                </div>
+                                <input type="text" name="name" class="input input-white" placeholder="Введите название диеты">
+                            </div>
+                            <div class="diet__form-body">
+                                <div class="diet__form-main">
+                                    <div class="diet__form-header">
+                                        <div class="diet__form-block">
+                                            <div class="label">
+                                                Срок диеты
+                                            </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option value="" selected>7 дней</option>
+                                                    <option value="">14 дней</option>
+                                                    <option value="">21 день</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="diet__form-block">
+                                            <div class="label">
+                                                Статус
+                                            </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option value="">Активна</option>
+                                                    <option value="">Неактивна</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="diet__form-block">
-                                        <div class="label"> Статус </div>
-                                        <div class="select">
-                                            <select>
-                                                <option value="">Активна</option>
-                                                <option value="">Неактивна</option>
-                                            </select>
-                                        </div>
+                                    <div class="diet__form-checkboxes">
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="img/broccoli.svg" alt="icon broccoli">
+                                                <span>Веган<span class="pc-only">ская</span></span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" checked name="meat" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="img/meat.svg" alt="icon meat">
+                                                Мясо
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="img/bread.svg" alt="icon bread">
+                                                Мучное
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-btn">
+                                            <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
+                                            <span class="checkbox-btn__content">
+                                                <img src="img/wine.svg" alt="icon broccoli">
+                                                Алкоголь
+                                            </span>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="diet__form-checkboxes">
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="veg" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/broccoli.svg" alt="icon broccoli">
-                                            <span>Веган<span class="pc-only">ская</span></span>
-                                        </span>
-                                    </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" checked name="meat" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/meat.svg" alt="icon meat"> Мясо </span>
-                                    </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="bread" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/bread.svg" alt="icon bread"> Мучное </span>
-                                    </label>
-                                    <label class="checkbox-btn">
-                                        <input type="checkbox" name="wine" class="checkbox-btn__input hidden" hidden>
-                                        <span class="checkbox-btn__content">
-                                            <img src="img/wine.svg" alt="icon broccoli"> Алкоголь </span>
-                                    </label>
-                                </div>
-                            </div> <label class="file diet__form-file">
+                                <label class="file diet__form-file">
     <input type="file" name="file" class="file__input hidden" hidden>
     <span class="file__content">
         <span class="file__formats">
@@ -517,16 +545,21 @@
         </span>
     </span>
 </label>
-                        </div>
-                        <div class="diet__form-footer">
-                            <div class="label"> Описание </div>
-                            <textarea name="desc" placeholder="Введите описание диеты" class="textarea textarea-white"></textarea>
-                        </div>
-                    </form>
-                    <div class="diet__footer">
-                        <div class="diet__footer-btn"> План диеты (7 дней) </div>
-                        <div class="diet__footer-body">
-                            <div class="diet__footer-grid" data-spollers="768, max" data-one-spoller> <div class="diet__day" data-tabs>
+                            </div>
+                            <div class="diet__form-footer">
+                                <div class="label">
+                                    Описание
+                                </div>
+                                <textarea name="desc" placeholder="Введите описание диеты" class="textarea textarea-white"></textarea>
+                            </div>
+                        </form>
+                        <div class="diet__footer">
+                            <div class="diet__footer-btn">
+                                План диеты (7 дней)
+                            </div>
+                            <div class="diet__footer-body">
+                                <div class="diet__footer-grid" data-spollers="768, max" data-one-spoller>
+                                    <div class="diet__day" data-tabs>
     <div class="diet__day-header _active" data-spoller>
         <div class="diet__day-title">
             День 1
@@ -1462,24 +1495,28 @@
             </div>
         </div>
     </div>
-</div> </div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" diet__btns">
+                            <button type="button" class="diet__btn l-btn l-btn-black">В черновик</button>
+                            <button type="button" class="diet__btn l-btn l-btn-black">Превью</button>
+                            <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
                         </div>
                     </div>
-                    <div class=" diet__btns">
-                        <button type="button" class="diet__btn l-btn l-btn-black">В черновик</button>
-                        <button type="button" class="diet__btn l-btn l-btn-black">Превью</button>
-                        <button type="button" class="diet__btn l-btn l-btn-primary">Опубликовать</button>
-                    </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -1597,9 +1634,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

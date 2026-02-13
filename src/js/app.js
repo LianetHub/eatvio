@@ -465,8 +465,112 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    // contexts Menu - CHAT
+    const contextMenu = document.getElementById('chat-context-menu');
+    const chatContainer = document.querySelector('.chat__content');
+    let longPressTimer;
+    let currentTargetItem = null;
 
+    if (contextMenu && chatContainer) {
+        const showMenu = (x, y) => {
+            contextMenu.style.display = 'block';
 
+            contextMenu.style.left = 'auto';
+            contextMenu.style.right = 'auto';
+
+            const menuWidth = contextMenu.offsetWidth;
+            const menuHeight = contextMenu.offsetHeight;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            let right = windowWidth - x;
+            let top = y;
+
+            if (x < menuWidth) {
+                contextMenu.style.left = '10px';
+            } else {
+                contextMenu.style.right = `${right}px`;
+            }
+
+            if (top + menuHeight > windowHeight) {
+                top = windowHeight - menuHeight - 10;
+            }
+
+            contextMenu.style.top = `${top}px`;
+
+            if (currentTargetItem) {
+                currentTargetItem.classList.add('disable-active');
+            }
+        };
+
+        const hideMenu = () => {
+            contextMenu.style.display = 'none';
+            if (currentTargetItem) {
+                currentTargetItem.classList.remove('disable-active');
+                currentTargetItem = null;
+            }
+        };
+
+        const handleActionTrigger = (e, clientX, clientY) => {
+            const badge = e.target.closest('.chat__message-badge');
+            if (!badge) return;
+
+            const messageItem = badge.closest('.chat__item-input');
+            if (!messageItem) return;
+
+            e.preventDefault();
+            currentTargetItem = messageItem;
+            showMenu(clientX, clientY);
+        };
+
+        chatContainer.addEventListener('contextmenu', (e) => {
+            handleActionTrigger(e, e.clientX, e.clientY);
+        });
+
+        chatContainer.addEventListener('touchstart', (e) => {
+            const badge = e.target.closest('.chat__message-badge');
+            if (!badge) return;
+
+            const messageItem = badge.closest('.chat__item-input');
+            if (!messageItem) return;
+
+            const touch = e.touches[0];
+            longPressTimer = setTimeout(() => {
+                handleActionTrigger(e, touch.clientX, touch.clientY);
+            }, 400);
+        });
+
+        chatContainer.addEventListener('touchend', () => {
+            clearTimeout(longPressTimer);
+        });
+
+        chatContainer.addEventListener('touchmove', () => {
+            clearTimeout(longPressTimer);
+        });
+
+        document.addEventListener('mousedown', (e) => {
+            if (!contextMenu.contains(e.target)) {
+                hideMenu();
+            }
+        });
+
+        contextMenu.addEventListener('click', (e) => {
+            const item = e.target.closest('.chat-context-menu__item');
+            if (!item || !currentTargetItem) return;
+
+            const action = item.dataset.action;
+            if (action === 'edit') {
+                const badge = currentTargetItem.querySelector('.chat__message-badge');
+                console.log('Edit:', badge.innerText);
+            } else if (action === 'delete') {
+                currentTargetItem.remove();
+            }
+            hideMenu();
+        });
+
+        window.addEventListener('resize', hideMenu);
+        window.addEventListener('scroll', hideMenu, true);
+    }
 
 });
 

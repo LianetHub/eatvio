@@ -487,9 +487,13 @@ body {
 			font-size: 15px;
 			font-weight: 600;
 			margin: em(0) rem(10) em(0) em(0);
-			transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+			transition:
+				background-color 0.3s ease 0s,
+				color 0.3s ease 0s;
 		}
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #2f80ed;
@@ -526,7 +530,9 @@ body {
 			font-size: 24px;
 			margin: em(0) rem(10) em(0) em(0);
 		}
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #2f80ed;
@@ -679,7 +685,9 @@ body {
 		font-size: 14px;
 		line-height: 114%;
 		letter-spacing: 0.2px;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #2f80ed;
@@ -778,7 +786,9 @@ body {
 				font-size: 20px;
 				font-weight: 500;
 				line-height: 120%;
-				transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+				transition:
+					background-color 0.3s ease 0s,
+					color 0.3s ease 0s;
 				&.active {
 					background: #2f80ed;
 					color: #fff;
@@ -1120,7 +1130,10 @@ body {
 		width: 40px;
 		height: 40px;
 		flex-shrink: 0;
-		transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			border-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #eaf2fd;
@@ -1342,7 +1355,10 @@ body {
 		border: 1px solid #e6e6e6;
 		background: rgba(217, 217, 217, 0.01);
 		padding: em(8) em(14);
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s,
+			border-color 0.3s ease 0s;
 		&::before {
 			order: 1;
 			color: #2f80ed;
@@ -2459,7 +2475,9 @@ body {
 		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.2);
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+		transition:
+			opacity 0.3s ease 0s,
+			visibility 0.3s ease 0s;
 		&.open {
 			opacity: 1;
 			visibility: visible;
@@ -3807,7 +3825,9 @@ body {
 		font-size: 0.6rem;
 		padding: 0.125rem 0.125rem 0 0;
 		z-index: 2;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $accent;
@@ -4200,6 +4220,17 @@ body {
 	}
 	&__notification {
 		margin-top: 1.88rem;
+		@media (max-width: $md5) {
+			.notification__item {
+				padding-bottom: 2.375rem;
+				position: relative;
+				.notification__time {
+					position: absolute;
+					bottom: 1rem;
+					left: 1rem;
+				}
+			}
+		}
 		@media (min-width: $md5) {
 			.notification__thumb {
 				width: 3.75rem;
@@ -4210,6 +4241,8 @@ body {
 				&::before {
 					width: 0.75rem;
 					height: 0.75rem;
+					margin-top: 0.125rem;
+					margin-left: rem(20);
 				}
 			}
 			.notification__item-body {
@@ -4222,6 +4255,17 @@ body {
 				font-size: 1.125rem;
 				&.red-color {
 					font-size: 1rem;
+				}
+			}
+			.notification__time {
+				margin-left: auto;
+				align-self: flex-start;
+				font-size: rem(14);
+				flex-shrink: 0;
+			}
+			.notification__row {
+				.notification__time {
+					align-self: center;
 				}
 			}
 		}

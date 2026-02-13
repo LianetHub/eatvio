@@ -656,7 +656,6 @@
                                     @@include('./html/_chat-caption.html',{
                                     'active': 2
                                     })
-
                                     <div class="chat__item">
                                         <div class="chat__thumb">
                                             <img src="@img/user-2.png" alt="thumb">
@@ -678,7 +677,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chat__item chat__item-input">
+                                    <div class="chat__item chat__item-input readed">
                                         <div class="chat__thumb">
                                             <img src="@img/user-2.png" alt="thumb">
                                         </div>
@@ -716,7 +715,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chat__item chat__item-input">
+                                    <div class="chat__item chat__item-input readed ">
                                         <div class="chat__thumb">
                                             <img src="@img/user-2.png" alt="thumb">
                                         </div>
@@ -755,7 +754,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chat__item chat__item-input">
+                                    <div class="chat__item chat__item-input submitted ">
                                         <div class="chat__thumb">
                                             <img src="@img/user-2.png" alt="thumb">
                                         </div>
@@ -846,7 +845,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="chat__footer">
                                     <label class="chat__file">
@@ -855,6 +853,12 @@
                                     </label>
                                     <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
                                     <button type="submit" class="chat__submit icon-arrow-left"></button>
+                                </div>
+                                <div id="chat-context-menu" class="chat-context-menu" style="display: none;">
+                                    <ul class="chat-context-menu__list">
+                                        <li class="chat-context-menu__item icon-edit-underline" data-action="edit">Редактировать</li>
+                                        <li class="chat-context-menu__item icon-trash" data-action="delete">Удалить</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="chat__block">
