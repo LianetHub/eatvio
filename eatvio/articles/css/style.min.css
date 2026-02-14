@@ -2201,6 +2201,14 @@ body.dark-theme {
     font-size: 21px;
   }
 }
+.title.title-xs {
+  font-size: 16px;
+}
+@media (min-width: 767.98px) {
+  .title.title-xs {
+    font-size: 18px;
+  }
+}
 @media (min-width: 767.98px) {
   .title.title-md {
     font-size: 20px;

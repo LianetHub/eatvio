@@ -242,7 +242,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: $accent;
@@ -724,7 +726,9 @@
 			color: #ed2f2f;
 			border-radius: 4px;
 			border: 1px solid currentColor;
-			transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+			transition:
+				background-color 0.3s ease 0s,
+				color 0.3s ease 0s;
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff;
@@ -772,7 +776,9 @@
 		border-radius: 8px;
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+		transition:
+			opacity 0.3s ease 0s,
+			visibility 0.3s ease 0s;
 		z-index: 2;
 		&.visible {
 			&:not(.closed) {
@@ -788,7 +794,9 @@
 		background: #f6faff;
 		font-size: 10px;
 		padding: rem(6);
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background: #2f80ed;
@@ -852,7 +860,9 @@
 		cursor: pointer;
 		line-height: 100%;
 		letter-spacing: 0.2px;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		&:not(:last-child) {
 			border-bottom: 1px solid #f6f6f6;
 		}
@@ -924,7 +934,9 @@
 		background: #f1f2f6;
 		color: #6d6f71;
 		font-size: rem(10);
-		transition: background-color 0.3s ease, color 0.3s ease;
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
@@ -976,7 +988,9 @@
 		@media (hover: hover) {
 			opacity: 0;
 			visibility: hidden;
-			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+			transition:
+				opacity 0.3s ease 0s,
+				visibility 0.3s ease 0s;
 		}
 	}
 	&__product-btn {
@@ -998,7 +1012,9 @@
 			white-space: nowrap;
 			opacity: 0;
 			visibility: hidden;
-			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+			transition:
+				opacity 0.3s ease 0s,
+				visibility 0.3s ease 0s;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -1232,6 +1248,22 @@
 				line-height: 100%;
 				letter-spacing: 0.2px;
 			}
+		}
+		&:has(.diary__info-icon) {
+			position: relative;
+			padding-inline: 2rem;
+		}
+		.diary__info-icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			font-size: 1.25rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-width: rem(2);
+			top: 0;
+			right: 0;
 		}
 	}
 

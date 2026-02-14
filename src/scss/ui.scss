@@ -32,6 +32,12 @@
 			font-size: 21px;
 		}
 	}
+	&.title-xs {
+		font-size: 16px;
+		@media (min-width: $md4) {
+			font-size: 18px;
+		}
+	}
 	&.title-md {
 		@media (min-width: $md4) {
 			font-size: 20px;

@@ -2488,6 +2488,14 @@ body.dark-theme {
     font-size: 21px;
   }
 }
+.title.title-xs {
+  font-size: 16px;
+}
+@media (min-width: 767.98px) {
+  .title.title-xs {
+    font-size: 18px;
+  }
+}
 @media (min-width: 767.98px) {
   .title.title-md {
     font-size: 20px;
@@ -17397,6 +17405,393 @@ body.dark-theme {
   }
 }
 
+.popup__complaint-link::before, .star-rating__label::before, .checkbox__input:checked + .checkbox__content::before, .content__breadcrumbs-link:not(:last-child)::before, .content__title[data-spoller]::before, .content__column-btn::before, .content__side-caption.spoller-mobile::before, .content__settings-filter .label.spoller-mobile::before, .recipe__actions .favorite-btn.active::before, .chat__item.chat__item-input.submitted .chat__message-block::before, .chat__item.chat__item-input.readed .chat__message-block::before, [class^=icon-]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  display: block;
+}
+
+.icon-download-fill:before {
+  content: "\e958";
+}
+
+.icon-edit-underline:before {
+  content: "\e957";
+}
+
+.icon-add-card:before {
+  content: "\e956";
+}
+
+.icon-attention:before {
+  content: "\e955";
+}
+
+.icon-sound:before {
+  content: "\e953";
+}
+
+.icon-sound-off:before {
+  content: "\e954";
+}
+
+.icon-share-arrow:before {
+  content: "\e952";
+}
+
+.icon-globe:before {
+  content: "\e94f";
+}
+
+.icon-telegram:before {
+  content: "\e950";
+}
+
+.icon-vk:before {
+  content: "\e951";
+}
+
+.icon-paste:before {
+  content: "\e94e";
+}
+
+.icon-bookmark-fill:before, .recipe__actions .favorite-btn.active:before {
+  content: "\e94d";
+}
+
+.icon-next:before {
+  content: "\e94b";
+}
+
+.icon-prev:before {
+  content: "\e94c";
+}
+
+.icon-check-circle:before {
+  content: "\e949";
+}
+
+.icon-filters:before {
+  content: "\e946";
+}
+
+.icon-back:before {
+  content: "\e945";
+}
+
+.icon-edit-bold:before {
+  content: "\e944";
+}
+
+.icon-bookmark:before {
+  content: "\e94a";
+}
+
+.icon-trash:before {
+  content: "\e942";
+}
+
+.icon-muted:before {
+  content: "\e943";
+}
+
+.icon-message-fill:before {
+  content: "\e941";
+}
+
+.icon-send:before {
+  content: "\e948";
+}
+
+.icon-open-book:before {
+  content: "\e940";
+}
+
+.icon-communication:before {
+  content: "\e947";
+}
+
+.icon-user:before {
+  content: "\e93e";
+}
+
+.icon-login:before {
+  content: "\e93f";
+}
+
+.icon-bell:before {
+  content: "\e93d";
+}
+
+.icon-newsline:before {
+  content: "\e93a";
+}
+
+.icon-consults:before {
+  content: "\e93b";
+}
+
+.icon-daily:before {
+  content: "\e93c";
+}
+
+.icon-alarm:before {
+  content: "\e900";
+}
+
+.icon-arrow-left:before {
+  content: "\e901";
+}
+
+.icon-arrow-right:before {
+  content: "\e902";
+}
+
+.icon-arrow-short-left:before {
+  content: "\e903";
+}
+
+.icon-arrow-short-right:before {
+  content: "\e904";
+}
+
+.icon-bed:before {
+  content: "\e905";
+}
+
+.icon-blog:before {
+  content: "\e906";
+}
+
+.icon-book-open:before {
+  content: "\e907";
+}
+
+.icon-burger:before {
+  content: "\e908";
+}
+
+.icon-calendar:before {
+  content: "\e909";
+}
+
+.icon-check:before, .checkbox__input:checked + .checkbox__content:before, .chat__item.chat__item-input.submitted .chat__message-block:before {
+  content: "\e90a";
+}
+
+.icon-check-square:before {
+  content: "\e90b";
+}
+
+.icon-click:before {
+  content: "\e90c";
+}
+
+.icon-clip:before {
+  content: "\e90d";
+}
+
+.icon-clock:before {
+  content: "\e90e";
+}
+
+.icon-close:before {
+  content: "\e90f";
+}
+
+.icon-copy:before {
+  content: "\e910";
+}
+
+.icon-delete:before {
+  content: "\e911";
+}
+
+.icon-diet:before {
+  content: "\e912";
+}
+
+.icon-dotts:before {
+  content: "\e913";
+}
+
+.icon-double-check:before, .chat__item.chat__item-input.readed .chat__message-block:before {
+  content: "\e914";
+}
+
+.icon-down:before, .popup__complaint-link:before, .content__title[data-spoller]:before, .content__column-btn:before, .content__side-caption.spoller-mobile:before, .content__settings-filter .label.spoller-mobile:before {
+  content: "\e915";
+}
+
+.icon-download:before {
+  content: "\e916";
+}
+
+.icon-edit:before {
+  content: "\e917";
+}
+
+.icon-eye:before {
+  content: "\e918";
+}
+
+.icon-eye-fill:before {
+  content: "\e919";
+}
+
+.icon-fail:before {
+  content: "\e91a";
+}
+
+.icon-file-text:before {
+  content: "\e91b";
+}
+
+.icon-foots:before {
+  content: "\e91c";
+}
+
+.icon-gear:before {
+  content: "\e91d";
+}
+
+.icon-heart:before {
+  content: "\e91e";
+}
+
+.icon-heart-fill:before {
+  content: "\e91f";
+}
+
+.icon-info:before {
+  content: "\e920";
+}
+
+.icon-location:before {
+  content: "\e921";
+}
+
+.icon-logout:before {
+  content: "\e922";
+}
+
+.icon-message-circle:before {
+  content: "\e923";
+}
+
+.icon-message-square:before {
+  content: "\e924";
+}
+
+.icon-more-horizontal:before {
+  content: "\e925";
+}
+
+.icon-mouthpiece:before {
+  content: "\e926";
+}
+
+.icon-pen:before {
+  content: "\e927";
+}
+
+.icon-people:before {
+  content: "\e928";
+}
+
+.icon-pie:before {
+  content: "\e929";
+}
+
+.icon-plus:before {
+  content: "\e92a";
+}
+
+.icon-refresh:before {
+  content: "\e92b";
+}
+
+.icon-rubble:before {
+  content: "\e92c";
+}
+
+.icon-search:before {
+  content: "\e92d";
+}
+
+.icon-share:before {
+  content: "\e92e";
+}
+
+.icon-shield:before {
+  content: "\e92f";
+}
+
+.icon-shield-fill:before {
+  content: "\e930";
+}
+
+.icon-smile:before {
+  content: "\e931";
+}
+
+.icon-star:before, .star-rating__label:before {
+  content: "\e932";
+}
+
+.icon-stats:before {
+  content: "\e933";
+}
+
+.icon-triangle:before, .content__breadcrumbs-link:not(:last-child):before {
+  content: "\e934";
+}
+
+.icon-upload:before {
+  content: "\e935";
+}
+
+.icon-users:before {
+  content: "\e936";
+}
+
+.icon-voice:before {
+  content: "\e937";
+}
+
+.icon-wallet:before {
+  content: "\e938";
+}
+
+.icon-youtube:before {
+  content: "\e939";
+}
+
+.chat__item.chat__item-input.readed .chat__message-block::before, .chat__item.chat__item-input.submitted .chat__message-block::before, [class^=icon-]:before,
+[class*=" icon-"]:before, .popup__complaint-link::before, .star-rating__label::before, .checkbox__input:checked + .checkbox__content::before, .content__breadcrumbs-link:not(:last-child)::before, .content__title[data-spoller]::before, .content__column-btn::before, .content__side-caption.spoller-mobile::before, .content__settings-filter .label.spoller-mobile::before, .recipe__actions .favorite-btn.active::before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .chat__item.chat__item-input.readed .chat__message-block::before, .chat__item.chat__item-input.submitted .chat__message-block::before, [class^=icon-]:before,
 [class*=" icon-"]:before, .popup__complaint-link::before, .star-rating__label::before, .checkbox__input:checked + .checkbox__content::before, .content__breadcrumbs-link:not(:last-child)::before, .content__title[data-spoller]::before, .content__column-btn::before, .content__side-caption.spoller-mobile::before, .content__settings-filter .label.spoller-mobile::before, .recipe__actions .favorite-btn.active::before {
   font-family: "icons";
@@ -21322,6 +21717,14 @@ body.dark-theme {
 @media (min-width: 767.98px) {
   .title.title-sm {
     font-size: 21px;
+  }
+}
+.title.title-xs {
+  font-size: 16px;
+}
+@media (min-width: 767.98px) {
+  .title.title-xs {
+    font-size: 18px;
   }
 }
 @media (min-width: 767.98px) {
@@ -32577,6 +32980,28 @@ body.dark-theme {
     line-height: 100%;
     letter-spacing: 0.2px;
   }
+}
+.diary__norm-title:has(.diary__info-icon) {
+  position: relative;
+  padding-inline: 2rem;
+}
+.diary__norm-title .diary__info-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.125rem;
+  top: 0;
+  right: 0;
 }
 .diary__norm-body {
   display: -webkit-box;

@@ -1,5 +1,18 @@
 @use "sass:math";
+@use "../icons";
 @import "../config.scss";
+
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 .chat {
 	// position: fixed;
