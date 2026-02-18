@@ -208,6 +208,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 contents[clickedIndex].classList.add('active');
             }
         }
+
+        if (e.target.matches('[data-announcement-action]')) {
+            e.target.classList.toggle('active');
+        }
     })
 
     if (document.querySelector('.content__recipes-select')) {
@@ -239,6 +243,54 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbs: {
                 swiper: diaryThumbs,
             },
+        });
+    }
+
+    if (document.querySelectorAll('.announcement__slider').length) {
+        document.querySelectorAll('.announcement__slider').forEach(sliderWrapper => {
+
+            let slider = sliderWrapper.querySelector('.announcement__slider-block');
+            let prevBtn = sliderWrapper.querySelector('.announcement__slider-prev');
+            let nextBtn = sliderWrapper.querySelector('.announcement__slider-next');
+            let pagination = sliderWrapper.querySelector('.announcement__slider-pagination');
+            let thumbsElement = sliderWrapper.querySelector('.announcement__slider-thumbs');
+
+            let thumbsSwiper = null;
+
+            if (thumbsElement) {
+                thumbsSwiper = new Swiper(thumbsElement, {
+                    spaceBetween: 8,
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                });
+            }
+
+            const videoCount = slider.querySelectorAll('video, iframe').length;
+            const videoSuffix = videoCount > 0 ? ` + видео` : '';
+
+            new Swiper(slider, {
+                speed: 800,
+                slidesPerView: 1,
+                watchOverflow: true,
+                navigation: {
+                    nextEl: nextBtn,
+                    prevEl: prevBtn,
+                },
+                pagination: {
+                    el: pagination,
+                    type: "fraction",
+                    renderFraction: function (currentClass, totalClass) {
+                        return '<span class="' + currentClass + '"></span>' +
+                            ' / ' +
+                            '<span class="' + totalClass + '"></span>' +
+                            videoSuffix;
+                    }
+                },
+                thumbs: {
+                    swiper: thumbsSwiper,
+                },
+            });
         });
     }
 

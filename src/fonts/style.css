@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?u24dkk');
-  src:  url('fonts/icons.eot?u24dkk#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?u24dkk') format('truetype'),
-    url('fonts/icons.woff?u24dkk') format('woff'),
-    url('fonts/icons.svg?u24dkk#icons') format('svg');
+  src:  url('fonts/icons.eot?3i5q0u');
+  src:  url('fonts/icons.eot?3i5q0u#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?3i5q0u') format('truetype'),
+    url('fonts/icons.woff?3i5q0u') format('woff'),
+    url('fonts/icons.svg?3i5q0u#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gallery:before {
+  content: "\e95e";
+}
+.icon-message-alternate:before {
+  content: "\e95d";
+}
 .icon-pen-alternate:before {
   content: "\e95c";
+}
+.icon-message-alternate-fill:before {
+  content: "\e960";
+}
+.icon-play:before {
+  content: "\e95f";
 }
 .icon-picture:before {
   content: "\e95b";

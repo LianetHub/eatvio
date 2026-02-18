@@ -2,10 +2,10 @@
 @import "../config.scss";
 
 .announcement {
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	background: #fff;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-	padding: em(16);
+	box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+	padding: em(16) rem(24);
 	&.announcement-lg {
 		padding: em(24) em(30) em(30);
 	}
@@ -52,8 +52,8 @@
 
 	// .announcement__thumb
 	&__thumb {
-		width: 42px;
-		height: 42px;
+		width: 3.25rem;
+		height: 3.25rem;
 		flex-shrink: 0;
 		margin: em(0) rem(8) em(0) em(0);
 		& img {
@@ -211,7 +211,7 @@
 	// .announcement__title
 	&__title {
 		margin: rem(16) em(0) em(0) em(0);
-		font-size: 18px;
+		font-size: 1.5rem;
 		font-weight: 700;
 	}
 	// .announcement__desc
@@ -242,11 +242,11 @@
 	}
 	// .announcement__more
 	&__more {
-		margin: em(14) em(0) em(0) em(0);
+		margin: 0.75rem em(0) em(0) em(0);
 		color: #2f80ed;
 		display: inline-flex;
 		align-items: center;
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 600;
 		line-height: math.div(18, 14);
 		&::before {
@@ -305,6 +305,148 @@
 			@media (min-width: $md3) {
 				padding: em(20);
 			}
+		}
+	}
+	// .announcement__slider
+	&__slider {
+		margin: em(18) rem(-24) em(0);
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				.announcement__slider-prev,
+				.announcement__slider-next {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// .announcement__slider-block
+	&__slider-block {
+	}
+	// .announcement__slide
+	&__slide {
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		min-height: 22.5rem;
+		& iframe {
+			width: 100%;
+			height: 100%;
+			flex: 1 1 auto;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			flex: 1 1 auto;
+		}
+	}
+	// .announcement__slider-thumbs
+	&__slider-thumbs {
+		margin-top: 1rem;
+		padding: 0 rem(20);
+	}
+	// .announcement__slider-thumb
+	&__slider-thumb {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		position: relative;
+		&.icon-play {
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+				font-size: 1.5rem;
+				color: #515761;
+			}
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.5rem;
+			border: rem(2) solid transparent;
+		}
+		&.swiper-slide-thumb-active {
+			& img {
+				border: rem(2) solid #2f80ed;
+			}
+			box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+		}
+	}
+
+	// .announcement__slider-prev
+	&__slider-prev {
+		background: #fff;
+		color: #29303d;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+		width: 2.25rem;
+		height: 2.25rem;
+		@media (min-width: $md3) {
+			width: 3.25rem;
+			height: 3.25rem;
+		}
+		@media (any-hover: hover) {
+			opacity: 0;
+		}
+
+		&::after {
+			font-size: 1rem;
+		}
+	}
+	// .announcement__slider-next
+	&__slider-next {
+		@extend .announcement__slider-prev;
+	}
+	// .announcement__slider-pagination
+	&__slider-pagination {
+		&.swiper-pagination {
+			position: absolute;
+			top: 1.5rem !important;
+			right: 1.5rem !important;
+			border-radius: 624.9375rem;
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			backdrop-filter: blur(rem(6));
+			display: flex;
+			align-items: center;
+			bottom: auto !important;
+			left: auto !important;
+			width: auto;
+			transform: none;
+			padding: 0.5rem 0.75rem;
+			font-size: 0.875rem;
+			font-weight: 500;
+			line-height: 120%;
+			gap: 0.125rem;
+			&::before {
+				margin-right: 0.5rem;
+				width: 0.875rem;
+				height: 0.875rem;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+				text-align: center;
+			}
+			&.swiper-pagination-lock {
+				display: none;
+			}
+		}
+	}
+	// .announcement__player
+	&__player {
+		margin: em(18) rem(-24) em(0);
+		aspect-ratio: math.div(970, 520);
+		& iframe {
+			width: 100%;
+			height: 100%;
 		}
 	}
 	// .announcement__body
@@ -548,7 +690,9 @@
 			padding: em(2) em(10);
 		}
 		border-radius: 6px;
-		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		&::before {
 			display: flex !important;
 			justify-content: center;
@@ -691,6 +835,107 @@
 		}
 		&::before {
 			font-size: rem(40);
+		}
+	}
+	// .announcement__bottom
+	&__bottom {
+		margin-top: rem(20);
+		margin-inline: rem(-20);
+		border-top: rem(1) solid #e2e3e9;
+		padding: rem(20) 1.5rem 0.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+	// .announcement__bottom-actions
+	&__bottom-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	// .announcement__bottom-action
+	&__bottom-action {
+		color: #737b8c;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 150%;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: all 0.3s ease;
+		@media (min-width: $md5) {
+			border-radius: 0.75rem;
+			padding: 0.5625rem 0.75rem;
+		}
+		&::before {
+			width: 1.375rem;
+			height: 1.375rem;
+			font-size: 1.25rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			text-align: center;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #e8f2ff;
+				color: #2f80ed;
+			}
+		}
+		&.icon-heart {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #fef2f2;
+					color: #ef4444;
+				}
+			}
+		}
+		&.active {
+			color: #2f80ed;
+			@media (min-width: $md5) {
+				background: #e8f2ff;
+			}
+			&.icon-bookmark {
+				&::before {
+					@extend .icon-bookmark-fill;
+				}
+			}
+			&.icon-message-alternate {
+				&::before {
+					@extend .icon-message-alternate-fill;
+				}
+			}
+			&.icon-heart {
+				color: #ef4444;
+				@media (min-width: $md5) {
+					background: #fef2f2;
+				}
+				&::before {
+					@extend .icon-heart-fill;
+				}
+			}
+		}
+	}
+	// .announcement__views
+	&__views {
+		display: flex;
+		align-items: center;
+		gap: 0.68rem;
+		color: #737b8c;
+		font-size: 0.875rem;
+		font-weight: 600;
+		&::before {
+			font-size: 1.375rem;
+			width: 1.375rem;
+			height: 1.375rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			text-align: center;
 		}
 	}
 }

@@ -17,9 +17,20 @@
 		display: block;
 	}
 }
-
+.icon-gallery:before {
+	content: "\e95e";
+}
+.icon-message-alternate:before {
+	content: "\e95d";
+}
 .icon-pen-alternate:before {
 	content: "\e95c";
+}
+.icon-message-alternate-fill:before {
+	content: "\e960";
+}
+.icon-play:before {
+	content: "\e95f";
 }
 .icon-picture:before {
 	content: "\e95b";

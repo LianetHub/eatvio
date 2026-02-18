@@ -702,7 +702,10 @@ body {
 	}
 	// .content__announcements
 	&__announcements {
-		margin: em(32) em(0) em(0) em(0);
+		margin: em(32) rem(-16) em(0);
+		@media (min-width: $md5) {
+			margin: em(32) em(0) em(0) em(0);
+		}
 	}
 	// .content__add
 	&__add {
@@ -752,6 +755,7 @@ body {
 			padding: em(20);
 		}
 	}
+	// .content__alphabet-dropdown
 	&__alphabet-dropdown {
 		@media (min-width: $md4) {
 			display: flex;

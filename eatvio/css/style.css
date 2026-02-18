@@ -353,8 +353,24 @@ input[type=number] {
   display: block;
 }
 
+.icon-gallery:before {
+  content: "\e95e";
+}
+
+.icon-message-alternate:before {
+  content: "\e95d";
+}
+
 .icon-pen-alternate:before {
   content: "\e95c";
+}
+
+.icon-message-alternate-fill:before {
+  content: "\e960";
+}
+
+.icon-play:before {
+  content: "\e95f";
 }
 
 .icon-picture:before {
@@ -5277,7 +5293,12 @@ body.dark-theme {
   color: #fff;
 }
 .content__announcements {
-  margin: 2em 0em 0em 0em;
+  margin: 2em -1rem 0em;
+}
+@media (min-width: 575.98px) {
+  .content__announcements {
+    margin: 2em 0em 0em 0em;
+  }
 }
 .content__add {
   border-radius: 0.5rem;
