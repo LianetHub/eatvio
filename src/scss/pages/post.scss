@@ -1,0 +1,261 @@
+@use "sass:math";
+@import "../config.scss";
+
+.post-creating {
+	margin-top: 1.5rem;
+
+	.input {
+		border: 1px solid #e2e5e9;
+		background: #f9fafb;
+	}
+
+	&__banner {
+		display: flex;
+		gap: 1rem;
+		border-radius: 0.5rem;
+		border: 1px solid rgba(47, 128, 237, 0.2);
+		background: #f6faff;
+		padding: 1.25rem;
+		margin-bottom: 1.5rem;
+
+		&-title {
+			font-weight: 700;
+			margin-bottom: 0.25rem;
+			font-size: 1.125rem;
+		}
+
+		&-text {
+			color: #6d6f71;
+			font-size: 1rem;
+			line-height: 150%;
+		}
+	}
+
+	&__banner-icon {
+		display: flex;
+		width: 3rem;
+		height: 3rem;
+		padding: 0.75rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.5rem;
+		background: rgba(47, 128, 237, 0.2);
+		flex-shrink: 0;
+	}
+
+	&__grid {
+		display: grid;
+		gap: 1.25rem;
+		@media (min-width: $md3) {
+			grid-template-columns: 1fr 23.625rem;
+		}
+	}
+
+	&__main,
+	&__side-block {
+		border-radius: 0.5rem;
+		border: rem(1) solid #e2e5e9;
+		background: #fff;
+		box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+		padding: 1.25rem;
+		border-radius: 0.75rem;
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__field {
+		margin-bottom: 1.25rem;
+		&:last-child {
+			flex: 1 1 auto;
+			margin-bottom: 0;
+			display: flex;
+			flex-direction: column;
+			.input {
+				flex: 1 1 auto;
+			}
+		}
+
+		&-top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__label {
+		font-weight: 500;
+		font-size: 1rem;
+	}
+
+	&__counter {
+		color: #6d6f71;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 120%;
+		padding: 0.3125rem 0.4375rem;
+		border-radius: 0.3125rem;
+		background: #f6faff;
+	}
+
+	textarea.input {
+		min-height: 15.625rem;
+		padding-top: 0.75rem;
+		resize: vertical;
+	}
+
+	&__sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	&__side-label {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+		font-weight: 500;
+		padding-left: 1.75rem;
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 1.25rem;
+			color: #2f80ed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			text-align: center;
+		}
+
+		small {
+			color: #737b8c;
+			font-size: 0.75rem;
+			font-weight: 500;
+			line-height: 120%;
+		}
+	}
+
+	&__hint {
+		margin-top: 0.5rem;
+		color: #6d6f71;
+		font-size: 0.875rem;
+		line-height: 130%;
+		letter-spacing: 0.0125rem;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5rem;
+
+		.l-btn {
+			width: 100%;
+		}
+	}
+	// .post-creating__slider
+	&__slider {
+		position: relative;
+		min-width: 0;
+		border-radius: 8px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	}
+	// .post-creating__remove
+	&__remove {
+		position: absolute;
+		top: rem(12);
+		right: rem(12);
+		width: rem(34);
+		height: rem(34);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+		background: #f1f2f6;
+		color: #6d6f71;
+		font-size: rem(10);
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $red;
+				color: #fff;
+			}
+		}
+	}
+	// .post-creating__image
+	&__image {
+		height: auto;
+		user-select: none;
+	}
+	// .post-creating__prev
+	&__prev {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		background: #fff;
+		color: #29303d;
+		padding: em(1) em(2) em(0) em(0);
+
+		&::after {
+			font-size: 16px;
+		}
+		@media (hover: hover) {
+			transition: opacity 0.3s ease 0s;
+		}
+	}
+	// .post-creating__next
+	&__next {
+		@extend .post-creating__prev;
+		padding: em(1) em(0) em(0) em(2);
+	}
+	&__thumbs {
+		margin-top: 0.75rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(8);
+	}
+	&__thumb {
+		height: 3.125rem;
+		width: 3.125rem;
+		flex-shrink: 0;
+		aspect-ratio: 1;
+		border: rem(2) solid transparent;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&.swiper-slide-thumb-active {
+			border-radius: 0.5rem;
+			border: rem(2) solid #2f80ed;
+			box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+		}
+		& img {
+			border-radius: rem(5);
+		}
+	}
+	&__add {
+		border-radius: 0.3125rem;
+		background: #f1f2f6;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1;
+		height: 3.125rem;
+		width: 3.125rem;
+		&::before {
+			padding: 0.375rem;
+			background: #fff;
+			color: #2f80ed;
+			border-radius: 50%;
+		}
+	}
+}

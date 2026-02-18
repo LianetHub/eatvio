@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | История операций',
+    "stylesName": ["post"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="consults">
+                    <div class="consults__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Создание поста
+                            </div>
+                        </div>
+                        <div class="post-creating">
+
+                            <div class="post-creating__banner">
+                                <div class="post-creating__banner-icon">
+                                    <img src="@img/icons/stars.svg" alt="Иконка">
+                                </div>
+                                <div class="post-creating__banner-content">
+                                    <p class="post-creating__banner-title">Вы делаете сообщество сильнее!</p>
+                                    <p class="post-creating__banner-text">Неважно, что это — фото полезного завтрака, совет по мотивации или личное достижение. <br> Делитесь и вдохновляйте других своим примером. Вместе мы создаём пространство поддержки и роста. 🌱</p>
+                                </div>
+                            </div>
+
+                            <div class="post-creating__grid">
+                                <div class="post-creating__main">
+                                    <div class="post-creating__field">
+                                        <div class="post-creating__field-top">
+                                            <label class="post-creating__label">Заголовок</label>
+                                            <span class="post-creating__counter">0/120</span>
+                                        </div>
+                                        <input type="text" class="input" placeholder="Вдохновляющий заголовок">
+                                    </div>
+
+                                    <div class="post-creating__field">
+                                        <div class="post-creating__field-top">
+                                            <label class="post-creating__label">Описание</label>
+                                            <span class="post-creating__counter">0/2000</span>
+                                        </div>
+                                        <textarea class="input" placeholder="Задайте вопрос, поделитесь лайфхаком или расскажите о своём опыте"></textarea>
+                                    </div>
+                                </div>
+
+                                <aside class="post-creating__sidebar">
+                                    <div class="post-creating__side-block">
+                                        <div class="post-creating__side-label icon-picture">
+                                            Добавить фото <small>(до 9 шт.)</small>
+                                        </div>
+                                        @@include('./html/_file-upload.html', {
+                                        "className": "diary__main-file",
+                                        "title": "Загрузите до 9 фото",
+                                        "desc": "Перетащи файлы сюда или кликни для выбора",
+                                        "formats": "JPG, PNG"
+                                        })
+                                    </div>
+
+                                    <div class="post-creating__side-block">
+                                        <div class="post-creating__side-label icon-camera">
+                                            <span>Вставьте ссылку на видео <small>(необязательно)</small></span>
+                                        </div>
+                                        <input type="text" class="input" placeholder="https://vkvideo.ru/...">
+                                        <p class="post-creating__hint">Поддерживаются: VK Video, RuTube</p>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            <div class="post-creating__footer">
+                                <button class="l-btn l-btn-primary">Опубликовать</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        @@include('html/_footer.html', {
+        "className": ""
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

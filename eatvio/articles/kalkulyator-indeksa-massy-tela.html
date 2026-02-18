@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Калькулятор индекса массы тела (ИМТ)</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Нутрициолог — это ваш проводник в мире правильного питания. Он помогает не просто скорректировать рацион, но и понять, как еда влияет на ваше здоровье, энергию и настроение" />
+    <meta name="keywords" content="нутрициолог, работа с нутрициологом" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <div class="wrapper"> <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="../img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="../img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> <main class="page">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content__body">
+                        <aside class="content__side content__side-sm">
+                            <nav class="content__nav swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Итвио дневник питания</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link active">Калькулятор ИМТ</a>
+                                    </li>
+                                    <li class="content__nav-item swiper-slide">
+                                        <a href="" class="content__nav-link">Калькулятор КБЖУ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="content__main">
+                            <article class="article">
+                                <div class="article__block">
+                                    <h1>Калькулятор индекса массы тела (ИМТ)</h1>
+                                    <p> С помощью данного онлайн-калькулятора вы можете рассчитать ваш индекс массы тела. Индекс массы тела (ИМТ) — показатель определяющий соотношение массы тела и&nbsp;роста человека и&nbsp;позволяет оценить, насколько они&nbsp;соответствуют друг другу </p>
+                                    <form action="#" class="article__form">
+                                        <div class="article__form-row">
+                                            <input type="number" name="height" class="input" placeholder="Рост, в см">
+                                            <input type="number" name="weight" class="input" placeholder="Вес, в кг">
+                                            <button type="submit" class="l-btn l-btn-primary">Рассчитать</button>
+                                        </div>
+                                    </form>
+                                    <div class="article__result">
+                                        <h2>Результат</h2>
+                                        <div class="article__result-content">
+                                            <div class="article__result-main">
+                                                <div class="article__result-body">
+                                                    <div class="article__result-value">—</div>
+                                                </div>
+                                                <div class="article__result-req"> Ваш рекомендуемый вес*: <span>—</span>
+                                                </div>
+                                            </div>
+                                            <div class="article__result-logo">
+                                                <img src="../img/logo-vertical-russia.svg" alt="Логотип">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Формула расчета индекса массы тела (ИМТ)</h2>
+                                    <p>Чтобы рассчитать свой индекс массы тела (ИМТ), достаточно разделить вес в килограммах на квадрат роста в метрах</p>
+                                    <div class="formula"> ИМТ = ВЕС / РОСТ² </div>
+                                    <p>Индекс массы тела (ИМТ) — это упрощенный расчет, который не учитывает ключевые индивидуальные особенности</p>
+                                    <ol>
+                                        <li>
+                                            <strong>Пол</strong> — у мужчин мышечная масса обычно выше, чем у женщин, что может завышать показатель ИМТ даже при отсутствии лишнего жира.
+                                        </li>
+                                        <li>
+                                            <strong>Возраст</strong>— у людей зрелого возраста ИМТ часто выше из-за естественных изменений метаболизма, тогда как у детей и пожилых интерпретация результатов требует особых корректировок.
+                                        <li>
+                                            <strong>Состав тела</strong> — ИМТ не различает мышцы и жир, поэтому у спортсменов может показывать "избыточный вес", даже если процент жира в норме.
+                                        </li>
+                                    </ol>
+                                    <p class="grey-color">*При условии нормального телосложения</p>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Интерпретация значений индекса массы тела</h2>
+                                    <p>В таблице ниже представлена расшифровка показателей ИМТ в соответствии с рекомендациями Всемирной Организации Здравоохранения (ВОЗ):</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th> Индекс массы тела (ИМТ) </th>
+                                                <th> Соответствие между массой человека и его ростом </th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>16 и менее</td>
+                                            <td>Выраженный дефицит массы тела</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16 — 18,5</td>
+                                            <td>Недостаточная (дефицит) масса тела</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18,5 — 25</td>
+                                            <td>Норма</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25 — 30</td>
+                                            <td>Избыточная масса тела (предожирение)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30 — 35</td>
+                                            <td>Ожирение первой степени</td>
+                                        </tr>
+                                        <tr>
+                                            <td>35 — 40</td>
+                                            <td>Ожирение второй степени</td>
+                                        </tr>
+                                        <tr>
+                                            <td>40 и более</td>
+                                            <td>Ожирение третьей степени</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="article__block">
+                                    <h2>ИМТ: первый шаг к оценке здоровья</h2>
+                                    <p>Индекс массы тела (ИМТ) — это простой и доступный способ проверить, соответствует ли ваш вес росту. Наш онлайн-калькулятор ИМТ поможет за секунды определить ваш индекс и понять, в какую категорию вы входите: недостаточный вес, норма, избыточный вес или ожирение.</p>
+                                    <p>ИМТ разработал бельгийский учёный Адольф Кетле ещё в XIX веке. Изначально метод использовался для статистики, но со временем стал популярным способом самодиагностики.</p>
+                                    <p>ИМТ — полезный, но не единственный показатель здоровья. На самочувствие также влияют:</p>
+                                    <ul>
+                                        <li>Образ жизни (движение, вредные привычки)</li>
+                                        <li>Генетика (предрасположенность к заболеваниям)</li>
+                                        <li>Рацион (сбалансированность питания)</li>
+                                        <li>Физическая активность (регулярные нагрузки)</li>
+                                    </ul>
+                                    <br>
+                                    <p>Для точной оценки здоровья и персонализированных советов рекомендуем консультироваться с врачами.</p>
+                                </div>
+                                <div class="article__block">
+                                    <h2>Почему важно измерять ИМТ?</h2>
+                                    <p> Помните: ИМТ — это первый шаг к осознанному отношению к здоровью. Для более точной картины рекомендуем дополнять его другими показателями и консультациями специалистов. </p>
+                                    <ol class="article__grid">
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Контроль веса</div>
+                                            <p class="article__grid-desc">Лишний вес существенно повышает риски возникновения сердечных болезней, диабета и заболеваний суставов, тогда как недостаточная масса тела ослабляет иммунную систему, повышает вероятность развития остеопороза и приводит к другим нарушениям здоровья.</p>
+                                        </li>
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Контроль эффективности диеты или программы тренировок</div>
+                                            <p class="article__grid-desc">Регулярный контроль показателей во время новой диеты или тренировочной программы помогает объективно оценивать прогресс, поддерживая мотивацию для дальнейших действий или сигнализируя о необходимости скорректировать выбранную стратегию.</p>
+                                        </li>
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Здоровый образ жизни</div>
+                                            <p class="article__grid-desc">Знание показателя ИМТ служит надежным ориентиром при выборе дальнейших действий: определения оптимального уровня физической активности, корректировки пищевого поведения или необходимости профессиональной медицинской консультации</p>
+                                        </li>
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Осознанность</div>
+                                            <p class="article__grid-desc">Информированность о своем ИМТ и его интерпретации формирует ценную базу для осмысленной беседы с врачом или нутрициологом о персональных показателях здоровья.</p>
+                                        </li>
+                                        <li class="article__grid-item">
+                                            <div class="article__grid-caption">Спокойствие</div>
+                                            <p class="article__grid-desc">Ваш ИМТ выступает важным маркером отношения к собственному здоровью. Осознанный мониторинг этого показателя и его постепенная нормализация способны не только укрепить физическое состояние, но и значительно повысить самооценку и эмоциональную стабильность. </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="article__footer">
+                                    <h2>Инструменты</h2>
+                                    <div class="article__tags">
+                                        <a href="https://eatvio.ru/articles/kalkulyator-normy-caloriy.html" target="_blank" class="article__tag">Калькулятор дневной нормы КБЖУ</a>
+                                        <a href="https://eatvio.ru/" target="_blank" class="article__tag">Итвио</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

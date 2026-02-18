@@ -225,12 +225,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.querySelector('.diary__product-slider')) {
-        const diaryThumbs = new Swiper('.diary__product-thumbs', {
-            spaceBetween: 8,
-            slidesPerView: "auto",
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
+        const thumbsElement = document.querySelector('.diary__product-thumbs');
+        let diaryThumbs = null;
+
+        if (thumbsElement) {
+            diaryThumbs = new Swiper(thumbsElement, {
+                spaceBetween: 8,
+                slidesPerView: "auto",
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+        }
 
         new Swiper('.diary__product-slider', {
             speed: 800,
@@ -243,6 +248,20 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbs: {
                 swiper: diaryThumbs,
             },
+        });
+    }
+
+    if (document.querySelector('.post-creating__slider')) {
+
+        new Swiper('.post-creating__slider', {
+            speed: 800,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.post-creating__next',
+                prevEl: '.post-creating__prev',
+            },
+
         });
     }
 
