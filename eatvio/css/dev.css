@@ -306,6 +306,10 @@ input[type=number] {
   display: block;
 }
 
+.icon-pen-alternate:before {
+  content: "\e95c";
+}
+
 .icon-picture:before {
   content: "\e95b";
 }
@@ -17473,6 +17477,10 @@ body.dark-theme {
   display: block;
 }
 
+.icon-pen-alternate:before {
+  content: "\e95c";
+}
+
 .icon-picture:before {
   content: "\e95b";
 }
@@ -19597,6 +19605,10 @@ body.dark-theme {
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-pen-alternate:before {
+  content: "\e95c";
 }
 
 .icon-picture:before {
@@ -31686,6 +31698,24 @@ body.dark-theme {
     font-size: 1rem;
   }
 }
+.diary__title-btn {
+  margin-top: 0.5rem;
+  border-radius: 6.25rem;
+  background: #f6faff;
+  color: #323f4b;
+  font-size: 0.875rem;
+  border-radius: 6.25rem;
+  padding: 0.375rem;
+  max-width: 14.375rem;
+  width: 100%;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .diary__title-btn:hover {
+    background-color: #c3deff;
+  }
+}
 .diary__back {
   font-size: 0.875rem;
   -webkit-transition: color 0.3s ease 0s;
@@ -31913,6 +31943,63 @@ body.dark-theme {
   .diary__info-icon:hover {
     background: #2f80ed;
     color: #fff;
+  }
+}
+.diary__plan {
+  margin-top: 1.53rem;
+  border-top: 0.0625rem solid #ced4da;
+  border-bottom: 0.0625rem solid #ced4da;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (min-width: 767.98px) {
+  .diary__plan {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 23.125rem;
+    grid-template-columns: 1fr 23.125rem;
+  }
+}
+.diary__plan-title {
+  color: #323f4b;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .diary__plan-title:hover {
+    text-decoration: none;
+  }
+}
+.diary__plan-current {
+  color: #6d6f71;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  border-radius: 0.5rem;
+  background: #f1f2f6;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.375rem 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (min-width: 767.98px) {
+  .diary__plan-current {
+    padding: 0.375rem 1.875rem;
   }
 }
 .diary__main {
@@ -32374,20 +32461,27 @@ body.dark-theme {
   display: none;
   padding: 0.5rem 0.63rem 0;
 }
+.diary__product-item .input.input-sm {
+  width: 100%;
+  padding: 0.25rem 0.625rem;
+  border-color: #2f80ed;
+  font-size: 0.875rem;
+  min-height: 2rem;
+  max-width: 6.0625rem;
+}
 .diary__product-content {
   border-radius: 5px;
   background: #f6faff;
-  padding: 0.5625rem 0.875rem;
+  padding: 1rem;
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 0.25rem;
-  -ms-grid-columns: 50% 1fr auto;
-  grid-template-columns: 50% 1fr auto;
+  -ms-grid-columns: 70% 1fr auto;
+  grid-template-columns: 70% 1fr auto;
   font-weight: 500;
-  letter-spacing: 0.2px;
   min-height: 2.875rem;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
@@ -32397,21 +32491,159 @@ body.dark-theme {
 @media (min-width: 767.98px) {
   .diary__product-content {
     gap: 10px;
-    font-size: 18px;
   }
 }
 .diary__product-content.edited {
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.diary__product-content.removed {
   background: #fff;
   border-radius: 0.3125rem;
   border: 1px dashed #323f4b;
-  background: #fff;
-}
-.diary__product-content.edit {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
 }
 .diary__product-content + .diary__product-comment-body {
   margin-top: 0.5rem;
+}
+.diary__product-details {
+  color: #323f4b;
+}
+.diary__product-details-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+}
+.diary__product-details-stats {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.diary__product-details-stat {
+  color: #6d6f71;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.0125rem;
+  padding: 0.25rem 0.5rem;
+  color: #6d6f71;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.0125rem;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.diary__product-label {
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #2f80ed;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.0125rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+}
+.diary__product-input {
+  margin-top: 0.5rem;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.diary__product-input::before {
+  content: attr(data-unit);
+  color: #6d6f71;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.diary__total-block {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.125rem solid #2f80ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #323f4b;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 0.625rem 1rem;
+}
+@media (min-width: 767.98px) {
+  .diary__total-block {
+    padding: 1.25rem;
+  }
+}
+.diary__total-title {
+  font-weight: 500;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.diary__total-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.diary__total-stat {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.0125rem;
+  border-radius: 0.25rem;
+  background: #f6faff;
+  padding: 0.5rem 0.75rem;
+  color: #2f80ed;
+}
+@media (min-width: 767.98px) {
+  .diary__total-stat {
+    font-size: 0.875rem;
+    color: #6d6f71;
+  }
+}
+.diary__total-num {
+  color: #6d6f71;
+}
+@media (min-width: 767.98px) {
+  .diary__total-num {
+    color: #2f80ed;
+  }
 }
 .diary__product-fields {
   -ms-grid-column-span: 2;
@@ -32533,6 +32765,8 @@ body.dark-theme {
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  font-size: 1rem;
+  color: #6d6f71;
 }
 .diary__product-unit > * {
   -webkit-box-flex: 1;
@@ -32548,21 +32782,6 @@ body.dark-theme {
 @media (min-width: 767.98px) {
   .diary__product-unit.offset-right {
     padding-right: 2rem;
-  }
-}
-.diary__product-unit .input.input-sm {
-  margin-top: -0.175rem;
-  margin-bottom: -0.175rem;
-  width: 100%;
-  padding: 0.25rem 0.625rem;
-  border-color: #2f80ed;
-  font-size: inherit;
-  max-width: 3.375rem;
-  min-height: 2rem;
-}
-@media (min-width: 767.98px) {
-  .diary__product-unit .input.input-sm {
-    max-width: 5.625rem;
   }
 }
 .diary__product-form .textarea {
@@ -32594,27 +32813,23 @@ body.dark-theme {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.625rem;
+  gap: 0.75rem;
 }
 .diary__product-action {
   position: relative;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 1rem;
+  height: 1rem;
 }
-.diary__product-action.icon-close {
-  font-size: 8px;
-  color: #ed2f2f;
-  border-radius: 4px;
-  border: 1px solid currentColor;
+.diary__product-action.icon-trash {
+  color: #8c9196;
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 }
 @media (any-hover: hover) {
-  .diary__product-action.icon-close:hover {
-    color: #fff;
-    background: #ed2f2f;
+  .diary__product-action.icon-trash:hover {
+    color: #ed2f2f;
   }
 }
 .diary__product-action.icon-check, .checkbox__input:checked + .diary__product-action.checkbox__content::before, .chat__item.chat__item-input.submitted .diary__product-action.chat__message-block::before, .diary__product-action.icon-back {
@@ -32625,7 +32840,8 @@ body.dark-theme {
 }
 .diary__product-edit {
   color: #2f80ed;
-  font-size: 20px;
+  width: 1rem;
+  height: 1rem;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
@@ -32801,14 +33017,21 @@ body.dark-theme {
 }
 .diary__product-thumbs {
   margin-top: 0.5rem;
-  display: -ms-grid;
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(3.125rem, 1fr));
 }
 .diary__product-thumb {
   height: 3.125rem;
+  width: 3.125rem;
   aspect-ratio: 1;
+  border: 0.125rem solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.diary__product-thumb.swiper-slide-thumb-active {
+  border-radius: 0.5rem;
+  border: 0.125rem solid #2f80ed;
+  -webkit-box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+          box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
 }
 .diary__product-thumb img {
   border-radius: 0.3125rem;
@@ -32863,11 +33086,11 @@ body.dark-theme {
   }
 }
 .diary__product-prev, .diary__product-next {
-  width: 28px;
-  height: 28px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  background: #2f80ed;
-  color: #fff;
+  background: #fff;
+  color: #29303d;
   padding: 0.0625em 0.125em 0em 0em;
 }
 .diary__product-prev::after, .diary__product-next::after {
@@ -32875,14 +33098,8 @@ body.dark-theme {
 }
 @media (hover: hover) {
   .diary__product-prev, .diary__product-next {
-    opacity: 0.3;
     -webkit-transition: opacity 0.3s ease 0s;
     transition: opacity 0.3s ease 0s;
-  }
-}
-@media (any-hover: hover) {
-  .diary__product-prev:hover, .diary__product-next:hover {
-    opacity: 1;
   }
 }
 .diary__product-next {
@@ -32890,6 +33107,10 @@ body.dark-theme {
 }
 .diary__product-image {
   height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .diary__product-btns {
   position: absolute;
@@ -33471,38 +33692,51 @@ body.dark-theme {
   pointer-events: none;
 }
 .diary__extras {
-  margin: 2em 0em 0em 0em;
-  border-radius: 8px;
+  margin: 1em 0em 0em 0em;
+  border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 1.875em 1.25em 1.25em;
   text-align: center;
+  -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+  padding: 1.25em 0.75em 0.75em;
 }
 @media (min-width: 575.98px) {
   .diary__extras {
-    padding: 1em 4em;
+    margin: 2em 0em 0em 0em;
+    padding: 1.875em;
   }
 }
 .diary__extras .textarea {
-  margin: 1.875em 0em 0em 0em;
-  color: #7b8794;
+  margin: 1rem 0em 0em 0em;
   background: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
+}
+.diary__extras .textarea::-webkit-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+.diary__extras .textarea::-moz-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+.diary__extras .textarea:-ms-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+.diary__extras .textarea::-ms-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+.diary__extras .textarea::placeholder {
+  color: #7b8794;
+  opacity: 1;
 }
 @media (min-width: 575.98px) {
   .diary__extras .textarea {
     margin: 1em 0em 0em 0em;
-    height: 50px;
+    height: 5.375rem;
   }
-}
-.diary__extras-caption {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.diary__extras-caption.lg-caption {
-  font-size: 1.125rem;
 }
 .diary__extras-body {
   margin-top: 1rem;

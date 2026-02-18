@@ -88,6 +88,24 @@
 			font-size: 1rem;
 		}
 	}
+	// .diary__title-btn
+	&__title-btn {
+		margin-top: 0.5rem;
+		border-radius: 6.25rem;
+		background: #f6faff;
+		color: #323f4b;
+		font-size: 0.875rem;
+		border-radius: 6.25rem;
+		padding: 0.375rem;
+		max-width: 14.375rem;
+		width: 100%;
+		transition: background-color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color: #f6faff, $amount: 10);
+			}
+		}
+	}
 	// .diary__back
 	&__back {
 		& span {
@@ -268,7 +286,51 @@
 			}
 		}
 	}
-
+	// .diary__plan
+	&__plan {
+		margin-top: 1.53rem;
+		border-top: rem(1) solid #ced4da;
+		border-bottom: rem(1) solid #ced4da;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1.25rem 0;
+		display: flex;
+		justify-content: space-between;
+		@media (min-width: $md4) {
+			display: grid;
+			grid-template-columns: 1fr 23.125rem;
+		}
+	}
+	// .diary__plan-title
+	&__plan-title {
+		color: #323f4b;
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0.0125rem;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .diary__plan-current
+	&__plan-current {
+		color: #6d6f71;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0.0125rem;
+		border-radius: 0.5rem;
+		background: #f1f2f6;
+		width: fit-content;
+		padding: 0.375rem 1rem;
+		flex-shrink: 0;
+		@media (min-width: $md4) {
+			padding: 0.375rem 1.875rem;
+		}
+	}
 	// .diary__main
 	&__main {
 		background: #fff;
@@ -642,6 +704,14 @@
 			display: none;
 			padding: 0.5rem 0.63rem 0;
 		}
+		.input.input-sm {
+			width: 100%;
+			padding: 0.25rem 0.625rem;
+			border-color: #2f80ed;
+			font-size: 0.875rem;
+			min-height: rem(32);
+			max-width: 6.0625rem;
+		}
 	}
 	// .diary__product-block
 	&__product-block {
@@ -650,30 +720,146 @@
 	&__product-content {
 		border-radius: 5px;
 		background: #f6faff;
-		padding: rem(9) rem(14);
+		padding: rem(16);
 		display: grid;
-		align-items: center;
+		align-items: start;
 		gap: 0.25rem;
-		grid-template-columns: 50% 1fr auto;
+		grid-template-columns: 70% 1fr auto;
 		font-weight: 500;
-		letter-spacing: 0.2px;
 		min-height: rem(46);
 		transition: box-shadow 0.3s ease 0s;
 		@media (min-width: $md4) {
 			gap: 10px;
-			font-size: 18px;
 		}
 		&.edited {
+			grid-template-columns: 1fr auto;
+			align-items: center;
+		}
+		&.removed {
 			background: #fff;
 			border-radius: 0.3125rem;
 			border: 1px dashed #323f4b;
-			background: #fff;
+			align-items: center;
+			grid-template-columns: 1fr auto;
 		}
-		&.edit {
-			box-shadow: none !important;
-		}
+
 		& + .diary__product-comment-body {
 			margin-top: 0.5rem;
+		}
+	}
+	&__product-details {
+		color: #323f4b;
+	}
+	// .diary__product-details-name
+	&__product-details-name {
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0.0125rem;
+	}
+	// .diary__product-details-stats
+	&__product-details-stats {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+	// .diary__product-details-stat
+	&__product-details-stat {
+		color: #6d6f71;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 100%;
+		letter-spacing: 0.0125rem;
+		padding: 0.25rem 0.5rem;
+		color: #6d6f71;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 100%;
+		letter-spacing: 0.0125rem;
+		border-radius: 0.25rem;
+		background: #fff;
+	}
+	&__product-label {
+		margin-top: 0.5rem;
+		border-radius: 0.25rem;
+		background: #fff;
+		color: #2f80ed;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 100%;
+		letter-spacing: 0.0125rem;
+		padding: 0.25rem 0.5rem;
+		display: inline-block;
+	}
+	&__product-input {
+		margin-top: 0.5rem;
+		position: relative;
+		display: inline-flex;
+		&::before {
+			content: attr(data-unit);
+			color: #6d6f71;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 120%;
+			letter-spacing: 0.0125rem;
+			pointer-events: none;
+			position: absolute;
+			top: 50%;
+			right: 0.75rem;
+			transform: translateY(-50%);
+		}
+	}
+	// .diary__total
+	&__total-block {
+		margin-top: 1.5rem;
+		border-radius: 0.5rem;
+		border: rem(2) solid #2f80ed;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #323f4b;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 100%;
+		padding: 0.625rem 1rem;
+		@media (min-width: $md4) {
+			padding: 1.25rem;
+		}
+	}
+	// .diary__total-title
+	&__total-title {
+		font-weight: 500;
+		flex-shrink: 0;
+	}
+	// .diary__total-stats
+	&__total-stats {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+	// .diary__total-stat
+	&__total-stat {
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 100%;
+		letter-spacing: 0.0125rem;
+		border-radius: 0.25rem;
+		background: #f6faff;
+		padding: 0.5rem 0.75rem;
+		color: #2f80ed;
+		@media (min-width: $md4) {
+			font-size: 0.875rem;
+			color: #6d6f71;
+		}
+	}
+	&__total-num {
+		color: #6d6f71;
+		@media (min-width: $md4) {
+			color: #2f80ed;
 		}
 	}
 	&__product-fields {
@@ -784,6 +970,8 @@
 	&__product-unit {
 		display: flex;
 		gap: 0.5rem;
+		font-size: 1rem;
+		color: #6d6f71;
 		& > * {
 			flex: 1 1 50%;
 		}
@@ -796,20 +984,6 @@
 		&.offset-right {
 			@media (min-width: $md4) {
 				padding-right: 2rem;
-			}
-		}
-		.input.input-sm {
-			margin-top: -0.175rem;
-			margin-bottom: -0.175rem;
-			width: 100%;
-			padding: 0.25rem 0.625rem;
-			border-color: #2f80ed;
-			font-size: inherit;
-			max-width: rem(54);
-			min-height: rem(32);
-
-			@media (min-width: $md4) {
-				max-width: 5.625rem;
 			}
 		}
 	}
@@ -836,26 +1010,23 @@
 	&__product-actions {
 		display: flex;
 		align-items: center;
-		gap: rem(10);
+		gap: rem(12);
 	}
 	// .diary__product-action
 	&__product-action {
 		position: relative;
 		flex-shrink: 0;
-		width: 20px;
-		height: 20px;
-		&.icon-close {
-			font-size: 8px;
-			color: #ed2f2f;
-			border-radius: 4px;
-			border: 1px solid currentColor;
+		width: 1rem;
+		height: 1rem;
+
+		&.icon-trash {
+			color: #8c9196;
 			transition:
 				background-color 0.3s ease 0s,
 				color 0.3s ease 0s;
 			@media (any-hover: hover) {
 				&:hover {
-					color: #fff;
-					background: #ed2f2f;
+					color: #ed2f2f;
 				}
 			}
 		}
@@ -869,7 +1040,8 @@
 	}
 	&__product-edit {
 		color: #2f80ed;
-		font-size: 20px;
+		width: 1rem;
+		height: 1rem;
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
@@ -1015,14 +1187,20 @@
 	// .diary__product-thumbs
 	&__product-thumbs {
 		margin-top: rem(8);
-		display: grid;
-		gap: rem(8);
-		grid-template-columns: repeat(auto-fill, minmax(rem(50), 1fr));
 	}
 	// .diary__product-thumb
 	&__product-thumb {
-		height: rem(50);
+		height: 3.125rem;
+		width: 3.125rem;
 		aspect-ratio: 1;
+		border: rem(2) solid transparent;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&.swiper-slide-thumb-active {
+			border-radius: 0.5rem;
+			border: rem(2) solid #2f80ed;
+			box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+		}
 		& img {
 			border-radius: rem(5);
 		}
@@ -1069,24 +1247,18 @@
 	}
 	// .diary__product-prev
 	&__product-prev {
-		width: 28px;
-		height: 28px;
+		width: 2.5rem;
+		height: 2.5rem;
 		border-radius: 50%;
-		background: #2f80ed;
-		color: #fff;
+		background: #fff;
+		color: #29303d;
 		padding: em(1) em(2) em(0) em(0);
 
 		&::after {
 			font-size: 16px;
 		}
 		@media (hover: hover) {
-			opacity: 0.3;
 			transition: opacity 0.3s ease 0s;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				opacity: 1;
-			}
 		}
 	}
 	&__product-next {
@@ -1096,6 +1268,7 @@
 	// .diary__product-image
 	&__product-image {
 		height: auto;
+		user-select: none;
 	}
 	// .diary__product-btns
 	&__product-btns {
@@ -1442,149 +1615,7 @@
 			color: #c82222;
 		}
 	}
-	// // .diary__norm-rows
-	// &__norm-rows {
-	// 	margin: em(30) em(0) em(0) em(0);
-	// 	display: grid;
-	// 	grid-template-columns: repeat(4, 1fr);
-	// 	gap: 10px;
-	// 	@media (min-width: $md5) {
-	// 		display: block;
-	// 		margin: em(40) em(0) em(0) em(0);
-	// 	}
-	// }
 
-	// // .diary__norm-row
-	// &__norm-row {
-	// 	position: relative;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	text-align: center;
-	// 	@media (min-width: $md5) {
-	// 		text-align: left;
-	// 		display: block;
-	// 		&:not(:last-child) {
-	// 			margin: em(0) em(0) em(34) rem(0);
-	// 		}
-	// 	}
-	// }
-
-	// // .diary__norm-caption
-	// &__norm-caption {
-	// 	margin: em(10) em(0) em(0) em(0);
-	// 	order: 1;
-	// 	@media (min-width: $md5) {
-	// 		margin: 0;
-	// 		order: 0;
-	// 		display: grid;
-	// 		grid-template-columns: 120px 1fr auto;
-	// 		align-items: center;
-	// 	}
-	// }
-	// &__norm-star {
-	// 	align-self: end;
-	// 	line-height: 0.1;
-	// }
-	// // .diary__norm-name
-	// &__norm-name {
-	// 	font-size: 15px;
-	// 	font-weight: 500;
-	// 	letter-spacing: 0.2px;
-	// 	@media (min-width: $md5) {
-	// 		font-size: 20px;
-	// 		margin: em(0) em(30) em(0) em(0);
-	// 	}
-	// }
-	// // .diary__norm-unit
-	// &__norm-unit {
-	// 	font-size: 10px;
-	// 	font-weight: 300;
-	// 	line-height: 120%;
-	// 	letter-spacing: 0.2px;
-	// 	@media (min-width: $md5) {
-	// 		font-size: 16px;
-	// 		font-weight: 400;
-	// 	}
-	// }
-	// &__norm-star {
-	// 	color: #ff3d3d;
-	// 	font-weight: 500;
-	// 	letter-spacing: 0.2px;
-	// 	position: absolute;
-	// 	top: 20px;
-	// 	right: 10px;
-	// 	font-size: 23px;
-	// 	@media (min-width: $md5) {
-	// 		font-size: 40px;
-	// 		position: static;
-	// 	}
-	// }
-	// &__norm-bar {
-	// 	margin: rem(17) em(0) em(0) em(0);
-	// 	position: relative;
-	// 	height: 140px;
-	// 	width: 100%;
-	// 	transform: rotate(-90deg);
-	// 	@media (min-width: $md5) {
-	// 		transform: none;
-	// 		height: auto;
-	// 	}
-	// }
-	// // .diary__norm-progress
-	// &__norm-progress {
-	// 	display: block;
-	// 	border-radius: 5px;
-	// 	vertical-align: 0;
-	// 	width: 140px;
-	// 	transform: translate(-50%, -50%);
-	// 	position: absolute;
-	// 	left: 50%;
-	// 	top: 50%;
-	// 	@media (min-width: $md5) {
-	// 		position: static;
-	// 		transform: none;
-	// 		height: 18px;
-	// 		width: 100%;
-	// 	}
-	// 	background: #fff;
-	// 	border: 1px solid #e6e6e6;
-
-	// 	&::-webkit-progress-bar {
-	// 		border-radius: 5px;
-	// 		background: #fff;
-	// 	}
-	// 	&::-webkit-progress-value {
-	// 		border-radius: 5px;
-	// 		background: var(--progress-color, #4dce20);
-	// 	}
-	// 	&::-moz-progress-bar {
-	// 		border-radius: 5px;
-	// 		background: var(--progress-color, #4dce20);
-	// 	}
-	// 	&.diary__norm-progress-yellow {
-	// 		--progress-color: #fce72a;
-	// 	}
-	// 	&.diary__norm-progress-green {
-	// 		--progress-color: #4dce20;
-	// 	}
-	// 	&.diary__norm-progress-red {
-	// 		--progress-color: #ff3e3e;
-	// 	}
-	// 	&.diary__norm-progress-darkred {
-	// 		--progress-color: #cd1414;
-	// 	}
-	// }
-	// &__norm-footer {
-	// 	margin: rem(20) em(0) em(0) em(0);
-	// 	text-align: center;
-	// 	font-size: 12px;
-	// 	font-weight: 500;
-	// 	letter-spacing: 0.2px;
-	// 	@media (min-width: $md5) {
-	// 		display: none;
-	// 	}
-	// }
 	// .diary__spoller
 	&__spoller {
 		margin: em(32) em(0) em(0) em(0);
@@ -1721,34 +1752,34 @@
 	}
 	// .diary__extras
 	&__extras {
-		margin: em(32) em(0) em(0) em(0);
-		border-radius: 8px;
+		margin: em(16) em(0) em(0) em(0);
+		border-radius: 0.5rem;
 		background: #fff;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-		padding: em(30) em(20) em(20);
-		@media (min-width: $md5) {
-			padding: em(16) em(64);
-		}
 		text-align: center;
+		box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.15);
+		padding: em(20) em(12) em(12);
+		@media (min-width: $md5) {
+			margin: em(32) em(0) em(0) em(0);
+			padding: em(30);
+		}
+
 		.textarea {
-			margin: em(30) em(0) em(0) em(0);
-			color: #7b8794;
+			margin: rem(16) em(0) em(0) em(0);
 			background: #fff;
-			font-size: 14px;
+			font-size: 1rem;
 			font-weight: 500;
+			&::placeholder {
+				color: #7b8794;
+				opacity: 1;
+			}
 			@media (min-width: $md5) {
 				margin: em(16) em(0) em(0) em(0);
-				height: 50px;
+				height: rem(86);
 			}
 		}
 	}
 	// .diary__extras-caption
 	&__extras-caption {
-		font-size: 1rem;
-		font-weight: 600;
-		&.lg-caption {
-			font-size: 1.125rem;
-		}
 	}
 	// .diary__extras-body
 	&__extras-body {
