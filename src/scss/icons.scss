@@ -17,6 +17,7 @@
 		display: block;
 	}
 }
+
 .icon-gallery:before {
 	content: "\e95e";
 }
@@ -25,6 +26,9 @@
 }
 .icon-pen-alternate:before {
 	content: "\e95c";
+}
+.icon-send-alternate:before {
+	content: "\e961";
 }
 .icon-message-alternate-fill:before {
 	content: "\e960";

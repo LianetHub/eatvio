@@ -1,165 +1,183 @@
 <div class="comment-block">
-    <div class="comment-block__caption title">
-        Комментарии пользователей
+    <div class="comment-block__caption title icon-message-alternate">
+        Комментарии
     </div>
-    <form action="#" class="comment-block__form">
-        <textarea name="message" class="textarea textarea-white" placeholder="Оставить свой комментарий"></textarea>
-        <button type="submit" class="l-btn l-btn-primary l-btn-sm">Оставить отзыв</button>
-    </form>
-    <div class="comment-block__body">
-        <div class="comment-block__item">
-            <div class="comment-block__item-main">
-                <div class="comment-block__item-thumb">
-                    <img src="@img/user-2.png" class="cover-image" alt="thumb">
-                </div>
-                <div class="comment-block__item-body">
-                    <div class="comment-block__item-header">
-                        <div class="comment-block__item-name">
-                            Артём
-                        </div>
-                    </div>
-                    <div class="comment-block__item-message">
-                        Отличный рецепт, простой, быстрый и очень сытный!
-                    </div>
-                    <div class="comment-block__item-footer">
-                        <div class="comment-block__item-time">
-                            Вчера в 10:25
-                        </div>
-                    </div>
-                </div>
-                <button class="comment-block__item-answer icon-send">
-                    <span class="pc-only">
-                        Ответить
-                    </span>
-                </button>
-            </div>
+
+    <div class="comment-block__column">
+        <div class="comment-block__thumb">
+            <img src="@img/user-2.png" class="cover-image" alt="thumb">
         </div>
-        <div class="comment-block__item">
-            <div class="comment-block__item-main">
-                <div class="comment-block__item-thumb">
-                    <img src="@img/user-2.png" class="cover-image" alt="thumb">
-                </div>
-                <div class="comment-block__item-body">
-                    <div class="comment-block__item-header">
-                        <div class="comment-block__item-name">
-                            Елана
-                        </div>
+
+        <div class="comment-block__body">
+            <form action="#" class="comment-block__form">
+                <textarea name="message" class="textarea" placeholder="Написать комментарий..."></textarea>
+                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+            </form>
+
+            <div class="comment-block__list">
+
+                <div class="comment-block__item">
+                    <div class="comment-block__thumb">
+                        <img src="@img/user-5.png" class="cover-image" alt="thumb">
                     </div>
-                    <div class="comment-block__item-message">
-                        Отличный рецепт, простой, быстрый и очень сытный!
-                    </div>
-                    <div class="comment-block__item-footer">
-                        <div class="comment-block__item-time">
-                            Вчера в 10:25
-                        </div>
-                    </div>
-                </div>
-                <button class="comment-block__item-answer icon-send">
-                    <span class="pc-only">
-                        Ответить
-                    </span>
-                </button>
-            </div>
-            <div class="comment-block__item-discussion">
-                <div class="comment-block__item-row">
-                    <div class="comment-block__item-thumb">
-                        <img src="@img/user-8.png" class="cover-image" alt="thumb">
-                    </div>
-                    <div class="comment-block__item-body">
-                        <div class="comment-block__item-header">
-                            <div class="comment-block__item-name">
-                                Елана
+                    <div class="comment-block__body">
+                        <div class="comment-block__message">
+                            <div class="comment-block__message-baloon">
+                                <div class="comment-block__message-caption">Мария К.</div>
+                                <div class="comment-block__message-text">Отличные советы! 🔥 Начала применять — уже вижу первые результаты. Особенно помогает совет про контроль порций.</div>
+                                <div class="comment-block__message-details">
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                    <div class="comment-block__message-actions">
+                                        <button type="button">Редактировать</button>
+                                        <button type="button">Удалить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-block__message-stats">
+                                <div class="comment-block__message-time">1 час назад</div>
+                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
+                                <button type="button" class="comment-block__answer">Ответить</button>
+                            </div>
+
+                            <div class="comment-block__discussion">
+                                <div class="comment-block__item">
+                                    <div class="comment-block__thumb">
+                                        <img src="@img/user-5.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="comment-block__body">
+                                        <div class="comment-block__message">
+                                            <div class="comment-block__message-baloon">
+                                                <div class="comment-block__message-caption">Анна Здоровье</div>
+                                                <div class="comment-block__message-text">Рада, что помогает! 💪 Продолжай в том же духе, результаты обязательно будут!</div>
+                                                <div class="comment-block__message-details">
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                    <div class="comment-block__message-actions">
+                                                        <button type="button">Пожаловаться</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-block__message-stats">
+                                                <div class="comment-block__message-time">45 мин назад</div>
+                                                <button type="button" class="comment-block__message-heart icon-heart">8</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment-block__item">
+                                    <div class="comment-block__thumb">
+                                        <img src="@img/user-8.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="comment-block__body">
+                                        <div class="comment-block__message">
+                                            <div class="comment-block__message-baloon">
+                                                <div class="comment-block__message-caption">Дмитрий С.</div>
+                                                <div class="comment-block__message-text">Согласен! Порции — это ключ. Я тоже так начинал.</div>
+                                                <div class="comment-block__message-details">
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                </div>
+                                            </div>
+                                            <div class="comment-block__message-stats">
+                                                <div class="comment-block__message-time">30 мин назад</div>
+                                                <button type="button" class="comment-block__message-heart icon-heart">3</button>
+                                                <button type="button" class="comment-block__answer">Ответить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment-block__item">
+                                    <div class="comment-block__thumb">
+                                        <img src="@img/user-7.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="comment-block__body">
+                                        <div class="comment-block__message">
+                                            <div class="comment-block__message-baloon">
+                                                <div class="comment-block__message-caption">Егор Б. <span>В ответ @Анна Здоровье</span></div>
+                                                <div class="comment-block__message-text">Ответ на ответ комментария</div>
+                                                <div class="comment-block__message-details">
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                </div>
+                                            </div>
+                                            <div class="comment-block__message-stats">
+                                                <div class="comment-block__message-time">30 мин назад</div>
+                                                <button type="button" class="comment-block__message-heart icon-heart">3</button>
+                                                <button type="button" class="comment-block__answer">Ответить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="comment-block__item-message">
-                            Lorem ipsum dolor sit amet consectetur. Lectus ut massa arcu proin luctus imperdiet pulvinar arcu iaculis. Pharetra eu ipsum blandit viverra in elementum.
-                        </div>
-                        <div class="comment-block__item-footer">
-                            <div class="comment-block__item-time">
-                                Вчера в 10:25
-                            </div>
-                            <button class="comment-block__item-write">Ответить</button>
-                        </div>
                     </div>
                 </div>
-                <div class="comment-block__item-row">
-                    <div class="comment-block__item-thumb">
+
+                <div class="comment-block__item">
+                    <div class="comment-block__thumb">
                         <img src="@img/user-3.png" class="cover-image" alt="thumb">
                     </div>
-                    <div class="comment-block__item-body">
-                        <div class="comment-block__item-header">
-                            <div class="comment-block__item-name">
-                                Валентин
+                    <div class="comment-block__body">
+                        <div class="comment-block__message">
+                            <div class="comment-block__message-baloon">
+                                <div class="comment-block__message-caption">Елена П.</div>
+                                <div class="comment-block__message-text">А сколько времени заняло, чтобы увидеть первые результаты? Я только начинаю свой путь и хочется понимать примерные сроки.</div>
+                                <div class="comment-block__message-details">
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                </div>
                             </div>
-                            <div class="comment-block__item-rewrite">
-                                Ответил Игорю
+                            <div class="comment-block__message-stats">
+                                <div class="comment-block__message-time">1 час назад</div>
+                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
+                                <button type="button" class="comment-block__answer">Ответить</button>
+                            </div>
+                            <div class="comment-block__discussion">
+                                <div class="comment-block__item">
+                                    <div class="comment-block__thumb">
+                                        <img src="@img/user.png" class="cover-image" alt="thumb">
+                                    </div>
+                                    <div class="comment-block__body">
+                                        <div class="comment-block__message">
+                                            <div class="comment-block__message-baloon">
+                                                <div class="comment-block__message-caption">Анна Здоровье</div>
+                                                <div class="comment-block__message-text">Первые изменения заметила через 2-3 недели! Главное — не опускать руки и быть последовательной 😊</div>
+                                                <div class="comment-block__message-details">
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                </div>
+                                            </div>
+                                            <div class="comment-block__message-stats">
+                                                <div class="comment-block__message-time">45 мин назад</div>
+                                                <button type="button" class="comment-block__message-heart icon-heart">8</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="comment-block__item-message">
-                            Lorem ipsum dolor sit amet consectetur. Lectus ut massa arcu proin luctus imperdiet pulvinar arcu iaculis. Pharetra eu ipsum blandit viverra in elementum.
-                        </div>
-                        <div class="comment-block__item-footer">
-                            <div class="comment-block__item-time">
-                                Вчера в 10:25
+                    </div>
+                </div>
+
+                <div class="comment-block__item">
+                    <div class="comment-block__thumb">
+                        <img src="@img/user-2.png" class="cover-image" alt="thumb">
+                    </div>
+                    <div class="comment-block__body">
+                        <div class="comment-block__message">
+                            <div class="comment-block__message-baloon">
+                                <div class="comment-block__message-caption">Игорь М.</div>
+                                <div class="comment-block__message-text">Про сон — очень важное замечание! Раньше не понимал, почему вес стоит, пока не начал спать по 7-8 часов.</div>
+                                <div class="comment-block__message-details">
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                </div>
                             </div>
-                            <button class="comment-block__item-write">Ответить</button>
+                            <div class="comment-block__message-stats">
+                                <div class="comment-block__message-time">1 час назад</div>
+                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
+                                <button type="button" class="comment-block__answer">Ответить</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="comment-block__item">
-            <div class="comment-block__item-main">
-                <div class="comment-block__item-thumb">
-                    <img src="@img/user-5.png" class="cover-image" alt="thumb">
-                </div>
-                <div class="comment-block__item-body">
-                    <div class="comment-block__item-header">
-                        <div class="comment-block__item-name">
-                            Павел
-                        </div>
-                    </div>
-                    <div class="comment-block__item-message">
-                        Отличный рецепт, простой, быстрый и очень сытный!
-                    </div>
-                    <div class="comment-block__item-footer">
-                        <div class="comment-block__item-time">
-                            Вчера в 10:25
-                        </div>
-                    </div>
-                </div>
-                <button class="comment-block__item-answer icon-send">
-                    <span class="pc-only">
-                        Ответить
-                    </span>
-                </button>
-            </div>
-        </div>
-        <div class="comment-block__item">
-            <div class="comment-block__item-main">
-                <div class="comment-block__item-thumb">
-                    <img src="@img/user-7.png" class="cover-image" alt="thumb">
-                </div>
-                <div class="comment-block__item-body">
-                    <div class="comment-block__item-header">
-                        <div class="comment-block__item-name">
-                            Сергей
-                        </div>
-                    </div>
-                    <div class="comment-block__item-message">
-                        Отличный рецепт, простой, быстрый и очень сытный!
-                    </div>
-                    <div class="comment-block__item-footer">
-                        <div class="comment-block__item-time">
-                            Вчера в 10:25
-                        </div>
-                    </div>
-                </div>
-                <button class="comment-block__item-answer icon-send">
-                    <span class="pc-only">
-                        Ответить
-                    </span>
-                </button>
+
             </div>
         </div>
     </div>
