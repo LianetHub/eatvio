@@ -353,7 +353,15 @@ input[type=number] {
   display: block;
 }
 
-.icon-download-fill:before {
+.icon-moon:before {
+  content: "\e959";
+}
+
+.icon-sun:before {
+  content: "\e95a";
+}
+
+.icon-dowload-fill:before {
   content: "\e958";
 }
 

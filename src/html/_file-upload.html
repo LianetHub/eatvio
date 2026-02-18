@@ -1,11 +1,22 @@
 <label class="file @@className">
     <input type="file" name="file" class="file__input hidden" hidden>
     <span class="file__content">
-        <span class="file__formats">
-            <img src="@img/logo-gray.svg" alt="logo">
-        </span>
+        <span class="file__add icon-plus"></span>
+        @@if(typeof title !== 'undefined') {
         <span class="file__title">
             @@title
         </span>
+        }
+        @@if(typeof desc !== 'undefined') {
+        <span class="file__desc">
+            @@desc
+        </span>
+        }
+        @@if(typeof formats !== 'undefined') {
+        <span class="file__formats icon-">
+            @@formats
+        </span>
+        }
+
     </span>
 </label>

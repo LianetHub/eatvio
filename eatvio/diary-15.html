@@ -511,26 +511,60 @@
                         <div class="diary__main">
                             <div class="diary__main-header">
     <div class="diary__main-column">
-        <div class="label tablet-only">
+        <div class="label">
             Прием пищи
         </div>
-        <div class="select">
-            <select>
-                <option value="1" selected>1 приём</option>
-                <option value="2">2 приём</option>
-                <option value="3">3 приём</option>
-            </select>
+        <div class="diary__options">
+            <label class="diary__option">
+                <input type="radio" checked name="ccal" value="1" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">1</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
+            <label class="diary__option">
+                <input type="radio" name="ccal" value="2" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">2</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
+            <label class="diary__option">
+                <input type="radio" name="ccal" value="3" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">3</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
+            <label class="diary__option">
+                <input type="radio" name="ccal" value="4" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">4</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
+            <label class="diary__option">
+                <input type="radio" name="ccal" value="5" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">5</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
+            <label class="diary__option">
+                <input type="radio" name="ccal" value="6" class="diary__option-input hidden" hidden>
+                <span class="diary__option-btn">
+                    <span class="diary__option-field">6</span>
+                    <span class="diary__option-hint">— ккал</span>
+                </span>
+            </label>
         </div>
     </div>
     <div class="diary__main-column">
-        <div class="label">
+        <div class="label icon-clock">
             Время приема пищи
         </div>
         <div class="diary__main-row">
-            <div class="diary__main-block icon-clock">
-                <span class="diary__main-block-title">
-                    Часы
-                </span>
+            <div class="diary__option">
                 <div class="select">
                     <select>
                         <option value="01">01</option>
@@ -543,7 +577,7 @@
                         <option value="08">08</option>
                         <option value="09">09</option>
                         <option value="10">10</option>
-                        <option value="11" selected>11</option>
+                        <option value="11">11</option>
                         <option value="12">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
@@ -555,15 +589,13 @@
                         <option value="20">20</option>
                         <option value="21">21</option>
                         <option value="22">22</option>
-                        <option value="23">23</option>
+                        <option value="23" selected>23</option>
                         <option value="24">24</option>
                     </select>
                 </div>
             </div>
-            <div class="diary__main-block">
-                <span class="diary__main-block-title">
-                    Минуты
-                </span>
+            <div class="diary__option-separator">:</div>
+            <div class="diary__option">
                 <div class="select">
                     <select>
                         <option value="01">01</option>
@@ -576,7 +608,7 @@
                         <option value="08">08</option>
                         <option value="09">09</option>
                         <option value="10">10</option>
-                        <option value="11" selected>11</option>
+                        <option value="11">11</option>
                         <option value="12">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
@@ -613,7 +645,7 @@
                         <option value="45">45</option>
                         <option value="46">46</option>
                         <option value="47">47</option>
-                        <option value="48">48</option>
+                        <option value="48" selected>48</option>
                         <option value="49">49</option>
                         <option value="50">50</option>
                         <option value="51">51</option>
@@ -633,28 +665,22 @@
     </div>
 </div>
 <div class="diary__main-filters">
-    <div class="diary__main-filter">
-        <input type="text" name="product-name" class="input input-white" placeholder="Введите название продукта">
-        
-    </div>
-    <div class="diary__main-filter">
-        <input type="text" name="quantity" class="input input-white" placeholder="Кол-во">
-        
-    </div>
-    <div class="diary__main-side">
+    <div class="diary__main-column">
         <div class="diary__main-filter">
-            <div class="select">
-                <select >
-                    <option value="0">Порция</option>
-                    <option value="1">грамм</option>
-                    <option value="2">шт</option>
-                </select>
-            </div>
+            <input type="text" name="product-name" class="input input-white" placeholder="Введите название продукта">
             
         </div>
-        <a href="#product" data-modal class="diary__main-btn l-btn l-btn-primary l-btn-sm l-btn-fullwidth">
-            Добавить продукт
-        </a>
+    </div>
+    <div class="diary__main-column">
+        <div class="diary__main-grid">
+            <div class="diary__main-filter" data-unit="Гр">
+                <input type="text" name="quantity" class="input input-white" placeholder="Кол-во">
+                
+            </div>
+            <a href="#product" data-modal class="diary__main-btn l-btn l-btn-primary l-btn-sm l-btn-fullwidth">
+                Добавить продукт
+            </a>
+        </div>
     </div>
 </div>
                             <div class="diary__main-bottom">
@@ -786,9 +812,13 @@
         <span class="file__formats">
             <img src="img/logo-gray.svg" alt="logo">
         </span>
+        
         <span class="file__title">
             Добавьте изображение
         </span>
+        
+        
+
     </span>
 </label>
                                 </div>

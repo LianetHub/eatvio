@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src: url('fonts/icons.eot?md1kdm');
-  src: url('fonts/icons.eot?md1kdm#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?md1kdm') format('truetype'),
-    url('fonts/icons.woff?md1kdm') format('woff'),
-    url('fonts/icons.svg?md1kdm#icons') format('svg');
+  src: url('fonts/icons.eot?48m00o');
+  src: url('fonts/icons.eot?48m00o#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?48m00o') format('truetype'),
+    url('fonts/icons.woff?48m00o') format('woff'),
+    url('fonts/icons.svg?48m00o#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,7 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-download-fill:before {
+.icon-moon:before {
+  content: "\e959";
+}
+
+.icon-sun:before {
+  content: "\e95a";
+}
+
+.icon-dowload-fill:before {
   content: "\e958";
 }
 
