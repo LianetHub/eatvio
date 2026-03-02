@@ -46,6 +46,7 @@
 	&__grid {
 		display: grid;
 		gap: 1.25rem;
+
 		@media (min-width: $md3) {
 			grid-template-columns: 1fr 23.625rem;
 		}
@@ -56,8 +57,8 @@
 		border-radius: 0.5rem;
 		border: rem(1) solid #e2e5e9;
 		background: #fff;
-		box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
-		padding: 1.25rem;
+		box-shadow: 0 rem(4) rem(20) rem(-4) rgba(0, 0, 0, 0.15);
+		padding: 1rem;
 		border-radius: 0.75rem;
 	}
 
@@ -68,11 +69,13 @@
 
 	&__field {
 		margin-bottom: 1.25rem;
+
 		&:last-child {
 			flex: 1 1 auto;
 			margin-bottom: 0;
 			display: flex;
 			flex-direction: column;
+
 			.input {
 				flex: 1 1 auto;
 			}
@@ -121,6 +124,7 @@
 		font-weight: 500;
 		padding-left: 1.75rem;
 		position: relative;
+
 		&::before {
 			position: absolute;
 			top: 0;
@@ -161,13 +165,30 @@
 			width: 100%;
 		}
 	}
+
 	// .post-creating__slider
 	&__slider {
 		position: relative;
 		min-width: 0;
-		border-radius: 8px;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		border-radius: rem(8);
+		box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.15);
 	}
+
+	&__slider-label {
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: 100%;
+		position: absolute;
+		top: rem(12);
+		left: rem(12);
+		background: #2F80ED;
+		color: #fff;
+		padding: rem(4) rem(12);
+		border-radius: rem(4);
+		z-index: 2;
+
+	}
+
 	// .post-creating__remove
 	&__remove {
 		position: absolute;
@@ -186,6 +207,7 @@
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
@@ -193,11 +215,13 @@
 			}
 		}
 	}
+
 	// .post-creating__image
 	&__image {
 		height: auto;
 		user-select: none;
 	}
+
 	// .post-creating__prev
 	&__prev {
 		width: 2.5rem;
@@ -210,21 +234,25 @@
 		&::after {
 			font-size: 16px;
 		}
+
 		@media (hover: hover) {
 			transition: opacity 0.3s ease 0s;
 		}
 	}
+
 	// .post-creating__next
 	&__next {
 		@extend .post-creating__prev;
 		padding: em(1) em(0) em(0) em(2);
 	}
+
 	&__thumbs {
 		margin-top: 0.75rem;
 		display: flex;
 		flex-wrap: wrap;
 		gap: rem(8);
 	}
+
 	&__thumb {
 		height: 3.125rem;
 		width: 3.125rem;
@@ -233,15 +261,18 @@
 		border: rem(2) solid transparent;
 		transition: all 0.3s ease 0s;
 		cursor: pointer;
-		&.swiper-slide-thumb-active {
+
+		&.active {
 			border-radius: 0.5rem;
 			border: rem(2) solid #2f80ed;
 			box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
 		}
+
 		& img {
 			border-radius: rem(5);
 		}
 	}
+
 	&__add {
 		border-radius: 0.3125rem;
 		background: #f1f2f6;
@@ -251,6 +282,7 @@
 		aspect-ratio: 1;
 		height: 3.125rem;
 		width: 3.125rem;
+
 		&::before {
 			padding: 0.375rem;
 			background: #fff;

@@ -61,9 +61,9 @@
   border-radius: 0.5rem;
   border: 0.0625rem solid #e2e5e9;
   background: #fff;
-  -webkit-box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
-  padding: 1.25rem;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.25rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.25rem 1.25rem -0.25rem rgba(0, 0, 0, 0.15);
+  padding: 1rem;
   border-radius: 0.75rem;
 }
 
@@ -214,9 +214,23 @@
 .post-creating__slider {
   position: relative;
   min-width: 0;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.post-creating__slider-label {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 100%;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #2F80ED;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  z-index: 2;
 }
 
 .post-creating__remove {
@@ -292,7 +306,7 @@
   cursor: pointer;
 }
 
-.post-creating__thumb.swiper-slide-thumb-active {
+.post-creating__thumb.active {
   border-radius: 0.5rem;
   border: 0.125rem solid #2f80ed;
   -webkit-box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
