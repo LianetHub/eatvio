@@ -18,6 +18,10 @@
   display: block;
 }
 
+.icon-complaint:before {
+  content: "\e963";
+}
+
 .icon-gallery:before {
   content: "\e95e";
 }

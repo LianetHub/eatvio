@@ -1,5 +1,6 @@
 .post-creating {
   margin-top: 1.5rem;
+  padding-bottom: 3.75rem;
 }
 
 .post-creating .input {
@@ -339,6 +340,13 @@
   background: #fff;
   color: #2f80ed;
   border-radius: 50%;
+}
+
+@media (min-width: 767.98px) {
+  .post-creating__main,
+  .post-creating__side-block {
+    padding: 1.25rem;
+  }
 }
 
 @media (min-width: 991.98px) {

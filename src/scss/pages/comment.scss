@@ -1,16 +1,20 @@
 @use "sass:math";
+@use "../icons";
 @import "../config.scss";
 
 .comment-block {
 	margin-top: 1.5rem;
 	padding: rem(24);
 	background: #fff;
+	border-radius: rem(8);
+
 	// .comment-block__caption
 	&__caption {
 		display: flex;
 		align-items: center;
 		gap: rem(8);
 		font-weight: 700;
+
 		&::before {
 			width: 1.25rem;
 			height: 1.25rem;
@@ -23,10 +27,12 @@
 			text-align: center;
 		}
 	}
+
 	// .comment-block__form
 	&__form {
 		position: relative;
 		border-radius: 0.5rem;
+
 		.textarea {
 			height: rem(93);
 			border: rem(1) solid #e2e5e9;
@@ -34,6 +40,7 @@
 			border-radius: 0.5rem;
 		}
 	}
+
 	&__form-submit {
 		position: absolute;
 		bottom: 0.94rem;
@@ -48,6 +55,7 @@
 		background: rgba($color: #2f80ed, $alpha: 0.6);
 		color: #fff;
 		transition: background-color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: #2f80ed;
@@ -62,10 +70,12 @@
 		gap: 0.75rem;
 		align-items: flex-start;
 		flex-direction: column;
+
 		@media (min-width: $md5) {
 			flex-direction: row;
 		}
 	}
+
 	// .comment-block__thumb
 	&__thumb {
 		width: 2.5rem;
@@ -74,51 +84,65 @@
 		border-radius: 50%;
 		border: rem(1) solid #f9fafb;
 		overflow: hidden;
+
 		& img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
 	}
+
 	// .comment-block__body
 	&__body {
 		flex: 1 1 auto;
 	}
 
 	// .comment-block__form
-	&__form {
-	}
+	&__form {}
+
 	// .comment-block__form-submit
-	&__form-submit {
-	}
+	&__form-submit {}
+
 	// .comment-block__list
 	&__list {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		margin-top: 1.25rem;
+
 		@media (min-width: $md4) {
 			margin-top: 1.81rem;
 		}
 	}
+
 	// .comment-block__item
 	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		gap: rem(8);
+
+		@media (min-width:$md4) {
+			gap: rem(12);
+
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 0.25rem;
 		}
+
 		@media (min-width: $md5) {
 			flex-direction: row;
+
 			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
 		}
 	}
+
 	// .comment-block__message
-	&__message {
-	}
+	&__message {}
+
 	// .comment-block__message-baloon
 	&__message-baloon {
 		border-radius: 0.5rem;
@@ -128,6 +152,7 @@
 		position: relative;
 		padding: 0.75rem;
 	}
+
 	// .comment-block__message-caption
 	&__message-caption {
 		color: #323f4b;
@@ -135,6 +160,7 @@
 		font-weight: 700;
 		line-height: 120%;
 	}
+
 	// .comment-block__message-text
 	&__message-text {
 		margin-top: 0.5rem;
@@ -142,6 +168,7 @@
 		line-height: 130%;
 		max-width: 40rem;
 	}
+
 	// .comment-block__message-details
 	&__message-details {
 		position: absolute;
@@ -157,6 +184,7 @@
 			}
 		}
 	}
+
 	// .comment-block__message-btn
 	&__message-btn {
 		width: rem(40);
@@ -167,6 +195,7 @@
 		font-size: 2.5rem;
 		color: #737b8c;
 	}
+
 	// .comment-block__message-actions
 	&__message-actions {
 		position: absolute;
@@ -176,8 +205,9 @@
 		background: #fff;
 		box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
 		padding: rem(10);
-		font-size: 14px;
+		font-size: rem(14);
 		line-height: math.div(18, 14);
+		gap: rem(8);
 		min-width: fit-content;
 		white-space: nowrap;
 		opacity: 0;
@@ -187,16 +217,46 @@
 		flex-direction: column;
 		align-items: flex-start;
 		text-align: left;
+
+		&::before {
+			display: flex;
+			flex-shrink: 0;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			text-align: center;
+			width: rem(12);
+			height: rem(12);
+		}
+
 		&.active {
 			opacity: 1;
 			visibility: visible;
 		}
+
 		button {
+			display: flex;
+			align-items: center;
+			gap: rem(6);
+
+
+			&.icon-pen-alternate {
+				&::before {
+					color: #2F80ED;
+				}
+			}
+
+			&.icon-trash,
+			&.icon-complaint {
+				color: #E64646;
+			}
+
 			&:not(:last-child) {
 				margin: em(0) em(0) rem(8) rem(0);
 			}
 		}
 	}
+
 	// .comment-block__message-stats
 	&__message-stats {
 		margin-top: 0.375rem;
@@ -206,22 +266,39 @@
 		color: #6d6f71;
 		font-size: 0.75rem;
 		line-height: 130%;
+		padding-left: rem(12);
+
+		@media (min-width:$md4) {
+			padding-left: rem(8);
+
+		}
 	}
+
 	// .comment-block__message-time
-	&__message-time {
-	}
+	&__message-time {}
+
 	// .comment-block__message-heart
 	&__message-heart {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.19rem;
+
+		&.active {
+			color: $red;
+
+			&::before {
+				@extend %ic, .icon-heart-fill;
+			}
+		}
 	}
+
 	// .comment-block__answer
-	&__answer {
-	}
+	&__answer {}
+
 	// .comment-block__discussion
 	&__discussion {
 		margin-top: 1.31rem;
+
 		@media (max-width: $md5) {
 			padding-left: 1.25rem;
 		}

@@ -212,6 +212,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches('[data-announcement-action]')) {
             e.target.classList.toggle('active');
         }
+
+        if (e.target.matches('.comment-block__message-heart')) {
+            e.target.classList.toggle('active');
+
+            if (e.target.classList.contains('active')) {
+                +e.target.textContent++
+            } else {
+                +e.target.textContent--
+            }
+        }
+
+        if (e.target.matches('.comment-block__message-btn')) {
+            e.target.classList.toggle('active');
+            e.target.nextElementSibling?.classList.toggle('active');
+        }
     })
 
     if (document.querySelector('.content__recipes-select')) {

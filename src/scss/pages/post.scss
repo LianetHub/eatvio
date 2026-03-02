@@ -3,6 +3,7 @@
 
 .post-creating {
 	margin-top: 1.5rem;
+	padding-bottom: rem(60);
 
 	.input {
 		border: 1px solid #e2e5e9;
@@ -60,6 +61,10 @@
 		box-shadow: 0 rem(4) rem(20) rem(-4) rgba(0, 0, 0, 0.15);
 		padding: 1rem;
 		border-radius: 0.75rem;
+
+		@media (min-width:$md4) {
+			padding: 1.25rem;
+		}
 	}
 
 	&__main {
