@@ -2108,20 +2108,49 @@
 	// .diary__extras-caption
 	&__extras-caption {}
 
+	// .diary__extras-text
+	&__extras-text {
+		margin-top: 1.5rem;
+		border-radius: 0.5rem;
+		background: #FFFDD8;
+		color: #323F4B;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 120%;
+		padding: 0.875rem 0.9375rem;
+		text-align: left;
+	}
+
 	// .diary__extras-body
 	&__extras-body {
 		margin-top: rem(16);
 		font-weight: 700;
 	}
 
+	// .diary__btns
 	&__btns {
 		margin: em(32) em(0) em(0) em(0);
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 30px;
+		gap: 1rem;
+
+		@media (min-width:$md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
 		.diary__btn {
 			margin: 0;
+		}
+	}
+
+	// .diary__action
+	&__action {
+		@media (min-width:$md4) {
+			text-transform: uppercase;
+
+		}
+
+		&.l-btn-gray {
+			color: #323F4B;
 		}
 	}
 
@@ -2147,6 +2176,10 @@
 		padding: 1.5rem;
 
 		&.diary__comment-meal {
+			margin-top: 2.56rem;
+			padding-top: 2rem !important;
+			border-top: rem(1) solid #CED4DA;
+
 			&:not(.selected) {
 				padding: 0;
 				box-shadow: none;
@@ -2222,9 +2255,12 @@
 			margin-top: 1.25rem;
 		}
 
-		height: 6.25rem;
+		height: rem(123);
 		font-size: 1rem;
 		font-weight: 700;
+		border-radius: 0.5rem;
+		border: rem(1) solid #CED4DA;
+		background: #F9FAFB;
 	}
 
 	// .diary__comment-body
@@ -2254,6 +2290,10 @@
 		gap: 1rem;
 		flex-direction: column;
 
+		.diary__comment-btn {
+			margin-top: 0;
+		}
+
 		@media (min-width: $md5) {
 			justify-content: flex-end;
 			flex-direction: row;
@@ -2262,7 +2302,10 @@
 
 	// .diary__comment-btn
 	&__comment-btn {
-		min-width: 30%;
+		margin-top: 1rem;
+		max-width: 21.25rem;
+		width: 100%;
+		font-size: 1rem;
 	}
 
 	// .diary__day

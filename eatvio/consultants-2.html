@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
     <!-- Current Page Styles -->
@@ -26,9 +27,9 @@
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -443,349 +444,422 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="content">
-                <div class="content__container">
-                    <div class="content__header">
-                        <div class="content__header-title title"> Консультанты </div>
-                        <form action="#" class="content__header-search search">
-                            <div class="search__box">
-                                <button class="search__btn icon-search"></button>
-                                <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск консультантов">
+</header>
+            <main class="page">
+                <section class="content">
+                    <div class="content__container">
+                        <div class="content__header">
+                            <div class="content__header-title title">
+                                Консультанты
                             </div>
-                            <button class="search__send l-btn l-btn-primary l-btn-sm">найти консультанта</button>
-                        </form>
-                    </div>
-                    <div class="content__tabs">
-                        <div class="content__tabs-wrapper">
-                            <a href="" class="content__filter">Все</a>
-                            <a href="" class="content__filter">Рецепты</a>
-                            <a href="" class="content__filter">Диеты</a>
-                            <a href="" class="content__filter">Планы питания</a>
-                            <a href="" class="content__filter active">Консультанты</a>
+                            <form action="#" class="content__header-search search">
+                                <div class="search__box">
+                                    <button class="search__btn icon-search"></button>
+                                    <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск консультантов">
+                                </div>
+                                <button class="search__send l-btn l-btn-primary l-btn-sm">найти консультанта</button>
+                            </form>
                         </div>
-                    </div>
-                    <div class="content__wrapper">
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">1 <span class="consultant__order-icon">
-                                            <img src="img/crown-gold.svg" alt="crown">
-                                        </span>
+                        <div class="content__tabs">
+                            <div class="content__tabs-wrapper">
+                                <a href="" class="content__filter">Все</a>
+                                <a href="" class="content__filter">Рецепты</a>
+                                <a href="" class="content__filter">Диеты</a>
+                                <a href="" class="content__filter">Планы питания</a>
+                                <a href="" class="content__filter active">Консультанты</a>
+                            </div>
+                        </div>
+                        <div class="content__wrapper">
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">1
+                                            <span class="consultant__order-icon">
+                                                <img src="img/crown-gold.svg" alt="crown">
+                                            </span>
+                                        </div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 9028</div>
+                                                <div class="consultant__location">Москва</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
                                     </div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 9028</div>
-                                            <div class="consultant__location">Москва</div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
+                                        </div>
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/2-cup.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive-more">+37</div>
                                         </div>
                                     </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
                                 </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                <div class="consultant__plan plans__item">
+                                    <div class="plans__item-image">
+                                        <a href="" class="plans__item-image-link">
+                                            <img src="img/posts/05.png" class="cover-image" alt="post">
+                                        </a>
+                                        <div class="plans__item-info">
+                                            <div class="plans__item-stats">
+                                                <div class="plans__item-stat">
+                                                    14 Дней
+                                                </div>
+                                                <div class="plans__item-stat">
+                                                    от 2500₽
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                    </div>
+                                    <div class="plans__item-body">
+                                        <div class="plans__item-header">
+                                            <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                            <button type="button" class="plans__item-favorite icon-bookmark"></button>
+                                            <a href="" class="plans__item-link"></a>
                                         </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                        <div class="plans__item-desc">
+                                            Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec...
                                         </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/2-cup.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                        <div class="plans__item-complete">
+                                            План прошли:
+                                            <span>10 человек</span>
                                         </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive-more">+37</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="consultant__plan plans__item">
-                                <div class="plans__item-image">
-                                    <a href="" class="plans__item-image-link">
-                                        <img src="img/posts/05.png" class="cover-image" alt="post">
-                                    </a>
-                                    <div class="plans__item-info">
-                                        <div class="plans__item-stats">
-                                            <div class="plans__item-stat"> 14 Дней </div>
-                                            <div class="plans__item-stat"> от 2500₽ </div>
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">2
+                                            <span class="consultant__order-icon">
+                                                <img src="img/crown-silver.svg" alt="crown">
+                                            </span>
+                                        </div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 6054</div>
+                                                <div class="consultant__location">Краснодар</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
+                                    </div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
+                                        </div>
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/2-cup.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="plans__item-body">
-                                    <div class="plans__item-header">
-                                        <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                <div class="consultant__plan plans__item">
+                                    <div class="plans__item-image">
+                                        <a href="" class="plans__item-image-link">
+                                            <img src="img/posts/05.png" class="cover-image" alt="post">
+                                        </a>
+                                        <div class="plans__item-info">
+                                            <div class="plans__item-stats">
+                                                <div class="plans__item-stat">
+                                                    14 Дней
+                                                </div>
+                                                <div class="plans__item-stat">
+                                                    от 2500₽
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plans__item-body">
+                                        <div class="plans__item-header">
+                                            <h3 class="plans__item-title title title-md">Худей легко</h3>
+                                            <button type="button" class="plans__item-favorite icon-bookmark"></button>
+                                            <a href="" class="plans__item-link"></a>
+                                        </div>
+                                        <div class="plans__item-desc">
+                                            Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec...
+                                        </div>
+                                        <div class="plans__item-complete">
+                                            План прошли:
+                                            <span>900 человек</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">3
+                                            <span class="consultant__order-icon">
+                                                <img src="img/crown-medium.svg" alt="crown">
+                                            </span>
+                                        </div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 1058</div>
+                                                <div class="consultant__location">Волгоград</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
+                                    </div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
+                                        </div>
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="consultant__plan">
+                                    <div class="consultant__plan-empty">
                                         <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                        <a href="" class="plans__item-link"></a>
-                                    </div>
-                                    <div class="plans__item-desc"> Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec... </div>
-                                    <div class="plans__item-complete"> План прошли: <span>10 человек</span>
+                                        <img src="img/logo-light.svg" alt="logo">
+                                        Нет опубликованных планов питания
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">2 <span class="consultant__order-icon">
-                                            <img src="img/crown-silver.svg" alt="crown">
-                                        </span>
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">4</div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 642</div>
+                                                <div class="consultant__location">Калининград</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
                                     </div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 6054</div>
-                                            <div class="consultant__location">Краснодар</div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
                                         </div>
-                                    </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
-                                </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/6-month.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/2-cup.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="consultant__plan plans__item">
-                                <div class="plans__item-image">
-                                    <a href="" class="plans__item-image-link">
-                                        <img src="img/posts/05.png" class="cover-image" alt="post">
-                                    </a>
-                                    <div class="plans__item-info">
-                                        <div class="plans__item-stats">
-                                            <div class="plans__item-stat"> 14 Дней </div>
-                                            <div class="plans__item-stat"> от 2500₽ </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plans__item-body">
-                                    <div class="plans__item-header">
-                                        <h3 class="plans__item-title title title-md">Худей легко</h3>
+                                <div class="consultant__plan ">
+                                    <div class="consultant__plan-empty">
                                         <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                        <a href="" class="plans__item-link"></a>
+                                        <img src="img/logo-light.svg" alt="logo">
+                                        Нет опубликованных планов питания
                                     </div>
-                                    <div class="plans__item-desc"> Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec... </div>
-                                    <div class="plans__item-complete"> План прошли: <span>900 человек</span>
+                                </div>
+                            </div>
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">100</div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 540</div>
+                                                <div class="consultant__location">Москва</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
+                                    </div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
+                                        </div>
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="consultant__plan plans__item">
+                                    <div class="plans__item-image">
+                                        <a href="" class="plans__item-image-link">
+                                            <img src="img/posts/05.png" class="cover-image" alt="post">
+                                        </a>
+                                        <div class="plans__item-info">
+                                            <div class="plans__item-stats">
+                                                <div class="plans__item-stat">
+                                                    14 Дней
+                                                </div>
+                                                <div class="plans__item-stat">
+                                                    от 2500₽
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plans__item-body">
+                                        <div class="plans__item-header">
+                                            <h3 class="plans__item-title title title-md"><a href=""> Энергия солнца Энергия солнца Энергия солнца Энергия солнца Энергия солнца Энергия солнца</a></h3>
+                                            <button type="button" class="plans__item-favorite icon-bookmark"></button>
+                                            <a href="" class="plans__item-link"></a>
+                                        </div>
+                                        <div class="plans__item-desc">
+                                            Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec...
+                                        </div>
+                                        <div class="plans__item-complete">
+                                            План прошли:
+                                            <span>10 человек</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__consultant consultant consultant-grey">
+                                <div class="consultant__column">
+                                    <div class="consultant__heading">
+                                        <div class="consultant__order">1000</div>
+                                        <a href="" class="consultant__thumb consultant__thumb-sm">
+                                            <img src="img/user.png" class="cover-image" alt="thumb">
+                                        </a>
+                                        <div class="consultant__person">
+                                            <a href="" class="consultant__name consultant__name-sm">
+                                                Имя фамилия
+                                            </a>
+                                            <div class="consultant__person-info">
+                                                <div class="consultant__rating">Рейтинг: 20</div>
+                                                <div class="consultant__location">Калининград</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="consultant__favorite icon-bookmark"></button>
+                                    </div>
+                                    <div class="consultant__body">
+                                        <div class="consultant__desc">
+                                            Специалист-диетолог с опытом работы более 10 лет.
+                                            Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок...
+                                        </div>
+                                        <div class="consultant__achives">
+                                            <div class="consultant__achive">
+                                                <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="consultant__plan plans__item">
+                                    <div class="plans__item-image">
+                                        <a href="" class="plans__item-image-link">
+                                            <img src="img/posts/05.png" class="cover-image" alt="post">
+                                        </a>
+                                        <div class="plans__item-info">
+                                            <div class="plans__item-stats">
+                                                <div class="plans__item-stat">
+                                                    14 Дней
+                                                </div>
+                                                <div class="plans__item-stat">
+                                                    от 2500₽
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plans__item-body">
+                                        <div class="plans__item-header">
+                                            <h3 class="plans__item-title title title-md"><a href="">Энергия солнца</a></h3>
+                                            <button type="button" class="plans__item-favorite icon-bookmark"></button>
+                                            <a href="" class="plans__item-link"></a>
+                                        </div>
+                                        <div class="plans__item-desc">
+                                            Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec...
+                                        </div>
+                                        <div class="plans__item-complete">
+                                            План прошли:
+                                            <span>8 человек</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">3 <span class="consultant__order-icon">
-                                            <img src="img/crown-medium.svg" alt="crown">
-                                        </span>
-                                    </div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 1058</div>
-                                            <div class="consultant__location">Волгоград</div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
-                                </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/1-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="consultant__plan">
-                                <div class="consultant__plan-empty">
-                                    <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                    <img src="img/logo-light.svg" alt="logo"> Нет опубликованных планов питания
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">4</div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 642</div>
-                                            <div class="consultant__location">Калининград</div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
-                                </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="consultant__plan ">
-                                <div class="consultant__plan-empty">
-                                    <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                    <img src="img/logo-light.svg" alt="logo"> Нет опубликованных планов питания
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">100</div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 540</div>
-                                            <div class="consultant__location">Москва</div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
-                                </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="consultant__plan plans__item">
-                                <div class="plans__item-image">
-                                    <a href="" class="plans__item-image-link">
-                                        <img src="img/posts/05.png" class="cover-image" alt="post">
-                                    </a>
-                                    <div class="plans__item-info">
-                                        <div class="plans__item-stats">
-                                            <div class="plans__item-stat"> 14 Дней </div>
-                                            <div class="plans__item-stat"> от 2500₽ </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plans__item-body">
-                                    <div class="plans__item-header">
-                                        <h3 class="plans__item-title title title-md"><a href=""> Энергия солнца Энергия солнца Энергия солнца Энергия солнца Энергия солнца Энергия солнца</a></h3>
-                                        <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                        <a href="" class="plans__item-link"></a>
-                                    </div>
-                                    <div class="plans__item-desc"> Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec... </div>
-                                    <div class="plans__item-complete"> План прошли: <span>10 человек</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content__consultant consultant consultant-grey">
-                            <div class="consultant__column">
-                                <div class="consultant__heading">
-                                    <div class="consultant__order">1000</div>
-                                    <a href="" class="consultant__thumb consultant__thumb-sm">
-                                        <img src="img/user.png" class="cover-image" alt="thumb">
-                                    </a>
-                                    <div class="consultant__person">
-                                        <a href="" class="consultant__name consultant__name-sm"> Имя фамилия </a>
-                                        <div class="consultant__person-info">
-                                            <div class="consultant__rating">Рейтинг: 20</div>
-                                            <div class="consultant__location">Калининград</div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="consultant__favorite icon-bookmark"></button>
-                                </div>
-                                <div class="consultant__body">
-                                    <div class="consultant__desc"> Специалист-диетолог с опытом работы более 10 лет. Помогу вам поправить своё здоровье без жёстких диет и сложных тренировок... </div>
-                                    <div class="consultant__achives">
-                                        <div class="consultant__achive">
-                                            <img src="img/icons/3-year.svg" alt="achive" data-tooltip="&lt;b&gt;Заголовок&lt;/b&gt; Lorem ipsum dolor sit amet consectetur. Nulla eget ut malesuada augue orci. Eget morbi ut lacinia nibh.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="consultant__plan plans__item">
-                                <div class="plans__item-image">
-                                    <a href="" class="plans__item-image-link">
-                                        <img src="img/posts/05.png" class="cover-image" alt="post">
-                                    </a>
-                                    <div class="plans__item-info">
-                                        <div class="plans__item-stats">
-                                            <div class="plans__item-stat"> 14 Дней </div>
-                                            <div class="plans__item-stat"> от 2500₽ </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plans__item-body">
-                                    <div class="plans__item-header">
-                                        <h3 class="plans__item-title title title-md"><a href="">Энергия солнца</a></h3>
-                                        <button type="button" class="plans__item-favorite icon-bookmark"></button>
-                                        <a href="" class="plans__item-link"></a>
-                                    </div>
-                                    <div class="plans__item-desc"> Lorem ipsum dolor sit amet consectetur. Integer a ut augue lacus est. Elementum ante posuere fermentum massa. Nec... </div>
-                                    <div class="plans__item-complete"> План прошли: <span>8 человек</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="content__pagination pagination">
+                            <a href="" aria-disabled="true" class="pagination__prev icon-prev"></a>
+                            <a href="" class="pagination__item">1</a>
+                            <a href="" class="pagination__item">2</a>
+                            <span class="pagination__item">...</span>
+                            <a href="" class="pagination__item">9</a>
+                            <a href="" class="pagination__item">10</a>
+                            <a href="" class="pagination__next icon-next"></a>
                         </div>
                     </div>
-                    <div class="content__pagination pagination">
-                        <a href="" aria-disabled="true" class="pagination__prev icon-prev"></a>
-                        <a href="" class="pagination__item">1</a>
-                        <a href="" class="pagination__item">2</a>
-                        <span class="pagination__item">...</span>
-                        <a href="" class="pagination__item">9</a>
-                        <a href="" class="pagination__item">10</a>
-                        <a href="" class="pagination__next icon-next"></a>
-                    </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -849,9 +923,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
     <!-- Current Page Styles -->
@@ -26,9 +27,9 @@
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -443,212 +444,264 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="person-block">
-                <div class="person-block__container container-sm">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"></a>
-                        <div class="settings__person-title title"> Данные пользователя Имя Фамилия </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__chart">
-                            <div class="person__chart-caption">
-                                <div class="person__chart-btns">
-                                    <button class="person__chart-btn l-btn l-btn-sm active">Вес</button>
-                                    <button class="person__chart-btn l-btn l-btn-sm">Замеры</button>
-                                    <button class="person__chart-btn l-btn l-btn-sm">ИМТ</button>
-                                </div>
-                                <div class="person__chart-filters">
-                                    <label class="person__chart-filter">
-                                        <input readonly type="radio" name="period" checked value="1" class="person__chart-filter-input hidden" hidden>
-                                        <span class="person__chart-filter-btn">1м</span>
-                                    </label>
-                                    <label class="person__chart-filter">
-                                        <input readonly type="radio" name="period" value="2" class="person__chart-filter-input hidden" hidden>
-                                        <span class="person__chart-filter-btn">3м</span>
-                                    </label>
-                                    <label class="person__chart-filter">
-                                        <input readonly type="radio" name="period" value="3" class="person__chart-filter-input hidden" hidden>
-                                        <span class="person__chart-filter-btn">6м</span>
-                                    </label>
-                                    <label class="person__chart-filter">
-                                        <input readonly type="radio" name="period" value="4" class="person__chart-filter-input hidden" hidden>
-                                        <span class="person__chart-filter-btn">1г</span>
-                                    </label>
-                                    <label class="person__chart-filter">
-                                        <input readonly type="radio" name="period" value="5" class="person__chart-filter-input hidden" hidden>
-                                        <span class="person__chart-filter-btn">ВСЁ ВРЕМЯ</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="person__chart-current up"> 62.0 кг <span class="icon-triangle"></span>
-                            </div>
-                            <div class="person__chart-body">
-                                <img src="img/chart-person-1.svg" alt="">
+</header>
+            <main class="page">
+                <section class="person-block">
+                    <div class="person-block__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Данные пользователя Имя Фамилия
                             </div>
                         </div>
-                    </div>
-                    <div class="settings__body settings__body_change">
-                        <div class="settings__content">
-                            <div class="settings__block">
-                                <div class="settings__block-wrapper white-mobile">
-                                    <div class="settings__block-caption "> Общая информация </div>
-                                    <div class="settings__block-body">
-                                        <ul class="settings__list settings__list-grid">
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Дата рождения: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="birthday" class="input input-white" value="30.01.1998">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Пол </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="birthday" class="input input-white" value="Мужской">
-                                                </div>
-                                            </li>
-                                        </ul>
+                        <div class="person">
+                            <div class="person__chart">
+                                <div class="person__chart-caption">
+                                    <div class="person__chart-btns">
+                                        <button class="person__chart-btn l-btn l-btn-sm active">Вес</button>
+                                        <button class="person__chart-btn l-btn l-btn-sm">Замеры</button>
+                                        <button class="person__chart-btn l-btn l-btn-sm">ИМТ</button>
+                                    </div>
+                                    <div class="person__chart-filters">
+                                        <label class="person__chart-filter">
+                                            <input readonly type="radio" name="period" checked value="1" class="person__chart-filter-input hidden" hidden>
+                                            <span class="person__chart-filter-btn">1м</span>
+                                        </label>
+                                        <label class="person__chart-filter">
+                                            <input readonly type="radio" name="period" value="2" class="person__chart-filter-input hidden" hidden>
+                                            <span class="person__chart-filter-btn">3м</span>
+                                        </label>
+                                        <label class="person__chart-filter">
+                                            <input readonly type="radio" name="period" value="3" class="person__chart-filter-input hidden" hidden>
+                                            <span class="person__chart-filter-btn">6м</span>
+                                        </label>
+                                        <label class="person__chart-filter">
+                                            <input readonly type="radio" name="period" value="4" class="person__chart-filter-input hidden" hidden>
+                                            <span class="person__chart-filter-btn">1г</span>
+                                        </label>
+                                        <label class="person__chart-filter">
+                                            <input readonly type="radio" name="period" value="5" class="person__chart-filter-input hidden" hidden>
+                                            <span class="person__chart-filter-btn">ВСЁ ВРЕМЯ</span>
+                                        </label>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="settings__block">
-                                <div class="settings__block-wrapper white-mobile">
-                                    <div class="settings__block-caption"> Физическая форма </div>
-                                    <div class="settings__block-body">
-                                        <ul class="settings__list settings__list-grid">
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Рост: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="number" name="height" class="input input-white" value="185">
-                                                    <span class="settings__item-def-unit">см</span>
-                                                </div>
-                                            </li>
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Вес: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="number" name="weight" class="input input-white" value="92">
-                                                    <span class="settings__item-def-unit">кг</span>
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-grid">
-                                                    <div class="settings__item-column">
-                                                        <div class="settings__item-termin"> Обхват груди: </div>
-                                                        <div class="settings__item-def">
-                                                            <input readonly type="number" name="breast" class="input input-white" value="90">
-                                                        </div>
-                                                    </div>
-                                                    <div class="settings__item-column">
-                                                        <div class="settings__item-termin"> Обхват талии: </div>
-                                                        <div class="settings__item-def">
-                                                            <input readonly type="number" name="waist" class="input input-white" value="60">
-                                                        </div>
-                                                    </div>
-                                                    <div class="settings__item-column">
-                                                        <div class="settings__item-termin"> Обхват бедер: </div>
-                                                        <div class="settings__item-def">
-                                                            <input readonly type="number" name="hips" class="input input-white" value="90">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-text"> Физическая нагрузка 1,2 — минимальный (сидячая работа, отсутствие физических нагрузок); </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="person__chart-current up">
+                                    62.0 кг
+                                    <span class="icon-triangle"></span>
                                 </div>
-                            </div>
-                            <div class="settings__block">
-                                <div class="settings__block-wrapper white-mobile">
-                                    <div class="settings__block-caption"> Давление </div>
-                                    <div class="settings__block-body">
-                                        <ul class="settings__list settings__list-grid">
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Верхнее: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="number" name="upper-pressure" class="input input-white" value="185">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Нижнее: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="number" name="low-pressure" class="input input-white" value="92">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Склонность к гипотонии </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="hypotension" class="input input-white" value="Да">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item">
-                                                <div class="settings__item-termin"> Склонность к гипертонии </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="hypotension" class="input input-white" value="Да">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="settings__block">
-                                <div class="settings__block-wrapper white-mobile">
-                                    <div class="settings__block-caption"> Прочая информация </div>
-                                    <div class="settings__block-body">
-                                        <ul class="settings__list settings__list-grid">
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Наличие аллергии: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="allergy" class="input input-white" value="Орехи, мёд, сухофрукты">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Принимаемые лекарства </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="medicine" class="input input-white" value="Нет">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Ваши спортивные увлечения: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="sport" class="input input-white" value="Киберспорт">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Любимые продукты: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="products" class="input input-white" value="Пельмени">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Не любимые продукты: </div>
-                                                <div class="settings__item-def">
-                                                    <input readonly type="text" name="not-like-products" class="input input-white" value="Пельмени">
-                                                </div>
-                                            </li>
-                                            <li class="settings__item settings__item-lg">
-                                                <div class="settings__item-termin"> Дополнительная информация: </div>
-                                                <div class="settings__item-def">
-                                                    <textarea readonly type="text" name="extras" class="textarea textarea-sm textarea-white">Дополнительная информация</textarea>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="person__chart-body">
+                                    <img src="img/chart-person-1.svg" alt="">
                                 </div>
                             </div>
                         </div>
+                        <div class="settings__body settings__body_change">
+                            <div class="settings__content">
+                                <div class="settings__block">
+                                    <div class="settings__block-wrapper white-mobile">
+                                        <div class="settings__block-caption ">
+                                            Общая информация
+                                        </div>
+                                        <div class="settings__block-body">
+                                            <ul class="settings__list settings__list-grid">
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Дата рождения:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="birthday" class="input input-white" value="30.01.1998">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Пол
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="birthday" class="input input-white" value="Мужской">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="settings__block">
+                                    <div class="settings__block-wrapper white-mobile">
+                                        <div class="settings__block-caption">
+                                            Физическая форма
+                                        </div>
+                                        <div class="settings__block-body">
+                                            <ul class="settings__list settings__list-grid">
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Рост:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="number" name="height" class="input input-white" value="185">
+                                                        <span class="settings__item-def-unit">см</span>
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Вес:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="number" name="weight" class="input input-white" value="92">
+                                                        <span class="settings__item-def-unit">кг</span>
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-grid">
+                                                        <div class="settings__item-column">
+                                                            <div class="settings__item-termin">
+                                                                Обхват груди:
+                                                            </div>
+                                                            <div class="settings__item-def">
+                                                                <input readonly type="number" name="breast" class="input input-white" value="90">
+                                                            </div>
+                                                        </div>
+                                                        <div class="settings__item-column">
+                                                            <div class="settings__item-termin">
+                                                                Обхват талии:
+                                                            </div>
+                                                            <div class="settings__item-def">
+                                                                <input readonly type="number" name="waist" class="input input-white" value="60">
+                                                            </div>
+                                                        </div>
+                                                        <div class="settings__item-column">
+                                                            <div class="settings__item-termin">
+                                                                Обхват бедер:
+                                                            </div>
+                                                            <div class="settings__item-def">
+                                                                <input readonly type="number" name="hips" class="input input-white" value="90">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-text">
+                                                        Физическая нагрузка 1,2 — минимальный (сидячая работа, отсутствие физических нагрузок);
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="settings__block">
+                                    <div class="settings__block-wrapper white-mobile">
+                                        <div class="settings__block-caption">
+                                            Давление
+                                        </div>
+                                        <div class="settings__block-body">
+                                            <ul class="settings__list settings__list-grid">
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Верхнее:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="number" name="upper-pressure" class="input input-white" value="185">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Нижнее:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="number" name="low-pressure" class="input input-white" value="92">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Склонность к гипотонии
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="hypotension" class="input input-white" value="Да">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item">
+                                                    <div class="settings__item-termin">
+                                                        Склонность к гипертонии
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="hypotension" class="input input-white" value="Да">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="settings__block">
+                                    <div class="settings__block-wrapper white-mobile">
+                                        <div class="settings__block-caption">
+                                            Прочая информация
+                                        </div>
+                                        <div class="settings__block-body">
+                                            <ul class="settings__list settings__list-grid">
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Наличие аллергии:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="allergy" class="input input-white" value="Орехи, мёд, сухофрукты">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Принимаемые лекарства
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="medicine" class="input input-white" value="Нет">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Ваши спортивные увлечения:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="sport" class="input input-white" value="Киберспорт">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Любимые продукты:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="products" class="input input-white" value="Пельмени">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Не любимые продукты:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <input readonly type="text" name="not-like-products" class="input input-white" value="Пельмени">
+                                                    </div>
+                                                </li>
+                                                <li class="settings__item settings__item-lg">
+                                                    <div class="settings__item-termin">
+                                                        Дополнительная информация:
+                                                    </div>
+                                                    <div class="settings__item-def">
+                                                        <textarea readonly type="text" name="extras" class="textarea textarea-sm textarea-white">Дополнительная информация</textarea>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -712,9 +765,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Дневник',
+    "stylesName": ["diary"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 1234
+            })
+            <main class="page">
+                <section class="diary">
+                    <div class="diary__container container-sm">
+                        <div class="diary__header">
+                            <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
+                            <div class="diary__title pc-only">
+                                <div class="diary__title-caption">
+                                    Заполнение дневника питания
+                                </div>
+                                <div class="diary__title-name">
+                                    План «Неделя сопровождения» 6 день из 7
+                                </div>
+                                <a href="" class="diary__title-btn">Подробнее о заказе</a>
+                            </div>
+                            <div class="diary__info">
+                                <div class="diary__info-current">
+                                    10 день
+                                </div>
+                                <time datetime="2023-08-03" class="diary__info-date">
+                                    03-08-2023
+                                </time>
+                            </div>
+                        </div>
+                        @@include('./html/diary-blocks/_sleep-block.html')
+                        <div class="diary__main">
+                            @@include('./html/diary-blocks/_diary-form-2.html', {
+                            "planTitle": 'Очень длинное название плана'
+                            })
+                            <div class="diary__product">
+                                @@include('./html/diary-blocks/_diary-products-4.html')
+                                <div class="diary__product-side">
+                                    @@include('./html/diary-blocks/_diary-slider.html', {
+                                    'hidePlus': true
+                                    })
+                                </div>
+                            </div>
+                            @@include('./html/diary-blocks/_satiery-block.html')
+                            <div class="diary__comment diary__comment-meal">
+                                <div class="diary__comment-header title title-md">Комментарий к приему пищи 1</div>
+                                <textarea name="message" class="diary__comment-message textarea" placeholder="Прокомментируйте прием пищи"></textarea>
+                                <button type="button" class="diary__comment-btn l-btn l-btn-primary">Прокомментировать</button>
+                            </div>
+                        </div>
+                        @@include('./html/diary-blocks/_norm-block.html')
+                        @@include('./html/diary-blocks/_diary-extras-block.html', {
+                        'forConsultans': true
+                        })
+                        @@include('./html/diary-blocks/_diary-comment-block.html')
+                        <div class="diary__btns">
+                            <button type="button" class="diary__action l-btn l-btn-gray l-btn-fullwidth">Сохранить</button>
+                            <button type="button" class="diary__action l-btn l-btn-primary l-btn-fullwidth">Завершить комментирование <span class="pc-only">дня</span></button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "product"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

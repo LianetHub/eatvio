@@ -37,6 +37,8 @@
         <div class="diary__product-thumb swiper-slide">
             <img src="@img/product-3.jpg" class="cover-image" alt="thumb">
         </div>
-        <button type="button" class="diary__product-add icon-plus"></button>
+        @@if(typeof hidePlus == 'undefined') {
+            <button type="button" class="diary__product-add icon-plus"></button>
+        }
     </div>
 </div>

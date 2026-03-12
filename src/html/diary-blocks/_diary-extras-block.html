@@ -2,5 +2,10 @@
     <div class="diary__extras-caption title">
         Дополнительная информация для консультанта
     </div>
-    <textarea name="info" class="textarea" placeholder="Введите дополнительную информация для консультанта..."></textarea>
+    @@if( typeof forConsultans !== 'undefined') {
+        <div class="diary__extras-text">Lorem ipsum dolor sit amet consectetur. At odio augue pellentesque cursus scelerisque scelerisque nulla luctus dis. Ornare ultrices pellentesque tincidunt venenatis at. Bibendum lectus semper pellentesque pulvinar sed nec faucibus odio. Tincidunt etiam malesuada interdum aliquam lacinia mattis vestibulum. Ut tortor a integer enim turpis netus gravida sed vel. Sagittis lorem in consectetur semper in. Vitae nulla dictum sa</div>
+    }
+    @@if( typeof forConsultans == 'undefined') {
+        <textarea name="info" class="textarea" placeholder="Введите дополнительную информация для консультанта..."></textarea>
+    }
 </div>

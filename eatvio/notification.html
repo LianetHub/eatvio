@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,14 +15,14 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
+    <link rel="stylesheet" href="css/dev.css" />
 
     
 
 </head>
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -436,123 +437,131 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">На главную</span></a>
-                        <div class="settings__person-title title "> Уведомления </div>
-                    </div>
-                    <div class="settings__notification notification">
-                        <div class="notification__content">
-                            <div class="notification__list">
-                                <div class="notification__item succes">
-                                    <div class="notification__item-body">
-                                        <p class="notification__text sm-width"> Пользователь Имя Фамилия оплатил план Название плана. Вам необходимо составить индивидуальную диету. Перейти в <a href="">мои диеты</a>
-                                        </p>
-                                    </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </div>
-                                <div class="notification__item succes">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Поздравляем, Вы закончили план «Название плана»</a>
-                                        <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
-                                        <a href="" class="notification__item-btn l-btn l-btn-green ">Получить выплату</a>
-                                    </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </div>
-                                <div class="notification__item new">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Сегодня последний день прохождения плана «Название плана»</a>
-                                        <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
-                                    </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </div>
-                                <div class="notification__item succes">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Сегодня последний день плана «Название плана»</a>
-                                        <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
-                                        <a href="" class="notification__link">Заполнить отчет</a>
-                                    </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </div>
-                                <div class="notification__item new">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Поздравляем, вы прошли «Название плана». Просим вас подтвердить <br> прохождение плана</a>
-                                        <p class="notification__hint">Если вы не подтвердите, то план через три дня подтвердится автоматически</p>
-                                        <a href="" class="notification__btn l-btn l-btn-primary l-btn-sm">Подтвердить</a>
-                                        <p class="notification__hint">Если вас что-то не устроило, вы можете подать жалобу</p>
-                                        <a href="" class="notification__link red-color">Подать жалобу</a>
-                                    </div>
-                                </div>
-                                <a href="" class="notification__item new">
-                                    <span class="notification__row">
-                                        <span class="notification__thumb">
-                                            <img src="img/user.png" class="cover-image" alt="avatar">
-                                        </span>
-                                        <span class="notification__text">На вас подписались <span>Иван Иванов</span></span>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span class="pc-only">На главную</span></a>
+                            <div class="settings__person-title title ">
+                                Уведомления
+                            </div>
+                        </div>
+                        <div class="settings__notification notification">
+                            <div class="notification__content">
+                                <div class="notification__list">
+                                    <div class="notification__item succes">
+                                        <div class="notification__item-body">
+                                            <p class="notification__text sm-width">
+                                                Пользователь Имя Фамилия оплатил план Название плана.
+                                                Вам необходимо составить индивидуальную диету. Перейти в <a href="">мои диеты</a>
+                                            </p>
+                                        </div>
                                         <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                    </span>
-                                </a>
-                                <a href="" class="notification__item new">
-                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item succes">
-                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item new">
-                                    <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item new">
-                                    <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item">
-                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item">
-                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item">
-                                    <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <a href="" class="notification__item">
-                                    <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </a>
-                                <div class="notification__item fail">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Консультант отказался от заказа</a>
-                                        <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
                                     </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
-                                </div>
-                                <div class="notification__item fail">
-                                    <div class="notification__item-body">
-                                        <a href="" class="notification__text">Пользователь Имя Фамилия отказался от прохождения плана «Название плана»</a>
-                                        <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
+                                    <div class="notification__item succes">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Поздравляем, Вы закончили план «Название плана»</a>
+                                            <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
+                                            <a href="" class="notification__item-btn l-btn l-btn-green ">Получить выплату</a>
+                                        </div>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
                                     </div>
-                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    <div class="notification__item new">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Сегодня последний день прохождения плана «Название плана»</a>
+                                            <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
+                                        </div>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </div>
+                                    <div class="notification__item succes">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Сегодня последний день плана «Название плана»</a>
+                                            <p class="notification__hint">Вам придет уведомление, когда консультант заполнит последний отчет</p>
+                                            <a href="" class="notification__link">Заполнить отчет</a>
+                                        </div>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </div>
+                                    <div class="notification__item new">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Поздравляем, вы прошли «Название плана». Просим вас подтвердить <br> прохождение плана</a>
+                                            <p class="notification__hint">Если вы не подтвердите, то план через три дня подтвердится автоматически</p>
+                                            <a href="" class="notification__btn l-btn l-btn-primary l-btn-sm">Подтвердить</a>
+                                            <p class="notification__hint">Если вас что-то не устроило, вы можете подать жалобу</p>
+                                            <a href="" class="notification__link red-color">Подать жалобу</a>
+                                        </div>
+                                    </div>
+                                    <a href="" class="notification__item new">
+                                        <span class="notification__row">
+                                            <span class="notification__thumb">
+                                                <img src="img/user.png" class="cover-image" alt="avatar">
+                                            </span>
+                                            <span class="notification__text">На вас подписались <span>Иван Иванов</span></span>
+                                            <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                        </span>
+                                    </a>
+                                    <a href="" class="notification__item new">
+                                        <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item succes">
+                                        <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item new">
+                                        <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item new">
+                                        <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item">
+                                        <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item">
+                                        <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item">
+                                        <span class="notification__text">Новые комментарии к вашему рецепту <span>“салат цезарь”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <a href="" class="notification__item">
+                                        <span class="notification__text">Новые комментарии к вашей диете <span>“Пивная диета”</span></span>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </a>
+                                    <div class="notification__item fail">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Консультант отказался от заказа</a>
+                                            <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
+                                        </div>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </div>
+                                    <div class="notification__item fail">
+                                        <div class="notification__item-body">
+                                            <a href="" class="notification__text">Пользователь Имя Фамилия отказался от прохождения плана «Название плана»</a>
+                                            <p class="notification__hint">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</p>
+                                        </div>
+                                        <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -670,9 +679,9 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

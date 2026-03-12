@@ -1032,6 +1032,9 @@
 			&.fw-bold {
 				font-weight: 700;
 			}
+			@media (min-width:$md4) {
+				padding-inline: 2rem;
+			}
 		}
 		.label {
 			opacity: 0.8;
