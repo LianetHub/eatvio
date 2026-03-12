@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -15,7 +14,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <link rel="stylesheet" href="css/dev.css" />
+    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
 
     
     <!-- Current Page Styles -->
@@ -27,9 +26,9 @@
     
 
 </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
+
+<body>
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -444,65 +443,53 @@
             </div>
         </div>
     </div>
-</header>
-            <main class="page">
-                <section class="settings">
-                    <div class="settings__container container-sm">
-                        <div class="settings__header">
-                            <a href="" class="settings__back icon-arrow-short-left">
-                                <span class="pc-only">Мои финансы</span>
-                            </a>
-                            <div class="settings__person-title title">
-                                Мои карты
-                            </div>
-                        </div>
-                        <div class="receiving">
-                            <div class="receiving__title">
-                                Привязанные карты
-                            </div>
-                            <div class="receiving__subtitle">
-                                Выплаты будут производится на карту *0278
-                            </div>
-                            <div class="receiving__cards">
-                                <label class="receiving__card">
-                                    <input type="radio" name="card" checked value="card-1" class="receiving__card-input hidden" hidden>
-                                    <span class="receiving__card-body">
-                                        <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
-                                        <span class="receiving__card-logo">
-                                            <img src="img/mir-logo.svg" alt="MIR">
-                                        </span>
-                                        <span class="receiving__card-num">** 0278</span>
-                                    </span>
-                                </label>
-                                <label class="receiving__card">
-                                    <input type="radio" name="card" value="card-2" class="receiving__card-input hidden" hidden>
-                                    <span class="receiving__card-body">
-                                        <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
-                                        <span class="receiving__card-logo">
-                                            <img src="img/mir-logo.svg" alt="MIR">
-                                        </span>
-                                        <span class="receiving__card-num">** 5048</span>
-                                    </span>
-                                </label>
-                                <button type="button" class="receiving__card-add icon-add-card">
-                                    Добавить карту
-                                </button>
-                            </div>
-                            <button type="button" disabled data-modal data-href="default-card" class="receiving__action l-btn l-btn-primary">Сделать основной</button>
-                        </div>
+</header> <main class="page">
+            <section class="settings">
+                <div class="settings__container container-sm">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left">
+                            <span class="pc-only">Мои финансы</span>
+                        </a>
+                        <div class="settings__person-title title"> Мои карты </div>
                     </div>
-                </section>
-            </main>
-            <footer class="footer">
+                    <div class="receiving">
+                        <div class="receiving__title"> Привязанные карты </div>
+                        <div class="receiving__subtitle"> Выплаты будут производится на карту *0278 </div>
+                        <div class="receiving__cards">
+                            <label class="receiving__card">
+                                <input type="radio" name="card" checked value="card-1" class="receiving__card-input hidden" hidden>
+                                <span class="receiving__card-body">
+                                    <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
+                                    <span class="receiving__card-logo">
+                                        <img src="img/mir-logo.svg" alt="MIR">
+                                    </span>
+                                    <span class="receiving__card-num">** 0278</span>
+                                </span>
+                            </label>
+                            <label class="receiving__card">
+                                <input type="radio" name="card" value="card-2" class="receiving__card-input hidden" hidden>
+                                <span class="receiving__card-body">
+                                    <span data-modal data-href="unlink-card" class="receiving__card-remove icon-close"></span>
+                                    <span class="receiving__card-logo">
+                                        <img src="img/mir-logo.svg" alt="MIR">
+                                    </span>
+                                    <span class="receiving__card-num">** 5048</span>
+                                </span>
+                            </label>
+                            <button type="button" class="receiving__card-add icon-add-card"> Добавить карту </button>
+                        </div>
+                        <button type="button" disabled data-modal data-href="default-card" class="receiving__action l-btn l-btn-primary">Сделать основной</button>
+                    </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-        </div>
-        
+</footer> </div> 
 
 
 
@@ -585,8 +572,7 @@
 </div>
 
 
-
-        
+ 
 
 
 
@@ -657,9 +643,9 @@
     </div>
 </div>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>
