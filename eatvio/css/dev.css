@@ -34236,6 +34236,14 @@ body.dark-theme {
     height: 3rem;
   }
 }
+.diary__product-comment-form {
+  margin-top: 0.5rem;
+}
+.diary__product-comment-form .textarea {
+  height: 5.0625rem;
+  font-size: 1rem;
+  padding: 0.75em 0.875em;
+}
 .diary__product-bottom {
   margin-top: 0.5rem;
   display: -ms-grid;
@@ -35235,20 +35243,22 @@ body.dark-theme {
 .diary__btns .diary__btn {
   margin: 0;
 }
-@media (min-width: 767.98px) {
-  .diary__action {
-    text-transform: uppercase;
-  }
-}
-.diary__action.l-btn-gray {
-  color: #323F4B;
+.diary__btns .diary__btn + .diary__btn {
+  margin-top: 0rem;
 }
 .diary__btn {
   margin: 2rem 0em 0em 0em;
   font-weight: 900;
-  text-transform: uppercase;
   padding: 1em;
-  font-size: 16px;
+  font-size: 1rem;
+}
+@media (min-width: 767.98px) {
+  .diary__btn {
+    text-transform: uppercase;
+  }
+}
+.diary__btn.l-btn-gray {
+  color: #323F4B;
 }
 .diary__btn + .diary__btn {
   margin-top: 1rem;

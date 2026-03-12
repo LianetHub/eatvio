@@ -38,9 +38,7 @@
                             "planTitle": 'Очень длинное название плана'
                             })
                             <div class="diary__product">
-                                @@include('./html/diary-blocks/_diary-products-4.html', {
-                                "hasComment": true
-                                })
+                                @@include('./html/diary-blocks/_diary-products-4.html')
                                 <div class="diary__product-side">
                                     @@include('./html/diary-blocks/_diary-slider.html', {
                                     'hidePlus': true
@@ -59,10 +57,9 @@
                         'forConsultans': true
                         })
                         @@include('./html/diary-blocks/_diary-comment-block.html')
-                        <div class="diary__btns">
-                            <button type="button" class="diary__btn l-btn l-btn-gray l-btn-fullwidth">Сохранить</button>
-                            <button type="button" class="diary__btn l-btn l-btn-primary l-btn-fullwidth">Завершить комментирование <span class="pc-only">дня</span></button>
-                        </div>
+                        <button type="button" class="diary__btn l-btn l-btn-gray l-btn-fullwidth">Сохранить</button>
+                        <button type="button" class="diary__btn l-btn l-btn-primary l-btn-fullwidth">Завершить комментирование <span class="pc-only">дня</span></button>
+
                     </div>
                 </section>
             </main>

@@ -1175,6 +1175,17 @@
 		}
 	}
 
+	// .diary__product-comment-form
+	&__product-comment-form {
+		margin-top: 0.5rem;
+
+		.textarea {
+			height: rem(81);
+			font-size: 1rem;
+			padding: em(12) em(14);
+		}
+	}
+
 	// .diary__product-bottom
 	&__product-bottom {
 		margin-top: 0.5rem;
@@ -2139,11 +2150,21 @@
 
 		.diary__btn {
 			margin: 0;
+
+			&+.diary__btn {
+				margin-top: 0rem;
+			}
 		}
 	}
 
-	// .diary__action
-	&__action {
+
+	// .diary__btn
+	&__btn {
+		margin: rem(32) em(0) em(0) em(0);
+		font-weight: 900;
+		padding: em(16);
+		font-size: 1rem;
+
 		@media (min-width:$md4) {
 			text-transform: uppercase;
 
@@ -2152,15 +2173,6 @@
 		&.l-btn-gray {
 			color: #323F4B;
 		}
-	}
-
-	// .diary__btn
-	&__btn {
-		margin: rem(32) em(0) em(0) em(0);
-		font-weight: 900;
-		text-transform: uppercase;
-		padding: em(16);
-		font-size: 16px;
 
 		&+.diary__btn {
 			margin-top: 1rem;
