@@ -97,62 +97,86 @@ export const fontsStyle = () => {
 
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
-            if (!fs.existsSync(fontsFile)) {
-                fs.writeFile(fontsFile, "", cb);
-                let newFileOnly;
 
-                for (let i = 0; i < fontsFiles.length; i++) {
-                    let fontFileName = fontsFiles[i].split(".")[0];
-                    if (newFileOnly !== fontFileName) {
-                        let fontName = fontFileName.split("-")[0]
-                            ? fontFileName.split("-")[0]
-                            : fontFileName;
-                        let fontWeight = fontFileName.split("-")[1]
-                            ? fontFileName.split("-")[1]
-                            : fontFileName;
-                        if (fontWeight.toLowerCase() === "thin") {
-                            fontWeight = 100;
-                        } else if (fontWeight.toLowerCase() === "extralight") {
-                            fontWeight = 200;
-                        } else if (fontWeight.toLowerCase() === "light") {
-                            fontWeight = 300;
-                        } else if (fontWeight.toLowerCase() === "book") {
-                            fontWeight = 350;
-                        } else if (fontWeight.toLowerCase() === "medium") {
-                            fontWeight = 500;
-                        } else if (fontWeight.toLowerCase() === "semibold" ||
-                            fontWeight.toLowerCase() === "demi") {
-                            fontWeight = 600;
-                        } else if (fontWeight.toLowerCase() === "bold") {
-                            fontWeight = 700;
-                        } else if (
-                            fontWeight.toLowerCase() === "extrabold" ||
-                            fontWeight.toLowerCase() === "heavy"
-                        ) {
-                            fontWeight = 800;
-                        } else if (fontWeight.toLowerCase() === "black") {
-                            fontWeight = 900;
-                        } else {
-                            fontWeight = 400;
-                        }
-                        fs.appendFile(
-                            fontsFile,
-                            `@font-face {
-                                font-family: ${fontName};
-                                font-display: swap;
-                                src: url("../fonts/${fontFileName}.woff") format("woff"), url("../fonts/${fontFileName}.woff2") format("woff2");
-                                font-weight: ${fontWeight};
-                                font-style: normal;
-                            }\r\n`,
-                            cb
-                        );
-                        newFileOnly = fontFileName;
-                    }
-                }
+            if (fs.existsSync(fontsFile)) {
+                fs.unlinkSync(fontsFile);
+                console.log("Файл scss/fonts.scss актуализирован");
             } else {
-                console.log(
-                    "Файл scss/fonts.scss уже существует. Для обновления его нужно удалить!"
-                );
+                console.log("Файл scss/fonts.scss создан");
+            }
+
+
+            fs.writeFile(fontsFile, "", cb);
+            let newFileOnly;
+
+            for (let i = 0; i < fontsFiles.length; i++) {
+
+                let fontFileNameWithExtension = fontsFiles[i].split(".")[0];
+                let fontFileName = fontFileNameWithExtension;
+
+                const isVariableFont = fontFileName.toLowerCase().includes("variablefont_");
+
+                if (isVariableFont) {
+                    fontFileName = fontFileName.replace(/-VariableFont_wght/i, "");
+                }
+
+                if (newFileOnly !== fontFileName) {
+                    let fontName = fontFileName.split("-")[0] ? fontFileName.split("-")[0] : fontFileName;
+                    let fontWeight = fontFileName.split("-")[1] || '';
+                    let fontStyle = 'normal';
+
+                    if (!isVariableFont) {
+
+
+                        if (fontWeight.toLowerCase().includes("italic")) {
+                            fontStyle = "italic";
+                            fontWeight = fontWeight.replace(/italic/i, "").trim();
+                        }
+
+                        switch (fontWeight.toLowerCase()) {
+                            case "thin": fontWeight = 100; break;
+                            case "extralight": fontWeight = 200; break;
+                            case "light": fontWeight = 300; break;
+                            case "book": fontWeight = 450; break;
+                            case "medium": fontWeight = 500; break;
+                            case "semibold":
+                            case "demi": fontWeight = 600; break;
+                            case "demibold": fontWeight = 600; break;
+                            case "bold": fontWeight = 700; break;
+                            case "extrabold":
+                            case "heavy": fontWeight = 800; break;
+                            case "black": fontWeight = 900; break;
+                            default: fontWeight = 400; break;
+                        }
+                    }
+
+
+                    if (isVariableFont) {
+
+                        fs.appendFile(fontsFile,
+                            `@font-face {
+								font-family: '${fontName}';
+								src: url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2 supports variations"),
+									url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2-variations"),
+									url("../fonts/${fontFileNameWithExtension}.woff") format("woff");
+								font-weight: 100 900;
+								font-stretch: 75% 125%;
+								font-style: normal;
+								font-display: swap;
+							}\r\n`, cb);
+                    } else {
+                        fs.appendFile(fontsFile,
+                            `@font-face {
+								font-family: '${fontName}';
+								font-display: swap;
+								src: url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2"), url("../fonts/${fontFileNameWithExtension}.woff") format("woff");
+								font-weight: ${fontWeight};
+								font-style: ${fontStyle};
+							}\r\n`, cb);
+                    }
+
+                    newFileOnly = fontFileName;
+                }
             }
         }
     });
@@ -166,62 +190,78 @@ export const articlesFonts = () => {
 
     fs.readdir(app.path.build.articlesFonts, function (err, fontsFiles) {
         if (fontsFiles) {
-            if (!fs.existsSync(fontsFile)) {
-                fs.writeFile(fontsFile, "", cb);
-                let newFileOnly;
-
-                for (let i = 0; i < fontsFiles.length; i++) {
-                    let fontFileName = fontsFiles[i].split(".")[0];
-                    if (newFileOnly !== fontFileName) {
-                        let fontName = fontFileName.split("-")[0]
-                            ? fontFileName.split("-")[0]
-                            : fontFileName;
-                        let fontWeight = fontFileName.split("-")[1]
-                            ? fontFileName.split("-")[1]
-                            : fontFileName;
-                        if (fontWeight.toLowerCase() === "thin") {
-                            fontWeight = 100;
-                        } else if (fontWeight.toLowerCase() === "extralight") {
-                            fontWeight = 200;
-                        } else if (fontWeight.toLowerCase() === "light") {
-                            fontWeight = 300;
-                        } else if (fontWeight.toLowerCase() === "book") {
-                            fontWeight = 350;
-                        } else if (fontWeight.toLowerCase() === "medium") {
-                            fontWeight = 500;
-                        } else if (fontWeight.toLowerCase() === "semibold" ||
-                            fontWeight.toLowerCase() === "demi") {
-                            fontWeight = 600;
-                        } else if (fontWeight.toLowerCase() === "bold") {
-                            fontWeight = 700;
-                        } else if (
-                            fontWeight.toLowerCase() === "extrabold" ||
-                            fontWeight.toLowerCase() === "heavy"
-                        ) {
-                            fontWeight = 800;
-                        } else if (fontWeight.toLowerCase() === "black") {
-                            fontWeight = 900;
-                        } else {
-                            fontWeight = 400;
-                        }
-                        fs.appendFile(
-                            fontsFile,
-                            `@font-face {
-                                font-family: ${fontName};
-                                font-display: swap;
-                                src: url("../fonts/${fontFileName}.woff") format("woff"), url("../fonts/${fontFileName}.woff2") format("woff2");
-                                font-weight: ${fontWeight};
-                                font-style: normal;
-                            }\r\n`,
-                            cb
-                        );
-                        newFileOnly = fontFileName;
-                    }
-                }
+            if (fs.existsSync(fontsFile)) {
+                fs.unlinkSync(fontsFile);
+                console.log("Файл articles/scss/fonts.scss актуализирован");
             } else {
-                console.log(
-                    "Файл articles/scss/fonts.scss уже существует. Для обновления его нужно удалить!"
-                );
+                console.log("Файл articles/scss/fonts.scss создан");
+            }
+
+            fs.writeFile(fontsFile, "", cb);
+            let newFileOnly;
+
+            for (let i = 0; i < fontsFiles.length; i++) {
+                let fontFileNameWithExtension = fontsFiles[i].split(".")[0];
+                let fontFileName = fontFileNameWithExtension;
+
+                const isVariableFont = fontFileName.toLowerCase().includes("variablefont_");
+
+                if (isVariableFont) {
+                    fontFileName = fontFileName.replace(/-VariableFont_wght/i, "");
+                }
+
+                if (newFileOnly !== fontFileName) {
+                    let fontName = fontFileName.split("-")[0] ? fontFileName.split("-")[0] : fontFileName;
+                    let fontWeight = fontFileName.split("-")[1] || '';
+                    let fontStyle = 'normal';
+
+                    if (!isVariableFont) {
+                        if (fontWeight.toLowerCase().includes("italic")) {
+                            fontStyle = "italic";
+                            fontWeight = fontWeight.replace(/italic/i, "").trim();
+                        }
+
+                        switch (fontWeight.toLowerCase()) {
+                            case "thin": fontWeight = 100; break;
+                            case "extralight": fontWeight = 200; break;
+                            case "light": fontWeight = 300; break;
+                            case "book": fontWeight = 350; break;
+                            case "medium": fontWeight = 500; break;
+                            case "semibold":
+                            case "demi":
+                            case "demibold": fontWeight = 600; break;
+                            case "bold": fontWeight = 700; break;
+                            case "extrabold":
+                            case "heavy": fontWeight = 800; break;
+                            case "black": fontWeight = 900; break;
+                            default: fontWeight = 400; break;
+                        }
+                    }
+
+                    if (isVariableFont) {
+                        fs.appendFile(fontsFile,
+                            `@font-face {
+                                font-family: '${fontName}';
+                                src: url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2 supports variations"),
+                                    url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2-variations"),
+                                    url("../fonts/${fontFileNameWithExtension}.woff") format("woff");
+                                font-weight: 100 900;
+                                font-stretch: 75% 125%;
+                                font-style: normal;
+                                font-display: swap;
+                            }\r\n`, cb);
+                    } else {
+                        fs.appendFile(fontsFile,
+                            `@font-face {
+                                font-family: '${fontName}';
+                                font-display: swap;
+                                src: url("../fonts/${fontFileNameWithExtension}.woff2") format("woff2"), url("../fonts/${fontFileNameWithExtension}.woff") format("woff");
+                                font-weight: ${fontWeight};
+                                font-style: ${fontStyle};
+                            }\r\n`, cb);
+                    }
+                    newFileOnly = fontFileName;
+                }
             }
         }
     });
