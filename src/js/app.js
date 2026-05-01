@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.classList.contains('search__bar-close')) {
             document.querySelector('.search').classList.remove('open');
         }
+
         if (e.target.classList.contains('search-mobile-btn')) {
             document.querySelector('.search').classList.add('open');
         }
@@ -227,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle('active');
             e.target.nextElementSibling?.classList.toggle('active');
         }
+
     })
 
     if (document.querySelector('.content__recipes-select')) {
@@ -412,6 +414,16 @@ document.addEventListener("DOMContentLoaded", () => {
             productItem.querySelector('[data-product-more]').slideDown(0);
         })
     }
+
+    if (document.querySelector('.consultant-card__diploms')) {
+
+        new Swiper('.consultant-card__diploms', {
+            slidesPerView: "auto",
+            spaceBetween: 12,
+            grabCursor: true
+        })
+    }
+
 
 
 

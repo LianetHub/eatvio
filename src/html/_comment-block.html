@@ -1,6 +1,11 @@
 <div class="comment-block">
     <div class="comment-block__caption title icon-message-alternate">
+        @@if(typeof title == 'undefined') {
         Комментарии
+        }
+        @@if(typeof title !== 'undefined') {
+        @@title
+        }
     </div>
 
     <div class="comment-block__column">

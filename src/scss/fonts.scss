@@ -1,4 +1,14 @@
 @font-face {
+								font-family: 'OpenSans';
+								src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
+									url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"),
+									url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+								font-weight: 100 900;
+								font-stretch: 75% 125%;
+								font-style: normal;
+								font-display: swap;
+							}
+@font-face {
 								font-family: 'icons';
 								font-display: swap;
 								src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -10,16 +20,6 @@
 								src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"),
 									url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"),
 									url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
-								font-weight: 100 900;
-								font-stretch: 75% 125%;
-								font-style: normal;
-								font-display: swap;
-							}
-@font-face {
-								font-family: 'OpenSans';
-								src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
-									url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"),
-									url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
 								font-weight: 100 900;
 								font-stretch: 75% 125%;
 								font-style: normal;
