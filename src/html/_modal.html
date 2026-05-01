@@ -1746,3 +1746,237 @@
     </div>
 </div>
 }
+@@if (modal==="sign-in") {
+<div id="sign-in" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" data-close-modal class="popup__close icon-close"></button>
+            <div class="popup__login auth">
+                <div class="auth__main">
+                    <h4 class="auth__title title text-center">Авторизация</h4>
+                    <div class="auth__subtitle text-center">
+                        Еще нет аккаунта? <a href="#sign-up" data-modal>Загеристрироваться</a>
+                    </div>
+                    <div class="auth__socials text-center">
+                        <div class="auth__socials-caption">
+                            Войти через социальные сети
+                        </div>
+                        <div class="auth__socials-links">
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/vk-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/mail-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/ok-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/ya-logo.svg" alt="Иконка">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="auth__separator">или</div>
+                    <form action="#" class="auth__form form">
+                        <div class="auth__form-fields">
+                            <div class="form__field form__field--large">
+                                <div class="form__label">Логин</div>
+                                <input type="text" name="login" class="input error" placeholder="Введите логин">
+                                <div class="error-message icon-info">
+                                    Логин должен быть не короче 3 символов
+                                </div>
+                            </div>
+                            <div class="form__field form__field--large">
+                                <div class="form__label">Пароль</div>
+                                <input type="password" name="password" class="input error" placeholder="Введите пароль">
+                                <div class="error-message icon-info">
+                                    Пароль должен содержать минимум 8 символов
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="auth__form-btn l-btn l-btn-lg l-btn-primary">Войти</button>
+                        <a href="#password-recovery" data-modal class="auth__forgot">Забыли пароль?</a>
+                    </form>
+                </div>
+                <div class="auth__consult">
+                    <div class="auth__consult-title title">Заказать консультацию</div>
+                    <ul class="auth__consult-list">
+                        <li>Все консультации проходят внутри Итвио</li>
+                        <li>Ваш консультант получит доступ к дневнику питания Итвио</li>
+                        <li>Образование всех консультантов проверено</li>
+                        <li>Все консультации в Итвио персональны</li>
+                    </ul>
+                    <div class="auth__consult-codes">
+                        <a href="https://www.rustore.ru/catalog/app/com.eatvioapp.app" target="_blank" class="auth__consult-code">
+                            <div class="auth__consult-image">
+                                <img src="@img/qr-rustore.png" alt="QR">
+                            </div>
+                            <div class="auth__consult-place">
+                                <img src="@img/rustore-logo.svg" alt="Логотип">
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/ru/app/итвио/id6499423743" target="_blank" class="auth__consult-code">
+                            <div class="auth__consult-image">
+                                <img src="@img/qr-app-store.png" alt="QR">
+                            </div>
+                            <div class="auth__consult-place">
+                                <img src="@img/app-store.svg" alt="Логотип">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="auth__consult-hint">Установите приложение Итвио, в приложении удобнее вести дневник питания и делать фото вашей еды. Доступно в Appstore и RuStore</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (modal==="register") {
+<div id="register" class="popup open">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" data-close-modal class="popup__close icon-close"></button>
+            <div class="popup__login auth">
+                <div class="auth__main">
+                    <h4 class="auth__title title text-center">Регистрация</h4>
+                    <div class="auth__subtitle text-center">
+                        Есть аккаунт? <a href="#sign-in" data-modal>Войти</a>
+                    </div>
+                    <div class="auth__socials text-center">
+                        <div class="auth__socials-caption">
+                            Войти через социальные сети
+                        </div>
+                        <div class="auth__socials-links">
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/vk-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/mail-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/ok-logo.svg" alt="Иконка">
+                            </a>
+                            <a href="" class="auth__socials-link">
+                                <img src="@img/icons/ya-logo.svg" alt="Иконка">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="auth__separator">или</div>
+                    <form action="#" class="auth__form form">
+                        <div class="auth__form-fields">
+                            <div class="form__field">
+                                <div class="form__label">Имя</div>
+                                <input type="text" name="first_name" class="input error" placeholder="Введите имя">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__label">Фамилия</div>
+                                <input type="text" name="last_name" class="input error" placeholder="Введите фамилию">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field form__field--large">
+                                <div class="form__label">Телефон</div>
+                                <input type="tel" name="phone" class="input error" placeholder="Введите номер телефона">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field form__field--large">
+                                <div class="form__label">Почта</div>
+                                <input type="email" name="email" class="input error" placeholder="Введите почту">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+
+                            <div class="form__field">
+                                <div class="form__label">Пароль</div>
+                                <input type="password" name="password" class="input error" placeholder="Введите пароль">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__label">Подтвердите пароль</div>
+                                <input type="password" name="password_confirm" class="input error" placeholder="Введите пароль">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__label">Дата рождения</div>
+                                <input type="text" name="birthday" class="input error" placeholder="Введите дату">
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__label">Выберите пол</div>
+                                <div class="select">
+                                    <select name="gender" class="error">
+                                        <option value="male">Мужской</option>
+                                        <option value="female">Женский</option>
+                                    </select>
+                                </div>
+                                <div class="error-message icon-info">
+                                    Обязательное поле
+                                </div>
+                            </div>
+
+                            <div class="form__field">
+                                <div class="form__label">Рост, см</div>
+                                <input type="number" name="height" class="input error" placeholder="Введите рост">
+                            </div>
+                            <div class="form__field">
+                                <div class="form__label">Вес, кг</div>
+                                <input type="number" name="weight" class="input error" placeholder="Введите вес">
+                            </div>
+                        </div>
+                        <label class="form__policy checkbox ">
+                            <input type="checkbox" checked class="checkbox__input hidden" hidden>
+                            <span class="checkbox__content">
+                                <span>Нажимая кнопку Регистрация, вы принимаете <a href="">Условия</a>, <a href="">Политику использования данных</a> и <a href="">Политику в отношении файлов cookie</a></span>
+                            </span>
+                        </label>
+                        <button type="submit" class="auth__form-btn l-btn l-btn-lg l-btn-primary">Зарегистрироваться</button>
+                    </form>
+                </div>
+                <div class="auth__consult">
+                    <div class="auth__consult-title title">Заказать консультацию</div>
+                    <ul class="auth__consult-list">
+                        <li>Все консультации проходят внутри Итвио</li>
+                        <li>Ваш консультант получит доступ к дневнику питания Итвио</li>
+                        <li>Образование всех консультантов проверено</li>
+                        <li>Все консультации в Итвио персональны</li>
+                    </ul>
+                    <div class="auth__consult-codes">
+                        <a href="https://www.rustore.ru/catalog/app/com.eatvioapp.app" target="_blank" class="auth__consult-code">
+                            <div class="auth__consult-image">
+                                <img src="@img/qr-rustore.png" alt="QR">
+                            </div>
+                            <div class="auth__consult-place">
+                                <img src="@img/rustore-logo.svg" alt="Логотип">
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/ru/app/итвио/id6499423743" target="_blank" class="auth__consult-code">
+                            <div class="auth__consult-image">
+                                <img src="@img/qr-app-store.png" alt="QR">
+                            </div>
+                            <div class="auth__consult-place">
+                                <img src="@img/app-store.svg" alt="Логотип">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="auth__consult-hint">Установите приложение Итвио, в приложении удобнее вести дневник питания и делать фото вашей еды. Доступно в Appstore и RuStore</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

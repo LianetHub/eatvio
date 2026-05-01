@@ -139,7 +139,7 @@
                                                 <li>Доступ к закрытому чату участников.</li>
                                                 <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
                                             </ul>
-                                            <a href="" class="plan-page__tariff-btn l-btn l-btn-black">Заказать</a>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-black">Заказать</a>
                                         </div>
                                         <div class="plan-page__tariff plan-page__tariff--green" :class="{ 'active': activeTab === 1 }" x-show="activeTab === 1">
                                             <div class="plan-page__tariff-caption">Professional</div>
@@ -157,7 +157,7 @@
                                                 <li>Приоритетная поддержка консультанта.</li>
                                                 <li>Ежедневная проверка дневников питания.</li>
                                             </ul>
-                                            <a href="" class="plan-page__tariff-btn l-btn l-btn-green">Заказать</a>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-green">Заказать</a>
                                         </div>
                                         <div class="plan-page__tariff plan-page__tariff--blue" :class="{ 'active': activeTab === 2 }" x-show="activeTab === 2">
                                             <div class="plan-page__tariff-caption">Premium</div>
@@ -178,7 +178,7 @@
                                                 <li><strong>Консьерж-сервис:</strong> подбор блюд из меню ресторанов или доставка готовых рационов под ваш план.</li>
                                                 <li><strong>Связь 24/7:</strong> экстренные консультации в любое время.</li>
                                             </ul>
-                                            <a href="" class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@
                                         <div class="consultant-card__info">Консультант Eatvio, cпециалист по здоровому питанию и биохакингу. Более 5 лет помогаю клиентам достигать целей: от снижения веса до восстановления уровня энергии с помощью еды</div>
                                         <div class="consultant-card__education icon-check">Медицинское образование</div>
                                     </div>
-                                    <div class="consultant-card__detials" :class="{ 'active': isInfoOpened }" x-show="!isMobile || isInfoOpened">
+                                    <div class="consultant-card__details" :class="{ 'active': isInfoOpened }" x-show="!isMobile || isInfoOpened">
                                         <div class="consultant-card__block">
                                             <div class="consultant-card__caption">Подписчики</div>
                                             <div class="consultant-card__subscribers">
@@ -258,8 +258,8 @@
                                             </div>
                                         </div>
                                         <div class="consultant-card__actions">
-                                            <a href="" class="consultant-card__btn l-btn l-btn-sm l-btn-primary">Заказать план</a>
-                                            <a href="" class="consultant-card__btn l-btn l-btn-sm l-btn-green">Задать вопрос</a>
+                                            <a href="#sign-in" data-modal class="consultant-card__btn l-btn l-btn-sm l-btn-primary">Заказать план</a>
+                                            <a href="#sign-in" data-modal class="consultant-card__btn l-btn l-btn-sm l-btn-green">Задать вопрос</a>
                                         </div>
                                     </div>
                                     <button type="button" class="consultant-card__more icon-down" x-show="isMobile" :class="{ 'active': isInfoOpened }" @click="isInfoOpened = !isInfoOpened" x-text="isInfoOpened ? 'Скрыть информацию' : 'Еще о консультанте'">
@@ -278,9 +278,6 @@
             "className": ""
             })
         </div>
-        @@include('html/_modal.html', {
-        "modal": "product"
-        })
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
