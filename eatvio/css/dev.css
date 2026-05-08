@@ -19318,6 +19318,17 @@ body.dark-theme {
             align-items: flex-start;
   }
 }
+.chat__video-btn.l-btn {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  margin-left: auto;
+}
+@media (min-width: 767.98px) {
+  .chat__video-btn.l-btn {
+    padding: 0.5rem 0.75rem;
+    margin-left: 0;
+  }
+}
 .chat__header-name {
   font-size: 1rem;
   font-weight: 700;
@@ -19622,6 +19633,16 @@ body.dark-theme {
     font-weight: normal;
     letter-spacing: normal;
   }
+}
+.chat__side {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
 }
 .chat__actions {
   position: relative;
