@@ -17,16 +17,6 @@
                         <div class="settings__header">
                             <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
                             <div class="settings__actions">
-                                <div class="settings__action setting__person">
-                                    <div class="settings__person-content">
-                                        <a href="" class="setting__person-name">
-                                            Анастасия Ч
-                                        </a>
-                                    </div>
-                                    <a href="" class="settings__person-thumb">
-                                        <img src="@img/user-2.png" alt="thumb">
-                                    </a>
-                                </div>
                                 <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
                             </div>
                         </div>
@@ -135,90 +125,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <aside class="plan-page__consultant consultant-card" x-data="{ 
-        isInfoOpened: false, 
-        isMobile: window.innerWidth < 992 
-     }" @resize.window="isMobile = window.innerWidth < 992">
-                                <div class="consultant-card__thumb">
-                                    <img src="@img/thumb.jpg" class="cover-image" alt="Аватар консультанта">
-                                </div>
-                                <div class="consultant-card__body">
-                                    <div class="consultant-card__main">
-                                        <div class="consultant-card__position">Консультант по питанию</div>
-                                        <div class="consultant-card__title">Сидни Суини</div>
-                                        <div class="consultant-card__info">Консультант Eatvio, cпециалист по здоровому питанию и биохакингу. Более 5 лет помогаю клиентам достигать целей: от снижения веса до восстановления уровня энергии с помощью еды</div>
-                                        <div class="consultant-card__education icon-check">Медицинское образование</div>
-                                    </div>
-                                    <div class="consultant-card__details" :class="{ 'active': isInfoOpened }" x-show="!isMobile || isInfoOpened">
-                                        <div class="consultant-card__block">
-                                            <div class="consultant-card__caption">Подписчики</div>
-                                            <div class="consultant-card__subscribers">
-                                                <div class="consultant-card__subscribers-value">5489</div>
-                                                <div class="consultant-card__subscribers-thumbs">
-                                                    <div class="consultant-card__subscribers-thumb"><img src="@img/user.png" class="cover-image" alt="thumb"></div>
-                                                    <div class="consultant-card__subscribers-thumb"><img src="@img/user-2.png" class="cover-image" alt="thumb"></div>
-                                                    <div class="consultant-card__subscribers-thumb"><img src="@img/user-3.png" class="cover-image" alt="thumb"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="consultant-card__block">
-                                            <div class="consultant-card__caption">Достижения</div>
-                                            <div class="person__side-checklist swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/checklist_1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/slim 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/dumbbell 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/diet 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/checklist_1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/slim 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/dumbbell 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/diet 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/checklist_1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/slim 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/dumbbell 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/diet 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/checklist_1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/slim 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/dumbbell 1.png" alt="checklist"></div>
-                                                    <div class="person__side-checkitem swiper-slide"><img src="@img/diet 1.png" alt="checklist"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="consultant-card__block">
-                                            <div class="consultant-card__caption">Дипломы</div>
-                                            <div class="consultant-card__diploms swiper">
-                                                <div class="swiper-wrapper">
-                                                    <a href="@img/cert.jpg" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert.jpg" alt="Диплом">
-                                                    </a>
-                                                    <a href="@img/cert-1.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert-1.png" alt="Диплом">
-                                                    </a>
-                                                    <a href="@img/cert-2.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert-2.png" alt="Диплом">
-                                                    </a>
-                                                    <a href="@img/cert.jpg" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert.jpg" alt="Диплом">
-                                                    </a>
-                                                    <a href="@img/cert-1.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert-1.png" alt="Диплом">
-                                                    </a>
-                                                    <a href="@img/cert-2.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
-                                                        <img src="@img/cert-2.png" alt="Диплом">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="consultant-card__actions">
-                                            <a href="#sign-in" data-modal class="consultant-card__btn l-btn l-btn-sm l-btn-primary">Заказать план</a>
-                                            <a href="#sign-in" data-modal class="consultant-card__btn l-btn l-btn-sm l-btn-green">Задать вопрос</a>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="consultant-card__more icon-down" x-show="isMobile" :class="{ 'active': isInfoOpened }" @click="isInfoOpened = !isInfoOpened" x-text="isInfoOpened ? 'Скрыть информацию' : 'Еще о консультанте'">
-                                        Еще о консультанте
-                                    </button>
-                                </div>
-                            </aside>
+                            @@include('./html/_plan-sidebar.html')
                         </div>
                         @@include('./html/_comment-block.html', {
                         "title": "Отзывы"

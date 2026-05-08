@@ -1,0 +1,287 @@
+<aside class="plan-page__consultant consultant-card" x-data="{ 
+        isInfoOpened: false, 
+        isMobile: window.innerWidth < 992 
+     }" @resize.window="isMobile = window.innerWidth < 992">
+    <div class="consultant-card__thumb">
+        <img src="@img/thumb.jpg" class="cover-image" alt="Аватар консультанта">
+    </div>
+    <div class="consultant-card__body">
+        <div class="consultant-card__main">
+            <div class="consultant-card__position">Консультант по питанию</div>
+            <div class="consultant-card__title">Сидни Суини</div>
+            <div class="consultant-card__info">Консультант Eatvio, cпециалист по здоровому питанию и биохакингу. Более 5 лет помогаю клиентам достигать целей: от снижения веса до восстановления уровня энергии с помощью еды</div>
+            <div class="consultant-card__education icon-check">Медицинское образование</div>
+        </div>
+        <div class="consultant-card__details" :class="{ 'active': isInfoOpened }" x-show="!isMobile || isInfoOpened">
+            <div class="consultant-card__block">
+                <div class="consultant-card__caption">Подписчики</div>
+                <div class="consultant-card__subscribers">
+                    <div class="consultant-card__subscribers-value">5489</div>
+                    <div class="consultant-card__subscribers-thumbs">
+                        <div class="consultant-card__subscribers-thumb"><img src="@img/user.png" class="cover-image" alt="thumb"></div>
+                        <div class="consultant-card__subscribers-thumb"><img src="@img/user-2.png" class="cover-image" alt="thumb"></div>
+                        <div class="consultant-card__subscribers-thumb"><img src="@img/user-3.png" class="cover-image" alt="thumb"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="consultant-card__block consultant-card__block--benefits">
+                <div class="consultant-card__caption">Достижения</div>
+                <div class="person__side-checklist swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/checklist_1.png', 'Достижение', 'Описание вашего достижения. Здесь можно указать подробности.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/slim 1.png', 'Снижение веса', 'Результаты по программе снижения веса и коррекции фигуры.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/dumbbell 1.png', 'Силовые показатели', 'Достижения в области силовых тренировок и набора мышечной массы.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/diet 1.png', 'Правильное питание', 'Соблюдение режима питания и сбалансированного рациона.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/checklist_1.png', 'Достижение', 'Описание вашего достижения. Здесь можно указать подробности.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/slim 1.png', 'Снижение веса', 'Результаты по программе снижения веса и коррекции фигуры.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/dumbbell 1.png', 'Силовые показатели', 'Достижения в области силовых тренировок и набора мышечной массы.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/diet 1.png', 'Правильное питание', 'Соблюдение режима питания и сбалансированного рациона.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/checklist_1.png', 'Достижение', 'Описание вашего достижения. Здесь можно указать подробности.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/slim 1.png', 'Снижение веса', 'Результаты по программе снижения веса и коррекции фигуры.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/dumbbell 1.png', 'Силовые показатели', 'Достижения в области силовых тренировок и набора мышечной массы.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="person__side-checkitem swiper-slide" x-data="tooltipItem('@img/diet 1.png', 'Правильное питание', 'Соблюдение режима питания и сбалансированного рациона.')" @click.outside.stop="isOpen = false" @click.stop="">
+                            <button x-ref="trigger" @click.stop="toggle" @mouseenter="open" @mouseleave="close" type="button" :class="{ 'active': isOpen }">
+                                <img :src="img" alt="checklist" class="fade-in" :class="{ 'loaded': isImageLoaded }" @load="isImageLoaded = true">
+                            </button>
+                            <template x-teleport="body">
+                                <div class="plan__type-tootlip plan__type-tootlip--teleport" x-show="isOpen" x-transition :class="{ 'open': isOpen }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" :style="`top: ${pos.top}px; right: ${pos.right}px;`" style="display: none;">
+                                    <div class="plan__type-tootlip-icon"><img :src="img" alt="icon"></div>
+                                    <div class="plan__type-tootlip-body">
+                                        <div class="plan__type-tootlip-header">
+                                            <div class="plan__type-tootlip-name" x-text="title"></div>
+                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                        </div>
+                                        <div class="plan__type-tootlip-desc" x-text="desc"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="consultant-card__block">
+                <div class="consultant-card__caption">Дипломы</div>
+                <div class="consultant-card__diploms swiper">
+                    <div class="swiper-wrapper">
+                        <a href="@img/cert.jpg" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert.jpg" alt="Диплом">
+                        </a>
+                        <a href="@img/cert-1.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert-1.png" alt="Диплом">
+                        </a>
+                        <a href="@img/cert-2.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert-2.png" alt="Диплом">
+                        </a>
+                        <a href="@img/cert.jpg" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert.jpg" alt="Диплом">
+                        </a>
+                        <a href="@img/cert-1.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert-1.png" alt="Диплом">
+                        </a>
+                        <a href="@img/cert-2.png" data-fancybox="diploms-gallery" class="consultant-card__diplom swiper-slide">
+                            <img src="@img/cert-2.png" alt="Диплом">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="consultant-card__actions">
+                <a href="#sign-in" data-modal class="consultant-card__btn l-btn l-btn-sm l-btn-green">Задать вопрос</a>
+            </div>
+        </div>
+        <button type="button" class="consultant-card__more icon-down" x-show="isMobile" :class="{ 'active': isInfoOpened }" @click="isInfoOpened = !isInfoOpened" x-text="isInfoOpened ? 'Скрыть информацию' : 'Еще о консультанте'">
+            Еще о консультанте
+        </button>
+    </div>
+</aside>

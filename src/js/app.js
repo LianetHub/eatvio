@@ -426,11 +426,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
     function getIndexInParent(node) {
         var children = node.parentNode.childNodes;
         var num = 0;
@@ -445,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('.chat__contacts-item').forEach(contact => contact.classList.remove('active'));
         document.querySelectorAll('.chat__block').forEach(chatBlock => chatBlock.classList.remove('active'));
     }
-
 
     if (document.querySelector('.search__input')) {
 
@@ -680,5 +674,38 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener('scroll', hideMenu, true);
     }
 
+
+
 });
 
+// alpine logic
+document.addEventListener('alpine:init', () => {
+    Alpine.data('tooltipItem', (img, title, desc) => ({
+        isOpen: false,
+        isImageLoaded: false,
+        pos: { top: 0, right: 0 },
+        img: img,
+        title: title,
+        desc: desc,
+
+        calculatePos() {
+            const rect = this.$refs.trigger.getBoundingClientRect();
+            this.pos.top = rect.bottom + 8;
+            this.pos.right = window.innerWidth - rect.right;
+        },
+
+        open() {
+            this.calculatePos();
+            this.isOpen = true;
+        },
+
+        close() {
+            this.isOpen = false;
+        },
+
+        toggle() {
+            if (!this.isOpen) this.calculatePos();
+            this.isOpen = !this.isOpen;
+        }
+    }));
+});
