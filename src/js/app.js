@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener('click', (e) => {
 
-
         if (e.target.classList.contains('header__user-btn')) {
             e.target.classList.toggle('active');
             e.target.nextElementSibling?.classList.toggle('active');
@@ -214,20 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle('active');
         }
 
-        if (e.target.matches('.comment-block__message-heart')) {
-            e.target.classList.toggle('active');
 
-            if (e.target.classList.contains('active')) {
-                +e.target.textContent++
-            } else {
-                +e.target.textContent--
-            }
-        }
-
-        if (e.target.matches('.comment-block__message-btn')) {
-            e.target.classList.toggle('active');
-            e.target.nextElementSibling?.classList.toggle('active');
-        }
 
     })
 

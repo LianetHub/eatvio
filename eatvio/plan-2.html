@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -18,7 +17,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
 
-    <link rel="stylesheet" href="css/dev.css" />
+    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
 
     
     <!-- Current Page Styles -->
@@ -32,9 +31,8 @@
 
 </head>
 
-    <body>
-        <div class="wrapper">
-            <header class="header">
+<body>
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -449,122 +447,83 @@
             </div>
         </div>
     </div>
-</header>
-            <main class="page">
-                <section class="settings">
-                    <div class="settings__container container-sm">
-                        <div class="settings__header">
-                            <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
-                            <div class="settings__actions">
-                                <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
-                            </div>
+</header> <main class="page">
+            <section class="settings">
+                <div class="settings__container container-sm">
+                    <div class="settings__header">
+                        <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
+                        <div class="settings__actions">
+                            <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
                         </div>
-                        <div class="plan-page">
-                            <div class="plan-page__body">
-                                <div class="plan-page__item plan-card" x-data="{ expanded: false }">
-                                    <div class="plan-card__header">
-                                        <div class="plan-card__header-title title">
-                                            Питание для диабетиков
-                                        </div>
-                                        <div class="plan-card__header-stats">
-                                            <div class="plan-card__actions">
-                                                <div class="plan-card__actions-block">
-                                                    <button type="button" class="plan-card__actions-btn icon-more-horizontal"></button>
-                                                    <ul class="plan-card__actions-list">
-                                                        <li class="plan-card__actions-item">
-                                                            <button type="button" class="plan-card__action">О рекламодателе</button>
-                                                        </li>
-                                                        <li class="plan-card__actions-item">
-                                                            <button type="button" class="plan-card__action">Не интересно</button>
-                                                        </li>
-                                                        <li class="plan-card__actions-item">
-                                                            <button type="button" class="plan-card__action">Пожаловаться</button>
-                                                        </li>
-                                                        <li class="plan-card__actions-item">
-                                                            <div class="plan-card__actions-id">ID: 2jkfk45JG</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                    </div>
+                    <div class="plan-page">
+                        <div class="plan-page__body">
+                            <div class="plan-page__item plan-card" x-data="{ expanded: false }">
+                                <div class="plan-card__header">
+                                    <div class="plan-card__header-title title"> Питание для диабетиков </div>
+                                    <div class="plan-card__header-stats">
+                                        <div class="plan-card__actions">
+                                            <div class="plan-card__actions-block">
+                                                <button type="button" class="plan-card__actions-btn icon-more-horizontal"></button>
+                                                <ul class="plan-card__actions-list">
+                                                    <li class="plan-card__actions-item">
+                                                        <button type="button" class="plan-card__action">О рекламодателе</button>
+                                                    </li>
+                                                    <li class="plan-card__actions-item">
+                                                        <button type="button" class="plan-card__action">Не интересно</button>
+                                                    </li>
+                                                    <li class="plan-card__actions-item">
+                                                        <button type="button" class="plan-card__action">Пожаловаться</button>
+                                                    </li>
+                                                    <li class="plan-card__actions-item">
+                                                        <div class="plan-card__actions-id">ID: 2jkfk45JG</div>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="plan-card__image">
-                                        <img src="img/announcement.jpg" class="cover-image" alt="announcement">
-                                    </div>
-                                    <div class="plan-card__details">
-                                        <div class="plan-card__details-rows">
-                                            <div class="plan-card__details-row">
-                                                <div class="plan-card__details-caption">
-                                                    Время прохождения плана:
-                                                </div>
-                                                <div class="plan-card__details-value">
-                                                    21 дней
-                                                </div>
-                                            </div>
-                                            <div class="plan-card__details-row">
-                                                <div class="plan-card__details-caption">
-                                                    Проходят план:
-                                                </div>
-                                                <div class="plan-card__details-value">
-                                                    2 пользователя
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="plan-card__desc" :class="{ 'active': expanded }">
-                                        Если вы или ваши близкие столкнулись с этим диагнозом, важно понимать:
-                                        диабет — это не приговор, а возможность пересмотреть свои привычки и
-                                        научиться управлять своим здоровьем через правильное питание. Почему
-                                        важно формировать пищевое поведение? Диабет требует особого внимания к
-                                        тому, что и как мы едим. Но это не значит, что нужно отказываться от вкусной
-                                        еды или жить в постоянных ограничениях. Главное — научиться выстраивать
-                                        гармоничные отношения с едой, понимать, как она влияет на ваш организм, и
-                                        делать выбор в пользу здоровья без стресса и дискомфорта. Как я могу вам
-                                        помочь? Индивидуальный подход: Я помогу вам сформировать пищевые
-                                        привычки, которые будут работать именно для вас. Мы учтем ваш образ
-                                        жизни, вкусовые предпочтения и медицинские особенности. Обучение и
-                                        поддержка: Я научу вас, как планировать рацион, выбирать полезные
-                                        продукты и готовить блюда, которые будут не только полезными, но и
-                                        вкусными. Вы поймете, как контролировать уровень сахара в крови, не
-                                        отказываясь от удовольствия от еды. Постепенные изменения: Мы не будем
-                                        резко менять ваши привычки. Я помогу вам внедрять новые правила питания
-                                        постепенно, чтобы они стали частью вашей жизни без стресса.
-                                        Психологическая поддержка: Я знаю, как сложно менять привычки, особенно
-                                        когда речь идет о диабете. Я буду рядом, чтобы поддерживать вас на каждом
-                                        этапе. Что вы получите в результате? Устойчивые пищевые привычки, которые
-                                        помогут вам контролировать уровень сахара в крови. Уверенность в своем
-                                        выборе и понимание, как питание влияет на ваше здоровье. Больше энергии,
-                                        легкости и улучшение общего самочувствия. Возможность наслаждаться едой
-                                        без чувства вины или страха.
-                                    </p>
-                                    <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'">
-                                        Читать больше
-                                    </button>
-                                    <div class="plan-card__footer">
-                                        <a href="" class="plan-card__share l-btn l-btn-primary l-btn-sm icon-share">Поделиться</a>
-                                        <div class="plan-card__stats">
-                                            <div class="plan-card__stat icon-eye-fill">12</div>
-                                            <div class="plan-card__stat icon-heart-fill">0</div>
-                                            <div class="plan-card__stat icon-message-square">1</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="plan-page__tariffs">
-                                    <div class="plan-page__tariff">
-                                        <div class="plan-page__tariff-name title">Формирование пищевого поведения при&nbsp;диабете</div>
-                                        <div class="plan-page__tariff-price">11 000 ₽</div>
-                                        <div class="plan-page__tariff-tagline">Ваше здоровье — в ваших руках, а я помогу вам сделать этот путь легким и комфортным!</div>
-                                        <ul class="plan-page__tariff-list">
-                                            <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
-                                            <li>Список разрешенных и «скрытых» продуктов.</li>
-                                            <li>Доступ к закрытому чату участников.</li>
-                                            <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
-                                        </ul>
-                                        <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-green">Заказать</a>
+                                <div class="plan-card__image">
+                                    <img src="img/announcement.jpg" class="cover-image" alt="announcement">
+                                </div>
+                                <div class="plan-card__details">
+                                    <div class="plan-card__details-rows">
+                                        <div class="plan-card__details-row">
+                                            <div class="plan-card__details-caption"> Время прохождения плана: </div>
+                                            <div class="plan-card__details-value"> 21 дней </div>
+                                        </div>
+                                        <div class="plan-card__details-row">
+                                            <div class="plan-card__details-caption"> Проходят план: </div>
+                                            <div class="plan-card__details-value"> 2 пользователя </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="plan-card__desc" :class="{ 'active': expanded }"> Если вы или ваши близкие столкнулись с этим диагнозом, важно понимать: диабет — это не приговор, а возможность пересмотреть свои привычки и научиться управлять своим здоровьем через правильное питание. Почему важно формировать пищевое поведение? Диабет требует особого внимания к тому, что и как мы едим. Но это не значит, что нужно отказываться от вкусной еды или жить в постоянных ограничениях. Главное — научиться выстраивать гармоничные отношения с едой, понимать, как она влияет на ваш организм, и делать выбор в пользу здоровья без стресса и дискомфорта. Как я могу вам помочь? Индивидуальный подход: Я помогу вам сформировать пищевые привычки, которые будут работать именно для вас. Мы учтем ваш образ жизни, вкусовые предпочтения и медицинские особенности. Обучение и поддержка: Я научу вас, как планировать рацион, выбирать полезные продукты и готовить блюда, которые будут не только полезными, но и вкусными. Вы поймете, как контролировать уровень сахара в крови, не отказываясь от удовольствия от еды. Постепенные изменения: Мы не будем резко менять ваши привычки. Я помогу вам внедрять новые правила питания постепенно, чтобы они стали частью вашей жизни без стресса. Психологическая поддержка: Я знаю, как сложно менять привычки, особенно когда речь идет о диабете. Я буду рядом, чтобы поддерживать вас на каждом этапе. Что вы получите в результате? Устойчивые пищевые привычки, которые помогут вам контролировать уровень сахара в крови. Уверенность в своем выборе и понимание, как питание влияет на ваше здоровье. Больше энергии, легкости и улучшение общего самочувствия. Возможность наслаждаться едой без чувства вины или страха. </p>
+                                <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'"> Читать больше </button>
+                                <div class="plan-card__footer">
+                                    <a href="" class="plan-card__share l-btn l-btn-primary l-btn-sm icon-share">Поделиться</a>
+                                    <div class="plan-card__stats">
+                                        <div class="plan-card__stat icon-eye-fill">12</div>
+                                        <div class="plan-card__stat icon-heart-fill">0</div>
+                                        <div class="plan-card__stat icon-message-square">1</div>
                                     </div>
                                 </div>
                             </div>
-                            <aside class="plan-page__consultant consultant-card" x-data="{ 
+                            <div class="plan-page__tariffs">
+                                <div class="plan-page__tariff">
+                                    <div class="plan-page__tariff-name title">Формирование пищевого поведения при&nbsp;диабете</div>
+                                    <div class="plan-page__tariff-price">11 000 ₽</div>
+                                    <div class="plan-page__tariff-tagline">Ваше здоровье — в ваших руках, а я помогу вам сделать этот путь легким и комфортным!</div>
+                                    <ul class="plan-page__tariff-list">
+                                        <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
+                                        <li>Список разрешенных и «скрытых» продуктов.</li>
+                                        <li>Доступ к закрытому чату участников.</li>
+                                        <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
+                                    </ul>
+                                    <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-green">Заказать</a>
+                                </div>
+                            </div>
+                        </div> <aside class="plan-page__consultant consultant-card" x-data="{ 
         isInfoOpened: false, 
         isMobile: window.innerWidth < 992 
      }" @resize.window="isMobile = window.innerWidth < 992">
@@ -851,8 +810,7 @@
         </button>
     </div>
 </aside>
-                        </div>
-                        <div class="comment-block">
+                    </div> <div class="comment-block">
     <div class="comment-block__caption title icon-message-alternate">
         
         
@@ -873,7 +831,7 @@
 
             <div class="comment-block__list">
 
-                <div class="comment-block__item">
+                <div class="comment-block__item" x-data="{ isLiked: false, likes: 24, showActions: false, showReplyForm: false }">
                     <div class="comment-block__thumb">
                         <img src="img/user-5.png" class="cover-image" alt="thumb">
                     </div>
@@ -883,8 +841,8 @@
                                 <div class="comment-block__message-caption">Мария К.</div>
                                 <div class="comment-block__message-text">Отличные советы! 🔥 Начала применять — уже вижу первые результаты. Особенно помогает совет про контроль порций.</div>
                                 <div class="comment-block__message-details">
-                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
-                                    <div class="comment-block__message-actions">
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
                                         <button type="button" class="icon-pen-alternate">Редактировать</button>
                                         <button type="button" class="icon-trash">Удалить</button>
                                     </div>
@@ -892,14 +850,19 @@
                             </div>
                             <div class="comment-block__message-stats">
                                 <div class="comment-block__message-time">1 час назад</div>
-                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
-                                <button type="button" class="comment-block__answer">Ответить</button>
+                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                             </div>
 
+                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                            </form>
+
                             <div class="comment-block__discussion">
-                                <div class="comment-block__item">
+                                <div class="comment-block__item" x-data="{ isLiked: false, likes: 8, showActions: false, showReplyForm: false }">
                                     <div class="comment-block__thumb">
-                                        <img src="img/user-5.png" class="cover-image" alt="thumb">
+                                        <img src="img/user.png" class="cover-image" alt="thumb">
                                     </div>
                                     <div class="comment-block__body">
                                         <div class="comment-block__message">
@@ -907,21 +870,27 @@
                                                 <div class="comment-block__message-caption">Анна Здоровье</div>
                                                 <div class="comment-block__message-text">Рада, что помогает! 💪 Продолжай в том же духе, результаты обязательно будут!</div>
                                                 <div class="comment-block__message-details">
-                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
-                                                    <div class="comment-block__message-actions">
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
                                                         <button type="button" class="icon-complaint">Пожаловаться</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="comment-block__message-stats">
                                                 <div class="comment-block__message-time">45 мин назад</div>
-                                                <button type="button" class="comment-block__message-heart icon-heart">8</button>
+                                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                                             </div>
+
+                                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="comment-block__item">
+                                <div class="comment-block__item" x-data="{ isLiked: false, likes: 3, showActions: false, showReplyForm: false }">
                                     <div class="comment-block__thumb">
                                         <img src="img/user-8.png" class="cover-image" alt="thumb">
                                     </div>
@@ -931,19 +900,27 @@
                                                 <div class="comment-block__message-caption">Дмитрий С.</div>
                                                 <div class="comment-block__message-text">Согласен! Порции — это ключ. Я тоже так начинал.</div>
                                                 <div class="comment-block__message-details">
-                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
+                                                        <button type="button" class="icon-complaint">Пожаловаться</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="comment-block__message-stats">
                                                 <div class="comment-block__message-time">30 мин назад</div>
-                                                <button type="button" class="comment-block__message-heart icon-heart">3</button>
-                                                <button type="button" class="comment-block__answer">Ответить</button>
+                                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                                             </div>
+
+                                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="comment-block__item">
+                                <div class="comment-block__item" x-data="{ isLiked: false, likes: 1, showActions: false, showReplyForm: false }">
                                     <div class="comment-block__thumb">
                                         <img src="img/user-7.png" class="cover-image" alt="thumb">
                                     </div>
@@ -953,14 +930,22 @@
                                                 <div class="comment-block__message-caption">Егор Б. <span>В ответ @Анна Здоровье</span></div>
                                                 <div class="comment-block__message-text">Ответ на ответ комментария</div>
                                                 <div class="comment-block__message-details">
-                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
+                                                        <button type="button" class="icon-complaint">Пожаловаться</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="comment-block__message-stats">
                                                 <div class="comment-block__message-time">30 мин назад</div>
-                                                <button type="button" class="comment-block__message-heart icon-heart">3</button>
-                                                <button type="button" class="comment-block__answer">Ответить</button>
+                                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                                             </div>
+
+                                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -969,7 +954,7 @@
                     </div>
                 </div>
 
-                <div class="comment-block__item">
+                <div class="comment-block__item" x-data="{ isLiked: false, likes: 12, showActions: false, showReplyForm: false }">
                     <div class="comment-block__thumb">
                         <img src="img/user-3.png" class="cover-image" alt="thumb">
                     </div>
@@ -979,16 +964,25 @@
                                 <div class="comment-block__message-caption">Елена П.</div>
                                 <div class="comment-block__message-text">А сколько времени заняло, чтобы увидеть первые результаты? Я только начинаю свой путь и хочется понимать примерные сроки.</div>
                                 <div class="comment-block__message-details">
-                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
+                                        <button type="button" class="icon-complaint">Пожаловаться</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="comment-block__message-stats">
                                 <div class="comment-block__message-time">1 час назад</div>
-                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
-                                <button type="button" class="comment-block__answer">Ответить</button>
+                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                             </div>
+
+                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                            </form>
+
                             <div class="comment-block__discussion">
-                                <div class="comment-block__item">
+                                <div class="comment-block__item" x-data="{ isLiked: false, likes: 5, showActions: false, showReplyForm: false }">
                                     <div class="comment-block__thumb">
                                         <img src="img/user.png" class="cover-image" alt="thumb">
                                     </div>
@@ -998,13 +992,22 @@
                                                 <div class="comment-block__message-caption">Анна Здоровье</div>
                                                 <div class="comment-block__message-text">Первые изменения заметила через 2-3 недели! Главное — не опускать руки и быть последовательной 😊</div>
                                                 <div class="comment-block__message-details">
-                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
+                                                        <button type="button" class="icon-complaint">Пожаловаться</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="comment-block__message-stats">
                                                 <div class="comment-block__message-time">45 мин назад</div>
-                                                <button type="button" class="comment-block__message-heart icon-heart">8</button>
+                                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                                             </div>
+
+                                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -1013,7 +1016,7 @@
                     </div>
                 </div>
 
-                <div class="comment-block__item">
+                <div class="comment-block__item" x-data="{ isLiked: false, likes: 19, showActions: false, showReplyForm: false }">
                     <div class="comment-block__thumb">
                         <img src="img/user-2.png" class="cover-image" alt="thumb">
                     </div>
@@ -1023,14 +1026,22 @@
                                 <div class="comment-block__message-caption">Игорь М.</div>
                                 <div class="comment-block__message-text">Про сон — очень важное замечание! Раньше не понимал, почему вес стоит, пока не начал спать по 7-8 часов.</div>
                                 <div class="comment-block__message-details">
-                                    <button type="button" class="comment-block__message-btn icon-more-horizontal"></button>
+                                    <button type="button" class="comment-block__message-btn icon-more-horizontal" :class="{'active': showActions}" @click.stop="showActions = !showActions" @click.outside="showActions = false"></button>
+                                    <div class="comment-block__message-actions" :class="{'active': showActions}">
+                                        <button type="button" class="icon-complaint">Пожаловаться</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="comment-block__message-stats">
                                 <div class="comment-block__message-time">1 час назад</div>
-                                <button type="button" class="comment-block__message-heart icon-heart">24</button>
-                                <button type="button" class="comment-block__answer">Ответить</button>
+                                <button type="button" class="comment-block__message-heart icon-heart" :class="{'active': isLiked}" @click="isLiked = !isLiked; isLiked ? likes++ : likes--" x-text="likes"></button>
+                                <button type="button" class="comment-block__answer" @click="showReplyForm = !showReplyForm">Ответить</button>
                             </div>
+
+                            <form action="#" x-show="showReplyForm" x-collapse style="display: none;" class="comment-block__form comment-block__form--retry">
+                                <textarea name="message" class="textarea" placeholder="Написать ответ..."></textarea>
+                                <button type="submit" class="comment-block__form-submit icon-send-alternate"></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -1039,27 +1050,26 @@
         </div>
     </div>
 </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                Fancybox.bind('[data-fancybox]', {});
-            })
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Fancybox.bind('[data-fancybox]', {});
+        })
+
+    </script> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>
