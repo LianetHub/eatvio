@@ -282,8 +282,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -291,8 +291,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;

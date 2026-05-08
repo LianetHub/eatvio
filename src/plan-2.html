@@ -98,9 +98,95 @@
                                         легкости и улучшение общего самочувствия. Возможность наслаждаться едой
                                         без чувства вины или страха.
                                     </p>
-                                    <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'">
-                                        Читать больше
-                                    </button>
+                                    <div class="plan-card__row">
+                                        <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'">
+                                            Читать больше
+                                        </button>
+                                        <div class="plan__person-icons">
+                                            <div class="plan__type flex flex-row">
+                                                <div wire:key="show-plan-52-fit" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
+                                                        <img src="/img/fit.png" alt="fit">
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="/img/fit.png" alt="fit">
+                                                        </div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Поддержание формы</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Сбалансированный рацион для сохранения достигнутых результатов и тонуса. Индивидуальный план питания и чек-листы помогут легко придерживаться правильного режима, оставаться энергичным и уверенным в себе.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div wire:key="show-plan-52-slim" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
+                                                        <img src="/img/slim.png" alt="slim">
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="/img/slim.png" alt="slim">
+                                                        </div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Похудение</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Эффективный и комфортный путь к желаемому весу без жестких ограничений. Создадим дефицит калорий, ускорим метаболизм и разработаем систему питания, которая станет новым образом жизни, а не диетой.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div wire:key="show-plan-52-behavior" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
+                                                        <img src="/img/behavior.png" alt="behavior">
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="/img/behavior.png" alt="behavior">
+                                                        </div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Формирование пищевого поведения</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Проработаем психологическую зависимость от еды, научимся управлять аппетитом и эмоциями без заедания. Вы обретете здоровые привычки и свободные отношения с едой, основанные на интуитивном питании.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div wire:key="show-plan-52-wellness" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
+                                                        <img src="/img/wellness.png" alt="wellness">
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="/img/wellness.png" alt="wellness">
+                                                        </div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Улучшение самочувствия</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Решение проблем с энергией, сном и пищеварением через коррекцию рациона. Уберем «пищевой мусор», добавим необходимые нутриенты для повышения продуктивности и качества жизни каждый день.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="plan-card__footer">
                                         <a href="" class="plan-card__share l-btn l-btn-primary l-btn-sm icon-share">Поделиться</a>
                                         <div class="plan-card__stats">

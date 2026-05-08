@@ -682,7 +682,6 @@
 }
 
 .plan-card__more {
-  margin-top: 0.625rem;
   color: #2f80ed;
   font-size: 0.875rem;
   font-weight: 700;
@@ -710,6 +709,23 @@
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.plan-card__row {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plan-card__row .plan__person-icons {
+  margin-top: 0;
 }
 
 .plan-card__footer {
@@ -806,6 +822,7 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  gap: 1rem;
 }
 
 .plan-page__body {
