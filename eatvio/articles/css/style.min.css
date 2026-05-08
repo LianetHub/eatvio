@@ -3886,7 +3886,7 @@ body.dark-theme {
 }
 @media (any-hover: hover) {
   .l-btn.l-btn-red:hover {
-    background: #ff3b3b;
+    background: #cc1e1e;
   }
 }
 .l-btn.l-btn-danger {

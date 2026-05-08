@@ -4566,7 +4566,7 @@ body.dark-theme {
 }
 @media (any-hover: hover) {
   .l-btn.l-btn-red:hover {
-    background: #ff3b3b;
+    background: #cc1e1e;
   }
 }
 .l-btn.l-btn-danger {
@@ -25526,7 +25526,7 @@ body.dark-theme {
 }
 @media (any-hover: hover) {
   .l-btn.l-btn-red:hover {
-    background: #ff3b3b;
+    background: #cc1e1e;
   }
 }
 .l-btn.l-btn-danger {
@@ -44349,7 +44349,7 @@ body.dark-theme {
   --lk-accent4: rgb(90.6034782609, 170.6, 250.5965217391);
   --lk-danger-fg: #fff;
   --lk-danger: #f91f31;
-  --lk-danger2: rgb(249.532173913, 50.867826087, 67.2713043478);
+  --lk-danger2: #cc1e1e;
   --lk-danger3: rgb(250.0643478261, 70.7356521739, 85.5426086957);
   --lk-danger4: rgb(250.5965217391, 90.6034782609, 103.8139130435);
   --lk-success-fg: #fff;
@@ -44359,7 +44359,7 @@ body.dark-theme {
   --lk-success4: rgb(90.6034782609, 250.5965217391, 144.1791304348);
   --lk-control-fg: var(--lk-fg);
   --lk-control-bg: var(--lk-bg2);
-  --lk-control-hover-bg: var(--lk-bg3);
+  --lk-control-hover-bg: #0b5ed7;
   --lk-control-active-bg: var(--lk-bg4);
   --lk-control-active-hover-bg: var(--lk-bg2);
   --lk-connection-excellent: #06db4d;
@@ -44739,6 +44739,15 @@ body.dark-theme {
   max-width: 100%;
   max-height: 100%;
   padding: var(--lk-grid-gap);
+}
+@media (min-width: 768px) {
+  .lk-grid-layout {
+    --lk-col-count: 2;
+    --lk-row-count: 1;
+  }
+}
+.lk-grid-layout .lk-participant-tile .lk-participant-placeholder svg {
+  max-width: 33vw;
 }
 
 .lk-grid-layout[data-lk-pagination=true] {
