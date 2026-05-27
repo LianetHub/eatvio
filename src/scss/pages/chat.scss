@@ -635,6 +635,7 @@
 		@media (min-width: $md4) {
 			align-items: center;
 			flex-direction: row;
+			gap: 0.25rem;
 		}
 
 		.chat__time {

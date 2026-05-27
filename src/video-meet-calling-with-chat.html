@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Видеовстреча',
-    "stylesName": ["video-meet"]
+    "stylesName": ["video-meet", "chat"]
     })
     <body>
         <div class="wrapper">
@@ -140,24 +140,10 @@
                                         <button class="lk-start-audio-button lk-start-audio-button" style="display: none;">Start Video</button>
                                     </div>
                                 </div>
-                                <div class="lk-chat" style="display: grid;">
-                                    <div class="lk-chat-header">
-                                        Сообщения
-                                        <button class="lk-close-button lk-button lk-chat-toggle" aria-pressed="true" data-lk-unread-msgs="0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                                                <path fill="#000" d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <ul class="lk-list lk-chat-messages">
-                                        <li class="lk-chat-entry" title="13:14:31 Москва, стандартное время" data-lk-message-origin="remote"><span class="lk-meta-data"><strong class="lk-participant-name"></strong><span class="lk-timestamp">13:14</span></span><span class="lk-message-body">Привет как дела</span><span class="lk-message-attachements"></span></li>
-                                        <li class="lk-chat-entry" title="13:14:44 Москва, стандартное время" data-lk-message-origin="local"><span class="lk-meta-data"><strong class="lk-participant-name"></strong><span class="lk-timestamp">13:14</span></span><span class="lk-message-body">все отлично бро</span><span class="lk-message-attachements"></span></li>
-                                    </ul>
-                                    <form class="lk-chat-form">
-                                        <input class="lk-form-control lk-chat-form-input" placeholder="Написать сообщение" type="text">
-                                        <button type="submit" class="lk-button lk-chat-form-button">Отправить</button>
-                                    </form>
-                                </div>
+                                @@include('html/_video-meet-chat.html', {
+                                "closePressed": "true",
+                                "hasMessages": true
+                                })
                                 <div style="display: none;"></div>
                             </div>
                         </div>

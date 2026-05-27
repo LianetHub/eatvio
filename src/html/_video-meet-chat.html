@@ -1,0 +1,75 @@
+<div class="video-meet-chat@@if(typeof visible !== 'undefined' && visible === false) { video-meet-chat_hidden}">
+    <div class="chat__block active">
+        <div class="chat__header video-meet-chat__header">
+            <div class="chat__person">
+                <div class="chat__thumb">
+                    <img src="@img/user-2.png" alt="user">
+                </div>
+                <div class="chat__info video-meet-chat__info">
+                    <div class="chat__name">
+                        Иван Долгунов
+                    </div>
+                    <div class="chat__status online">
+                        Онлайн
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="video-meet-chat__close lk-chat-toggle" aria-pressed="@@closePressed" data-lk-unread-msgs="0" aria-label="Закрыть чат">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="chat__content video-meet-chat__content">
+            @@if(typeof hasMessages !== 'undefined' && hasMessages === true) {
+            <div class="chat__date">
+                Сегодня
+            </div>
+            <div class="chat__item">
+                <div class="chat__thumb">
+                    <img src="@img/user-2.png" alt="thumb">
+                </div>
+                <div class="chat__message">
+                    <div class="chat__heading">
+                        <a href="" class="chat__name">
+                            Иван
+                        </a>
+                        <div class="chat__time">13:14</div>
+                    </div>
+                    <div class="chat__message-body">
+                        <div class="chat__message-block">
+                            <p class="chat__message-badge">Привет как дела</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__item chat__item-input submitted">
+                <div class="chat__thumb">
+                    <img src="@img/user-2.png" alt="thumb">
+                </div>
+                <div class="chat__message">
+                    <div class="chat__heading">
+                        <a href="" class="chat__name">
+                            Вы
+                        </a>
+                        <div class="chat__time">13:14</div>
+                    </div>
+                    <div class="chat__message-body">
+                        <div class="chat__message-block">
+                            <p class="chat__message-badge">все отлично бро</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="chat__footer video-meet-chat__footer">
+            <label class="chat__file">
+                <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                <span class="chat__file-btn icon-clip"></span>
+            </label>
+            <textarea name="message" class="video-meet-chat__field" rows="1" placeholder="Написать сообщение..."></textarea>
+            <button type="button" class="chat__voice icon-voice" aria-label="Голосовое сообщение"></button>
+        </div>
+    </div>
+</div>

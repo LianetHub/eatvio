@@ -1894,6 +1894,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 0.25rem;
   }
 
   .chat__status {

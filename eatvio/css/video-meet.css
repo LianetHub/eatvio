@@ -49,6 +49,20 @@
   height: calc(100svh - 63px);
 }
 
+.video-meet-eatvio .lk-room-container,
+.video-meet-eatvio .lk-video-conference {
+  height: 100%;
+  min-height: 0;
+}
+
+.video-meet-eatvio .lk-video-conference-inner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+}
+
 .lk-button,
 .lk-start-audio-button,
 .lk-chat-toggle,
@@ -1246,6 +1260,252 @@
   overflow-y: auto;
 }
 
+.video-meet-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: clamp(280px, 55ch, 420px);
+  height: 100%;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background-color: #fff;
+  border-left: 1px solid var(--lk-border-color);
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  font-family: "Mulish", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #323f4b;
+}
+
+.video-meet-chat_hidden {
+  display: none;
+}
+
+.video-meet-chat .chat__block.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.video-meet-chat .chat__name {
+  color: #2f80ed;
+}
+
+.video-meet-chat .chat__time {
+  color: #7b8794;
+}
+
+.video-meet-chat .chat__message-badge {
+  color: #323f4b;
+}
+
+.video-meet-chat .chat__date {
+  color: #323f4b;
+  border-color: #323f4b;
+}
+
+.video-meet-chat__header {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  border-radius: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--lk-border-color);
+  padding: 0.75rem 1rem;
+}
+
+.video-meet-chat__header .chat__person {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+}
+
+.video-meet-chat__header .chat__back {
+  display: none;
+}
+
+.video-meet-chat__header .chat__thumb {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.video-meet-chat__header .video-meet-chat__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.125rem;
+  margin-left: 0.5rem;
+}
+
+.video-meet-chat__header .video-meet-chat__info .chat__name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #323f4b;
+}
+
+.video-meet-chat__header .chat__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  color: #7b8794;
+}
+
+.video-meet-chat__close {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #2f80ed;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.video-meet-chat__close svg {
+  display: block;
+}
+
+.video-meet-chat__close:hover {
+  background-color: #eb555c;
+  color: #fff;
+}
+
+.video-meet-chat__close[aria-pressed=true] {
+  background-color: #136be0;
+  color: #fff;
+}
+
+.video-meet-chat__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  overflow-y: auto;
+  border-radius: 0;
+  padding: 0.75rem 1rem 1rem;
+  background: #fff;
+}
+
+.video-meet-chat__footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: auto;
+  border-radius: 0;
+  background-color: #f6faff;
+  border-top: 1px solid #f3f3f3;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0.75rem 1rem;
+  -webkit-column-gap: 0.75rem;
+     -moz-column-gap: 0.75rem;
+          column-gap: 0.75rem;
+}
+
+.video-meet-chat__field {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  min-height: 2.5rem;
+  max-height: 7.5rem;
+  margin: 0;
+  padding: 0.625rem 1rem;
+  resize: none;
+  overflow-y: auto;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #323f4b;
+  background: #fff;
+  border: 1px solid #e9e9ea;
+  border-radius: 1.25rem;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.video-meet-chat__field::-webkit-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+
+.video-meet-chat__field::-moz-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+
+.video-meet-chat__field:-ms-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+
+.video-meet-chat__field::-ms-input-placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+
+.video-meet-chat__field::placeholder {
+  color: #7b8794;
+  opacity: 1;
+}
+
+.video-meet-chat__field:focus {
+  outline: none;
+  border-color: #2f80ed;
+}
+
 @media (min-width: 768px) {
   .video-meet-eatvio {
     height: calc(100svh - 110px);
@@ -1297,6 +1557,15 @@
     right: 0;
     max-width: 100%;
     bottom: var(--lk-control-bar-height);
+  }
+
+  .video-meet-chat {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    bottom: var(--lk-control-bar-height);
+    z-index: 5;
   }
 }
 
