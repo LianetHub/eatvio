@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -11,24 +12,20 @@
     
     <link rel="stylesheet" href="css/reset.min.css" />
 
-    <link rel="stylesheet" href="css/common.min.css" />
+    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
-
-    <!-- <link rel="stylesheet" href="css/dev.css" /> -->
-
     
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/video-meet.min.css" />
+    <link rel="stylesheet" href="css/dev.css" />
     
-    <!-- Current Page Styles -->
 
     
 
 </head>
 
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -443,135 +440,141 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <div id="meet-root" class="h-full w-full">
-                <div data-lk-theme="default" class="video-meet-eatvio">
-                    <div class="lk-room-container">
-                        <div class="lk-video-conference">
-                            <div class="lk-video-conference-inner">
-                                <div class="lk-grid-layout-wrapper">
-                                    <div data-lk-pagination="false" class="lk-grid-layout" style="--lk-col-count: 1; --lk-row-count: 1;">
-                                        <div data-lk-audio-muted="true" data-lk-video-muted="true" data-lk-speaking="false" data-lk-local-participant="true" data-lk-source="camera" data-lk-facing-mode="undefined" class="lk-participant-tile" style="position: relative;">
-                                            <div class="lk-participant-placeholder">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="320" height="286" viewBox="0 0 320 286" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M160.05 0C248.399 0 320 38.5424 320 126.383C320 214.125 248.399 285.333 160.05 285.333C71.6014 285.333 0 214.125 0 126.383C0 38.5424 71.6014 0 160.05 0ZM160.05 111.349C138.79 111.349 117.932 115.632 98.4768 123.898C79.0221 132.264 61.4728 144.514 46.9319 159.851C40.213 166.823 40.6141 177.977 47.6339 184.55C54.7539 191.223 65.8852 190.824 72.6041 183.853C83.8357 172.001 97.3737 162.54 112.416 156.166C127.458 149.693 143.604 146.406 160.05 146.406C176.396 146.406 192.541 149.693 207.584 156.166C222.626 162.54 236.164 172.001 247.396 183.853C254.115 190.824 265.246 191.223 272.366 184.55C279.386 177.977 279.787 166.823 273.068 159.851C258.527 144.514 240.978 132.264 221.523 123.898C202.068 115.632 181.21 111.349 160.05 111.349Z" fill="#9D9D9D" fill-opacity="0.3" />
-                                                </svg>
-                                            </div>
-                                            <div class="lk-participant-metadata">
-                                                <div class="lk-participant-metadata-item">
-                                                    <div class="lk-track-muted-indicator-microphone" data-lk-muted="true">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
-                                                            <path d="M12.227 11.52a5.477 5.477 0 0 0 1.246-2.97.5.5 0 0 0-.995-.1 4.478 4.478 0 0 1-.962 2.359l-1.07-1.07C10.794 9.247 11 8.647 11 8V3a3 3 0 0 0-6 0v1.293L1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708zM8 12.5c.683 0 1.33-.152 1.911-.425l.743.743c-.649.359-1.378.59-2.154.66V15h2a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h2v-1.522a5.502 5.502 0 0 1-4.973-4.929.5.5 0 0 1 .995-.098A4.5 4.5 0 0 0 8 12.5z"></path>
-                                                            <path d="M8.743 10.907 5 7.164V8a3 3 0 0 0 3.743 2.907z"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="lk-participant-name" data-lk-participant-name="">user-35</span>
-                                                </div>
-                                                <div class="lk-participant-metadata-item lk-connection-quality" data-lk-quality="excellent">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor">
-                                                        <path d="M0 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"></path>
-                                                        <path d="M0 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"></path>
+</header>
+            <main class="page">
+                <div id="meet-root" class="h-full w-full">
+                    <div data-lk-theme="default" class="video-meet-eatvio">
+                        <div class="lk-room-container">
+                            <div class="lk-video-conference">
+                                <div class="lk-video-conference-inner">
+                                    <div class="lk-grid-layout-wrapper">
+                                        <div data-lk-pagination="false" class="lk-grid-layout" style="--lk-col-count: 1; --lk-row-count: 1;">
+                                            <div data-lk-audio-muted="true" data-lk-video-muted="true" data-lk-speaking="false" data-lk-local-participant="true" data-lk-source="camera" data-lk-facing-mode="undefined" class="lk-participant-tile" style="position: relative;">
+                                                <div class="lk-participant-placeholder">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="320" height="286" viewBox="0 0 320 286" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M160.05 0C248.399 0 320 38.5424 320 126.383C320 214.125 248.399 285.333 160.05 285.333C71.6014 285.333 0 214.125 0 126.383C0 38.5424 71.6014 0 160.05 0ZM160.05 111.349C138.79 111.349 117.932 115.632 98.4768 123.898C79.0221 132.264 61.4728 144.514 46.9319 159.851C40.213 166.823 40.6141 177.977 47.6339 184.55C54.7539 191.223 65.8852 190.824 72.6041 183.853C83.8357 172.001 97.3737 162.54 112.416 156.166C127.458 149.693 143.604 146.406 160.05 146.406C176.396 146.406 192.541 149.693 207.584 156.166C222.626 162.54 236.164 172.001 247.396 183.853C254.115 190.824 265.246 191.223 272.366 184.55C279.386 177.977 279.787 166.823 273.068 159.851C258.527 144.514 240.978 132.264 221.523 123.898C202.068 115.632 181.21 111.349 160.05 111.349Z" fill="#9D9D9D" fill-opacity="0.3" />
                                                     </svg>
                                                 </div>
+                                                <div class="lk-participant-metadata">
+                                                    <div class="lk-participant-metadata-item">
+                                                        <div class="lk-track-muted-indicator-microphone" data-lk-muted="true">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                                                <path d="M12.227 11.52a5.477 5.477 0 0 0 1.246-2.97.5.5 0 0 0-.995-.1 4.478 4.478 0 0 1-.962 2.359l-1.07-1.07C10.794 9.247 11 8.647 11 8V3a3 3 0 0 0-6 0v1.293L1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708zM8 12.5c.683 0 1.33-.152 1.911-.425l.743.743c-.649.359-1.378.59-2.154.66V15h2a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h2v-1.522a5.502 5.502 0 0 1-4.973-4.929.5.5 0 0 1 .995-.098A4.5 4.5 0 0 0 8 12.5z"></path>
+                                                                <path d="M8.743 10.907 5 7.164V8a3 3 0 0 0 3.743 2.907z"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="lk-participant-name" data-lk-participant-name="">user-35</span>
+                                                    </div>
+                                                    <div class="lk-participant-metadata-item lk-connection-quality" data-lk-quality="excellent">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor">
+                                                            <path d="M0 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"></path>
+                                                            <path d="M0 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm6-6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <button class="lk-button lk-focus-toggle-button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                        <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                                            <path d="M10 1.75h4.25m0 0V6m0-4.25L9 7M6 14.25H1.75m0 0V10m0 4.25L7 9"></path>
+                                                        </g>
+                                                    </svg>
+                                                </button>
                                             </div>
-                                            <button class="lk-button lk-focus-toggle-button">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                                    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                                        <path d="M10 1.75h4.25m0 0V6m0-4.25L9 7M6 14.25H1.75m0 0V10m0 4.25L7 9"></path>
-                                                    </g>
+                                        </div>
+                                    </div>
+                                    <div class="lk-control-bar">
+                                        <div class="lk-button-group">
+                                            <button class="lk-button" aria-pressed="false" data-lk-source="microphone" data-lk-enabled="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                                    <path d="M12.227 11.52a5.477 5.477 0 0 0 1.246-2.97.5.5 0 0 0-.995-.1 4.478 4.478 0 0 1-.962 2.359l-1.07-1.07C10.794 9.247 11 8.647 11 8V3a3 3 0 0 0-6 0v1.293L1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708zM8 12.5c.683 0 1.33-.152 1.911-.425l.743.743c-.649.359-1.378.59-2.154.66V15h2a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h2v-1.522a5.502 5.502 0 0 1-4.973-4.929.5.5 0 0 1 .995-.098A4.5 4.5 0 0 0 8 12.5z"></path>
+                                                    <path d="M8.743 10.907 5 7.164V8a3 3 0 0 0 3.743 2.907z"></path>
                                                 </svg>
+                                                <span>Микрофон</span>
                                             </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk-control-bar">
-                                    <div class="lk-button-group">
-                                        <button class="lk-button" aria-pressed="false" data-lk-source="microphone" data-lk-enabled="false">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
-                                                <path d="M12.227 11.52a5.477 5.477 0 0 0 1.246-2.97.5.5 0 0 0-.995-.1 4.478 4.478 0 0 1-.962 2.359l-1.07-1.07C10.794 9.247 11 8.647 11 8V3a3 3 0 0 0-6 0v1.293L1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708zM8 12.5c.683 0 1.33-.152 1.911-.425l.743.743c-.649.359-1.378.59-2.154.66V15h2a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h2v-1.522a5.502 5.502 0 0 1-4.973-4.929.5.5 0 0 1 .995-.098A4.5 4.5 0 0 0 8 12.5z"></path>
-                                                <path d="M8.743 10.907 5 7.164V8a3 3 0 0 0 3.743 2.907z"></path>
-                                            </svg>
-                                            <span>Микрофон</span>
-                                        </button>
-                                        <div class="lk-button-group-menu">
-                                            <button class="lk-button lk-button-menu" aria-pressed="false"></button>
-                                            <div class="lk-device-menu" style="visibility: hidden; left: -60.0174px; top: -49.9583px;">
-                                                <ul class="lk-media-device-select lk-list">
-                                                    <li id="" data-lk-active="true" aria-selected="true" role="option">
-                                                        <button class="lk-button"></button>
-                                                    </li>
-                                                </ul>
+                                            <div class="lk-button-group-menu">
+                                                <button class="lk-button lk-button-menu" aria-pressed="false"></button>
+                                                <div class="lk-device-menu" style="visibility: hidden; left: -60.0174px; top: -49.9583px;">
+                                                    <ul class="lk-media-device-select lk-list">
+                                                        <li id="" data-lk-active="true" aria-selected="true" role="option">
+                                                            <button class="lk-button"></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="lk-button-group">
-                                        <button class="lk-button" aria-pressed="false" data-lk-source="camera" data-lk-enabled="false">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
-                                                <path d="M1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708L11 10.293V4.5A1.5 1.5 0 0 0 9.5 3H3.707zM0 4.5a1.5 1.5 0 0 1 .943-1.393l9.532 9.533c-.262.224-.603.36-.975.36h-8A1.5 1.5 0 0 1 0 11.5z"></path>
-                                                <path d="m15.2 3.6-2.8 2.1a1 1 0 0 0-.4.8v3a1 1 0 0 0 .4.8l2.8 2.1a.5.5 0 0 0 .8-.4V4a.5.5 0 0 0-.8-.4z"></path>
-                                            </svg>
-                                            <span>Камера</span>
-                                        </button>
-                                        <div class="lk-button-group-menu">
-                                            <button class="lk-button lk-button-menu" aria-pressed="false"></button>
-                                            <div class="lk-device-menu" style="visibility: hidden; left: -60.0174px; top: -24.1944px;">
-                                                <ul class="lk-media-device-select lk-list"></ul>
+                                        <div class="lk-button-group">
+                                            <button class="lk-button" aria-pressed="false" data-lk-source="camera" data-lk-enabled="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                                    <path d="M1.354.646a.5.5 0 1 0-.708.708l14 14a.5.5 0 0 0 .708-.708L11 10.293V4.5A1.5 1.5 0 0 0 9.5 3H3.707zM0 4.5a1.5 1.5 0 0 1 .943-1.393l9.532 9.533c-.262.224-.603.36-.975.36h-8A1.5 1.5 0 0 1 0 11.5z"></path>
+                                                    <path d="m15.2 3.6-2.8 2.1a1 1 0 0 0-.4.8v3a1 1 0 0 0 .4.8l2.8 2.1a.5.5 0 0 0 .8-.4V4a.5.5 0 0 0-.8-.4z"></path>
+                                                </svg>
+                                                <span>Камера</span>
+                                            </button>
+                                            <div class="lk-button-group-menu">
+                                                <button class="lk-button lk-button-menu" aria-pressed="false"></button>
+                                                <div class="lk-device-menu" style="visibility: hidden; left: -60.0174px; top: -24.1944px;">
+                                                    <ul class="lk-media-device-select lk-list"></ul>
+                                                </div>
                                             </div>
                                         </div>
+                                        <button class="lk-button" aria-pressed="false" data-lk-source="screen_share" data-lk-enabled="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="none">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M0 2.75A2.75 2.75 0 0 1 2.75 0h14.5A2.75 2.75 0 0 1 20 2.75v10.5A2.75 2.75 0 0 1 17.25 16H2.75A2.75 2.75 0 0 1 0 13.25V2.75ZM2.75 1.5c-.69 0-1.25.56-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h14.5c.69 0 1.25-.56 1.25-1.25V2.75c0-.69-.56-1.25-1.25-1.25H2.75Z" clip-rule="evenodd"></path>
+                                                <path fill="currentColor" fill-rule="evenodd" d="M9.47 4.22a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v4.69a.75.75 0 0 1-1.5 0V6.56l-.97.97a.75.75 0 0 1-1.06-1.06l2.25-2.25Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Поделиться экраном</span>
+                                        </button>
+                                        <button class="lk-button lk-chat-toggle" aria-pressed="false" data-lk-unread-msgs="0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="none">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M0 2.75A2.75 2.75 0 0 1 2.75 0h10.5A2.75 2.75 0 0 1 16 2.75v13.594a.75.75 0 0 1-1.234.572l-3.691-3.12a1.25 1.25 0 0 0-.807-.296H2.75A2.75 2.75 0 0 1 0 10.75v-8ZM2.75 1.5c-.69 0-1.25.56-1.25 1.25v8c0 .69.56 1.25 1.25 1.25h7.518c.65 0 1.279.23 1.775.65l2.457 2.077V2.75c0-.69-.56-1.25-1.25-1.25H2.75Z" clip-rule="evenodd"></path>
+                                                <path fill="currentColor" fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Чат</span>
+                                        </button>
+                                        <button class="lk-disconnect-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M2 2.75A2.75 2.75 0 0 1 4.75 0h6.5A2.75 2.75 0 0 1 14 2.75v10.5A2.75 2.75 0 0 1 11.25 16h-6.5A2.75 2.75 0 0 1 2 13.25v-.5a.75.75 0 0 1 1.5 0v.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V2.75c0-.69-.56-1.25-1.25-1.25h-6.5c-.69 0-1.25.56-1.25 1.25v.5a.75.75 0 0 1-1.5 0v-.5Z" clip-rule="evenodd"></path>
+                                                <path fill="currentColor" fill-rule="evenodd" d="M8.78 7.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97H1.75a.75.75 0 0 1 0-1.5h4.69l-.97-.97a.75.75 0 0 1 1.06-1.06l2.25 2.25Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Закрыть</span>
+                                        </button>
+                                        <button class="lk-start-audio-button lk-start-audio-button" style="display: none;">Start Video</button>
                                     </div>
-                                    <button class="lk-button" aria-pressed="false" data-lk-source="screen_share" data-lk-enabled="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="none">
-                                            <path fill="currentColor" fill-rule="evenodd" d="M0 2.75A2.75 2.75 0 0 1 2.75 0h14.5A2.75 2.75 0 0 1 20 2.75v10.5A2.75 2.75 0 0 1 17.25 16H2.75A2.75 2.75 0 0 1 0 13.25V2.75ZM2.75 1.5c-.69 0-1.25.56-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h14.5c.69 0 1.25-.56 1.25-1.25V2.75c0-.69-.56-1.25-1.25-1.25H2.75Z" clip-rule="evenodd"></path>
-                                            <path fill="currentColor" fill-rule="evenodd" d="M9.47 4.22a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v4.69a.75.75 0 0 1-1.5 0V6.56l-.97.97a.75.75 0 0 1-1.06-1.06l2.25-2.25Z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>Поделиться экраном</span>
-                                    </button>
-                                    <button class="lk-button lk-chat-toggle" aria-pressed="false" data-lk-unread-msgs="0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="none">
-                                            <path fill="currentColor" fill-rule="evenodd" d="M0 2.75A2.75 2.75 0 0 1 2.75 0h10.5A2.75 2.75 0 0 1 16 2.75v13.594a.75.75 0 0 1-1.234.572l-3.691-3.12a1.25 1.25 0 0 0-.807-.296H2.75A2.75 2.75 0 0 1 0 10.75v-8ZM2.75 1.5c-.69 0-1.25.56-1.25 1.25v8c0 .69.56 1.25 1.25 1.25h7.518c.65 0 1.279.23 1.775.65l2.457 2.077V2.75c0-.69-.56-1.25-1.25-1.25H2.75Z" clip-rule="evenodd"></path>
-                                            <path fill="currentColor" fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>Чат</span>
-                                    </button>
-                                    <button class="lk-disconnect-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                            <path fill="currentColor" fill-rule="evenodd" d="M2 2.75A2.75 2.75 0 0 1 4.75 0h6.5A2.75 2.75 0 0 1 14 2.75v10.5A2.75 2.75 0 0 1 11.25 16h-6.5A2.75 2.75 0 0 1 2 13.25v-.5a.75.75 0 0 1 1.5 0v.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V2.75c0-.69-.56-1.25-1.25-1.25h-6.5c-.69 0-1.25.56-1.25 1.25v.5a.75.75 0 0 1-1.5 0v-.5Z" clip-rule="evenodd"></path>
-                                            <path fill="currentColor" fill-rule="evenodd" d="M8.78 7.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97H1.75a.75.75 0 0 1 0-1.5h4.69l-.97-.97a.75.75 0 0 1 1.06-1.06l2.25 2.25Z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>Закрыть</span>
-                                    </button>
-                                    <button class="lk-start-audio-button lk-start-audio-button" style="display: none;">Start Video</button>
                                 </div>
-                            </div>
-                            <div class="lk-chat" style="display: none;">
-                                <div class="lk-chat-header"> Сообщения <button class="lk-close-button lk-button lk-chat-toggle" aria-pressed="false" data-lk-unread-msgs="0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                                            <path fill="#FFF" d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z"></path>
-                                        </svg>
-                                    </button>
+                                <div class="lk-chat" style="display: none;">
+                                    <div class="lk-chat-header">
+                                        Сообщения
+                                        <button class="lk-close-button lk-button lk-chat-toggle" aria-pressed="false" data-lk-unread-msgs="0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                                <path fill="#FFF" d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="lk-list lk-chat-messages"></ul>
+                                    <form class="lk-chat-form">
+                                        <input class="lk-form-control lk-chat-form-input" placeholder="Написать сообщение" type="text">
+                                        <button type="submit" class="lk-button lk-chat-form-button">Отправить</button>
+                                    </form>
                                 </div>
-                                <ul class="lk-list lk-chat-messages"></ul>
-                                <form class="lk-chat-form">
-                                    <input class="lk-form-control lk-chat-form-input" placeholder="Написать сообщение" type="text">
-                                    <button type="submit" class="lk-button lk-chat-form-button">Отправить</button>
-                                </form>
+                                <div style="display: none;"></div>
                             </div>
-                            <div style="display: none;"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main> <footer class="footer">
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>
