@@ -1,0 +1,363 @@
+@use "sass:math";
+@import "../config.scss";
+
+.my-consults {
+	padding: rem(20) 0 rem(40);
+
+	@media (min-width: $md4) {
+		padding-top: rem(40);
+	}
+
+	// .my-consults__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+	}
+
+	// .my-consults__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: space-between;
+			column-gap: rem(10);
+			row-gap: rem(10);
+		}
+	}
+
+	// .my-consults__heading
+	&__heading {
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+		width: 100%;
+
+		@media (min-width: $md4) {
+			width: auto;
+			flex: 0 0 auto;
+		}
+	}
+
+	// .my-consults__page-title
+	&__page-title {
+		color: $mainColor;
+		font-size: rem(24);
+		font-weight: 700;
+		line-height: normal;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	// .my-consults__info
+	&__info {
+		flex-shrink: 0;
+		width: rem(24);
+		height: rem(24);
+		font-size: rem(20);
+		font-weight: 600;
+		line-height: rem(24);
+	}
+
+	// .my-consults__search
+	&__search {
+		position: relative;
+		width: 100%;
+
+		@media (min-width: $md4) {
+			flex: 1 1 rem(400);
+			max-width: rem(400);
+			margin-left: auto;
+		}
+	}
+
+	// .my-consults__search-input
+	&__search-input {
+		width: 100%;
+		min-height: rem(40);
+		padding: 0 rem(12) 0 rem(40);
+		border: 0;
+		border-radius: rem(8);
+		background: #fff;
+		color: $mainColor;
+		font-size: rem(14);
+		font-family: inherit;
+		line-height: normal;
+
+		&::placeholder {
+			color: #7b8794;
+		}
+	}
+
+	// .my-consults__search-btn
+	&__search-btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: rem(40);
+		height: rem(40);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #7b8794;
+		pointer-events: none;
+
+		&::before {
+			font-size: rem(18);
+		}
+	}
+
+	// .my-consults__period
+	&__period {
+		width: 100%;
+
+		@media (min-width: $md4) {
+			flex: 0 0 rem(192);
+			width: rem(192);
+		}
+
+		select {
+			min-height: rem(40);
+			padding: rem(12) rem(32) rem(12) rem(14);
+			border: 0;
+			border-radius: rem(8);
+			background: #fff;
+			color: $mainColor;
+			font-size: rem(16);
+			font-weight: 500;
+			letter-spacing: 0.2px;
+			line-height: 1;
+		}
+
+		&::before {
+			right: rem(14);
+		}
+	}
+
+	// .my-consults__grid
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(16);
+	}
+
+	@media (min-width: $md5) {
+		&__grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: $md3) {
+		&__grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// .my-consults__card
+	&__card {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border-radius: rem(12);
+		background: #fff;
+		box-shadow: 0 rem(4) rem(10) rgba(0, 0, 0, 0.15);
+	}
+
+	// .my-consults__poster
+	&__poster {
+		position: relative;
+		aspect-ratio: math.div(300, 169);
+		background: #f1f2f6;
+		overflow: hidden;
+	}
+
+	// .my-consults__poster-image
+	&__poster-image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// .my-consults__play
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+		line-height: 0;
+		transition: transform 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: translate(-50%, -50%) scale(1.05);
+			}
+		}
+	}
+
+	// .my-consults__duration
+	&__duration {
+		position: absolute;
+		right: rem(8);
+		bottom: rem(8);
+		padding: rem(2) rem(4);
+		border-radius: rem(4);
+		background: $mainColor;
+		color: #fff;
+		font-size: rem(10);
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	// .my-consults__overlay
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: rem(15);
+		padding: rem(16);
+		text-align: center;
+		backdrop-filter: blur(6px);
+
+		&_light {
+			background: rgba(50, 63, 75, 0.2);
+		}
+
+		&_dark {
+			background: rgba(50, 63, 75, 0.9);
+			gap: rem(10);
+		}
+	}
+
+	// .my-consults__overlay-icon
+	&__overlay-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&_loading {
+			width: rem(27);
+			height: rem(27);
+			border: rem(2) solid rgba(255, 255, 255, 0.35);
+			border-top-color: #fff;
+			border-radius: 50%;
+			animation: my-consults-spin 0.8s linear infinite;
+		}
+
+		&_lock svg {
+			display: block;
+			width: rem(37);
+			height: rem(37);
+		}
+	}
+
+	// .my-consults__overlay-text
+	&__overlay-text {
+		color: #fff;
+		font-size: rem(12);
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	// .my-consults__body
+	&__body {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		gap: rem(12);
+		padding: rem(16);
+	}
+
+	// .my-consults__title
+	&__title {
+		margin: 0;
+		color: #000;
+		font-size: rem(18);
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	// .my-consults__meta
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(8);
+		margin-top: auto;
+	}
+
+	// .my-consults__avatar
+	&__avatar {
+		flex-shrink: 0;
+		width: rem(24);
+		height: rem(24);
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	// .my-consults__name
+	&__name {
+		color: #666;
+		font-size: rem(12);
+		font-weight: 400;
+		line-height: normal;
+		white-space: nowrap;
+	}
+
+	// .my-consults__dot
+	&__dot {
+		flex-shrink: 0;
+		width: rem(4);
+		height: rem(4);
+		border-radius: 50%;
+		background: #666;
+	}
+
+	// .my-consults__date
+	&__date {
+		color: #666;
+		font-size: rem(12);
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	// .my-consults__download
+	&__download {
+		margin-top: rem(4);
+		min-height: rem(40);
+		padding: rem(8) rem(50);
+		font-size: rem(18);
+		font-weight: 500;
+		column-gap: rem(10);
+
+		svg {
+			flex-shrink: 0;
+		}
+	}
+
+	// .my-consults__card_no-btn
+	&__card_no-btn {
+		.my-consults__body {
+			min-height: rem(108);
+		}
+	}
+}
+
+@keyframes my-consults-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

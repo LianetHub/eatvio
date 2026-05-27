@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <title>Eatvio Layout</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/reset.min.css" />
+
+    
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+    <link rel="stylesheet" href="css/dev.css" />
+    
+
+    
+
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+        <form action="#" class="header__search search">
+    <div class="search__header">
+        <button class="search__btn icon-search"></button>
+        <input type="text" name="search" autocomplete="off" class="search__input" placeholder="Поиск">
+    </div>
+    <div class="search__bar">
+        <button type="button" class="search__bar-close icon-close"></button>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Недавние</div>
+                <button type="button" class="search__block-btn">Очистить</button>
+            </div>
+            <ul class="search__recent-list">
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Пользователи</div>
+                <button type="button" class="search__block-btn">Показать всех</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Нижний новгород
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Консультанты</div>
+                <button type="button" class="search__block-btn">Показать всех</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Диеты</div>
+                <button type="button" class="search__block-btn">Показать все</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</form>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="header__notification notification">
+                <a href="/notification.html" class="notification__btn icon-bell">
+                    <span>1</span>
+                </a>
+                <div class="notification__body">
+                    <div class="notification__content">
+                        <div class="notification__list">
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Подтвердите сделку</a>
+                                    <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Поздравляем, «Название плана» завершен</a>
+                                    <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
+                                    <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
+                                    <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <a href="" class="notification__item new">
+                                <span class="notification__item-body">
+                                    <span class="notification__row">
+                                        <span class="notification__thumb">
+                                            <img src="img/user.png" class="cover-image" alt="avatar">
+                                        </span>
+                                        <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    </span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item fail">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">
+                                        Консультанта отказался от заказа
+                                    </span>
+                                    <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item new">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item succes">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                        </div>
+                        <button type="button" class="notification__more">Показать все</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__user">
+                <a href="" class="header__person">
+                    <img src="img/user.png" class="cover-image" alt="avatar">
+                </a>
+                <button type="button" class="header__user-btn icon-down"></button>
+                <ul class="header-list">
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/admin-panel.svg" width="20" height="20" alt="">
+            </span>
+            Админ панель
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/profile-settings.svg" width="20" height="20" alt="">
+            </span>
+            Настройки профиля
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-posts.svg" width="20" height="20" alt="">
+            </span>
+            Мои посты
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/favorites.svg" width="20" height="20" alt="">
+            </span>
+            Избранное
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-purchases.svg" width="20" height="20" alt="">
+            </span>
+            Мои покупки
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/glossary.svg" width="20" height="20" alt="">
+            </span>
+            Глоссарий
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-consultations.svg" width="20" height="20" alt="">
+            </span>
+            Мои консультации
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/support.svg" width="20" height="20" alt="">
+            </span>
+            Поддержка
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/logout.svg" width="20" height="20" alt="">
+            </span>
+            Выход
+        </a>
+    </li>
+    <li class="header-list__item">
+        <button type="button" class="header-list__link icon-search search-mobile-btn">
+            Поиск
+        </button>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</header>
+            <main class="page">
+                <section class="my-consults">
+                    <div class="my-consults__container container-sm">
+                        <div class="my-consults__header">
+                            <div class="my-consults__heading">
+                                <h1 class="my-consults__page-title">Мои консультации</h1>
+                                <span
+                                    class="info-block blue my-consults__info tooltip-lg"
+                                    tabindex="0"
+                                    data-tooltip="Мы заботимся о сохранности ваших данных. Запись видеоконсультации будет доступна на серверах ООО «Итвио» в течение 1 года. Вы всегда сможете вернуться к важным деталям в удобное для вас время."
+                                >?</span>
+                            </div>
+                            <label class="my-consults__search">
+                                <span class="my-consults__search-btn icon-search" aria-hidden="true"></span>
+                                <input type="search" class="my-consults__search-input" name="consult-search" placeholder="Поиск консультаций" autocomplete="off">
+                            </label>
+                            <div class="my-consults__period select">
+                                <select name="period" aria-label="Период">
+                                    <option value="" selected>Период</option>
+                                    <option value="today">Сегодня</option>
+                                    <option value="week">Последние 7 дней</option>
+                                    <option value="month">Этот месяц</option>
+                                    <option value="prev-month">Прошлый месяц</option>
+                                    <option value="all">За всё время</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="my-consults__grid">
+                            <article class="my-consults__card">
+    <div class="my-consults__poster">
+        <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        
+        <button type="button" class="my-consults__play" aria-label="Воспроизвести запись">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#2F80ED"/>
+                <path d="M17 13.5V26.5L27 20L17 13.5Z" fill="white"/>
+            </svg>
+        </button>
+        <span class="my-consults__duration">45:12</span>
+        
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        
+        <a href="#" class="my-consults__download l-btn l-btn-primary l-btn-fullwidth" download>
+            Скачать
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 2.5V12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6.25 9.375L10 13.125L13.75 9.375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.125 15.625H16.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </a>
+        
+    </div>
+</article>
+
+                            <article class="my-consults__card  my-consults__card_no-btn">
+    <div class="my-consults__poster">
+        <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        
+        <div class="my-consults__overlay my-consults__overlay_light">
+            <span class="my-consults__overlay-icon my-consults__overlay-icon_loading" aria-hidden="true"></span>
+            <p class="my-consults__overlay-text">Запись обрабатывается...</p>
+        </div>
+        
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        
+    </div>
+</article>
+
+                            <article class="my-consults__card  my-consults__card_no-btn">
+    <div class="my-consults__poster">
+        <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        
+        <div class="my-consults__overlay my-consults__overlay_light">
+            <span class="my-consults__overlay-icon my-consults__overlay-icon_loading" aria-hidden="true"></span>
+            <p class="my-consults__overlay-text">Запись обрабатывается...</p>
+        </div>
+        
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        
+    </div>
+</article>
+
+                            <article class="my-consults__card  my-consults__card_no-btn">
+    <div class="my-consults__poster">
+        <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        
+        <div class="my-consults__overlay my-consults__overlay_dark">
+            <span class="my-consults__overlay-icon my-consults__overlay-icon_lock" aria-hidden="true">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.25 16.9583V11.5833C9.25 7.13333 12.85 3.08333 17.375 3.08333C21.9 3.08333 25.5 7.13333 25.5 11.5833V16.9583" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="5.16669" y="16.9583" width="26.4167" height="17.0208" rx="3" stroke="white" stroke-width="2"/>
+                    <path d="M17.375 23.125V26.2917" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <p class="my-consults__overlay-text">Видеозапись недоступна</p>
+        </div>
+        
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        
+    </div>
+</article>
+
+                            <article class="my-consults__card">
+    <div class="my-consults__poster">
+        <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        
+        <button type="button" class="my-consults__play" aria-label="Воспроизвести запись">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#2F80ED"/>
+                <path d="M17 13.5V26.5L27 20L17 13.5Z" fill="white"/>
+            </svg>
+        </button>
+        <span class="my-consults__duration">45:12</span>
+        
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        
+        <a href="#" class="my-consults__download l-btn l-btn-primary l-btn-fullwidth" download>
+            Скачать
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 2.5V12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6.25 9.375L10 13.125L13.75 9.375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.125 15.625H16.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </a>
+        
+    </div>
+</article>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="js/app.min.js"></script>
+    </body>
+</html>

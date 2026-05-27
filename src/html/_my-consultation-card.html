@@ -1,0 +1,49 @@
+<article class="my-consults__card@@if (typeof cardClass !== 'undefined' && cardClass) { @@cardClass}">
+    <div class="my-consults__poster">
+        <img src="@img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
+        @@if (status === 'ready') {
+        <button type="button" class="my-consults__play" aria-label="Воспроизвести запись">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#2F80ED"/>
+                <path d="M17 13.5V26.5L27 20L17 13.5Z" fill="white"/>
+            </svg>
+        </button>
+        <span class="my-consults__duration">45:12</span>
+        }@@if (status === 'processing') {
+        <div class="my-consults__overlay my-consults__overlay_light">
+            <span class="my-consults__overlay-icon my-consults__overlay-icon_loading" aria-hidden="true"></span>
+            <p class="my-consults__overlay-text">Запись обрабатывается...</p>
+        </div>
+        }@@if (status === 'unavailable') {
+        <div class="my-consults__overlay my-consults__overlay_dark">
+            <span class="my-consults__overlay-icon my-consults__overlay-icon_lock" aria-hidden="true">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.25 16.9583V11.5833C9.25 7.13333 12.85 3.08333 17.375 3.08333C21.9 3.08333 25.5 7.13333 25.5 11.5833V16.9583" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="5.16669" y="16.9583" width="26.4167" height="17.0208" rx="3" stroke="white" stroke-width="2"/>
+                    <path d="M17.375 23.125V26.2917" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <p class="my-consults__overlay-text">Видеозапись недоступна</p>
+        </div>
+        }
+    </div>
+    <div class="my-consults__body">
+        <h2 class="my-consults__title">Видеоконсультация со&nbsp;специалистом по&nbsp;питанию</h2>
+        <div class="my-consults__meta">
+            <img src="@img/user-2.png" class="my-consults__avatar" width="24" height="24" alt="">
+            <span class="my-consults__name">Сидни Суини</span>
+            <span class="my-consults__dot" aria-hidden="true"></span>
+            <time class="my-consults__date" datetime="2026-05-12T14:00">12 мая 2026, 14:00</time>
+        </div>
+        @@if (status === 'ready') {
+        <a href="#" class="my-consults__download l-btn l-btn-primary l-btn-fullwidth" download>
+            Скачать
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 2.5V12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6.25 9.375L10 13.125L13.75 9.375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.125 15.625H16.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </a>
+        }
+    </div>
+</article>

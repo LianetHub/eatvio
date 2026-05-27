@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Итвио | Мои консультации',
+    "stylesName": ["my-consultations"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="my-consults">
+                    <div class="my-consults__container container-sm">
+                        <div class="my-consults__header">
+                            <div class="my-consults__heading">
+                                <h1 class="my-consults__page-title">Мои консультации</h1>
+                                <span
+                                    class="info-block blue my-consults__info tooltip-lg"
+                                    tabindex="0"
+                                    data-tooltip="Мы заботимся о сохранности ваших данных. Запись видеоконсультации будет доступна на серверах ООО «Итвио» в течение 1 года. Вы всегда сможете вернуться к важным деталям в удобное для вас время."
+                                >?</span>
+                            </div>
+                            <label class="my-consults__search">
+                                <span class="my-consults__search-btn icon-search" aria-hidden="true"></span>
+                                <input type="search" class="my-consults__search-input" name="consult-search" placeholder="Поиск консультаций" autocomplete="off">
+                            </label>
+                            <div class="my-consults__period select">
+                                <select name="period" aria-label="Период">
+                                    <option value="" selected>Период</option>
+                                    <option value="today">Сегодня</option>
+                                    <option value="week">Последние 7 дней</option>
+                                    <option value="month">Этот месяц</option>
+                                    <option value="prev-month">Прошлый месяц</option>
+                                    <option value="all">За всё время</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="my-consults__grid">
+                            @@include('html/_my-consultation-card.html', { "status": "ready" })
+                            @@include('html/_my-consultation-card.html', { "status": "processing", "cardClass": " my-consults__card_no-btn" })
+                            @@include('html/_my-consultation-card.html', { "status": "processing", "cardClass": " my-consults__card_no-btn" })
+                            @@include('html/_my-consultation-card.html', { "status": "unavailable", "cardClass": " my-consults__card_no-btn" })
+                            @@include('html/_my-consultation-card.html', { "status": "ready" })
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>

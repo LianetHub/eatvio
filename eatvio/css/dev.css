@@ -224,19 +224,19 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Mulish";
   src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: "OpenSans";
@@ -21618,19 +21618,19 @@ body.dark-theme {
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Mulish";
   src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: "OpenSans";
@@ -46226,4 +46226,425 @@ body.dark-theme {
   max-width: 100%;
   max-height: 100%;
   overflow-y: auto;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before, .popup__complaint-link::before, .auth__consult-list li::before, .star-rating__label::before, .checkbox__input:checked + .checkbox__content::before, .content__breadcrumbs-link:not(:last-child)::before, .content__title[data-spoller]::before, .content__column-btn::before, .content__side-caption.spoller-mobile::before, .content__settings-filter .label.spoller-mobile::before, .recipe__actions .favorite-btn.active::before, .chat__item.chat__item-input.submitted .chat__message-block::before, .chat__item.chat__item-input.readed .chat__message-block::before, .comment-block__message-heart.active::before, .plan-page__tariff-list li::before, .consultant-card__diplom::before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.my-consults {
+  padding: 1.25rem 0 2.5rem;
+}
+@media (min-width: 767.98px) {
+  .my-consults {
+    padding-top: 2.5rem;
+  }
+}
+.my-consults__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+.my-consults__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+@media (min-width: 767.98px) {
+  .my-consults__header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+    row-gap: 0.625rem;
+  }
+}
+.my-consults__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+@media (min-width: 767.98px) {
+  .my-consults__heading {
+    width: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+.my-consults__page-title {
+  color: #323f4b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+.my-consults__info {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.my-consults__search {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 767.98px) {
+  .my-consults__search {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25rem;
+            flex: 1 1 25rem;
+    max-width: 25rem;
+    margin-left: auto;
+  }
+}
+.my-consults__search-input {
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0 0.75rem 0 2.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #323f4b;
+  font-size: 0.875rem;
+  font-family: inherit;
+  line-height: normal;
+}
+.my-consults__search-input::-webkit-input-placeholder {
+  color: #7b8794;
+}
+.my-consults__search-input::-moz-placeholder {
+  color: #7b8794;
+}
+.my-consults__search-input:-ms-input-placeholder {
+  color: #7b8794;
+}
+.my-consults__search-input::-ms-input-placeholder {
+  color: #7b8794;
+}
+.my-consults__search-input::placeholder {
+  color: #7b8794;
+}
+.my-consults__search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #7b8794;
+  pointer-events: none;
+}
+.my-consults__search-btn::before {
+  font-size: 1.125rem;
+}
+.my-consults__period {
+  width: 100%;
+}
+@media (min-width: 767.98px) {
+  .my-consults__period {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12rem;
+            flex: 0 0 12rem;
+    width: 12rem;
+  }
+}
+.my-consults__period select {
+  min-height: 2.5rem;
+  padding: 0.75rem 2rem 0.75rem 0.875rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #323f4b;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+.my-consults__period::before {
+  right: 0.875rem;
+}
+.my-consults__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 575.98px) {
+  .my-consults__grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 991.98px) {
+  .my-consults__grid {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.my-consults__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
+}
+.my-consults__poster {
+  position: relative;
+  aspect-ratio: 1.775147929;
+  background: #f1f2f6;
+  overflow: hidden;
+}
+.my-consults__poster-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.my-consults__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media (any-hover: hover) {
+  .my-consults__play:hover {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+        -ms-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+.my-consults__duration {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background: #323f4b;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.my-consults__overlay {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.9375rem;
+  padding: 1rem;
+  text-align: center;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.my-consults__overlay_light {
+  background: rgba(50, 63, 75, 0.2);
+}
+.my-consults__overlay_dark {
+  background: rgba(50, 63, 75, 0.9);
+  gap: 0.625rem;
+}
+.my-consults__overlay-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.my-consults__overlay-icon_loading {
+  width: 1.6875rem;
+  height: 1.6875rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  -webkit-animation: my-consults-spin 0.8s linear infinite;
+          animation: my-consults-spin 0.8s linear infinite;
+}
+.my-consults__overlay-icon_lock svg {
+  display: block;
+  width: 2.3125rem;
+  height: 2.3125rem;
+}
+.my-consults__overlay-text {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.my-consults__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.my-consults__title {
+  margin: 0;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.my-consults__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.my-consults__avatar {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.my-consults__name {
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+.my-consults__dot {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #666;
+}
+.my-consults__date {
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.my-consults__download {
+  margin-top: 0.25rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 3.125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
+}
+.my-consults__download svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.my-consults__card_no-btn .my-consults__body {
+  min-height: 6.75rem;
+}
+
+@-webkit-keyframes my-consults-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes my-consults-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
