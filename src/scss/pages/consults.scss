@@ -3,32 +3,38 @@
 
 .consults {
 	padding: em(30) em(0) 0;
+
 	// .consults__container
-	&__container {
-	}
+	&__container {}
+
 	// .consults__header
 	&__header {
 		display: flex;
 		flex-wrap: wrap;
 		gap: rem(16);
 		flex-direction: column;
+
 		@media (min-width: $md5) {
 			align-items: center;
 			flex-direction: row;
 		}
 	}
+
 	// .consults__title
 	&__title {
 		color: #7b8794;
 		margin-right: auto;
 		display: flex;
 		align-items: center;
+
 		&::before {
 			font-size: 22px;
 			margin-right: rem(4);
 		}
+
 		&[href] {
 			transition: color 0.3s ease 0s;
+
 			@media (any-hover: hover) {
 				&:hover {
 					color: #2f80ed;
@@ -36,14 +42,17 @@
 			}
 		}
 	}
+
 	// .consults__column
 	&__column {
 		@media (min-width: $md5) {
 			flex: 0 0 rem(162);
+
 			&.consults__column-lg {
 				flex: 0 0 20.5%;
 			}
 		}
+
 		background: #fff;
 		padding: em(4) em(16);
 		border-radius: 8px;
@@ -52,23 +61,28 @@
 		align-items: center;
 		font-weight: 700;
 	}
+
 	// .consults__column-caption
 	&__column-caption {
 		color: #7b8794;
 		line-height: math.div(24, 16);
 	}
+
 	// .consults__column-value
 	&__column-value {
 		font-size: 18px;
 		color: #00be13;
+
 		&.blue {
 			color: #2f80ed;
 		}
 	}
+
 	// .consults__body
 	&__body {
 		margin: em(24) em(0) em(0) em(0);
 	}
+
 	// .consults__item
 	&__item {
 		display: flex;
@@ -79,32 +93,41 @@
 		align-items: center;
 		background: #fff;
 		border-radius: rem(8);
+
 		&:not(:last-child) {
 			margin-bottom: rem(12);
 		}
+
 		padding: em(12);
+
 		@media (min-width: $md5) {
 			padding: em(16);
 		}
+
 		@media (min-width: $md3) {
 			flex-wrap: nowrap;
 		}
 	}
+
 	// .consults__item-person
 	&__item-person {
 		flex: 0 0 100%;
+
 		@media (min-width: $md5) {
 			flex: 0 0 50%;
 		}
+
 		@media (min-width: $md4) {
 			flex: 0 0 29.5%;
 		}
 	}
+
 	// .consults__item-header
 	&__item-header {
 		display: flex;
 		align-items: center;
 	}
+
 	// .consults__item-desc
 	&__item-desc {
 		margin-top: 0.75rem;
@@ -112,72 +135,86 @@
 		font-weight: 500;
 		line-height: 100%;
 	}
+
 	// .consults__item-thumb
 	&__item-thumb {
 		width: rem(50);
 		height: rem(50);
 		flex-shrink: 0;
 		margin: em(0) rem(12) em(0) em(0);
+
 		& img {
 			border-radius: 50%;
 		}
 	}
+
 	// .consults__item-info
-	&__item-info {
-	}
+	&__item-info {}
+
 	// .consults__item-name
 	&__item-name {
 		font-weight: 700;
 		font-size: 1rem;
 		transition: color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
 			}
 		}
 	}
+
 	// .consults__item-plan
 	&__item-plan {
 		font-size: 0.875rem;
 		display: flex;
 		align-items: flex-start;
 		column-gap: rem(4);
+
 		& strong {
 			color: #2f80ed;
 		}
 	}
+
 	// .consults__progress
 	&__progress {
 		order: 1;
 		flex: 0 0 100%;
+
 		@media (min-width: $md3) {
 			flex: 0 1 auto;
 			margin-right: auto;
 			order: 0;
 		}
 	}
+
 	// .consults__progress-caption
 	&__progress-caption {
 		font-size: 0.875rem;
 		font-weight: 700;
 	}
+
 	// .consults__progress-items
 	&__progress-items {
 		margin: rem(4) em(0) em(0) em(0);
 		display: flex;
 		column-gap: rem(4);
 		height: rem(18);
+
 		@media (min-width: $md3) {
 			width: rem(252);
 			flex-shrink: 0;
 		}
+
 		&.consults__progress-items-sm {
 			column-gap: rem(8);
+
 			.consults__progress-item {
 				transform: skew(-20deg);
 			}
 		}
 	}
+
 	// .consults__progress-item
 	&__progress-item {
 		flex: 1 1 auto;
@@ -185,71 +222,88 @@
 		transform: skew(-10deg);
 		background: #f0f2f5;
 		border-radius: rem(2);
+
 		&.active {
 			background: #2f80ed;
 		}
+
 		&.current {
 			background: #ffc839;
 		}
 	}
+
 	// .consults__price
 	&__price {
+		margin-top: 0.5rem;
 		order: 1;
 		flex: 0 0 100%;
+
+
 		@media (min-width: $md5) {
 			flex: 0 1 auto;
 			order: 0;
 		}
-		margin-right: 0.25rem;
+
 	}
+
 	// .consults__price-caption
 	&__price-caption {
 		font-size: 0.75rem;
 		font-weight: 500;
 	}
+
 	// .consults__price-value
 	&__price-value {
 		font-weight: 700;
 		line-height: 1;
 		color: #00be13;
 	}
+
 	// .consults__btns
 	&__btns {
 		display: flex;
-		gap: 1rem;
+		gap: rem(6);
 		flex: 0 0 100%;
 		order: 2;
+
 		@media (min-width: $md5) {
+			gap: 1rem;
 			flex: 0 1 auto;
 			order: 0;
 		}
 	}
+
 	// .consults__btn
 	&__btn {
 		font-size: 1rem;
-		padding: 0.5rem 1rem;
+		padding: 0.5rem;
 		flex: 1 1 auto;
 		min-height: rem(44);
+
 		@media (min-width: $md5) {
 			flex: 0 1 auto;
 			min-width: 13.25rem;
 			font-weight: 600;
 		}
+
 		&.l-btn-primary-outline {
 			color: #323f4b;
 		}
 	}
+
 	&__status {
 		font-size: 1rem;
 		font-weight: 600;
 		order: 2;
 		flex: 0 0 100%;
+
 		@media (min-width: $md5) {
 			padding: 0.68rem 1.2rem;
 			flex: 0 1 auto;
 			order: 0;
 		}
 	}
+
 	// .consults__add
 	&__add {
 		display: flex;
@@ -262,35 +316,43 @@
 		font-size: 1.5rem;
 		color: #2f80ed;
 		transition: color 0.3s ease 0s;
+
 		&::before {
 			margin-bottom: 1rem;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: #2f80ed, $amount: 10);
 			}
 		}
 	}
+
 	// .consults__more
 	&__more {
 		font-size: 0.875em;
 		text-align: center;
 		color: #7b8794;
 	}
+
 	// .consults__archive
 	&__archive {
 		margin: rem(40) auto em(0);
 		min-height: rem(44);
 		display: flex;
+
 		&.l-btn.l-btn-md {
 			padding-inline: 3.5rem;
 		}
+
 		width: 100%;
+
 		@media (min-width: $md5) {
 			max-width: fit-content;
 		}
 	}
-	&__chat {
+
+	&__icon-btn {
 		position: relative;
 		border-radius: 0.5rem;
 		background: #f6f6f6;
@@ -301,21 +363,34 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		& svg {
-			width: 1.25rem;
-			height: 1.25rem;
-		}
 		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+		& svg {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
 		&:hover {
 			background-color: #2f80ed;
 			border-color: #2f80ed;
 			color: #fff;
 		}
+
 		&:active {
 			border-color: #2f80ed;
 			background-color: #fff;
 			color: #323f4b;
 		}
+	}
+
+	&__chat {
+		@extend .consults__icon-btn;
+
+		& svg {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
+
 		&.new {
 			&::before {
 				content: "";
