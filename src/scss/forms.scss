@@ -903,6 +903,17 @@
 		}
 	}
 
+	&.l-btn-white-soft {
+		background: rgba(255, 255, 255, 0.2);
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.35);
+			}
+		}
+	}
+
 	&.l-btn-green {
 		background: #019a3e;
 		color: #fff;

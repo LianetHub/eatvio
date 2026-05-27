@@ -3949,6 +3949,15 @@ body.dark-theme {
     color: #fff;
   }
 }
+.l-btn.l-btn-white-soft {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+@media (any-hover: hover) {
+  .l-btn.l-btn-white-soft:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
 .l-btn.l-btn-green {
   background: #019a3e;
   color: #fff;

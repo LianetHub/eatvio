@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <title>Eatvio Layout</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/reset.min.css" />
+
+    
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+    <link rel="stylesheet" href="css/dev.css" />
+    
+
+    
+
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="header__main">
+        <a href="/" class="header__logo">
+            <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
+            <img src="img/logo-mobile.svg" class="header__logo-mobile" alt="logo">
+        </a>
+        <form action="#" class="header__search search">
+    <div class="search__header">
+        <button class="search__btn icon-search"></button>
+        <input type="text" name="search" autocomplete="off" class="search__input" placeholder="Поиск">
+    </div>
+    <div class="search__bar">
+        <button type="button" class="search__bar-close icon-close"></button>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Недавние</div>
+                <button type="button" class="search__block-btn">Очистить</button>
+            </div>
+            <ul class="search__recent-list">
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Алексей Белый
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Консультант
+                            Елена
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            <strong>Рецепт</strong> Запеканка большой текст
+                        </span>
+                    </a>
+                </li>
+                <li class="search__recent-item">
+                    <a href="" class="search__recent-link">
+                        <span class="search__recent-thumb">
+                            <img src="img/user-2.png" alt="thumb">
+                        </span>
+                        <span class="search__recent-name">
+                            Анастасия Ценбаловна
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Пользователи</div>
+                <button type="button" class="search__block-btn">Показать всех</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Нижний новгород
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Консультанты</div>
+                <button type="button" class="search__block-btn">Показать всех</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="search__block">
+            <div class="search__block-header">
+                <div class="search__block-caption">Диеты</div>
+                <button type="button" class="search__block-btn">Показать все</button>
+            </div>
+            <ul class="search__users">
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="search__users-item">
+                    <a href="" class="search__users-link icon-user">
+                        <span class="search__users-thumb">
+                            <img src="img/user-2.png" alt="user">
+                        </span>
+                        <span class="search__users-info">
+                            <span class="search__users-name">
+                                Имя Фамилия
+                            </span>
+                            <span class="search__users-subtitle">
+                                Москва <span class="search__users-rate icon-star">4.6</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</form>
+    </div>
+    <div class="header__content">
+        <div class="header__container ">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-newsline">
+                            Лента
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link icon-daily">
+                            Дневник
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="header__notification notification">
+                <a href="/notification.html" class="notification__btn icon-bell">
+                    <span>1</span>
+                </a>
+                <div class="notification__body">
+                    <div class="notification__content">
+                        <div class="notification__list">
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Подтвердите сделку</a>
+                                    <p class="notification__hint">У вас есть неподтвержденная сделка. Пожалуйста, подтвердите её в течение 2 дней, иначе она будет автоматически отменена.</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Поздравляем, «Название плана» завершен</a>
+                                    <p class="notification__hint">Пользователь подтвердил прохождения плана. Вы можете получить выплату</p>
+                                    <a href="" class="notification__item-btn l-btn l-btn-green l-btn-md">Получить выплату</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <div class="notification__item succes">
+                                <div class="notification__item-body">
+                                    <a href="" class="notification__text">Сегодня последний день плана <br> «Название плана»</a>
+                                    <p class="notification__hint">Заполните отчет пользователя в дневнике питания</p>
+                                    <a href="" class="notification__link">Заполнить отчет</a>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </div>
+                            </div>
+                            <a href="" class="notification__item new">
+                                <span class="notification__item-body">
+                                    <span class="notification__row">
+                                        <span class="notification__thumb">
+                                            <img src="img/user.png" class="cover-image" alt="avatar">
+                                        </span>
+                                        <span class="notification__text">На вас подписались Иван Иванов</span>
+                                    </span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item fail">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">
+                                        Консультанта отказался от заказа
+                                    </span>
+                                    <span class="notification__desc">Мы рассмотрим причину отказа и в течении трех дней вернемся к Вам с обратной связью</span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item new">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Новые комментарии к вашей записи <span>“как прошел мой день”</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                            <a href="" class="notification__item succes">
+                                <span class="notification__item-body">
+                                    <span class="notification__text">Пользователь Иван Иванов <span>заполнил дневник питания</span></span>
+                                    <time datetime="2026-07-18T17:3" class="notification__time">18 июл 17:30</time>
+                                </span>
+                            </a>
+                        </div>
+                        <button type="button" class="notification__more">Показать все</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__user">
+                <a href="" class="header__person">
+                    <img src="img/user.png" class="cover-image" alt="avatar">
+                </a>
+                <button type="button" class="header__user-btn icon-down"></button>
+                <ul class="header-list">
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/admin-panel.svg" width="20" height="20" alt="">
+            </span>
+            Админ панель
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/profile-settings.svg" width="20" height="20" alt="">
+            </span>
+            Настройки профиля
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-posts.svg" width="20" height="20" alt="">
+            </span>
+            Мои посты
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/favorites.svg" width="20" height="20" alt="">
+            </span>
+            Избранное
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-purchases.svg" width="20" height="20" alt="">
+            </span>
+            Мои покупки
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/glossary.svg" width="20" height="20" alt="">
+            </span>
+            Глоссарий
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/my-consultations.svg" width="20" height="20" alt="">
+            </span>
+            Мои консультации
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/support.svg" width="20" height="20" alt="">
+            </span>
+            Поддержка
+        </a>
+    </li>
+    <li class="header-list__item">
+        <a href="" class="header-list__link">
+            <span class="header-list__icon">
+                <img src="img/header-menu/logout.svg" width="20" height="20" alt="">
+            </span>
+            Выход
+        </a>
+    </li>
+    <li class="header-list__item">
+        <button type="button" class="header-list__link icon-search search-mobile-btn">
+            Поиск
+        </button>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</header>
+            <main class="page left-mobile-gap">
+                <section class="chat">
+                    <div class="chat__container active">
+                        <div class="chat__contacts">
+                            <form action="#" class="chat__contacts-search search">
+                                <button class="search__btn icon-search"></button>
+                                <input type="text" name="search" class="search__input" placeholder="Поиск">
+                            </form>
+                            <ul class="chat__contacts-list">
+                                <li class="chat__contacts-item active">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Иван Долгунов
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            image.jpeg
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            Пт
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="chat__contacts-item delivered">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Ксения Обрамова
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            Привет, хорошая статья
+                                        </div>
+                                        <div class="chat__contacts-text chat-file">
+                                            GIF
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            9/29
+                                        </div>
+                                        <ul class="chat__contacts-progress">
+                                            <li>Проходит план</li>
+                                            <li>4 из 14 дней</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="chat__contacts-item read">
+                                    <div class="chat__contacts-thumb">
+                                        <img src="img/user-2.png" alt="thumbs">
+                                    </div>
+                                    <div class="chat__contacts-info">
+                                        <div class="chat__contacts-name">
+                                            Данил Иванов
+                                        </div>
+                                        <div class="chat__contacts-text">
+                                            Посоветуй пожалуйста рецепт вкусного завтрака.
+                                        </div>
+                                    </div>
+                                    <div class="chat__contacts-side">
+                                        <div class="chat__contacts-date">
+                                            9/29
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat__body">
+                            <div class="chat__block active">
+                                <div class="chat__header">
+                                    <button type="button" class="chat__back icon-down"></button>
+                                    <div class="chat__person">
+                                        <div class="chat__thumb">
+                                            <img src="img/user-2.png" alt="user">
+                                        </div>
+                                        <div class="chat__info">
+                                            <div class="chat__name">
+                                                Иван Долгунов
+                                            </div>
+                                            <div class="chat__time">
+                                                был в сети 37 минут назад
+                                            </div>
+                                            <div class="chat__status online">
+                                                Онлайн
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__side">
+    <a href="#" class="chat__video-btn l-btn l-btn-primary" title="Видеозвонок">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+        </svg>
+        <span class="hidden sm:inline">Видеозвонок</span>
+    </a>
+    <div class="chat__actions">
+
+        <button type="button" class="chat__actions-btn icon-dotts"></button>
+        <ul class="chat__actions-list">
+            <li class="chat__actions-item">
+                <button type="button" class="chat__action chat-notification-btn">Отключить оповещения</button>
+            </li>
+            <li class="chat__actions-item">
+                <a href="#add-complaint" data-modal class="chat__action icon-info">Подать жалобу</a>
+            </li>
+            <li class="chat__actions-item">
+                <button type="button" class="chat__action icon-trash">Удалить чат</button>
+            </li>
+        </ul>
+    </div>
+</div>
+                                </div>
+                                <div class="chat__content">
+                                    <div class="chat__caption pc-only">
+    <div class="chat__steps">
+        
+        <div class="chat__steps-item">Выбрана дата старта</div>
+        <div class="chat__steps-item">Заказ оплачен</div>
+        <div class="chat__steps-item">Заказ в работе</div>
+        
+        
+        
+        
+        
+    </div>
+    <a href="" class="chat__more">
+        <span class="icon-attention"></span>
+    </a>
+</div>
+                                    <div class="chat__date">
+                                        21 марта 2024
+                                    </div>
+                                    <div class="chat__item">
+                                        <div class="chat__thumb">
+                                            <img src="img/user-2.png" alt="thumb">
+                                        </div>
+                                        <div class="chat__message">
+                                            <div class="chat__heading">
+                                                <a href="" class="chat__name">
+                                                    Дмитрий
+                                                </a>
+                                            </div>
+                                            <div class="chat__message-body">
+                                                <div class="chat__message-block">
+                                                    <p class="chat__message-badge lg-badge">Пользователь заказал план</p>
+                                                    <div class="chat__time">13:47</div>
+                                                </div>
+                                                <div class="plans__item">
+                                                    <div class="plans__item-image">
+                                                        <img src="img/posts/05.png" class="cover-image" alt="post">
+                                                        <div class="plans__item-info">
+                                                            <div class="plans__item-stats">
+                                                                <div class="plans__item-stat">
+                                                                    14 Дней
+                                                                </div>
+                                                                <div class="plans__item-stat">
+                                                                    от 2500₽
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="plans__item-body">
+                                                        <div class="plans__item-header">
+                                                            <h3 class="plans__item-title title title-md">Лёгкий</h3>
+                                                            <a href="#refusal-order" data-modal class="plans__item-delete">Отказаться от заказа</a>
+                                                        </div>
+                                                        <div class="plans__item-option">
+                                                            Опция: Самое то
+                                                        </div>
+                                                        <ul class="plans__item-list">
+                                                            <li>14 дневный план</li>
+                                                            <li>Ежедневное наблюдение за рационом</li>
+                                                            <li>Консультации</li>
+                                                            <li>Общие рекомендации</li>
+                                                        </ul>
+                                                        <a href="" class="plans__item-user l-btn l-btn-primary">Анкета пользователя</a>
+                                                    </div>
+                                                </div>
+                                                <div class="chat__banner">
+                                                    <div class="chat__banner-caption">Выберите дату старта плана питания</div>
+                                                    <a href="#date-select" data-modal class="chat__banner-link">Выбрать дату</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat__footer">
+                                    <label class="chat__file">
+                                        <input type="file" name="chat-file" class="chat__file-input hidden" hidden>
+                                        <span class="chat__file-btn icon-clip"></span>
+                                    </label>
+                                    <textarea name="message" class="chat__textarea textarea textarea-white" placeholder="Написать сообщение..."></textarea>
+                                    <button type="button" class="chat__voice icon-voice"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="incoming-call-layer">
+                    <div class="incoming-call-layer__overlay" aria-hidden="true"></div>
+                    <div class="incoming-call" aria-label="Входящий звонок">
+                        <div class="incoming-call__head">
+                            <div class="incoming-call__avatar">
+                                <span class="incoming-call__avatar-letter">И</span>
+                            </div>
+                            <div class="incoming-call__info">
+                                <div class="incoming-call__title">
+                                    <span class="incoming-call__title-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M10.666 8.66749L14.148 10.9888C14.1982 11.0222 14.2565 11.0414 14.3168 11.0443C14.377 11.0472 14.4369 11.0336 14.49 11.0052C14.5432 10.9767 14.5876 10.9344 14.6186 10.8827C14.6496 10.8309 14.666 10.7718 14.666 10.7115V5.24749C14.666 5.18884 14.6506 5.13123 14.6212 5.08046C14.5918 5.02969 14.5496 4.98758 14.4987 4.95836C14.4479 4.92914 14.3902 4.91387 14.3316 4.91406C14.2729 4.91426 14.2153 4.92993 14.1647 4.95949L10.666 7.00083" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.33398 4H2.66732C1.93094 4 1.33398 4.59695 1.33398 5.33333V10.6667C1.33398 11.403 1.93094 12 2.66732 12H9.33398C10.0704 12 10.6673 11.403 10.6673 10.6667V5.33333C10.6673 4.59695 10.0704 4 9.33398 4Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="incoming-call__name">Иван Долгунов</span>
+                                </div>
+                                <p class="incoming-call__status">Входящий видеозвонок...</p>
+                            </div>
+                        </div>
+                        <div class="incoming-call__actions">
+                            <button type="button" class="incoming-call__action l-btn l-btn-white l-btn-sm">
+                                <span class="incoming-call__btn-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M10.666 8.66749L14.148 10.9888C14.1982 11.0222 14.2565 11.0414 14.3168 11.0443C14.377 11.0472 14.4369 11.0336 14.49 11.0052C14.5432 10.9767 14.5876 10.9344 14.6186 10.8827C14.6496 10.8309 14.666 10.7718 14.666 10.7115V5.24749C14.666 5.18884 14.6506 5.13123 14.6212 5.08046C14.5918 5.02969 14.5496 4.98758 14.4987 4.95836C14.4479 4.92914 14.3902 4.91387 14.3316 4.91406C14.2729 4.91426 14.2153 4.92993 14.1647 4.95949L10.666 7.00083" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.33398 4H2.66732C1.93094 4 1.33398 4.59695 1.33398 5.33333V10.6667C1.33398 11.403 1.93094 12 2.66732 12H9.33398C10.0704 12 10.6673 11.403 10.6673 10.6667V5.33333C10.6673 4.59695 10.0704 4 9.33398 4Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                Принять
+                            </button>
+                            <button type="button" class="incoming-call__action l-btn l-btn-white-soft l-btn-sm">
+                                <span class="incoming-call__btn-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_9205_51321)">
+                                            <path d="M7.12028 8.87405C7.79685 9.55122 8.56149 10.1342 9.39361 10.6074L10.2403 9.76072C10.4215 9.58147 10.6504 9.45795 10.8997 9.40478C11.149 9.35161 11.4083 9.37102 11.6469 9.46072C12.2518 9.68642 12.8802 9.84297 13.5203 9.92738C13.8407 9.97266 14.1336 10.1329 14.3446 10.3782C14.5556 10.6235 14.6701 10.9372 14.6669 11.2607V13.2607C14.6677 13.4464 14.6297 13.6302 14.5553 13.8003C14.4809 13.9704 14.3718 14.1231 14.235 14.2486C14.0982 14.3741 13.9367 14.4697 13.7608 14.5292C13.5849 14.5887 13.3985 14.6108 13.2136 14.594C11.1622 14.3711 9.19161 13.6701 7.46028 12.5474C6.65713 12.0374 5.91263 11.4405 5.24028 10.7674M3.46028 8.54072C2.33752 6.80938 1.63652 4.83883 1.41361 2.78738C1.39695 2.60303 1.41886 2.41722 1.47795 2.2418C1.53703 2.06637 1.63199 1.90518 1.75679 1.76846C1.88159 1.63175 2.03348 1.52252 2.20281 1.44773C2.37213 1.37294 2.55517 1.33422 2.74028 1.33405H4.74028C5.06382 1.33086 5.37748 1.44543 5.62279 1.6564C5.8681 1.86737 6.02833 2.16035 6.07361 2.48072C6.15803 3.12076 6.31458 3.7492 6.54028 4.35405C6.62998 4.59266 6.64939 4.85199 6.59622 5.1013C6.54305 5.35061 6.41952 5.57946 6.24028 5.76072L5.39361 6.60738" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.6673 1.33398L1.33398 14.6673" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_9205_51321">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Отклонить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer pc-only">
+    <div class="footer__container">
+        <a href="" class="footer__link">ООО “ИТВИО”</a>
+        <a href="" class="footer__link">Пользовательское соглашение</a>
+        <a href="" class="footer__link">Зaщита персональных данных</a>
+        <a href="" class="footer__link">Обратная связь</a>
+    </div>
+</footer>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="date-select" class="popup">
+    <div class="popup__content">
+        <div class="popup__body offset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-lg">
+                Название плана
+            </div>
+            <div class="popup__subtitle">
+                Выбор даты старта плана. Консультация начнётся в 00:00 (МСК) выбранной даты
+            </div>
+            <div class="popup__selecting">
+                <div class="popup__selecting-header">
+                    <div class="popup__selecting-label">
+                        Март
+                    </div>
+                    <div class="popup__selecting-controls">
+                        <button class="popup__selecting-prev icon-down"></button>
+                        <button class="popup__selecting-next icon-down"></button>
+                    </div>
+                </div>
+                <div class="popup__checkboxes">
+                    <label class="checkbox-btn">
+                        <input type="radio" checked name="day-start" value="22" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            22
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="23" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            23
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="24" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            24
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="25" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            25
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="26" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            26
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="27" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            27
+                        </span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="radio" name="day-start" value="28" class="checkbox-btn__input hidden" hidden>
+                        <span class="checkbox-btn__content">
+                            28
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__selecting-btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Отмена</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-primary l-btn-sm">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="refusal-order" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Отказ от заказа
+                </div>
+                <p class="popup__subtitle">Вы уверены, что хотите отказаться от заказа?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-sm">Не отказываться</button>
+                    <button type="button" class="popup__selecting-btn l-btn l-btn-danger l-btn-sm">Отказаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="add-complaint" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <p class="popup__subtitle">Вы уверенны, что хотите подать жалобу?</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-xl">Отмена</button>
+                    <a href="#add-complaint-2" data-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl">Подать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="add-complaint-2" class="popup ">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <form action="#" class="popup__cancel">
+                    <div class="popup__cancel-rows">
+                        <div class="popup__cancel-row">
+                            <div class="label">Опишите причину жалобы</div>
+                            <textarea name="reason" class="textarea textarea-sm textarea-white" placeholder="Укажите суть проблемы и желаемое решение"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-secondary l-btn-xl">Отмена</button>
+                    <a href="#add-complaint-success" data-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl">Подать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="add-complaint-success" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body_xmd">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__add-recipe">
+                <div class="title title-lg font-bold">
+                    Подача жалобы
+                </div>
+                <p class="popup__desc">Жалоба отправлена на рассмотрение. Обычно это занимает <br> до трёх рабочих дней. Вам поступит уведомление <br> о результате рассмотрения</p>
+                <div class="popup__btns">
+                    <button type="button" data-close-modal class="popup__selecting-btn l-btn l-btn-primary l-btn-xl l-btn-fullwidth">Хорошо</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="js/app.min.js"></script>
+    </body>
+</html>
