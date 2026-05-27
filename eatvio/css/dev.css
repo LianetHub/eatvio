@@ -46241,6 +46241,38 @@ body.dark-theme {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 767.98px) {
+  .settings__person-title_wide {
+    max-width: 31.25rem;
+    white-space: nowrap;
+  }
+}
+
+.settings__person-chat {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  color: #2f80ed;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: normal;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.settings__person-chat::before {
+  font-size: 0.875rem;
+}
+@media (any-hover: hover) {
+  .settings__person-chat:hover {
+    opacity: 0.8;
+  }
+}
+
 .my-consults {
   padding: 1.25rem 0 2.5rem;
 }
@@ -46633,6 +46665,13 @@ body.dark-theme {
 }
 .my-consults__card_no-btn .my-consults__body {
   min-height: 6.75rem;
+}
+.my-consults--in-settings {
+  padding: 0;
+  margin-top: 1.25rem;
+}
+.my-consults__chat-btn {
+  margin-top: 1.25rem;
 }
 
 @-webkit-keyframes my-consults-spin {

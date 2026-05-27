@@ -139,8 +139,8 @@
 .my-consults__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 1fr);
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -363,6 +363,121 @@
   min-height: 6.75rem;
 }
 
+.my-consults--consultant .my-consults__toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+}
+
+.my-consults--consultant .my-consults__back {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #323f4b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.my-consults--consultant .my-consults__back::before {
+  font-size: 1.25rem;
+}
+
+.my-consults--consultant .my-consults__toolbar-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin: 0;
+  color: #323f4b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.my-consults--consultant .my-consults__client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.my-consults--consultant .my-consults__client-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.my-consults--consultant .my-consults__client-name {
+  color: #323f4b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.my-consults--consultant .my-consults__client-chat {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  color: #2f80ed;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.my-consults--consultant .my-consults__client-chat::before {
+  font-size: 0.875rem;
+}
+
+.my-consults--consultant .my-consults__client-avatar {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @-webkit-keyframes my-consults-spin {
   to {
     -webkit-transform: rotate(360deg);
@@ -379,8 +494,8 @@
 
 @media (min-width: 575.98px) {
   .my-consults__grid {
-    -ms-grid-columns: (minmax(0, 1fr))[2];
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -429,12 +544,36 @@
             flex: 0 0 12rem;
     width: 12rem;
   }
+
+  .my-consults--consultant .my-consults__toolbar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .my-consults--consultant .my-consults__toolbar-title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 991.98px) {
   .my-consults__grid {
-    -ms-grid-columns: (minmax(0, 1fr))[3];
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767.96px) {
+  .my-consults--consultant .my-consults__client {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -443,5 +582,13 @@
     -webkit-transform: translate(-50%, -50%) scale(1.05);
         -ms-transform: translate(-50%, -50%) scale(1.05);
             transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  .my-consults--consultant .my-consults__back:hover {
+    color: #2f80ed;
+  }
+
+  .my-consults--consultant .my-consults__client-chat:hover {
+    opacity: 0.8;
   }
 }

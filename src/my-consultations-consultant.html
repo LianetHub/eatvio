@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Итвио | Видеоконсультации с пользователем',
+    "stylesName": ["my-consultations"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="consults.html" class="settings__back icon-arrow-short-left"><span class="pc-only">Назад</span></a>
+                            <div class="settings__person-title settings__person-title_wide title">
+                                Видеоконсультации с&nbsp;пользователем
+                            </div>
+                            <div class="settings__person pc-only">
+                                <div class="settings__person-content">
+                                    <div class="settings__person-name">
+                                        Анна Власова
+                                    </div>
+                                    <a href="#" class="settings__person-chat icon-communication">Написать клиенту</a>
+                                </div>
+                                <div class="settings__person-thumb">
+                                    <img src="@img/user-2.png" alt="avatar">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="chat-with-user.html" class="my-consults__chat-btn l-btn l-btn-primary l-btn-fullwidth icon-communication mobile-only">Написать клиенту</a>
+                        <div class="my-consults my-consults--in-settings">
+                            <div class="my-consults__grid">
+                                @@include('html/_my-consultation-card.html', { "status": "ready" })
+                                @@include('html/_my-consultation-card.html', { "status": "processing", "cardClass": " my-consults__card_no-btn" })
+                                @@include('html/_my-consultation-card.html', { "status": "processing", "cardClass": " my-consults__card_no-btn" })
+                                @@include('html/_my-consultation-card.html', { "status": "unavailable", "cardClass": " my-consults__card_no-btn" })
+                                @@include('html/_my-consultation-card.html', { "status": "ready" })
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>
