@@ -392,6 +392,28 @@
 		}
 
 		&.new {
+			&:has(span) {
+				&::before {
+					content: none;
+				}
+
+				& span {
+					position: relative;
+					display: block;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: rem(-4);
+						right: rem(-5);
+						width: rem(8);
+						height: rem(8);
+						background: #d01717;
+						border-radius: 50%;
+					}
+				}
+			}
+
 			&::before {
 				content: "";
 				position: absolute;
