@@ -513,8 +513,7 @@
 	&__login-download {
 		margin-top: 1.25rem;
 		border-top: 1px solid #dbdbdb;
-		border-bottom: 1px solid #dbdbdb;
-		padding: 1.25rem 0;
+		padding: 1.25rem 0 0;
 		text-align: center;
 		font-size: 1.25rem;
 
@@ -523,6 +522,55 @@
 				text-decoration: underline;
 				color: #2f80ed;
 			}
+		}
+	}
+
+	// .header__login-qr
+	&__login-qr {
+		padding: 1rem 0 1.25rem;
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		align-items: flex-start;
+		border-bottom: 1px solid #dbdbdb;
+	}
+
+	// .header__login-qr-item
+	&__login-qr-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	// .header__login-qr-image
+	&__login-qr-image {
+		width: rem(60);
+		height: rem(60);
+		flex-shrink: 0;
+		overflow: hidden;
+		border: 1px solid #e3e4e6;
+		background: #fff;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	// .header__login-qr-place
+	&__login-qr-place {
+		height: rem(18);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& img {
+			display: block;
+			max-height: 100%;
+			width: auto;
 		}
 	}
 

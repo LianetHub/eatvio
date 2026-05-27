@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Вход из плашки'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-unlogined-2025.html', {})
+            <script>
+                const loginBlock = document.querySelector('.header__login');
+                if (loginBlock) loginBlock.classList.add('active');
+            </script>
+            <main class="page" style="min-height: 400px;"></main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>
