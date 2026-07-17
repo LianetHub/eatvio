@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Вакансии'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-unlogined-2025.html', {})
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="homepage.html" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Вакансии
+                            </div>
+                        </div>
+                        <div class="settings__body">
+                            <p>В Итвио нет открытых вакансий для сотрудников.</p>
+                            <br>
+                            <p>
+                                Мы приглашаем специалистов по питанию работать на платформе как консультанты.
+                                Консультанты — не сотрудники компании, а независимые специалисты: они самостоятельно
+                                ведут подопечных, создают планы питания и получают вознаграждение за консультации.
+                            </p>
+                            <br>
+                            <p><strong>Как стать консультантом</strong></p>
+                            <div>1. Зарегистрируйтесь как пользователь</div>
+                            <div>2. В настройках профиля нажмите «Стать консультантом»</div>
+                            <div>3. Заполните форму и дождитесь одобрения модератора</div>
+                            <br>
+                            <p>
+                                Если вы хотите сотрудничать с нами, пришлите ваши контакты на
+                                <a href="mailto:info@eatvio.ru">info@eatvio.ru</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-guest.html', {})
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>
