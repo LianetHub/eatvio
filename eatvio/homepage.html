@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <title>Eatvio Layout</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/reset.min.css" />
+
+    
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+    <link rel="stylesheet" href="css/dev.css" />
+    
+
+    
+
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header header-guest">
+    <div class="header-guest__container">
+        <a href="/" class="header__logo header-guest__logo">
+            <img src="img/logo-russia.svg" alt="Итвио">
+        </a>
+        <nav class="header-guest__nav" aria-label="Разделы">
+            <a href="#feed" class="header-guest__link active">Лента</a>
+            <a href="" class="header-guest__link">Рецепты</a>
+            <a href="" class="header-guest__link">Диеты</a>
+            <a href="" class="header-guest__link">Планы питания</a>
+            <a href="" class="header-guest__link">Консультанты</a>
+        </nav>
+        <div class="header-guest__actions">
+            <a href="" class="header__btn l-btn l-btn-secondary-outline l-btn-sm">Вход</a>
+            <a href="" class="header__btn l-btn l-btn-primary l-btn-sm">Регистрация</a>
+        </div>
+    </div>
+</header>
+
+            <main class="page">
+                <section class="homepage-hero">
+                    <div class="homepage-hero__container">
+                        <div class="homepage-hero__offer">
+                            <h1 class="homepage-hero__title">Итвио - это полезная привычка</h1>
+                            <p class="homepage-hero__subtitle">Дневник питания, расчёт КБЖУ и консультации нутрициологов. Читайте ленту: посты, рецепты, планы и диеты.</p>
+                            <div class="homepage-hero__cta">
+                                <a href="" class="l-btn l-btn-primary l-btn-sm">Создать аккаунт</a>
+                            </div>
+                        </div>
+                        <div class="homepage-hero__stores">
+                            <div class="homepage-hero__stores-label">Скачайте приложение</div>
+                            <div class="homepage-hero__stores-row">
+                                <a href="https://www.rustore.ru/catalog/app/com.eatvioapp.app" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/RuStore.svg" alt="RuStore">
+                                </a>
+                                <a href="https://apps.apple.com/ru/app/итвио/id6499423743" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/AppStore.svg" alt="App Store">
+                                </a>
+                                <a href="https://appgallery.huawei.ru/app/C113238569" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/AppGallery.svg" alt="AppGallery">
+                                </a>
+                                <a href="https://global.app.mi.com/details?lo=RU&la=ru&id=com.eatvioapp.app" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/GetApps.svg" alt="GetApps">
+                                </a>
+                                <a href="https://eatvio.ru/apk/eatvio.apk" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/apk_black.svg" alt="APK">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content homepage-feed" id="feed">
+                    <div class="homepage-feed__container">
+                        <div class="homepage-feed__main">
+                            <div class="content__header">
+                                <div class="content__header-title title">
+                                    Лента новостей
+                                </div>
+                                <form action="#" class="content__header-search search">
+                                    <div class="search__box">
+                                        <button type="submit" class="search__btn icon-search"></button>
+                                        <input type="text" name="search" class="search__input search__input-white" placeholder="Поиск записи">
+                                    </div>
+                                    <button type="submit" class="search__send l-btn l-btn-primary l-btn-sm">найти запись</button>
+                                </form>
+                            </div>
+                            <div class="content__announcements">
+                                <div class="content__announcement announcement">
+                                    <div class="announcement__header">
+                                        <div class="announcement__thumb">
+                                            <img src="img/user-2.png" alt="user">
+                                        </div>
+                                        <div class="announcement__person">
+                                            <div class="announcement__person-name">
+                                                Анна Власова
+                                            </div>
+                                            <div class="announcement__person-subtitle">
+                                                Вчера в 12:11
+                                            </div>
+                                        </div>
+                                        <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+                                    </div>
+                                    <div class="announcement__slider">
+                                        <div class="announcement__slider-block swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="announcement__slide swiper-slide">
+                                                    <img src="img/announcement.png" class="cover-image" alt="announcement">
+                                                </div>
+                                                <div class="announcement__slide swiper-slide">
+                                                    <img src="img/dish.jpg" class="cover-image" alt="announcement">
+                                                </div>
+                                                <div class="announcement__slide swiper-slide">
+                                                    <img src="img/product.png" class="cover-image" alt="announcement">
+                                                </div>
+                                            </div>
+                                            <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+                                            <button type="button" class="announcement__slider-next swiper-button-next"></button>
+                                            <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+                                        </div>
+                                    </div>
+                                    <div class="announcement__title">
+                                        10 Trending Nutrition Research Articles of 2021
+                                    </div>
+                                    <p class="announcement__desc">
+                                        As 2020 begins, we took a look back at nutrition in the news during 2019. The most popular diet search according to Google was intermittent fasting.
+                                    </p>
+                                    <a href="" class="announcement__more">Читать далее</a>
+                                    <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+                                </div>
+                                <div class="content__announcement announcement">
+                                    <div class="announcement__header">
+                                        <div class="announcement__thumb">
+                                            <img src="img/user-3.png" alt="user">
+                                        </div>
+                                        <div class="announcement__person">
+                                            <div class="announcement__person-name">
+                                                Елена Четверикова
+                                            </div>
+                                            <div class="announcement__person-subtitle">
+                                                3 дня назад
+                                            </div>
+                                        </div>
+                                        <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+                                    </div>
+                                    <div class="announcement__slider">
+                                        <div class="announcement__slider-block swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="announcement__slide swiper-slide">
+                                                    <img src="img/dish.jpg" class="cover-image" alt="announcement">
+                                                </div>
+                                            </div>
+                                            <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+                                            <button type="button" class="announcement__slider-next swiper-button-next"></button>
+                                            <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+                                        </div>
+                                    </div>
+                                    <div class="announcement__title">
+                                        Открыли для себя икру камбалы — и это очень вкусно!
+                                    </div>
+                                    <p class="announcement__desc">
+                                        Настоящий кладезь Омега-3 и Омега-6, витаминов A, D, E и группы B. Рецепт простой: очистить от плёнок, обвалять в муке из бурого риса, добавить специи и обжарить.
+                                    </p>
+                                    <a href="" class="announcement__more">Читать далее</a>
+                                    <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+                                </div>
+                                <div class="content__announcement announcement">
+                                    <div class="announcement__header">
+                                        <div class="announcement__thumb">
+                                            <img src="img/user-4.png" alt="user">
+                                        </div>
+                                        <div class="announcement__person">
+                                            <div class="announcement__person-name">
+                                                Ирина Рыженко-Цыганова
+                                            </div>
+                                            <div class="announcement__person-subtitle">
+                                                Неделю назад
+                                            </div>
+                                        </div>
+                                        <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+                                    </div>
+                                    <div class="announcement__player">
+                                        <iframe src="https://rutube.ru/play/embed/e04ad6665562a48887bca949d6182b37/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    </div>
+                                    <div class="announcement__title">
+                                        Почему важно жевать: разбор по науке
+                                    </div>
+                                    <p class="announcement__desc">
+                                        Быстрое поедание пищи статистически связано с более высоким ИМТ и рисками метаболических нарушений. Правило 20 минут и техника жевания.
+                                    </p>
+                                    <a href="" class="announcement__more">Читать далее</a>
+                                    <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+                                </div>
+                                <div class="content__announcement announcement">
+                                    <div class="announcement__header">
+                                        <div class="announcement__thumb">
+                                            <img src="img/user-5.png" alt="user">
+                                        </div>
+                                        <div class="announcement__person">
+                                            <div class="announcement__person-name">
+                                                Михаил Решетник · Итвио
+                                            </div>
+                                            <div class="announcement__person-subtitle">
+                                                2 недели назад
+                                            </div>
+                                        </div>
+                                        <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+                                    </div>
+                                    <div class="announcement__title">
+                                        «Нейтрализовать сахар витамином C»? Разбираем опасный лайфхак
+                                    </div>
+                                    <p class="announcement__desc">
+                                        Витамин C — не нейтрализатор сахара, такого механизма не существует. Зато существует гипервитаминоз. Простое правило: если «эксперт» продаёт продукт — это продажа.
+                                    </p>
+                                    <a href="" class="announcement__more">Читать далее</a>
+                                    <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+                                </div>
+                            </div>
+                            <a href="" class="l-btn l-btn-secondary-outline homepage-feed__more">Показать ещё</a>
+                        </div>
+                        <aside class="homepage-side">
+    <div class="homepage-side__card homepage-side__card--auth">
+        <h3 class="homepage-side__title">Присоединяйтесь к Итвио</h3>
+        <p class="homepage-side__text">Ведите дневник питания, считайте КБЖУ и общайтесь с нутрициологами.</p>
+        <a href="" class="l-btn l-btn-primary l-btn-sm l-btn-fullwidth">Создать аккаунт</a>
+        <a href="" class="l-btn l-btn-secondary-outline l-btn-sm l-btn-fullwidth homepage-side__login">Войти</a>
+        <div class="header__login-btns homepage-side__oauth">
+            <a href="" class="header__login-btn" aria-label="Войти с VK ID">
+                <img src="img/icons/vk-logo.svg" alt="vk">
+            </a>
+            <a href="" class="header__login-btn" aria-label="Войти с Mail">
+                <img src="img/icons/mail-ru-sign-logo.svg" alt="mail">
+            </a>
+            <a href="" class="header__login-btn" aria-label="Войти через OK">
+                <img src="img/icons/ok-logo.svg" alt="ok">
+            </a>
+            <a href="" class="header__login-btn" aria-label="Войти через Яндекс">
+                <img src="img/icons/ya-logo.svg" alt="yandex">
+            </a>
+        </div>
+    </div>
+
+    <div class="homepage-side__card homepage-side__card--leaders">
+        <div class="homepage-side__leaders-head">
+            <h3 class="homepage-side__title">Топ консультантов месяца</h3>
+            <a href="" class="homepage-side__leaders-link">Все →</a>
+        </div>
+        <div class="homepage-side__leaders-list">
+            <div class="homepage-side__leader consultant consultant-grey">
+                <div class="consultant__heading">
+                    <div class="consultant__order">1
+                        <span class="consultant__order-icon">
+                            <img src="img/crown-gold.svg" alt="">
+                        </span>
+                    </div>
+                    <a href="" class="consultant__thumb consultant__thumb-sm">
+                        <img src="img/user.png" class="cover-image" alt="">
+                    </a>
+                    <div class="consultant__person">
+                        <a href="" class="consultant__name consultant__name-sm">Ирина Рыженко-Цыганова</a>
+                        <div class="consultant__person-info">
+                            <div class="consultant__rating">Рейтинг: 9028</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-side__leader consultant consultant-grey">
+                <div class="consultant__heading">
+                    <div class="consultant__order">2
+                        <span class="consultant__order-icon">
+                            <img src="img/crown-silver.svg" alt="">
+                        </span>
+                    </div>
+                    <a href="" class="consultant__thumb consultant__thumb-sm">
+                        <img src="img/user-2.png" class="cover-image" alt="">
+                    </a>
+                    <div class="consultant__person">
+                        <a href="" class="consultant__name consultant__name-sm">Елена Четверикова</a>
+                        <div class="consultant__person-info">
+                            <div class="consultant__rating">Рейтинг: 8740</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-side__leader consultant consultant-grey">
+                <div class="consultant__heading">
+                    <div class="consultant__order">3
+                        <span class="consultant__order-icon">
+                            <img src="img/crown-medium.svg" alt="">
+                        </span>
+                    </div>
+                    <a href="" class="consultant__thumb consultant__thumb-sm">
+                        <img src="img/user-3.png" class="cover-image" alt="">
+                    </a>
+                    <div class="consultant__person">
+                        <a href="" class="consultant__name consultant__name-sm">Татьяна Мосова</a>
+                        <div class="consultant__person-info">
+                            <div class="consultant__rating">Рейтинг: 8512</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-side__leader consultant consultant-grey">
+                <div class="consultant__heading">
+                    <div class="consultant__order">4</div>
+                    <a href="" class="consultant__thumb consultant__thumb-sm">
+                        <img src="img/user-4.png" class="cover-image" alt="">
+                    </a>
+                    <div class="consultant__person">
+                        <a href="" class="consultant__name consultant__name-sm">Наталья Смирнова</a>
+                        <div class="consultant__person-info">
+                            <div class="consultant__rating">Рейтинг: 7901</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-side__leader consultant consultant-grey">
+                <div class="consultant__heading">
+                    <div class="consultant__order">5</div>
+                    <a href="" class="consultant__thumb consultant__thumb-sm">
+                        <img src="img/user-5.png" class="cover-image" alt="">
+                    </a>
+                    <div class="consultant__person">
+                        <a href="" class="consultant__name consultant__name-sm">Анна Власова</a>
+                        <div class="consultant__person-info">
+                            <div class="consultant__rating">Рейтинг: 7654</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="homepage-side__card homepage-side__card--tools">
+        <h3 class="homepage-side__title">Инструменты</h3>
+        <div class="homepage-side__tools">
+            <a href="https://eatvio.ru" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                </span>
+                Итвио дневник питания
+            </a>
+            <a href="articles/kalkulyator-indeksa-massy-tela.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8a4 4 0 0 1 4 4"/><path d="M8 12a4 4 0 0 1 1.2-2.8"/><path d="M12 12l2-2"/></svg>
+                </span>
+                Калькулятор ИМТ
+            </a>
+            <a href="articles/kalkulyator-normy-caloriy.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2 3-1 4 1 7 1.4 2-.5 3 .5 5"/><path d="M6 14a6 6 0 1 0 12 0c0-3-2-5-3-6-1 2-3 2-3-1 0-2-1-3-2-4-1 3-4 6-4 11z"/></svg>
+                </span>
+                Калькулятор КБЖУ
+            </a>
+            <a href="articles/kalkulyator-tyg.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+                </span>
+                Калькулятор TyG
+            </a>
+            <a href="articles/kalkulyator-bri.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><ellipse cx="12" cy="15.5" rx="6.5" ry="5.5"/><path d="M9.5 10.5c.8-.6 1.6-.9 2.5-.9s1.7.3 2.5.9"/></svg>
+                </span>
+                Калькулятор BRI
+            </a>
+            <a href="articles/kalkulyator-vai.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 8v6"/><path d="M9.5 11h5"/></svg>
+                </span>
+                Калькулятор VAI
+            </a>
+            <a href="articles/kak-pohudet.html" class="homepage-side__tool">
+                <span class="homepage-side__tool-ico" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 13V7h-6"/></svg>
+                </span>
+                Похудение
+            </a>
+        </div>
+    </div>
+
+    <div class="homepage-side__card homepage-side__card--become">
+        <h3 class="homepage-side__title">Стать консультантом</h3>
+        <ol class="homepage-side__steps">
+            <li><span class="homepage-side__step-num">1.</span>Зарегистрируйтесь как пользователь</li>
+            <li><span class="homepage-side__step-num">2.</span>В настройках профиля нажмите «Стать консультантом»</li>
+            <li><span class="homepage-side__step-num">3.</span>Заполните форму и дождитесь одобрения модератора</li>
+        </ol>
+        <a href="https://pro.eatvio.ru/" target="_blank" rel="noopener noreferrer" class="l-btn l-btn-primary l-btn-fullwidth l-btn-sm">Начать</a>
+    </div>
+
+    <div class="homepage-side__card">
+        <h3 class="homepage-side__title">Итвио всегда под рукой</h3>
+        <div class="homepage-side__stores">
+            <a href="https://www.rustore.ru/catalog/app/com.eatvioapp.app" target="_blank" rel="noopener noreferrer">
+                <img src="img/RuStore.svg" alt="RuStore">
+            </a>
+            <a href="https://apps.apple.com/ru/app/итвио/id6499423743" target="_blank" rel="noopener noreferrer">
+                <img src="img/AppStore.svg" alt="App Store">
+            </a>
+            <a href="https://appgallery.huawei.ru/app/C113238569" target="_blank" rel="noopener noreferrer">
+                <img src="img/AppGallery.svg" alt="AppGallery">
+            </a>
+            <a href="https://global.app.mi.com/details?lo=RU&la=ru&id=com.eatvioapp.app" target="_blank" rel="noopener noreferrer">
+                <img src="img/GetApps.svg" alt="GetApps">
+            </a>
+            <a href="https://eatvio.ru/apk/eatvio.apk" target="_blank" rel="noopener noreferrer">
+                <img src="img/apk_black.svg" alt="APK">
+            </a>
+        </div>
+    </div>
+</aside>
+
+                    </div>
+                </section>
+            </main>
+            <footer class="footer footer-guest">
+    <div class="footer-guest__container">
+        <span class="footer-guest__copy">Eatvio © 2026</span>
+        <nav class="footer-guest__links" aria-label="Документы">
+            <a href="" class="footer__link">Публичная оферта</a>
+            <a href="" class="footer__link">Политика конфиденциальности</a>
+            <a href="" class="footer__link">О компании</a>
+            <a href="vacancies.html" class="footer__link">Вакансии</a>
+            <a href="" class="footer__link">Полезное</a>
+            <a href="" class="footer__link">Русский</a>
+            <a href="" class="footer__link">English</a>
+        </nav>
+    </div>
+</footer>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="js/app.min.js"></script>
+    </body>
+</html>

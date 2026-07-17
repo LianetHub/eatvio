@@ -298,6 +298,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		flex-shrink: 0;
+		min-width: 0;
 	}
 
 	// .chat__contacts-progress
@@ -309,14 +311,15 @@
 			flex-direction: column;
 			align-items: flex-end;
 			margin-top: 0.5rem;
-			margin-right: -1rem;
+			max-width: 100%;
 
 			& li {
 				padding: 0.13rem 0.63rem;
 				font-size: 0.625rem;
-				border-radius: 0.5rem 0rem 0rem 0.5rem;
+				border-radius: 0.5rem;
 				background: #019a3e;
 				color: #fff;
+				white-space: nowrap;
 
 				&:not(:last-child) {
 					margin-bottom: 0.25rem;
