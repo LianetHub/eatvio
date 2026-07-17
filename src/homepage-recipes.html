@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Eatvio | Главная',
-    "stylesName": ["homepage", "announcement", "consultans"]
+    'title': 'Eatvio | Рецепты',
+    "stylesName": ["homepage", "dish", "consultans"]
     })
     <body>
         <div class="wrapper">
             @@include('html/_header-guest.html', {
-            "active": "feed"
+            "active": "recipes"
             })
             <main class="page">
                 @@include('html/_homepage-hero.html', {})
                 <section class="content homepage-feed" id="feed">
                     <div class="homepage-feed__container">
                         <div class="homepage-feed__main">
-                            @@include('html/homepage-blocks/_feed-content.html')
+                            @@include('html/homepage-blocks/_recipes-content.html')
                         </div>
                         @@include('html/_homepage-sidebar.html', {})
                     </div>

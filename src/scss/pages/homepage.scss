@@ -127,7 +127,7 @@
 
 		@media (min-width: $md3) {
 			flex: none;
-			flex-direction: row;
+			display: block;
 			gap: 0;
 			padding: rem(8) rem(12);
 			border-radius: 999px;
@@ -366,6 +366,25 @@
 		.content__header {
 			flex-wrap: wrap;
 			row-gap: 1rem;
+		}
+
+		.content__grid {
+			margin-top: rem(16);
+		}
+
+		.content__wrapper {
+			.consultant {
+				display: block;
+
+				@media (min-width: $md5) {
+					display: block;
+					grid-template-columns: none;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: rem(12);
+				}
+			}
 		}
 	}
 
