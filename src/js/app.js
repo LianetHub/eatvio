@@ -295,6 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 speed: 800,
                 slidesPerView: 1,
                 watchOverflow: true,
+                autoHeight: true,
                 navigation: {
                     nextEl: nextBtn,
                     prevEl: prevBtn,
