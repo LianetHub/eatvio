@@ -486,7 +486,127 @@
                             <div class="diary__info-current"> 10 день </div>
                             <time datetime="2023-08-03" class="diary__info-date"> 03-08-2023 </time>
                         </div>
-                    </div> <div class="diary__sleep">
+                    </div> <div class="diary__analytics" x-data="diaryAnalytics">
+    <button type="button" class="diary__analytics-toggle" @click="toggle()" :aria-expanded="open.toString()" aria-controls="diary-analytics-body">
+        <span class="diary__analytics-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 19V5M4 19h16" />
+                <path d="M7 15l4-5 3 3 5-7" />
+            </svg>
+        </span>
+        <span class="diary__analytics-title title">Аналитика</span>
+        <span class="diary__analytics-sub" x-text="open ? 'вес, замеры и питание' : 'нажмите, чтобы посмотреть прогресс'"></span>
+        <span class="diary__analytics-chev" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="m6 14 6-6 6 6" />
+            </svg>
+        </span>
+    </button>
+
+    <div class="diary__analytics-body" id="diary-analytics-body" x-show="open" x-cloak style="display: none;">
+        <div class="tabs__row diary__analytics-tabs" role="tablist" aria-label="Графики">
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'weight'" @click="setPanel('weight')">Вес</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'bmi'" @click="setPanel('bmi')">ИМТ</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'measure'" @click="setPanel('measure')">Замеры</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'daily'" @click="setPanel('daily')">КБЖУ по дням</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'intra'" @click="setPanel('intra')">В течение дня</button>
+        </div>
+
+        <div class="diary__analytics-panel" x-show="panel === 'weight'" x-cloak>
+            <div class="diary__analytics-head">
+                <span class="diary__analytics-num">91.0 <small>кг</small></span>
+                <span class="diary__analytics-delta">Снизили на 3 кг за 3 месяца</span>
+                <div class="diary__analytics-pills diary__analytics-pills--sm">
+                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
+                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.weight === item }" @click="periods.weight = item" x-text="item"></button>
+                    </template>
+                </div>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chWeight" role="img" aria-label="График веса"></canvas>
+            </div>
+        </div>
+
+        <div class="diary__analytics-panel" x-show="panel === 'bmi'" x-cloak>
+            <div class="diary__analytics-head">
+                <span class="diary__analytics-num">29.4 <small>ИМТ</small></span>
+                <span class="diary__analytics-delta">ИМТ ниже на 1.6 за 3 месяца · избыточный вес</span>
+                <div class="diary__analytics-pills diary__analytics-pills--sm">
+                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
+                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.bmi === item }" @click="periods.bmi = item" x-text="item"></button>
+                    </template>
+                </div>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chBmi" role="img" aria-label="График индекса массы тела"></canvas>
+            </div>
+            <p class="diary__analytics-hint">Зелёная зона — норма (18.5–25), жёлтая — избыточный вес, розовая — ожирение. Считаем при росте 176 см.</p>
+        </div>
+
+        <div class="diary__analytics-panel" x-show="panel === 'measure'" x-cloak>
+            <div class="diary__analytics-head">
+                <span class="diary__analytics-num">95 <small>см талия</small></span>
+                <span class="diary__analytics-delta">Талия меньше на 9 см за 3 месяца</span>
+                <div class="diary__analytics-pills diary__analytics-pills--sm">
+                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
+                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.measure === item }" @click="periods.measure = item" x-text="item"></button>
+                    </template>
+                </div>
+            </div>
+            <div class="diary__analytics-series">
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.measure[0].toString()" @click="toggleSeries('measure', 0)"><span class="diary__analytics-dot"></span>Талия</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#9b51e0" :aria-pressed="series.measure[1].toString()" @click="toggleSeries('measure', 1)"><span class="diary__analytics-dot"></span>Грудь</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.measure[2].toString()" @click="toggleSeries('measure', 2)"><span class="diary__analytics-dot"></span>Бёдра</button>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chMeasure" role="img" aria-label="График замеров тела"></canvas>
+            </div>
+        </div>
+
+        <div class="diary__analytics-panel" x-show="panel === 'daily'" x-cloak>
+            <div class="diary__analytics-head">
+                <span class="diary__analytics-num">1 920 <small>ккал в среднем</small></span>
+                <span class="diary__analytics-delta">На 18% меньше, чем в начале периода</span>
+                <div class="diary__analytics-pills diary__analytics-pills--sm">
+                    <template x-for="item in ['1Н', '2Н', '1М', '3М', 'Всё время']" :key="item">
+                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.daily === item }" @click="periods.daily = item" x-text="item"></button>
+                    </template>
+                </div>
+            </div>
+            <div class="diary__analytics-series">
+                <button type="button" class="diary__analytics-schip" style="--dot:#323f4b" :aria-pressed="series.daily[0].toString()" @click="toggleSeries('daily', 0)"><span class="diary__analytics-dot"></span>Калории</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.daily[1].toString()" @click="toggleSeries('daily', 1)"><span class="diary__analytics-dot"></span>Белки</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.daily[2].toString()" @click="toggleSeries('daily', 2)"><span class="diary__analytics-dot"></span>Жиры</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.daily[3].toString()" @click="toggleSeries('daily', 3)"><span class="diary__analytics-dot"></span>Углеводы</button>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chDaily" role="img" aria-label="График потребления КБЖУ по дням"></canvas>
+            </div>
+        </div>
+
+        <div class="diary__analytics-panel" x-show="panel === 'intra'" x-cloak>
+            <p class="diary__analytics-hint diary__analytics-hint--top">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
+            <div class="diary__analytics-series">
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.intra[0].toString()" @click="toggleSeries('intra', 0)"><span class="diary__analytics-dot"></span>Белки</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.intra[1].toString()" @click="toggleSeries('intra', 1)"><span class="diary__analytics-dot"></span>Жиры</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.intra[2].toString()" @click="toggleSeries('intra', 2)"><span class="diary__analytics-dot"></span>Углеводы</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#019a3e" :aria-pressed="series.intra[3].toString()" @click="toggleSeries('intra', 3)"><span class="diary__analytics-dot"></span>Сытость</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#eb555c" :aria-pressed="series.intra[4].toString()" @click="toggleSeries('intra', 4)"><span class="diary__analytics-dot"></span>Настроение</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#7b8794" :aria-pressed="showSleep.toString()" @click="toggleSleep()"><span class="diary__analytics-dot"></span>Сон и подъём</button>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chIntra" role="img" aria-label="График потребления КБЖУ по времени суток"></canvas>
+            </div>
+            <div class="diary__analytics-legend">
+                <span><span class="diary__analytics-lk diary__analytics-lk--sun"></span>Подъём в 06:30</span>
+                <span><span class="diary__analytics-lk diary__analytics-lk--moon"></span>Отход ко сну в 22:30</span>
+                <span>Затемнение — время сна</span>
+            </div>
+        </div>
+
+        <button type="button" class="diary__analytics-fab icon-plus" aria-label="Добавить запись" x-show="panel === 'weight' || panel === 'measure'" x-cloak></button>
+    </div>
+</div> <div class="diary__sleep">
     <div class="diary__title title pc-only">
         Подъём \ уход ко сну
     </div>

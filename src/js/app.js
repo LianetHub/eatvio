@@ -1,6 +1,7 @@
 "use strict";
 
 import * as devFunctions from "./modules/functions.js";
+import "./modules/diaryAnalytics.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     devFunctions.popup();
