@@ -97,7 +97,29 @@
         </div>
 
         <div class="diary__analytics-panel" x-show="panel === 'intra'" x-cloak>
-            <p class="diary__analytics-hint diary__analytics-hint--top">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
+            <div class="diary__analytics-head diary__analytics-head--date">
+                <p class="diary__analytics-hint">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
+                <div class="diary__analytics-datenav" role="group" aria-label="Дата графика">
+                    <button type="button" class="diary__analytics-datenav-btn icon-prev" @click="shiftIntraDate(-1)" aria-label="Предыдущий день"></button>
+                    <div class="diary__analytics-datenav-picker">
+                        <input
+                            type="text"
+                            class="date diary__analytics-datenav-input"
+                            x-ref="intraDateInput"
+                            data-datepicker-manual
+                            readonly
+                            autocomplete="off"
+                            tabindex="-1"
+                            aria-hidden="true"
+                        >
+                        <button type="button" class="diary__analytics-datenav-current" @click="openIntraCalendar()" aria-label="Выбрать дату в календаре">
+                            <span class="diary__analytics-datenav-ico icon-calendar" aria-hidden="true"></span>
+                            <time class="diary__analytics-datenav-label" :datetime="intraDateIso" x-text="intraDateLabel"></time>
+                        </button>
+                    </div>
+                    <button type="button" class="diary__analytics-datenav-btn icon-next" @click="shiftIntraDate(1)" :disabled="isIntraToday" aria-label="Следующий день"></button>
+                </div>
+            </div>
             <div class="diary__analytics-series">
                 <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.intra[0].toString()" @click="toggleSeries('intra', 0)"><span class="diary__analytics-dot"></span>Белки</button>
                 <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.intra[1].toString()" @click="toggleSeries('intra', 1)"><span class="diary__analytics-dot"></span>Жиры</button>

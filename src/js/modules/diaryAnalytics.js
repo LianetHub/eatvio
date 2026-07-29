@@ -1,3 +1,5 @@
+import { createDatepicker } from './datepicker.js';
+
 const CHART_CDN = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js';
 
 const COLORS = {
@@ -486,51 +488,144 @@ export const diaryAnalytics = () => {
 };
 
 document.addEventListener('alpine:init', () => {
-	Alpine.data('diaryAnalytics', () => ({
-		open: false,
-		panel: 'weight',
-		showSleep: true,
-		periods: {
-			weight: '3М',
-			bmi: '3М',
-			measure: '3М',
-			daily: '2Н',
-		},
-		series: {
-			measure: [true, true, true],
-			daily: [true, true, true, true],
-			intra: [true, true, true, true, true],
-		},
+	Alpine.data('diaryAnalytics', () => {
+		const today = startOfDay(new Date());
+		const monthNames = [
+			'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+			'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря',
+		];
 
-		async toggle() {
-			this.open = !this.open;
-			if (this.open) {
+		return {
+			open: false,
+			panel: 'weight',
+			showSleep: true,
+			intraDate: today,
+			_intraPicker: null,
+			_syncingIntraPicker: false,
+			periods: {
+				weight: '3М',
+				bmi: '3М',
+				measure: '3М',
+				daily: '2Н',
+			},
+			series: {
+				measure: [true, true, true],
+				daily: [true, true, true, true],
+				intra: [true, true, true, true, true],
+			},
+
+			get intraDateIso() {
+				return toIsoDate(this.intraDate);
+			},
+
+			get isIntraToday() {
+				return toIsoDate(this.intraDate) === toIsoDate(today);
+			},
+
+			get intraDateLabel() {
+				if (this.isIntraToday) return 'Сегодня';
+				const d = this.intraDate;
+				const yesterday = new Date(today);
+				yesterday.setDate(yesterday.getDate() - 1);
+				if (toIsoDate(d) === toIsoDate(yesterday)) return 'Вчера';
+				const label = `${d.getDate()} ${monthNames[d.getMonth()]}`;
+				return d.getFullYear() === today.getFullYear()
+					? label
+					: `${label} ${d.getFullYear()}`;
+			},
+
+			ensureIntraPicker() {
+				if (this._intraPicker || !this.$refs.intraDateInput) return;
+				const el = this.$refs.intraDateInput;
+				this._intraPicker = createDatepicker(el, {
+					maxDate: today,
+					autohide: true,
+				});
+				this._intraPicker.setDate(this.intraDate);
+				el.addEventListener('changeDate', (e) => {
+					if (this._syncingIntraPicker) return;
+					const date = e.detail?.date;
+					if (!date) return;
+					const clamped = startOfDay(date);
+					if (clamped.getTime() > today.getTime()) return;
+					this.intraDate = clamped;
+				});
+			},
+
+			syncIntraPicker() {
+				if (!this._intraPicker) return;
+				this._syncingIntraPicker = true;
+				this._intraPicker.setDate(this.intraDate);
+				this._syncingIntraPicker = false;
+			},
+
+			openIntraCalendar() {
+				this.ensureIntraPicker();
+				if (!this._intraPicker) return;
+				this.syncIntraPicker();
+				this._intraPicker.show();
+			},
+
+			shiftIntraDate(delta) {
+				const next = new Date(this.intraDate);
+				next.setDate(next.getDate() + delta);
+				const clamped = startOfDay(next);
+				if (clamped.getTime() > today.getTime()) return;
+				this.intraDate = clamped;
+				this.syncIntraPicker();
+			},
+
+			destroy() {
+				if (this._intraPicker) {
+					this._intraPicker.destroy();
+					this._intraPicker = null;
+				}
+			},
+
+			async toggle() {
+				this.open = !this.open;
+				if (this.open) {
+					await this.$nextTick();
+					const api = await ensureCharts();
+					api.getChart(this.panel).resize();
+				}
+			},
+
+			async setPanel(name) {
+				this.panel = name;
 				await this.$nextTick();
 				const api = await ensureCharts();
-				api.getChart(this.panel).resize();
-			}
-		},
+				api.getChart(name).resize();
+				if (name === 'intra') this.ensureIntraPicker();
+			},
 
-		async setPanel(name) {
-			this.panel = name;
-			await this.$nextTick();
-			const api = await ensureCharts();
-			api.getChart(name).resize();
-		},
+			async toggleSeries(chartName, idx) {
+				this.series[chartName][idx] = !this.series[chartName][idx];
+				const api = await ensureCharts();
+				const ch = api.getChart(chartName);
+				ch.setDatasetVisibility(idx, this.series[chartName][idx]);
+				ch.update();
+			},
 
-		async toggleSeries(chartName, idx) {
-			this.series[chartName][idx] = !this.series[chartName][idx];
-			const api = await ensureCharts();
-			const ch = api.getChart(chartName);
-			ch.setDatasetVisibility(idx, this.series[chartName][idx]);
-			ch.update();
-		},
-
-		async toggleSleep() {
-			this.showSleep = !this.showSleep;
-			const api = await ensureCharts();
-			api.setShowSleep(this.showSleep);
-			if (api.charts.intra) api.charts.intra.update();
-		},
-	}));
+			async toggleSleep() {
+				this.showSleep = !this.showSleep;
+				const api = await ensureCharts();
+				api.setShowSleep(this.showSleep);
+				if (api.charts.intra) api.charts.intra.update();
+			},
+		};
+	});
 });
+
+function startOfDay(date) {
+	const d = new Date(date);
+	d.setHours(0, 0, 0, 0);
+	return d;
+}
+
+function toIsoDate(date) {
+	const y = date.getFullYear();
+	const m = String(date.getMonth() + 1).padStart(2, '0');
+	const d = String(date.getDate()).padStart(2, '0');
+	return `${y}-${m}-${d}`;
+}

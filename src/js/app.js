@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.slide();
     devFunctions.spollers();
     devFunctions.tabs();
+    devFunctions.datepicker();
 
 
     document.addEventListener('click', (e) => {

@@ -10,6 +10,7 @@ export { slide } from "./slideToggle.js";
 export { spollers } from './spoller.js';
 export { tabs } from './tabs.js';
 export { diaryAnalytics } from './diaryAnalytics.js';
+export { datepicker, createDatepicker } from './datepicker.js';
 // export { inputFiles } from './files.js';
 
 

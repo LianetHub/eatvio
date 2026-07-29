@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,25 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/diary.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -472,21 +467,31 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="diary">
-                <div class="diary__container container-sm">
-                    <div class="diary__header">
-                        <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
-                        <div class="diary__title pc-only">
-                            <div class="diary__title-caption"> Заполнение дневника питания </div>
-                            <div class="diary__title-name"> План «Неделя сопровождения» 6 день из 7 </div>
-                            <a href="" class="diary__title-btn">Подробнее о заказе</a>
+</header>
+            <main class="page">
+                <section class="diary">
+                    <div class="diary__container container-sm">
+                        <div class="diary__header">
+                            <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
+                            <div class="diary__title pc-only">
+                                <div class="diary__title-caption">
+                                    Заполнение дневника питания
+                                </div>
+                                <div class="diary__title-name">
+                                    План «Неделя сопровождения» 6 день из 7
+                                </div>
+                                <a href="" class="diary__title-btn">Подробнее о заказе</a>
+                            </div>
+                            <div class="diary__info">
+                                <div class="diary__info-current">
+                                    10 день
+                                </div>
+                                <time datetime="2023-08-03" class="diary__info-date">
+                                    03-08-2023
+                                </time>
+                            </div>
                         </div>
-                        <div class="diary__info">
-                            <div class="diary__info-current"> 10 день </div>
-                            <time datetime="2023-08-03" class="diary__info-date"> 03-08-2023 </time>
-                        </div>
-                    </div> <div class="diary__analytics" x-data="diaryAnalytics">
+                        <div class="diary__analytics" x-data="diaryAnalytics">
     <button type="button" class="diary__analytics-toggle" @click="toggle()" :aria-expanded="open.toString()" aria-controls="diary-analytics-body">
         <span class="diary__analytics-ico">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -585,7 +590,29 @@
         </div>
 
         <div class="diary__analytics-panel" x-show="panel === 'intra'" x-cloak>
-            <p class="diary__analytics-hint diary__analytics-hint--top">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
+            <div class="diary__analytics-head diary__analytics-head--date">
+                <p class="diary__analytics-hint">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
+                <div class="diary__analytics-datenav" role="group" aria-label="Дата графика">
+                    <button type="button" class="diary__analytics-datenav-btn icon-prev" @click="shiftIntraDate(-1)" aria-label="Предыдущий день"></button>
+                    <div class="diary__analytics-datenav-picker">
+                        <input
+                            type="text"
+                            class="date diary__analytics-datenav-input"
+                            x-ref="intraDateInput"
+                            data-datepicker-manual
+                            readonly
+                            autocomplete="off"
+                            tabindex="-1"
+                            aria-hidden="true"
+                        >
+                        <button type="button" class="diary__analytics-datenav-current" @click="openIntraCalendar()" aria-label="Выбрать дату в календаре">
+                            <span class="diary__analytics-datenav-ico icon-calendar" aria-hidden="true"></span>
+                            <time class="diary__analytics-datenav-label" :datetime="intraDateIso" x-text="intraDateLabel"></time>
+                        </button>
+                    </div>
+                    <button type="button" class="diary__analytics-datenav-btn icon-next" @click="shiftIntraDate(1)" :disabled="isIntraToday" aria-label="Следующий день"></button>
+                </div>
+            </div>
             <div class="diary__analytics-series">
                 <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.intra[0].toString()" @click="toggleSeries('intra', 0)"><span class="diary__analytics-dot"></span>Белки</button>
                 <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.intra[1].toString()" @click="toggleSeries('intra', 1)"><span class="diary__analytics-dot"></span>Жиры</button>
@@ -606,7 +633,8 @@
 
         <button type="button" class="diary__analytics-fab icon-plus" aria-label="Добавить запись" x-show="panel === 'weight' || panel === 'measure'" x-cloak></button>
     </div>
-</div> <div class="diary__sleep">
+</div>
+                        <div class="diary__sleep">
     <div class="diary__title title pc-only">
         Подъём \ уход ко сну
     </div>
@@ -824,7 +852,9 @@
             </div>
         </div>
     </div>
-</div> <div class="diary__main"> <div class="diary__main-header">
+</div>
+                        <div class="diary__main">
+                            <div class="diary__main-header">
     <div class="diary__main-column">
         <div class="label">
             Прием пищи
@@ -1003,7 +1033,9 @@
             </a>
         </div>
     </div>
-</div> <div class="diary__product"> <div class="diary__main-products">
+</div>
+                            <div class="diary__product">
+                                <div class="diary__main-products">
     <div class="diary__product-column">
         <ul class="diary__product-list">
             <li class="diary__product-item">
@@ -1145,7 +1177,9 @@
             </div>
         </div>
     </div>
-</div> <div class="diary__product-side"> <div class="diary__product-slider swiper">
+</div>
+                                <div class="diary__product-side">
+                                    <div class="diary__product-slider swiper">
     <button type="button" class="diary__product-remove icon-close"></button>
     <div class="swiper-wrapper">
         <div class="diary__product-image swiper-slide">
@@ -1188,8 +1222,10 @@
             <button type="button" class="diary__product-add icon-plus"></button>
         
     </div>
-</div> </div>
-                        </div> <div class="diary__main-satiety">
+</div>
+                                </div>
+                            </div>
+                            <div class="diary__main-satiety">
     <div class="diary__main-title">
         Ваша сытость после приёма пищи 1
     </div>
@@ -1266,7 +1302,9 @@
             <img src="img/emoji-3.svg" alt="emoji">
         </div>
     </div>
-</div> </div> <div class="diary__norm">
+</div>
+                        </div>
+                        <div class="diary__norm">
     <div class="diary__norm-title title">
         Ваш КБЖУ <span>от дневной суточной нормы</span>
         <span class="diary__info-icon" data-tooltip="График отображает сколько калорий вам нужно ежедневно для поддержания веса, согласно формуле Харриса-Бенедикта. Изменить коэффициент физической нагрузки можно в настройках.">?</span>
@@ -1367,7 +1405,8 @@
             </li>
         </ul>
     </div>
-</div> <div class="diary__extras">
+</div>
+                        <div class="diary__extras">
     <div class="diary__extras-caption title">
         Дополнительная информация для консультанта
     </div>
@@ -1375,17 +1414,21 @@
     
         <textarea name="info" class="textarea" placeholder="Введите дополнительную информация для консультанта..."></textarea>
     
-</div> <button type="button" class="diary__btn l-btn l-btn-primary l-btn-fullwidth">Закончить день</button>
-                </div>
-            </section>
-        </main> <footer class="footer">
+</div>
+                        <button type="button" class="diary__btn l-btn l-btn-primary l-btn-fullwidth">Закончить день</button>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> 
+</footer>
+        </div>
+        
 
 
 
@@ -1455,10 +1498,10 @@
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>
