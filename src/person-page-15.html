@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Страница пользователя',
-    "stylesName": ["person", "announcement", "plans"]
+    "stylesName": ["person", "announcement", "plans", "diary"]
     })
     <body>
         <div class="wrapper">
@@ -221,6 +221,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @@include('./html/diary-blocks/_analytics-block.html')
                         </div>
                     </div>
                 </section>

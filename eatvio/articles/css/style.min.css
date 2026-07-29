@@ -5588,16 +5588,18 @@ body.dark-theme {
     background: #d1d7e1;
   }
 }
-.content__add-btn::before {
+.content__add-btn.icon-plus::before {
   width: 1.125rem;
   height: 1.125rem;
   font-size: 0.5rem;
   font-weight: 700;
+  line-height: 1;
   border: 0.0625rem solid currentColor;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .content__announcement:not(:last-child) {
   margin: 0em 0em 2em 0rem;

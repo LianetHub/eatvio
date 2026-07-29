@@ -867,16 +867,20 @@ body {
 			}
 		}
 
-		&::before {
+		// .icon-plus повышаем специфичность: иначе [class^=icon-]:before { display: block }
+		// из повторных импортов icons перебивает flex-центрирование глифа
+		&.icon-plus::before {
 			width: rem(18);
 			height: rem(18);
 			font-size: 0.5rem;
 			font-weight: 700;
+			line-height: 1;
 			border: rem(1) solid currentColor;
 			border-radius: 50%;
-			display: flex;
+			display: inline-flex;
 			justify-content: center;
 			align-items: center;
+			flex-shrink: 0;
 		}
 	}
 

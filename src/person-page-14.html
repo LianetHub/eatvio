@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Страница пользователя',
-    "stylesName": ["person", "announcement"]
+    "stylesName": ["person", "announcement", "diary"]
     })
     <body>
         <div class="wrapper">
@@ -110,45 +110,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="person__chart">
-                                <div class="person__chart-caption">
-                                    <div class="person__chart-btns">
-                                        <button class="person__chart-btn l-btn l-btn-sm active">Вес</button>
-                                        <button class="person__chart-btn l-btn l-btn-sm">Замеры</button>
-                                        <button class="person__chart-btn l-btn l-btn-sm">ИМТ</button>
-                                    </div>
-                                    <div class="person__chart-filters">
-                                        <label class="person__chart-filter">
-                                            <input type="radio" name="period" checked value="1" class="person__chart-filter-input hidden" hidden>
-                                            <span class="person__chart-filter-btn">1м</span>
-                                        </label>
-                                        <label class="person__chart-filter">
-                                            <input type="radio" name="period" value="2" class="person__chart-filter-input hidden" hidden>
-                                            <span class="person__chart-filter-btn">3м</span>
-                                        </label>
-                                        <label class="person__chart-filter">
-                                            <input type="radio" name="period" value="3" class="person__chart-filter-input hidden" hidden>
-                                            <span class="person__chart-filter-btn">6м</span>
-                                        </label>
-                                        <label class="person__chart-filter">
-                                            <input type="radio" name="period" value="4" class="person__chart-filter-input hidden" hidden>
-                                            <span class="person__chart-filter-btn">1г</span>
-                                        </label>
-                                        <label class="person__chart-filter">
-                                            <input type="radio" name="period" value="5" class="person__chart-filter-input hidden" hidden>
-                                            <span class="person__chart-filter-btn">ВСЁ ВРЕМЯ</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="person__chart-current up">
-                                    89.0 кг
-                                    <span class="icon-triangle"></span>
-                                </div>
-                                <div class="person__chart-body">
-                                    <img src="@img/chart-person-1.svg" alt="">
-                                    <button type="button" class="person__chart-add icon-plus"></button>
-                                </div>
-                            </div>
+                            @@include('./html/diary-blocks/_analytics-block.html')
                         </div>
                     </div>
                 </section>
