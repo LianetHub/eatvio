@@ -16716,9 +16716,12 @@ body.dark-theme {
     font-size: 1.25rem;
   }
 }
-.article__result-req span {
+.article__result-req > span:last-child {
   color: #666;
   font-size: 1.25rem;
+}
+.article__result-req .required {
+  color: #ff3b3b;
 }
 .article__result-more {
   margin-top: 1.62rem;

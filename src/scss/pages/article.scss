@@ -693,9 +693,12 @@
 		display: flex;
 		align-items: center;
 		gap: rem(12);
-		& span {
+		& > span:last-child {
 			color: #666;
 			font-size: 1.25rem;
+		}
+		.required {
+			color: #ff3b3b;
 		}
 	}
 	// .article__result-more
