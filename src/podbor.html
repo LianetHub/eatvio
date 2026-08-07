@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Подбор плана',
+    "stylesName": ["podbor", "plans", "consults", "person", "chat"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "consults"
+            })
+            <main class="page" data-podbor="logged" x-data="podbor">
+                <section class="content">
+                    @@include('html/podbor-blocks/_content.html', {
+                    "auth": "logged"
+                    })
+                </section>
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/_js.html', {})
+    </body>
+</html>

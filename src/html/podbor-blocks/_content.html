@@ -1,0 +1,322 @@
+<div class="content__container">
+    @@include('./_data.html')
+
+    <!-- Entry -->
+    <section x-show="screen === 'entry'" x-cloak>
+        <div class="content__header">
+            <div class="content__header-title title">Популярные планы</div>
+            <form action="#" class="content__header-search search">
+                <div class="search__box">
+                    <button type="button" class="search__btn icon-search"></button>
+                    <input type="text" name="search" class="search__input search__input-white" placeholder="Найти план">
+                </div>
+                <button type="submit" class="search__send l-btn l-btn-primary l-btn-sm">Найти план</button>
+            </form>
+        </div>
+        <div class="content__tabs">
+            <div class="content__tabs-wrapper">
+                <a href="" class="content__filter">Все</a>
+                <a href="" class="content__filter">Рецепты</a>
+                <a href="" class="content__filter">Диеты</a>
+                <a href="" class="content__filter active">Планы питания</a>
+                <a href="" class="content__filter">Консультанты</a>
+            </div>
+        </div>
+
+        <div class="content__section podbor-entry-promo">
+            <div class="content__section-image">
+                <img src="@img/RK/01.svg" alt="">
+            </div>
+            <div class="content__section-body">
+                <div class="content__section-title title title-bold">Не знаете, какой план выбрать?</div>
+                @@if(auth==="logged") {
+                <p class="content__section-desc">Ответьте на несколько вопросов — подберём консультантов и планы под вашу цель, бюджет и режим. В выдаче приоритет у тех, кто сейчас онлайн.</p>
+                }
+                @@if(auth==="guest") {
+                <p class="content__section-desc">Ответьте на несколько вопросов без регистрации — подберём планы под цель, бюджет и режим. Чтобы написать консультанту или оформить план, войдите в аккаунт.</p>
+                }
+                <button type="button" class="content__section-btn l-btn l-btn-primary l-btn-sm" @click="openWizard()">Подобрать план</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wizard -->
+    <section class="settings" x-show="screen === 'wizard'" x-cloak>
+        <div class="settings__container container-sm">
+            <div class="settings__header">
+                <button type="button" class="settings__back icon-arrow-short-left" @click="back()">
+                    <span>Назад</span>
+                </button>
+                <div class="consults__progress">
+                    <div class="consults__progress-caption" x-text="`Шаг ${step} из 3`"></div>
+                    <div class="consults__progress-items consults__progress-items-sm">
+                        <span class="consults__progress-item" :class="{ active: step >= 1, current: step === 1 }"></span>
+                        <span class="consults__progress-item" :class="{ active: step >= 2, current: step === 2 }"></span>
+                        <span class="consults__progress-item" :class="{ active: step >= 3, current: step === 3 }"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content__section podbor-wizard-body">
+                <div x-show="step === 1">
+                    <div class="content__field-title title title-lg">Что для вас сейчас главное?</div>
+                    <p class="content__field-subtitle">Выберите одну цель — от неё зависит, какие планы вам покажем.</p>
+                    <div class="podbor-options">
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="loss" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Снизить вес</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="gain" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Набрать вес</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="keep" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Удержать результат</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="habits" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Перестать срываться и переедать</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="wellbeing" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Больше энергии, лучше сон и пищеварение</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="start" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Разобраться в питании</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-goal" value="special" class="option__input hidden" hidden x-model="answers.goal">
+                            <span class="option__text">Питание при особых условиях</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div x-show="step === 2" x-cloak>
+                    <div class="content__field-title title title-lg">Как удобно работать?</div>
+                    <p class="content__field-subtitle">Всё можно пропустить — это повлияет только на порядок выдачи.</p>
+
+                    <div class="content__field-title title">Длительность плана</div>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-dur" value="7" class="option__input hidden" hidden x-model="answers.dur">
+                            <span class="option__btn">7 дней</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-dur" value="14" class="option__input hidden" hidden x-model="answers.dur">
+                            <span class="option__btn">14 дней</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-dur" value="21" class="option__input hidden" hidden x-model="answers.dur">
+                            <span class="option__btn">21 день</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-dur" value="any" class="option__input hidden" hidden x-model="answers.dur">
+                            <span class="option__btn">Не важно</span>
+                        </label>
+                    </div>
+
+                    <div class="content__field-title title">Как часто нужна связь</div>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-contact" value="daily" class="option__input hidden" hidden x-model="answers.contact">
+                            <span class="option__btn">Каждый день по расписанию</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-contact" value="24_7" class="option__input hidden" hidden x-model="answers.contact">
+                            <span class="option__btn">В мессенджере 24/7</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-contact" value="any" class="option__input hidden" hidden x-model="answers.contact">
+                            <span class="option__btn">Не важно</span>
+                        </label>
+                    </div>
+
+                    <div class="content__field-title title">Нужна персональная диета</div>
+                    <p class="content__field-subtitle">рацион, составленный лично для вас</p>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-diet" value="yes" class="option__input hidden" hidden x-model="answers.diet">
+                            <span class="option__btn">Да</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-diet" value="no" class="option__input hidden" hidden x-model="answers.diet">
+                            <span class="option__btn">Нет</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-diet" value="any" class="option__input hidden" hidden x-model="answers.diet">
+                            <span class="option__btn">Не знаю</span>
+                        </label>
+                    </div>
+
+                    <div class="content__field-title title">Бюджет</div>
+                    <div class="podbor-range" :style="`--pct: ${budgetPct}%`">
+                        <div class="podbor-range__control">
+                            <input
+                                type="range"
+                                class="podbor-range__input"
+                                :min="budgetMin"
+                                :max="budgetMax"
+                                :step="budgetStep"
+                                x-model.number="answers.budget"
+                                aria-label="Бюджет"
+                            >
+                        </div>
+                        <div class="podbor-range__value">
+                            <small>до</small>
+                            <span x-text="(+answers.budget).toLocaleString('ru-RU')"></span>
+                            <small>₽</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="step === 3" x-cloak>
+                    <div class="content__field-title title title-lg">Пожелания к консультанту</div>
+                    <p class="content__field-subtitle">Необязательный шаг — можно сразу нажать «Подобрать».</p>
+
+                    <div class="content__field-title title">Медицинское образование</div>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-med" value="yes" class="option__input hidden" hidden x-model="answers.med">
+                            <span class="option__btn">Обязательно</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-med" value="any" class="option__input hidden" hidden x-model="answers.med">
+                            <span class="option__btn">Не важно</span>
+                        </label>
+                    </div>
+
+                    <div class="content__field-title title">Пол консультанта</div>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-gender" value="f" class="option__input hidden" hidden x-model="answers.gender">
+                            <span class="option__btn">Женщина</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-gender" value="m" class="option__input hidden" hidden x-model="answers.gender">
+                            <span class="option__btn">Мужчина</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-gender" value="any" class="option__input hidden" hidden x-model="answers.gender">
+                            <span class="option__btn">Не важно</span>
+                        </label>
+                    </div>
+
+                    <div class="content__field-title title">Опыт на площадке</div>
+                    <div class="podbor-options podbor-options--row">
+                        <label class="option">
+                            <input type="radio" name="podbor-exp" value="6m" class="option__input hidden" hidden x-model="answers.exp">
+                            <span class="option__btn">От полугода</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="podbor-exp" value="any" class="option__input hidden" hidden x-model="answers.exp">
+                            <span class="option__btn">Не важно</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="l-btn l-btn-primary l-btn-fullwidth" @click="next(false)" x-text="step === 3 ? 'Подобрать' : 'Далее'"></button>
+                <button type="button" class="content__field-link" x-show="step > 1" x-cloak @click="next(true)">Пропустить шаг</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section x-show="screen === 'results'" x-cloak>
+        <div class="settings__header">
+            <div class="content__field-header">
+                <div class="content__field-title title title-lg">Подобрали для вас</div>
+                <div class="content__tags">
+                    <template x-for="tag in paramTags" :key="tag">
+                        <span class="person__main-position" x-text="tag"></span>
+                    </template>
+                </div>
+            </div>
+            <div class="settings__actions">
+                <button type="button" class="l-btn l-btn-secondary-outline l-btn-sm" @click="editParams()">Изменить параметры</button>
+            </div>
+        </div>
+
+        <div class="chat__banner podbor-notice" x-show="relaxed.length" x-cloak>
+            <div class="chat__banner-caption">
+                По вашим условиям подходящих планов оказалось мало, поэтому мы смягчили:
+                <strong x-text="relaxed.join(', ')"></strong>. Показываем ближайшие варианты.
+            </div>
+        </div>
+
+        <div class="content__grid">
+            <template x-for="(item, i) in visibleItems" :key="item.p.id">
+                <article class="plan">
+                    <div class="plan__image">
+                        <img :src="item.p.cover" class="cover-image" alt="">
+                        <div class="plan__image-label" x-text="`${item.p.days} дней`"></div>
+                    </div>
+                    <div class="plan__body">
+                        <div class="content__tags" x-show="item.slot === 'newcomer'">
+                            <span class="person__main-position">Новый специалист</span>
+                        </div>
+                        <div class="plan__person">
+                            <div class="plan__thumb">
+                                <img x-show="consultant(item.p).avatar" :src="consultant(item.p).avatar" alt="">
+                                <span class="plan__thumb-initials" x-show="!consultant(item.p).avatar" x-text="consultant(item.p).initials || '?'"></span>
+                            </div>
+                            <div class="plan__person-info">
+                                <div class="plan__person-main">
+                                    <div class="plan__person-name" x-text="consultant(item.p).name"></div>
+                                    <div class="person__status" :class="{ online: consultant(item.p).online === 'online' }" x-text="onlineLabel(consultant(item.p).online)"></div>
+                                </div>
+                                <div class="diet__rate-value" x-show="consultant(item.p).rating > 0" x-text="`${consultant(item.p).pos}-й в рейтинге`"></div>
+                                <div class="person__main-benefit icon-check reverse" x-show="consultant(item.p).med">Медицинское образование</div>
+                            </div>
+                        </div>
+                        <div class="plan__name" x-text="item.p.title"></div>
+                        <p class="plan__desc" x-text="item.p.desc"></p>
+                        <ul class="plan__list">
+                            <template x-for="reason in whyFor(item).slice(0, 3)" :key="reason">
+                                <li x-text="reason"></li>
+                            </template>
+                        </ul>
+                        <div class="plan__footer">
+                            <div class="plan__footer-price" x-text="`${item.p.price.toLocaleString('ru-RU')} ₽`"></div>
+                        </div>
+                        <div class="plan__bottom plan__bottom-visible">
+                            @@if(auth==="guest") {
+                            <a href="#sign-in" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary-outline">Написать</a>
+                            <a href="#sign-in" data-modal class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Подробнее</a>
+                            }
+                            @@if(auth==="logged") {
+                            <a href="chat.html" class="plan__bottom-btn l-btn l-btn-sm l-btn-secondary-outline">Написать</a>
+                            <a href="plan.html" class="plan__bottom-btn l-btn l-btn-sm l-btn-primary">Подробнее</a>
+                            }
+                        </div>
+                    </div>
+                    @@if(auth==="logged") {
+                    <div class="settings__hint" x-show="debug" x-text="`score ${item.s.total} · R ${item.s.R} · online ${item.s.Online} · resp ${item.s.Resp} · quality ${item.s.Quality} · goal ${item.s.Goal} · price ${item.s.Price} · ${item.slot}`"></div>
+                    }
+                </article>
+            </template>
+        </div>
+
+        <div class="content__section podbor-results-more" x-show="shown < queue.length" x-cloak>
+            <div class="content__section-body">
+                <button type="button" class="l-btn l-btn-primary" @click="showMore()">Подобрать ещё</button>
+                <p class="settings__hint" x-text="`Показано ${shown} из ${queue.length}`"></p>
+            </div>
+        </div>
+
+        <div class="content__section podbor-results-end" x-show="queue.length && shown >= queue.length" x-cloak>
+            <div class="content__section-body">
+                <div class="content__section-title title title-bold">Это все подходящие предложения</div>
+                <button type="button" class="content__section-btn l-btn l-btn-secondary-outline l-btn-sm" @click="editParams()">Изменить параметры</button>
+            </div>
+        </div>
+
+        @@if(auth==="logged") {
+        <label class="checkbox checkbox-sm" style="display: flex; justify-content: center; margin-top: 1.5rem;">
+            <input type="checkbox" class="checkbox__input hidden" hidden x-model="debug">
+            <span class="checkbox__content">показать скоринг (только для администратора)</span>
+        </label>
+        }
+    </section>
+</div>

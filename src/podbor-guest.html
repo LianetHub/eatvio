@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Подбор плана',
+    "stylesName": ["podbor", "plans", "consults", "person", "chat", "homepage"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-guest.html', {
+            "active": "plans"
+            })
+            <main class="page" data-podbor="guest" x-data="podbor">
+                <section class="content">
+                    @@include('html/podbor-blocks/_content.html', {
+                    "auth": "guest"
+                    })
+                </section>
+            </main>
+            @@include('html/_footer-guest.html', {})
+        </div>
+        @@include('html/_modal.html', {
+        "modal": "sign-in"
+        })
+        <script>
+            var signInPopup = document.getElementById('sign-in');
+            if (signInPopup) signInPopup.classList.remove('open');
+        </script>
+        @@include('html/_js.html', {})
+    </body>
+</html>

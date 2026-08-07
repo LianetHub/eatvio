@@ -2,6 +2,7 @@
 
 import * as devFunctions from "./modules/functions.js";
 import "./modules/diaryAnalytics.js";
+import "./modules/podbor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     devFunctions.popup();

@@ -244,6 +244,7 @@ body {
 	&__grid {
 		display: grid;
 		gap: 1rem;
+		margin-top: rem(24);
 
 		@media (min-width: $md5) {
 			grid-template-columns: repeat(2, 1fr);
