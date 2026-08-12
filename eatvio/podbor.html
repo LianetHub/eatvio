@@ -476,7 +476,7 @@
             </div>
         </div>
     </div>
-</header> <main class="page" data-podbor="logged" x-data="podbor">
+</header> <main class="page podbor-page" data-podbor="logged" x-data="podbor">
             <section class="content"> <div class="content__container">
     <script type="application/json" x-ref="consultantsJson">
 {
@@ -932,17 +932,15 @@
 
     <!-- Results -->
     <section x-show="screen === 'results'" x-cloak>
-        <div class="settings__header">
-            <div class="content__field-header">
-                <div class="content__field-title title title-lg">Подобрали для вас</div>
-                <div class="content__tags">
-                    <template x-for="tag in paramTags" :key="tag">
-                        <span class="person__main-position" x-text="tag"></span>
-                    </template>
-                </div>
-            </div>
+        <div class="settings__header podbor-results-head">
+            <div class="podbor-results-head__title title title-lg">Подобрали для вас</div>
             <div class="settings__actions">
                 <button type="button" class="l-btn l-btn-secondary-outline l-btn-sm" @click="editParams()">Изменить параметры</button>
+            </div>
+            <div class="content__tags">
+                <template x-for="tag in paramTags" :key="tag">
+                    <span class="person__main-position" x-text="tag"></span>
+                </template>
             </div>
         </div>
 
@@ -965,17 +963,24 @@
                             <span class="person__main-position">Новый специалист</span>
                         </div>
                         <div class="plan__person">
-                            <div class="plan__thumb">
+                            <div class="plan__thumb" :class="{ 'is-online': consultant(item.p).online === 'online' }">
                                 <img x-show="consultant(item.p).avatar" :src="consultant(item.p).avatar" alt="">
                                 <span class="plan__thumb-initials" x-show="!consultant(item.p).avatar" x-text="consultant(item.p).initials || '?'"></span>
+                                <span class="podbor-online-corner" x-show="consultant(item.p).online === 'online'" aria-hidden="true"></span>
                             </div>
                             <div class="plan__person-info">
                                 <div class="plan__person-main">
                                     <div class="plan__person-name" x-text="consultant(item.p).name"></div>
-                                    <div class="person__status" :class="{ online: consultant(item.p).online === 'online' }" x-text="onlineLabel(consultant(item.p).online)"></div>
+                                    <span
+                                        class="podbor-online-pill"
+                                        :class="consultant(item.p).online === 'online' ? 'is-online' : 'is-offline'"
+                                    >
+                                        <i class="podbor-online-pill__dot" aria-hidden="true"></i>
+                                        <span x-text="consultant(item.p).online === 'online' ? 'Онлайн сейчас' : onlineLabel(consultant(item.p).online)"></span>
+                                    </span>
                                 </div>
                                 <div class="diet__rate-value" x-show="consultant(item.p).rating > 0" x-text="`${consultant(item.p).pos}-й в рейтинге`"></div>
-                                <div class="person__main-benefit icon-check reverse" x-show="consultant(item.p).med">Медицинское образование</div>
+                                <div class="person__main-benefit icon-check" x-show="consultant(item.p).med">Медицинское образование</div>
                             </div>
                         </div>
                         <div class="plan__name" x-text="item.p.title"></div>
