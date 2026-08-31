@@ -381,6 +381,8 @@
 			left: 0;
 			right: 0;
 			top: 0;
+			max-height: 100dvh;
+			overflow-y: auto;
 			background: rgba($color: #131326, $alpha: 0.3);
 			display: flex;
 			flex-direction: column;
@@ -407,6 +409,8 @@
 			0 10px 22px 0 rgba(0, 0, 0, 0.1);
 		padding: rem(24);
 		border-radius: 12px 12px 0 0;
+		max-height: 100dvh;
+		overflow-y: auto;
 
 		@media (min-width: $md4) {
 			border-radius: 12px;

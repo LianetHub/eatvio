@@ -32,8 +32,8 @@
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -41,8 +41,8 @@
 }
 
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -282,8 +282,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -291,8 +291,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -4949,6 +4949,8 @@ body.dark-theme {
           box-shadow: 0 247px 69px 0 rgba(0, 0, 0, 0), 0 158px 63px 0 rgba(0, 0, 0, 0.01), 0 89px 53px 0 rgba(0, 0, 0, 0.05), 0 40px 40px 0 rgba(0, 0, 0, 0.09), 0 10px 22px 0 rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   border-radius: 12px 12px 0 0;
+  max-height: 100dvh;
+  overflow-y: auto;
 }
 
 .header__login-logo {
@@ -13912,6 +13914,8 @@ body.dark-theme {
     left: 0;
     right: 0;
     top: 0;
+    max-height: 100dvh;
+    overflow-y: auto;
     background: rgba(19, 19, 38, 0.3);
     display: -webkit-box;
     display: -ms-flexbox;
