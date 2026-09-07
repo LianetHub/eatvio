@@ -188,10 +188,36 @@
 		}
 	}
 
+	// .consults__progress-top
+	&__progress-top {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// align-items: center;
+		flex-direction: column;
+		gap: rem(4);
+		margin-bottom: rem(8);
+	}
+
 	// .consults__progress-caption
 	&__progress-caption {
 		font-size: 0.875rem;
 		font-weight: 700;
+	}
+
+	// .consults__progress-period
+	&__progress-period {
+		display: flex;
+		align-items: center;
+		gap: rem(4);
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: #7b8794;
+
+		&::before {
+			font-size: rem(12);
+			flex-shrink: 0;
+		}
 	}
 
 	// .consults__progress-items
