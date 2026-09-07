@@ -231,16 +231,16 @@ input[type=number] {
   font-style: normal;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -17932,6 +17932,15 @@ body.dark-theme {
     font-size: 1rem;
   }
 }
+.bid__status.created {
+  background: #7b8794;
+}
+.bid__status.date {
+  background: #2f80ed;
+}
+.bid__status.process {
+  background: #ff9f0c;
+}
 .bid__status.fail {
   background: #d01717;
 }
@@ -21646,16 +21655,16 @@ body.dark-theme {
   font-style: normal;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
