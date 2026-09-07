@@ -1,0 +1,102 @@
+<article class="my-posts__card">
+    @@if(typeof photo1 !== 'undefined' && typeof photo2 === 'undefined') {
+    <div class="my-posts__media">
+        <img src="@@photo1" class="cover-image" alt="Фото публикации">
+    </div>
+    }
+    @@if(typeof photo2 !== 'undefined') {
+    <div class="my-posts__media announcement__slider">
+        <div class="announcement__slider-block swiper">
+            <div class="swiper-wrapper">
+                <div class="announcement__slide swiper-slide">
+                    <img src="@@photo1" class="cover-image" alt="Фото публикации">
+                </div>
+                <div class="announcement__slide swiper-slide">
+                    <img src="@@photo2" class="cover-image" alt="Фото публикации">
+                </div>
+                @@if(typeof photo3 !== 'undefined') {
+                <div class="announcement__slide swiper-slide">
+                    <img src="@@photo3" class="cover-image" alt="Фото публикации">
+                </div>
+                }
+                @@if(typeof photo4 !== 'undefined') {
+                <div class="announcement__slide swiper-slide">
+                    <img src="@@photo4" class="cover-image" alt="Фото публикации">
+                </div>
+                }
+                @@if(typeof photo5 !== 'undefined') {
+                <div class="announcement__slide swiper-slide">
+                    <img src="@@photo5" class="cover-image" alt="Фото публикации">
+                </div>
+                }
+            </div>
+            <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+            <button type="button" class="announcement__slider-next swiper-button-next"></button>
+            <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+        </div>
+    </div>
+    }
+    <div class="my-posts__body">
+        @@if(status === 'published') {
+        <a href="announcement.html" class="my-posts__card-link" aria-label="Открыть публикацию"></a>
+        }
+        <div class="my-posts__card-top">
+            <span class="my-posts__type my-posts__type-@@type">@@typeLabel</span>
+            <span class="my-posts__status my-posts__status-@@status @@statusIcon">@@statusLabel</span>
+            <div class="my-posts__menu announcement__actions-block" x-data="{ open: false }">
+                <button type="button" class="my-posts__menu-btn announcement__actions-btn icon-more-horizontal" :class="{'active': open}" @click.stop="open = !open" @click.outside="open = false" aria-label="Действия с публикацией"></button>
+                <ul class="announcement__actions-list" :class="{'active': open}">
+                    @@if(status === 'scheduled') {
+                    <li class="announcement__actions-item">
+                        <button type="button" class="announcement__action icon-check">Опубликовать сейчас</button>
+                    </li>
+                    <li class="announcement__actions-item">
+                        <button type="button" data-modal data-href="reschedule-post" class="announcement__action icon-clock">Изменить время</button>
+                    </li>
+                    }
+                    <li class="announcement__actions-item">
+                        <a href="post-creating-2.html" class="announcement__action icon-pen-alternate">Редактировать</a>
+                    </li>
+                    @@if(status === 'published') {
+                    <li class="announcement__actions-item">
+                        <a href="announcement.html" class="announcement__action icon-eye">Открыть публикацию</a>
+                    </li>
+                    }
+                    <li class="announcement__actions-item">
+                        <button type="button" class="announcement__action icon-trash">Удалить</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @@if(typeof title !== 'undefined') {
+        <h2 class="my-posts__title">@@title</h2>
+        }
+        @@if(typeof desc !== 'undefined') {
+        <p class="my-posts__desc">@@desc</p>
+        }
+        @@if(typeof title === 'undefined' && typeof desc === 'undefined') {
+        <div class="my-posts__no-caption icon-picture">Публикация без подписи</div>
+        }
+        <div class="my-posts__when icon-calendar">
+            <span class="my-posts__when-date">@@date</span>
+            @@if(typeof tz !== 'undefined') {
+            <span class="my-posts__tz">@@tz</span>
+            }
+            @@if(typeof rel !== 'undefined') {
+            <span class="my-posts__rel @@relClass">@@rel</span>
+            }
+        </div>
+        @@if(status === 'published') {
+        <div class="my-posts__stats">
+            <span class="my-posts__stat icon-eye">@@views</span>
+            <span class="my-posts__stat icon-heart">@@likes</span>
+            <span class="my-posts__stat icon-message-alternate">@@comments@@if(typeof commentsNew !== 'undefined' && commentsNew > 0) {<span class="my-posts__stat-new"> (@@commentsNew)</span>}</span>
+        </div>
+        }
+        @@if(status === 'published') {
+        <div class="my-posts__actions">
+            <a href="announcement.html" class="my-posts__action l-btn l-btn-primary l-btn-sm icon-eye">Открыть</a>
+        </div>
+        }
+    </div>
+</article>

@@ -1,0 +1,66 @@
+<div id="reschedule-post" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm my-posts__popup" x-data="{ when: 'schedule' }">
+            <div class="my-posts__popup-header">
+                <div class="popup__header-title">Изменить время публикации</div>
+                <button type="button" data-close-modal class="popup__close icon-close" aria-label="Закрыть"></button>
+            </div>
+            <form action="#" class="my-posts__popup-form">
+                <div class="my-posts__popup-block">
+                    <div class="label">Когда опубликовать</div>
+                    <div class="my-posts__seg">
+                        <button type="button" class="my-posts__seg-btn icon-send" :class="{'active': when === 'now'}" @click="when = 'now'">Сейчас</button>
+                        <button type="button" class="my-posts__seg-btn icon-clock active" :class="{'active': when === 'schedule'}" @click="when = 'schedule'">Запланировать</button>
+                    </div>
+                </div>
+
+                <div class="my-posts__popup-panel" x-show="when === 'schedule'" x-collapse>
+                    <div class="popup__row popup__row-columns">
+                        <div class="my-posts__popup-field">
+                            <label class="label" for="reschedule-date">Дата</label>
+                            <input type="date" id="reschedule-date" name="reschedule-date" class="input" value="2026-09-08">
+                        </div>
+                        <div class="my-posts__popup-field">
+                            <label class="label" for="reschedule-time">Время</label>
+                            <input type="time" id="reschedule-time" name="reschedule-time" class="input" value="10:00">
+                        </div>
+                    </div>
+                    <div class="popup__row">
+                        <label class="label" for="reschedule-timezone">Часовой пояс</label>
+                        <div class="select">
+                            <select id="reschedule-timezone" name="reschedule-timezone">
+                                <option value="2">Калининград (UTC+2)</option>
+                                <option value="3" selected>Москва (UTC+3)</option>
+                                <option value="4">Самара (UTC+4)</option>
+                                <option value="5">Екатеринбург (UTC+5)</option>
+                                <option value="6">Омск (UTC+6)</option>
+                                <option value="7">Красноярск (UTC+7)</option>
+                                <option value="8">Иркутск (UTC+8)</option>
+                                <option value="9">Якутск (UTC+9)</option>
+                                <option value="10">Владивосток (UTC+10)</option>
+                                <option value="11">Магадан (UTC+11)</option>
+                                <option value="12">Камчатка (UTC+12)</option>
+                            </select>
+                        </div>
+                        <div class="my-posts__popup-hint">По умолчанию — московское время (МСК, UTC+3)</div>
+                    </div>
+                    <div class="my-posts__popup-summary icon-clock">
+                        <span>
+                            Публикация выйдет <strong>8 сентября 2026, 10:00</strong> по времени: Москва (UTC+3).
+                            <span class="my-posts__popup-summary-rel">через 5 дней</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="my-posts__popup-summary my-posts__popup-summary-now icon-send" x-show="when === 'now'" x-collapse style="display: none;">
+                    <span>Публикация появится в ленте сразу после сохранения.</span>
+                </div>
+
+                <div class="popup__footer my-posts__popup-footer">
+                    <button type="button" data-close-modal class="l-btn l-btn-light l-btn-sm">Отмена</button>
+                    <button type="submit" class="l-btn l-btn-primary l-btn-sm">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

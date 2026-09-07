@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    "title": "Eatvio | Мои публикации",
+    "stylesName": ["my-posts", "announcement"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left mobile-only"></a>
+                            <div class="settings__person-title title">
+                                Мои публикации
+                            </div>
+                        </div>
+                        <div class="my-posts">
+                            <div class="my-posts__intro">
+                                <p class="my-posts__intro-text">
+                                    Публикуйте записи сразу или планируйте выход заранее — по дате, времени и часовому поясу. Отложенные публикации появятся в ленте автоматически.
+                                </p>
+                                <a href="post-creating.html" class="my-posts__create l-btn l-btn-primary icon-plus">Создать публикацию</a>
+                            </div>
+
+                            <div class="my-posts__toolbar">
+                                <div class="my-posts__tablist content__filters" role="tablist" aria-label="Списки публикаций">
+                                    <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-scheduled" aria-selected="true" aria-controls="tabpanel-scheduled">
+                                        Отложенные
+                                        <span class="info-block dark">6</span>
+                                    </button>
+                                    <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-published" aria-selected="false" aria-controls="tabpanel-published" tabindex="-1">
+                                        Опубликованные
+                                        <span class="info-block dark">4</span>
+                                    </button>
+                                </div>
+                                <div class="my-posts__sort select select-md">
+                                    <select name="sort" aria-label="Сортировка публикаций">
+                                        <option value="closest">Сначала ближайшие</option>
+                                        <option value="latest">Сначала поздние</option>
+                                        <option value="new">Сначала новые</option>
+                                        <option value="old">Сначала старые</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-scheduled" tabindex="0" aria-labelledby="tab-scheduled">
+                                <div class="my-posts__grid">
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "post",
+                                    "typeLabel": "Пост",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "5 привычек, которые помогли мне не срываться на сладкое",
+                                    "desc": "Собрала всё, что реально работает: от режима сна до правильных перекусов. Делитесь своими лайфхаками в комментариях!",
+                                    "photo1": "@img/posts/01.png",
+                                    "photo2": "@img/posts/02.png",
+                                    "photo3": "@img/posts/03.png",
+                                    "date": "Сегодня, 19:00",
+                                    "tz": "МСК",
+                                    "rel": "через 2 часа",
+                                    "relClass": "my-posts__rel-soon"
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "recipe",
+                                    "typeLabel": "Рецепт",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "Овсяноблин с творогом за 10 минут",
+                                    "desc": "Завтрак на 320 ккал, который не надоедает. Пять вариантов начинки — от банана до лосося.",
+                                    "photo1": "@img/dishes/01.png",
+                                    "photo2": "@img/recipe_img-2.png",
+                                    "photo3": "@img/recipe_img-3.png",
+                                    "date": "8 сентября, 09:30",
+                                    "tz": "МСК",
+                                    "rel": "завтра",
+                                    "relClass": "my-posts__rel-soon"
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "post",
+                                    "typeLabel": "Пост",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "Почему вес — не единственная метрика прогресса",
+                                    "desc": "Замеры, самочувствие и качество сна говорят о результате гораздо больше, чем цифра на весах. Показываю, что отслеживаю сама.",
+                                    "photo1": "@img/posts/04.png",
+                                    "photo2": "@img/posts/05.png",
+                                    "date": "10 сентября, 12:00",
+                                    "tz": "МСК",
+                                    "rel": "через 3 дня",
+                                    "relClass": ""
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "post",
+                                    "typeLabel": "Пост",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "Моё меню на неделю: закупка на 3 500 ₽",
+                                    "desc": "Показываю корзину, раскладку по дням и что готовлю заранее, чтобы не срываться на доставку.",
+                                    "photo1": "@img/posts/06.png",
+                                    "photo2": "@img/posts/07.png",
+                                    "photo3": "@img/posts/08.png",
+                                    "date": "12 сентября, 18:45",
+                                    "tz": "МСК",
+                                    "rel": "через 5 дней",
+                                    "relClass": ""
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "diet",
+                                    "typeLabel": "Диета",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "Средиземноморская диета на 14 дней",
+                                    "desc": "Меню без экзотических продуктов: рыба, овощи, оливковое масло и крупы. С расчётом КБЖУ на каждый день.",
+                                    "photo1": "@img/diet.png",
+                                    "photo2": "@img/dishes/02.png",
+                                    "photo3": "@img/dishes/03.png",
+                                    "date": "15 сентября, 10:00",
+                                    "tz": "UTC+5",
+                                    "rel": "через неделю",
+                                    "relClass": ""
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "plan",
+                                    "typeLabel": "План",
+                                    "status": "scheduled",
+                                    "statusLabel": "Отложено",
+                                    "statusIcon": "icon-clock",
+                                    "title": "План «Мягкий старт»: первые 7 дней без стресса",
+                                    "desc": "Пошаговый план для тех, кто начинает с нуля: питание, вода, активность и отчёты в дневнике.",
+                                    "photo1": "@img/plans/01.png",
+                                    "photo2": "@img/plans/02.png",
+                                    "photo3": "@img/plans/03.png",
+                                    "photo4": "@img/plans/04.png",
+                                    "date": "20 сентября, 08:00",
+                                    "tz": "МСК",
+                                    "rel": "через 2 недели",
+                                    "relClass": ""
+                                    })
+                                </div>
+                                <!-- Пустое состояние: показывается, когда отложенных публикаций нет — уберите атрибут hidden -->
+                                <div class="my-posts__empty" hidden>
+                                    <div class="my-posts__empty-icon icon-clock"></div>
+                                    <div class="my-posts__empty-title">Отложенных публикаций нет</div>
+                                    <p class="my-posts__empty-text">Запланируйте выход записи заранее — она появится в ленте в выбранные дату и время.</p>
+                                    <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+                                </div>
+                            </div>
+
+                            <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-published" tabindex="0" aria-labelledby="tab-published">
+                                <div class="my-posts__grid">
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "post",
+                                    "typeLabel": "Пост",
+                                    "status": "published",
+                                    "statusLabel": "Опубликовано",
+                                    "statusIcon": "icon-check",
+                                    "title": "Мой путь: 30 дней без добавленного сахара",
+                                    "desc": "Что изменилось за месяц: сон, кожа, тяга к сладкому и цифры на весах. Показываю замеры и меню.",
+                                    "photo1": "@img/posts/09.png",
+                                    "photo2": "@img/dishes/04.png",
+                                    "photo3": "@img/recipe_img-4.png",
+                                    "photo4": "@img/recipe_img-5.png",
+                                    "date": "3 сентября, 19:00",
+                                    "rel": "4 дня назад",
+                                    "relClass": "my-posts__rel-past",
+                                    "views": "3 421",
+                                    "likes": "234",
+                                    "comments": "120",
+                                    "commentsNew": 1
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "recipe",
+                                    "typeLabel": "Рецепт",
+                                    "status": "published",
+                                    "statusLabel": "Опубликовано",
+                                    "statusIcon": "icon-check",
+                                    "title": "Лёгкий ужин за 15 минут: 4 варианта",
+                                    "desc": "Белок, овощи и минимум посуды. Каждый вариант — до 400 ккал, все продукты есть в любом магазине.",
+                                    "photo1": "@img/recipe_img.jpg",
+                                    "photo2": "@img/recipe_img-6.png",
+                                    "date": "29 августа, 18:30",
+                                    "rel": "9 дней назад",
+                                    "relClass": "my-posts__rel-past",
+                                    "views": "1 208",
+                                    "likes": "96",
+                                    "comments": "18",
+                                    "commentsNew": 3
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "post",
+                                    "typeLabel": "Пост",
+                                    "status": "published",
+                                    "statusLabel": "Опубликовано",
+                                    "statusIcon": "icon-check",
+                                    "title": "12 000 шагов и ни капли усталости",
+                                    "desc": "Сегодня впервые прошла столько и не устала. Маленькие победы тоже считаются — рассказываю, как дошла до этого за месяц.",
+                                    "photo1": "@img/product-21.jpg",
+                                    "photo2": "@img/product-3.jpg",
+                                    "date": "25 августа, 21:10",
+                                    "rel": "13 дней назад",
+                                    "relClass": "my-posts__rel-past",
+                                    "views": "642",
+                                    "likes": "41",
+                                    "comments": "9"
+                                    })
+                                    @@include('html/my-posts-blocks/_card.html', {
+                                    "type": "diet",
+                                    "typeLabel": "Диета",
+                                    "status": "published",
+                                    "statusLabel": "Опубликовано",
+                                    "statusIcon": "icon-check",
+                                    "title": "Белковая диета: кому подходит и как не навредить",
+                                    "desc": "Разбираю плюсы, риски и противопоказания. С таблицей нормы белка по весу.",
+                                    "photo1": "@img/dish.jpg",
+                                    "photo2": "@img/dishes/01.png",
+                                    "photo3": "@img/diet.png",
+                                    "date": "18 августа, 11:00",
+                                    "rel": "3 недели назад",
+                                    "relClass": "my-posts__rel-past",
+                                    "views": "2 130",
+                                    "likes": "305",
+                                    "comments": "62"
+                                    })
+                                </div>
+                                <div class="my-posts__empty" hidden>
+                                    <div class="my-posts__empty-icon icon-file-text"></div>
+                                    <div class="my-posts__empty-title">Публикаций пока нет</div>
+                                    <p class="my-posts__empty-text">Поделитесь рецептом, лайфхаком или личным результатом — сообщество это оценит.</p>
+                                    <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_logout.html')
+        </div>
+        @@include('html/_footer.html', {
+        "className": ""
+        })
+        @@include('html/my-posts-blocks/_reschedule-modal.html')
+        @@include('html/_js.html', {})
+    </body>
+</html>

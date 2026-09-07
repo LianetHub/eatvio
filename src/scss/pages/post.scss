@@ -54,7 +54,8 @@
 	}
 
 	&__main,
-	&__side-block {
+	&__side-block,
+	&__when {
 		border-radius: 0.5rem;
 		border: rem(1) solid #e2e5e9;
 		background: #fff;
@@ -161,6 +162,91 @@
 		font-size: 0.875rem;
 		line-height: 130%;
 		letter-spacing: 0.0125rem;
+	}
+
+	// .post-creating__when
+	&__when {
+		margin-top: 1.25rem;
+	}
+
+	// .post-creating__when-toggle
+	&__when-toggle {
+		display: flex;
+		gap: 0.25rem;
+		padding: 0.25rem;
+		border-radius: 0.625rem;
+		background: #f1f2f6;
+
+		@media (min-width: $md5) {
+			width: fit-content;
+		}
+	}
+
+	// .post-creating__when-btn
+	&__when-btn {
+		flex: 1 1 auto;
+		padding: rem(9) rem(16);
+		border-radius: 0.5rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: #6d6f71;
+		white-space: nowrap;
+		transition: all 0.3s ease 0s;
+
+		@media (min-width: $md5) {
+			min-width: rem(160);
+		}
+
+		&.active {
+			background: #fff;
+			color: $accent;
+			box-shadow: 0 rem(2) rem(6) 0 rgba(0, 0, 0, 0.1);
+		}
+
+		@media (any-hover: hover) {
+			&:not(.active):hover {
+				color: $mainColor;
+			}
+		}
+	}
+
+	// .post-creating__when-fields
+	&__when-fields {
+		margin-top: 1.25rem;
+	}
+
+	// .post-creating__when-row
+	&__when-row {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr;
+
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.post-creating__field {
+			margin-bottom: 0;
+		}
+	}
+
+	// .post-creating__when-summary
+	&__when-summary {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.625rem;
+		margin-top: 1.25rem;
+		padding: 0.75rem 0.875rem;
+		border-radius: 0.5rem;
+		background: #f6faff;
+		font-size: 0.875rem;
+		line-height: 150%;
+
+		&::before {
+			flex-shrink: 0;
+			font-size: 1.125rem;
+			color: $accent;
+		}
 	}
 
 	&__footer {

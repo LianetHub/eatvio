@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | История операций',
-    "stylesName": ["post"]
+    "stylesName": ["post", "consults"]
     })
     <body>
         <div class="wrapper">
@@ -18,7 +18,7 @@
                                 Создание поста
                             </div>
                         </div>
-                        <div class="post-creating">
+                        <div class="post-creating" x-data="{ when: 'schedule' }">
 
                             <div class="post-creating__banner">
                                 <div class="post-creating__banner-icon">
@@ -120,8 +120,57 @@
                                 </aside>
                             </div>
 
+                            <div class="post-creating__when">
+                                <div class="post-creating__side-label icon-alarm">
+                                    <span>Когда опубликовать</span>
+                                </div>
+                                <div class="post-creating__when-toggle">
+                                    <button type="button" class="post-creating__when-btn" :class="{'active': when === 'now'}" @click="when = 'now'">Сейчас</button>
+                                    <button type="button" class="post-creating__when-btn active" :class="{'active': when === 'schedule'}" @click="when = 'schedule'">Запланировать</button>
+                                </div>
+                                <div class="post-creating__when-fields" x-show="when === 'schedule'" x-collapse>
+                                    <div class="post-creating__when-row">
+                                        <div class="post-creating__field">
+                                            <div class="post-creating__field-top">
+                                                <label class="post-creating__label" for="publish-date">Дата</label>
+                                            </div>
+                                            <input type="date" id="publish-date" name="publish-date" class="input" value="2026-09-10">
+                                        </div>
+                                        <div class="post-creating__field">
+                                            <div class="post-creating__field-top">
+                                                <label class="post-creating__label" for="publish-time">Время</label>
+                                            </div>
+                                            <input type="time" id="publish-time" name="publish-time" class="input" value="19:00">
+                                        </div>
+                                        <div class="post-creating__field">
+                                            <div class="post-creating__field-top">
+                                                <label class="post-creating__label" for="publish-timezone">Часовой пояс</label>
+                                            </div>
+                                            <div class="select">
+                                                <select id="publish-timezone" name="publish-timezone">
+                                                    <option value="2">Калининград (UTC+2)</option>
+                                                    <option value="3" selected>Москва (UTC+3)</option>
+                                                    <option value="4">Самара (UTC+4)</option>
+                                                    <option value="5">Екатеринбург (UTC+5)</option>
+                                                    <option value="6">Омск (UTC+6)</option>
+                                                    <option value="7">Красноярск (UTC+7)</option>
+                                                    <option value="8">Иркутск (UTC+8)</option>
+                                                    <option value="9">Якутск (UTC+9)</option>
+                                                    <option value="10">Владивосток (UTC+10)</option>
+                                                    <option value="11">Магадан (UTC+11)</option>
+                                                    <option value="12">Камчатка (UTC+12)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-creating__when-summary icon-info">
+                                        <span>Публикация выйдет <strong>10 сентября в 19:00</strong> по московскому времени. Изменить время можно в разделе <a href="my-posts.html">«Мои публикации»</a>.</span>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="post-creating__footer">
-                                <button class="l-btn l-btn-primary">Опубликовать</button>
+                                <button class="l-btn l-btn-primary" x-text="when === 'now' ? 'Опубликовать' : 'Запланировать'">Запланировать</button>
                             </div>
                         </div>
                     </div>
