@@ -1,0 +1,215 @@
+<div id="shopping-share" class="popup" x-data>
+    <div class="popup__content">
+        <div class="popup__body popup__body-md">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">Поделиться списком</div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="shopping__share">
+                    <div class="shopping__share-block">
+                        <div class="label">Предпросмотр</div>
+                        <div class="shopping__preview" x-ref="preview">
+                            <div class="shopping__preview-head">
+                                <span class="shopping__preview-icon icon-diet"></span>
+                                <div class="shopping__preview-info">
+                                    <div class="shopping__preview-title">Список покупок</div>
+                                    <div class="shopping__preview-meta">Из диеты: <b>Сбалансированный рацион 2000 ккал</b></div>
+                                </div>
+                                <span class="shopping__diet-tag">Неделя · 7 дней</span>
+                            </div>
+                            <div class="shopping__preview-groups">
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🥛</span>
+                                        <span class="shopping__preview-cat-name">Молочные</span>
+                                        <span class="shopping__cat-count">1 из 5</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Молоко 2.5%</span>
+                                            <span class="shopping__preview-qty">650 мл</span>
+                                        </li>
+                                        <li class="shopping__preview-item _bought">
+                                            <span class="shopping__preview-check icon-check"></span>
+                                            <span class="shopping__preview-name">Сметана 15%</span>
+                                            <span class="shopping__preview-qty">30 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Сыр Российский</span>
+                                            <span class="shopping__preview-qty">60 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Масло сливочное</span>
+                                            <span class="shopping__preview-qty">30 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Творог 5%</span>
+                                            <span class="shopping__preview-qty">200 гр</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🌾</span>
+                                        <span class="shopping__preview-cat-name">Крупы</span>
+                                        <span class="shopping__cat-count">1 из 3</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item _bought">
+                                            <span class="shopping__preview-check icon-check"></span>
+                                            <span class="shopping__preview-name">Овсяные хлопья</span>
+                                            <span class="shopping__preview-qty">120 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Гречневая крупа</span>
+                                            <span class="shopping__preview-qty">70 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Манная крупа</span>
+                                            <span class="shopping__preview-qty">60 гр</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🥚</span>
+                                        <span class="shopping__preview-cat-name">Яйца</span>
+                                        <span class="shopping__cat-count">0 из 1</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Яйца куриные</span>
+                                            <span class="shopping__preview-qty">440 гр <span>(≈ 8 шт)</span></span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🍞</span>
+                                        <span class="shopping__preview-cat-name">Хлеб</span>
+                                        <span class="shopping__cat-count">0 из 1</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Хлеб ржаной</span>
+                                            <span class="shopping__preview-qty">200 гр</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🥦</span>
+                                        <span class="shopping__preview-cat-name">Овощи</span>
+                                        <span class="shopping__cat-count">0 из 1</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Помидор</span>
+                                            <span class="shopping__preview-qty">100 гр</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🍎</span>
+                                        <span class="shopping__preview-cat-name">Фрукты</span>
+                                        <span class="shopping__cat-count">0 из 2</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Яблоко</span>
+                                            <span class="shopping__preview-qty">50 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Банан</span>
+                                            <span class="shopping__preview-qty">3 шт</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🫙</span>
+                                        <span class="shopping__preview-cat-name">Бакалея</span>
+                                        <span class="shopping__cat-count">0 из 2</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Сахар</span>
+                                            <span class="shopping__preview-qty">20 гр</span>
+                                        </li>
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Варенье</span>
+                                            <span class="shopping__preview-qty">20 гр</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="shopping__preview-group">
+                                    <div class="shopping__preview-cat">
+                                        <span class="shopping__cat-icon">🫖</span>
+                                        <span class="shopping__preview-cat-name">Напитки</span>
+                                        <span class="shopping__cat-count">0 из 1</span>
+                                    </div>
+                                    <ul class="shopping__preview-items">
+                                        <li class="shopping__preview-item">
+                                            <span class="shopping__preview-check"></span>
+                                            <span class="shopping__preview-name">Чай чёрный</span>
+                                            <span class="shopping__preview-qty">1 упак</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping__share-block">
+                        <div class="label">Отправить в мессенджер</div>
+                        <div class="shopping__messengers">
+                            <a href="https://t.me/share/url?url=&text=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20Eatvio" class="shopping__messenger shopping__messenger_telegram" target="_blank" rel="noopener noreferrer">
+                                <span class="shopping__messenger-icon" aria-hidden="true">
+                                    <img src="@img/icons/telegram-white.svg" alt="Иконка Telegram">
+                                </span>
+                                Telegram
+                            </a>
+                            <a href="https://wa.me/?text=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20Eatvio" class="shopping__messenger shopping__messenger_whatsapp" target="_blank" rel="noopener noreferrer">
+                                <span class="shopping__messenger-icon" aria-hidden="true">
+                                    <img src="@img/icons/whatsapp-white.svg" alt="Иконка WhatsApp">
+                                </span>
+                                WhatsApp
+                            </a>
+                            <a href="viber://forward?text=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20Eatvio" class="shopping__messenger shopping__messenger_viber" target="_blank" rel="noopener noreferrer">
+                                <span class="shopping__messenger-icon" aria-hidden="true">
+                                    <img src="@img/icons/viber-white.svg" alt="Иконка Viber">
+                                </span>
+                                Viber
+                            </a>
+                            <a href="https://max.ru/:share?text=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20Eatvio" class="shopping__messenger shopping__messenger_max" target="_blank" rel="noopener noreferrer">
+                                <span class="shopping__messenger-icon" aria-hidden="true">
+                                    <img src="@img/icons/max-white.svg" alt="Иконка MAX">
+                                </span>
+                                MAX
+                            </a>
+                        </div>
+                    </div>
+                    <button type="button" class="l-btn l-btn-md l-btn-primary l-btn-fullwidth icon-copy" @click="navigator.clipboard.writeText($refs.preview.innerText)">Скопировать список</button>
+                    <div class="shopping__export">
+                        <a href="" class="l-btn l-btn-md l-btn-secondary-outline icon-file-text">PDF для печати</a>
+                        <a href="mailto:?subject=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20Eatvio" class="l-btn l-btn-md l-btn-secondary-outline icon-send">Отправить на e-mail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

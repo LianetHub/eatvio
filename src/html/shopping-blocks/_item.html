@@ -1,0 +1,29 @@
+<div class="shopping__item" data-item x-data="{ bought: @@bought == 1, editing: false, qty: @@qty, removed: false }" x-show="!removed" :class="{ '_bought': bought, '_editing': editing }">
+    <label class="checkbox checkbox-green shopping__item-check">
+        <input type="checkbox" class="checkbox__input hidden" hidden x-model="bought">
+        <span class="checkbox__content"></span>
+    </label>
+    <div class="shopping__item-main">
+        <div class="shopping__item-top">
+            <span class="shopping__item-name">@@name</span>
+            <button type="button" class="shopping__item-qty" @click="editing = true">
+                <span x-text="qty">@@qty</span> @@unit@@if(approx !== ""){ <span>(@@approx)</span>}
+            </button>
+            <span class="shopping__item-editor">
+                <input type="number" class="input input-white" min="0" x-model.number="qty" @keydown.enter.prevent="editing = false" @keydown.escape="editing = false">
+                <span class="shopping__item-unit">@@unit</span>
+                <button type="button" class="shopping__item-save icon-check" @click="editing = false" aria-label="Сохранить количество"></button>
+            </span>
+        </div>
+        <div class="shopping__item-tags">@@tags</div>
+    </div>
+    <div class="shopping__item-actions">
+        <button type="button" class="shopping__item-action icon-edit" @click="editing = true" aria-label="Изменить количество"></button>
+        @@if(manual === "1") {
+        <button type="button" class="shopping__item-action shopping__item-action_danger icon-delete" @click="removed = true" aria-label="Удалить продукт"></button>
+        }
+        @@if(manual !== "1") {
+        <button type="button" class="shopping__item-action shopping__item-action_danger icon-delete" data-modal data-href="shopping-delete" @click="window.__hideShopItem = () => removed = true" aria-label="Удалить продукт"></button>
+        }
+    </div>
+</div>

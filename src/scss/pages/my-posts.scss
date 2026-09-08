@@ -183,7 +183,7 @@
 		padding: 0.875rem 1rem 1rem;
 	}
 
-	// .my-posts__card-link — растянутая ссылка: опубликованная карточка кликабельна целиком
+	// .my-posts__card-link 
 	&__card-link {
 		position: absolute;
 		inset: 0;
@@ -256,7 +256,7 @@
 	&__menu {
 		margin-left: auto;
 
-		// меню открывается только по клику (состояние в Alpine), без hover-раскрытия
+
 		@media (any-hover: hover) {
 			&.announcement__actions-block:hover .announcement__actions-list:not(.active) {
 				opacity: 0;
@@ -265,7 +265,7 @@
 		}
 	}
 
-	// удаление — единственное необратимое действие в меню, поэтому иконка красная
+
 	&__menu {
 		.announcement__action.icon-trash {
 			&::before {
@@ -493,7 +493,7 @@
 			background: #f1f2f6;
 			font-size: 0.75rem;
 
-			// мягкое фирменное наведение вместо заливки синим из popup.scss
+
 			@media (any-hover: hover) {
 				&:hover {
 					background: #eaf2fd;
@@ -512,7 +512,7 @@
 		}
 	}
 
-	// .my-posts__seg — сегментированный переключатель «Сейчас / Запланировать»
+	// .my-posts__seg 
 	&__seg {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -558,7 +558,7 @@
 		}
 	}
 
-	// .my-posts__popup-panel — блок настроек времени
+	// .my-posts__popup-panel 
 	&__popup-panel {
 		margin-top: 1rem;
 		padding: 1rem;
@@ -593,15 +593,13 @@
 			font-size: 1rem;
 		}
 
-		// глобально время выводится синим и по центру — в модалке поле должно
-		// выглядеть так же, как дата, и сохранять нативный выбор времени
+
 		input[type="time"] {
 			text-align: left;
 			color: #323f4b;
 			font-weight: 500;
 
-			// нативную иконку подменяем фирменной синей — так же, как у
-			// input[type="date"] в forms.scss
+
 			&::-webkit-calendar-picker-indicator {
 				display: flex;
 				width: rem(20);

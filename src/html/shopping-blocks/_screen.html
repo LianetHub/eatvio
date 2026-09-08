@@ -1,0 +1,99 @@
+<section class="shopping" x-data="{ period: 'week', periodLabel: 'Неделя · 7 дней', daypop: false, days: { 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true }, mode: 'categories' }">
+    <div class="shopping__container">
+        <div class="settings__header">
+            <a href="my-diets.html" class="settings__back icon-arrow-short-left"></a>
+            <div class="settings__person-title title">
+                Список покупок
+            </div>
+            <div class="settings__actions">
+                <button type="button" class="settings__action icon-gear" aria-label="Настройки списка"></button>
+                <a href="#shopping-share" data-modal class="settings__action icon-share" aria-label="Поделиться списком"></a>
+            </div>
+        </div>
+        <div class="shopping__card">
+            <div class="shopping__diet">
+                <span class="shopping__diet-icon icon-diet"></span>
+                <p class="shopping__diet-text">Из диеты: <b>Сбалансированный рацион 2000 ккал</b></p>
+                <span class="shopping__diet-tag" x-text="periodLabel">Неделя · 7 дней</span>
+            </div>
+            <div class="shopping__controls">
+                <div class="shopping__period" @click.outside="daypop = false">
+                    <div class="shopping__tabs content__tabs-wrapper">
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'tomorrow' }" @click="period = 'tomorrow'; daypop = false; periodLabel = 'Завтра · 1 день'">Завтра</button>
+                        <button type="button" class="content__filter" :class="{ 'active': period === '3days' }" @click="period = '3days'; daypop = false; periodLabel = '3 дня'">3 дня</button>
+                        <button type="button" class="content__filter active" :class="{ 'active': period === 'week' }" @click="period = 'week'; daypop = false; periodLabel = 'Неделя · 7 дней'">Неделя</button>
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'custom' }" @click.stop="period = 'custom'; daypop = !daypop">Календарь</button>
+                    </div>
+                    <div class="shopping__daypop" :class="{ 'open': daypop }" x-show="daypop" x-cloak @click.stop>
+                        <div class="shopping__daypop-title">Выберите дни плана</div>
+                        <div class="shopping__daypop-grid">
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[1] }" @click="days[1] = !days[1]">Д1</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[2] }" @click="days[2] = !days[2]">Д2</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[3] }" @click="days[3] = !days[3]">Д3</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[4] }" @click="days[4] = !days[4]">Д4</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[5] }" @click="days[5] = !days[5]">Д5</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[6] }" @click="days[6] = !days[6]">Д6</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[7] }" @click="days[7] = !days[7]">Д7</button>
+                        </div>
+                        <div class="shopping__daypop-footer">
+                            <button type="button" class="l-btn l-btn-sm l-btn-secondary-outline" @click="daypop = false">Отмена</button>
+                            <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="Object.values(days).some(Boolean) && (periodLabel = 'Выбрано дней: ' + Object.values(days).filter(Boolean).length, daypop = false)">Применить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping__controls-row">
+                    <div class="shopping__tabs content__tabs-wrapper">
+                        <button type="button" class="content__filter active" :class="{ 'active': mode === 'categories' }" @click="mode = 'categories'">По категориям</button>
+                        <button type="button" class="content__filter" :class="{ 'active': mode === 'days' }" @click="mode = 'days'">По дням</button>
+                    </div>
+                    <a href="#shopping-share" data-modal class="shopping__share-btn l-btn l-btn-md l-btn-primary icon-share">Поделиться</a>
+                </div>
+            </div>
+            @@if (screenState === "done") {
+            <div class="shopping__progress" data-progress>
+                <div class="shopping__progress-ring">
+                    <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                        <circle cx="23" cy="23" r="19" fill="none" stroke="#f0f2f5" stroke-width="5"></circle>
+                        <circle data-progress-ring cx="23" cy="23" r="19" fill="none" stroke="#2f80ed" stroke-width="5" stroke-linecap="round" stroke-dasharray="119" stroke-dashoffset="0"></circle>
+                    </svg>
+                    <span data-progress-value>100%</span>
+                </div>
+                <div class="shopping__progress-body">
+                    <div class="shopping__progress-text" data-progress-text>Куплено 16 из 16 продуктов</div>
+                    <div class="shopping__progress-bar"><i data-progress-bar style="width: 100%"></i></div>
+                </div>
+            </div>
+            }
+            @@if (screenState === "default") {
+            <div class="shopping__progress" data-progress>
+                <div class="shopping__progress-ring">
+                    <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                        <circle cx="23" cy="23" r="19" fill="none" stroke="#f0f2f5" stroke-width="5"></circle>
+                        <circle data-progress-ring cx="23" cy="23" r="19" fill="none" stroke="#2f80ed" stroke-width="5" stroke-linecap="round" stroke-dasharray="119" stroke-dashoffset="104"></circle>
+                    </svg>
+                    <span data-progress-value>13%</span>
+                </div>
+                <div class="shopping__progress-body">
+                    <div class="shopping__progress-text" data-progress-text>Куплено 2 из 16 продуктов</div>
+                    <div class="shopping__progress-bar"><i data-progress-bar style="width: 13%"></i></div>
+                </div>
+            </div>
+            }
+        </div>
+        @@if (screenState === "default") {
+        @@include('./_list-categories.html')
+        @@include('./_list-days.html')
+        <a href="#shopping-add" data-modal class="shopping__add icon-plus">Добавить продукт</a>
+        }
+        @@if (screenState === "done") {
+        <div class="shopping__state _visible">
+            <div class="shopping__state-emoji">🎉</div>
+            <div class="shopping__state-title title title-sm">Список собран!</div>
+            <p class="shopping__state-text">Все продукты отмечены как купленные. Можно готовить по плану диеты или начать новый список.</p>
+            <div class="shopping__state-actions">
+                <a href="shopping-list.html" class="l-btn l-btn-md l-btn-primary">Начать новый список</a>
+            </div>
+        </div>
+        }
+    </div>
+</section>

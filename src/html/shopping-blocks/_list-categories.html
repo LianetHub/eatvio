@@ -1,0 +1,122 @@
+<div class="shopping__list" x-show="mode === 'categories'">
+    <section class="shopping__cat" data-spollers data-cat="Молочные">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🥛</span>
+            <span class="shopping__cat-name">Молочные</span>
+            <span class="shopping__cat-count">Куплено 1 из 5</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Молоко 2.5%", "qty": "650", "unit": "мл", "tags": "<span class='shopping__tag'>Овсянка (Дни 1, 5)</span><span class='shopping__tag'>Гречневая каша (День 4)</span><span class='shopping__tag'>Манная каша (День 7)</span>" })
+            @@include('./_item.html', { "className": "_bought", "bought": "1", "manual": "0", "approx": "", "name": "Сметана 15%", "qty": "30", "unit": "гр", "tags": "<span class='shopping__tag'>Сырники (День 3)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Сыр Российский", "qty": "60", "unit": "гр", "tags": "<span class='shopping__tag'>Бутерброд (Дни 4, 7)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Масло сливочное", "qty": "30", "unit": "гр", "tags": "<span class='shopping__tag'>Бутерброд (Дни 2, 6)</span><span class='shopping__tag'>Манная каша (День 7)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "1", "approx": "", "name": "Творог 5%", "qty": "200", "unit": "гр", "tags": "<span class='shopping__tag-manual icon-edit'>вручную</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Крупы">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🌾</span>
+            <span class="shopping__cat-name">Крупы</span>
+            <span class="shopping__cat-count">Куплено 1 из 3</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "_bought", "bought": "1", "manual": "0", "approx": "", "name": "Овсяные хлопья", "qty": "120", "unit": "гр", "tags": "<span class='shopping__tag'>Овсянка (Дни 1, 5)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Гречневая крупа", "qty": "70", "unit": "гр", "tags": "<span class='shopping__tag'>Гречневая каша (День 4)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Манная крупа", "qty": "60", "unit": "гр", "tags": "<span class='shopping__tag'>Манная каша (День 7)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Яйца">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🥚</span>
+            <span class="shopping__cat-name">Яйца</span>
+            <span class="shopping__cat-count">Куплено 0 из 1</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "≈ 8 шт", "name": "Яйца куриные", "qty": "440", "unit": "гр", "tags": "<span class='shopping__tag'>Варёные (Дни 1, 4, 5)</span><span class='shopping__tag'>Омлет (Дни 2, 6)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Хлеб">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🍞</span>
+            <span class="shopping__cat-name">Хлеб</span>
+            <span class="shopping__cat-count">Куплено 0 из 1</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Хлеб ржаной", "qty": "200", "unit": "гр", "tags": "<span class='shopping__tag'>Тост (Дни 1, 2, 4, 5, 6, 7)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Овощи">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🥦</span>
+            <span class="shopping__cat-name">Овощи</span>
+            <span class="shopping__cat-count">Куплено 0 из 1</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Помидор", "qty": "100", "unit": "гр", "tags": "<span class='shopping__tag'>Омлет (День 6)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Фрукты">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🍎</span>
+            <span class="shopping__cat-name">Фрукты</span>
+            <span class="shopping__cat-count">Куплено 0 из 2</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Яблоко", "qty": "50", "unit": "гр", "tags": "<span class='shopping__tag'>Сырники (День 3)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "1", "approx": "", "name": "Банан", "qty": "3", "unit": "шт", "tags": "<span class='shopping__tag-manual icon-edit'>вручную</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Бакалея">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🫙</span>
+            <span class="shopping__cat-name">Бакалея</span>
+            <span class="shopping__cat-count">Куплено 0 из 2</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Сахар", "qty": "20", "unit": "гр", "tags": "<span class='shopping__tag'>Чай (День 3)</span><span class='shopping__tag'>Манная каша (День 7)</span>" })
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Варенье", "qty": "20", "unit": "гр", "tags": "<span class='shopping__tag'>Овсянка (День 5)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Напитки">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🫖</span>
+            <span class="shopping__cat-name">Напитки</span>
+            <span class="shopping__cat-count">Куплено 0 из 1</span>
+        </div>
+        <div class="shopping__cat-body">
+            @@include('./_item.html', { "className": "", "bought": "0", "manual": "0", "approx": "", "name": "Чай чёрный", "qty": "1", "unit": "упак", "tags": "<span class='shopping__tag'>Чай (День 3)</span>" })
+        </div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Мясо">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🥩</span>
+            <span class="shopping__cat-name">Мясо</span>
+            <span class="shopping__cat-count">Куплено 0 из 0</span>
+        </div>
+        <div class="shopping__cat-body"></div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Рыба">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🐟</span>
+            <span class="shopping__cat-name">Рыба</span>
+            <span class="shopping__cat-count">Куплено 0 из 0</span>
+        </div>
+        <div class="shopping__cat-body"></div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Заморозка">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🧊</span>
+            <span class="shopping__cat-name">Заморозка</span>
+            <span class="shopping__cat-count">Куплено 0 из 0</span>
+        </div>
+        <div class="shopping__cat-body"></div>
+    </section>
+    <section class="shopping__cat" data-spollers data-cat="Другое">
+        <div class="shopping__cat-head icon-down _active" data-spoller>
+            <span class="shopping__cat-icon">🛒</span>
+            <span class="shopping__cat-name">Другое</span>
+            <span class="shopping__cat-count">Куплено 0 из 0</span>
+        </div>
+        <div class="shopping__cat-body"></div>
+    </section>
+</div>

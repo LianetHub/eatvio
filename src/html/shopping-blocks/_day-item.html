@@ -1,0 +1,12 @@
+<div class="shopping__item" x-data="{ bought: false }" :class="{ '_bought': bought }">
+    <label class="checkbox checkbox-green shopping__item-check">
+        <input type="checkbox" class="checkbox__input hidden" hidden x-model="bought">
+        <span class="checkbox__content"></span>
+    </label>
+    <div class="shopping__item-main">
+        <div class="shopping__item-top">
+            <span class="shopping__item-name">@@name</span>
+            <span class="shopping__item-qty shopping__item-qty_static">@@qty @@unit</span>
+        </div>
+    </div>
+</div>

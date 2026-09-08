@@ -1,0 +1,86 @@
+<div id="shopping-add" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm offset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-sm">Добавить продукт</div>
+            <form action="#" class="shopping__form" @submit.prevent="$el.querySelector('[data-close-modal]').click()">
+                <div class="shopping__form-row shopping__autocomplete">
+                    <div class="label">Название продукта</div>
+                    <input type="text" name="product" class="input input-white" placeholder="Начните вводить, например «Молоко»" autocomplete="off" list="shopping-products">
+                    <datalist id="shopping-products">
+                        <option value="Молоко 2.5%"></option>
+                        <option value="Молоко 3.2%"></option>
+                        <option value="Кефир 1%"></option>
+                        <option value="Творог 5%"></option>
+                        <option value="Творог 9%"></option>
+                        <option value="Йогурт греческий"></option>
+                        <option value="Сыр Российский"></option>
+                        <option value="Сметана 15%"></option>
+                        <option value="Масло сливочное"></option>
+                        <option value="Овсяные хлопья"></option>
+                        <option value="Гречневая крупа"></option>
+                        <option value="Рис"></option>
+                        <option value="Пшено"></option>
+                        <option value="Яйца куриные"></option>
+                        <option value="Хлеб ржаной"></option>
+                        <option value="Хлеб цельнозерновой"></option>
+                        <option value="Банан"></option>
+                        <option value="Яблоко"></option>
+                        <option value="Помидор"></option>
+                        <option value="Огурец"></option>
+                        <option value="Куриное филе"></option>
+                        <option value="Говядина"></option>
+                        <option value="Лосось"></option>
+                        <option value="Сахар"></option>
+                        <option value="Мёд"></option>
+                        <option value="Варенье"></option>
+                        <option value="Чай чёрный"></option>
+                        <option value="Кофе"></option>
+                    </datalist>
+                    <div class="shopping__form-hint">Подсказки подтягиваются из базы продуктов</div>
+                </div>
+                <div class="shopping__form-grid">
+                    <div class="shopping__form-row">
+                        <div class="label">Количество</div>
+                        <input type="number" name="quantity" class="input input-white" value="1" min="0" inputmode="decimal" data-add-qty>
+                    </div>
+                    <div class="shopping__form-row">
+                        <div class="label">Единица</div>
+                        <div class="select">
+                            <select name="unit" data-add-unit>
+                                <option value="гр">гр</option>
+                                <option value="мл">мл</option>
+                                <option value="шт">шт</option>
+                                <option value="упак">упак</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping__form-row">
+                    <div class="label">Категория</div>
+                    <div class="select">
+                        <select name="category" data-add-cat>
+                            <option value="Молочные">Молочные</option>
+                            <option value="Крупы">Крупы</option>
+                            <option value="Яйца">Яйца</option>
+                            <option value="Хлеб">Хлеб</option>
+                            <option value="Овощи">Овощи</option>
+                            <option value="Фрукты">Фрукты</option>
+                            <option value="Мясо">Мясо</option>
+                            <option value="Рыба">Рыба</option>
+                            <option value="Бакалея">Бакалея</option>
+                            <option value="Напитки">Напитки</option>
+                            <option value="Заморозка">Заморозка</option>
+                            <option value="Другое" selected>Другое</option>
+                        </select>
+                    </div>
+                    <div class="shopping__form-hint">Продукт добавится в список с пометкой «вручную»</div>
+                </div>
+                <div class="shopping__form-footer">
+                    <button type="button" class="l-btn l-btn-md l-btn-secondary-outline" data-close-modal>Отмена</button>
+                    <button type="submit" class="l-btn l-btn-md l-btn-primary">Добавить в список</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

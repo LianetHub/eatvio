@@ -1,0 +1,20 @@
+<div id="shopping-delete" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-sm offset">
+            <button type="button" class="popup__close icon-close" data-close-modal></button>
+            <div class="popup__caption title title-sm">Удалить продукт?</div>
+            <p class="shopping__confirm-text">Этот продукт входит в план диеты. Что сделать?</p>
+            <div class="shopping__confirm-options">
+                <button type="button" class="shopping__confirm-option" data-close-modal @click="window.__hideShopItem && window.__hideShopItem()">
+                    Убрать только из списка
+                    <small>Останется в плане диеты</small>
+                </button>
+                <button type="button" class="shopping__confirm-option shopping__confirm-option_danger" data-close-modal @click="window.__hideShopItem && window.__hideShopItem()">
+                    Исключить из плана диеты
+                    <small>Больше не появится в списках из этой диеты</small>
+                </button>
+            </div>
+            <button type="button" class="shopping__confirm-cancel" data-close-modal>Отмена</button>
+        </div>
+    </div>
+</div>
