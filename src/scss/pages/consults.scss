@@ -136,6 +136,28 @@
 		line-height: 100%;
 	}
 
+	// .consults__item-status
+	&__item-status {
+		display: inline-flex;
+		align-items: center;
+		margin-top: rem(8);
+		padding: rem(6) rem(10);
+		border-radius: 6px;
+		background: rgba(47, 128, 237, 0.1);
+		color: $accent;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		line-height: 1.2;
+		transition: background 0.3s ease, color 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: $accent;
+				color: #fff;
+			}
+		}
+	}
+
 	// .consults__item-thumb
 	&__item-thumb {
 		width: rem(50);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,25 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/podbor.min.css" />  <link rel="stylesheet" href="css/plans.min.css" />  <link rel="stylesheet" href="css/consults.min.css" />  <link rel="stylesheet" href="css/person.min.css" />  <link rel="stylesheet" href="css/chat.min.css" />  <link rel="stylesheet" href="css/homepage.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header header-guest">
+    <body>
+        <div class="wrapper">
+            <header class="header header-guest">
     <div class="header-guest__container">
         <a href="homepage.html" class="header__logo header-guest__logo">
             <img src="img/logo-russia.svg" alt="Итвио">
@@ -48,8 +43,10 @@
         </div>
     </div>
 </header>
- <main class="page podbor-page" data-podbor="guest" x-data="podbor">
-            <section class="content"> <div class="content__container">
+
+            <main class="page podbor-page" data-podbor="guest" x-data="podbor">
+                <section class="content">
+                    <div class="content__container">
     <script type="application/json" x-ref="consultantsJson">
 {
   "elena": {
@@ -595,8 +592,10 @@
         
     </section>
 </div>
- </section>
-        </main> <footer class="footer footer-guest">
+
+                </section>
+            </main>
+            <footer class="footer footer-guest">
     <div class="footer-guest__container">
         <span class="footer-guest__copy">Eatvio © 2026</span>
         <nav class="footer-guest__links" aria-label="Документы">
@@ -610,7 +609,9 @@
         </nav>
     </div>
 </footer>
- </div> 
+
+        </div>
+        
 
 
 
@@ -731,14 +732,14 @@
     </div>
 </div>
 
- <script>
-        var signInPopup = document.getElementById('sign-in');
-        if (signInPopup) signInPopup.classList.remove('open');
 
-    </script> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            var signInPopup = document.getElementById('sign-in');
+            if (signInPopup) signInPopup.classList.remove('open');
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>
