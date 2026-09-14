@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -13,19 +12,25 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
+    <link rel="stylesheet" href="css/common.min.css" />
+    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
-    <link rel="stylesheet" href="css/dev.css" />
-    
 
+    
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/shopping-list.min.css" /> 
+    <!-- Current Page Styles -->
+    
     
 
 </head>
 
-    <body>
-        <div class="wrapper">
-            <header class="header">
+
+<body>
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -461,93 +466,14 @@
             </div>
         </div>
     </div>
-</header>
-            <main class="page">
-                <section class="shopping">
-                    <div class="shopping__container">
-                        <div class="settings__header">
-                            <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
-                            <div class="settings__person-title title">
-                                Новый список
-                            </div>
-                        </div>
-                        <script>
-    window.shoppingCreate = function () {
-        return {
-            source: 'diet',
-            diet: 0,
-            diets: [
-                { name: 'Сбалансированный рацион 2000 ккал', days: 7 },
-                { name: 'Гречневая неделя', days: 7 },
-                { name: 'Средиземноморская диета', days: 14 },
-                { name: 'Программа снижения веса', days: 21 },
-                { name: 'Веган-меню', days: 7 }
-            ],
-            period: 'week',
-            custom: [1, 2, 3, 4, 5, 6, 7],
-            name: '',
-            get planDays() { return this.diets[this.diet].days; },
-            get presets() {
-                var n = this.planDays;
-                var p = [{ k: 'tomorrow', label: 'Завтра' }, { k: '3days', label: '3 дня' }];
-                if (n >= 7) p.push({ k: 'week', label: 'Неделя' });
-                if (n !== 7) p.push({ k: 'all', label: 'Весь план · ' + n + ' дн.' });
-                p.push({ k: 'custom', label: 'Произвольно' });
-                return p;
-            },
-            get dayList() {
-                var list = [];
-                for (var i = 1; i <= this.planDays; i++) list.push(i);
-                return list;
-            },
-            get selectedDays() {
-                var n = this.planDays;
-                var out = [];
-                if (this.period === 'tomorrow') return [1];
-                if (this.period === '3days') {
-                    for (var i = 1; i <= 3; i++) if (i <= n) out.push(i);
-                    return out;
-                }
-                if (this.period === 'week') {
-                    for (var j = 1; j <= 7; j++) if (j <= n) out.push(j);
-                    return out;
-                }
-                if (this.period === 'all') return this.dayList;
-                for (var k = 0; k < this.custom.length; k++) if (this.custom[k] <= n) out.push(this.custom[k]);
-                return out.sort(function (a, b) { return a - b; });
-            },
-            get previewHtml() {
-                if (this.source === 'manual') {
-                    return 'Пустой список. Добавляйте продукты вручную — по названию, количеству и категории.';
-                }
-                var count = this.selectedDays.length <= 1 ? 8 : this.selectedDays.length <= 3 ? 11 : 16;
-                var lab = {
-                    tomorrow: 'на завтра',
-                    '3days': 'на 3 дня',
-                    week: 'на неделю (7 дней)',
-                    all: 'на весь план (' + this.planDays + ' дней)',
-                    custom: 'на выбранные дни (' + this.selectedDays.length + ')'
-                }[this.period];
-                return 'Соберём <b>~' + count + ' продуктов</b> из диеты «' + this.diets[this.diet].name + '» ' + lab + '. Одинаковые продукты сложатся по весу.';
-            },
-            get createHref() {
-                return this.source === 'diet' ? 'shopping-list-5.html' : 'shopping-list-10.html';
-            },
-            onDietChange: function () {
-                var keys = this.presets.map(function (p) { return p.k; });
-                if (keys.indexOf(this.period) < 0) this.period = keys.indexOf('week') >= 0 ? 'week' : 'all';
-                this.custom = this.dayList.slice();
-            },
-            toggleCustom: function (d) {
-                var idx = this.custom.indexOf(d);
-                if (idx >= 0) this.custom.splice(idx, 1);
-                else this.custom.push(d);
-            }
-        };
-    };
-</script>
-<div class="shopping__card">
-    <div class="shopping__wiz" x-data="shoppingCreate()">
+</header> <main class="page">
+            <section class="shopping">
+                <div class="shopping__container">
+                    <div class="settings__header">
+                        <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
+                        <div class="settings__person-title title"> Новый список </div>
+                    </div> <div class="shopping__card">
+    <div class="shopping__wiz" x-data="{ source: 'diet', period: 'week', dietDays: 'balanced', d1: true, d2: true, d3: true, d4: true, d5: true, d6: true, d7: true, d8: true, d9: true, d10: true, d11: true, d12: true, d13: true, d14: true, d15: true, d16: true, d17: true, d18: true, d19: true, d20: true, d21: true }">
         <div class="shopping__wiz-step">
             <div class="shopping__wiz-label">Как собрать список</div>
             <div class="shopping__choice">
@@ -566,58 +492,84 @@
         <div x-show="source === 'diet'" x-cloak>
             <div class="shopping__form-row">
                 <div class="label">Диета</div>
-                <select class="input input-white" x-model.number="diet" @change="onDietChange()">
-                    <option value="0">Сбалансированный рацион 2000 ккал · 7 дн.</option>
-                    <option value="1">Гречневая неделя · 7 дн.</option>
-                    <option value="2">Средиземноморская диета · 14 дн.</option>
-                    <option value="3">Программа снижения веса · 21 дн.</option>
-                    <option value="4">Веган-меню · 7 дн.</option>
+                <select class="input input-white" x-model="dietDays" @change="period === 'all' && dietDays !== 'mediterranean' && dietDays !== 'weight' && (period = 'week')">
+                    <option value="balanced">Сбалансированный рацион 2000 ккал · 7 дн.</option>
+                    <option value="buckwheat">Гречневая неделя · 7 дн.</option>
+                    <option value="mediterranean">Средиземноморская диета · 14 дн.</option>
+                    <option value="weight">Программа снижения веса · 21 дн.</option>
+                    <option value="vegan">Веган-меню · 7 дн.</option>
                 </select>
             </div>
             <div class="shopping__form-row">
                 <div class="label">Период</div>
                 <div class="shopping__tabs content__tabs-wrapper">
-                    <template x-for="item in presets" :key="item.k">
-                        <button type="button" class="content__filter" :class="{ 'active': period === item.k }" @click="period = item.k" x-text="item.label"></button>
-                    </template>
+                    <button type="button" class="content__filter" :class="{ 'active': period === 'tomorrow' }" @click="period = 'tomorrow'">Завтра</button>
+                    <button type="button" class="content__filter" :class="{ 'active': period === '3days' }" @click="period = '3days'">3 дня</button>
+                    <button type="button" class="content__filter" :class="{ 'active': period === 'week' }" @click="period = 'week'">Неделя</button>
+                    <button type="button" class="content__filter" x-show="dietDays === 'mediterranean'" x-cloak :class="{ 'active': period === 'all' }" @click="period = 'all'">Весь план · 14 дн.</button>
+                    <button type="button" class="content__filter" x-show="dietDays === 'weight'" x-cloak :class="{ 'active': period === 'all' }" @click="period = 'all'">Весь план · 21 дн.</button>
+                    <button type="button" class="content__filter" :class="{ 'active': period === 'custom' }" @click="period = 'custom'">Произвольно</button>
                 </div>
                 <div class="shopping__day-grid" x-show="period === 'custom'" x-cloak>
-                    <template x-for="day in dayList" :key="day">
-                        <button type="button" class="shopping__daypop-chip" :class="{ '_active': custom.includes(day) }" @click="toggleCustom(day)" x-text="'Д' + day"></button>
-                    </template>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d1 }" @click="d1 = !d1">Д1</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d2 }" @click="d2 = !d2">Д2</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d3 }" @click="d3 = !d3">Д3</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d4 }" @click="d4 = !d4">Д4</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d5 }" @click="d5 = !d5">Д5</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d6 }" @click="d6 = !d6">Д6</button>
+                    <button type="button" class="shopping__daypop-chip" :class="{ '_active': d7 }" @click="d7 = !d7">Д7</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d8 }" @click="d8 = !d8">Д8</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d9 }" @click="d9 = !d9">Д9</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d10 }" @click="d10 = !d10">Д10</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d11 }" @click="d11 = !d11">Д11</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d12 }" @click="d12 = !d12">Д12</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d13 }" @click="d13 = !d13">Д13</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'mediterranean' || dietDays === 'weight'" x-cloak :class="{ '_active': d14 }" @click="d14 = !d14">Д14</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d15 }" @click="d15 = !d15">Д15</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d16 }" @click="d16 = !d16">Д16</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d17 }" @click="d17 = !d17">Д17</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d18 }" @click="d18 = !d18">Д18</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d19 }" @click="d19 = !d19">Д19</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d20 }" @click="d20 = !d20">Д20</button>
+                    <button type="button" class="shopping__daypop-chip" x-show="dietDays === 'weight'" x-cloak :class="{ '_active': d21 }" @click="d21 = !d21">Д21</button>
                 </div>
             </div>
         </div>
         <div class="shopping__form-row">
             <div class="label">Название списка</div>
-            <input type="text" class="input input-white" placeholder="Например: Покупки на неделю" x-model="name">
+            <input type="text" class="input input-white" placeholder="Например: Покупки на неделю">
         </div>
         <div class="shopping__preview-note">
             <span class="shopping__preview-note-icon icon-info"></span>
-            <div x-html="previewHtml"></div>
+            <div x-show="source === 'manual'" x-cloak>Пустой список. Добавляйте продукты вручную — по названию, количеству и категории.</div>
+            <div x-show="source === 'diet' && period === 'tomorrow'" x-cloak>Соберём <b>~8 продуктов</b> из выбранной диеты на завтра. Одинаковые продукты сложатся по весу.</div>
+            <div x-show="source === 'diet' && period === '3days'" x-cloak>Соберём <b>~11 продуктов</b> из выбранной диеты на 3 дня. Одинаковые продукты сложатся по весу.</div>
+            <div x-show="source === 'diet' && period === 'week'">Соберём <b>~16 продуктов</b> из выбранной диеты на неделю (7 дней). Одинаковые продукты сложатся по весу.</div>
+            <div x-show="source === 'diet' && period === 'all' && dietDays === 'mediterranean'" x-cloak>Соберём <b>~16 продуктов</b> из выбранной диеты на весь план (14 дней). Одинаковые продукты сложатся по весу.</div>
+            <div x-show="source === 'diet' && period === 'all' && dietDays === 'weight'" x-cloak>Соберём <b>~16 продуктов</b> из выбранной диеты на весь план (21 день). Одинаковые продукты сложатся по весу.</div>
+            <div x-show="source === 'diet' && period === 'custom'" x-cloak>Соберём продукты из выбранной диеты на выбранные дни. Одинаковые продукты сложатся по весу.</div>
         </div>
         <div class="shopping__wiz-foot">
             <a href="shopping-list.html" class="l-btn l-btn-md l-btn-secondary-outline">Отмена</a>
-            <a :href="createHref" class="l-btn l-btn-md l-btn-primary">Создать список</a>
+            <a href="shopping-list-5.html" class="l-btn l-btn-md l-btn-primary" x-show="source === 'diet'">Создать список</a>
+            <a href="shopping-list-10.html" class="l-btn l-btn-md l-btn-primary" x-show="source === 'manual'" x-cloak>Создать список</a>
         </div>
     </div>
 </div>
 
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>

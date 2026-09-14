@@ -1,59 +1,4 @@
-<script>
-    window.shoppingScreen = function (planDays) {
-        return {
-            period: 'week',
-            periodLabel: 'Неделя · 7 дней',
-            daypop: false,
-            days: {},
-            mode: 'categories',
-            planDays: Number(planDays) || 7,
-            get dayList() {
-                var list = [];
-                for (var i = 1; i <= this.planDays; i++) list.push(i);
-                return list;
-            },
-            get periodPresets() {
-                var p = [{ k: 'tomorrow', label: 'Завтра' }, { k: '3days', label: '3 дня' }];
-                if (this.planDays >= 7) p.push({ k: 'week', label: 'Неделя' });
-                if (this.planDays !== 7) p.push({ k: 'all', label: 'Весь план · ' + this.planDays + ' дн.' });
-                p.push({ k: 'custom', label: 'Календарь' });
-                return p;
-            },
-            init: function () {
-                var next = {};
-                for (var i = 1; i <= this.planDays; i++) next[i] = true;
-                this.days = next;
-                if (this.planDays !== 7) {
-                    this.period = 'all';
-                    this.periodLabel = 'Весь план · ' + this.planDays + ' дн.';
-                }
-            },
-            setPeriod: function (key) {
-                this.period = key;
-                this.daypop = false;
-                var selected = 0;
-                for (var d in this.days) if (this.days[d]) selected++;
-                var labels = {
-                    tomorrow: 'Завтра · 1 день',
-                    '3days': '3 дня',
-                    week: 'Неделя · 7 дней',
-                    all: 'Весь план · ' + this.planDays + ' дн.',
-                    custom: 'Выбрано дней: ' + selected
-                };
-                this.periodLabel = labels[key];
-            },
-            applyCustom: function () {
-                var n = 0;
-                for (var d in this.days) if (this.days[d]) n++;
-                if (!n) return;
-                this.period = 'custom';
-                this.periodLabel = 'Выбрано дней: ' + n;
-                this.daypop = false;
-            }
-        };
-    };
-</script>
-<section class="shopping" x-data="shoppingScreen('@@planDays')">
+<section class="shopping" x-data="{ period: 'week', periodLabel: 'Неделя · 7 дней', daypop: false, days: { 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true, 18: true, 19: true, 20: true, 21: true }, mode: 'categories' }">
     <div class="shopping__container">
         <div class="settings__header">
             <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
@@ -114,20 +59,56 @@
                 @@if (kind === "diet") {
                 <div class="shopping__period" @click.outside="daypop = false">
                     <div class="shopping__tabs content__tabs-wrapper">
-                        <template x-for="item in periodPresets" :key="item.k">
-                            <button type="button" class="content__filter" :class="{ 'active': period === item.k }" @click="item.k === 'custom' ? (period = 'custom', daypop = !daypop) : setPeriod(item.k)" x-text="item.label"></button>
-                        </template>
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'tomorrow' }" @click="period = 'tomorrow'; daypop = false; periodLabel = 'Завтра · 1 день'">Завтра</button>
+                        <button type="button" class="content__filter" :class="{ 'active': period === '3days' }" @click="period = '3days'; daypop = false; periodLabel = '3 дня'">3 дня</button>
+                        <button type="button" class="content__filter active" :class="{ 'active': period === 'week' }" @click="period = 'week'; daypop = false; periodLabel = 'Неделя · 7 дней'">Неделя</button>
+                        @@if (planDays === "14") {
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'all' }" @click="period = 'all'; daypop = false; periodLabel = 'Весь план · 14 дн.'">Весь план · 14 дн.</button>
+                        }
+                        @@if (planDays === "21") {
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'all' }" @click="period = 'all'; daypop = false; periodLabel = 'Весь план · 21 дн.'">Весь план · 21 дн.</button>
+                        }
+                        <button type="button" class="content__filter" :class="{ 'active': period === 'custom' }" @click.stop="period = 'custom'; daypop = !daypop">Календарь</button>
                     </div>
                     <div class="shopping__daypop" :class="{ 'open': daypop }" x-show="daypop" x-cloak @click.stop>
                         <div class="shopping__daypop-title">Выберите дни плана</div>
                         <div class="shopping__daypop-grid">
-                            <template x-for="day in dayList" :key="day">
-                                <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[day] }" @click="days[day] = !days[day]" x-text="'Д' + day"></button>
-                            </template>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[1] }" @click="days[1] = !days[1]">Д1</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[2] }" @click="days[2] = !days[2]">Д2</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[3] }" @click="days[3] = !days[3]">Д3</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[4] }" @click="days[4] = !days[4]">Д4</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[5] }" @click="days[5] = !days[5]">Д5</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[6] }" @click="days[6] = !days[6]">Д6</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[7] }" @click="days[7] = !days[7]">Д7</button>
+                            @@if (planDays === "14") {
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[8] }" @click="days[8] = !days[8]">Д8</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[9] }" @click="days[9] = !days[9]">Д9</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[10] }" @click="days[10] = !days[10]">Д10</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[11] }" @click="days[11] = !days[11]">Д11</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[12] }" @click="days[12] = !days[12]">Д12</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[13] }" @click="days[13] = !days[13]">Д13</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[14] }" @click="days[14] = !days[14]">Д14</button>
+                            }
+                            @@if (planDays === "21") {
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[8] }" @click="days[8] = !days[8]">Д8</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[9] }" @click="days[9] = !days[9]">Д9</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[10] }" @click="days[10] = !days[10]">Д10</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[11] }" @click="days[11] = !days[11]">Д11</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[12] }" @click="days[12] = !days[12]">Д12</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[13] }" @click="days[13] = !days[13]">Д13</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[14] }" @click="days[14] = !days[14]">Д14</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[15] }" @click="days[15] = !days[15]">Д15</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[16] }" @click="days[16] = !days[16]">Д16</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[17] }" @click="days[17] = !days[17]">Д17</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[18] }" @click="days[18] = !days[18]">Д18</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[19] }" @click="days[19] = !days[19]">Д19</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[20] }" @click="days[20] = !days[20]">Д20</button>
+                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[21] }" @click="days[21] = !days[21]">Д21</button>
+                            }
                         </div>
                         <div class="shopping__daypop-footer">
                             <button type="button" class="l-btn l-btn-sm l-btn-secondary-outline" @click="daypop = false">Отмена</button>
-                            <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="applyCustom()">Применить</button>
+                            <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="Object.values(days).some(Boolean) && (periodLabel = 'Выбрано дней: ' + Object.values(days).filter(Boolean).length, daypop = false)">Применить</button>
                         </div>
                     </div>
                 </div>
