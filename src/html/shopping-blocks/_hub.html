@@ -1,0 +1,85 @@
+<div class="shopping__hub">
+    <a href="shopping-list-4.html" class="shopping__create l-btn l-btn-md l-btn-primary l-btn-fullwidth icon-plus">Создать новый список</a>
+    @@if (hubState === "filled") {
+    <div class="shopping__sec"><span>Активные: <span class="shopping__sec-count"> 3</span></span></div>
+    <div class="shopping__lgrid">
+        @@include('./_hub-card.html', {
+            "status": "active",
+            "kind": "diet",
+            "href": "shopping-list-5.html",
+            "title": "Сбалансированный рацион 2000 ккал",
+            "period": "Неделя · 7 дней",
+            "source": "",
+            "count": "16 продуктов",
+            "date": "Обновлён сегодня",
+            "pct": "13",
+            "progress": "2/16",
+            "repeatHref": "shopping-list-5.html"
+        })
+        @@include('./_hub-card.html', {
+            "status": "active",
+            "kind": "diet",
+            "href": "shopping-list-5.html",
+            "title": "Средиземноморская диета",
+            "period": "Весь план · 14 дн.",
+            "source": "",
+            "count": "16 продуктов",
+            "date": "Обновлён вчера",
+            "pct": "0",
+            "progress": "0/16",
+            "repeatHref": "shopping-list-5.html"
+        })
+        @@include('./_hub-card.html', {
+            "status": "active",
+            "kind": "manual",
+            "href": "shopping-list-8.html",
+            "title": "Докупить на неделю",
+            "period": "",
+            "source": "Ручной список",
+            "count": "8 продуктов",
+            "date": "Вчера",
+            "pct": "0",
+            "progress": "0/8",
+            "repeatHref": "shopping-list-8.html"
+        })
+    </div>
+    <div class="shopping__sec">
+        <span>Недавно завершённые</span>
+        <a href="shopping-list-3.html" class="shopping__sec-link icon-arrow-right">Вся история</a>
+    </div>
+    <div class="shopping__lgrid">
+        @@include('./_hub-card.html', {
+            "status": "done",
+            "kind": "manual",
+            "href": "shopping-list-7.html",
+            "title": "Гречневая неделя",
+            "period": "",
+            "source": "Из диеты · Гречневая неделя",
+            "count": "8 продуктов",
+            "date": "Завершён 3 дня назад",
+            "pct": "100",
+            "progress": "8/8",
+            "repeatHref": "shopping-list-8.html"
+        })
+        @@include('./_hub-card.html', {
+            "status": "done",
+            "kind": "manual",
+            "href": "shopping-list-7.html",
+            "title": "Список на 3 дня",
+            "period": "",
+            "source": "Из диеты · Сбалансированный рацион",
+            "count": "9 продуктов",
+            "date": "Завершён 2 недели назад",
+            "pct": "100",
+            "progress": "9/9",
+            "repeatHref": "shopping-list-8.html"
+        })
+    </div>
+    }
+    @@if (hubState === "empty") {
+    <div class="shopping__state shopping__state_hub _visible">
+        <div class="shopping__state-emoji">🛒</div>
+        <p class="shopping__state-text">Пока нет активных списков. Создайте новый — из диеты или с нуля.</p>
+    </div>
+    }
+</div>

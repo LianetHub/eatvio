@@ -34,6 +34,441 @@
 		overflow: visible;
 	}
 
+	// .shopping__hub
+	&__hub {
+		margin-top: rem(16);
+
+		&_history {
+			margin-top: rem(16);
+		}
+	}
+
+	// .shopping__create
+	&__create {
+		margin-bottom: rem(8);
+	}
+
+	// .shopping__sec
+	&__sec {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(8);
+		margin: 1.25rem rem(4) rem(12);
+		font-size: rem(13);
+		font-weight: 600;
+		color: #909fba;
+
+		&:first-child {
+			margin-top: rem(4);
+		}
+	}
+
+	// .shopping__sec-count
+	&__sec-count {
+		font-weight: 700;
+		color: $mainColor;
+	}
+
+	// .shopping__sec-link
+	&__sec-link {
+		display: inline-flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 0.25rem;
+		color: $accent;
+		font-weight: 600;
+		transition: color 0.3s ease 0s;
+
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			font-size: 0.75em;
+			width: 0.75em;
+			height: 0.75em;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #0b5ed7;
+			}
+		}
+	}
+
+	transition: font-weight 0.3s ease 0s;
+	transition: border-radius 0.3s ease 0s;
+	transition: width 0.3s ease 0s;
+	transition: height 0.3s ease 0s;
+	transition: padding 0.3s ease 0s;
+	transition: margin 0.3s ease 0s;
+	transition: border 0.3s ease 0s;
+	transition: border-color 0.3s ease 0s;
+
+	// .shopping__lgrid
+	&__lgrid {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+	}
+
+	// .shopping__lcard
+	&__lcard {
+		border-radius: rem(8);
+		background: #fff;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+		transition: box-shadow 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+			}
+		}
+
+		&_done {
+			.shopping__lcard-title {
+				color: #7b8794;
+			}
+		}
+	}
+
+	// .shopping__lcard-link
+	&__lcard-link {
+		display: block;
+		padding: rem(16);
+		color: inherit;
+		text-decoration: none;
+	}
+
+	// .shopping__lcard-top
+	&__lcard-top {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(12);
+	}
+
+	// .shopping__lcard-ico
+	&__lcard-ico {
+		width: rem(42);
+		height: rem(42);
+		border-radius: 11px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		font-size: rem(20);
+		line-height: 1;
+
+		&_diet {
+			background: rgba(1, 154, 62, 0.1);
+		}
+
+		&_manual {
+			background: #eaf2fd;
+		}
+
+		&_done {
+			background: #f0f2f5;
+		}
+	}
+
+	// .shopping__lcard-check
+	&__lcard-check {
+		width: rem(20);
+		height: rem(20);
+		border-radius: 50%;
+		background: #019a3e;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+
+		&::before {
+			font-size: rem(10);
+			color: #fff;
+		}
+	}
+
+	// .shopping__lcard-body
+	&__lcard-body {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	// .shopping__lcard-title
+	&__lcard-title {
+		font-weight: 600;
+		font-size: rem(16);
+	}
+
+	// .shopping__lcard-meta
+	&__lcard-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(6);
+		margin-top: rem(8);
+	}
+
+	// .shopping__chip
+	&__chip {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(5);
+		font-size: rem(12);
+		font-weight: 500;
+		color: #7b8794;
+		background: #f0f2f5;
+		border: 1px solid #e6e6e6;
+		padding: rem(3) rem(10);
+		border-radius: rem(20);
+
+		&::before {
+			font-size: rem(12);
+		}
+
+		&_diet {
+			color: #019a3e;
+			background: rgba(1, 154, 62, 0.1);
+			border-color: rgba(1, 154, 62, 0.2);
+
+			&::before {
+				color: #019a3e;
+			}
+		}
+
+		&_manual {
+			color: $accent;
+			background: #eaf2fd;
+			border-color: #cfe3fb;
+		}
+
+		&_date {
+			color: #909fba;
+			background: transparent;
+			border-color: transparent;
+			padding-left: rem(2);
+		}
+	}
+
+	// .shopping__lcard-chev
+	&__lcard-chev {
+		color: #909fba;
+		align-self: center;
+		flex-shrink: 0;
+		font-size: rem(12);
+	}
+
+	// .shopping__lcard-prog
+	&__lcard-prog {
+		margin-top: rem(14);
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+	}
+
+	// .shopping__lcard-bar
+	&__lcard-bar {
+		flex: 1 1 auto;
+		height: rem(7);
+		border-radius: rem(20);
+		background: #f0f2f5;
+		overflow: hidden;
+
+		& i {
+			display: block;
+			height: 100%;
+			border-radius: inherit;
+			background: $accent;
+		}
+	}
+
+	// .shopping__lcard-txt
+	&__lcard-txt {
+		font-size: rem(13);
+		font-weight: 600;
+		color: #7b8794;
+		white-space: nowrap;
+	}
+
+	// .shopping__lcard-actions
+	&__lcard-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(8);
+		padding: 0 rem(16) rem(16);
+	}
+
+	// .shopping__banner
+	&__banner {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(12);
+		padding: rem(14) rem(16);
+		margin-top: rem(14);
+		border-radius: rem(8);
+		background: rgba(1, 154, 62, 0.08);
+		border: 1px solid rgba(1, 154, 62, 0.2);
+	}
+
+	// .shopping__banner-text
+	&__banner-text {
+		flex: 1 1 auto;
+		font-size: rem(14);
+
+		& b {
+			font-weight: 600;
+		}
+	}
+
+	// .shopping__wiz
+	&__wiz {
+		padding: rem(8) rem(16) rem(20);
+
+		.shopping__form-row {
+			margin-top: rem(16);
+		}
+
+		.shopping__tabs {
+			width: 100%;
+		}
+	}
+
+	// .shopping__wiz-step
+	&__wiz-step {
+		margin-top: rem(10);
+	}
+
+	// .shopping__wiz-label
+	&__wiz-label {
+		font-size: rem(13);
+		font-weight: 600;
+		color: #7b8794;
+		margin-bottom: rem(10);
+	}
+
+	// .shopping__choice
+	&__choice {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(12);
+
+		@media (min-width: $md5) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// .shopping__tile
+	&__tile {
+		border: 1.5px solid #e6e6e6;
+		border-radius: rem(13);
+		padding: rem(16);
+		text-align: left;
+		transition: all 0.3s ease 0s;
+		background: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: #cfdcef;
+			}
+		}
+
+		&._sel {
+			border-color: $accent;
+			background: #eaf2fd;
+			box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12);
+		}
+
+		& b {
+			display: block;
+			font-size: rem(15);
+			font-weight: 600;
+		}
+
+		& b+span {
+			display: block;
+			font-size: rem(13);
+			color: #909fba;
+			margin-top: rem(3);
+			font-weight: 400;
+		}
+	}
+
+	// .shopping__tile-icon
+	&__tile-icon {
+		width: rem(38);
+		height: rem(38);
+		border-radius: rem(10);
+		background: #f0f2f5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(10);
+		font-size: rem(18);
+
+		&_diet {
+			color: #019a3e;
+		}
+
+		.shopping__tile._sel & {
+			background: #fff;
+		}
+	}
+
+	// .shopping__day-grid
+	&__day-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(7);
+		margin-top: rem(12);
+
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(7, 1fr);
+		}
+	}
+
+	// .shopping__preview-note
+	&__preview-note {
+		margin-top: rem(4);
+		margin-bottom: rem(8);
+		background: #eaf2fd;
+		border: 1px solid #cfe3fb;
+		border-radius: rem(11);
+		padding: rem(13) rem(15);
+		font-size: rem(14);
+		color: #7b8794;
+		display: flex;
+		gap: rem(10);
+		align-items: flex-start;
+
+		& b {
+			color: $mainColor;
+			font-weight: 600;
+		}
+	}
+
+	// .shopping__preview-note-icon
+	&__preview-note-icon {
+		flex-shrink: 0;
+		margin-top: rem(1);
+		color: $accent;
+		font-size: rem(16);
+	}
+
+	// .shopping__wiz-foot
+	&__wiz-foot {
+		display: flex;
+		gap: rem(10);
+		margin-top: rem(16);
+
+		.l-btn {
+			flex: 1 1 50%;
+		}
+	}
+
 	// .shopping__diet
 	&__diet {
 		display: flex;
@@ -50,6 +485,10 @@
 		font-size: rem(18);
 		color: #019a3e;
 		flex-shrink: 0;
+
+		&_manual {
+			color: $accent;
+		}
 	}
 
 	// .shopping__diet-text
@@ -71,6 +510,11 @@
 		font-size: rem(12);
 		font-weight: 600;
 		padding: rem(4) rem(10);
+
+		&_green {
+			color: #019a3e;
+			background: rgba(1, 154, 62, 0.1);
+		}
 	}
 
 	// .shopping__controls
@@ -217,7 +661,7 @@
 		flex-shrink: 0;
 
 		& svg {
-			transform: rotate(-90deg);
+			transform: rotate(-90deg) scale(1.25);
 		}
 
 		& circle {
@@ -716,6 +1160,10 @@
 			border-radius: 0;
 			box-shadow: none;
 			border-top: 1px solid #f0f2f5;
+		}
+
+		&_hub {
+			margin-top: rem(16);
 		}
 	}
 

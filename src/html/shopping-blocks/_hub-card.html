@@ -1,0 +1,46 @@
+<article class="shopping__lcard@@if(status === 'done'){ shopping__lcard_done}">
+    <a href="@@href" class="shopping__lcard-link">
+        <div class="shopping__lcard-top">
+            @@if (status === "done") {
+            <div class="shopping__lcard-ico shopping__lcard-ico_done">
+                <span class="shopping__lcard-check icon-check"></span>
+            </div>
+            }
+            @@if (status === "active") {
+            @@if (kind === "diet") {
+            <div class="shopping__lcard-ico shopping__lcard-ico_diet">🥗</div>
+            }
+            @@if (kind === "manual") {
+            <div class="shopping__lcard-ico shopping__lcard-ico_manual">🛒</div>
+            }
+            }
+            <div class="shopping__lcard-body">
+                <div class="shopping__lcard-title">@@title</div>
+                <div class="shopping__lcard-meta">
+                    @@if (kind === "diet") {
+                    <span class="shopping__chip shopping__chip_diet icon-diet">Из диеты</span>
+                    <span class="shopping__chip">@@period</span>
+                    }
+                    @@if (kind === "manual") {
+                    <span class="shopping__chip shopping__chip_manual">@@source</span>
+                    }
+                    <span class="shopping__chip">@@count</span>
+                    <span class="shopping__chip shopping__chip_date">@@date</span>
+                </div>
+            </div>
+            <span class="shopping__lcard-chev icon-next" aria-hidden="true"></span>
+        </div>
+        @@if (status === "active") {
+        <div class="shopping__lcard-prog">
+            <div class="shopping__lcard-bar"><i style="width: @@pct%"></i></div>
+            <span class="shopping__lcard-txt">@@progress</span>
+        </div>
+        }
+    </a>
+    @@if (status === "done") {
+    <div class="shopping__lcard-actions">
+        <a href="@@href" class="l-btn l-btn-sm l-btn-secondary-outline icon-eye">Открыть</a>
+        <a href="@@repeatHref" class="l-btn l-btn-sm l-btn-primary icon-refresh">Повторить</a>
+    </div>
+    }
+</article>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Список покупок — пустой',
+    "stylesName": ["shopping-list"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 3
+            })
+            <main class="page">
+                @@include('html/shopping-blocks/_screen.html', {
+                "screenState": "empty-manual",
+                "kind": "manual",
+                "planDays": "7",
+                "pageTitle": "Новый список",
+                "dietName": "",
+                "source": "Ручной список"
+                })
+            </main>
+            @@include('html/_footer.html', {
+            "className": ""
+            })
+        </div>
+        @@include('html/shopping-blocks/_add-popup.html')
+        @@include('html/shopping-blocks/_share-popup.html')
+        @@include('html/shopping-blocks/_delete-popup.html')
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Eatvio | Список покупок — всё куплено',
+    'title': 'Eatvio | Списки покупок — пусто',
     "stylesName": ["shopping-list"]
     })
     <body>
@@ -10,17 +10,27 @@
             "active": 3
             })
             <main class="page">
-                @@include('html/shopping-blocks/_screen.html', {
-                "screenState": "done"
-                })
+                <section class="shopping">
+                    <div class="shopping__container">
+                        <div class="settings__header">
+                            <a href="my-diets.html" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Списки покупок
+                            </div>
+                            <div class="settings__actions">
+                                <a href="shopping-list-3.html" class="settings__action icon-clock"><span>История</span></a>
+                            </div>
+                        </div>
+                        @@include('html/shopping-blocks/_hub.html', {
+                        "hubState": "empty"
+                        })
+                    </div>
+                </section>
             </main>
             @@include('html/_footer.html', {
             "className": ""
             })
         </div>
-        @@include('html/shopping-blocks/_add-popup.html')
-        @@include('html/shopping-blocks/_share-popup.html')
-        @@include('html/shopping-blocks/_delete-popup.html')
         @@include('html/_js.html', {})
     </body>
 </html>

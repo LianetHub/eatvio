@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Eatvio | Список покупок — нет активной диеты',
+    'title': 'Eatvio | История списков',
     "stylesName": ["shopping-list"]
     })
     <body>
@@ -13,22 +13,12 @@
                 <section class="shopping">
                     <div class="shopping__container">
                         <div class="settings__header">
-                            <a href="my-diets.html" class="settings__back icon-arrow-short-left"></a>
+                            <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
                             <div class="settings__person-title title">
-                                Список покупок
+                                История списков
                             </div>
                         </div>
-                        <div class="shopping__card">
-                            <div class="shopping__state shopping__state_inner _visible">
-                                <div class="shopping__state-emoji">🥗</div>
-                                <div class="shopping__state-title title title-sm">Пока нет активной диеты</div>
-                                <p class="shopping__state-text">Выберите диету, чтобы собрать список покупок автоматически, — или составьте его вручную с нуля.</p>
-                                <div class="shopping__state-actions">
-                                    <a href="diets.html" class="l-btn l-btn-md l-btn-primary">Перейти к диетам</a>
-                                    <a href="shopping-list.html" class="l-btn l-btn-md l-btn-secondary">Добавить вручную</a>
-                                </div>
-                            </div>
-                        </div>
+                        @@include('html/shopping-blocks/_history.html')
                     </div>
                 </section>
             </main>

@@ -1,0 +1,131 @@
+<script>
+    window.shoppingCreate = function () {
+        return {
+            source: 'diet',
+            diet: 0,
+            diets: [
+                { name: 'Сбалансированный рацион 2000 ккал', days: 7 },
+                { name: 'Гречневая неделя', days: 7 },
+                { name: 'Средиземноморская диета', days: 14 },
+                { name: 'Программа снижения веса', days: 21 },
+                { name: 'Веган-меню', days: 7 }
+            ],
+            period: 'week',
+            custom: [1, 2, 3, 4, 5, 6, 7],
+            name: '',
+            get planDays() { return this.diets[this.diet].days; },
+            get presets() {
+                var n = this.planDays;
+                var p = [{ k: 'tomorrow', label: 'Завтра' }, { k: '3days', label: '3 дня' }];
+                if (n >= 7) p.push({ k: 'week', label: 'Неделя' });
+                if (n !== 7) p.push({ k: 'all', label: 'Весь план · ' + n + ' дн.' });
+                p.push({ k: 'custom', label: 'Произвольно' });
+                return p;
+            },
+            get dayList() {
+                var list = [];
+                for (var i = 1; i <= this.planDays; i++) list.push(i);
+                return list;
+            },
+            get selectedDays() {
+                var n = this.planDays;
+                var out = [];
+                if (this.period === 'tomorrow') return [1];
+                if (this.period === '3days') {
+                    for (var i = 1; i <= 3; i++) if (i <= n) out.push(i);
+                    return out;
+                }
+                if (this.period === 'week') {
+                    for (var j = 1; j <= 7; j++) if (j <= n) out.push(j);
+                    return out;
+                }
+                if (this.period === 'all') return this.dayList;
+                for (var k = 0; k < this.custom.length; k++) if (this.custom[k] <= n) out.push(this.custom[k]);
+                return out.sort(function (a, b) { return a - b; });
+            },
+            get previewHtml() {
+                if (this.source === 'manual') {
+                    return 'Пустой список. Добавляйте продукты вручную — по названию, количеству и категории.';
+                }
+                var count = this.selectedDays.length <= 1 ? 8 : this.selectedDays.length <= 3 ? 11 : 16;
+                var lab = {
+                    tomorrow: 'на завтра',
+                    '3days': 'на 3 дня',
+                    week: 'на неделю (7 дней)',
+                    all: 'на весь план (' + this.planDays + ' дней)',
+                    custom: 'на выбранные дни (' + this.selectedDays.length + ')'
+                }[this.period];
+                return 'Соберём <b>~' + count + ' продуктов</b> из диеты «' + this.diets[this.diet].name + '» ' + lab + '. Одинаковые продукты сложатся по весу.';
+            },
+            get createHref() {
+                return this.source === 'diet' ? 'shopping-list-5.html' : 'shopping-list-10.html';
+            },
+            onDietChange: function () {
+                var keys = this.presets.map(function (p) { return p.k; });
+                if (keys.indexOf(this.period) < 0) this.period = keys.indexOf('week') >= 0 ? 'week' : 'all';
+                this.custom = this.dayList.slice();
+            },
+            toggleCustom: function (d) {
+                var idx = this.custom.indexOf(d);
+                if (idx >= 0) this.custom.splice(idx, 1);
+                else this.custom.push(d);
+            }
+        };
+    };
+</script>
+<div class="shopping__card">
+    <div class="shopping__wiz" x-data="shoppingCreate()">
+        <div class="shopping__wiz-step">
+            <div class="shopping__wiz-label">Как собрать список</div>
+            <div class="shopping__choice">
+                <button type="button" class="shopping__tile" :class="{ '_sel': source === 'diet' }" @click="source = 'diet'">
+                    <span class="shopping__tile-icon shopping__tile-icon_diet icon-diet"></span>
+                    <b>Из диеты</b>
+                    <span>Продукты соберутся автоматически по плану</span>
+                </button>
+                <button type="button" class="shopping__tile" :class="{ '_sel': source === 'manual' }" @click="source = 'manual'">
+                    <span class="shopping__tile-icon shopping__tile-icon_manual">🛒</span>
+                    <b>Пустой список</b>
+                    <span>Начать с нуля и добавлять вручную</span>
+                </button>
+            </div>
+        </div>
+        <div x-show="source === 'diet'" x-cloak>
+            <div class="shopping__form-row">
+                <div class="label">Диета</div>
+                <select class="input input-white" x-model.number="diet" @change="onDietChange()">
+                    <option value="0">Сбалансированный рацион 2000 ккал · 7 дн.</option>
+                    <option value="1">Гречневая неделя · 7 дн.</option>
+                    <option value="2">Средиземноморская диета · 14 дн.</option>
+                    <option value="3">Программа снижения веса · 21 дн.</option>
+                    <option value="4">Веган-меню · 7 дн.</option>
+                </select>
+            </div>
+            <div class="shopping__form-row">
+                <div class="label">Период</div>
+                <div class="shopping__tabs content__tabs-wrapper">
+                    <template x-for="item in presets" :key="item.k">
+                        <button type="button" class="content__filter" :class="{ 'active': period === item.k }" @click="period = item.k" x-text="item.label"></button>
+                    </template>
+                </div>
+                <div class="shopping__day-grid" x-show="period === 'custom'" x-cloak>
+                    <template x-for="day in dayList" :key="day">
+                        <button type="button" class="shopping__daypop-chip" :class="{ '_active': custom.includes(day) }" @click="toggleCustom(day)" x-text="'Д' + day"></button>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="shopping__form-row">
+            <div class="label">Название списка</div>
+            <input type="text" class="input input-white" placeholder="Например: Покупки на неделю" x-model="name">
+        </div>
+        <div class="shopping__preview-note">
+            <span class="shopping__preview-note-icon icon-info"></span>
+            <div x-html="previewHtml"></div>
+        </div>
+        <div class="shopping__wiz-foot">
+            <a href="shopping-list.html" class="l-btn l-btn-md l-btn-secondary-outline">Отмена</a>
+            <a :href="createHref" class="l-btn l-btn-md l-btn-primary">Создать список</a>
+        </div>
+    </div>
+</div>

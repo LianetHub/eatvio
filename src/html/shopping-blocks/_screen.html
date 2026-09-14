@@ -1,9 +1,64 @@
-<section class="shopping" x-data="{ period: 'week', periodLabel: 'Неделя · 7 дней', daypop: false, days: { 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true }, mode: 'categories' }">
+<script>
+    window.shoppingScreen = function (planDays) {
+        return {
+            period: 'week',
+            periodLabel: 'Неделя · 7 дней',
+            daypop: false,
+            days: {},
+            mode: 'categories',
+            planDays: Number(planDays) || 7,
+            get dayList() {
+                var list = [];
+                for (var i = 1; i <= this.planDays; i++) list.push(i);
+                return list;
+            },
+            get periodPresets() {
+                var p = [{ k: 'tomorrow', label: 'Завтра' }, { k: '3days', label: '3 дня' }];
+                if (this.planDays >= 7) p.push({ k: 'week', label: 'Неделя' });
+                if (this.planDays !== 7) p.push({ k: 'all', label: 'Весь план · ' + this.planDays + ' дн.' });
+                p.push({ k: 'custom', label: 'Календарь' });
+                return p;
+            },
+            init: function () {
+                var next = {};
+                for (var i = 1; i <= this.planDays; i++) next[i] = true;
+                this.days = next;
+                if (this.planDays !== 7) {
+                    this.period = 'all';
+                    this.periodLabel = 'Весь план · ' + this.planDays + ' дн.';
+                }
+            },
+            setPeriod: function (key) {
+                this.period = key;
+                this.daypop = false;
+                var selected = 0;
+                for (var d in this.days) if (this.days[d]) selected++;
+                var labels = {
+                    tomorrow: 'Завтра · 1 день',
+                    '3days': '3 дня',
+                    week: 'Неделя · 7 дней',
+                    all: 'Весь план · ' + this.planDays + ' дн.',
+                    custom: 'Выбрано дней: ' + selected
+                };
+                this.periodLabel = labels[key];
+            },
+            applyCustom: function () {
+                var n = 0;
+                for (var d in this.days) if (this.days[d]) n++;
+                if (!n) return;
+                this.period = 'custom';
+                this.periodLabel = 'Выбрано дней: ' + n;
+                this.daypop = false;
+            }
+        };
+    };
+</script>
+<section class="shopping" x-data="shoppingScreen('@@planDays')">
     <div class="shopping__container">
         <div class="settings__header">
-            <a href="my-diets.html" class="settings__back icon-arrow-short-left"></a>
+            <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
             <div class="settings__person-title title">
-                Список покупок
+                @@pageTitle
             </div>
             <div class="settings__actions">
                 <button type="button" class="settings__action icon-gear" aria-label="Настройки списка"></button>
@@ -11,41 +66,79 @@
             </div>
         </div>
         <div class="shopping__card">
+            @@if (screenState === "archived") {
+            <div class="shopping__diet">
+                <span class="shopping__lcard-check icon-check"></span>
+                <p class="shopping__diet-text"><b>@@pageTitle</b> · @@source</p>
+                <span class="shopping__diet-tag shopping__diet-tag_green">Завершён 3 дня назад</span>
+            </div>
+            }
+            @@if (kind === "diet") {
+            @@if (screenState === "default") {
             <div class="shopping__diet">
                 <span class="shopping__diet-icon icon-diet"></span>
-                <p class="shopping__diet-text">Из диеты: <b>Сбалансированный рацион 2000 ккал</b></p>
+                <p class="shopping__diet-text">Из диеты: <b>@@dietName</b> · @@planDays дн.</p>
                 <span class="shopping__diet-tag" x-text="periodLabel">Неделя · 7 дней</span>
             </div>
+            }
+            @@if (screenState === "done") {
+            <div class="shopping__diet">
+                <span class="shopping__diet-icon icon-diet"></span>
+                <p class="shopping__diet-text">Из диеты: <b>@@dietName</b> · @@planDays дн.</p>
+                <span class="shopping__diet-tag" x-text="periodLabel">Неделя · 7 дней</span>
+            </div>
+            }
+            @@if (screenState === "empty-period") {
+            <div class="shopping__diet">
+                <span class="shopping__diet-icon icon-diet"></span>
+                <p class="shopping__diet-text">Из диеты: <b>@@dietName</b> · @@planDays дн.</p>
+                <span class="shopping__diet-tag" x-text="periodLabel">Неделя · 7 дней</span>
+            </div>
+            }
+            }
+            @@if (kind === "manual") {
+            @@if (screenState === "default") {
+            <div class="shopping__diet">
+                <span class="shopping__diet-icon shopping__diet-icon_manual">🛒</span>
+                <p class="shopping__diet-text"><b>@@pageTitle</b> · ручной список</p>
+            </div>
+            }
+            @@if (screenState === "empty-manual") {
+            <div class="shopping__diet">
+                <span class="shopping__diet-icon shopping__diet-icon_manual">🛒</span>
+                <p class="shopping__diet-text"><b>@@pageTitle</b> · ручной список</p>
+            </div>
+            }
+            }
             <div class="shopping__controls">
+                @@if (kind === "diet") {
                 <div class="shopping__period" @click.outside="daypop = false">
                     <div class="shopping__tabs content__tabs-wrapper">
-                        <button type="button" class="content__filter" :class="{ 'active': period === 'tomorrow' }" @click="period = 'tomorrow'; daypop = false; periodLabel = 'Завтра · 1 день'">Завтра</button>
-                        <button type="button" class="content__filter" :class="{ 'active': period === '3days' }" @click="period = '3days'; daypop = false; periodLabel = '3 дня'">3 дня</button>
-                        <button type="button" class="content__filter active" :class="{ 'active': period === 'week' }" @click="period = 'week'; daypop = false; periodLabel = 'Неделя · 7 дней'">Неделя</button>
-                        <button type="button" class="content__filter" :class="{ 'active': period === 'custom' }" @click.stop="period = 'custom'; daypop = !daypop">Календарь</button>
+                        <template x-for="item in periodPresets" :key="item.k">
+                            <button type="button" class="content__filter" :class="{ 'active': period === item.k }" @click="item.k === 'custom' ? (period = 'custom', daypop = !daypop) : setPeriod(item.k)" x-text="item.label"></button>
+                        </template>
                     </div>
                     <div class="shopping__daypop" :class="{ 'open': daypop }" x-show="daypop" x-cloak @click.stop>
                         <div class="shopping__daypop-title">Выберите дни плана</div>
                         <div class="shopping__daypop-grid">
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[1] }" @click="days[1] = !days[1]">Д1</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[2] }" @click="days[2] = !days[2]">Д2</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[3] }" @click="days[3] = !days[3]">Д3</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[4] }" @click="days[4] = !days[4]">Д4</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[5] }" @click="days[5] = !days[5]">Д5</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[6] }" @click="days[6] = !days[6]">Д6</button>
-                            <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[7] }" @click="days[7] = !days[7]">Д7</button>
+                            <template x-for="day in dayList" :key="day">
+                                <button type="button" class="shopping__daypop-chip" :class="{ '_active': days[day] }" @click="days[day] = !days[day]" x-text="'Д' + day"></button>
+                            </template>
                         </div>
                         <div class="shopping__daypop-footer">
                             <button type="button" class="l-btn l-btn-sm l-btn-secondary-outline" @click="daypop = false">Отмена</button>
-                            <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="Object.values(days).some(Boolean) && (periodLabel = 'Выбрано дней: ' + Object.values(days).filter(Boolean).length, daypop = false)">Применить</button>
+                            <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="applyCustom()">Применить</button>
                         </div>
                     </div>
                 </div>
+                }
                 <div class="shopping__controls-row">
+                    @@if (kind === "diet") {
                     <div class="shopping__tabs content__tabs-wrapper">
                         <button type="button" class="content__filter active" :class="{ 'active': mode === 'categories' }" @click="mode = 'categories'">По категориям</button>
                         <button type="button" class="content__filter" :class="{ 'active': mode === 'days' }" @click="mode = 'days'">По дням</button>
                     </div>
+                    }
                     <a href="#shopping-share" data-modal class="shopping__share-btn l-btn l-btn-md l-btn-primary icon-share">Поделиться</a>
                 </div>
             </div>
@@ -64,7 +157,23 @@
                 </div>
             </div>
             }
+            @@if (screenState === "archived") {
+            <div class="shopping__progress" data-progress>
+                <div class="shopping__progress-ring">
+                    <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                        <circle cx="23" cy="23" r="19" fill="none" stroke="#f0f2f5" stroke-width="5"></circle>
+                        <circle data-progress-ring cx="23" cy="23" r="19" fill="none" stroke="#2f80ed" stroke-width="5" stroke-linecap="round" stroke-dasharray="119" stroke-dashoffset="0"></circle>
+                    </svg>
+                    <span data-progress-value>100%</span>
+                </div>
+                <div class="shopping__progress-body">
+                    <div class="shopping__progress-text" data-progress-text>Куплено 8 из 8 продуктов</div>
+                    <div class="shopping__progress-bar"><i data-progress-bar style="width: 100%"></i></div>
+                </div>
+            </div>
+            }
             @@if (screenState === "default") {
+            @@if (kind === "diet") {
             <div class="shopping__progress" data-progress>
                 <div class="shopping__progress-ring">
                     <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
@@ -79,21 +188,76 @@
                 </div>
             </div>
             }
+            @@if (kind === "manual") {
+            <div class="shopping__progress" data-progress>
+                <div class="shopping__progress-ring">
+                    <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                        <circle cx="23" cy="23" r="19" fill="none" stroke="#f0f2f5" stroke-width="5"></circle>
+                        <circle data-progress-ring cx="23" cy="23" r="19" fill="none" stroke="#2f80ed" stroke-width="5" stroke-linecap="round" stroke-dasharray="119" stroke-dashoffset="119"></circle>
+                    </svg>
+                    <span data-progress-value>0%</span>
+                </div>
+                <div class="shopping__progress-body">
+                    <div class="shopping__progress-text" data-progress-text>Куплено 0 из 8 продуктов</div>
+                    <div class="shopping__progress-bar"><i data-progress-bar style="width: 0%"></i></div>
+                </div>
+            </div>
+            }
+            }
         </div>
+        @@if (screenState === "archived") {
+        <div class="shopping__banner">
+            <span class="shopping__lcard-check icon-check"></span>
+            <div class="shopping__banner-text"><b>Список завершён 3 дня назад — 8 продуктов куплено</b></div>
+            <a href="shopping-list-8.html" class="l-btn l-btn-sm l-btn-primary icon-refresh">Повторить покупки</a>
+        </div>
+        }
         @@if (screenState === "default") {
+        @@if (kind === "diet") {
         @@include('./_list-categories.html')
         @@include('./_list-days.html')
+        }
+        @@if (kind === "manual") {
+        @@include('./_list-manual.html')
+        }
+        <a href="#shopping-add" data-modal class="shopping__add icon-plus">Добавить продукт</a>
+        }
+        @@if (screenState === "archived") {
+        @@include('./_list-archive.html')
         <a href="#shopping-add" data-modal class="shopping__add icon-plus">Добавить продукт</a>
         }
         @@if (screenState === "done") {
         <div class="shopping__state _visible">
             <div class="shopping__state-emoji">🎉</div>
             <div class="shopping__state-title title title-sm">Список собран!</div>
-            <p class="shopping__state-text">Все продукты отмечены как купленные. Можно готовить по плану диеты или начать новый список.</p>
+            <p class="shopping__state-text">Все продукты отмечены как купленные. Сохранить список в историю или продолжить покупки?</p>
             <div class="shopping__state-actions">
-                <a href="shopping-list.html" class="l-btn l-btn-md l-btn-primary">Начать новый список</a>
+                <a href="shopping-list-3.html" class="l-btn l-btn-md l-btn-primary">Сохранить в историю</a>
+                <a href="shopping-list-5.html" class="l-btn l-btn-md l-btn-secondary-outline">Сбросить отметки</a>
             </div>
         </div>
+        }
+        @@if (screenState === "empty-period") {
+        <div class="shopping__state _visible">
+            <div class="shopping__state-emoji">🗓️</div>
+            <div class="shopping__state-title title title-sm">В выбранном периоде нет продуктов</div>
+            <p class="shopping__state-text">Выберите другой период или добавьте продукты вручную.</p>
+            <div class="shopping__state-actions">
+                <a href="shopping-list-5.html" class="l-btn l-btn-md l-btn-secondary-outline">Показать всю неделю</a>
+            </div>
+        </div>
+        <a href="#shopping-add" data-modal class="shopping__add icon-plus">Добавить продукт</a>
+        }
+        @@if (screenState === "empty-manual") {
+        <div class="shopping__state _visible">
+            <div class="shopping__state-emoji">🛒</div>
+            <div class="shopping__state-title title title-sm">Список пуст</div>
+            <p class="shopping__state-text">Добавьте первый продукт — по названию, количеству и категории.</p>
+            <div class="shopping__state-actions">
+                <a href="#shopping-add" data-modal class="l-btn l-btn-md l-btn-primary">Добавить продукт</a>
+            </div>
+        </div>
+        <a href="#shopping-add" data-modal class="shopping__add icon-plus">Добавить продукт</a>
         }
     </div>
 </section>
