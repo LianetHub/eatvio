@@ -165,6 +165,31 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+	// .diet__form-private
+	&__form-private {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(8) rem(10);
+		margin-top: 1rem;
+
+		.info-block {
+			flex: none;
+			cursor: help;
+		}
+	}
+	// .diet__form-private-control
+	&__form-private-control {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		cursor: pointer;
+	}
+	// .diet__form-private-text
+	&__form-private-text {
+		font-weight: 600;
+		font-size: rem(15);
+	}
 	// .diet__form-block
 	&__form-block {
 	}

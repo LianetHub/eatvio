@@ -239,6 +239,10 @@ body {
 		.article {
 			padding: 0;
 		}
+
+		.content__grid {
+			margin-top: 0;
+		}
 	}
 
 	&__grid {
@@ -2750,6 +2754,40 @@ body {
 		font-size: 1.125rem;
 		font-weight: 500;
 		z-index: 3;
+
+		&--private {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(6);
+			border: none;
+			background: #ef9c0b;
+			padding: rem(6) rem(10);
+			font-size: rem(12);
+			font-weight: 700;
+			letter-spacing: 0.03em;
+			line-height: 1.2;
+			text-transform: uppercase;
+			cursor: pointer;
+			box-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.18);
+
+			&::before {
+				font-size: rem(14);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: #d88709;
+				}
+			}
+
+			&.is-copied {
+				background: #019a3e;
+			}
+
+			span {
+				pointer-events: none;
+			}
+		}
 	}
 
 	// .plan__body

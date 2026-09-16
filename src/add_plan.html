@@ -2,7 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Добавление плана',
-    "stylesName": ["diet"]
+    "stylesName": ["diet", "plans"]
     })
     <body>
         <div class="wrapper">
@@ -20,6 +20,7 @@
                                 Добавление плана
                             </div>
                         </div>
+                        @@include('./html/_plan-scoring-collapse.html')
                         <form action="#" class="diet__form">
                             <div class="diet__form-block">
                                 <div class="label">
@@ -53,6 +54,16 @@
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="diet__form-private">
+                                        <label class="diet__form-private-control">
+                                            <span class="switcher">
+                                                <input type="checkbox" name="unlisted" class="switcher__input hidden" hidden>
+                                                <span class="switcher__btn"></span>
+                                            </span>
+                                            <span class="diet__form-private-text">Непубличный</span>
+                                        </label>
+                                        <span class="info-block dark-outline tooltip-lg" data-tooltip="Этот план питания доступен только по ссылке и не отображается публично. Вы можете поделиться ссылкой на него из раздела «Мои планы». План не отображается в общем списке «Планы питания» и не попадает в подборку планов.">?</span>
                                     </div>
                                     <div class="diet__form-checkboxes">
                                         <label class="checkbox-btn">

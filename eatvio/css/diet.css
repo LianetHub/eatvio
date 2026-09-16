@@ -203,6 +203,42 @@
   gap: 1rem;
 }
 
+.diet__form-private {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem 0.625rem;
+  margin-top: 1rem;
+}
+
+.diet__form-private .info-block {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  cursor: help;
+}
+
+.diet__form-private-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.diet__form-private-text {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
 .diet__form-columns {
   display: -ms-grid;
   display: grid;

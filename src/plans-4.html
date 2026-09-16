@@ -2,6 +2,7 @@
 <html lang="ru">
     @@include('html/_head.html', {
     'title': 'Eatvio | Популярные планы',
+    "stylesName": ["plans"]
     })
     <body>
         <div class="wrapper">
@@ -29,6 +30,90 @@
                                 <a href="" class="content__filter active">Черновики</a>
                             </div>
                         </div>
+                        <section class="plan-scoring" x-data="{ open: false }">
+                            <div class="plan-scoring__icon" aria-hidden="true">
+                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path d="M4 19V5M4 19h16"></path>
+                                    <path d="M8 16l3.5-4 3 2.5L20 8"></path>
+                                    <circle cx="20" cy="8" r="1.4" fill="currentColor" stroke="none"></circle>
+                                </svg>
+                            </div>
+                            <div class="plan-scoring__body">
+                                <h3 class="plan-scoring__title title title-bold">Как ваши планы попадают в подборку</h3>
+                                <p class="plan-scoring__lead">Когда пользователь подбирает питание, система показывает ему несколько подходящих планов — и часть из них выводит выше. Сначала план проходит <b>отбор</b>: он должен быть опубликован, заполнен и подходить под <b>настройки фильтра пользователя</b> (цель, длительность, тип). Прошедшие отбор планы ранжируются — <b>выше поднимаются те, у кого лучше рейтинг консультанта и кто сейчас онлайн</b>. Новым планам система тоже даёт место в подборке.</p>
+                                <div class="plan-scoring__actions">
+                                    <button type="button" class="plan-scoring__toggle l-btn l-btn-primary l-btn-sm icon-down" :class="{ '_open': open }" @click="open = !open">Как поднять план выше</button>
+                                    <a href="podbor.html" class="plan-scoring__link l-btn l-btn-secondary-outline l-btn-sm icon-arrow-short-right">Смотреть подборку планов</a>
+                                </div>
+                                <div class="plan-scoring__details" x-show="open" x-cloak>
+                                    <h4 class="plan-scoring__details-title">Что помогает подняться выше</h4>
+                                    <ul class="plan-scoring__factors">
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--star">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"></path></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Рейтинг консультанта</div>
+                                                <p class="plan-scoring__factor-desc">Рейтинг — у вас как у консультанта, а не у отдельного плана. Он растёт за вашу активность: посты, диеты и рецепты, причём <b>за рецепты баллов больше всего</b>. Покупки планов и отзывы на рейтинг не влияют — но отзывы всё равно стоит собирать, они повышают доверие пользователей.</p>
+                                            </div>
+                                        </li>
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--online">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="9"></circle></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Статус «онлайн»</div>
+                                                <p class="plan-scoring__factor-desc">Если вы сейчас на связи или были недавно — ваши планы показываются выше и подсвечиваются.</p>
+                                            </div>
+                                        </li>
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--card">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M7 13h7"></path></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Полнота карточки</div>
+                                                <p class="plan-scoring__factor-desc">Обложка, понятное описание, КБЖУ и длительность — план охотнее берут в подборку.</p>
+                                            </div>
+                                        </li>
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--filter">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16l-6 8v5l-4 2v-7z"></path></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Точность под запрос</div>
+                                                <p class="plan-scoring__factor-desc">Добавляйте в название и описание главное: цель, срок (7 / 14 / 21 день) и что план идёт <b>с персональной диетой</b> (если она есть) — так план точнее попадает под запрос пользователя.</p>
+                                            </div>
+                                        </li>
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--plans">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"></path><path d="M3 12l9 5 9-5"></path></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Несколько планов</div>
+                                                <p class="plan-scoring__factor-desc">Сделайте не один, а несколько планов — с разной <b>ценой, сроком, названием и описанием</b>. Так вы попадёте под больше настроек фильтра и чаще окажетесь в подборке.</p>
+                                            </div>
+                                        </li>
+                                        <li class="plan-scoring__factor">
+                                            <span class="plan-scoring__factor-icon plan-scoring__factor-icon--new">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 3l2 5 5 .4-3.8 3.3L16.5 17 12 14l-4.5 3 1.3-5.3L5 8.4 10 8z"></path></svg>
+                                            </span>
+                                            <div class="plan-scoring__factor-body">
+                                                <div class="plan-scoring__factor-title">Место для новичков</div>
+                                                <p class="plan-scoring__factor-desc">Даже без рейтинга новый план может попасть в подборку, если вы онлайн — это шанс на первые отзывы.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="plan-scoring__tip">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10c-.7.7-1 1.3-1 2H9c0-.7-.3-1.3-1-2a6 6 0 0 1 4-10z"></path></svg>
+                                        <div><b>Быстрый способ подняться:</b> дозаполните карточку плана, обновите его и заходите на платформу в часы, когда пользователи активнее — так вы чаще будете «онлайн» в момент подбора.</div>
+                                    </div>
+                                    <div class="plan-scoring__tip plan-scoring__tip--blue">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12a4 4 0 0 0 4 4h3a4 4 0 0 0 0-8h-1"></path><path d="M15 12a4 4 0 0 0-4-4H8a4 4 0 0 0 0 8h1"></path></svg>
+                                        <div><b>Про рецепты:</b> за рецепты вы получаете больше всего баллов к рейтингу. Создавайте их в разделе «Рецепты», копируйте ссылку на рецепт и вставляйте её в пост — так рецепт увидит больше людей, а рейтинг растёт быстрее.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <div class="content__body">
                             <div class="content__main">
                                 <div class="content__grid">

@@ -24,6 +24,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Mulish";
   src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
@@ -39,14 +47,6 @@
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
 }
 
 * {
@@ -5705,6 +5705,10 @@ body.dark-theme {
   padding: 0;
 }
 
+.content__main .content__grid {
+  margin-top: 0;
+}
+
 .content__grid {
   display: -ms-grid;
   display: grid;
@@ -7570,6 +7574,39 @@ body.dark-theme {
   font-size: 1.125rem;
   font-weight: 500;
   z-index: 3;
+}
+
+.plan__image-label--private {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.375rem;
+  border: none;
+  background: #ef9c0b;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.18);
+}
+
+.plan__image-label--private::before {
+  font-size: 0.875rem;
+}
+
+.plan__image-label--private.is-copied {
+  background: #019a3e;
+}
+
+.plan__image-label--private span {
+  pointer-events: none;
 }
 
 .plan__body {
@@ -14633,6 +14670,10 @@ body.dark-theme {
     height: auto;
     opacity: 1;
     visibility: visible;
+  }
+
+  .plan__image-label--private:hover {
+    background: #d88709;
   }
 
   .plan__type-tootlip-close:hover {

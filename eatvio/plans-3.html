@@ -20,6 +20,10 @@
 
     
     
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/plans.min.css" /> 
+    <!-- Current Page Styles -->
+    
     
 
 </head>
@@ -496,6 +500,9 @@
                             <div class="content__grid">
                                 <div class="plan">
                                     <div class="plan__image">
+                                        <button type="button" class="plan__image-label plan__image-label--private icon-copy" x-data="{ copied: false }" :class="{ 'is-copied': copied }" data-tooltip="Скопировать ссылку" @click="navigator.clipboard.writeText(new URL('plan.html', location.href).href).then(() => { copied = true; setTimeout(() => copied = false, 1500) })">
+                                            <span x-text="copied ? 'Скопировано' : 'Непубличный'"></span>
+                                        </button>
                                         <img src="img/plans/01.png" class="cover-image" alt="dish">
                                         <div class="announcement__stats">
                                             <div class="announcement__stat icon-eye-fill"> 200 </div>
