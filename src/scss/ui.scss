@@ -579,6 +579,56 @@
 	}
 }
 
+// Segmented control (Женщина / Мужчина и т.п.)
+.segment {
+	display: inline-flex;
+	width: 100%;
+	gap: rem(6);
+	padding: rem(4);
+	border-radius: rem(12);
+	border: 1px solid #f8f8f8;
+	background: #f8f8f8;
+
+	&__item {
+		flex: 1 1 0;
+		min-width: 0;
+		margin: 0;
+		display: block;
+		cursor: pointer;
+	}
+
+	&__input {
+		&:checked {
+			& + .segment__btn {
+				background: #fff;
+				color: #1b6fd6;
+				box-shadow: 0 1px 3px rgba(24, 55, 90, 0.12);
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: rem(10) rem(12);
+		border-radius: rem(8);
+		font-weight: 700;
+		font-size: rem(14);
+		line-height: 1.2;
+		color: #5a6774;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		transition:
+			background-color 0.15s ease,
+			color 0.15s ease,
+			box-shadow 0.15s ease;
+		user-select: none;
+	}
+}
+
 .switcher {
 	&.switcher-lg {
 		.switcher__btn {

@@ -1,0 +1,72 @@
+<div id="glossary-correction" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-md">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">Нашли неточность в КБЖУ?</div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body glossary-correction">
+                    <p class="glossary-correction__lead">Укажите корректные значения на 100&nbsp;г — мы проверим данные и обновим карточку продукта.</p>
+
+                    <div class="glossary-correction__field">
+                        <div class="label">Продукт</div>
+                        <input type="text" class="input input-white" value="@@productName" disabled>
+                    </div>
+
+                    <div class="glossary-correction__kbju">
+                        <div class="glossary-correction__kbju-head">
+                            <span class="glossary-correction__badge">Значения на 100 г</span>
+                        </div>
+                        <div class="glossary-correction__grid">
+                            <div class="glossary-correction__field">
+                                <div class="label">Калории, ккал</div>
+                                <input type="number" class="input input-white" min="0" value="@@kcal" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Белки, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="@@prot" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Жиры, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="@@fat" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Углеводы, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="@@carb" inputmode="decimal">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glossary-correction__grid glossary-correction__grid--meta">
+                        <div class="glossary-correction__field">
+                            <div class="label">Источник данных <span class="glossary-correction__optional">необязательно</span></div>
+                            <input type="text" class="input input-white" placeholder="Фото этикетки, сайт производителя…">
+                        </div>
+                        <div class="glossary-correction__field">
+                            <div class="label">Ваш e-mail <span class="glossary-correction__optional">необязательно</span></div>
+                            <input type="email" class="input input-white" placeholder="чтобы сообщить о результате проверки">
+                        </div>
+                    </div>
+
+                    <div class="glossary-correction__notes">
+                        <div class="glossary-correction__locked">
+                            <span class="info-block blue" aria-hidden="true">i</span>
+                            <div class="glossary-correction__locked-text">
+                                Через эту форму можно исправить <b>только КБЖУ</b>. Состав, производитель, вкус, штрихкод и другие поля меняет только модератор Итвио.
+                            </div>
+                        </div>
+                        <div class="glossary-disclaimer glossary-disclaimer--compact">
+                            <span class="info-block" aria-hidden="true">i</span>
+                            <span>Данные глоссария взяты из открытых источников и могут не совпадать с действительностью.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer glossary-correction__footer">
+                    <button type="button" class="l-btn l-btn-light l-btn-sm" data-close-modal>Отмена</button>
+                    <button type="button" class="l-btn l-btn-primary l-btn-sm" data-close-modal>Отправить на проверку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

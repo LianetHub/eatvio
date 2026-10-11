@@ -1,0 +1,86 @@
+<section class="glossary-section glossary-calc">
+    <h2 class="glossary-section__title title title-bold">Калькулятор нормы КБЖУ</h2>
+    <p class="glossary-section__sub">Персональный расчёт суточной нормы калорий и БЖУ по формуле Харриса-Бенедикта — по вашим параметрам.</p>
+
+    <div class="glossary-calc__card article">
+        <div class="article__block">
+            <form action="#" class="article__form" onsubmit="return false">
+                <div class="article__form-row">
+                    <div class="article__form-column">
+                        <h3 class="glossary-calc__heading">Общая информация</h3>
+                        <div class="segment" role="group" aria-label="Пол">
+                            <label class="segment__item">
+                                <input type="radio" name="glossary-sex" checked value="female" class="segment__input hidden" hidden>
+                                <span class="segment__btn">Женщина</span>
+                            </label>
+                            <label class="segment__item">
+                                <input type="radio" name="glossary-sex" value="male" class="segment__input hidden" hidden>
+                                <span class="segment__btn">Мужчина</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="article__form-logo">
+                        <img src="@img/logo-vertical-russia.svg" alt="Итвио">
+                    </div>
+                </div>
+                <div class="article__form-grid">
+                    <input type="number" name="age" class="input" placeholder="Возраст" value="30">
+                    <input type="number" name="height" class="input" placeholder="Рост, в см" value="170">
+                    <input type="number" name="weight" class="input" placeholder="Вес, в кг" value="65">
+                </div>
+                <span class="article__form-separator"></span>
+                <h3>Физическая активность</h3>
+                <div class="select select-blue">
+                    <select>
+                        <option value="1.2">1.2 - минимальный (сидячая работа, отсутствие физических нагрузок)</option>
+                        <option value="1.375">1.375 - низкий (легкие тренировки 1-3 раза в неделю)</option>
+                        <option value="1.55" selected>1.55 - средний (умеренные тренировки 3-5 раз в неделю)</option>
+                        <option value="1.725">1.725 - высокий (интенсивные тренировки 6-7 раз в неделю)</option>
+                        <option value="1.9">1.9 - очень высокий (профессиональные спортсмены, тяжелая физическая работа)</option>
+                    </select>
+                </div>
+                <button type="submit" class="article__form-submit l-btn l-btn-primary">Рассчитать</button>
+                <span class="article__form-separator"></span>
+            </form>
+            <div class="article__result">
+                <h3>Результат</h3>
+                <div class="article__result-content">
+                    <div class="article__result-subtitle">Ваша суточная норма калорий и&nbsp;БЖУ</div>
+                    <div class="article__form-logo mobile-only">
+                        <img src="@img/logo-vertical-russia.svg" alt="Итвио">
+                    </div>
+                </div>
+                <div class="article__calories">
+                    <div class="article__calories-value">— кКал*</div>
+                    <div class="article__calories-details">
+                        <div class="article__calories-caption">Из которых:</div>
+                        <div class="article__calories-row">
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Белки</div>
+                            </div>
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Жиры</div>
+                            </div>
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Углеводы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__result-hint">* Данные результаты являются рекомендацией, для более точных результатов обратитесь к специалистам.</div>
+            </div>
+        </div>
+    </div>
+</section>

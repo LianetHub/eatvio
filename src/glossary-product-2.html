@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Банан — глоссарий КБЖУ',
+    "stylesName": ["glossary", "homepage", "announcement", "article", "podbor"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-guest.html', {
+            "active": "glossary"
+            })
+            <main class="page glossary-page">
+                <section class="content glossary-product">
+                    <div class="content__container">
+                        <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                            <a href="glossary.html">Глоссарий КБЖУ</a>
+                            <span>/</span>
+                            <span>Фрукты</span>
+                            <span>/</span>
+                            <span class="glossary-crumb__current">Банан</span>
+                        </nav>
+
+                        <div class="glossary-product__grid">
+                            <div class="glossary-product__main">
+                                <div class="glossary-product__badges">
+                                    <span class="glossary-product__tag">Фрукты</span>
+                                    <span class="glossary-product__tag glossary-product__tag--mono">Монопродукт</span>
+                                    <span class="glossary-product__tag glossary-product__tag--noncomm">Некоммерческий</span>
+                                </div>
+                                <h1 class="glossary-product__title title title-bold">Банан</h1>
+                                <p class="glossary-product__syn">Также ищут: Банан, Банчик</p>
+                                <div class="glossary-product__desc-empty">Описание пока не заполнено</div>
+                                <div class="glossary-product__spec">
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Состав</span>
+                                        <span class="glossary-product__spec-val">Банан</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Вкус</span>
+                                        <span class="glossary-product__spec-val">
+                                            <span class="glossary-product__tastes">
+                                                <span class="glossary-product__taste">Банановый</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Производитель</span>
+                                        <span class="glossary-product__spec-val">Некоммерческий продукт</span>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('html/glossary-blocks/_kbju-card.html', {
+                            "kcal": "96",
+                            "pp": "6",
+                            "pf": "5",
+                            "pc": "89",
+                            "pfEnd": "11",
+                            "kProt": "6",
+                            "kFat": "5",
+                            "kCarb": "88",
+                            "prot": "1.5",
+                            "fat": "0.5",
+                            "carb": "22",
+                            "barP": "7",
+                            "barF": "2",
+                            "barC": "100"
+                            })
+                        </div>
+
+                        @@include('html/glossary-blocks/_promo-consult.html')
+                        @@include('html/glossary-blocks/_calculator.html')
+                        @@include('html/glossary-blocks/_posts.html')
+                        @@include('html/glossary-blocks/_producers.html')
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-guest.html', {})
+        </div>
+        @@include('html/glossary-blocks/_correction-modal.html', {
+        "productName": "Банан",
+        "kcal": "96",
+        "prot": "1.5",
+        "fat": "0.5",
+        "carb": "22"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

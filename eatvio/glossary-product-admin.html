@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru"> <head>
+    <title>Eatvio Layout</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/reset.min.css" />
+
+    
+    <link rel="stylesheet" href="css/common.min.css" />
+    
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+
+    
+
+    
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/glossary.min.css" />  <link rel="stylesheet" href="css/homepage.min.css" />  <link rel="stylesheet" href="css/announcement.min.css" />  <link rel="stylesheet" href="css/article.min.css" />  <link rel="stylesheet" href="css/podbor.min.css" /> 
+    <!-- Current Page Styles -->
+    
+    
+
+</head>
+
+
+<body>
+    <div class="wrapper"> <header class="header header-guest">
+    <div class="header-guest__container">
+        <a href="homepage.html" class="header__logo header-guest__logo">
+            <img src="img/logo-russia.svg" alt="Итвио">
+        </a>
+        <nav class="header-guest__nav" aria-label="Разделы">
+            <a href="homepage.html" class="header-guest__link icon-newsline">Лента</a>
+            <a href="homepage-recipes.html" class="header-guest__link icon-book-open">Рецепты</a>
+            <a href="homepage-diets.html" class="header-guest__link icon-diet">Диеты</a>
+            <a href="homepage-plans.html" class="header-guest__link icon-calendar">Планы<span class="header-guest__link-more">&nbsp;питания</span></a>
+            <a href="homepage-consultants.html" class="header-guest__link icon-users">Консуль&shy;танты</a>
+            <a href="glossary.html" class="header-guest__link icon-open-book active">Глос&shy;сарий</a>
+        </nav>
+        <div class="header-guest__actions">
+            <a href="" class="header__btn l-btn l-btn-secondary-outline l-btn-sm">Вход</a>
+            <a href="" class="header__btn l-btn l-btn-primary l-btn-sm">Регистрация</a>
+        </div>
+    </div>
+</header>
+ <main class="page glossary-page">
+            <section class="content glossary-product glossary-product--admin">
+                <div class="content__container">
+                    <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                        <a href="glossary.html">Глоссарий КБЖУ</a>
+                        <span>/</span>
+                        <span>Сладкое и снеки</span>
+                        <span>/</span>
+                        <span class="glossary-crumb__current">Сникерс</span>
+                        <span class="glossary-product__admin-badge">Спека · админ</span>
+                    </nav> <div class="glossary-product-intro">
+    <h2 class="glossary-product-intro__title title title-bold">Карточка продукта: откуда берутся данные и как считаются графики</h2>
+    <p class="glossary-product-intro__text">Слева — витрина карточки. У каждого элемента стоит номер, справа — из какого поля админки он берётся и по какому правилу. Пустые поля на витрине скрываются. Флаги помечены <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>.</p>
+    <div class="glossary-product-intro__legend">
+        <span class="glossary-product-intro__lg"><span class="glossary-mk" aria-hidden="true">N</span> <b>поле данных</b></span>
+        <span class="glossary-product-intro__lg"><span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span> <b>флаг (вкл/выкл)</b></span>
+        <span class="glossary-product-intro__lg"><b>Расчёт графиков</b> — в тёмной карточке в сайдбаре</span>
+    </div>
+</div>
+ <div class="glossary-product__grid">
+                        <div class="glossary-product__main">
+                            <div class="glossary-product__badges">
+                                <span class="glossary-product__anno">
+                                    <span class="glossary-mk" aria-hidden="true">3</span>
+                                    <span class="glossary-product__tag">Сладкое и снеки</span>
+                                </span>
+                                <span class="glossary-product__anno">
+                                    <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                    <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
+                                </span>
+                                <span class="glossary-product__anno">
+                                    <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                    <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
+                                </span>
+                            </div>
+                            <div class="glossary-product__anno">
+                                <span class="glossary-mk" aria-hidden="true">1</span>
+                                <h1 class="glossary-product__title title title-bold">Сникерс</h1>
+                            </div>
+                            <p class="glossary-product__syn glossary-product__anno">
+                                <span class="glossary-mk" aria-hidden="true">2</span> Также ищут: Сникерс, Snickers
+                            </p>
+                            <div class="glossary-product__desc-wrap glossary-product__anno" x-data="{ open: false }">
+                                <span class="glossary-mk" aria-hidden="true">6</span>
+                                <div class="glossary-product__desc-body">
+                                    <p class="glossary-product__desc" :class="{ 'is-clamped': !open }">Сникерс — популярный шоколадный батончик, сочетающий молочный шоколад, мягкую нугу, тягучую карамель и жареный арахис. Его вкус балансирует между сладостью и лёгкой солёностью, а текстура объединяет хруст орехов, нежность нуги и пластичность карамели. Продукт отличается высокой калорийностью: в 100 г содержится около 500 ккал, 9 г белка, 24 г жира и 60 г углеводов, значительная часть которых — сахара. Благодаря быстрым углеводам и жирам батончик даёт быстрый прилив энергии и чувство сытости, поэтому его часто берут в дорогу, на прогулки, в походы или используют как перекус при интенсивных нагрузках. Арахис добавляет растительный белок, магний и витамин E, но их количество невелико. Сникерс не является диетическим или функциональным продуктом: он содержит много добавленного сахара, насыщенных жиров и может включать пальмовое масло, эмульгаторы и ароматизаторы. Регулярное употребление в больших количествах может способствовать набору веса, колебаниям уровня глюкозы в крови и повышенной тяге к сладкому. Не рекомендуется при сахарном диабете, ожирении, а также при аллергии на арахис, молоко или сою. Тем, кто следит за составом рациона, стоит учитывать батончик в общей суточной калорийности и не превышать разумную порцию. Употреблять его лучше умеренно, как лакомство, а не ежедневный источник питания, сочетая с полноценными приёмами пищи. Удобная герметичная упаковка позволяет сохранить свежесть, защитить продукт от влаги и брать батончик с собой в любую поездку.</p>
+                                    <button type="button" class="glossary-product__desc-toggle" @click="open = !open" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                                </div>
+                            </div>
+                            <div class="glossary-product__spec">
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">7</span>Состав</span>
+                                    <span class="glossary-product__spec-val">Молочный шоколад, нуга, карамель, арахис, сахар, эмульгатор</span>
+                                </div>
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">8</span>Вкус</span>
+                                    <span class="glossary-product__spec-val">
+                                        <span class="glossary-product__tastes">
+                                            <span class="glossary-product__taste">Ореховый</span>
+                                            <span class="glossary-product__taste">Шоколадный</span>
+                                            <span class="glossary-product__taste">Сладкий</span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">9</span>Производитель</span>
+                                    <span class="glossary-product__spec-val">Марс (ООО «Марс»)</span>
+                                </div>
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">10</span>Страна / город</span>
+                                    <span class="glossary-product__spec-val">Россия</span>
+                                </div>
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">11</span>Порция</span>
+                                    <span class="glossary-product__spec-val">50 г</span>
+                                </div>
+                                <div class="glossary-product__spec-row glossary-product__anno">
+                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">12</span>Штрихкод</span>
+                                    <span class="glossary-product__spec-val">0099990005017</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glossary-product__side"> <aside class="glossary-kbju">
+    <div class="glossary-kbju__head">
+        <div class="glossary-kbju__brand">
+            <img src="img/logo-russia-gray.svg" alt="Итвио">
+            <span>КБЖУ продукта</span>
+        </div>
+        <div class="glossary-kbju__kcal"><span class="glossary-mk" aria-hidden="true">13</span>511</div>
+        <div class="glossary-kbju__unit">ккал на 100 г · поле «Калории»</div>
+    </div>
+    <div class="glossary-kbju__body">
+        <div class="glossary-kbju__break">
+            <div class="glossary-kbju__donut" style="background: conic-gradient(#e5533d 0 6%, #f0a623 6% 55%, #34c77b 55% 100%)">
+                <div class="glossary-kbju__donut-center">
+                    <b>511</b>
+                    <span>ккал</span>
+                </div>
+            </div>
+            <div class="glossary-kbju__legend">
+                <div class="glossary-kbju__legend-title"><span class="glossary-mk" aria-hidden="true">14</span>Калорийность по нутриентам</div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#e5533d"></i>
+                    <b>Белки</b>
+                    <span>6% · 32 ккал</span>
+                </div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#f0a623"></i>
+                    <b>Жиры</b>
+                    <span>49% · 257 ккал</span>
+                </div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#34c77b"></i>
+                    <b>Углеводы</b>
+                    <span>45% · 236 ккал</span>
+                </div>
+            </div>
+        </div>
+        <div class="glossary-kbju__bars">
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span><span class="glossary-mk" aria-hidden="true">13</span>Белки</span><span>8.1 г</span></div>
+                <div class="glossary-kbju__track"><i style="width:14%;background:#e5533d"></i></div>
+            </div>
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span>Жиры</span><span>28.5 г</span></div>
+                <div class="glossary-kbju__track"><i style="width:48%;background:#f0a623"></i></div>
+            </div>
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span>Углеводы</span><span>59 г</span></div>
+                <div class="glossary-kbju__track"><i style="width:100%;background:#34c77b"></i></div>
+            </div>
+        </div>
+        <p class="glossary-kbju__note">Данные носят справочный характер. Значения — на 100 г продукта.</p>
+    </div>
+    <div class="glossary-kbju__cta">
+        <a href="auth.html" class="l-btn l-btn-primary l-btn-fullwidth">Добавить в дневник питания</a>
+        <a href="#glossary-correction" data-modal class="glossary-kbju__report">Нашли неточность в КБЖУ?</a>
+    </div>
+</aside>
+ <div class="glossary-formula">
+    <h3 class="glossary-formula__title"><span class="glossary-mk glossary-mk--flag" aria-hidden="true">14</span> Как считаются графики</h3>
+    <p class="glossary-formula__lead">Донат «Калорийность по нутриентам» — вклад Б/Ж/У в калории:</p>
+    <div class="glossary-formula__box">
+        <div><span class="glossary-formula__cm"># энергия из каждого нутриента</span></div>
+        <div>ккал_<span class="glossary-formula__c1">Б</span> = <span class="glossary-formula__c1">Белки</span> × <span class="glossary-formula__ck">4</span></div>
+        <div>ккал_<span class="glossary-formula__c2">Ж</span> = <span class="glossary-formula__c2">Жиры</span> × <span class="glossary-formula__ck">9</span></div>
+        <div>ккал_<span class="glossary-formula__c3">У</span> = <span class="glossary-formula__c3">Углеводы</span> × <span class="glossary-formula__ck">4</span></div>
+        <div>сумма = ккал_Б + ккал_Ж + ккал_У</div>
+        <div><span class="glossary-formula__cm"># доля сегмента</span></div>
+        <div>доля_X = ккал_X / сумма × <span class="glossary-formula__ck">100%</span></div>
+    </div>
+    <div class="glossary-formula__live">
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">Б: 8.1 × 4</span><b>= 32 ккал → 6%</b></div>
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">Ж: 28.5 × 9</span><b>= 257 ккал → 49%</b></div>
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">У: 59 × 4</span><b>= 236 ккал → 45%</b></div>
+    </div>
+    <p class="glossary-formula__lead">Полоски в граммах — относительно самого крупного нутриента:</p>
+    <div class="glossary-formula__box">
+        ширина_X = <span class="glossary-formula__c1">значение_X</span> / max(Б,Ж,У) × <span class="glossary-formula__ck">100%</span>
+    </div>
+    <div class="glossary-formula__note">
+        <span class="info-block" aria-hidden="true">i</span>
+        <span>Сумма «ккал из Б/Ж/У» может немного отличаться от поля «Калории» из-за клетчатки и округлений. Крупная цифра всегда берётся из поля «Калории», а не пересчитывается.</span>
+    </div>
+</div>
+ <div class="glossary-fields">
+    <h3 class="glossary-fields__title">Карта полей: витрина → админка</h3>
+    <p class="glossary-fields__sub">По справке заполнения продукта</p>
+
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">1</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Название</div>
+            <div class="glossary-fields__desc">Заголовок карточки.</div>
+            <div class="glossary-fields__ex"><code>Сникерс</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">2</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Синонимы</div>
+            <div class="glossary-fields__desc">Строка «Также ищут». Упрощают поиск в дневнике; все синонимы привязаны к главному блюду.</div>
+            <div class="glossary-fields__ex"><code>Томат</code>, <code>Помидорка</code> → «Помидор»</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">3</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">ГОП / Группа</div>
+            <div class="glossary-fields__desc">Группа основного продукта — определяет состав и группу для фильтров и систематизации.</div>
+            <div class="glossary-fields__ex">Борщ → <code>говядина, капуста, картошка, свекла, морковь</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Моно / Полипродукт</div>
+            <div class="glossary-fields__desc">Флаг качества состава. Моно — один продукт; поли — два и более (специи и добавки не в счёт).</div>
+            <div class="glossary-fields__ex"><code>Банан</code> = моно · <code>Сникерс</code> = поли</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Коммерческий / Некоммерческий</div>
+            <div class="glossary-fields__desc">Флаг. У коммерческих обязателен производитель и штрихкод; домашние — «Некоммерческий продукт».</div>
+            <div class="glossary-fields__ex"><code>Сникерс</code> = комм. · <code>Рис отварной</code> = неком.</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">6</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Описание</div>
+            <div class="glossary-fields__desc">Генерируется LLM по качествам продукта, до 1500 знаков. Пустое → блок скрыт, показываем «Описание пока не заполнено».</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">7</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Состав</div>
+            <div class="glossary-fields__desc">Из чего состоит продукт.</div>
+            <div class="glossary-fields__ex">Молочный шоколад: <code>какао-масло, какао тёртое, …</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">8</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Вкус</div>
+            <div class="glossary-fields__desc">Оценочные теги по названию и составу.</div>
+            <div class="glossary-fields__ex"><code>Ореховый</code>, <code>шоколадный</code>, <code>сладкий</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">9</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Производитель</div>
+            <div class="glossary-fields__desc">Бренд / юрлицо. Для домашних — «Некоммерческий продукт».</div>
+            <div class="glossary-fields__ex"><code>Марс (ООО «Марс»)</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">10</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Страна (город)</div>
+            <div class="glossary-fields__desc">Населённый пункт и/или страна производства.</div>
+            <div class="glossary-fields__ex"><code>г. Москва, Россия</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">11</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Порция</div>
+            <div class="glossary-fields__desc">Масса отпускной коммерческой продукции.</div>
+            <div class="glossary-fields__ex"><code>150 г</code> · неустановлено → скрыть</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">12</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Штрихкод</div>
+            <div class="glossary-fields__desc">EAN / GS1. Только у коммерческих; у некоммерческих — пусто (строку не показываем).</div>
+            <div class="glossary-fields__ex"><code>0099990005017</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">13</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">КБЖУ</div>
+            <div class="glossary-fields__desc">Калории, белки, жиры, углеводы — на 100 г. Крупная цифра, полоски граммов.</div>
+            <div class="glossary-fields__ex"><code>511 ккал · Б 8.1 · Ж 28.5 · У 59</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">14</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">График калорийности</div>
+            <div class="glossary-fields__desc">Вычисляется из КБЖУ (не хранится). Формула — в тёмной карточке выше.</div>
+        </div>
+    </div>
+</div>
+ </div>
+                    </div> <section class="glossary-section">
+    <div class="content__section glossary-promo">
+        <div class="content__section-image">
+            <img src="img/RK/01.svg" alt="">
+        </div>
+        <div class="content__section-body">
+            <div class="content__section-title title title-bold">Разберём ваш рацион вместе с диетологом Итвио</div>
+            <p class="content__section-desc">Хотите не просто узнать КБЖУ, а выстроить питание под свою цель? Консультанты Итвио составят персональную диету и будут вести вас онлайн через дневник питания.</p>
+            <div class="glossary-promo__actions">
+                <a href="homepage-consultants.html" class="content__section-btn l-btn l-btn-primary l-btn-sm">Выбрать консультанта</a>
+                <a href="auth.html" class="l-btn l-btn-secondary-outline l-btn-sm">Начать бесплатно</a>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="glossary-section glossary-calc">
+    <h2 class="glossary-section__title title title-bold">Калькулятор нормы КБЖУ</h2>
+    <p class="glossary-section__sub">Персональный расчёт суточной нормы калорий и БЖУ по формуле Харриса-Бенедикта — по вашим параметрам.</p>
+
+    <div class="glossary-calc__card article">
+        <div class="article__block">
+            <form action="#" class="article__form" onsubmit="return false">
+                <div class="article__form-row">
+                    <div class="article__form-column">
+                        <h3 class="glossary-calc__heading">Общая информация</h3>
+                        <div class="segment" role="group" aria-label="Пол">
+                            <label class="segment__item">
+                                <input type="radio" name="glossary-sex" checked value="female" class="segment__input hidden" hidden>
+                                <span class="segment__btn">Женщина</span>
+                            </label>
+                            <label class="segment__item">
+                                <input type="radio" name="glossary-sex" value="male" class="segment__input hidden" hidden>
+                                <span class="segment__btn">Мужчина</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="article__form-logo">
+                        <img src="img/logo-vertical-russia.svg" alt="Итвио">
+                    </div>
+                </div>
+                <div class="article__form-grid">
+                    <input type="number" name="age" class="input" placeholder="Возраст" value="30">
+                    <input type="number" name="height" class="input" placeholder="Рост, в см" value="170">
+                    <input type="number" name="weight" class="input" placeholder="Вес, в кг" value="65">
+                </div>
+                <span class="article__form-separator"></span>
+                <h3>Физическая активность</h3>
+                <div class="select select-blue">
+                    <select>
+                        <option value="1.2">1.2 - минимальный (сидячая работа, отсутствие физических нагрузок)</option>
+                        <option value="1.375">1.375 - низкий (легкие тренировки 1-3 раза в неделю)</option>
+                        <option value="1.55" selected>1.55 - средний (умеренные тренировки 3-5 раз в неделю)</option>
+                        <option value="1.725">1.725 - высокий (интенсивные тренировки 6-7 раз в неделю)</option>
+                        <option value="1.9">1.9 - очень высокий (профессиональные спортсмены, тяжелая физическая работа)</option>
+                    </select>
+                </div>
+                <button type="submit" class="article__form-submit l-btn l-btn-primary">Рассчитать</button>
+                <span class="article__form-separator"></span>
+            </form>
+            <div class="article__result">
+                <h3>Результат</h3>
+                <div class="article__result-content">
+                    <div class="article__result-subtitle">Ваша суточная норма калорий и&nbsp;БЖУ</div>
+                    <div class="article__form-logo mobile-only">
+                        <img src="img/logo-vertical-russia.svg" alt="Итвио">
+                    </div>
+                </div>
+                <div class="article__calories">
+                    <div class="article__calories-value">— кКал*</div>
+                    <div class="article__calories-details">
+                        <div class="article__calories-caption">Из которых:</div>
+                        <div class="article__calories-row">
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Белки</div>
+                            </div>
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Жиры</div>
+                            </div>
+                            <div class="article__calories-block">
+                                <div class="article__calories-header">
+                                    <div class="article__calories-value">—</div>
+                                    <div class="article__calories-unit">гр</div>
+                                </div>
+                                <div class="article__calories-name">Углеводы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__result-hint">* Данные результаты являются рекомендацией, для более точных результатов обратитесь к специалистам.</div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="glossary-section glossary-posts">
+    <h2 class="glossary-section__title title title-bold">Итвио — это ещё и сообщество</h2>
+    <p class="glossary-section__sub">Рецепты, лайфхаки и истории пользователей и консультантов. Последние записи в ленте:</p>
+    <div class="content__announcements glossary-posts__list">
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-2.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Анна Власова</div>
+                    <div class="announcement__person-subtitle">Вчера в 12:11</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__slider">
+                <div class="announcement__slider-block swiper">
+                    <div class="swiper-wrapper">
+                        <div class="announcement__slide swiper-slide">
+                            <img src="img/announcement.png" class="cover-image" alt="announcement">
+                        </div>
+                        <div class="announcement__slide swiper-slide">
+                            <img src="img/dish.jpg" class="cover-image" alt="announcement">
+                        </div>
+                    </div>
+                    <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+                    <button type="button" class="announcement__slider-next swiper-button-next"></button>
+                    <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+                </div>
+            </div>
+            <div class="announcement__title">10 Trending Nutrition Research Articles of 2021</div>
+            <p class="announcement__desc">As 2020 begins, we took a look back at nutrition in the news during 2019. The most popular diet search according to Google was intermittent fasting.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-3.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Елена Четверикова</div>
+                    <div class="announcement__person-subtitle">3 дня назад</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__slider">
+                <div class="announcement__slider-block swiper">
+                    <div class="swiper-wrapper">
+                        <div class="announcement__slide swiper-slide">
+                            <img src="img/dish.jpg" class="cover-image" alt="announcement">
+                        </div>
+                    </div>
+                    <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+                    <button type="button" class="announcement__slider-next swiper-button-next"></button>
+                    <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+                </div>
+            </div>
+            <div class="announcement__title">Открыли для себя икру камбалы — и это очень вкусно!</div>
+            <p class="announcement__desc">Настоящий кладезь Омега-3 и Омега-6, витаминов A, D, E и группы B. Рецепт простой: очистить от плёнок, обвалять в муке из бурого риса, добавить специи и обжарить.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-4.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Ирина Рыженко-Цыганова</div>
+                    <div class="announcement__person-subtitle">Неделю назад</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__player">
+                <iframe src="https://rutube.ru/play/embed/e04ad6665562a48887bca949d6182b37/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            <div class="announcement__title">Почему важно жевать: разбор по науке</div>
+            <p class="announcement__desc">Быстрое поедание пищи статистически связано с более высоким ИМТ и рисками метаболических нарушений. Правило 20 минут и техника жевания.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-5.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Михаил Решетник · Итвио</div>
+                    <div class="announcement__person-subtitle">2 недели назад</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__title">«Нейтрализовать сахар витамином C»? Разбираем опасный лайфхак</div>
+            <p class="announcement__desc">Витамин C — не нейтрализатор сахара, такого механизма не существует. Зато существует гипервитаминоз. Простое правило: если «эксперт» продаёт продукт — это продажа.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-2.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Мария Власова</div>
+                    <div class="announcement__person-subtitle">5 часов назад</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__slider">
+                <div class="announcement__slider-block swiper">
+                    <div class="swiper-wrapper">
+                        <div class="announcement__slide swiper-slide">
+                            <img src="img/product.png" class="cover-image" alt="announcement">
+                        </div>
+                    </div>
+                    <button type="button" class="announcement__slider-prev swiper-button-prev"></button>
+                    <button type="button" class="announcement__slider-next swiper-button-next"></button>
+                    <div class="announcement__slider-pagination swiper-pagination icon-gallery"></div>
+                </div>
+            </div>
+            <div class="announcement__title">Овсянка на воде: 5 способов сделать вкусно</div>
+            <p class="announcement__desc">Многие считают овсянку скучной. На самом деле её легко превратить в любимый завтрак: добавьте банан и корицу, ложку арахисовой пасты, ягоды или какао.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+        <div class="content__announcement announcement">
+            <div class="announcement__header">
+                <div class="announcement__thumb">
+                    <img src="img/user-3.png" alt="user">
+                </div>
+                <div class="announcement__person">
+                    <div class="announcement__person-name">Игорь Морозов</div>
+                    <div class="announcement__person-subtitle">2 дня назад</div>
+                </div>
+                <div class="announcement__actions">
+    <div class="announcement__actions-block">
+        <button type="button" class="announcement__actions-btn icon-more-horizontal"></button>
+        <ul class="announcement__actions-list">
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">О рекламодателе</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Не интересно</button>
+            </li>
+            <li class="announcement__actions-item">
+                <button type="button" class="announcement__action">Пожаловаться</button>
+            </li>
+            <li class="announcement__actions-item">
+                <div class="announcement__actions-id">ID: 2jkfk45JG</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+            <div class="announcement__title">Как читать КБЖУ на упаковке и не обманываться</div>
+            <p class="announcement__desc">Производители часто указывают КБЖУ на 100 г, а порция — больше. Рассказываю, на что смотреть в составе и как не попасться на маркетинг.</p>
+            <a href="homepage.html" class="announcement__more">Читать далее</a>
+            <div class="announcement__bottom">
+    <div class="announcement__bottom-actions">
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-heart">234</button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-message-alternate">45</button>
+        <button type="button" class="announcement__bottom-action icon-share"></button>
+        <button type="button" data-announcement-action class="announcement__bottom-action icon-bookmark"></button>
+    </div>
+    <div class="announcement__views icon-eye">1</div>
+</div>
+        </div>
+    </div>
+    <div class="glossary-posts__more">
+        <a href="homepage.html" class="l-btn l-btn-secondary-outline">Открыть ленту Итвио</a>
+    </div>
+</section>
+ <section class="glossary-section glossary-section--producers">
+    <div class="glossary-producers">
+        <div class="glossary-producers__intro">
+            <div class="glossary-producers__brand">
+                <a href="glossary.html" class="logo" aria-label="Итвио">
+                    <img src="img/logo-russia-white.svg" alt="Итвио">
+                </a>
+            </div>
+            <h2 class="glossary-producers__title title title-bold">Производителям: пришлите официальные данные</h2>
+            <p class="glossary-producers__text">Вы производитель и хотите, чтобы в глоссарии были точные КБЖУ, состав и данные о вашей продукции? Отправьте заявку — мы добавим официальные данные с указанием бренда.</p>
+            <p class="glossary-producers__note">Сейчас информация собрана из открытых источников и может не совпадать с действительностью. Официальные данные от производителя помогают это исправить.</p>
+        </div>
+        <form action="#" class="glossary-producers__form" onsubmit="return false">
+            <div class="glossary-producers__field">
+                <label class="glossary-producers__label">E-mail *</label>
+                <input type="email" class="input" placeholder="you@company.ru">
+            </div>
+            <div class="glossary-producers__field">
+                <label class="glossary-producers__label">Название организации *</label>
+                <input type="text" class="input" placeholder="ООО «Компания»">
+            </div>
+            <div class="glossary-producers__grid">
+                <div class="glossary-producers__field">
+                    <label class="glossary-producers__label">ОГРН</label>
+                    <input type="text" class="input" inputmode="numeric" placeholder="1027700000000">
+                </div>
+                <div class="glossary-producers__field">
+                    <label class="glossary-producers__label">Контактное лицо</label>
+                    <input type="text" class="input" placeholder="Имя, должность">
+                </div>
+            </div>
+            <div class="glossary-producers__field">
+                <label class="glossary-producers__label">Торговая марка</label>
+                <input type="text" class="input" placeholder="Бренд / ТМ">
+            </div>
+            <button type="submit" class="l-btn l-btn-primary l-btn-fullwidth">Отправить заявку</button>
+        </form>
+    </div>
+</section>
+
+                </div>
+            </section>
+        </main> <footer class="footer footer-guest">
+    <div class="footer-guest__container">
+        <span class="footer-guest__copy">Eatvio © 2026</span>
+        <nav class="footer-guest__links" aria-label="Документы">
+            <a href="" class="footer__link">Публичная оферта</a>
+            <a href="" class="footer__link">Политика конфиденциальности</a>
+            <a href="" class="footer__link">О компании</a>
+            <a href="vacancies.html" class="footer__link">Вакансии</a>
+            <a href="" class="footer__link">Полезное</a>
+            <a href="" class="footer__link">Русский</a>
+            <a href="" class="footer__link">English</a>
+        </nav>
+    </div>
+</footer>
+ </div> <div id="glossary-correction" class="popup">
+    <div class="popup__content">
+        <div class="popup__body popup__body-md">
+            <div class="popup__step">
+                <div class="popup__header">
+                    <div class="popup__header-title">Нашли неточность в КБЖУ?</div>
+                    <button type="button" class="popup__close icon-close" data-close-modal></button>
+                </div>
+                <div class="popup__step-body glossary-correction">
+                    <p class="glossary-correction__lead">Укажите корректные значения на 100&nbsp;г — мы проверим данные и обновим карточку продукта.</p>
+
+                    <div class="glossary-correction__field">
+                        <div class="label">Продукт</div>
+                        <input type="text" class="input input-white" value="Сникерс" disabled>
+                    </div>
+
+                    <div class="glossary-correction__kbju">
+                        <div class="glossary-correction__kbju-head">
+                            <span class="glossary-correction__badge">Значения на 100 г</span>
+                        </div>
+                        <div class="glossary-correction__grid">
+                            <div class="glossary-correction__field">
+                                <div class="label">Калории, ккал</div>
+                                <input type="number" class="input input-white" min="0" value="511" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Белки, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="8.1" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Жиры, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="28.5" inputmode="decimal">
+                            </div>
+                            <div class="glossary-correction__field">
+                                <div class="label">Углеводы, г</div>
+                                <input type="number" class="input input-white" min="0" step="0.1" value="59" inputmode="decimal">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glossary-correction__grid glossary-correction__grid--meta">
+                        <div class="glossary-correction__field">
+                            <div class="label">Источник данных <span class="glossary-correction__optional">необязательно</span></div>
+                            <input type="text" class="input input-white" placeholder="Фото этикетки, сайт производителя…">
+                        </div>
+                        <div class="glossary-correction__field">
+                            <div class="label">Ваш e-mail <span class="glossary-correction__optional">необязательно</span></div>
+                            <input type="email" class="input input-white" placeholder="чтобы сообщить о результате проверки">
+                        </div>
+                    </div>
+
+                    <div class="glossary-correction__notes">
+                        <div class="glossary-correction__locked">
+                            <span class="info-block blue" aria-hidden="true">i</span>
+                            <div class="glossary-correction__locked-text">
+                                Через эту форму можно исправить <b>только КБЖУ</b>. Состав, производитель, вкус, штрихкод и другие поля меняет только модератор Итвио.
+                            </div>
+                        </div>
+                        <div class="glossary-disclaimer glossary-disclaimer--compact">
+                            <span class="info-block" aria-hidden="true">i</span>
+                            <span>Данные глоссария взяты из открытых источников и могут не совпадать с действительностью.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer glossary-correction__footer">
+                    <button type="button" class="l-btn l-btn-light l-btn-sm" data-close-modal>Отмена</button>
+                    <button type="button" class="l-btn l-btn-primary l-btn-sm" data-close-modal>Отправить на проверку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

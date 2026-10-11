@@ -15,6 +15,19 @@
 
 	&.announcement-lg {
 		padding: em(24) em(30) em(30);
+
+		.announcement__slider,
+		.announcement__player {
+			margin-left: rem(-30);
+			margin-right: rem(-30);
+		}
+
+		.announcement__bottom {
+			margin-left: rem(-30);
+			margin-right: rem(-30);
+			padding-left: rem(30);
+			padding-right: rem(30);
+		}
 	}
 
 	// .announcement__header
@@ -366,9 +379,8 @@
 		position: relative;
 		margin: em(18) rem(-16) em(0);
 
-		@media (min-width:$md4) {
+		@media (min-width: $md4) {
 			margin: em(18) rem(-24) em(0);
-
 		}
 
 		@media (any-hover: hover) {
@@ -531,6 +543,11 @@
 	&__player {
 		margin: em(18) rem(-16) em(0);
 		aspect-ratio: math.div(970, 520);
+
+		@media (min-width: $md4) {
+			margin-left: rem(-24);
+			margin-right: rem(-24);
+		}
 
 		& iframe {
 			width: 100%;
@@ -997,13 +1014,20 @@
 	// .announcement__bottom
 	&__bottom {
 		margin-top: rem(20);
-		margin-inline: rem(-20);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
 		border-top: rem(1) solid #e2e3e9;
-		padding: rem(20) 1.5rem 0.5rem;
+		padding: rem(16) rem(16) rem(4);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
+
+		@media (min-width: $md4) {
+			margin-left: rem(-24);
+			margin-right: rem(-24);
+			padding: rem(20) rem(24) rem(4);
+		}
 	}
 
 	// .announcement__bottom-actions

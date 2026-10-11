@@ -1,0 +1,26 @@
+<div class="glossary-formula">
+    <h3 class="glossary-formula__title"><span class="glossary-mk glossary-mk--flag" aria-hidden="true">14</span> Как считаются графики</h3>
+    <p class="glossary-formula__lead">Донат «Калорийность по нутриентам» — вклад Б/Ж/У в калории:</p>
+    <div class="glossary-formula__box">
+        <div><span class="glossary-formula__cm"># энергия из каждого нутриента</span></div>
+        <div>ккал_<span class="glossary-formula__c1">Б</span> = <span class="glossary-formula__c1">Белки</span> × <span class="glossary-formula__ck">4</span></div>
+        <div>ккал_<span class="glossary-formula__c2">Ж</span> = <span class="glossary-formula__c2">Жиры</span> × <span class="glossary-formula__ck">9</span></div>
+        <div>ккал_<span class="glossary-formula__c3">У</span> = <span class="glossary-formula__c3">Углеводы</span> × <span class="glossary-formula__ck">4</span></div>
+        <div>сумма = ккал_Б + ккал_Ж + ккал_У</div>
+        <div><span class="glossary-formula__cm"># доля сегмента</span></div>
+        <div>доля_X = ккал_X / сумма × <span class="glossary-formula__ck">100%</span></div>
+    </div>
+    <div class="glossary-formula__live">
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">Б: @@prot × 4</span><b>= @@kProt ккал → @@pp%</b></div>
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">Ж: @@fat × 9</span><b>= @@kFat ккал → @@pf%</b></div>
+        <div class="glossary-formula__row"><span class="glossary-formula__cm">У: @@carb × 4</span><b>= @@kCarb ккал → @@pc%</b></div>
+    </div>
+    <p class="glossary-formula__lead">Полоски в граммах — относительно самого крупного нутриента:</p>
+    <div class="glossary-formula__box">
+        ширина_X = <span class="glossary-formula__c1">значение_X</span> / max(Б,Ж,У) × <span class="glossary-formula__ck">100%</span>
+    </div>
+    <div class="glossary-formula__note">
+        <span class="info-block" aria-hidden="true">i</span>
+        <span>Сумма «ккал из Б/Ж/У» может немного отличаться от поля «Калории» из-за клетчатки и округлений. Крупная цифра всегда берётся из поля «Калории», а не пересчитывается.</span>
+    </div>
+</div>

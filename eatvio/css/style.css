@@ -282,8 +282,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "Mulish";
-  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -291,8 +291,8 @@ input[type=number] {
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Mulish-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Mulish-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -3410,6 +3410,65 @@ body.dark-theme {
 .menu-btn:active {
   background: #2f80ed;
   color: #fff;
+}
+
+.segment {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  gap: 0.375rem;
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f8f8f8;
+  background: #f8f8f8;
+}
+
+.segment__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.segment__input:checked + .segment__btn {
+  background: #fff;
+  color: #1b6fd6;
+  -webkit-box-shadow: 0 1px 3px rgba(24, 55, 90, 0.12);
+          box-shadow: 0 1px 3px rgba(24, 55, 90, 0.12);
+}
+
+.segment__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #5a6774;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease, color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .switcher.switcher-lg .switcher__btn {
@@ -10770,7 +10829,7 @@ body.dark-theme {
   z-index: 1;
 }
 
-.article__form {
+.article__form:not(:first-child) {
   margin-top: 2rem;
 }
 

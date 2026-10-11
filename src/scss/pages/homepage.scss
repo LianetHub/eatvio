@@ -99,14 +99,20 @@
 		justify-content: center;
 		gap: rem(2);
 		min-width: 0;
-		padding: rem(4) rem(2);
+		padding: rem(4) rem(1);
 		border-radius: 0;
 		font-weight: 500;
-		font-size: rem(10);
-		line-height: 1.2;
+		font-size: rem(9);
+		line-height: 1.15;
 		text-align: center;
 		color: #7a8699;
 		transition: color 0.15s ease, background-color 0.15s ease;
+
+		@media (min-width: $md6) {
+			font-size: rem(10);
+			padding: rem(4) rem(2);
+			line-height: 1.2;
+		}
 
 		&::before {
 			font-size: rem(22);

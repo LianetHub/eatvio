@@ -1,0 +1,57 @@
+<aside class="glossary-kbju">
+    <div class="glossary-kbju__head">
+        <div class="glossary-kbju__brand">
+            <img src="@img/logo-russia-gray.svg" alt="Итвио">
+            <span>КБЖУ продукта</span>
+        </div>
+        <div class="glossary-kbju__kcal">@@if(typeof admin !== 'undefined' && admin){<span class="glossary-mk" aria-hidden="true">13</span>}@@kcal</div>
+        <div class="glossary-kbju__unit">@@if(typeof admin !== 'undefined' && admin){ккал на 100 г · поле «Калории»}@@if(typeof admin === 'undefined' || !admin){ккал на 100 г}</div>
+    </div>
+    <div class="glossary-kbju__body">
+        <div class="glossary-kbju__break">
+            <div class="glossary-kbju__donut" style="background: conic-gradient(#e5533d 0 @@pp%, #f0a623 @@pp% @@pfEnd%, #34c77b @@pfEnd% 100%)">
+                <div class="glossary-kbju__donut-center">
+                    <b>@@kcal</b>
+                    <span>ккал</span>
+                </div>
+            </div>
+            <div class="glossary-kbju__legend">
+                <div class="glossary-kbju__legend-title">@@if(typeof admin !== 'undefined' && admin){<span class="glossary-mk" aria-hidden="true">14</span>}Калорийность по нутриентам</div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#e5533d"></i>
+                    <b>Белки</b>
+                    <span>@@pp% · @@kProt ккал</span>
+                </div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#f0a623"></i>
+                    <b>Жиры</b>
+                    <span>@@pf% · @@kFat ккал</span>
+                </div>
+                <div class="glossary-kbju__legend-row">
+                    <i style="background:#34c77b"></i>
+                    <b>Углеводы</b>
+                    <span>@@pc% · @@kCarb ккал</span>
+                </div>
+            </div>
+        </div>
+        <div class="glossary-kbju__bars">
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span>@@if(typeof admin !== 'undefined' && admin){<span class="glossary-mk" aria-hidden="true">13</span>}Белки</span><span>@@prot г</span></div>
+                <div class="glossary-kbju__track"><i style="width:@@barP%;background:#e5533d"></i></div>
+            </div>
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span>Жиры</span><span>@@fat г</span></div>
+                <div class="glossary-kbju__track"><i style="width:@@barF%;background:#f0a623"></i></div>
+            </div>
+            <div class="glossary-kbju__bar">
+                <div class="glossary-kbju__bar-top"><span>Углеводы</span><span>@@carb г</span></div>
+                <div class="glossary-kbju__track"><i style="width:@@barC%;background:#34c77b"></i></div>
+            </div>
+        </div>
+        <p class="glossary-kbju__note">Данные носят справочный характер. Значения — на 100 г продукта.</p>
+    </div>
+    <div class="glossary-kbju__cta">
+        <a href="auth.html" class="l-btn l-btn-primary l-btn-fullwidth">Добавить в дневник питания</a>
+        <a href="#glossary-correction" data-modal class="glossary-kbju__report">Нашли неточность в КБЖУ?</a>
+    </div>
+</aside>

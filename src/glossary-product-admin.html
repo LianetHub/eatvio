@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Сникерс — карта полей (админ)',
+    "stylesName": ["glossary", "homepage", "announcement", "article", "podbor"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-guest.html', {
+            "active": "glossary"
+            })
+            <main class="page glossary-page">
+                <section class="content glossary-product glossary-product--admin">
+                    <div class="content__container">
+                        <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                            <a href="glossary.html">Глоссарий КБЖУ</a>
+                            <span>/</span>
+                            <span>Сладкое и снеки</span>
+                            <span>/</span>
+                            <span class="glossary-crumb__current">Сникерс</span>
+                            <span class="glossary-product__admin-badge">Спека · админ</span>
+                        </nav>
+
+                        @@include('html/glossary-blocks/_product-intro.html')
+
+                        <div class="glossary-product__grid">
+                            <div class="glossary-product__main">
+                                <div class="glossary-product__badges">
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk" aria-hidden="true">3</span>
+                                        <span class="glossary-product__tag">Сладкое и снеки</span>
+                                    </span>
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                        <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
+                                    </span>
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                        <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
+                                    </span>
+                                </div>
+                                <div class="glossary-product__anno">
+                                    <span class="glossary-mk" aria-hidden="true">1</span>
+                                    <h1 class="glossary-product__title title title-bold">Сникерс</h1>
+                                </div>
+                                <p class="glossary-product__syn glossary-product__anno">
+                                    <span class="glossary-mk" aria-hidden="true">2</span>
+                                    Также ищут: Сникерс, Snickers
+                                </p>
+                                <div class="glossary-product__desc-wrap glossary-product__anno" x-data="{ open: false }">
+                                    <span class="glossary-mk" aria-hidden="true">6</span>
+                                    <div class="glossary-product__desc-body">
+                                        <p class="glossary-product__desc" :class="{ 'is-clamped': !open }">Сникерс — популярный шоколадный батончик, сочетающий молочный шоколад, мягкую нугу, тягучую карамель и жареный арахис. Его вкус балансирует между сладостью и лёгкой солёностью, а текстура объединяет хруст орехов, нежность нуги и пластичность карамели. Продукт отличается высокой калорийностью: в 100 г содержится около 500 ккал, 9 г белка, 24 г жира и 60 г углеводов, значительная часть которых — сахара. Благодаря быстрым углеводам и жирам батончик даёт быстрый прилив энергии и чувство сытости, поэтому его часто берут в дорогу, на прогулки, в походы или используют как перекус при интенсивных нагрузках. Арахис добавляет растительный белок, магний и витамин E, но их количество невелико. Сникерс не является диетическим или функциональным продуктом: он содержит много добавленного сахара, насыщенных жиров и может включать пальмовое масло, эмульгаторы и ароматизаторы. Регулярное употребление в больших количествах может способствовать набору веса, колебаниям уровня глюкозы в крови и повышенной тяге к сладкому. Не рекомендуется при сахарном диабете, ожирении, а также при аллергии на арахис, молоко или сою. Тем, кто следит за составом рациона, стоит учитывать батончик в общей суточной калорийности и не превышать разумную порцию. Употреблять его лучше умеренно, как лакомство, а не ежедневный источник питания, сочетая с полноценными приёмами пищи. Удобная герметичная упаковка позволяет сохранить свежесть, защитить продукт от влаги и брать батончик с собой в любую поездку.</p>
+                                        <button type="button" class="glossary-product__desc-toggle" @click="open = !open" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                                    </div>
+                                </div>
+                                <div class="glossary-product__spec">
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">7</span>Состав</span>
+                                        <span class="glossary-product__spec-val">Молочный шоколад, нуга, карамель, арахис, сахар, эмульгатор</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">8</span>Вкус</span>
+                                        <span class="glossary-product__spec-val">
+                                            <span class="glossary-product__tastes">
+                                                <span class="glossary-product__taste">Ореховый</span>
+                                                <span class="glossary-product__taste">Шоколадный</span>
+                                                <span class="glossary-product__taste">Сладкий</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">9</span>Производитель</span>
+                                        <span class="glossary-product__spec-val">Марс (ООО «Марс»)</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">10</span>Страна / город</span>
+                                        <span class="glossary-product__spec-val">Россия</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">11</span>Порция</span>
+                                        <span class="glossary-product__spec-val">50 г</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">12</span>Штрихкод</span>
+                                        <span class="glossary-product__spec-val">0099990005017</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glossary-product__side">
+                                @@include('html/glossary-blocks/_kbju-card.html', {
+                                "admin": true,
+                                "kcal": "511",
+                                "pp": "6",
+                                "pf": "49",
+                                "pc": "45",
+                                "pfEnd": "55",
+                                "kProt": "32",
+                                "kFat": "257",
+                                "kCarb": "236",
+                                "prot": "8.1",
+                                "fat": "28.5",
+                                "carb": "59",
+                                "barP": "14",
+                                "barF": "48",
+                                "barC": "100"
+                                })
+                                @@include('html/glossary-blocks/_product-formula.html', {
+                                "prot": "8.1",
+                                "fat": "28.5",
+                                "carb": "59",
+                                "kProt": "32",
+                                "kFat": "257",
+                                "kCarb": "236",
+                                "pp": "6",
+                                "pf": "49",
+                                "pc": "45"
+                                })
+                                @@include('html/glossary-blocks/_product-fields.html')
+                            </div>
+                        </div>
+
+                        @@include('html/glossary-blocks/_promo-consult.html')
+                        @@include('html/glossary-blocks/_calculator.html')
+                        @@include('html/glossary-blocks/_posts.html')
+                        @@include('html/glossary-blocks/_producers.html')
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-guest.html', {})
+        </div>
+        @@include('html/glossary-blocks/_correction-modal.html', {
+        "productName": "Сникерс",
+        "kcal": "511",
+        "prot": "8.1",
+        "fat": "28.5",
+        "carb": "59"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

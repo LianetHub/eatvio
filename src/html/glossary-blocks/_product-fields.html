@@ -1,0 +1,115 @@
+<div class="glossary-fields">
+    <h3 class="glossary-fields__title">Карта полей: витрина → админка</h3>
+    <p class="glossary-fields__sub">По справке заполнения продукта</p>
+
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">1</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Название</div>
+            <div class="glossary-fields__desc">Заголовок карточки.</div>
+            <div class="glossary-fields__ex"><code>Сникерс</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">2</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Синонимы</div>
+            <div class="glossary-fields__desc">Строка «Также ищут». Упрощают поиск в дневнике; все синонимы привязаны к главному блюду.</div>
+            <div class="glossary-fields__ex"><code>Томат</code>, <code>Помидорка</code> → «Помидор»</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">3</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">ГОП / Группа</div>
+            <div class="glossary-fields__desc">Группа основного продукта — определяет состав и группу для фильтров и систематизации.</div>
+            <div class="glossary-fields__ex">Борщ → <code>говядина, капуста, картошка, свекла, морковь</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Моно / Полипродукт</div>
+            <div class="glossary-fields__desc">Флаг качества состава. Моно — один продукт; поли — два и более (специи и добавки не в счёт).</div>
+            <div class="glossary-fields__ex"><code>Банан</code> = моно · <code>Сникерс</code> = поли</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Коммерческий / Некоммерческий</div>
+            <div class="glossary-fields__desc">Флаг. У коммерческих обязателен производитель и штрихкод; домашние — «Некоммерческий продукт».</div>
+            <div class="glossary-fields__ex"><code>Сникерс</code> = комм. · <code>Рис отварной</code> = неком.</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">6</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Описание</div>
+            <div class="glossary-fields__desc">Генерируется LLM по качествам продукта, до 1500 знаков. Пустое → блок скрыт, показываем «Описание пока не заполнено».</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">7</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Состав</div>
+            <div class="glossary-fields__desc">Из чего состоит продукт.</div>
+            <div class="glossary-fields__ex">Молочный шоколад: <code>какао-масло, какао тёртое, …</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">8</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Вкус</div>
+            <div class="glossary-fields__desc">Оценочные теги по названию и составу.</div>
+            <div class="glossary-fields__ex"><code>Ореховый</code>, <code>шоколадный</code>, <code>сладкий</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">9</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Производитель</div>
+            <div class="glossary-fields__desc">Бренд / юрлицо. Для домашних — «Некоммерческий продукт».</div>
+            <div class="glossary-fields__ex"><code>Марс (ООО «Марс»)</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">10</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Страна (город)</div>
+            <div class="glossary-fields__desc">Населённый пункт и/или страна производства.</div>
+            <div class="glossary-fields__ex"><code>г. Москва, Россия</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">11</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Порция</div>
+            <div class="glossary-fields__desc">Масса отпускной коммерческой продукции.</div>
+            <div class="glossary-fields__ex"><code>150 г</code> · неустановлено → скрыть</div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">12</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">Штрихкод</div>
+            <div class="glossary-fields__desc">EAN / GS1. Только у коммерческих; у некоммерческих — пусто (строку не показываем).</div>
+            <div class="glossary-fields__ex"><code>0099990005017</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">13</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">КБЖУ</div>
+            <div class="glossary-fields__desc">Калории, белки, жиры, углеводы — на 100 г. Крупная цифра, полоски граммов.</div>
+            <div class="glossary-fields__ex"><code>511 ккал · Б 8.1 · Ж 28.5 · У 59</code></div>
+        </div>
+    </div>
+    <div class="glossary-fields__item">
+        <span class="glossary-mk" aria-hidden="true">14</span>
+        <div class="glossary-fields__body">
+            <div class="glossary-fields__name">График калорийности</div>
+            <div class="glossary-fields__desc">Вычисляется из КБЖУ (не хранится). Формула — в тёмной карточке выше.</div>
+        </div>
+    </div>
+</div>

@@ -765,7 +765,7 @@
   z-index: 1;
 }
 
-.article__form {
+.article__form:not(:first-child) {
   margin-top: 2rem;
 }
 

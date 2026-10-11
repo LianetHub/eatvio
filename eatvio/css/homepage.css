@@ -81,11 +81,11 @@
           justify-content: center;
   gap: 0.125rem;
   min-width: 0;
-  padding: 0.25rem 0.125rem;
+  padding: 0.25rem 0.0625rem;
   border-radius: 0;
   font-weight: 500;
-  font-size: 0.625rem;
-  line-height: 1.2;
+  font-size: 0.5625rem;
+  line-height: 1.15;
   text-align: center;
   color: #7a8699;
   -webkit-transition: color 0.15s ease, background-color 0.15s ease;
@@ -655,6 +655,14 @@
           align-items: center;
   -webkit-transition: border-color 0.15s ease;
   transition: border-color 0.15s ease;
+}
+
+@media (min-width: 459.98px) {
+  .header-guest__link {
+    font-size: 0.625rem;
+    padding: 0.25rem 0.125rem;
+    line-height: 1.2;
+  }
 }
 
 @media (min-width: 575.98px) {
