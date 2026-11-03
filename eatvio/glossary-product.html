@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -13,19 +12,25 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
+    <link rel="stylesheet" href="css/common.min.css" />
+    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
-    <link rel="stylesheet" href="css/dev.css" />
-    
 
+    
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/glossary.min.css" />  <link rel="stylesheet" href="css/homepage.min.css" />  <link rel="stylesheet" href="css/announcement.min.css" />  <link rel="stylesheet" href="css/article.min.css" />  <link rel="stylesheet" href="css/podbor.min.css" /> 
+    <!-- Current Page Styles -->
+    
     
 
 </head>
 
-    <body>
-        <div class="wrapper">
-            <header class="header header-guest">
+
+<body>
+    <div class="wrapper"> <header class="header header-guest">
     <div class="header-guest__container">
         <a href="homepage.html" class="header__logo header-guest__logo">
             <img src="img/logo-russia.svg" alt="Итвио">
@@ -44,94 +49,75 @@
         </div>
     </div>
 </header>
-
-            <main class="page glossary-page">
-                <section class="content glossary-product">
-                    <div class="content__container">
-                        <nav class="glossary-crumb" aria-label="Хлебные крошки">
-                            <a href="glossary.html">Глоссарий КБЖУ</a>
-                            <span>/</span>
-                            <span>Сладкое и снеки</span>
-                            <span>/</span>
-                            <span class="glossary-crumb__current">Гранола «Утро»</span>
-                        </nav>
-
-                        <div class="glossary-product__grid">
-                            <div class="glossary-product__main">
-                                <div class="glossary-product__badges">
-                                    <span class="glossary-product__tag">Сладкое и снеки</span>
-                                    <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
-                                    <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
+ <main class="page glossary-page">
+            <section class="content glossary-product">
+                <div class="content__container">
+                    <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                        <a href="glossary.html">Глоссарий КБЖУ</a>
+                        <span>/</span>
+                        <span>Сладкое и снеки</span>
+                        <span>/</span>
+                        <span class="glossary-crumb__current">Сникерс</span>
+                    </nav>
+                    <div class="glossary-product__grid">
+                        <div class="glossary-product__main">
+                            <div class="glossary-product__badges">
+                                <span class="glossary-product__tag">Сладкое и снеки</span>
+                                <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
+                                <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
+                            </div>
+                            <h1 class="glossary-product__title title title-bold">Сникерс</h1>
+                            <p class="glossary-product__syn">Также ищут: Сникерс, Snickers</p>
+                            <div class="glossary-product__desc-wrap" x-data="{ open: false }">
+                                <p class="glossary-product__desc" :class="{ 'is-clamped': !open }">Сникерс — популярный шоколадный батончик, сочетающий молочный шоколад, мягкую нугу, тягучую карамель и жареный арахис. Его вкус балансирует между сладостью и лёгкой солёностью, а текстура объединяет хруст орехов, нежность нуги и пластичность карамели. Продукт отличается высокой калорийностью: в 100 г содержится около 500 ккал, 9 г белка, 24 г жира и 60 г углеводов, значительная часть которых — сахара. Благодаря быстрым углеводам и жирам батончик даёт быстрый прилив энергии и чувство сытости, поэтому его часто берут в дорогу, на прогулки, в походы или используют как перекус при интенсивных нагрузках. Арахис добавляет растительный белок, магний и витамин E, но их количество невелико. Сникерс не является диетическим или функциональным продуктом: он содержит много добавленного сахара, насыщенных жиров и может включать пальмовое масло, эмульгаторы и ароматизаторы. Регулярное употребление в больших количествах может способствовать набору веса, колебаниям уровня глюкозы в крови и повышенной тяге к сладкому. Не рекомендуется при сахарном диабете, ожирении, а также при аллергии на арахис, молоко или сою. Тем, кто следит за составом рациона, стоит учитывать батончик в общей суточной калорийности и не превышать разумную порцию. Употреблять его лучше умеренно, как лакомство, а не ежедневный источник питания, сочетая с полноценными приёмами пищи. Удобная герметичная упаковка позволяет сохранить свежесть, защитить продукт от влаги и брать батончик с собой в любую поездку.</p>
+                                <button type="button" class="glossary-product__desc-toggle" @click="open = !open" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                            </div>
+                            <div class="glossary-product__spec">
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Состав</span>
+                                    <span class="glossary-product__spec-val">Молочный шоколад, нуга, карамель, арахис, сахар, эмульгатор</span>
                                 </div>
-                                <h1 class="glossary-product__title title title-bold">Гранола с орехами и ягодами «Утро»</h1>
-                                <p class="glossary-product__name-en" lang="en">Granola with nuts and berries “Utro”</p>
-                                <p class="glossary-product__syn">Также ищут: Гранола, Мюсли запечённые, Гранола с орехами</p>
-                                <div class="glossary-product__desc-wrap" x-data="{ open: false }">
-                                    <p id="product-description" class="glossary-product__desc" :class="{ 'is-clamped': !open }">Гранола «Утро» — запечённые овсяные хлопья с мёдом, фундуком, миндалем, сушёной клюквой и семенами льна. Вкус сладкий и ореховый, с ягодной кислинкой, текстура хрустящая. В 100 г около 450 ккал: продукт сытный и энергоёмкий за счёт орехов, масла и мёда. Овёс даёт пищевые волокна, в том числе бета-глюкан, а орехи и лён — ненасыщенные жиры и омега-3 в растительной форме (АЛК). Подходит для завтрака с йогуртом или молоком и как перекус в дороге. Из-за добавленного мёда содержит заметное количество свободных сахаров, поэтому порцию стоит контролировать — обычно 40–50 г. Не подходит при аллергии на орехи. Хранить в закрытой упаковке, чтобы гранола оставалась хрустящей.</p>
-                                    <button type="button" class="glossary-product__desc-toggle" @click="open = !open" :aria-expanded="open" aria-controls="product-description" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Вкус</span>
+                                    <span class="glossary-product__spec-val">
+                                        <span class="glossary-product__tastes">
+                                            <span class="glossary-product__taste">Ореховый</span>
+                                            <span class="glossary-product__taste">Шоколадный</span>
+                                            <span class="glossary-product__taste">Сладкий</span>
+                                        </span>
+                                    </span>
                                 </div>
-                                <div class="glossary-product__spec">
-                                    <div class="glossary-product__spec-row glossary-product__spec-row--full">
-                                        <span class="glossary-product__spec-key">Группы основного продукта</span>
-                                        <span class="glossary-product__groups">
-                                            <span class="glossary-product__group">Овёс</span>
-                                            <span class="glossary-product__group">Орехи</span>
-                                            <span class="glossary-product__group">Мёд</span>
-                                            <span class="glossary-product__group">Ягоды сушёные</span>
-                                            <span class="glossary-product__group">Масло растительное</span>
-                                        </span>
-                                    </div>
-                                    <div class="glossary-product__spec-row glossary-product__spec-row--full">
-                                        <span class="glossary-product__spec-key">Состав</span>
-                                        <span class="glossary-product__spec-val">Овсяные хлопья, мёд, фундук, миндаль, клюква сушёная, семена льна, масло подсолнечное, соль</span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Вкус</span>
-                                        <span class="glossary-product__spec-val">
-                                            <span class="glossary-product__tastes">
-                                                <span class="glossary-product__taste">Злаковый</span>
-                                                <span class="glossary-product__taste">Ореховый</span>
-                                                <span class="glossary-product__taste">Сладкий</span>
-                                                <span class="glossary-product__taste">Ягодный</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Производитель</span>
-                                        <span class="glossary-product__spec-val">ООО «Пример Продукт» (ТМ «Утро»)</span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Страна / город</span>
-                                        <span class="glossary-product__spec-val">г. Москва, Россия</span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Порция</span>
-                                        <span class="glossary-product__spec-val">350 г</span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Штрихкоды</span>
-                                        <span class="glossary-product__spec-val glossary-product__barcodes"><span>4600000000015</span><span>4600000000022</span></span>
-                                    </div>
-                                    <div class="glossary-product__spec-row">
-                                        <span class="glossary-product__spec-key">Данные обновлены</span>
-                                        <time class="glossary-product__spec-val" datetime="2026-10-27">27 октября 2026</time>
-                                    </div>
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Производитель</span>
+                                    <span class="glossary-product__spec-val">Марс (ООО «Марс»)</span>
+                                </div>
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Страна / город</span>
+                                    <span class="glossary-product__spec-val">Россия</span>
+                                </div>
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Порция</span>
+                                    <span class="glossary-product__spec-val">50 г</span>
+                                </div>
+                                <div class="glossary-product__spec-row">
+                                    <span class="glossary-product__spec-key">Штрихкод</span>
+                                    <span class="glossary-product__spec-val">0099990005017</span>
                                 </div>
                             </div>
-                            <aside class="glossary-kbju">
+                        </div> <aside class="glossary-kbju">
     <div class="glossary-kbju__head">
         <div class="glossary-kbju__brand">
             <img src="img/logo-russia-gray.svg" alt="Итвио">
             <span>КБЖУ продукта</span>
         </div>
-        <div class="glossary-kbju__kcal">450</div>
+        <div class="glossary-kbju__kcal">511</div>
         <div class="glossary-kbju__unit">ккал на 100 г</div>
     </div>
     <div class="glossary-kbju__body">
         <div class="glossary-kbju__break">
-            <div class="glossary-kbju__donut" style="background: conic-gradient(#e5533d 0 9%, #f0a623 9% 45%, #34c77b 45% 100%)">
+            <div class="glossary-kbju__donut" style="background: conic-gradient(#e5533d 0 6%, #f0a623 6% 55%, #34c77b 55% 100%)">
                 <div class="glossary-kbju__donut-center">
-                    <b>450</b>
+                    <b>511</b>
                     <span>ккал</span>
                 </div>
             </div>
@@ -140,38 +126,33 @@
                 <div class="glossary-kbju__legend-row">
                     <i style="background:#e5533d"></i>
                     <b>Белки</b>
-                    <span>9% · 40 ккал</span>
+                    <span>6% · 32 ккал</span>
                 </div>
                 <div class="glossary-kbju__legend-row">
                     <i style="background:#f0a623"></i>
                     <b>Жиры</b>
-                    <span>36% · 162 ккал</span>
+                    <span>49% · 257 ккал</span>
                 </div>
                 <div class="glossary-kbju__legend-row">
                     <i style="background:#34c77b"></i>
                     <b>Углеводы</b>
-                    <span>55% · 248 ккал</span>
+                    <span>45% · 236 ккал</span>
                 </div>
             </div>
         </div>
         <div class="glossary-kbju__bars">
             <div class="glossary-kbju__bar">
-                <div class="glossary-kbju__bar-top"><span>Белки</span><span>10 г</span></div>
-                <div class="glossary-kbju__track"><i style="width:16%;background:#e5533d"></i></div>
+                <div class="glossary-kbju__bar-top"><span>Белки</span><span>8.1 г</span></div>
+                <div class="glossary-kbju__track"><i style="width:14%;background:#e5533d"></i></div>
             </div>
             <div class="glossary-kbju__bar">
-                <div class="glossary-kbju__bar-top"><span>Жиры</span><span>18 г</span></div>
-                <div class="glossary-kbju__track"><i style="width:29%;background:#f0a623"></i></div>
+                <div class="glossary-kbju__bar-top"><span>Жиры</span><span>28.5 г</span></div>
+                <div class="glossary-kbju__track"><i style="width:48%;background:#f0a623"></i></div>
             </div>
             <div class="glossary-kbju__bar">
-                <div class="glossary-kbju__bar-top"><span>Углеводы</span><span>62 г</span></div>
+                <div class="glossary-kbju__bar-top"><span>Углеводы</span><span>59 г</span></div>
                 <div class="glossary-kbju__track"><i style="width:100%;background:#34c77b"></i></div>
             </div>
-        </div>
-        
-        <div class="glossary-kbju__gi">
-            <span>Гликемический индекс<small>Показатель продукта, не на 100 г</small></span>
-            <b>55</b>
         </div>
         
         <p class="glossary-kbju__note">Данные носят справочный характер. Значения — на 100 г продукта.</p>
@@ -182,266 +163,22 @@
     </div>
 </aside>
 
-                        </div>
-
-                        <section class="glossary-section glossary-nutrients" aria-labelledby="nutrients-title">
-    <div class="glossary-nutrients__header">
-        <div>
-            <h2 class="glossary-section__title title title-bold" id="nutrients-title">Нутрицевтика</h2>
-            <p class="glossary-nutrients__subtitle">Витамины, минералы и другие вещества в составе продукта</p>
+                    </div> <section class="glossary-section">
+    <div class="content__section glossary-promo">
+        <div class="content__section-image">
+            <img src="img/RK/01.svg" alt="">
         </div>
-        <span class="glossary-nutrients__unit">На 100 г продукта</span>
-    </div>
-    <div class="glossary-nutrients__meta">
-        <span>Источник: <b>производитель, справочник</b></span>
-        <span>Обновлено: <time datetime="2026-10-27">27.10.2026</time></span>
-    </div>
-    <div class="glossary-nutrients__grid">
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-macro">
-            <h3 id="nutrients-macro">Макроэлементы</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Кальций</dt>
-                    <dd>70 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Калий</dt>
-                    <dd>420 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Магний</dt>
-                    <dd>120 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Фосфор</dt>
-                    <dd>300 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Натрий</dt>
-                    <dd>25 <span>мг</span></dd>
-                </div>
-            </dl>
-        </section>
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-micro">
-            <h3 id="nutrients-micro">Микроэлементы</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Железо</dt>
-                    <dd>3,5 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Цинк</dt>
-                    <dd>2,6 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Селен</dt>
-                    <dd>12 <span>мкг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Медь</dt>
-                    <dd>0,45 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Марганец</dt>
-                    <dd>3,2 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Фтор</dt>
-                    <dd>30 <span>мкг</span></dd>
-                </div>
-            </dl>
-        </section>
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-vit">
-            <h3 id="nutrients-vit">Витамины</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин A</dt>
-                    <dd>12 <span>мкг РЭ</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Бета-каротин</dt>
-                    <dd>70 <span>мкг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин D</dt>
-                    <dd>0 <span>мкг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин E</dt>
-                    <dd>6,5 <span>мг α-ТЭ</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин C</dt>
-                    <dd>1,2 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B1 (тиамин)</dt>
-                    <dd>0,45 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B2 (рибофлавин)</dt>
-                    <dd>0,12 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B3 / PP (ниацин)</dt>
-                    <dd>2,1 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B5 (пантотеновая к-та)</dt>
-                    <dd>0,9 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B6 (пиридоксин)</dt>
-                    <dd>0,2 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Витамин B9 (фолаты)</dt>
-                    <dd>45 <span>мкг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Холин</dt>
-                    <dd>30 <span>мг</span></dd>
-                </div>
-            </dl>
-        </section>
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-fat">
-            <h3 id="nutrients-fat">Жиры — детализация</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Насыщенные жиры</dt>
-                    <dd>2,4 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Мононенасыщенные жиры</dt>
-                    <dd>9,1 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Полиненасыщенные жиры</dt>
-                    <dd>5,6 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row glossary-nutrients__row--sub">
-                    <dt>АЛК (растительная)</dt>
-                    <dd>1,2 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row glossary-nutrients__row--sub">
-                    <dt>ЭПК (морская)</dt>
-                    <dd>0 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row glossary-nutrients__row--sub">
-                    <dt>ДГК (морская)</dt>
-                    <dd>0 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Омега-6</dt>
-                    <dd>4,4 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Трансжиры</dt>
-                    <dd>0,05 <span>г</span></dd>
-                </div>
-            </dl>
-        </section>
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-carb">
-            <h3 id="nutrients-carb">Углеводы — детализация</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Пищевые волокна (клетчатка)</dt>
-                    <dd>8 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Сахара (общие)</dt>
-                    <dd>18 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Добавленные (свободные) сахара</dt>
-                    <dd>12 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Крахмал</dt>
-                    <dd>38 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Лактоза</dt>
-                    <dd>0 <span>г</span></dd>
-                </div>
-            </dl>
-        </section>
-        <section class="glossary-nutrients__group" aria-labelledby="nutrients-other">
-            <h3 id="nutrients-other">Другие полезные вещества</h3>
-            <dl>
-                <div class="glossary-nutrients__row">
-                    <dt>Вода</dt>
-                    <dd>4,5 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Лютеин и зеаксантин</dt>
-                    <dd>60 <span>мкг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Бета-глюкан</dt>
-                    <dd>2,8 <span>г</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Кофеин</dt>
-                    <dd>0 <span>мг</span></dd>
-                </div>
-                <div class="glossary-nutrients__row">
-                    <dt>Алкоголь (этанол)</dt>
-                    <dd>0 <span>г</span></dd>
-                </div>
-            </dl>
-        </section>
-    </div>
-    <p class="glossary-nutrients__note">
-        <span class="info-block blue" aria-hidden="true">i</span>
-        Данные носят справочный характер. Указаны известные значения; 0 означает отсутствие вещества в продукте.
-    </p>
-</section>
-
-                        <section class="glossary-section">
-    <div class="content__section glossary-promo glossary-promo--plan">
-        
-        <article class="plan glossary-plan" aria-labelledby="glossary-plan-title">
-            <a class="plan__image" href="https://eatvio.ru/ru/plan/individualnaia_nedelia_soprovozdeniia" aria-label="План «Индивидуальная неделя сопровождения» — 7 дней">
-                <img src="img/plans/individual-week.jpg" class="cover-image" alt="Овощной боул с авокадо, томатами и зеленью" loading="lazy">
-                <span class="plan__image-label glossary-plan__duration"><span class="icon-clock" aria-hidden="true"></span>7 дней</span>
-            </a>
-            <div class="plan__body">
-                <div class="plan__person">
-                    <div class="plan__thumb">
-                        <img src="img/consultant-elena.jpg" alt="Елена Четверикова" width="72" height="72" loading="lazy">
-                    </div>
-                    <div class="plan__person-info">
-                        <div class="plan__person-name">Елена Четверикова</div>
-                        <span class="glossary-plan__role">Консультант по питанию</span>
-                    </div>
-                </div>
-                <h3 class="plan__name" id="glossary-plan-title">Индивидуальная неделя сопровождения</h3>
-                <p class="plan__desc">Разбор дневника питания, рекомендации по рациону и поддержка консультанта в течение недели.</p>
-                <div class="glossary-plan__tags" aria-label="Включено в план">
-                    <span class="glossary-plan__tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="3"/><path d="m15 10 6-3v10l-6-3"/></svg>Видеосвязь</span>
-                    <span class="glossary-plan__tag"><span class="icon-check" aria-hidden="true"></span>Персональный рацион</span>
-                </div>
-                <div class="plan__footer">
-                    <span class="plan__footer-price">2 500 ₽</span>
-                    <a class="glossary-plan__link l-btn l-btn-secondary-outline l-btn-sm" href="https://eatvio.ru/ru/plan/individualnaia_nedelia_soprovozdeniia" aria-label="Подробнее о плане «Индивидуальная неделя сопровождения»">Подробнее</a>
-                </div>
-            </div>
-        </article>
-        
-        
         <div class="content__section-body">
-            <div class="content__section-title title title-bold">Хватит худеть вслепую. Консультация по питанию в Итвио</div>
-            <p class="content__section-desc">Проверенные консультанты по питанию анализируют ваш дневник, дают чёткие рекомендации и подстраивают их под ваши результаты. Первый шаг к цели начинается с выбора специалиста.</p>
+            <div class="content__section-title title title-bold">Разберём ваш рацион вместе с диетологом Итвио</div>
+            <p class="content__section-desc">Хотите не просто узнать КБЖУ, а выстроить питание под свою цель? Консультанты Итвио составят персональную диету и будут вести вас онлайн через дневник питания.</p>
             <div class="glossary-promo__actions">
                 <a href="homepage-consultants.html" class="content__section-btn l-btn l-btn-primary l-btn-sm">Выбрать консультанта</a>
-                <a href="podbor-guest.html" class="l-btn l-btn-secondary-outline l-btn-sm">Подобрать консультацию</a>
+                <a href="auth.html" class="l-btn l-btn-secondary-outline l-btn-sm">Начать бесплатно</a>
             </div>
         </div>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-calc">
+ <section class="glossary-section glossary-calc">
     <h2 class="glossary-section__title title title-bold">Калькулятор нормы КБЖУ</h2>
     <p class="glossary-section__sub">Персональный расчёт суточной нормы калорий и БЖУ по формуле Харриса-Бенедикта — по вашим параметрам.</p>
 
@@ -527,8 +264,7 @@
         </div>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-posts">
+ <section class="glossary-section glossary-posts">
     <h2 class="glossary-section__title title title-bold">Итвио — это ещё и сообщество</h2>
     <p class="glossary-section__sub">Рецепты, лайфхаки и истории пользователей и консультантов. Последние записи в ленте:</p>
     <div class="content__announcements glossary-posts__list">
@@ -831,8 +567,7 @@
         <a href="homepage.html" class="l-btn l-btn-secondary-outline">Открыть ленту Итвио</a>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-section--producers">
+ <section class="glossary-section glossary-section--producers">
     <div class="glossary-producers">
         <div class="glossary-producers__intro">
             <div class="glossary-producers__brand">
@@ -872,10 +607,9 @@
     </div>
 </section>
 
-                    </div>
-                </section>
-            </main>
-            <footer class="footer footer-guest">
+                </div>
+            </section>
+        </main> <footer class="footer footer-guest">
     <div class="footer-guest__container">
         <span class="footer-guest__copy">Eatvio © 2026</span>
         <nav class="footer-guest__links" aria-label="Документы">
@@ -889,9 +623,7 @@
         </nav>
     </div>
 </footer>
-
-        </div>
-        <div id="glossary-correction" class="popup">
+ </div> <div id="glossary-correction" class="popup">
     <div class="popup__content">
         <div class="popup__body popup__body-md">
             <div class="popup__step">
@@ -904,7 +636,7 @@
 
                     <div class="glossary-correction__field">
                         <div class="label">Продукт</div>
-                        <input type="text" class="input input-white" value="Гранола с орехами и ягодами «Утро»" disabled>
+                        <input type="text" class="input input-white" value="Сникерс" disabled>
                     </div>
 
                     <div class="glossary-correction__kbju">
@@ -914,19 +646,19 @@
                         <div class="glossary-correction__grid">
                             <div class="glossary-correction__field">
                                 <div class="label">Калории, ккал</div>
-                                <input type="number" class="input input-white" min="0" value="450" inputmode="decimal">
+                                <input type="number" class="input input-white" min="0" value="511" inputmode="decimal">
                             </div>
                             <div class="glossary-correction__field">
                                 <div class="label">Белки, г</div>
-                                <input type="number" class="input input-white" min="0" step="0.1" value="10" inputmode="decimal">
+                                <input type="number" class="input input-white" min="0" step="0.1" value="8.1" inputmode="decimal">
                             </div>
                             <div class="glossary-correction__field">
                                 <div class="label">Жиры, г</div>
-                                <input type="number" class="input input-white" min="0" step="0.1" value="18" inputmode="decimal">
+                                <input type="number" class="input input-white" min="0" step="0.1" value="28.5" inputmode="decimal">
                             </div>
                             <div class="glossary-correction__field">
                                 <div class="label">Углеводы, г</div>
-                                <input type="number" class="input input-white" min="0" step="0.1" value="62" inputmode="decimal">
+                                <input type="number" class="input input-white" min="0" step="0.1" value="59" inputmode="decimal">
                             </div>
                         </div>
                     </div>
@@ -963,10 +695,10 @@
         </div>
     </div>
 </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>

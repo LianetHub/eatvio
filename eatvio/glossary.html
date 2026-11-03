@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -13,19 +12,25 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
+    <link rel="stylesheet" href="css/common.min.css" />
+    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
-    <link rel="stylesheet" href="css/dev.css" />
-    
 
+    
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/glossary.min.css" />  <link rel="stylesheet" href="css/homepage.min.css" />  <link rel="stylesheet" href="css/announcement.min.css" />  <link rel="stylesheet" href="css/article.min.css" />  <link rel="stylesheet" href="css/podbor.min.css" /> 
+    <!-- Current Page Styles -->
+    
     
 
 </head>
 
-    <body>
-        <div class="wrapper">
-            <header class="header header-guest">
+
+<body>
+    <div class="wrapper"> <header class="header header-guest">
     <div class="header-guest__container">
         <a href="homepage.html" class="header__logo header-guest__logo">
             <img src="img/logo-russia.svg" alt="Итвио">
@@ -44,192 +49,184 @@
         </div>
     </div>
 </header>
-
-            <main class="page glossary-page">
-                <section class="glossary-hero">
-                    <div class="glossary-hero__container">
-                        <span class="glossary-hero__eyebrow icon-open-book">Глоссарий КБЖУ Итвио</span>
-                        <h1 class="glossary-hero__title title title-bold">Калорийность, состав и БЖУ продуктов — в одном справочнике</h1>
-                        <p class="glossary-hero__lead">Узнайте калории, белки, жиры и углеводы на 100 г, состав и вкус продукта. Найдите нужное по названию, группе или алфавиту.</p>
-                        <form action="#" class="content__header-search search glossary-hero__search">
-                            <div class="search__box">
-                                <button type="submit" class="search__btn icon-search"></button>
-                                <input type="text" name="search" class="search__input search__input-white" placeholder="Найдите продукт: банан, борщ, сникерс…">
+ <main class="page glossary-page">
+            <section class="glossary-hero">
+                <div class="glossary-hero__container">
+                    <span class="glossary-hero__eyebrow icon-open-book">Глоссарий КБЖУ Итвио</span>
+                    <h1 class="glossary-hero__title title title-bold">Калорийность, состав и БЖУ продуктов — в одном справочнике</h1>
+                    <p class="glossary-hero__lead">Узнайте калории, белки, жиры и углеводы на 100 г, состав и вкус продукта. Найдите нужное по названию, группе или алфавиту.</p>
+                    <form action="#" class="content__header-search search glossary-hero__search">
+                        <div class="search__box">
+                            <button type="submit" class="search__btn icon-search"></button>
+                            <input type="text" name="search" class="search__input search__input-white" placeholder="Найдите продукт: банан, борщ, сникерс…">
+                        </div>
+                        <button type="submit" class="search__send l-btn l-btn-primary l-btn-sm">найти продукт</button>
+                    </form>
+                </div>
+            </section>
+            <section class="content glossary-catalog">
+                <div class="content__container">
+                    <div class="glossary-toolbar">
+                        <div class="glossary-toolbar__block">
+                            <div class="glossary-toolbar__label">Группы продуктов</div>
+                            <div class="glossary-groups" role="group" aria-label="Группы продуктов">
+                                <button type="button" class="l-tab l-btn" aria-selected="true">Все</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Фрукты</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Овощи</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Мясо и птица</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Рыба</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Молочные и яйца</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Крупы и гарниры</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Готовые блюда</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Напитки</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Сладкое и снеки</button>
+                                <button type="button" class="l-tab l-btn" aria-selected="false">Бакалея</button>
                             </div>
-                            <button type="submit" class="search__send l-btn l-btn-primary l-btn-sm">найти продукт</button>
-                        </form>
+                        </div>
+                        <div class="glossary-toolbar__block">
+                            <div class="glossary-toolbar__label">По алфавиту</div>
+                            <div class="glossary-alpha">
+                                <button type="button" class="glossary-alpha__item active">Все</button>
+                                <button type="button" class="glossary-alpha__item" disabled>А</button>
+                                <button type="button" class="glossary-alpha__item">Б</button>
+                                <button type="button" class="glossary-alpha__item">В</button>
+                                <button type="button" class="glossary-alpha__item">Г</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Д</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Е</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ё</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ж</button>
+                                <button type="button" class="glossary-alpha__item" disabled>З</button>
+                                <button type="button" class="glossary-alpha__item">И</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Й</button>
+                                <button type="button" class="glossary-alpha__item">К</button>
+                                <button type="button" class="glossary-alpha__item">Л</button>
+                                <button type="button" class="glossary-alpha__item">М</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Н</button>
+                                <button type="button" class="glossary-alpha__item">О</button>
+                                <button type="button" class="glossary-alpha__item">П</button>
+                                <button type="button" class="glossary-alpha__item">Р</button>
+                                <button type="button" class="glossary-alpha__item">С</button>
+                                <button type="button" class="glossary-alpha__item">Т</button>
+                                <button type="button" class="glossary-alpha__item" disabled>У</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ф</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Х</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ц</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ч</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ш</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Щ</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ъ</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ы</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ь</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Э</button>
+                                <button type="button" class="glossary-alpha__item" disabled>Ю</button>
+                                <button type="button" class="glossary-alpha__item">Я</button>
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-                <section class="content glossary-catalog">
-                    <div class="content__container">
-                        <div class="glossary-toolbar">
-                            <div class="glossary-toolbar__block">
-                                <div class="glossary-toolbar__label">Группы продуктов</div>
-                                <div class="glossary-groups" role="group" aria-label="Группы продуктов">
-                                    <button type="button" class="l-tab l-btn" aria-selected="true">Все</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Фрукты</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Овощи</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Мясо и птица</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Рыба</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Молочные и яйца</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Крупы и гарниры</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Готовые блюда</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Напитки</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Сладкое и снеки</button>
-                                    <button type="button" class="l-tab l-btn" aria-selected="false">Бакалея</button>
-                                </div>
+                    <div class="glossary-disclaimer">
+                        <span class="info-block" aria-hidden="true">i</span>
+                        <span>Вся информация в глоссарии взята из открытых источников и может не совпадать с действительностью. Всегда проверяйте данные на упаковке.</span>
+                    </div>
+                    <div class="glossary-meta">
+                        <h2 class="glossary-meta__title title title-bold">Все продукты</h2>
+                        <span class="glossary-meta__count">в базе Итвио 201&nbsp;841 продукт</span>
+                    </div>
+                    <div class="glossary-grid">
+                        <a href="glossary-product-2.html" class="glossary-card">
+                            <span class="glossary-card__tag">Фрукты</span>
+                            <h3 class="glossary-card__name">Банан</h3>
+                            <div class="glossary-card__kcal"><b>96</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 1.5</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.5</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 22</span>
                             </div>
-                            <div class="glossary-toolbar__block">
-                                <div class="glossary-toolbar__label">По алфавиту</div>
-                                <div class="glossary-alpha">
-                                    <button type="button" class="glossary-alpha__item active">Все</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>А</button>
-                                    <button type="button" class="glossary-alpha__item">Б</button>
-                                    <button type="button" class="glossary-alpha__item">В</button>
-                                    <button type="button" class="glossary-alpha__item">Г</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Д</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Е</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ё</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ж</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>З</button>
-                                    <button type="button" class="glossary-alpha__item">И</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Й</button>
-                                    <button type="button" class="glossary-alpha__item">К</button>
-                                    <button type="button" class="glossary-alpha__item">Л</button>
-                                    <button type="button" class="glossary-alpha__item">М</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Н</button>
-                                    <button type="button" class="glossary-alpha__item">О</button>
-                                    <button type="button" class="glossary-alpha__item">П</button>
-                                    <button type="button" class="glossary-alpha__item">Р</button>
-                                    <button type="button" class="glossary-alpha__item">С</button>
-                                    <button type="button" class="glossary-alpha__item">Т</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>У</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ф</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Х</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ц</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ч</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ш</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Щ</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ъ</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ы</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ь</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Э</button>
-                                    <button type="button" class="glossary-alpha__item" disabled>Ю</button>
-                                    <button type="button" class="glossary-alpha__item">Я</button>
-                                </div>
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Фрукты</span>
+                            <h3 class="glossary-card__name">Яблоко</h3>
+                            <div class="glossary-card__kcal"><b>52</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 0.4</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.4</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 14</span>
                             </div>
-                        </div>
-
-                        <div class="glossary-disclaimer">
-                            <span class="info-block" aria-hidden="true">i</span>
-                            <span>Вся информация в глоссарии взята из открытых источников и может не совпадать с действительностью. Всегда проверяйте данные на упаковке.</span>
-                        </div>
-
-                        <div class="glossary-meta">
-                            <h2 class="glossary-meta__title title title-bold">Все продукты</h2>
-                            <span class="glossary-meta__count">в базе Итвио 201&nbsp;841 продукт</span>
-                        </div>
-
-                        <div class="glossary-grid">
-                            <a href="glossary-product-2.html" class="glossary-card">
-                                <span class="glossary-card__tag">Фрукты</span>
-                                <h3 class="glossary-card__name">Банан</h3>
-                                <div class="glossary-card__kcal"><b>96</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 1.5</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.5</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 22</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Фрукты</span>
-                                <h3 class="glossary-card__name">Яблоко</h3>
-                                <div class="glossary-card__kcal"><b>52</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 0.4</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.4</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 14</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Овощи</span>
-                                <h3 class="glossary-card__name">Помидор</h3>
-                                <div class="glossary-card__kcal"><b>20</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 1</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.2</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 3.9</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Мясо и птица</span>
-                                <h3 class="glossary-card__name">Куриная грудка отварная</h3>
-                                <div class="glossary-card__kcal"><b>137</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 29</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 1.8</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 0.5</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Молочные и яйца</span>
-                                <h3 class="glossary-card__name">Кефир 1%</h3>
-                                <div class="glossary-card__kcal"><b>40</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 3</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 1</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 4</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Готовые блюда</span>
-                                <h3 class="glossary-card__name">Борщ с говядиной</h3>
-                                <div class="glossary-card__kcal"><b>60</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 3</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 2.5</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 5</span>
-                                </div>
-                            </a>
-                            <a href="glossary-product.html" class="glossary-card">
-                                <span class="glossary-card__tag">Сладкое и снеки</span>
-                                <h3 class="glossary-card__name">Сникерс</h3>
-                                <div class="glossary-card__kcal"><b>511</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 8.1</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 28.5</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 59</span>
-                                </div>
-                            </a>
-                            <a href="" class="glossary-card">
-                                <span class="glossary-card__tag">Сладкое и снеки</span>
-                                <h3 class="glossary-card__name">Гранола</h3>
-                                <div class="glossary-card__kcal"><b>450</b><span>ккал / 100 г</span></div>
-                                <div class="glossary-card__macros">
-                                    <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 9</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 18</span>
-                                    <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 64</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="glossary-pager">
-                            <nav class="pagination" aria-label="Страницы каталога продуктов">
-                                <button type="button" class="pagination__prev icon-arrow-left" disabled aria-disabled="true" aria-label="Предыдущая страница"></button>
-                                <span class="pagination__item" aria-current="page" aria-label="Страница 1">1</span>
-                                <a href="" class="pagination__item">2</a>
-                                <a href="" class="pagination__item">3</a>
-                                <a href="" class="pagination__item pagination__item--desktop">4</a>
-                                <a href="" class="pagination__item pagination__item--desktop">5</a>
-                                <span class="pagination__ellipsis" aria-hidden="true">…</span>
-                                <a href="" class="pagination__item" aria-label="Последняя страница, 25231">25231</a>
-                                <button type="button" class="pagination__next icon-arrow-right" aria-label="Следующая страница"></button>
-                            </nav>
-                            <p class="glossary-pager__info">Показано 1–8 из 201&nbsp;841</p>
-                        </div>
-
-                        <section class="glossary-section">
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Овощи</span>
+                            <h3 class="glossary-card__name">Помидор</h3>
+                            <div class="glossary-card__kcal"><b>20</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 1</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 0.2</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 3.9</span>
+                            </div>
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Мясо и птица</span>
+                            <h3 class="glossary-card__name">Куриная грудка отварная</h3>
+                            <div class="glossary-card__kcal"><b>137</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 29</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 1.8</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 0.5</span>
+                            </div>
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Молочные и яйца</span>
+                            <h3 class="glossary-card__name">Кефир 1%</h3>
+                            <div class="glossary-card__kcal"><b>40</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 3</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 1</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 4</span>
+                            </div>
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Готовые блюда</span>
+                            <h3 class="glossary-card__name">Борщ с говядиной</h3>
+                            <div class="glossary-card__kcal"><b>60</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 3</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 2.5</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 5</span>
+                            </div>
+                        </a>
+                        <a href="glossary-product.html" class="glossary-card">
+                            <span class="glossary-card__tag">Сладкое и снеки</span>
+                            <h3 class="glossary-card__name">Сникерс</h3>
+                            <div class="glossary-card__kcal"><b>511</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 8.1</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 28.5</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 59</span>
+                            </div>
+                        </a>
+                        <a href="" class="glossary-card">
+                            <span class="glossary-card__tag">Сладкое и снеки</span>
+                            <h3 class="glossary-card__name">Гранола</h3>
+                            <div class="glossary-card__kcal"><b>450</b><span>ккал / 100 г</span></div>
+                            <div class="glossary-card__macros">
+                                <span><i class="glossary-card__dot glossary-card__dot--p"></i>Б 9</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--f"></i>Ж 18</span>
+                                <span><i class="glossary-card__dot glossary-card__dot--c"></i>У 64</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="glossary-pager">
+                        <nav class="pagination" aria-label="Страницы каталога продуктов">
+                            <button type="button" class="pagination__prev icon-arrow-left" disabled aria-disabled="true" aria-label="Предыдущая страница"></button>
+                            <span class="pagination__item" aria-current="page" aria-label="Страница 1">1</span>
+                            <a href="" class="pagination__item">2</a>
+                            <a href="" class="pagination__item">3</a>
+                            <a href="" class="pagination__item pagination__item--desktop">4</a>
+                            <a href="" class="pagination__item pagination__item--desktop">5</a>
+                            <span class="pagination__ellipsis" aria-hidden="true">…</span>
+                            <a href="" class="pagination__item" aria-label="Последняя страница, 25231">25231</a>
+                            <button type="button" class="pagination__next icon-arrow-right" aria-label="Следующая страница"></button>
+                        </nav>
+                        <p class="glossary-pager__info">Показано 1–8 из 201&nbsp;841</p>
+                    </div> <section class="glossary-section">
     <h2 class="glossary-section__title title title-bold">КБЖУ: основа правильного питания</h2>
     <p class="glossary-section__sub">Коротко о том, из чего складывается ваш рацион.</p>
     <div class="glossary-edu">
@@ -255,8 +252,7 @@
         </article>
     </div>
 </section>
-
-                        <section class="glossary-section">
+ <section class="glossary-section">
     <div class="content__section glossary-promo">
         <div class="content__section-image">
             <img src="img/RK/01.svg" alt="">
@@ -271,8 +267,7 @@
         </div>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-calc">
+ <section class="glossary-section glossary-calc">
     <h2 class="glossary-section__title title title-bold">Калькулятор нормы КБЖУ</h2>
     <p class="glossary-section__sub">Персональный расчёт суточной нормы калорий и БЖУ по формуле Харриса-Бенедикта — по вашим параметрам.</p>
 
@@ -358,8 +353,7 @@
         </div>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-posts">
+ <section class="glossary-section glossary-posts">
     <h2 class="glossary-section__title title title-bold">Итвио — это ещё и сообщество</h2>
     <p class="glossary-section__sub">Рецепты, лайфхаки и истории пользователей и консультантов. Последние записи в ленте:</p>
     <div class="content__announcements glossary-posts__list">
@@ -662,8 +656,7 @@
         <a href="homepage.html" class="l-btn l-btn-secondary-outline">Открыть ленту Итвио</a>
     </div>
 </section>
-
-                        <section class="glossary-section glossary-section--producers">
+ <section class="glossary-section glossary-section--producers">
     <div class="glossary-producers">
         <div class="glossary-producers__intro">
             <div class="glossary-producers__brand">
@@ -703,10 +696,9 @@
     </div>
 </section>
 
-                    </div>
-                </section>
-            </main>
-            <footer class="footer footer-guest">
+                </div>
+            </section>
+        </main> <footer class="footer footer-guest">
     <div class="footer-guest__container">
         <span class="footer-guest__copy">Eatvio © 2026</span>
         <nav class="footer-guest__links" aria-label="Документы">
@@ -720,11 +712,10 @@
         </nav>
     </div>
 </footer>
-
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>

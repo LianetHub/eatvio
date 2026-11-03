@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Eatvio | Гранола «Утро» — глоссарий КБЖУ',
+    "stylesName": ["glossary", "homepage", "announcement", "article", "podbor"]
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header-guest.html', {
+            "active": "glossary"
+            })
+            <main class="page glossary-page">
+                <section class="content glossary-product">
+                    <div class="content__container">
+                        <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                            <a href="glossary.html">Глоссарий КБЖУ</a>
+                            <span>/</span>
+                            <span>Сладкое и снеки</span>
+                            <span>/</span>
+                            <span class="glossary-crumb__current">Гранола «Утро»</span>
+                        </nav>
+
+                        <div class="glossary-product__grid">
+                            <div class="glossary-product__main">
+                                <div class="glossary-product__badges">
+                                    <span class="glossary-product__tag">Сладкое и снеки</span>
+                                    <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
+                                    <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
+                                </div>
+                                <h1 class="glossary-product__title title title-bold">Гранола с орехами и ягодами «Утро»</h1>
+                                <p class="glossary-product__name-en" lang="en">Granola with nuts and berries “Utro”</p>
+                                <p class="glossary-product__syn">Также ищут: Гранола, Мюсли запечённые, Гранола с орехами</p>
+                                <div class="glossary-product__desc-wrap" x-data="{ open: false }">
+                                    <p id="product-description" class="glossary-product__desc" :class="{ 'is-clamped': !open }">Гранола «Утро» — запечённые овсяные хлопья с мёдом, фундуком, миндалем, сушёной клюквой и семенами льна. Вкус сладкий и ореховый, с ягодной кислинкой, текстура хрустящая. В 100 г около 450 ккал: продукт сытный и энергоёмкий за счёт орехов, масла и мёда. Овёс даёт пищевые волокна, в том числе бета-глюкан, а орехи и лён — ненасыщенные жиры и омега-3 в растительной форме (АЛК). Подходит для завтрака с йогуртом или молоком и как перекус в дороге. Из-за добавленного мёда содержит заметное количество свободных сахаров, поэтому порцию стоит контролировать — обычно 40–50 г. Не подходит при аллергии на орехи. Хранить в закрытой упаковке, чтобы гранола оставалась хрустящей.</p>
+                                    <button type="button" class="glossary-product__desc-toggle" @click="open = !open" :aria-expanded="open" aria-controls="product-description" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                                </div>
+                                <div class="glossary-product__spec">
+                                    <div class="glossary-product__spec-row glossary-product__spec-row--full">
+                                        <span class="glossary-product__spec-key">Группы основного продукта</span>
+                                        <span class="glossary-product__groups">
+                                            <span class="glossary-product__group">Овёс</span>
+                                            <span class="glossary-product__group">Орехи</span>
+                                            <span class="glossary-product__group">Мёд</span>
+                                            <span class="glossary-product__group">Ягоды сушёные</span>
+                                            <span class="glossary-product__group">Масло растительное</span>
+                                        </span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__spec-row--full">
+                                        <span class="glossary-product__spec-key">Состав</span>
+                                        <span class="glossary-product__spec-val">Овсяные хлопья, мёд, фундук, миндаль, клюква сушёная, семена льна, масло подсолнечное, соль</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Вкус</span>
+                                        <span class="glossary-product__spec-val">
+                                            <span class="glossary-product__tastes">
+                                                <span class="glossary-product__taste">Злаковый</span>
+                                                <span class="glossary-product__taste">Ореховый</span>
+                                                <span class="glossary-product__taste">Сладкий</span>
+                                                <span class="glossary-product__taste">Ягодный</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Производитель</span>
+                                        <span class="glossary-product__spec-val">ООО «Пример Продукт» (ТМ «Утро»)</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Страна / город</span>
+                                        <span class="glossary-product__spec-val">г. Москва, Россия</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Порция</span>
+                                        <span class="glossary-product__spec-val">350 г</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Штрихкоды</span>
+                                        <span class="glossary-product__spec-val glossary-product__barcodes"><span>4600000000015</span><span>4600000000022</span></span>
+                                    </div>
+                                    <div class="glossary-product__spec-row">
+                                        <span class="glossary-product__spec-key">Данные обновлены</span>
+                                        <time class="glossary-product__spec-val" datetime="2026-10-27">27 октября 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('html/glossary-blocks/_kbju-card.html', {
+                            "kcal": "450",
+                            "pp": "9",
+                            "pf": "36",
+                            "pc": "55",
+                            "pfEnd": "45",
+                            "kProt": "40",
+                            "kFat": "162",
+                            "kCarb": "248",
+                            "prot": "10",
+                            "fat": "18",
+                            "carb": "62",
+                            "barP": "16",
+                            "barF": "29",
+                            "barC": "100",
+                            "gi": "55"
+                            })
+                        </div>
+
+                        @@include('html/glossary-blocks/_nutrients.html')
+                        @@include('html/glossary-blocks/_promo-consult.html', { "withPlan": true })
+                        @@include('html/glossary-blocks/_calculator.html')
+                        @@include('html/glossary-blocks/_posts.html')
+                        @@include('html/glossary-blocks/_producers.html')
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-guest.html', {})
+        </div>
+        @@include('html/glossary-blocks/_correction-modal.html', {
+        "productName": "Гранола с орехами и ягодами «Утро»",
+        "kcal": "450",
+        "prot": "10",
+        "fat": "18",
+        "carb": "62"
+        })
+        @@include('html/_js.html', {})
+    </body>
+</html>

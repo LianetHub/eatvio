@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="ru"> <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -13,19 +12,25 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
+    <link rel="stylesheet" href="css/common.min.css" />
+    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
-    <link rel="stylesheet" href="css/dev.css" />
-    
 
+    
+    
+    <!-- Current Page Styles -->
+     <link rel="stylesheet" href="css/my-consultations.min.css" /> 
+    <!-- Current Page Styles -->
+    
     
 
 </head>
 
-    <body>
-        <div class="wrapper">
-            <header class="header">
+
+<body>
+    <div class="wrapper"> <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -461,36 +466,30 @@
             </div>
         </div>
     </div>
-</header>
-            <main class="page">
-                <section class="my-consults">
-                    <div class="my-consults__container container-sm">
-                        <div class="my-consults__header">
-                            <div class="my-consults__heading">
-                                <h1 class="my-consults__page-title">Мои консультации</h1>
-                                <span
-                                    class="info-block blue my-consults__info tooltip-lg"
-                                    tabindex="0"
-                                    data-tooltip="Мы заботимся о сохранности ваших данных. Запись видеоконсультации будет доступна на серверах ООО «Итвио» в течение 1 года. Вы всегда сможете вернуться к важным деталям в удобное для вас время."
-                                >?</span>
-                            </div>
-                            <label class="my-consults__search">
-                                <span class="my-consults__search-btn icon-search" aria-hidden="true"></span>
-                                <input type="search" class="my-consults__search-input" name="consult-search" placeholder="Поиск консультаций" autocomplete="off">
-                            </label>
-                            <div class="my-consults__period select">
-                                <select name="period" aria-label="Период">
-                                    <option value="" selected>Период</option>
-                                    <option value="today">Сегодня</option>
-                                    <option value="week">Последние 7 дней</option>
-                                    <option value="month">Этот месяц</option>
-                                    <option value="prev-month">Прошлый месяц</option>
-                                    <option value="all">За всё время</option>
-                                </select>
-                            </div>
+</header> <main class="page">
+            <section class="my-consults">
+                <div class="my-consults__container container-sm">
+                    <div class="my-consults__header">
+                        <div class="my-consults__heading">
+                            <h1 class="my-consults__page-title">Мои консультации</h1>
+                            <span class="info-block blue my-consults__info tooltip-lg" tabindex="0" data-tooltip="Мы заботимся о сохранности ваших данных. Запись видеоконсультации будет доступна на серверах ООО «Итвио» в течение 1 года. Вы всегда сможете вернуться к важным деталям в удобное для вас время.">?</span>
                         </div>
-                        <div class="my-consults__grid">
-                            <article class="my-consults__card">
+                        <label class="my-consults__search">
+                            <span class="my-consults__search-btn icon-search" aria-hidden="true"></span>
+                            <input type="search" class="my-consults__search-input" name="consult-search" placeholder="Поиск консультаций" autocomplete="off">
+                        </label>
+                        <div class="my-consults__period select">
+                            <select name="period" aria-label="Период">
+                                <option value="" selected>Период</option>
+                                <option value="today">Сегодня</option>
+                                <option value="week">Последние 7 дней</option>
+                                <option value="month">Этот месяц</option>
+                                <option value="prev-month">Прошлый месяц</option>
+                                <option value="all">За всё время</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="my-consults__grid"> <article class="my-consults__card">
     <div class="my-consults__poster">
         <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
         
@@ -523,8 +522,7 @@
         
     </div>
 </article>
-
-                            <article class="my-consults__card  my-consults__card_no-btn">
+ <article class="my-consults__card  my-consults__card_no-btn">
     <div class="my-consults__poster">
         <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
         
@@ -545,8 +543,7 @@
         
     </div>
 </article>
-
-                            <article class="my-consults__card  my-consults__card_no-btn">
+ <article class="my-consults__card  my-consults__card_no-btn">
     <div class="my-consults__poster">
         <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
         
@@ -567,8 +564,7 @@
         
     </div>
 </article>
-
-                            <article class="my-consults__card  my-consults__card_no-btn">
+ <article class="my-consults__card  my-consults__card_no-btn">
     <div class="my-consults__poster">
         <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
         
@@ -595,8 +591,7 @@
         
     </div>
 </article>
-
-                            <article class="my-consults__card">
+ <article class="my-consults__card">
     <div class="my-consults__poster">
         <img src="img/chat/01.png" class="my-consults__poster-image cover-image" alt="">
         
@@ -629,23 +624,20 @@
         
     </div>
 </article>
-
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
+ </div>
+                </div>
+            </section>
+        </main> <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-    </body>
+</body>
+
 </html>
