@@ -1,14 +1,45 @@
 <section class="glossary-section">
-    <div class="content__section glossary-promo">
+    <div class="content__section glossary-promo @@if(typeof withPlan !== 'undefined' && withPlan){glossary-promo--plan}">
+        @@if(typeof withPlan !== 'undefined' && withPlan) {
+        <article class="plan glossary-plan" aria-labelledby="glossary-plan-title">
+            <a class="plan__image" href="https://eatvio.ru/ru/plan/individualnaia_nedelia_soprovozdeniia" aria-label="План «Индивидуальная неделя сопровождения» — 7 дней">
+                <img src="@img/plans/individual-week.jpg" class="cover-image" alt="Овощной боул с авокадо, томатами и зеленью" loading="lazy">
+                <span class="plan__image-label glossary-plan__duration"><span class="icon-clock" aria-hidden="true"></span>7 дней</span>
+            </a>
+            <div class="plan__body">
+                <div class="plan__person">
+                    <div class="plan__thumb">
+                        <img src="@img/consultant-elena.jpg" alt="Елена Четверикова" width="72" height="72" loading="lazy">
+                    </div>
+                    <div class="plan__person-info">
+                        <div class="plan__person-name">Елена Четверикова</div>
+                        <span class="glossary-plan__role">Консультант по питанию</span>
+                    </div>
+                </div>
+                <h3 class="plan__name" id="glossary-plan-title">Индивидуальная неделя сопровождения</h3>
+                <p class="plan__desc">Разбор дневника питания, рекомендации по рациону и поддержка консультанта в течение недели.</p>
+                <div class="glossary-plan__tags" aria-label="Включено в план">
+                    <span class="glossary-plan__tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="3"/><path d="m15 10 6-3v10l-6-3"/></svg>Видеосвязь</span>
+                    <span class="glossary-plan__tag"><span class="icon-check" aria-hidden="true"></span>Персональный рацион</span>
+                </div>
+                <div class="plan__footer">
+                    <span class="plan__footer-price">2 500 ₽</span>
+                    <a class="glossary-plan__link l-btn l-btn-secondary-outline l-btn-sm" href="https://eatvio.ru/ru/plan/individualnaia_nedelia_soprovozdeniia" aria-label="Подробнее о плане «Индивидуальная неделя сопровождения»">Подробнее</a>
+                </div>
+            </div>
+        </article>
+        }
+        @@if(typeof withPlan === 'undefined' || !withPlan) {
         <div class="content__section-image">
             <img src="@img/RK/01.svg" alt="">
         </div>
+        }
         <div class="content__section-body">
-            <div class="content__section-title title title-bold">Разберём ваш рацион вместе с диетологом Итвио</div>
-            <p class="content__section-desc">Хотите не просто узнать КБЖУ, а выстроить питание под свою цель? Консультанты Итвио составят персональную диету и будут вести вас онлайн через дневник питания.</p>
+            <div class="content__section-title title title-bold">Хватит худеть вслепую. Консультация по питанию в Итвио</div>
+            <p class="content__section-desc">Проверенные консультанты по питанию анализируют ваш дневник, дают чёткие рекомендации и подстраивают их под ваши результаты. Первый шаг к цели начинается с выбора специалиста.</p>
             <div class="glossary-promo__actions">
                 <a href="homepage-consultants.html" class="content__section-btn l-btn l-btn-primary l-btn-sm">Выбрать консультанта</a>
-                <a href="auth.html" class="l-btn l-btn-secondary-outline l-btn-sm">Начать бесплатно</a>
+                <a href="podbor-guest.html" class="l-btn l-btn-secondary-outline l-btn-sm">Подобрать консультацию</a>
             </div>
         </div>
     </div>

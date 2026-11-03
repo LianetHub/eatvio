@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,25 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/shopping-list.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -466,7 +461,9 @@
             </div>
         </div>
     </div>
-</header> <main class="page"> <section class="shopping" x-data="{ period: 'week', periodLabel: 'Неделя · 7 дней', daypop: false, days: { 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true, 18: true, 19: true, 20: true, 21: true }, mode: 'categories' }">
+</header>
+            <main class="page">
+                <section class="shopping" x-data="{ period: 'week', periodLabel: 'Неделя · 7 дней', daypop: false, days: { 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true, 18: true, 19: true, 20: true, 21: true }, mode: 'categories' }">
     <div class="shopping__container">
         <div class="settings__header">
             <a href="shopping-list.html" class="settings__back icon-arrow-short-left"></a>
@@ -555,14 +552,18 @@
         
     </div>
 </section>
- </main> <footer class="footer">
+
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div> <div id="shopping-add" class="popup">
+</footer>
+        </div>
+        <div id="shopping-add" class="popup">
     <div class="popup__content">
         <div class="popup__body popup__body-sm offset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
@@ -648,7 +649,8 @@
         </div>
     </div>
 </div>
- <div id="shopping-share" class="popup" x-data>
+
+        <div id="shopping-share" class="popup" x-data>
     <div class="popup__content">
         <div class="popup__body popup__body-md">
             <div class="popup__step">
@@ -862,7 +864,8 @@
             </div>
         </div>
     </div>
-</div> <div id="shopping-delete" class="popup">
+</div>
+        <div id="shopping-delete" class="popup">
     <div class="popup__content">
         <div class="popup__body popup__body-sm offset">
             <button type="button" class="popup__close icon-close" data-close-modal></button>
@@ -882,10 +885,10 @@
         </div>
     </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

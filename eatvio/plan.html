@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -14,25 +15,20 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/person.min.css" />  <link rel="stylesheet" href="css/comment.min.css" />  <link rel="stylesheet" href="css/plan.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
 
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -468,205 +464,258 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container container-sm">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
-                        <div class="settings__actions">
-                            <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left"><span>Планы питания консультанта</span></a>
+                            <div class="settings__actions">
+                                <a href="" class="settings__action l-btn l-btn-md l-btn-primary icon-message-square"><span>Написать</span></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="plan-page">
-                        <div class="plan-page__body">
-                            <div class="plan-page__item plan-card" x-data="{ expanded: false }">
-                                <div class="plan-card__header">
-                                    <div class="plan-card__header-title title"> Питание для диабетиков </div>
-                                    <div class="plan-card__header-stats">
-                                        <div class="plan-card__actions">
-                                            <div class="plan-card__actions-block">
-                                                <button type="button" class="plan-card__actions-btn icon-more-horizontal"></button>
-                                                <ul class="plan-card__actions-list">
-                                                    <li class="plan-card__actions-item">
-                                                        <button type="button" class="plan-card__action">О рекламодателе</button>
-                                                    </li>
-                                                    <li class="plan-card__actions-item">
-                                                        <button type="button" class="plan-card__action">Не интересно</button>
-                                                    </li>
-                                                    <li class="plan-card__actions-item">
-                                                        <button type="button" class="plan-card__action">Пожаловаться</button>
-                                                    </li>
-                                                    <li class="plan-card__actions-item">
-                                                        <div class="plan-card__actions-id">ID: 2jkfk45JG</div>
-                                                    </li>
-                                                </ul>
+                        <div class="plan-page">
+                            <div class="plan-page__body">
+                                <div class="plan-page__item plan-card" x-data="{ expanded: false }">
+                                    <div class="plan-card__header">
+                                        <div class="plan-card__header-title title">
+                                            Питание для диабетиков
+                                        </div>
+                                        <div class="plan-card__header-stats">
+                                            <div class="plan-card__actions">
+                                                <div class="plan-card__actions-block">
+                                                    <button type="button" class="plan-card__actions-btn icon-more-horizontal"></button>
+                                                    <ul class="plan-card__actions-list">
+                                                        <li class="plan-card__actions-item">
+                                                            <button type="button" class="plan-card__action">О рекламодателе</button>
+                                                        </li>
+                                                        <li class="plan-card__actions-item">
+                                                            <button type="button" class="plan-card__action">Не интересно</button>
+                                                        </li>
+                                                        <li class="plan-card__actions-item">
+                                                            <button type="button" class="plan-card__action">Пожаловаться</button>
+                                                        </li>
+                                                        <li class="plan-card__actions-item">
+                                                            <div class="plan-card__actions-id">ID: 2jkfk45JG</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="plan-card__image">
-                                    <img src="img/announcement.jpg" class="cover-image" alt="announcement">
-                                </div>
-                                <div class="plan-card__details">
-                                    <div class="plan-card__details-rows">
-                                        <div class="plan-card__details-row">
-                                            <div class="plan-card__details-caption"> Время прохождения плана: </div>
-                                            <div class="plan-card__details-value"> 21 дней </div>
-                                        </div>
-                                        <div class="plan-card__details-row">
-                                            <div class="plan-card__details-caption"> Проходят план: </div>
-                                            <div class="plan-card__details-value"> 2 пользователя </div>
+                                    <div class="plan-card__image">
+                                        <img src="img/announcement.jpg" class="cover-image" alt="announcement">
+                                    </div>
+                                    <div class="plan-card__details">
+                                        <div class="plan-card__details-rows">
+                                            <div class="plan-card__details-row">
+                                                <div class="plan-card__details-caption">
+                                                    Время прохождения плана:
+                                                </div>
+                                                <div class="plan-card__details-value">
+                                                    21 дней
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__details-row">
+                                                <div class="plan-card__details-caption">
+                                                    Проходят план:
+                                                </div>
+                                                <div class="plan-card__details-value">
+                                                    2 пользователя
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <p class="plan-card__desc" :class="{ 'active': expanded }"> Если вы или ваши близкие столкнулись с этим диагнозом, важно понимать: диабет — это не приговор, а возможность пересмотреть свои привычки и научиться управлять своим здоровьем через правильное питание. Почему важно формировать пищевое поведение? Диабет требует особого внимания к тому, что и как мы едим. Но это не значит, что нужно отказываться от вкусной еды или жить в постоянных ограничениях. Главное — научиться выстраивать гармоничные отношения с едой, понимать, как она влияет на ваш организм, и делать выбор в пользу здоровья без стресса и дискомфорта. Как я могу вам помочь? Индивидуальный подход: Я помогу вам сформировать пищевые привычки, которые будут работать именно для вас. Мы учтем ваш образ жизни, вкусовые предпочтения и медицинские особенности. Обучение и поддержка: Я научу вас, как планировать рацион, выбирать полезные продукты и готовить блюда, которые будут не только полезными, но и вкусными. Вы поймете, как контролировать уровень сахара в крови, не отказываясь от удовольствия от еды. Постепенные изменения: Мы не будем резко менять ваши привычки. Я помогу вам внедрять новые правила питания постепенно, чтобы они стали частью вашей жизни без стресса. Психологическая поддержка: Я знаю, как сложно менять привычки, особенно когда речь идет о диабете. Я буду рядом, чтобы поддерживать вас на каждом этапе. Что вы получите в результате? Устойчивые пищевые привычки, которые помогут вам контролировать уровень сахара в крови. Уверенность в своем выборе и понимание, как питание влияет на ваше здоровье. Больше энергии, легкости и улучшение общего самочувствия. Возможность наслаждаться едой без чувства вины или страха. </p>
-                                <div class="plan-card__row">
-                                    <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'"> Читать больше </button>
-                                    <div class="plan__person-icons">
-                                        <div class="plan__type flex flex-row">
-                                            <div wire:key="show-plan-52-fit" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
-                                                <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
-                                                    <img src="img/fit.png" alt="fit">
-                                                </button>
-                                                <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
-                                                    <div class="plan__type-tootlip-icon">
+                                    <p class="plan-card__desc" :class="{ 'active': expanded }">
+                                        Если вы или ваши близкие столкнулись с этим диагнозом, важно понимать:
+                                        диабет — это не приговор, а возможность пересмотреть свои привычки и
+                                        научиться управлять своим здоровьем через правильное питание. Почему
+                                        важно формировать пищевое поведение? Диабет требует особого внимания к
+                                        тому, что и как мы едим. Но это не значит, что нужно отказываться от вкусной
+                                        еды или жить в постоянных ограничениях. Главное — научиться выстраивать
+                                        гармоничные отношения с едой, понимать, как она влияет на ваш организм, и
+                                        делать выбор в пользу здоровья без стресса и дискомфорта. Как я могу вам
+                                        помочь? Индивидуальный подход: Я помогу вам сформировать пищевые
+                                        привычки, которые будут работать именно для вас. Мы учтем ваш образ
+                                        жизни, вкусовые предпочтения и медицинские особенности. Обучение и
+                                        поддержка: Я научу вас, как планировать рацион, выбирать полезные
+                                        продукты и готовить блюда, которые будут не только полезными, но и
+                                        вкусными. Вы поймете, как контролировать уровень сахара в крови, не
+                                        отказываясь от удовольствия от еды. Постепенные изменения: Мы не будем
+                                        резко менять ваши привычки. Я помогу вам внедрять новые правила питания
+                                        постепенно, чтобы они стали частью вашей жизни без стресса.
+                                        Психологическая поддержка: Я знаю, как сложно менять привычки, особенно
+                                        когда речь идет о диабете. Я буду рядом, чтобы поддерживать вас на каждом
+                                        этапе. Что вы получите в результате? Устойчивые пищевые привычки, которые
+                                        помогут вам контролировать уровень сахара в крови. Уверенность в своем
+                                        выборе и понимание, как питание влияет на ваше здоровье. Больше энергии,
+                                        легкости и улучшение общего самочувствия. Возможность наслаждаться едой
+                                        без чувства вины или страха.
+                                    </p>
+                                    <div class="plan-card__row">
+                                        <button type="button" class="plan-card__more icon-down" :class="{ 'active': expanded }" @click="expanded = !expanded" x-text="expanded ? 'Скрыть' : 'Читать больше'">
+                                            Читать больше
+                                        </button>
+                                        <div class="plan__person-icons">
+                                            <div class="plan__type flex flex-row">
+                                                <div wire:key="show-plan-52-fit" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
                                                         <img src="img/fit.png" alt="fit">
-                                                    </div>
-                                                    <div class="plan__type-tootlip-body">
-                                                        <div class="plan__type-tootlip-header">
-                                                            <div class="plan__type-tootlip-name"> Поддержание формы</div>
-                                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="img/fit.png" alt="fit">
                                                         </div>
-                                                        <div class="plan__type-tootlip-desc"> Сбалансированный рацион для сохранения достигнутых результатов и тонуса. Индивидуальный план питания и чек-листы помогут легко придерживаться правильного режима, оставаться энергичным и уверенным в себе.</div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Поддержание формы</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Сбалансированный рацион для сохранения достигнутых результатов и тонуса. Индивидуальный план питания и чек-листы помогут легко придерживаться правильного режима, оставаться энергичным и уверенным в себе.</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div wire:key="show-plan-52-slim" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
-                                                <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
-                                                    <img src="img/slim.png" alt="slim">
-                                                </button>
-                                                <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
-                                                    <div class="plan__type-tootlip-icon">
+                                                <div wire:key="show-plan-52-slim" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
                                                         <img src="img/slim.png" alt="slim">
-                                                    </div>
-                                                    <div class="plan__type-tootlip-body">
-                                                        <div class="plan__type-tootlip-header">
-                                                            <div class="plan__type-tootlip-name"> Похудение</div>
-                                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="img/slim.png" alt="slim">
                                                         </div>
-                                                        <div class="plan__type-tootlip-desc"> Эффективный и комфортный путь к желаемому весу без жестких ограничений. Создадим дефицит калорий, ускорим метаболизм и разработаем систему питания, которая станет новым образом жизни, а не диетой.</div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Похудение</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Эффективный и комфортный путь к желаемому весу без жестких ограничений. Создадим дефицит калорий, ускорим метаболизм и разработаем систему питания, которая станет новым образом жизни, а не диетой.</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div wire:key="show-plan-52-behavior" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
-                                                <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
-                                                    <img src="img/behavior.png" alt="behavior">
-                                                </button>
-                                                <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
-                                                    <div class="plan__type-tootlip-icon">
+                                                <div wire:key="show-plan-52-behavior" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
                                                         <img src="img/behavior.png" alt="behavior">
-                                                    </div>
-                                                    <div class="plan__type-tootlip-body">
-                                                        <div class="plan__type-tootlip-header">
-                                                            <div class="plan__type-tootlip-name"> Формирование пищевого поведения</div>
-                                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="img/behavior.png" alt="behavior">
                                                         </div>
-                                                        <div class="plan__type-tootlip-desc"> Проработаем психологическую зависимость от еды, научимся управлять аппетитом и эмоциями без заедания. Вы обретете здоровые привычки и свободные отношения с едой, основанные на интуитивном питании.</div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Формирование пищевого поведения</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Проработаем психологическую зависимость от еды, научимся управлять аппетитом и эмоциями без заедания. Вы обретете здоровые привычки и свободные отношения с едой, основанные на интуитивном питании.</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div wire:key="show-plan-52-wellness" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
-                                                <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
-                                                    <img src="img/wellness.png" alt="wellness">
-                                                </button>
-                                                <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
-                                                    <div class="plan__type-tootlip-icon">
+                                                <div wire:key="show-plan-52-wellness" x-data="{ isOpen: false }" @click.outside.stop="isOpen = false" @click.stop="">
+                                                    <button @click.stop="isOpen = !isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false" type="button" class="plan__type-btn" :class="{ 'active': isOpen }">
                                                         <img src="img/wellness.png" alt="wellness">
-                                                    </div>
-                                                    <div class="plan__type-tootlip-body">
-                                                        <div class="plan__type-tootlip-header">
-                                                            <div class="plan__type-tootlip-name"> Улучшение самочувствия</div>
-                                                            <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                    </button>
+
+                                                    <div class="plan__type-tootlip" x-show="isOpen" x-transition="" :class="{ 'open': isOpen }" style="display: none;">
+                                                        <div class="plan__type-tootlip-icon">
+                                                            <img src="img/wellness.png" alt="wellness">
                                                         </div>
-                                                        <div class="plan__type-tootlip-desc"> Решение проблем с энергией, сном и пищеварением через коррекцию рациона. Уберем «пищевой мусор», добавим необходимые нутриенты для повышения продуктивности и качества жизни каждый день.</div>
+                                                        <div class="plan__type-tootlip-body">
+                                                            <div class="plan__type-tootlip-header">
+                                                                <div class="plan__type-tootlip-name">
+                                                                    Улучшение самочувствия</div>
+                                                                <button class="plan__type-tootlip-close icon-close" @click.stop="isOpen = false"></button>
+                                                            </div>
+                                                            <div class="plan__type-tootlip-desc">
+                                                                Решение проблем с энергией, сном и пищеварением через коррекцию рациона. Уберем «пищевой мусор», добавим необходимые нутриенты для повышения продуктивности и качества жизни каждый день.</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="plan-card__footer">
+                                        <a href="" class="plan-card__share l-btn l-btn-primary l-btn-sm icon-share">Поделиться</a>
+
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat icon-eye-fill">12</div>
+                                            <div class="plan-card__stat icon-heart-fill">0</div>
+                                            <div class="plan-card__stat icon-message-square">1</div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="plan-card__footer">
-                                    <a href="" class="plan-card__share l-btn l-btn-primary l-btn-sm icon-share">Поделиться</a>
-                                    <div class="plan-card__stats">
-                                        <div class="plan-card__stat icon-eye-fill">12</div>
-                                        <div class="plan-card__stat icon-heart-fill">0</div>
-                                        <div class="plan-card__stat icon-message-square">1</div>
+                                <div class="plan-page__tariffs" x-data="{ activeTab: 0 }">
+                                    <div class="plan-page__tariffs-caption title">Выберите ваш вариант</div>
+                                    <div class="plan-page__tariffs-btns">
+                                        <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 0 }" @click="activeTab = 0">Базовый</button>
+                                        <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 1 }" @click="activeTab = 1">PRO</button>
+                                        <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 2 }" @click="activeTab = 2">HARD</button>
+                                    </div>
+                                    <div class="plan-page__tariffs-content">
+                                        <div class="plan-page__tariff" :class="{ 'active': activeTab === 0 }" x-show="activeTab === 0">
+                                            <div class="plan-page__tariff-caption">Базовый</div>
+                                            <div class="plan-page__tariff-name title">Формирование пищевого поведения при&nbsp;диабете</div>
+                                            <div class="plan-page__tariff-price">11 000 ₽</div>
+                                            <div class="plan-page__tariff-tagline">Ваше здоровье — в ваших руках, а я помогу вам сделать этот путь легким и комфортным!</div>
+                                            <ul class="plan-page__tariff-list">
+                                                <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
+                                                <li>Список разрешенных и «скрытых» продуктов.</li>
+                                                <li>Доступ к закрытому чату участников.</li>
+                                                <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
+                                            </ul>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
+                                        </div>
+                                        <div class="plan-page__tariff plan-page__tariff--green" :class="{ 'active': activeTab === 1 }" x-show="activeTab === 1">
+                                            <div class="plan-page__tariff-caption">Professional</div>
+                                            <div class="plan-page__tariff-name title">Индивидуальное сопровождение</div>
+                                            <div class="plan-page__tariff-price">35 000 ₽</div>
+                                            <div class="plan-page__tariff-tagline">Для тех, кому важен индивидуальный подход и работа с анализами.</div>
+                                            <ul class="plan-page__tariff-list">
+                                                <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
+                                                <li>Список разрешенных и «скрытых» продуктов.</li>
+                                                <li>Доступ к закрытому чату участников.</li>
+                                                <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
+                                                <li>Персональная корректировка меню под ваши вкусовые предпочтения.</li>
+                                                <li>Разбор ваших анализов и рекомендации по дефицитам.</li>
+                                                <li><strong>Online-консультация (45 минут)</strong> в начале программы.</li>
+                                                <li>Приоритетная поддержка консультанта.</li>
+                                                <li>Ежедневная проверка дневников питания.</li>
+                                            </ul>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
+                                        </div>
+                                        <div class="plan-page__tariff plan-page__tariff--blue" :class="{ 'active': activeTab === 2 }" x-show="activeTab === 2">
+                                            <div class="plan-page__tariff-caption">Premium</div>
+                                            <div class="plan-page__tariff-name title">Тотальная трансформация</div>
+                                            <div class="plan-page__tariff-price">110 000 ₽</div>
+                                            <div class="plan-page__tariff-tagline">Для тех, кто настроен на радикальный результат и хочет полного контроля 24/7.</div>
+                                            <ul class="plan-page__tariff-list">
+                                                <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
+                                                <li>Список разрешенных и «скрытых» продуктов.</li>
+                                                <li>Доступ к закрытому чату участников.</li>
+                                                <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
+                                                <li>Персональная корректировка меню под ваши вкусовые предпочтения.</li>
+                                                <li>Разбор ваших анализов и рекомендации по дефицитам.</li>
+                                                <li><strong>Online-консультация (45 минут)</strong> в начале программы.</li>
+                                                <li>Приоритетная поддержка консультанта.</li>
+                                                <li>Ежедневная проверка дневников питания.</li>
+                                                <li>Сопровождение в течение 3-х месяцев (вместо 21 дня).</li>
+                                                <li><strong>Консьерж-сервис:</strong> подбор блюд из меню ресторанов или доставка готовых рационов под ваш план.</li>
+                                                <li><strong>Связь 24/7:</strong> экстренные консультации в любое время.</li>
+                                            </ul>
+                                            <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="plan-page__tariffs" x-data="{ activeTab: 0 }">
-                                <div class="plan-page__tariffs-caption title">Выберите ваш вариант</div>
-                                <div class="plan-page__tariffs-btns">
-                                    <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 0 }" @click="activeTab = 0">Базовый</button>
-                                    <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 1 }" @click="activeTab = 1">PRO</button>
-                                    <button type="button" class="plan-page__tariffs-btn l-btn l-btn-sm" :class="{ 'active': activeTab === 2 }" @click="activeTab = 2">HARD</button>
-                                </div>
-                                <div class="plan-page__tariffs-content">
-                                    <div class="plan-page__tariff" :class="{ 'active': activeTab === 0 }" x-show="activeTab === 0">
-                                        <div class="plan-page__tariff-caption">Базовый</div>
-                                        <div class="plan-page__tariff-name title">Формирование пищевого поведения при&nbsp;диабете</div>
-                                        <div class="plan-page__tariff-price">11 000 ₽</div>
-                                        <div class="plan-page__tariff-tagline">Ваше здоровье — в ваших руках, а я помогу вам сделать этот путь легким и комфортным!</div>
-                                        <ul class="plan-page__tariff-list">
-                                            <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
-                                            <li>Список разрешенных и «скрытых» продуктов.</li>
-                                            <li>Доступ к закрытому чату участников.</li>
-                                            <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
-                                        </ul>
-                                        <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
-                                    </div>
-                                    <div class="plan-page__tariff plan-page__tariff--green" :class="{ 'active': activeTab === 1 }" x-show="activeTab === 1">
-                                        <div class="plan-page__tariff-caption">Professional</div>
-                                        <div class="plan-page__tariff-name title">Индивидуальное сопровождение</div>
-                                        <div class="plan-page__tariff-price">35 000 ₽</div>
-                                        <div class="plan-page__tariff-tagline">Для тех, кому важен индивидуальный подход и работа с анализами.</div>
-                                        <ul class="plan-page__tariff-list">
-                                            <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
-                                            <li>Список разрешенных и «скрытых» продуктов.</li>
-                                            <li>Доступ к закрытому чату участников.</li>
-                                            <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
-                                            <li>Персональная корректировка меню под ваши вкусовые предпочтения.</li>
-                                            <li>Разбор ваших анализов и рекомендации по дефицитам.</li>
-                                            <li><strong>Online-консультация (45 минут)</strong> в начале программы.</li>
-                                            <li>Приоритетная поддержка консультанта.</li>
-                                            <li>Ежедневная проверка дневников питания.</li>
-                                        </ul>
-                                        <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
-                                    </div>
-                                    <div class="plan-page__tariff plan-page__tariff--blue" :class="{ 'active': activeTab === 2 }" x-show="activeTab === 2">
-                                        <div class="plan-page__tariff-caption">Premium</div>
-                                        <div class="plan-page__tariff-name title">Тотальная трансформация</div>
-                                        <div class="plan-page__tariff-price">110 000 ₽</div>
-                                        <div class="plan-page__tariff-tagline">Для тех, кто настроен на радикальный результат и хочет полного контроля 24/7.</div>
-                                        <ul class="plan-page__tariff-list">
-                                            <li>Сбалансированное меню на 21 день (с учетом ГИ).</li>
-                                            <li>Список разрешенных и «скрытых» продуктов.</li>
-                                            <li>Доступ к закрытому чату участников.</li>
-                                            <li>Проверка дневников питания: <strong>с 18:00 до 00:00 (раз в 2 дня).</strong></li>
-                                            <li>Персональная корректировка меню под ваши вкусовые предпочтения.</li>
-                                            <li>Разбор ваших анализов и рекомендации по дефицитам.</li>
-                                            <li><strong>Online-консультация (45 минут)</strong> в начале программы.</li>
-                                            <li>Приоритетная поддержка консультанта.</li>
-                                            <li>Ежедневная проверка дневников питания.</li>
-                                            <li>Сопровождение в течение 3-х месяцев (вместо 21 дня).</li>
-                                            <li><strong>Консьерж-сервис:</strong> подбор блюд из меню ресторанов или доставка готовых рационов под ваш план.</li>
-                                            <li><strong>Связь 24/7:</strong> экстренные консультации в любое время.</li>
-                                        </ul>
-                                        <a href="#sign-in" data-modal class="plan-page__tariff-btn l-btn l-btn-primary">Заказать</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <aside class="plan-page__consultant consultant-card" x-data="{ 
+                            <aside class="plan-page__consultant consultant-card" x-data="{ 
         isInfoOpened: false, 
         isMobile: window.innerWidth < 992 
      }" @resize.window="isMobile = window.innerWidth < 992">
@@ -953,7 +1002,8 @@
         </button>
     </div>
 </aside>
-                    </div> <div class="comment-block">
+                        </div>
+                        <div class="comment-block">
     <div class="comment-block__caption title icon-message-alternate">
         
         
@@ -1193,26 +1243,27 @@
         </div>
     </div>
 </div>
-                </div>
-            </section>
-        </main> <footer class="footer">
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> </div>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            Fancybox.bind('[data-fancybox]', {});
-        })
-
-    </script> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Fancybox.bind('[data-fancybox]', {});
+            })
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

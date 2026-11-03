@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,25 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/glossary.min.css" />  <link rel="stylesheet" href="css/homepage.min.css" />  <link rel="stylesheet" href="css/announcement.min.css" />  <link rel="stylesheet" href="css/article.min.css" />  <link rel="stylesheet" href="css/podbor.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header header-guest">
+    <body>
+        <div class="wrapper">
+            <header class="header header-guest">
     <div class="header-guest__container">
         <a href="homepage.html" class="header__logo header-guest__logo">
             <img src="img/logo-russia.svg" alt="Итвио">
@@ -49,17 +44,20 @@
         </div>
     </div>
 </header>
- <main class="page glossary-page">
-            <section class="content glossary-product glossary-product--admin">
-                <div class="content__container">
-                    <nav class="glossary-crumb" aria-label="Хлебные крошки">
-                        <a href="glossary.html">Глоссарий КБЖУ</a>
-                        <span>/</span>
-                        <span>Сладкое и снеки</span>
-                        <span>/</span>
-                        <span class="glossary-crumb__current">Сникерс</span>
-                        <span class="glossary-product__admin-badge">Спека · админ</span>
-                    </nav> <div class="glossary-product-intro">
+
+            <main class="page glossary-page">
+                <section class="content glossary-product glossary-product--admin">
+                    <div class="content__container">
+                        <nav class="glossary-crumb" aria-label="Хлебные крошки">
+                            <a href="glossary.html">Глоссарий КБЖУ</a>
+                            <span>/</span>
+                            <span>Сладкое и снеки</span>
+                            <span>/</span>
+                            <span class="glossary-crumb__current">Сникерс</span>
+                            <span class="glossary-product__admin-badge">Спека · админ</span>
+                        </nav>
+
+                        <div class="glossary-product-intro">
     <h2 class="glossary-product-intro__title title title-bold">Карточка продукта: откуда берутся данные и как считаются графики</h2>
     <p class="glossary-product-intro__text">Слева — витрина карточки. У каждого элемента стоит номер, справа — из какого поля админки он берётся и по какому правилу. Пустые поля на витрине скрываются. Флаги помечены <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>.</p>
     <div class="glossary-product-intro__legend">
@@ -68,70 +66,74 @@
         <span class="glossary-product-intro__lg"><b>Расчёт графиков</b> — в тёмной карточке в сайдбаре</span>
     </div>
 </div>
- <div class="glossary-product__grid">
-                        <div class="glossary-product__main">
-                            <div class="glossary-product__badges">
-                                <span class="glossary-product__anno">
-                                    <span class="glossary-mk" aria-hidden="true">3</span>
-                                    <span class="glossary-product__tag">Сладкое и снеки</span>
-                                </span>
-                                <span class="glossary-product__anno">
-                                    <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
-                                    <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
-                                </span>
-                                <span class="glossary-product__anno">
-                                    <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
-                                    <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
-                                </span>
-                            </div>
-                            <div class="glossary-product__anno">
-                                <span class="glossary-mk" aria-hidden="true">1</span>
-                                <h1 class="glossary-product__title title title-bold">Сникерс</h1>
-                            </div>
-                            <p class="glossary-product__syn glossary-product__anno">
-                                <span class="glossary-mk" aria-hidden="true">2</span> Также ищут: Сникерс, Snickers
-                            </p>
-                            <div class="glossary-product__desc-wrap glossary-product__anno" x-data="{ open: false }">
-                                <span class="glossary-mk" aria-hidden="true">6</span>
-                                <div class="glossary-product__desc-body">
-                                    <p class="glossary-product__desc" :class="{ 'is-clamped': !open }">Сникерс — популярный шоколадный батончик, сочетающий молочный шоколад, мягкую нугу, тягучую карамель и жареный арахис. Его вкус балансирует между сладостью и лёгкой солёностью, а текстура объединяет хруст орехов, нежность нуги и пластичность карамели. Продукт отличается высокой калорийностью: в 100 г содержится около 500 ккал, 9 г белка, 24 г жира и 60 г углеводов, значительная часть которых — сахара. Благодаря быстрым углеводам и жирам батончик даёт быстрый прилив энергии и чувство сытости, поэтому его часто берут в дорогу, на прогулки, в походы или используют как перекус при интенсивных нагрузках. Арахис добавляет растительный белок, магний и витамин E, но их количество невелико. Сникерс не является диетическим или функциональным продуктом: он содержит много добавленного сахара, насыщенных жиров и может включать пальмовое масло, эмульгаторы и ароматизаторы. Регулярное употребление в больших количествах может способствовать набору веса, колебаниям уровня глюкозы в крови и повышенной тяге к сладкому. Не рекомендуется при сахарном диабете, ожирении, а также при аллергии на арахис, молоко или сою. Тем, кто следит за составом рациона, стоит учитывать батончик в общей суточной калорийности и не превышать разумную порцию. Употреблять его лучше умеренно, как лакомство, а не ежедневный источник питания, сочетая с полноценными приёмами пищи. Удобная герметичная упаковка позволяет сохранить свежесть, защитить продукт от влаги и брать батончик с собой в любую поездку.</p>
-                                    <button type="button" class="glossary-product__desc-toggle" @click="open = !open" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
-                                </div>
-                            </div>
-                            <div class="glossary-product__spec">
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">7</span>Состав</span>
-                                    <span class="glossary-product__spec-val">Молочный шоколад, нуга, карамель, арахис, сахар, эмульгатор</span>
-                                </div>
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">8</span>Вкус</span>
-                                    <span class="glossary-product__spec-val">
-                                        <span class="glossary-product__tastes">
-                                            <span class="glossary-product__taste">Ореховый</span>
-                                            <span class="glossary-product__taste">Шоколадный</span>
-                                            <span class="glossary-product__taste">Сладкий</span>
-                                        </span>
+
+
+                        <div class="glossary-product__grid">
+                            <div class="glossary-product__main">
+                                <div class="glossary-product__badges">
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk" aria-hidden="true">3</span>
+                                        <span class="glossary-product__tag">Сладкое и снеки</span>
+                                    </span>
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                        <span class="glossary-product__tag glossary-product__tag--poly">Полипродукт</span>
+                                    </span>
+                                    <span class="glossary-product__anno">
+                                        <span class="glossary-mk glossary-mk--flag" aria-hidden="true">Ф</span>
+                                        <span class="glossary-product__tag glossary-product__tag--comm">Коммерческий</span>
                                     </span>
                                 </div>
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">9</span>Производитель</span>
-                                    <span class="glossary-product__spec-val">Марс (ООО «Марс»)</span>
+                                <div class="glossary-product__anno">
+                                    <span class="glossary-mk" aria-hidden="true">1</span>
+                                    <h1 class="glossary-product__title title title-bold">Сникерс</h1>
                                 </div>
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">10</span>Страна / город</span>
-                                    <span class="glossary-product__spec-val">Россия</span>
+                                <p class="glossary-product__syn glossary-product__anno">
+                                    <span class="glossary-mk" aria-hidden="true">2</span>
+                                    Также ищут: Сникерс, Snickers
+                                </p>
+                                <div class="glossary-product__desc-wrap glossary-product__anno" x-data="{ open: false }">
+                                    <span class="glossary-mk" aria-hidden="true">6</span>
+                                    <div class="glossary-product__desc-body">
+                                        <p class="glossary-product__desc" :class="{ 'is-clamped': !open }">Сникерс — популярный шоколадный батончик, сочетающий молочный шоколад, мягкую нугу, тягучую карамель и жареный арахис. Его вкус балансирует между сладостью и лёгкой солёностью, а текстура объединяет хруст орехов, нежность нуги и пластичность карамели. Продукт отличается высокой калорийностью: в 100 г содержится около 500 ккал, 9 г белка, 24 г жира и 60 г углеводов, значительная часть которых — сахара. Благодаря быстрым углеводам и жирам батончик даёт быстрый прилив энергии и чувство сытости, поэтому его часто берут в дорогу, на прогулки, в походы или используют как перекус при интенсивных нагрузках. Арахис добавляет растительный белок, магний и витамин E, но их количество невелико. Сникерс не является диетическим или функциональным продуктом: он содержит много добавленного сахара, насыщенных жиров и может включать пальмовое масло, эмульгаторы и ароматизаторы. Регулярное употребление в больших количествах может способствовать набору веса, колебаниям уровня глюкозы в крови и повышенной тяге к сладкому. Не рекомендуется при сахарном диабете, ожирении, а также при аллергии на арахис, молоко или сою. Тем, кто следит за составом рациона, стоит учитывать батончик в общей суточной калорийности и не превышать разумную порцию. Употреблять его лучше умеренно, как лакомство, а не ежедневный источник питания, сочетая с полноценными приёмами пищи. Удобная герметичная упаковка позволяет сохранить свежесть, защитить продукт от влаги и брать батончик с собой в любую поездку.</p>
+                                        <button type="button" class="glossary-product__desc-toggle" @click="open = !open" x-text="open ? 'Свернуть' : 'Читать полностью'"></button>
+                                    </div>
                                 </div>
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">11</span>Порция</span>
-                                    <span class="glossary-product__spec-val">50 г</span>
-                                </div>
-                                <div class="glossary-product__spec-row glossary-product__anno">
-                                    <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">12</span>Штрихкод</span>
-                                    <span class="glossary-product__spec-val">0099990005017</span>
+                                <div class="glossary-product__spec">
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">7</span>Состав</span>
+                                        <span class="glossary-product__spec-val">Молочный шоколад, нуга, карамель, арахис, сахар, эмульгатор</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">8</span>Вкус</span>
+                                        <span class="glossary-product__spec-val">
+                                            <span class="glossary-product__tastes">
+                                                <span class="glossary-product__taste">Ореховый</span>
+                                                <span class="glossary-product__taste">Шоколадный</span>
+                                                <span class="glossary-product__taste">Сладкий</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">9</span>Производитель</span>
+                                        <span class="glossary-product__spec-val">Марс (ООО «Марс»)</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">10</span>Страна / город</span>
+                                        <span class="glossary-product__spec-val">Россия</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">11</span>Порция</span>
+                                        <span class="glossary-product__spec-val">50 г</span>
+                                    </div>
+                                    <div class="glossary-product__spec-row glossary-product__anno">
+                                        <span class="glossary-product__spec-key"><span class="glossary-mk" aria-hidden="true">12</span>Штрихкод</span>
+                                        <span class="glossary-product__spec-val">0099990005017</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="glossary-product__side"> <aside class="glossary-kbju">
+                            <div class="glossary-product__side">
+                                <aside class="glossary-kbju">
     <div class="glossary-kbju__head">
         <div class="glossary-kbju__brand">
             <img src="img/logo-russia-gray.svg" alt="Итвио">
@@ -181,6 +183,7 @@
                 <div class="glossary-kbju__track"><i style="width:100%;background:#34c77b"></i></div>
             </div>
         </div>
+        
         <p class="glossary-kbju__note">Данные носят справочный характер. Значения — на 100 г продукта.</p>
     </div>
     <div class="glossary-kbju__cta">
@@ -188,7 +191,8 @@
         <a href="#glossary-correction" data-modal class="glossary-kbju__report">Нашли неточность в КБЖУ?</a>
     </div>
 </aside>
- <div class="glossary-formula">
+
+                                <div class="glossary-formula">
     <h3 class="glossary-formula__title"><span class="glossary-mk glossary-mk--flag" aria-hidden="true">14</span> Как считаются графики</h3>
     <p class="glossary-formula__lead">Донат «Калорийность по нутриентам» — вклад Б/Ж/У в калории:</p>
     <div class="glossary-formula__box">
@@ -214,7 +218,8 @@
         <span>Сумма «ккал из Б/Ж/У» может немного отличаться от поля «Калории» из-за клетчатки и округлений. Крупная цифра всегда берётся из поля «Калории», а не пересчитывается.</span>
     </div>
 </div>
- <div class="glossary-fields">
+
+                                <div class="glossary-fields">
     <h3 class="glossary-fields__title">Карта полей: витрина → админка</h3>
     <p class="glossary-fields__sub">По справке заполнения продукта</p>
 
@@ -329,23 +334,30 @@
         </div>
     </div>
 </div>
- </div>
-                    </div> <section class="glossary-section">
-    <div class="content__section glossary-promo">
+
+                            </div>
+                        </div>
+
+                        <section class="glossary-section">
+    <div class="content__section glossary-promo ">
+        
+        
         <div class="content__section-image">
             <img src="img/RK/01.svg" alt="">
         </div>
+        
         <div class="content__section-body">
-            <div class="content__section-title title title-bold">Разберём ваш рацион вместе с диетологом Итвио</div>
-            <p class="content__section-desc">Хотите не просто узнать КБЖУ, а выстроить питание под свою цель? Консультанты Итвио составят персональную диету и будут вести вас онлайн через дневник питания.</p>
+            <div class="content__section-title title title-bold">Хватит худеть вслепую. Консультация по питанию в Итвио</div>
+            <p class="content__section-desc">Проверенные консультанты по питанию анализируют ваш дневник, дают чёткие рекомендации и подстраивают их под ваши результаты. Первый шаг к цели начинается с выбора специалиста.</p>
             <div class="glossary-promo__actions">
                 <a href="homepage-consultants.html" class="content__section-btn l-btn l-btn-primary l-btn-sm">Выбрать консультанта</a>
-                <a href="auth.html" class="l-btn l-btn-secondary-outline l-btn-sm">Начать бесплатно</a>
+                <a href="podbor-guest.html" class="l-btn l-btn-secondary-outline l-btn-sm">Подобрать консультацию</a>
             </div>
         </div>
     </div>
 </section>
- <section class="glossary-section glossary-calc">
+
+                        <section class="glossary-section glossary-calc">
     <h2 class="glossary-section__title title title-bold">Калькулятор нормы КБЖУ</h2>
     <p class="glossary-section__sub">Персональный расчёт суточной нормы калорий и БЖУ по формуле Харриса-Бенедикта — по вашим параметрам.</p>
 
@@ -431,7 +443,8 @@
         </div>
     </div>
 </section>
- <section class="glossary-section glossary-posts">
+
+                        <section class="glossary-section glossary-posts">
     <h2 class="glossary-section__title title title-bold">Итвио — это ещё и сообщество</h2>
     <p class="glossary-section__sub">Рецепты, лайфхаки и истории пользователей и консультантов. Последние записи в ленте:</p>
     <div class="content__announcements glossary-posts__list">
@@ -734,7 +747,8 @@
         <a href="homepage.html" class="l-btn l-btn-secondary-outline">Открыть ленту Итвио</a>
     </div>
 </section>
- <section class="glossary-section glossary-section--producers">
+
+                        <section class="glossary-section glossary-section--producers">
     <div class="glossary-producers">
         <div class="glossary-producers__intro">
             <div class="glossary-producers__brand">
@@ -774,9 +788,10 @@
     </div>
 </section>
 
-                </div>
-            </section>
-        </main> <footer class="footer footer-guest">
+                    </div>
+                </section>
+            </main>
+            <footer class="footer footer-guest">
     <div class="footer-guest__container">
         <span class="footer-guest__copy">Eatvio © 2026</span>
         <nav class="footer-guest__links" aria-label="Документы">
@@ -790,7 +805,9 @@
         </nav>
     </div>
 </footer>
- </div> <div id="glossary-correction" class="popup">
+
+        </div>
+        <div id="glossary-correction" class="popup">
     <div class="popup__content">
         <div class="popup__body popup__body-md">
             <div class="popup__step">
@@ -862,10 +879,10 @@
         </div>
     </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

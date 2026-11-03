@@ -92,7 +92,7 @@
 
                         <div class="glossary-meta">
                             <h2 class="glossary-meta__title title title-bold">Все продукты</h2>
-                            <span class="glossary-meta__count">в базе Итвио более 220&nbsp;000 продуктов</span>
+                            <span class="glossary-meta__count">в базе Итвио 201&nbsp;841 продукт</span>
                         </div>
 
                         <div class="glossary-grid">
@@ -179,14 +179,18 @@
                         </div>
 
                         <div class="glossary-pager">
-                            <div class="pagination">
-                                <button type="button" class="pagination__prev icon-arrow-left" disabled aria-disabled="true"></button>
-                                <span class="pagination__item" style="background:#2f80ed;color:#fff;border-color:#2f80ed">1</span>
+                            <nav class="pagination" aria-label="Страницы каталога продуктов">
+                                <button type="button" class="pagination__prev icon-arrow-left" disabled aria-disabled="true" aria-label="Предыдущая страница"></button>
+                                <span class="pagination__item" aria-current="page" aria-label="Страница 1">1</span>
                                 <a href="" class="pagination__item">2</a>
                                 <a href="" class="pagination__item">3</a>
-                                <button type="button" class="pagination__next icon-arrow-right"></button>
-                            </div>
-                            <p class="glossary-pager__info">Показано 1–8 из 28</p>
+                                <a href="" class="pagination__item pagination__item--desktop">4</a>
+                                <a href="" class="pagination__item pagination__item--desktop">5</a>
+                                <span class="pagination__ellipsis" aria-hidden="true">…</span>
+                                <a href="" class="pagination__item" aria-label="Последняя страница, 25231">25231</a>
+                                <button type="button" class="pagination__next icon-arrow-right" aria-label="Следующая страница"></button>
+                            </nav>
+                            <p class="glossary-pager__info">Показано 1–8 из 201&nbsp;841</p>
                         </div>
 
                         @@include('html/glossary-blocks/_edu.html')

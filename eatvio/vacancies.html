@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,21 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__container">
         <a href="/" class="header__logo">
             <img src="img/logo-russia.svg" alt="logo">
@@ -98,29 +97,39 @@
             </form>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container container-sm">
-                    <div class="settings__header">
-                        <a href="homepage.html" class="settings__back icon-arrow-short-left"></a>
-                        <div class="settings__person-title title"> Вакансии </div>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="homepage.html" class="settings__back icon-arrow-short-left"></a>
+                            <div class="settings__person-title title">
+                                Вакансии
+                            </div>
+                        </div>
+                        <div class="settings__body">
+                            <p>В Итвио нет открытых вакансий для сотрудников.</p>
+                            <br>
+                            <p>
+                                Мы приглашаем специалистов по питанию работать на платформе как консультанты.
+                                Консультанты — не сотрудники компании, а независимые специалисты: они самостоятельно
+                                ведут подопечных, создают планы питания и получают вознаграждение за консультации.
+                            </p>
+                            <br>
+                            <p><strong>Как стать консультантом</strong></p>
+                            <div>1. Зарегистрируйтесь как пользователь</div>
+                            <div>2. В настройках профиля нажмите «Стать консультантом»</div>
+                            <div>3. Заполните форму и дождитесь одобрения модератора</div>
+                            <br>
+                            <p>
+                                Если вы хотите сотрудничать с нами, пришлите ваши контакты на
+                                <a href="mailto:info@eatvio.ru">info@eatvio.ru</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="settings__body">
-                        <p>В Итвио нет открытых вакансий для сотрудников.</p>
-                        <br>
-                        <p> Мы приглашаем специалистов по питанию работать на платформе как консультанты. Консультанты — не сотрудники компании, а независимые специалисты: они самостоятельно ведут подопечных, создают планы питания и получают вознаграждение за консультации. </p>
-                        <br>
-                        <p><strong>Как стать консультантом</strong></p>
-                        <div>1. Зарегистрируйтесь как пользователь</div>
-                        <div>2. В настройках профиля нажмите «Стать консультантом»</div>
-                        <div>3. Заполните форму и дождитесь одобрения модератора</div>
-                        <br>
-                        <p> Если вы хотите сотрудничать с нами, пришлите ваши контакты на <a href="mailto:info@eatvio.ru">info@eatvio.ru</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main> <footer class="footer footer-guest">
+                </section>
+            </main>
+            <footer class="footer footer-guest">
     <div class="footer-guest__container">
         <span class="footer-guest__copy">Eatvio © 2026</span>
         <nav class="footer-guest__links" aria-label="Документы">
@@ -134,10 +143,11 @@
         </nav>
     </div>
 </footer>
- </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <head>
+<html lang="ru">
+    <head>
     <title>Eatvio Layout</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -12,25 +13,19 @@
     <link rel="stylesheet" href="css/reset.min.css" />
 
     
-    <link rel="stylesheet" href="css/common.min.css" />
-    
     <link rel="stylesheet" href="css/tailwind.min.css" />
 
     
+    <link rel="stylesheet" href="css/dev.css" />
+    
 
-    
-    
-    <!-- Current Page Styles -->
-     <link rel="stylesheet" href="css/my-posts.min.css" />  <link rel="stylesheet" href="css/announcement.min.css" /> 
-    <!-- Current Page Styles -->
-    
     
 
 </head>
 
-
-<body>
-    <div class="wrapper"> <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__main">
         <a href="/" class="header__logo">
             <img src="img/logo.svg" class="header__logo-desktop" alt="logo">
@@ -466,36 +461,48 @@
             </div>
         </div>
     </div>
-</header> <main class="page">
-            <section class="settings">
-                <div class="settings__container container-sm">
-                    <div class="settings__header">
-                        <a href="" class="settings__back icon-arrow-short-left mobile-only"></a>
-                        <div class="settings__person-title title"> Мои публикации </div>
-                    </div>
-                    <div class="my-posts">
-                        <div class="my-posts__intro">
-                            <p class="my-posts__intro-text"> Публикуйте записи сразу или планируйте выход заранее — по дате, времени и часовому поясу. Отложенные публикации появятся в ленте автоматически. </p>
-                            <a href="post-creating.html" class="my-posts__create l-btn l-btn-primary icon-plus">Создать публикацию</a>
-                        </div>
-                        <div class="my-posts__toolbar">
-                            <div class="my-posts__tablist content__filters" role="tablist" aria-label="Списки публикаций">
-                                <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-scheduled" aria-selected="true" aria-controls="tabpanel-scheduled"> Отложенные <span class="info-block dark">6</span>
-                                </button>
-                                <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-published" aria-selected="false" aria-controls="tabpanel-published" tabindex="-1"> Опубликованные <span class="info-block dark">4</span>
-                                </button>
-                            </div>
-                            <div class="my-posts__sort select select-md">
-                                <select name="sort" aria-label="Сортировка публикаций">
-                                    <option value="closest">Сначала ближайшие</option>
-                                    <option value="latest">Сначала поздние</option>
-                                    <option value="new">Сначала новые</option>
-                                    <option value="old">Сначала старые</option>
-                                </select>
+</header>
+            <main class="page">
+                <section class="settings">
+                    <div class="settings__container container-sm">
+                        <div class="settings__header">
+                            <a href="" class="settings__back icon-arrow-short-left mobile-only"></a>
+                            <div class="settings__person-title title">
+                                Мои публикации
                             </div>
                         </div>
-                        <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-scheduled" tabindex="0" aria-labelledby="tab-scheduled">
-                            <div class="my-posts__grid"> <article class="my-posts__card">
+                        <div class="my-posts">
+                            <div class="my-posts__intro">
+                                <p class="my-posts__intro-text">
+                                    Публикуйте записи сразу или планируйте выход заранее — по дате, времени и часовому поясу. Отложенные публикации появятся в ленте автоматически.
+                                </p>
+                                <a href="post-creating.html" class="my-posts__create l-btn l-btn-primary icon-plus">Создать публикацию</a>
+                            </div>
+
+                            <div class="my-posts__toolbar">
+                                <div class="my-posts__tablist content__filters" role="tablist" aria-label="Списки публикаций">
+                                    <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-scheduled" aria-selected="true" aria-controls="tabpanel-scheduled">
+                                        Отложенные
+                                        <span class="info-block dark">6</span>
+                                    </button>
+                                    <button type="button" class="my-posts__tab content__filter" role="tab" id="tab-published" aria-selected="false" aria-controls="tabpanel-published" tabindex="-1">
+                                        Опубликованные
+                                        <span class="info-block dark">4</span>
+                                    </button>
+                                </div>
+                                <div class="my-posts__sort select select-md">
+                                    <select name="sort" aria-label="Сортировка публикаций">
+                                        <option value="closest">Сначала ближайшие</option>
+                                        <option value="latest">Сначала поздние</option>
+                                        <option value="new">Сначала новые</option>
+                                        <option value="old">Сначала старые</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-scheduled" tabindex="0" aria-labelledby="tab-scheduled">
+                                <div class="my-posts__grid">
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -567,7 +574,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -639,7 +647,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -707,7 +716,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -779,7 +789,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -851,7 +862,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -927,17 +939,20 @@
         
     </div>
 </article>
- </div>
-                            <!-- Пустое состояние: показывается, когда отложенных публикаций нет — уберите атрибут hidden -->
-                            <div class="my-posts__empty" hidden>
-                                <div class="my-posts__empty-icon icon-clock"></div>
-                                <div class="my-posts__empty-title">Отложенных публикаций нет</div>
-                                <p class="my-posts__empty-text">Запланируйте выход записи заранее — она появится в ленте в выбранные дату и время.</p>
-                                <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+
+                                </div>
+                                <!-- Пустое состояние: показывается, когда отложенных публикаций нет — уберите атрибут hidden -->
+                                <div class="my-posts__empty" hidden>
+                                    <div class="my-posts__empty-icon icon-clock"></div>
+                                    <div class="my-posts__empty-title">Отложенных публикаций нет</div>
+                                    <p class="my-posts__empty-text">Запланируйте выход записи заранее — она появится в ленте в выбранные дату и время.</p>
+                                    <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-published" tabindex="0" aria-labelledby="tab-published">
-                            <div class="my-posts__grid"> <article class="my-posts__card">
+
+                            <div class="tabpanel my-posts__panel" role="tabpanel" id="tabpanel-published" tabindex="0" aria-labelledby="tab-published">
+                                <div class="my-posts__grid">
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -1020,7 +1035,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -1095,7 +1111,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -1170,7 +1187,8 @@
         
     </div>
 </article>
- <article class="my-posts__card">
+
+                                    <article class="my-posts__card">
     
     
     <div class="my-posts__media announcement__slider">
@@ -1249,18 +1267,20 @@
         
     </div>
 </article>
- </div>
-                            <div class="my-posts__empty" hidden>
-                                <div class="my-posts__empty-icon icon-file-text"></div>
-                                <div class="my-posts__empty-title">Публикаций пока нет</div>
-                                <p class="my-posts__empty-text">Поделитесь рецептом, лайфхаком или личным результатом — сообщество это оценит.</p>
-                                <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+
+                                </div>
+                                <div class="my-posts__empty" hidden>
+                                    <div class="my-posts__empty-icon icon-file-text"></div>
+                                    <div class="my-posts__empty-title">Публикаций пока нет</div>
+                                    <p class="my-posts__empty-text">Поделитесь рецептом, лайфхаком или личным результатом — сообщество это оценит.</p>
+                                    <a href="post-creating.html" class="l-btn l-btn-primary l-btn-md icon-plus">Создать публикацию</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main> <div id="logout" class="popup">
+                </section>
+            </main>
+            <div id="logout" class="popup">
     <div class="popup__content">
         <div class="popup__logout">
             <div class="popup__caption title">Вы уверены что хотите выйти?</div>
@@ -1270,14 +1290,17 @@
             </div>
         </div>
     </div>
-</div> </div> <footer class="footer">
+</div>
+        </div>
+        <footer class="footer">
     <div class="footer__container">
         <a href="" class="footer__link">ООО “ИТВИО”</a>
         <a href="" class="footer__link">Пользовательское соглашение</a>
         <a href="" class="footer__link">Зaщита персональных данных</a>
         <a href="" class="footer__link">Обратная связь</a>
     </div>
-</footer> <div id="reschedule-post" class="popup">
+</footer>
+        <div id="reschedule-post" class="popup">
     <div class="popup__content">
         <div class="popup__body popup__body-sm my-posts__popup" x-data="{ when: 'schedule' }">
             <div class="my-posts__popup-header">
@@ -1343,10 +1366,10 @@
         </div>
     </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <script src="js/app.min.js"></script>
-</body>
-
+    </body>
 </html>
