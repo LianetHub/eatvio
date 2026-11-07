@@ -473,7 +473,7 @@
         </div>
     </div>
 </header> <main class="page">
-            <section class="diary">
+            <section data-diary-page x-data="{meal:0,empty:false,editable:true,nutri:true,diet:false}" class="diary">
                 <div class="diary__container container-sm">
                     <div class="diary__header">
                         <a href="" class="diary__back icon-arrow-short-left"><span>Профиль</span></a>
@@ -481,149 +481,676 @@
                             <div class="diary__title-caption"> Заполнение дневника питания </div>
                             <div class="diary__title-date"> 29 марта </div>
                         </div>
-                    </div> <div class="diary__analytics" x-data="diaryAnalytics">
-    <button type="button" class="diary__analytics-toggle" @click="toggle()" :aria-expanded="open.toString()" aria-controls="diary-analytics-body">
-        <span class="diary__analytics-ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M4 19V5M4 19h16" />
-                <path d="M7 15l4-5 3 3 5-7" />
-            </svg>
-        </span>
+                    </div> <div class="diary__analytics" x-data="{open:false,panel:'weight',chartError:'',showSleep:true,waterGoalEdit:false,waterGoalError:'',goal:2000,draft:2000,waterPeriod:'week',waterFrom:'2023-07-14',waterTo:'2023-08-03',total:950,count:6,average:158,gap:155,last:'16:45',periodAverage:0,periodCount:0,periodHits:0,periodMissing:0,periodBest:'',weekly:false,periods:{weight:'3М',bmi:'3М',measure:'3М',daily:'2Н'},series:{measure:[true,true,true],daily:[true,true,true,true],intra:[true,true,true,true,true]}}" :data-water-goal="goal" :data-period="waterPeriod" :data-from="waterFrom" :data-to="waterTo" @diary:water.window="({total,count,average,gap,last}=$event.detail)" @diary:chart-error.window="chartError=$event.detail.message" @diary:period.window="({periodAverage,periodCount,periodHits,periodMissing,periodBest,weekly}=$event.detail)">
+    <button type="button" class="diary__analytics-toggle" @click="open=!open;if(open){chartError='';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))}" :aria-expanded="open.toString()" aria-controls="diary-analytics-body">
+        <span class="diary__analytics-ico icon-stats" aria-hidden="true"></span>
         <span class="diary__analytics-title title">Аналитика</span>
-        <span class="diary__analytics-sub" x-text="open ? 'вес, замеры и питание' : 'нажмите, чтобы посмотреть прогресс'"></span>
-        <span class="diary__analytics-chev" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-                <path d="m6 14 6-6 6 6" />
-            </svg>
-        </span>
+        <span class="diary__analytics-sub" x-text="open ? 'вес, замеры, питание и вода' : 'нажмите, чтобы посмотреть прогресс'"></span>
+        <span class="diary__analytics-chev icon-down" aria-hidden="true"></span>
     </button>
-
     <div class="diary__analytics-body" id="diary-analytics-body" x-show="open" x-cloak style="display: none;">
+        <div class="diary__analytics-error" role="alert" x-show="chartError" x-cloak><span x-text="chartError"></span><button type="button" class="l-btn l-btn-sm l-btn-primary" @click="chartError='';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Повторить</button></div>
         <div class="tabs__row diary__analytics-tabs" role="tablist" aria-label="Графики">
-            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'weight'" @click="setPanel('weight')">Вес</button>
-            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'bmi'" @click="setPanel('bmi')">ИМТ</button>
-            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'measure'" @click="setPanel('measure')">Замеры</button>
-            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'daily'" @click="setPanel('daily')">КБЖУ по дням</button>
-            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'intra'" @click="setPanel('intra')">В течение дня</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'weight'" @click="panel='weight';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Вес</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'bmi'" @click="panel='bmi';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">ИМТ</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'measure'" @click="panel='measure';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Замеры</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'daily'" @click="panel='daily';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">КБЖУ по дням</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'intra'" @click="panel='intra';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">В течение дня</button>
+            <button type="button" class="l-tab l-btn" :aria-selected="panel === 'water'" @click="panel='water';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Вода</button>
         </div>
-
         <div class="diary__analytics-panel" x-show="panel === 'weight'" x-cloak>
             <div class="diary__analytics-head">
-                <span class="diary__analytics-num">91.0 <small>кг</small></span>
-                <span class="diary__analytics-delta">Снизили на 3 кг за 3 месяца</span>
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num" x-show="!empty">91.0 <small>кг</small></span>
+                    <span class="diary__analytics-delta" x-show="!empty">Вес снизился на 3 кг за 3 месяца</span>
+                    <span class="diary__analytics-hint" x-show="empty">Нет данных за период</span>
+                </div>
                 <div class="diary__analytics-pills diary__analytics-pills--sm">
-                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
-                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.weight === item }" @click="periods.weight = item" x-text="item"></button>
-                    </template>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.weight==='1М'}" @click="periods.weight='1М'">1М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.weight==='3М'}" @click="periods.weight='3М'">3М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.weight==='6М'}" @click="periods.weight='6М'">6М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.weight==='1Г'}" @click="periods.weight='1Г'">1Г</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.weight==='Всё время'}" @click="periods.weight='Всё время'">Всё время</button>
                 </div>
             </div>
             <div class="diary__analytics-chart">
                 <canvas id="chWeight" role="img" aria-label="График веса"></canvas>
             </div>
+            <script type="application/json" id="chWeightValues">
+                [
+                    { "date": "20.04", "weight": 94 },
+                    { "date": "05.05", "weight": 96 },
+                    { "date": "20.05", "weight": 95 },
+                    { "date": "04.06", "weight": 92 },
+                    { "date": "19.06", "weight": 93 },
+                    { "date": "04.07", "weight": 92 },
+                    { "date": "18.07", "weight": 91 }
+                ]
+            </script>
         </div>
-
         <div class="diary__analytics-panel" x-show="panel === 'bmi'" x-cloak>
             <div class="diary__analytics-head">
-                <span class="diary__analytics-num">29.4 <small>ИМТ</small></span>
-                <span class="diary__analytics-delta">ИМТ ниже на 1.6 за 3 месяца · избыточный вес</span>
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num" x-show="!empty">29.4 <small>ИМТ</small></span>
+                    <span class="diary__analytics-delta" x-show="!empty">ИМТ ниже на 1.6 за 3 месяца · избыточный вес</span>
+                    <span class="diary__analytics-hint" x-show="empty">Нет данных за период</span>
+                </div>
                 <div class="diary__analytics-pills diary__analytics-pills--sm">
-                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
-                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.bmi === item }" @click="periods.bmi = item" x-text="item"></button>
-                    </template>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.bmi==='1М'}" @click="periods.bmi='1М'">1М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.bmi==='3М'}" @click="periods.bmi='3М'">3М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.bmi==='6М'}" @click="periods.bmi='6М'">6М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.bmi==='1Г'}" @click="periods.bmi='1Г'">1Г</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.bmi==='Всё время'}" @click="periods.bmi='Всё время'">Всё время</button>
                 </div>
             </div>
             <div class="diary__analytics-chart">
                 <canvas id="chBmi" role="img" aria-label="График индекса массы тела"></canvas>
             </div>
+            <script type="application/json" id="chBmiValues">
+                [
+                    { "date": "20.04", "bmi": 30.3 },
+                    { "date": "05.05", "bmi": 31 },
+                    { "date": "20.05", "bmi": 30.7 },
+                    { "date": "04.06", "bmi": 29.7 },
+                    { "date": "19.06", "bmi": 30 },
+                    { "date": "04.07", "bmi": 29.7 },
+                    { "date": "18.07", "bmi": 29.4 }
+                ]
+            </script>
             <p class="diary__analytics-hint">Зелёная зона — норма (18.5–25), жёлтая — избыточный вес, розовая — ожирение. Считаем при росте 176 см.</p>
         </div>
-
         <div class="diary__analytics-panel" x-show="panel === 'measure'" x-cloak>
             <div class="diary__analytics-head">
-                <span class="diary__analytics-num">95 <small>см талия</small></span>
-                <span class="diary__analytics-delta">Талия меньше на 9 см за 3 месяца</span>
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num" x-show="!empty">95 <small>см талия</small></span>
+                    <span class="diary__analytics-delta" x-show="!empty">Талия меньше на 9 см за 3 месяца</span>
+                    <span class="diary__analytics-hint" x-show="empty">Нет данных за период</span>
+                </div>
                 <div class="diary__analytics-pills diary__analytics-pills--sm">
-                    <template x-for="item in ['1М', '3М', '6М', '1Г', 'Всё время']" :key="item">
-                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.measure === item }" @click="periods.measure = item" x-text="item"></button>
-                    </template>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.measure==='1М'}" @click="periods.measure='1М'">1М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.measure==='3М'}" @click="periods.measure='3М'">3М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.measure==='6М'}" @click="periods.measure='6М'">6М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.measure==='1Г'}" @click="periods.measure='1Г'">1Г</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.measure==='Всё время'}" @click="periods.measure='Всё время'">Всё время</button>
                 </div>
             </div>
             <div class="diary__analytics-series">
-                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.measure[0].toString()" @click="toggleSeries('measure', 0)"><span class="diary__analytics-dot"></span>Талия</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#9b51e0" :aria-pressed="series.measure[1].toString()" @click="toggleSeries('measure', 1)"><span class="diary__analytics-dot"></span>Грудь</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.measure[2].toString()" @click="toggleSeries('measure', 2)"><span class="diary__analytics-dot"></span>Бёдра</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.measure[0].toString()" @click="series.measure[0]=!series.measure[0];$dispatch('diary:chart',{panel:'measure',index:0,visible:series.measure[0]})"><span class="diary__analytics-dot"></span>Талия</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#9b51e0" :aria-pressed="series.measure[1].toString()" @click="series.measure[1]=!series.measure[1];$dispatch('diary:chart',{panel:'measure',index:1,visible:series.measure[1]})"><span class="diary__analytics-dot"></span>Грудь</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.measure[2].toString()" @click="series.measure[2]=!series.measure[2];$dispatch('diary:chart',{panel:'measure',index:2,visible:series.measure[2]})"><span class="diary__analytics-dot"></span>Бёдра</button>
             </div>
             <div class="diary__analytics-chart">
                 <canvas id="chMeasure" role="img" aria-label="График замеров тела"></canvas>
             </div>
+            <script type="application/json" id="chMeasureValues">
+                [
+                    { "date": "20.04", "waist": 104, "chest": 112, "hips": 110 },
+                    { "date": "05.05", "waist": 103, "chest": 111, "hips": 109 },
+                    { "date": "20.05", "waist": 101, "chest": 110, "hips": 108 },
+                    { "date": "04.06", "waist": 99, "chest": 109, "hips": 107 },
+                    { "date": "19.06", "waist": 98, "chest": 108, "hips": 106 },
+                    { "date": "04.07", "waist": 96, "chest": 108, "hips": 105 },
+                    { "date": "18.07", "waist": 95, "chest": 107, "hips": 104 }
+                ]
+            </script>
         </div>
-
         <div class="diary__analytics-panel" x-show="panel === 'daily'" x-cloak>
             <div class="diary__analytics-head">
-                <span class="diary__analytics-num">1 920 <small>ккал в среднем</small></span>
-                <span class="diary__analytics-delta">На 18% меньше, чем в начале периода</span>
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num" x-show="!empty">1 920 <small>ккал в среднем</small></span>
+                    <span class="diary__analytics-delta" x-show="!empty">На 18% меньше, чем в начале периода</span>
+                    <span class="diary__analytics-hint" x-show="empty">Нет данных за период</span>
+                </div>
                 <div class="diary__analytics-pills diary__analytics-pills--sm">
-                    <template x-for="item in ['1Н', '2Н', '1М', '3М', 'Всё время']" :key="item">
-                        <button type="button" class="diary__analytics-pill" :class="{ 'is-active': periods.daily === item }" @click="periods.daily = item" x-text="item"></button>
-                    </template>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.daily==='1Н'}" @click="periods.daily='1Н'">1Н</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.daily==='2Н'}" @click="periods.daily='2Н'">2Н</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.daily==='1М'}" @click="periods.daily='1М'">1М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.daily==='3М'}" @click="periods.daily='3М'">3М</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':periods.daily==='Всё время'}" @click="periods.daily='Всё время'">Всё время</button>
                 </div>
             </div>
             <div class="diary__analytics-series">
-                <button type="button" class="diary__analytics-schip" style="--dot:#323f4b" :aria-pressed="series.daily[0].toString()" @click="toggleSeries('daily', 0)"><span class="diary__analytics-dot"></span>Калории</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.daily[1].toString()" @click="toggleSeries('daily', 1)"><span class="diary__analytics-dot"></span>Белки</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.daily[2].toString()" @click="toggleSeries('daily', 2)"><span class="diary__analytics-dot"></span>Жиры</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.daily[3].toString()" @click="toggleSeries('daily', 3)"><span class="diary__analytics-dot"></span>Углеводы</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#323f4b" :aria-pressed="series.daily[0].toString()" @click="series.daily[0]=!series.daily[0];$dispatch('diary:chart',{panel:'daily',index:0,visible:series.daily[0]})"><span class="diary__analytics-dot"></span>Калории</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.daily[1].toString()" @click="series.daily[1]=!series.daily[1];$dispatch('diary:chart',{panel:'daily',index:1,visible:series.daily[1]})"><span class="diary__analytics-dot"></span>Белки</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.daily[2].toString()" @click="series.daily[2]=!series.daily[2];$dispatch('diary:chart',{panel:'daily',index:2,visible:series.daily[2]})"><span class="diary__analytics-dot"></span>Жиры</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.daily[3].toString()" @click="series.daily[3]=!series.daily[3];$dispatch('diary:chart',{panel:'daily',index:3,visible:series.daily[3]})"><span class="diary__analytics-dot"></span>Углеводы</button>
             </div>
             <div class="diary__analytics-chart">
                 <canvas id="chDaily" role="img" aria-label="График потребления КБЖУ по дням"></canvas>
             </div>
+            <script type="application/json" id="chDailyValues">
+                [
+                    { "date": "05.07", "calories": 2610, "protein": 108, "fat": 98, "carb": 318 },
+                    { "date": "06.07", "calories": 2540, "protein": 112, "fat": 95, "carb": 305 },
+                    { "date": "07.07", "calories": 2480, "protein": 115, "fat": 92, "carb": 296 },
+                    { "date": "08.07", "calories": 2350, "protein": 118, "fat": 90, "carb": 272 },
+                    { "date": "09.07", "calories": 2420, "protein": 116, "fat": 93, "carb": 280 },
+                    { "date": "10.07", "calories": 2280, "protein": 121, "fat": 86, "carb": 258 },
+                    { "date": "11.07", "calories": 2190, "protein": 124, "fat": 82, "carb": 242 },
+                    { "date": "12.07", "calories": 2240, "protein": 120, "fat": 84, "carb": 250 },
+                    { "date": "13.07", "calories": 2100, "protein": 126, "fat": 79, "carb": 228 },
+                    { "date": "14.07", "calories": 2050, "protein": 125, "fat": 77, "carb": 219 },
+                    { "date": "15.07", "calories": 1980, "protein": 128, "fat": 74, "carb": 205 },
+                    { "date": "16.07", "calories": 2040, "protein": 124, "fat": 76, "carb": 214 },
+                    { "date": "17.07", "calories": 1930, "protein": 130, "fat": 71, "carb": 196 },
+                    { "date": "18.07", "calories": 1880, "protein": 129, "fat": 69, "carb": 188 }
+                ]
+            </script>
         </div>
-
         <div class="diary__analytics-panel" x-show="panel === 'intra'" x-cloak>
             <div class="diary__analytics-head diary__analytics-head--date">
-                <p class="diary__analytics-hint">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение — так проще понять, когда обычно переедаете.</p>
-                <div class="diary__analytics-datenav" role="group" aria-label="Дата графика">
-                    <button type="button" class="diary__analytics-datenav-btn icon-prev" @click="shiftIntraDate(-1)" aria-label="Предыдущий день"></button>
-                    <div class="diary__analytics-datenav-picker">
-                        <input
-                            type="text"
-                            class="date diary__analytics-datenav-input"
-                            x-ref="intraDateInput"
-                            data-datepicker-manual
-                            readonly
-                            autocomplete="off"
-                            tabindex="-1"
-                            aria-hidden="true"
-                        >
-                        <button type="button" class="diary__analytics-datenav-current" @click="openIntraCalendar()" aria-label="Выбрать дату в календаре">
-                            <span class="diary__analytics-datenav-ico icon-calendar" aria-hidden="true"></span>
-                            <time class="diary__analytics-datenav-label" :datetime="intraDateIso" x-text="intraDateLabel"></time>
-                        </button>
-                    </div>
-                    <button type="button" class="diary__analytics-datenav-btn icon-next" @click="shiftIntraDate(1)" :disabled="isIntraToday" aria-label="Следующий день"></button>
-                </div>
+                <p class="diary__analytics-hint">Столбики показывают, из чего состоят приёмы пищи. Включите сытость и настроение, чтобы сопоставить их с приёмами пищи.</p>
+                <div class="diary__analytics-datenav" role="group" aria-label="Дата графика"><button type="button" class="diary__analytics-datenav-btn icon-prev" @click="$refs.intraDate.stepDown()" aria-label="Предыдущий день"></button><input type="date" class="input input-sm" x-ref="intraDate" value="2023-08-03" aria-label="Дата графика"><button type="button" class="diary__analytics-datenav-btn icon-next" @click="$refs.intraDate.stepUp()" aria-label="Следующий день"></button></div>
             </div>
             <div class="diary__analytics-series">
-                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.intra[0].toString()" @click="toggleSeries('intra', 0)"><span class="diary__analytics-dot"></span>Белки</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.intra[1].toString()" @click="toggleSeries('intra', 1)"><span class="diary__analytics-dot"></span>Жиры</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.intra[2].toString()" @click="toggleSeries('intra', 2)"><span class="diary__analytics-dot"></span>Углеводы</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#019a3e" :aria-pressed="series.intra[3].toString()" @click="toggleSeries('intra', 3)"><span class="diary__analytics-dot"></span>Сытость</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#eb555c" :aria-pressed="series.intra[4].toString()" @click="toggleSeries('intra', 4)"><span class="diary__analytics-dot"></span>Настроение</button>
-                <button type="button" class="diary__analytics-schip" style="--dot:#7b8794" :aria-pressed="showSleep.toString()" @click="toggleSleep()"><span class="diary__analytics-dot"></span>Сон и подъём</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#2f80ed" :aria-pressed="series.intra[0].toString()" @click="series.intra[0]=!series.intra[0];$dispatch('diary:chart',{panel:'intra',index:0,visible:series.intra[0]})"><span class="diary__analytics-dot"></span>Белки</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#f2994a" :aria-pressed="series.intra[1].toString()" @click="series.intra[1]=!series.intra[1];$dispatch('diary:chart',{panel:'intra',index:1,visible:series.intra[1]})"><span class="diary__analytics-dot"></span>Жиры</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#0d6efd" :aria-pressed="series.intra[2].toString()" @click="series.intra[2]=!series.intra[2];$dispatch('diary:chart',{panel:'intra',index:2,visible:series.intra[2]})"><span class="diary__analytics-dot"></span>Углеводы</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#019a3e" :aria-pressed="series.intra[3].toString()" @click="series.intra[3]=!series.intra[3];$dispatch('diary:chart',{panel:'intra',index:3,visible:series.intra[3]})"><span class="diary__analytics-dot"></span>Сытость</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#eb555c" :aria-pressed="series.intra[4].toString()" @click="series.intra[4]=!series.intra[4];$dispatch('diary:chart',{panel:'intra',index:4,visible:series.intra[4]})"><span class="diary__analytics-dot"></span>Настроение</button>
+                <button type="button" class="diary__analytics-schip" style="--dot:#7b8794" :aria-pressed="showSleep.toString()" @click="showSleep=!showSleep;$dispatch('diary:chart',{panel:'intra',sleep:showSleep})"><span class="diary__analytics-dot"></span>Сон и подъём</button>
             </div>
             <div class="diary__analytics-chart">
                 <canvas id="chIntra" role="img" aria-label="График потребления КБЖУ по времени суток"></canvas>
             </div>
+            <script type="application/json" id="chIntraValues">
+                [
+                    { "time": "08:00", "proteinKcal": 211.20000000000002, "fatKcal": 304.20000000000005, "carbKcal": 88 },
+                    { "time": "12:00", "proteinKcal": 208, "fatKcal": 111.15, "carbKcal": 142 },
+                    { "time": "14:00", "proteinKcal": 71.55199999999999, "fatKcal": 46.800000000000004, "carbKcal": 7.488 },
+                    { "time": "16:00", "proteinKcal": 17, "fatKcal": 40.5, "carbKcal": 29 }
+                ]
+            </script>
+            <script type="application/json" id="chMoodValues">
+                [
+                    { "hour": 6.5, "satiety": 2, "mood": 5 },
+                    { "hour": 7, "satiety": 6.5, "mood": 7 },
+                    { "hour": 8, "satiety": 6, "mood": 7 },
+                    { "hour": 9, "satiety": 5, "mood": 6.5 },
+                    { "hour": 10, "satiety": 6.8, "mood": 7 },
+                    { "hour": 11, "satiety": 6, "mood": 6.5 },
+                    { "hour": 12, "satiety": 4.5, "mood": 5.5 },
+                    { "hour": 13, "satiety": 8, "mood": 7.5 },
+                    { "hour": 14, "satiety": 7.5, "mood": 7 },
+                    { "hour": 15, "satiety": 6.5, "mood": 6.5 },
+                    { "hour": 16, "satiety": 7, "mood": 6.8 },
+                    { "hour": 17, "satiety": 6, "mood": 6 },
+                    { "hour": 18, "satiety": 4.5, "mood": 5 },
+                    { "hour": 19, "satiety": 8, "mood": 7.2 },
+                    { "hour": 20, "satiety": 7, "mood": 6.8 },
+                    { "hour": 21, "satiety": 5.5, "mood": 5.8 },
+                    { "hour": 21.5, "satiety": 9.3, "mood": 6.5 },
+                    { "hour": 22, "satiety": 9, "mood": 5.5 },
+                    { "hour": 22.5, "satiety": 8.5, "mood": 5 }
+                ]
+            </script>
             <div class="diary__analytics-legend">
-                <span><span class="diary__analytics-lk diary__analytics-lk--sun"></span>Подъём в 06:30</span>
-                <span><span class="diary__analytics-lk diary__analytics-lk--moon"></span>Отход ко сну в 22:30</span>
+                <span><span class="diary__analytics-lk diary__analytics-lk--sun"></span><span x-data="{time:'06:30'}" @diary:sleep.window="time=$event.detail.wake" x-text="'Подъём в '+time"></span></span>
+                <span><span class="diary__analytics-lk diary__analytics-lk--moon"></span><span x-data="{time:'22:30'}" @diary:sleep.window="time=$event.detail.bed" x-text="'Отход ко сну в '+time"></span></span>
                 <span>Затемнение — время сна</span>
             </div>
         </div>
-
-        <button type="button" class="diary__analytics-fab icon-plus" aria-label="Добавить запись" x-show="panel === 'weight' || panel === 'measure'" x-cloak></button>
+        <div class="diary__analytics-panel" x-show="panel === 'water'" x-cloak>
+            <div class="diary__analytics-head">
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num">Вода за день</span>
+                    <span class="diary__analytics-delta">по времени приёма, не по приёмам пищи</span>
+                </div>
+                <div class="diary__water-goal" @click.outside="waterGoalEdit=false" @keydown.escape="waterGoalEdit=false">
+                    <button type="button" class="l-btn l-btn-sm l-btn-light diary__water-goal-view" x-show="!waterGoalEdit" @click="draft=goal;waterGoalError='';waterGoalEdit=true;$nextTick(()=>$refs.waterGoalInput.focus({preventScroll:true}))" :disabled="!editable"> Цель в день: <b x-text="goal.toLocaleString('ru-RU')">2 000</b> мл </button>
+                    <div class="diary__water-goal-edit" x-show="waterGoalEdit" x-cloak>
+                        <input class="input input-sm" type="number" min="500" max="5000" step="50" aria-label="Цель воды в день, мл" x-ref="waterGoalInput" x-model.number="draft" @keydown.enter.prevent="if(Number(draft)>=500 &amp;&amp; Number(draft)<=5000){goal=Math.round(draft/50)*50;waterGoalEdit=false;waterGoalError='';$nextTick(()=>$dispatch('diary:water-goal',{value:goal}))}else{waterGoalError='Введите от 500 до 5 000 мл'}">
+                        <span>мл</span>
+                        <button type="button" class="l-btn l-btn-sm l-btn-primary" @click="if(Number(draft)>=500 &amp;&amp; Number(draft)<=5000){goal=Math.round(draft/50)*50;waterGoalEdit=false;waterGoalError='';$nextTick(()=>$dispatch('diary:water-goal',{value:goal}))}else{waterGoalError='Введите от 500 до 5 000 мл'}">ОК</button><button type="button" class="diary__kcal-reset" @click="waterGoalEdit=false">Отмена</button>
+                    </div>
+                </div>
+            </div>
+            <p class="diary__field-error" role="alert" x-show="waterGoalError" x-text="waterGoalError"></p>
+            <div class="diary__water-stats">
+                <div><b x-text="total.toLocaleString('ru-RU')"></b><span x-text="'мл за день · ' + Math.round(total/goal*100) + '% цели'">мл за день · 48% цели</span></div>
+                <div><b x-text="count"></b><span>приёмов воды</span></div>
+                <div><b x-text="average"></b><span>мл в среднем за раз</span></div>
+                <div><b x-text="gap?Math.floor(gap/60)+' ч '+gap%60+' мин':'—'"></b><span x-text="'самый долгий перерыв · последний в '+last"></span></div>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chWaterDay" role="img" aria-label="Вода за день"></canvas>
+            </div>
+            <div class="diary__analytics-legend">
+                <span><span class="diary__analytics-dot" style="--dot:#2f80ed"></span>приём воды, мл</span>
+                <span><span class="diary__analytics-dot" style="--dot:#b9d6fb"></span>накоплено за день</span>
+                <span><span class="diary__analytics-dash"></span>цель</span>
+                <span><span class="diary__analytics-dot" style="--dot:#f1f4f8"></span>сон</span>
+            </div>
+            <div class="diary__analytics-head">
+                <div class="diary__analytics-heading">
+                    <span class="diary__analytics-num" x-text="waterPeriod==='week'?'Вода за неделю':waterPeriod==='month'?'Вода за месяц':waterPeriod==='6m'?'Вода за 6 месяцев':'Вода за период'">Вода за месяц</span>
+                    <span class="diary__analytics-delta" x-text="weekly?'среднее в день по неделям и цель':'сумма за день и цель'"></span>
+                </div>
+                <div class="diary__analytics-pills diary__analytics-pills--sm">
+                    <button type="button" class="diary__analytics-pill" :class="{ 'is-active': waterPeriod === 'week' }" @click="waterPeriod='week';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Неделя</button>
+                    <button type="button" class="diary__analytics-pill" :class="{ 'is-active': waterPeriod === 'month' }" @click="waterPeriod='month';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Месяц</button>
+                    <button type="button" class="diary__analytics-pill" :class="{ 'is-active': waterPeriod === '6m' }" @click="waterPeriod='6m';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">6 месяцев</button>
+                    <button type="button" class="diary__analytics-pill" :class="{ 'is-active': waterPeriod === 'custom' }" @click="waterPeriod='custom';$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))">Произвольный</button>
+                </div>
+            </div>
+            <div class="diary__water-range" x-show="waterPeriod === 'custom'" x-cloak>
+                <label>с <input class="input input-sm" type="date" aria-label="Начало периода" max="2026-11-06" x-model="waterFrom" @change="$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))"></label>
+                <label>по <input class="input input-sm" type="date" aria-label="Конец периода" max="2026-11-06" x-model="waterTo" @change="$nextTick(()=>$dispatch('diary:chart',{panel,period:waterPeriod,from:waterFrom,to:waterTo}))"></label>
+            </div>
+            <div class="diary__analytics-chart">
+                <canvas id="chWaterPeriod" role="img" aria-label="Вода за период"></canvas>
+            </div>
+            <script type="application/json" id="chWaterPeriodValues">
+                [
+                    { "date": "2022-06-29", "ml": 1300 },
+                    { "date": "2022-06-30", "ml": 1150 },
+                    { "date": "2022-07-01", "ml": 2450 },
+                    { "date": "2022-07-02", "ml": 2300 },
+                    { "date": "2022-07-03", "ml": 2150 },
+                    { "date": "2022-07-04", "ml": 2000 },
+                    { "date": "2022-07-05", "ml": 1900 },
+                    { "date": "2022-07-06", "ml": 1750 },
+                    { "date": "2022-07-07", "ml": 1600 },
+                    { "date": "2022-07-08", "ml": 1450 },
+                    { "date": "2022-07-09", "ml": null },
+                    { "date": "2022-07-10", "ml": 1200 },
+                    { "date": "2022-07-11", "ml": 2450 },
+                    { "date": "2022-07-12", "ml": 2300 },
+                    { "date": "2022-07-13", "ml": 2200 },
+                    { "date": "2022-07-14", "ml": 2050 },
+                    { "date": "2022-07-15", "ml": 1900 },
+                    { "date": "2022-07-16", "ml": 1750 },
+                    { "date": "2022-07-17", "ml": 1650 },
+                    { "date": "2022-07-18", "ml": 1500 },
+                    { "date": "2022-07-19", "ml": 1350 },
+                    { "date": "2022-07-20", "ml": 1200 },
+                    { "date": "2022-07-21", "ml": 2500 },
+                    { "date": "2022-07-22", "ml": null },
+                    { "date": "2022-07-23", "ml": 2200 },
+                    { "date": "2022-07-24", "ml": 2100 },
+                    { "date": "2022-07-25", "ml": 1950 },
+                    { "date": "2022-07-26", "ml": 1800 },
+                    { "date": "2022-07-27", "ml": 1650 },
+                    { "date": "2022-07-28", "ml": 1550 },
+                    { "date": "2022-07-29", "ml": 1400 },
+                    { "date": "2022-07-30", "ml": 1250 },
+                    { "date": "2022-07-31", "ml": 1100 },
+                    { "date": "2022-08-01", "ml": 2400 },
+                    { "date": "2022-08-02", "ml": 2250 },
+                    { "date": "2022-08-03", "ml": 2100 },
+                    { "date": "2022-08-04", "ml": null },
+                    { "date": "2022-08-05", "ml": 1850 },
+                    { "date": "2022-08-06", "ml": 1700 },
+                    { "date": "2022-08-07", "ml": 1550 },
+                    { "date": "2022-08-08", "ml": 1400 },
+                    { "date": "2022-08-09", "ml": 1300 },
+                    { "date": "2022-08-10", "ml": 1150 },
+                    { "date": "2022-08-11", "ml": 2400 },
+                    { "date": "2022-08-12", "ml": 2250 },
+                    { "date": "2022-08-13", "ml": 2150 },
+                    { "date": "2022-08-14", "ml": 2000 },
+                    { "date": "2022-08-15", "ml": 1850 },
+                    { "date": "2022-08-16", "ml": 1700 },
+                    { "date": "2022-08-17", "ml": null },
+                    { "date": "2022-08-18", "ml": 1450 },
+                    { "date": "2022-08-19", "ml": 1300 },
+                    { "date": "2022-08-20", "ml": 1200 },
+                    { "date": "2022-08-21", "ml": 2450 },
+                    { "date": "2022-08-22", "ml": 2300 },
+                    { "date": "2022-08-23", "ml": 2150 },
+                    { "date": "2022-08-24", "ml": 2050 },
+                    { "date": "2022-08-25", "ml": 1900 },
+                    { "date": "2022-08-26", "ml": 1750 },
+                    { "date": "2022-08-27", "ml": 1600 },
+                    { "date": "2022-08-28", "ml": 1500 },
+                    { "date": "2022-08-29", "ml": 1350 },
+                    { "date": "2022-08-30", "ml": null },
+                    { "date": "2022-08-31", "ml": 2450 },
+                    { "date": "2022-09-01", "ml": 2350 },
+                    { "date": "2022-09-02", "ml": 2200 },
+                    { "date": "2022-09-03", "ml": 2050 },
+                    { "date": "2022-09-04", "ml": 1900 },
+                    { "date": "2022-09-05", "ml": 1800 },
+                    { "date": "2022-09-06", "ml": 1650 },
+                    { "date": "2022-09-07", "ml": 1500 },
+                    { "date": "2022-09-08", "ml": 1350 },
+                    { "date": "2022-09-09", "ml": 1250 },
+                    { "date": "2022-09-10", "ml": 2500 },
+                    { "date": "2022-09-11", "ml": 2350 },
+                    { "date": "2022-09-12", "ml": null },
+                    { "date": "2022-09-13", "ml": 2100 },
+                    { "date": "2022-09-14", "ml": 1950 },
+                    { "date": "2022-09-15", "ml": 1800 },
+                    { "date": "2022-09-16", "ml": 1700 },
+                    { "date": "2022-09-17", "ml": 1550 },
+                    { "date": "2022-09-18", "ml": 1400 },
+                    { "date": "2022-09-19", "ml": 1250 },
+                    { "date": "2022-09-20", "ml": 1150 },
+                    { "date": "2022-09-21", "ml": 2400 },
+                    { "date": "2022-09-22", "ml": 2250 },
+                    { "date": "2022-09-23", "ml": 2100 },
+                    { "date": "2022-09-24", "ml": 2000 },
+                    { "date": "2022-09-25", "ml": null },
+                    { "date": "2022-09-26", "ml": 1700 },
+                    { "date": "2022-09-27", "ml": 1550 },
+                    { "date": "2022-09-28", "ml": 1450 },
+                    { "date": "2022-09-29", "ml": 1300 },
+                    { "date": "2022-09-30", "ml": 1150 },
+                    { "date": "2022-10-01", "ml": 2400 },
+                    { "date": "2022-10-02", "ml": 2300 },
+                    { "date": "2022-10-03", "ml": 2150 },
+                    { "date": "2022-10-04", "ml": 2000 },
+                    { "date": "2022-10-05", "ml": 1850 },
+                    { "date": "2022-10-06", "ml": 1750 },
+                    { "date": "2022-10-07", "ml": 1600 },
+                    { "date": "2022-10-08", "ml": null },
+                    { "date": "2022-10-09", "ml": 1350 },
+                    { "date": "2022-10-10", "ml": 1200 },
+                    { "date": "2022-10-11", "ml": 2450 },
+                    { "date": "2022-10-12", "ml": 2300 },
+                    { "date": "2022-10-13", "ml": 2200 },
+                    { "date": "2022-10-14", "ml": 2050 },
+                    { "date": "2022-10-15", "ml": 1900 },
+                    { "date": "2022-10-16", "ml": 1750 },
+                    { "date": "2022-10-17", "ml": 1650 },
+                    { "date": "2022-10-18", "ml": 1500 },
+                    { "date": "2022-10-19", "ml": 1350 },
+                    { "date": "2022-10-20", "ml": 1200 },
+                    { "date": "2022-10-21", "ml": null },
+                    { "date": "2022-10-22", "ml": 2350 },
+                    { "date": "2022-10-23", "ml": 2200 },
+                    { "date": "2022-10-24", "ml": 2050 },
+                    { "date": "2022-10-25", "ml": 1950 },
+                    { "date": "2022-10-26", "ml": 1800 },
+                    { "date": "2022-10-27", "ml": 1650 },
+                    { "date": "2022-10-28", "ml": 1500 },
+                    { "date": "2022-10-29", "ml": 1400 },
+                    { "date": "2022-10-30", "ml": 1250 },
+                    { "date": "2022-10-31", "ml": 1100 },
+                    { "date": "2022-11-01", "ml": 2400 },
+                    { "date": "2022-11-02", "ml": 2250 },
+                    { "date": "2022-11-03", "ml": null },
+                    { "date": "2022-11-04", "ml": 1950 },
+                    { "date": "2022-11-05", "ml": 1850 },
+                    { "date": "2022-11-06", "ml": 1700 },
+                    { "date": "2022-11-07", "ml": 1550 },
+                    { "date": "2022-11-08", "ml": 1400 },
+                    { "date": "2022-11-09", "ml": 1300 },
+                    { "date": "2022-11-10", "ml": 1150 },
+                    { "date": "2022-11-11", "ml": 2400 },
+                    { "date": "2022-11-12", "ml": 2250 },
+                    { "date": "2022-11-13", "ml": 2150 },
+                    { "date": "2022-11-14", "ml": 2000 },
+                    { "date": "2022-11-15", "ml": 1850 },
+                    { "date": "2022-11-16", "ml": null },
+                    { "date": "2022-11-17", "ml": 1600 },
+                    { "date": "2022-11-18", "ml": 1450 },
+                    { "date": "2022-11-19", "ml": 1300 },
+                    { "date": "2022-11-20", "ml": 1150 },
+                    { "date": "2022-11-21", "ml": 2450 },
+                    { "date": "2022-11-22", "ml": 2300 },
+                    { "date": "2022-11-23", "ml": 2150 },
+                    { "date": "2022-11-24", "ml": 2000 },
+                    { "date": "2022-11-25", "ml": 1900 },
+                    { "date": "2022-11-26", "ml": 1750 },
+                    { "date": "2022-11-27", "ml": 1600 },
+                    { "date": "2022-11-28", "ml": 1500 },
+                    { "date": "2022-11-29", "ml": null },
+                    { "date": "2022-11-30", "ml": 1200 },
+                    { "date": "2022-12-01", "ml": 2450 },
+                    { "date": "2022-12-02", "ml": 2350 },
+                    { "date": "2022-12-03", "ml": 2200 },
+                    { "date": "2022-12-04", "ml": 2050 },
+                    { "date": "2022-12-05", "ml": 1900 },
+                    { "date": "2022-12-06", "ml": 1800 },
+                    { "date": "2022-12-07", "ml": 1650 },
+                    { "date": "2022-12-08", "ml": 1500 },
+                    { "date": "2022-12-09", "ml": 1350 },
+                    { "date": "2022-12-10", "ml": 1250 },
+                    { "date": "2022-12-11", "ml": 2500 },
+                    { "date": "2022-12-12", "ml": null },
+                    { "date": "2022-12-13", "ml": 2200 },
+                    { "date": "2022-12-14", "ml": 2100 },
+                    { "date": "2022-12-15", "ml": 1950 },
+                    { "date": "2022-12-16", "ml": 1800 },
+                    { "date": "2022-12-17", "ml": 1650 },
+                    { "date": "2022-12-18", "ml": 1550 },
+                    { "date": "2022-12-19", "ml": 1400 },
+                    { "date": "2022-12-20", "ml": 1250 },
+                    { "date": "2022-12-21", "ml": 1150 },
+                    { "date": "2022-12-22", "ml": 2400 },
+                    { "date": "2022-12-23", "ml": 2250 },
+                    { "date": "2022-12-24", "ml": 2100 },
+                    { "date": "2022-12-25", "ml": null },
+                    { "date": "2022-12-26", "ml": 1850 },
+                    { "date": "2022-12-27", "ml": 1700 },
+                    { "date": "2022-12-28", "ml": 1550 },
+                    { "date": "2022-12-29", "ml": 1450 },
+                    { "date": "2022-12-30", "ml": 1300 },
+                    { "date": "2022-12-31", "ml": 1150 },
+                    { "date": "2023-01-01", "ml": 2400 },
+                    { "date": "2023-01-02", "ml": 2300 },
+                    { "date": "2023-01-03", "ml": 2150 },
+                    { "date": "2023-01-04", "ml": 2000 },
+                    { "date": "2023-01-05", "ml": 1850 },
+                    { "date": "2023-01-06", "ml": 1750 },
+                    { "date": "2023-01-07", "ml": null },
+                    { "date": "2023-01-08", "ml": 1450 },
+                    { "date": "2023-01-09", "ml": 1300 },
+                    { "date": "2023-01-10", "ml": 1200 },
+                    { "date": "2023-01-11", "ml": 2450 },
+                    { "date": "2023-01-12", "ml": 2300 },
+                    { "date": "2023-01-13", "ml": 2150 },
+                    { "date": "2023-01-14", "ml": 2050 },
+                    { "date": "2023-01-15", "ml": 1900 },
+                    { "date": "2023-01-16", "ml": 1750 },
+                    { "date": "2023-01-17", "ml": 1650 },
+                    { "date": "2023-01-18", "ml": 1500 },
+                    { "date": "2023-01-19", "ml": 1350 },
+                    { "date": "2023-01-20", "ml": null },
+                    { "date": "2023-01-21", "ml": 2500 },
+                    { "date": "2023-01-22", "ml": 2350 },
+                    { "date": "2023-01-23", "ml": 2200 },
+                    { "date": "2023-01-24", "ml": 2050 },
+                    { "date": "2023-01-25", "ml": 1950 },
+                    { "date": "2023-01-26", "ml": 1800 },
+                    { "date": "2023-01-27", "ml": 1650 },
+                    { "date": "2023-01-28", "ml": 1500 },
+                    { "date": "2023-01-29", "ml": 1400 },
+                    { "date": "2023-01-30", "ml": 1250 },
+                    { "date": "2023-01-31", "ml": 1100 },
+                    { "date": "2023-02-01", "ml": 2350 },
+                    { "date": "2023-02-02", "ml": null },
+                    { "date": "2023-02-03", "ml": 2100 },
+                    { "date": "2023-02-04", "ml": 1950 },
+                    { "date": "2023-02-05", "ml": 1800 },
+                    { "date": "2023-02-06", "ml": 1700 },
+                    { "date": "2023-02-07", "ml": 1550 },
+                    { "date": "2023-02-08", "ml": 1400 },
+                    { "date": "2023-02-09", "ml": 1300 },
+                    { "date": "2023-02-10", "ml": 1150 },
+                    { "date": "2023-02-11", "ml": 2400 },
+                    { "date": "2023-02-12", "ml": 2250 },
+                    { "date": "2023-02-13", "ml": 2150 },
+                    { "date": "2023-02-14", "ml": 2000 },
+                    { "date": "2023-02-15", "ml": null },
+                    { "date": "2023-02-16", "ml": 1700 },
+                    { "date": "2023-02-17", "ml": 1600 },
+                    { "date": "2023-02-18", "ml": 1450 },
+                    { "date": "2023-02-19", "ml": 1300 },
+                    { "date": "2023-02-20", "ml": 1150 },
+                    { "date": "2023-02-21", "ml": 2450 },
+                    { "date": "2023-02-22", "ml": 2300 },
+                    { "date": "2023-02-23", "ml": 2150 },
+                    { "date": "2023-02-24", "ml": 2000 },
+                    { "date": "2023-02-25", "ml": 1900 },
+                    { "date": "2023-02-26", "ml": 1750 },
+                    { "date": "2023-02-27", "ml": 1600 },
+                    { "date": "2023-02-28", "ml": null },
+                    { "date": "2023-03-01", "ml": 1350 },
+                    { "date": "2023-03-02", "ml": 1200 },
+                    { "date": "2023-03-03", "ml": 2450 },
+                    { "date": "2023-03-04", "ml": 2300 },
+                    { "date": "2023-03-05", "ml": 2200 },
+                    { "date": "2023-03-06", "ml": 2050 },
+                    { "date": "2023-03-07", "ml": 1900 },
+                    { "date": "2023-03-08", "ml": 1800 },
+                    { "date": "2023-03-09", "ml": 1650 },
+                    { "date": "2023-03-10", "ml": 1500 },
+                    { "date": "2023-03-11", "ml": 1350 },
+                    { "date": "2023-03-12", "ml": 1250 },
+                    { "date": "2023-03-13", "ml": null },
+                    { "date": "2023-03-14", "ml": 2350 },
+                    { "date": "2023-03-15", "ml": 2200 },
+                    { "date": "2023-03-16", "ml": 2100 },
+                    { "date": "2023-03-17", "ml": 1950 },
+                    { "date": "2023-03-18", "ml": 1800 },
+                    { "date": "2023-03-19", "ml": 1650 },
+                    { "date": "2023-03-20", "ml": 1550 },
+                    { "date": "2023-03-21", "ml": 1400 },
+                    { "date": "2023-03-22", "ml": 1250 },
+                    { "date": "2023-03-23", "ml": 1100 },
+                    { "date": "2023-03-24", "ml": 2400 },
+                    { "date": "2023-03-25", "ml": 2250 },
+                    { "date": "2023-03-26", "ml": null },
+                    { "date": "2023-03-27", "ml": 1950 },
+                    { "date": "2023-03-28", "ml": 1850 },
+                    { "date": "2023-03-29", "ml": 1700 },
+                    { "date": "2023-03-30", "ml": 1550 },
+                    { "date": "2023-03-31", "ml": 1450 },
+                    { "date": "2023-04-01", "ml": 1300 },
+                    { "date": "2023-04-02", "ml": 1150 },
+                    { "date": "2023-04-03", "ml": 2400 },
+                    { "date": "2023-04-04", "ml": 2300 },
+                    { "date": "2023-04-05", "ml": 2150 },
+                    { "date": "2023-04-06", "ml": 2000 },
+                    { "date": "2023-04-07", "ml": 1850 },
+                    { "date": "2023-04-08", "ml": null },
+                    { "date": "2023-04-09", "ml": 1600 },
+                    { "date": "2023-04-10", "ml": 1450 },
+                    { "date": "2023-04-11", "ml": 1300 },
+                    { "date": "2023-04-12", "ml": 1200 },
+                    { "date": "2023-04-13", "ml": 2450 },
+                    { "date": "2023-04-14", "ml": 2300 },
+                    { "date": "2023-04-15", "ml": 2150 },
+                    { "date": "2023-04-16", "ml": 2050 },
+                    { "date": "2023-04-17", "ml": 1900 },
+                    { "date": "2023-04-18", "ml": 1750 },
+                    { "date": "2023-04-19", "ml": 1600 },
+                    { "date": "2023-04-20", "ml": 1500 },
+                    { "date": "2023-04-21", "ml": null },
+                    { "date": "2023-04-22", "ml": 1200 },
+                    { "date": "2023-04-23", "ml": 2450 },
+                    { "date": "2023-04-24", "ml": 2350 },
+                    { "date": "2023-04-25", "ml": 2200 },
+                    { "date": "2023-04-26", "ml": 2050 },
+                    { "date": "2023-04-27", "ml": 1950 },
+                    { "date": "2023-04-28", "ml": 1800 },
+                    { "date": "2023-04-29", "ml": 1650 },
+                    { "date": "2023-04-30", "ml": 1500 },
+                    { "date": "2023-05-01", "ml": 1400 },
+                    { "date": "2023-05-02", "ml": 1250 },
+                    { "date": "2023-05-03", "ml": 1100 },
+                    { "date": "2023-05-04", "ml": null },
+                    { "date": "2023-05-05", "ml": 2250 },
+                    { "date": "2023-05-06", "ml": 2100 },
+                    { "date": "2023-05-07", "ml": 1950 },
+                    { "date": "2023-05-08", "ml": 1800 },
+                    { "date": "2023-05-09", "ml": 1700 },
+                    { "date": "2023-05-10", "ml": 1550 },
+                    { "date": "2023-05-11", "ml": 1400 },
+                    { "date": "2023-05-12", "ml": 1250 },
+                    { "date": "2023-05-13", "ml": 1150 },
+                    { "date": "2023-05-14", "ml": 2400 },
+                    { "date": "2023-05-15", "ml": 2250 },
+                    { "date": "2023-05-16", "ml": 2100 },
+                    { "date": "2023-05-17", "ml": null },
+                    { "date": "2023-05-18", "ml": 1850 },
+                    { "date": "2023-05-19", "ml": 1700 },
+                    { "date": "2023-05-20", "ml": 1600 },
+                    { "date": "2023-05-21", "ml": 1450 },
+                    { "date": "2023-05-22", "ml": 1300 },
+                    { "date": "2023-05-23", "ml": 1150 },
+                    { "date": "2023-05-24", "ml": 2450 },
+                    { "date": "2023-05-25", "ml": 2300 },
+                    { "date": "2023-05-26", "ml": 2150 },
+                    { "date": "2023-05-27", "ml": 2000 },
+                    { "date": "2023-05-28", "ml": 1900 },
+                    { "date": "2023-05-29", "ml": 1750 },
+                    { "date": "2023-05-30", "ml": null },
+                    { "date": "2023-05-31", "ml": 1450 },
+                    { "date": "2023-06-01", "ml": 1350 },
+                    { "date": "2023-06-02", "ml": 1200 },
+                    { "date": "2023-06-03", "ml": 2450 },
+                    { "date": "2023-06-04", "ml": 2300 },
+                    { "date": "2023-06-05", "ml": 2200 },
+                    { "date": "2023-06-06", "ml": 2050 },
+                    { "date": "2023-06-07", "ml": 1900 },
+                    { "date": "2023-06-08", "ml": 1750 },
+                    { "date": "2023-06-09", "ml": 1650 },
+                    { "date": "2023-06-10", "ml": 1500 },
+                    { "date": "2023-06-11", "ml": 1350 },
+                    { "date": "2023-06-12", "ml": null },
+                    { "date": "2023-06-13", "ml": 2500 },
+                    { "date": "2023-06-14", "ml": 2350 },
+                    { "date": "2023-06-15", "ml": 2200 },
+                    { "date": "2023-06-16", "ml": 2100 },
+                    { "date": "2023-06-17", "ml": 1950 },
+                    { "date": "2023-06-18", "ml": 1800 },
+                    { "date": "2023-06-19", "ml": 1650 },
+                    { "date": "2023-06-20", "ml": 1550 },
+                    { "date": "2023-06-21", "ml": 1400 },
+                    { "date": "2023-06-22", "ml": 1250 },
+                    { "date": "2023-06-23", "ml": 1100 },
+                    { "date": "2023-06-24", "ml": 2400 },
+                    { "date": "2023-06-25", "ml": null },
+                    { "date": "2023-06-26", "ml": 2100 },
+                    { "date": "2023-06-27", "ml": 1950 },
+                    { "date": "2023-06-28", "ml": 1850 },
+                    { "date": "2023-06-29", "ml": 1700 },
+                    { "date": "2023-06-30", "ml": 1550 },
+                    { "date": "2023-07-01", "ml": 1400 },
+                    { "date": "2023-07-02", "ml": 1300 },
+                    { "date": "2023-07-03", "ml": 1150 },
+                    { "date": "2023-07-04", "ml": 2400 },
+                    { "date": "2023-07-05", "ml": 2250 },
+                    { "date": "2023-07-06", "ml": 2150 },
+                    { "date": "2023-07-07", "ml": 2000 },
+                    { "date": "2023-07-08", "ml": null },
+                    { "date": "2023-07-09", "ml": 1750 },
+                    { "date": "2023-07-10", "ml": 1600 },
+                    { "date": "2023-07-11", "ml": 1450 },
+                    { "date": "2023-07-12", "ml": 1300 },
+                    { "date": "2023-07-13", "ml": 1200 },
+                    { "date": "2023-07-14", "ml": 2450 },
+                    { "date": "2023-07-15", "ml": 2300 },
+                    { "date": "2023-07-16", "ml": 2150 },
+                    { "date": "2023-07-17", "ml": 2050 },
+                    { "date": "2023-07-18", "ml": 1900 },
+                    { "date": "2023-07-19", "ml": 1750 },
+                    { "date": "2023-07-20", "ml": 1600 },
+                    { "date": "2023-07-21", "ml": null },
+                    { "date": "2023-07-22", "ml": 1350 },
+                    { "date": "2023-07-23", "ml": 1200 },
+                    { "date": "2023-07-24", "ml": 2450 },
+                    { "date": "2023-07-25", "ml": 2350 },
+                    { "date": "2023-07-26", "ml": 2200 },
+                    { "date": "2023-07-27", "ml": 2050 },
+                    { "date": "2023-07-28", "ml": 1900 },
+                    { "date": "2023-07-29", "ml": 1800 },
+                    { "date": "2023-07-30", "ml": 1650 },
+                    { "date": "2023-07-31", "ml": 1500 },
+                    { "date": "2023-08-01", "ml": 1350 },
+                    { "date": "2023-08-02", "ml": 1250 }
+                ]
+            </script>
+            <div class="diary__analytics-legend"><span>× нет данных</span><span>○ 0 мл</span></div>
+            <div class="diary__water-period-summary"><span>В среднем <b x-text="periodAverage+' мл'"></b> в день</span><span x-text="'Цель выполнена: '+periodHits+' из '+periodCount+' дней'"></span><span x-show="periodBest" x-text="periodBest"></span><span x-show="periodMissing" x-text="'Дней без записей: '+periodMissing"></span></div>
+        </div>
+        <button type="button" class="diary__analytics-fab icon-plus" aria-label="Добавить запись" x-show="editable && (panel === 'weight' || panel === 'measure')" x-cloak></button>
     </div>
-</div> <div class="diary__day">
+</div>
+ <div class="diary__day">
                         <div class="diary__day-row">
                             <div class="diary__day-block">
                                 <div class="diary__day-caption"> Проснулись </div>
@@ -1397,8 +1924,9 @@
 
  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="files/vendor/alpine-3.14.9.min.js" defer></script>
 <script src="js/app.min.js"></script>
+
 </body>
 
 </html>

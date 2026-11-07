@@ -10,7 +10,7 @@
             "active": 1234
             })
             <main class="page">
-                <section class="diary">
+                <section class="diary" data-diary-page data-diary-empty="true" data-diary-readonly="false" data-diary-nutri="false" data-diary-diet="false" x-data="{meal:0,empty:true,editable:true,nutri:false,diet:false}">
                     <div class="diary__container container-sm">
                         <div class="diary__header">
                             <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
@@ -35,12 +35,15 @@
                         @@include('./html/diary-blocks/_analytics-block.html')
                         @@include('./html/diary-blocks/_sleep-block.html')
                         <div class="diary__main">
+                            @@include('./html/diary-blocks/_diary-water.html', {
+                            "mode": "edit"
+                            })
                             @@include('./html/diary-blocks/_diary-form.html', {
                             'planTitle': "Очень длинное название плана"
                             })
                             <div class="diary__main-bottom">
                                 <div class="diary__main-products">
-                                    Тут появятся добавленные продукты
+                                    <p class="diary__products-empty">Тут появятся добавленные продукты</p>
                                 </div>
                                 <div class="diary__main-side">
                                     @@include('./html/_file-upload.html', {

@@ -1,6 +1,7 @@
 <div class="diary__main-satiety">
     <div class="diary__main-title">
-        Ваша сытость после приёма пищи
+        @@if(typeof isConsultant !== 'undefined' && isConsultant){Сытость клиента после приёма пищи}
+        @@if(typeof isConsultant === 'undefined' || !isConsultant){Ваша сытость после приёма пищи}
     </div>
     <div class="diary__main-line">
         <div class="diary__main-emoji">
@@ -8,27 +9,27 @@
         </div>
         <div class="diary__main-colors">
             <label class="diary__color">
-                <input type="radio" name="satiety-1" data-value="darkred" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" data-value="darkred" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-1" checked data-value="red" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" checked data-value="red" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-1" data-value="orange" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" data-value="orange" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-1" data-value="yellow" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" data-value="yellow" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-1" data-value="lightgreen" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" data-value="lightgreen" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-1" data-value="green" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-1" data-value="green" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
         </div>
@@ -39,7 +40,8 @@
 </div>
 <div class="diary__main-satiety">
     <div class="diary__main-title">
-        Ваше настроение после приёма пищи
+        @@if(typeof isConsultant !== 'undefined' && isConsultant){Настроение клиента после приёма пищи}
+        @@if(typeof isConsultant === 'undefined' || !isConsultant){Ваше настроение после приёма пищи}
     </div>
     <div class="diary__main-line">
         <div class="diary__main-emoji">
@@ -47,27 +49,27 @@
         </div>
         <div class="diary__main-colors">
             <label class="diary__color">
-                <input type="radio" name="satiety-2" data-value="darkred" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" data-value="darkred" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-2" data-value="red" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" data-value="red" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-2" data-value="orange" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" data-value="orange" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-2" checked data-value="yellow" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" checked data-value="yellow" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-2" data-value="lightgreen" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" data-value="lightgreen" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
             <label class="diary__color">
-                <input type="radio" name="satiety-2" data-value="green" class="diary__color-input hidden" hidden>
+                <input :disabled="!editable" type="radio" name="satiety-2" data-value="green" class="diary__color-input hidden" hidden>
                 <span class="diary__color-content"></span>
             </label>
         </div>

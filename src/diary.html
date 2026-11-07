@@ -10,7 +10,7 @@
             "active": 1234
             })
             <main class="page">
-                <section class="diary">
+                <section class="diary" data-diary-page data-diary-empty="true" data-diary-readonly="false" data-diary-nutri="true" data-diary-diet="false" x-data="{meal:0,empty:true,editable:true,nutri:true,diet:false}">
                     <div class="diary__container container-sm">
                         <div class="diary__header">
                             <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
@@ -29,10 +29,13 @@
                         @@include('./html/diary-blocks/_analytics-block.html')
                         @@include('./html/diary-blocks/_sleep-block.html')
                         <div class="diary__main">
+                            @@include('./html/diary-blocks/_diary-water.html', {
+                            "mode": "edit"
+                            })
                             @@include('./html/diary-blocks/_diary-form.html')
                             <div class="diary__main-bottom">
                                 <div class="diary__main-products">
-                                    Похоже, вы не добавили ни одного блюда
+                                    <p class="diary__products-empty">Похоже, вы не добавили ни одного блюда</p>
                                 </div>
                                 <div class="diary__main-side">
                                     @@include('./html/_file-upload.html', {
@@ -46,6 +49,7 @@
                             @@include('./html/diary-blocks/_satiery-block.html')
                         </div>
                         @@include('./html/diary-blocks/_norm-block.html')
+                        @@include('./html/diary-blocks/_diary-nutri.html')
                         <button type="button" class="diary__btn l-btn l-btn-primary l-btn-fullwidth">Закончить день</button>
                     </div>
                 </section>

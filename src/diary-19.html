@@ -10,13 +10,13 @@
             "active": 1234
             })
             <main class="page">
-                <section class="diary">
+                <section class="diary" data-diary-page data-diary-empty="false" data-diary-readonly="true" data-diary-nutri="true" data-diary-diet="false" x-data="{meal:0,empty:false,editable:false,nutri:true,diet:false}">
                     <div class="diary__container container-sm">
                         <div class="diary__header">
                             <a href="" class="diary__back icon-arrow-short-left"><span>Календарь</span></a>
                             <div class="diary__title pc-only">
                                 <div class="diary__title-caption">
-                                    Заполнение дневника питания
+                                    Дневник питания клиента
                                 </div>
                                 <div class="diary__title-name">
                                     План «Неделя сопровождения» 6 день из 7
@@ -35,25 +35,29 @@
                         @@include('./html/diary-blocks/_analytics-block.html')
                         @@include('./html/diary-blocks/_sleep-block.html')
                         <div class="diary__main">
+                            @@include('./html/diary-blocks/_diary-water.html', {
+                            "mode": "view"
+                            })
                             @@include('./html/diary-blocks/_diary-form-2.html', {
                             "planTitle": 'Очень длинное название плана'
                             })
                             <div class="diary__product">
-                                @@include('./html/diary-blocks/_diary-products-4.html')
+                                @@include('./html/diary-blocks/_diary-meals.html')
                                 <div class="diary__product-side">
                                     @@include('./html/diary-blocks/_diary-slider.html', {
                                     'hidePlus': true
                                     })
                                 </div>
                             </div>
-                            @@include('./html/diary-blocks/_satiery-block.html')
+                            @@include('./html/diary-blocks/_satiery-block.html', {"isConsultant": true})
                             <div class="diary__comment diary__comment-meal">
-                                <div class="diary__comment-header title title-md">Комментарий к приему пищи 1</div>
+                                <div class="diary__comment-header title title-md">Комментарий к приёму пищи <span x-text="meal+1">1</span></div>
                                 <textarea name="message" class="diary__comment-message textarea" placeholder="Прокомментируйте прием пищи"></textarea>
                                 <button type="button" class="diary__comment-btn l-btn l-btn-primary">Прокомментировать</button>
                             </div>
                         </div>
-                        @@include('./html/diary-blocks/_norm-block.html')
+                        @@include('./html/diary-blocks/_norm-block.html', {"isConsultant": true})
+                        @@include('./html/diary-blocks/_diary-nutri.html', {"isConsultant": true})
                         @@include('./html/diary-blocks/_diary-extras-block.html', {
                         'forConsultans': true
                         })

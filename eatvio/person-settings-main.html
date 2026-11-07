@@ -492,6 +492,22 @@
                             </div>
                             <span class="settings__form-separator"></span>
                             <div class="settings__form-row align-start">
+                                <div class="settings__form-text">Режим дневника:</div>
+                                <div class="settings__form-column">
+                                    <div class="segment segment--diary" role="radiogroup" aria-label="Режим дневника" data-diary-mode>
+                                        <label class="segment__item">
+                                            <input type="radio" name="diary-mode" value="simple" class="segment__input hidden" hidden>
+                                            <span class="segment__btn">Простой</span>
+                                        </label>
+                                        <label class="segment__item">
+                                            <input type="radio" name="diary-mode" value="itvio" class="segment__input hidden" hidden checked>
+                                            <span class="segment__btn">Итвио</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="settings__form-separator"></span>
+                            <div class="settings__form-row align-start">
                                 <div class="settings__form-text">Уведомления:</div>
                                 <div class="settings__form-column">
                                     <div class="settings__body-item">
@@ -551,8 +567,9 @@
     </div>
 </footer> </div> <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="files/vendor/alpine-3.14.9.min.js" defer></script>
 <script src="js/app.min.js"></script>
+
 </body>
 
 </html>

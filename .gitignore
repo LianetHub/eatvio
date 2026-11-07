@@ -2,3 +2,8 @@ node_modules
 *.zip
 
 /.vscode
+
+# Local diary integration-check dependencies and build logs
+/.diary-check/
+/diary-build*.log
+/diary-check-install*.log

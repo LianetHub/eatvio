@@ -1,0 +1,646 @@
+<div class="diary-itvio" x-data="{ nutOpen:true,whoOpen:false,tipOpen:false,tableOpen:false,helpOpen:false,scope:'day',lastFocus:null }" @diary:nutrients.window="scope=String($event.detail.scope);nutOpen=true;$nextTick(()=>$refs.nut.scrollIntoView({behavior:'smooth',block:'start'}))">
+    <section class="diary__nutri" x-ref="nut">
+        <button type="button" class="diary__nutri-head" @click="nutOpen=!nutOpen" :aria-expanded="nutOpen.toString()" aria-controls="nutri-body"><span class="diary__nutri-ico icon-diet" aria-hidden="true"></span><span class="diary__nutri-heading"><span class="diary__nutri-title">Нутрицевтика</span><span class="diary__nutri-sub">Макро- и микроэлементы, витамины и другие полезные вещества</span></span><span class="diary__nutri-pill" x-show="!empty">5 из 7 продуктов с данными</span><span class="diary__nutri-chev icon-down" aria-hidden="true"></span></button>
+        <div id="nutri-body" class="diary__nutri-body" x-show="nutOpen" x-cloak>
+            <p class="diary__nutri-memo"><b>Памятка.</b> Значения собираются только с продуктов, у которых указаны данные по нутриентам. Остальные продукты в расчёт не попадают, поэтому реальные показатели могут быть выше.</p>
+            <p class="diary__nutri-empty" x-show="empty">Сведения о нутриентах появятся после заполнения дневника.</p>
+            <div x-show="!empty">
+                <div class="diary__analytics-pills diary__nutri-scope" role="group" aria-label="Срез нутрицевтики"><button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='day'}" :aria-pressed="scope==='day'" @click="scope='day'">За день</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='0'}" :aria-pressed="scope==='0'" @click="scope='0'">Приём 1</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='1'}" :aria-pressed="scope==='1'" @click="scope='1'">Приём 2</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='2'}" :aria-pressed="scope==='2'" @click="scope='2'" disabled>Приём 3</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='3'}" :aria-pressed="scope==='3'" @click="scope='3'">Приём 4</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='4'}" :aria-pressed="scope==='4'" @click="scope='4'">Приём 5</button>
+                    <button type="button" class="diary__analytics-pill" :class="{'is-active':scope==='5'}" :aria-pressed="scope==='5'" @click="scope='5'" disabled>Приём 6</button>
+                </div>
+                <div x-show="scope==='day'" x-cloak>
+                    <div class="diary__nutri-coverage-box" x-data="{ productsOpen:false }">
+                        <p class="diary__nutri-coverage">Данные есть у 5 из 7 продуктов · 71% съеденного по весу</p>
+                        <div class="diary__nutri-bar" aria-label="Покрытие данными по массе"><i class="is-full" style="flex:200" title="Говядина вареная · 200 г"></i><i class="is-full" style="flex:100" title="Банан · 100 г"></i><i class="is-part" style="flex:150" title="Гречка отварная · 150 г"></i><i class="is-part" style="flex:150" title="Куриная грудка отварная · 150 г"></i><i class="is-none" style="flex:40" title="Соус сметанный домашний · 40 г"></i><i class="is-part" style="flex:104" title="Творог 5% · 104 г"></i><i class="is-none" style="flex:250" title="Кофе с молоком · 250 г"></i></div>
+                        <div class="diary__nutri-legend"><span><i class="is-full"></i>полные данные</span><span><i class="is-part"></i>частично</span><span><i class="is-none"></i>только КБЖУ</span></div>
+                        <ul id="nutri-products-0" class="diary__nutri-products" x-show="productsOpen" x-cloak>
+                            <li><span>Говядина вареная</span><span>200 г</span><b class="is-full">полные</b></li>
+                            <li><span>Банан</span><span>100 г</span><b class="is-full">полные</b></li>
+                            <li><span>Гречка отварная</span><span>150 г</span><b class="is-part">частично</b></li>
+                            <li><span>Куриная грудка отварная</span><span>150 г</span><b class="is-part">частично</b></li>
+                            <li><span>Соус сметанный домашний</span><span>40 г</span><b class="is-none">только КБЖУ</b></li>
+                            <li><span>Творог 5%</span><span>104 г</span><b class="is-part">частично</b></li>
+                            <li><span>Кофе с молоком</span><span>250 г</span><b class="is-none">только КБЖУ</b></li>
+                        </ul>
+                        <button type="button" class="diary__nutri-products-toggle" @click="productsOpen=!productsOpen" :aria-expanded="productsOpen.toString()" aria-controls="nutri-products-0"><span x-text="productsOpen?'Скрыть продукты':'Показать продукты'">Показать продукты</span><i class="icon-down" aria-hidden="true"></i></button>
+                    </div>
+                    <section class="diary__nutri-group" x-data="{ expanded:true }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-day-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small>известно 5 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-day-macro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Кальций <b class="is-part" title="Точное количество по 5 из 7 продуктов">5/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний, Кофе с молоком">227 мг +*</strong></div>
+                                <div><span>Калий <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong title="Присутствует без точного количества: Кофе с молоком">≥ 1 354 мг +*</strong></div>
+                                <div><span>Магний <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong title="Присутствует без точного количества: Кофе с молоком">≥ 189 мг +*</strong></div>
+                                <div><span>Фосфор <b class="is-part" title="Точное количество по 5 из 7 продуктов">5/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний, Кофе с молоком">1 078 мг +*</strong></div>
+                                <div><span>Натрий <b class="is-part" title="Точное количество по 5 из 7 продуктов">5/7</b></span><strong>≥ 281 мг</strong></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-day-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small>известно 5 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-day-micro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Железо <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong>≥ 8,76 мг</strong></div>
+                                <div><span>Цинк <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong>≥ 15,2 мг</strong></div>
+                                <div><span>Йод </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Селен <b class="is-part" title="Точное количество по 3 из 7 продуктов">3/7</b></span><strong>≥ 93,5 мкг</strong></div>
+                                <div><span>Медь <b class="is-part" title="Точное количество по 3 из 7 продуктов">3/7</b></span><strong>≥ 0,51 мг</strong></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-day-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small>известно 10 из 10</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-day-vit" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Витамин A <b class="is-part" title="Точное количество по 1 из 7 продуктов">1/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">≥ 3 мкг +*</strong></div>
+                                <div><span>Витамин C <b class="is-part" title="Точное количество по 2 из 7 продуктов">2/7</b></span><strong>≥ 8,7 мг</strong></div>
+                                <div><span>Витамин D </span><strong class="diary__presence" title="Присутствует без точного количества: Соус сметанный домашний">ε+*</strong></div>
+                                <div><span>Витамин E <b class="is-part" title="Точное количество по 2 из 7 продуктов">2/7</b></span><strong>≥ 0,7 мг</strong></div>
+                                <div><span>Витамин B1 <b class="is-part" title="Точное количество по 3 из 7 продуктов">3/7</b></span><strong>≥ 0,17 мг</strong></div>
+                                <div><span>Витамин B2 <b class="is-part" title="Точное количество по 5 из 7 продуктов">5/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний, Кофе с молоком">0,94 мг +*</strong></div>
+                                <div><span>Витамин B6 <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong>≥ 1,99 мг</strong></div>
+                                <div><span>Витамин B9 <b class="is-part" title="Точное количество по 2 из 7 продуктов">2/7</b></span><strong>≥ 41 мкг</strong></div>
+                                <div><span>Витамин B12 <b class="is-part" title="Точное количество по 3 из 7 продуктов">3/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний, Кофе с молоком">≥ 6,69 мкг +*</strong></div>
+                                <div><span>Витамин PP <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong title="Присутствует без точного количества: Кофе с молоком">≥ 33,6 мг +*</strong></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-day-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small>известно 3 из 4</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-day-other" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Клетчатка <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong>≥ 6,65 г</strong></div>
+                                <div><span>Сахара <b class="is-part" title="Точное количество по 4 из 7 продуктов">4/7</b></span><strong>≥ 13,5 г</strong></div>
+                                <div><span>Холестерин <b class="is-part" title="Точное количество по 3 из 7 продуктов">3/7</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">≥ 308 мг +*</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Омега-3</p>
+                        </div>
+                    </section>
+                </div>
+                <div x-show="scope==='0'" x-cloak>
+                    <div class="diary__nutri-coverage-box" x-data="{ productsOpen:false }">
+                        <p class="diary__nutri-coverage">Данные есть у 2 из 2 продуктов · 100% съеденного по весу</p>
+                        <div class="diary__nutri-bar" aria-label="Покрытие данными по массе"><i class="is-full" style="flex:200" title="Говядина вареная · 200 г"></i><i class="is-full" style="flex:100" title="Банан · 100 г"></i></div>
+                        <div class="diary__nutri-legend"><span><i class="is-full"></i>полные данные</span><span><i class="is-part"></i>частично</span><span><i class="is-none"></i>только КБЖУ</span></div>
+                        <ul id="nutri-products-1" class="diary__nutri-products" x-show="productsOpen" x-cloak>
+                            <li><span>Говядина вареная</span><span>200 г</span><b class="is-full">полные</b></li>
+                            <li><span>Банан</span><span>100 г</span><b class="is-full">полные</b></li>
+                        </ul>
+                        <button type="button" class="diary__nutri-products-toggle" @click="productsOpen=!productsOpen" :aria-expanded="productsOpen.toString()" aria-controls="nutri-products-1"><span x-text="productsOpen?'Скрыть продукты':'Показать продукты'">Показать продукты</span><i class="icon-down" aria-hidden="true"></i></button>
+                    </div>
+                    <section class="diary__nutri-group" x-data="{ expanded:true }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-0-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small>известно 5 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-0-macro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Кальций <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>23 мг</strong></div>
+                                <div><span>Калий <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>838 мг</strong></div>
+                                <div><span>Магний <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>69 мг</strong></div>
+                                <div><span>Фосфор <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>402 мг</strong></div>
+                                <div><span>Натрий <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>121 мг</strong></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-0-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small>известно 4 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-0-micro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Железо <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>6,06 мг</strong></div>
+                                <div><span>Цинк <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>12,8 мг</strong></div>
+                                <div><span>Селен <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>53 мкг</strong></div>
+                                <div><span>Медь <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>0,28 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Йод</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-0-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small>известно 9 из 10</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-0-vit" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Витамин A <b class="is-part" title="Точное количество по 1 из 2 продуктов">1/2</b></span><strong>≥ 3 мкг</strong></div>
+                                <div><span>Витамин C <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>8,7 мг</strong></div>
+                                <div><span>Витамин E <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>0,7 мг</strong></div>
+                                <div><span>Витамин B1 <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>0,11 мг</strong></div>
+                                <div><span>Витамин B2 <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>0,43 мг</strong></div>
+                                <div><span>Витамин B6 <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>0,97 мг</strong></div>
+                                <div><span>Витамин B9 <b class="is-part" title="Точное количество по 1 из 2 продуктов">1/2</b></span><strong>≥ 20 мкг</strong></div>
+                                <div><span>Витамин B12 <b class="is-part" title="Точное количество по 1 из 2 продуктов">1/2</b></span><strong>≥ 5,2 мкг</strong></div>
+                                <div><span>Витамин PP <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>11,7 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Витамин D</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-0-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small>известно 3 из 4</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-0-other" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Клетчатка <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>2,6 г</strong></div>
+                                <div><span>Сахара <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>12,2 г</strong></div>
+                                <div><span>Холестерин <b class="is-full icon-check-circle" title="Точное количество по 2 из 2 продуктов"></b></span><strong>180 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Омега-3</p>
+                        </div>
+                    </section>
+                </div>
+                <div x-show="scope==='1'" x-cloak>
+                    <div class="diary__nutri-coverage-box" x-data="{ productsOpen:false }">
+                        <p class="diary__nutri-coverage">Данные есть у 2 из 3 продуктов · 88% съеденного по весу</p>
+                        <div class="diary__nutri-bar" aria-label="Покрытие данными по массе"><i class="is-part" style="flex:150" title="Гречка отварная · 150 г"></i><i class="is-part" style="flex:150" title="Куриная грудка отварная · 150 г"></i><i class="is-none" style="flex:40" title="Соус сметанный домашний · 40 г"></i></div>
+                        <div class="diary__nutri-legend"><span><i class="is-full"></i>полные данные</span><span><i class="is-part"></i>частично</span><span><i class="is-none"></i>только КБЖУ</span></div>
+                        <ul id="nutri-products-2" class="diary__nutri-products" x-show="productsOpen" x-cloak>
+                            <li><span>Гречка отварная</span><span>150 г</span><b class="is-part">частично</b></li>
+                            <li><span>Куриная грудка отварная</span><span>150 г</span><b class="is-part">частично</b></li>
+                            <li><span>Соус сметанный домашний</span><span>40 г</span><b class="is-none">только КБЖУ</b></li>
+                        </ul>
+                        <button type="button" class="diary__nutri-products-toggle" @click="productsOpen=!productsOpen" :aria-expanded="productsOpen.toString()" aria-controls="nutri-products-2"><span x-text="productsOpen?'Скрыть продукты':'Показать продукты'">Показать продукты</span><i class="icon-down" aria-hidden="true"></i></button>
+                    </div>
+                    <section class="diary__nutri-group" x-data="{ expanded:true }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-1-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small>известно 5 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-1-macro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Кальций <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">33 мг +*</strong></div>
+                                <div><span>Калий <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 516 мг</strong></div>
+                                <div><span>Магний <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 120 мг</strong></div>
+                                <div><span>Фосфор <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">447 мг +*</strong></div>
+                                <div><span>Натрий <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 117 мг</strong></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-1-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small>известно 4 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-1-micro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Железо <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 2,7 мг</strong></div>
+                                <div><span>Цинк <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 2,4 мг</strong></div>
+                                <div><span>Селен <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong>≥ 40,5 мкг</strong></div>
+                                <div><span>Медь <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong>≥ 0,23 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Йод</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-1-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small>известно 8 из 10</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-1-vit" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Витамин A </span><strong class="diary__presence" title="Присутствует без точного количества: Соус сметанный домашний">ε+*</strong></div>
+                                <div><span>Витамин D </span><strong class="diary__presence" title="Присутствует без точного количества: Соус сметанный домашний">ε+*</strong></div>
+                                <div><span>Витамин B1 <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong>≥ 0,06 мг</strong></div>
+                                <div><span>Витамин B2 <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">0,23 мг +*</strong></div>
+                                <div><span>Витамин B6 <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 1,02 мг</strong></div>
+                                <div><span>Витамин B9 <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong>≥ 21 мкг</strong></div>
+                                <div><span>Витамин B12 <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">≥ 0,45 мкг +*</strong></div>
+                                <div><span>Витамин PP <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 22 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Витамин C, Витамин E</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-1-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small>известно 3 из 4</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-1-other" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Клетчатка <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 4,05 г</strong></div>
+                                <div><span>Сахара <b class="is-part" title="Точное количество по 2 из 3 продуктов">2/3</b></span><strong>≥ 1,35 г</strong></div>
+                                <div><span>Холестерин <b class="is-part" title="Точное количество по 1 из 3 продуктов">1/3</b></span><strong title="Присутствует без точного количества: Соус сметанный домашний">≥ 128 мг +*</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Омега-3</p>
+                        </div>
+                    </section>
+                </div>
+                <div x-show="scope==='3'" x-cloak>
+                    <div class="diary__nutri-coverage-box" x-data="{ productsOpen:false }">
+                        <p class="diary__nutri-coverage">Данные есть у 1 из 1 продуктов · 100% съеденного по весу</p>
+                        <div class="diary__nutri-bar" aria-label="Покрытие данными по массе"><i class="is-part" style="flex:104" title="Творог 5% · 104 г"></i></div>
+                        <div class="diary__nutri-legend"><span><i class="is-full"></i>полные данные</span><span><i class="is-part"></i>частично</span><span><i class="is-none"></i>только КБЖУ</span></div>
+                        <ul id="nutri-products-3" class="diary__nutri-products" x-show="productsOpen" x-cloak>
+                            <li><span>Творог 5%</span><span>104 г</span><b class="is-part">частично</b></li>
+                        </ul>
+                        <button type="button" class="diary__nutri-products-toggle" @click="productsOpen=!productsOpen" :aria-expanded="productsOpen.toString()" aria-controls="nutri-products-3"><span x-text="productsOpen?'Скрыть продукты':'Показать продукты'">Показать продукты</span><i class="icon-down" aria-hidden="true"></i></button>
+                    </div>
+                    <section class="diary__nutri-group" x-data="{ expanded:true }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-3-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small>известно 3 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-3-macro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Кальций <b class="is-full icon-check-circle" title="Точное количество по 1 из 1 продуктов"></b></span><strong>171 мг</strong></div>
+                                <div><span>Фосфор <b class="is-full icon-check-circle" title="Точное количество по 1 из 1 продуктов"></b></span><strong>229 мг</strong></div>
+                                <div><span>Натрий <b class="is-full icon-check-circle" title="Точное количество по 1 из 1 продуктов"></b></span><strong>42,6 мг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Калий, Магний</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-3-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small>известно 0 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-3-micro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Железо, Цинк, Йод, Селен, Медь</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-3-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small>известно 2 из 10</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-3-vit" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Витамин B2 <b class="is-full icon-check-circle" title="Точное количество по 1 из 1 продуктов"></b></span><strong>0,28 мг</strong></div>
+                                <div><span>Витамин B12 <b class="is-full icon-check-circle" title="Точное количество по 1 из 1 продуктов"></b></span><strong>1,04 мкг</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Витамин A, Витамин C, Витамин D, Витамин E, Витамин B1, Витамин B6, Витамин B9, Витамин PP</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-3-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small>известно 0 из 4</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-3-other" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Клетчатка, Омега-3, Сахара, Холестерин</p>
+                        </div>
+                    </section>
+                </div>
+                <div x-show="scope==='4'" x-cloak>
+                    <div class="diary__nutri-coverage-box" x-data="{ productsOpen:false }">
+                        <p class="diary__nutri-coverage">Данные есть у 0 из 1 продуктов · 0% съеденного по весу</p>
+                        <div class="diary__nutri-bar" aria-label="Покрытие данными по массе"><i class="is-none" style="flex:250" title="Кофе с молоком · 250 г"></i></div>
+                        <div class="diary__nutri-legend"><span><i class="is-full"></i>полные данные</span><span><i class="is-part"></i>частично</span><span><i class="is-none"></i>только КБЖУ</span></div>
+                        <ul id="nutri-products-4" class="diary__nutri-products" x-show="productsOpen" x-cloak>
+                            <li><span>Кофе с молоком</span><span>250 г</span><b class="is-none">только КБЖУ</b></li>
+                        </ul>
+                        <button type="button" class="diary__nutri-products-toggle" @click="productsOpen=!productsOpen" :aria-expanded="productsOpen.toString()" aria-controls="nutri-products-4"><span x-text="productsOpen?'Скрыть продукты':'Показать продукты'">Показать продукты</span><i class="icon-down" aria-hidden="true"></i></button>
+                    </div>
+                    <section class="diary__nutri-group" x-data="{ expanded:true }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-4-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small>известно 4 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-4-macro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Кальций </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Калий </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Магний </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Фосфор </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Натрий</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-4-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small>известно 1 из 5</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-4-micro" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Йод </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Железо, Цинк, Селен, Медь</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-4-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small>известно 3 из 10</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-4-vit" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                                <div><span>Витамин B2 </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Витамин B12 </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                                <div><span>Витамин PP </span><strong class="diary__presence" title="Присутствует без точного количества: Кофе с молоком">ε+*</strong></div>
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Витамин A, Витамин C, Витамин D, Витамин E, Витамин B1, Витамин B6, Витамин B9</p>
+                        </div>
+                    </section>
+                    <section class="diary__nutri-group" x-data="{ expanded:false }">
+                        <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="nutri-4-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small>известно 0 из 4</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                        <div id="nutri-4-other" x-show="expanded" x-cloak>
+                            <div class="diary__nutri-grid">
+                            </div>
+                            <p class="diary__nutri-missing"><b>Нет данных: </b>Клетчатка, Омега-3, Сахара, Холестерин</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="diary__who">
+        <button type="button" class="diary__nutri-head" @click="whoOpen=!whoOpen" :aria-expanded="whoOpen.toString()" aria-controls="who-body"><span class="diary__who-ico icon-user" aria-hidden="true"></span><span class="diary__nutri-heading"><span class="diary__nutri-title">@@if(typeof isConsultant !== 'undefined' && isConsultant){Рекомендации для клиента}@@if(typeof isConsultant === 'undefined' || !isConsultant){Мои рекомендации}</span><span class="diary__nutri-sub">По нормам ВОЗ · мужчина, 40 лет</span></span><span class="diary__nutri-chev icon-down" aria-hidden="true"></span></button>
+        <div id="who-body" class="diary__nutri-body" x-show="whoOpen" x-cloak>
+            <p class="diary__nutri-empty" x-show="empty">День пока не заполнен. Суточные нормы показаны ниже — сравнение появится после добавления продуктов.</p>
+            <div>
+                <div class="diary__who-profile"><b>Мужчина, 40 лет</b><span>Группа 19–50 лет · данные профиля</span></div>
+                <section class="diary__nutri-group" x-data="{ expanded:true }">
+                    <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="who-macro"><span class="diary__nutri-group-heading"><span>Макроэлементы</span><small x-show="!empty">Норма достигнута по 0</small><small x-show="empty">Нет данных за день</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                    <div id="who-macro" x-show="expanded" x-cloak>
+                        <div class="diary__who-rows">
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Кальций</b><small x-show="!empty">5/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:15.104000000000001%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено 227 мг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 1 000 мг</b><small x-show="!empty">≥ 23% от нормы</small><small>для женщин 51+ — после менопаузы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Калий</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:25.71699905033238%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 1 354 мг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} не менее 3 510 мг</b><small x-show="!empty">≥ 39% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Магний</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:48.46153846153846%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 189 мг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 260 мг</b><small x-show="!empty">≥ 73% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Натрий</b><small x-show="!empty">5/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-limit is-partial" style="width:9.354666666666667%"></i><em><small>лимит</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 281 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} не более 2 000 мг</b><small x-show="!empty">≥ 14% от лимита</small></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="diary__nutri-group" x-data="{ expanded:false }">
+                    <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="who-micro"><span class="diary__nutri-group-heading"><span>Микроэлементы</span><small x-show="!empty">Норма достигнута по 2</small><small x-show="empty">Нет данных за день</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                    <div id="who-micro" x-show="expanded" x-cloak>
+                        <div class="diary__who-rows">
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Железо</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:64.17582417582418%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 8,76 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 9,1 мг</b><small x-show="!empty">≥ 96% от нормы</small><small>биодоступность 15%; для женщин 51+ — после менопаузы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Цинк</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-hit is-partial" style="width:100%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 15,2 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 7 мг</b><small x-show="!empty">≥ 216% от нормы</small><small>средняя биодоступность</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Селен</b><small x-show="!empty">3/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-hit is-partial" style="width:100%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 93,5 мкг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 34 мкг</b><small x-show="!empty">≥ 275% от нормы</small></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="diary__nutri-group" x-data="{ expanded:false }">
+                    <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="who-vit"><span class="diary__nutri-group-heading"><span>Витамины</span><small x-show="!empty">Норма достигнута по 3</small><small x-show="empty">Нет данных за день</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                    <div id="who-vit" x-show="expanded" x-cloak>
+                        <div class="diary__who-rows">
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин A</b><small x-show="!empty">1/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:0.3333333333333333%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 3 мкг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 600 мкг</b><small x-show="!empty">≥ 1% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин C</b><small x-show="!empty">2/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:12.888888888888888%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 8,7 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 45 мг</b><small x-show="!empty">≥ 19% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин E</b><small x-show="!empty">2/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:4.666666666666666%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 0,7 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 10 мг</b><small x-show="!empty">≥ 7% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин B1</b><small x-show="!empty">3/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:9.444444444444445%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 0,17 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 1,2 мг</b><small x-show="!empty">≥ 14% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин B2</b><small x-show="!empty">5/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:47.98974358974359%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено 0,94 мг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 1,3 мг</b><small x-show="!empty">≥ 72% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин B6</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-hit is-partial" style="width:100%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 1,99 мг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 1,3 мг</b><small x-show="!empty">≥ 153% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин B9</b><small x-show="!empty">2/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:6.833333333333333%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 41 мкг</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 400 мкг</b><small x-show="!empty">≥ 10% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин B12</b><small x-show="!empty">3/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-hit is-partial" style="width:100%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 6,69 мкг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 2,4 мкг</b><small x-show="!empty">≥ 279% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Витамин PP</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-hit is-partial" style="width:100%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 33,6 мг +*</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} 16 мг</b><small x-show="!empty">≥ 210% от нормы</small></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="diary__nutri-group" x-data="{ expanded:false }">
+                    <button type="button" class="diary__nutri-group-head" @click="expanded=!expanded" :aria-expanded="expanded.toString()" aria-controls="who-other"><span class="diary__nutri-group-heading"><span>Другие полезные вещества</span><small x-show="!empty">Норма достигнута по 0</small><small x-show="empty">Нет данных за день</small></span><span class="diary__group-chevron icon-down" aria-hidden="true"></span></button>
+                    <div id="who-other" x-show="expanded" x-cloak>
+                        <div class="diary__who-rows">
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Клетчатка</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class=" is-partial" style="width:17.733333333333334%"></i><em><small>норма</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 6,65 г</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} не менее 25 г</b><small x-show="!empty">≥ 27% от нормы</small></span></div>
+                            <div class="diary__who-row" :class="{'is-empty':empty}"><span class="diary__who-name"><b>Сахара</b><small x-show="!empty">4/7</small></span><span class="diary__who-scale" x-show="!empty"><i class="is-limit is-partial" style="width:14.395750332005312%"></i><em><small>лимит</small></em></span><span class="diary__who-value"><span class="diary__who-no-data" x-show="empty">Нет данных за день</span><span x-show="!empty">Получено ≥ 13,5 г</span><b>@@if(typeof isConsultant !== 'undefined' && isConsultant){Норма клиента:}@@if(typeof isConsultant === 'undefined' || !isConsultant){Моя норма:} не более 62,8 г</b><small x-show="!empty">≥ 22% от лимита</small><small>10% калорийности дня</small></span></div>
+                        </div>
+                    </div>
+                </section>
+                <p class="diary__nutri-missing"><b>Нет отдельной рекомендации ВОЗ: </b>Фосфор, Медь, Холестерин</p>
+            </div>
+        </div>
+    </section>
+    <section class="diary__tip">
+        <button type="button" class="diary__nutri-head" @click="tipOpen=!tipOpen" :aria-expanded="tipOpen.toString()" aria-controls="nutri-tip"><span class="diary__tip-ico icon-book-open" aria-hidden="true"></span><span class="diary__nutri-heading"><span class="diary__nutri-title">Подсказка: обозначения, метод расчёта и источники</span></span><span class="diary__nutri-chev icon-down" aria-hidden="true"></span></button>
+        <div id="nutri-tip" class="diary__nutri-body diary__tip-content" x-show="tipOpen" x-cloak>
+            <h4>Обозначения</h4>
+            <dl class="diary__tip-legend">
+                <div>
+                    <dt>≥</dt>
+                    <dd>Не менее: часть продуктов не имеет данных о количестве.</dd>
+                </div>
+                <div>
+                    <dt>5/7</dt>
+                    <dd>Количество продуктов с точными данными из общего числа.</dd>
+                </div>
+                <div>
+                    <dt><span class="icon-check-circle" aria-label="Полные данные"></span></dt>
+                    <dd>Точные данные по всем продуктам, включая известное нулевое содержание.</dd>
+                </div>
+                <div>
+                    <dt>ε+*</dt>
+                    <dd>Вещество присутствует по составу, но точное количество неизвестно.</dd>
+                </div>
+                <div>
+                    <dt>+*</dt>
+                    <dd>К известной сумме добавляется неизвестное количество в других продуктах.</dd>
+                </div>
+            </dl>
+            <p>* Присутствие по составу — неточные данные. Неизвестное количество не включается в сумму.</p>
+            <h4>Метод расчёта нутрицевтики</h4>
+            <p>Значение на 100 г × вес порции ÷ 100, затем сумма по продуктам выбранного приёма или дня. Продукты без точных данных по нутриенту не учитываются.</p>
+            <h4>Как читать рекомендации</h4>
+            <p class="diary__nutri-memo" x-show="!empty">Расчёт по 5 из 7 продуктов (71% съеденного по весу). Реальное потребление может быть выше.</p><p class="diary__nutri-memo" x-show="empty">День пока не заполнен. Покрытие данными появится после добавления продуктов.</p>
+            <p>Полученное за день количество ÷ рекомендация для пола и возраста × 100%. Для натрия и сахаров показывается доля от верхнего лимита. Лимит сахаров — 10% калорийной цели ÷ 4 ккал/г. ВОЗ ограничивает свободные сахара, а дневник учитывает все сахара: сравнение ориентировочное.</p>
+            <p>Рекомендации — ориентир для здоровых взрослых, а не диагноз. Индивидуальные цели согласуются между клиентом и консультантом.</p>
+            <button type="button" class="diary__tip-table-toggle" @click="tableOpen=!tableOpen" :aria-expanded="tableOpen.toString()">Все нормы ВОЗ: мужчины и женщины по возрасту <span class="icon-down" aria-hidden="true"></span></button>
+            <div class="diary__tip-table" x-show="tableOpen" x-cloak tabindex="0" role="region" aria-label="Таблица рекомендаций по полу и возрасту">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">Нутриент</th>
+                            <th colspan="3" scope="colgroup">Женщины</th>
+                            <th colspan="3" scope="colgroup">Мужчины</th>
+                            <th rowspan="2" scope="col">Ед.</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">19–50 лет</th>
+                            <th scope="col">51–65 лет</th>
+                            <th scope="col">65+ лет</th>
+                            <th scope="col" class="is-current">19–50 лет</th>
+                            <th scope="col">51–65 лет</th>
+                            <th scope="col">65+ лет</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Кальций</th>
+                            <td>1 000</td>
+                            <td>1 300</td>
+                            <td>1 300</td>
+                            <td class="is-current">1 000</td>
+                            <td>1 000</td>
+                            <td>1 300</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Калий</th>
+                            <td>≥ 3 510</td>
+                            <td>≥ 3 510</td>
+                            <td>≥ 3 510</td>
+                            <td class="is-current">≥ 3 510</td>
+                            <td>≥ 3 510</td>
+                            <td>≥ 3 510</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Магний</th>
+                            <td>220</td>
+                            <td>220</td>
+                            <td>190</td>
+                            <td class="is-current">260</td>
+                            <td>260</td>
+                            <td>224</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Натрий</th>
+                            <td>≤ 2 000</td>
+                            <td>≤ 2 000</td>
+                            <td>≤ 2 000</td>
+                            <td class="is-current">≤ 2 000</td>
+                            <td>≤ 2 000</td>
+                            <td>≤ 2 000</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Железо</th>
+                            <td>19,6</td>
+                            <td>7,5</td>
+                            <td>7,5</td>
+                            <td class="is-current">9,1</td>
+                            <td>9,1</td>
+                            <td>9,1</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Цинк</th>
+                            <td>4,9</td>
+                            <td>4,9</td>
+                            <td>4,9</td>
+                            <td class="is-current">7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Йод</th>
+                            <td>150</td>
+                            <td>150</td>
+                            <td>150</td>
+                            <td class="is-current">150</td>
+                            <td>150</td>
+                            <td>150</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Селен</th>
+                            <td>26</td>
+                            <td>26</td>
+                            <td>25</td>
+                            <td class="is-current">34</td>
+                            <td>34</td>
+                            <td>33</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин A</th>
+                            <td>500</td>
+                            <td>500</td>
+                            <td>600</td>
+                            <td class="is-current">600</td>
+                            <td>600</td>
+                            <td>600</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин C</th>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>45</td>
+                            <td class="is-current">45</td>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин D</th>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td class="is-current">5</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин E</th>
+                            <td>7,5</td>
+                            <td>7,5</td>
+                            <td>7,5</td>
+                            <td class="is-current">10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин B1</th>
+                            <td>1,1</td>
+                            <td>1,1</td>
+                            <td>1,1</td>
+                            <td class="is-current">1,2</td>
+                            <td>1,2</td>
+                            <td>1,2</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин B2</th>
+                            <td>1,1</td>
+                            <td>1,1</td>
+                            <td>1,1</td>
+                            <td class="is-current">1,3</td>
+                            <td>1,3</td>
+                            <td>1,3</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин B6</th>
+                            <td>1,3</td>
+                            <td>1,5</td>
+                            <td>1,5</td>
+                            <td class="is-current">1,3</td>
+                            <td>1,7</td>
+                            <td>1,7</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин B9</th>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td class="is-current">400</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин B12</th>
+                            <td>2,4</td>
+                            <td>2,4</td>
+                            <td>2,4</td>
+                            <td class="is-current">2,4</td>
+                            <td>2,4</td>
+                            <td>2,4</td>
+                            <td>мкг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Витамин PP</th>
+                            <td>14</td>
+                            <td>14</td>
+                            <td>14</td>
+                            <td class="is-current">16</td>
+                            <td>16</td>
+                            <td>16</td>
+                            <td>мг</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Клетчатка</th>
+                            <td>≥ 25</td>
+                            <td>≥ 25</td>
+                            <td>≥ 25</td>
+                            <td class="is-current">≥ 25</td>
+                            <td>≥ 25</td>
+                            <td>≥ 25</td>
+                            <td>г</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Сахара</th>
+                            <td>≤ 62,8</td>
+                            <td>≤ 62,8</td>
+                            <td>≤ 62,8</td>
+                            <td class="is-current">≤ 62,8</td>
+                            <td>≤ 62,8</td>
+                            <td>≤ 62,8</td>
+                            <td>г</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="diary__tip-src">Источники: WHO/FAO «Vitamin and mineral requirements in human nutrition», 2004; ВОЗ — натрий и калий (2012), сахара (2015), углеводы и клетчатка (2023). Возрастные группы: 19–50, 51–65 и старше 65 лет. Для женщин 51+ значения кальция и железа приведены после менопаузы. Железо — при биодоступности 15%, цинк — при средней биодоступности.</p>
+            <p class="diary__tip-src">Данные взяты из открытых источников и могут не совпадать с действительностью.</p>
+            <button type="button" class="diary__nutri-products-toggle" @click="lastFocus=document.activeElement;helpOpen=true;$nextTick(()=>$refs.helpClose.focus({preventScroll:true}))">Почему данных нет по всем продуктам?</button>
+        </div>
+    </section>
+    <div class="diary__help-overlay" x-show="helpOpen" x-cloak @click.self="helpOpen=false;lastFocus?.focus({preventScroll:true})" @keydown.escape.window="if(helpOpen){helpOpen=false;lastFocus?.focus({preventScroll:true})}">
+        <section class="diary__help-dialog" x-ref="dialog" role="dialog" aria-modal="true" aria-labelledby="nutri-help-title" @keydown.tab="const nodes=[...$refs.dialog.querySelectorAll('button,a[href]')];if($event.shiftKey &amp;&amp; document.activeElement===nodes[0]){$event.preventDefault();nodes.at(-1).focus()}else if(!$event.shiftKey &amp;&amp; document.activeElement===nodes.at(-1)){$event.preventDefault();nodes[0].focus()}">
+            <header>
+                <h3 id="nutri-help-title">Откуда данные по нутрицевтике</h3><button type="button" class="icon-close" x-ref="helpClose" @click="helpOpen=false;lastFocus?.focus({preventScroll:true})" aria-label="Закрыть подсказку"></button>
+            </header>
+            <p>Данные о витаминах, минералах и других веществах доступны только для части продуктов. Они взяты из открытых справочных баз и данных производителей.</p>
+            <ul>
+                <li><b>Полные данные:</b> заполнено большинство нутриентов.</li>
+                <li><b>Частично:</b> известны отдельные показатели.</li>
+                <li><b>Только КБЖУ:</b> нет точных данных о нутриентах, например у домашних блюд с переменным составом.</li>
+            </ul>
+            <p>Сумма учитывает только известные количества. Отсутствие данных не означает отсутствие вещества.</p>
+        </section>
+    </div>
+</div>

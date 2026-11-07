@@ -9,7 +9,7 @@
             @@include('html/_header-guest.html', {
             "active": "plans"
             })
-            <main class="page podbor-page" data-podbor="guest" x-data="podbor">
+            <main class="page podbor-page" data-podbor="guest" x-data="{screen:'entry',step:1,goal:'',dur:'any',contact:'any',diet:'any',budget:6000,med:'any',gender:'any',exp:'any',shown:4,error:false}">
                 <section class="content">
                     @@include('html/podbor-blocks/_content.html', {
                     "auth": "guest"

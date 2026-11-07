@@ -1,0 +1,215 @@
+<div class="diary__main-products">
+    <div class="diary__product-column">
+        <section x-show="meal===0">
+            <ul class="diary__product-list">
+                <li class="diary__product-item" data-product-name="Говядина вареная" x-data="{ removed:false,editing:false,details:false,mass:200,draft:200,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Говядина вареная</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Говядина вареная</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 508</div>
+                                <div class="diary__product-details-stat">Б 51,6</div>
+                                <div class="diary__product-details-stat">Ж 33,6</div>
+                                <div class="diary__product-details-stat">У 0</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">200 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-full" @click="details=!details" :aria-expanded="details.toString()"><i></i>19 нутриентов<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Макроэлементы: </b>Кальций, Калий, Магний, Фосфор, Натрий</p>
+                            <p><b>Микроэлементы: </b>Железо, Цинк, Селен, Медь</p>
+                            <p><b>Витамины: </b>Витамин C, Витамин E, Витамин B1, Витамин B2, Витамин B6, Витамин B12, Витамин PP</p>
+                            <p><b>Другие полезные вещества: </b>Клетчатка, Сахара, Холестерин</p>
+                            <p><b>Нет данных: </b>Йод, Витамин A, Витамин D, Витамин B9, Омега-3</p><small>Расчёт для порции: значение на 100 г × 200 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="diary__product-item" data-product-name="Банан" x-data="{ removed:false,editing:false,details:false,mass:100,draft:100,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Банан</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Банан</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 94</div>
+                                <div class="diary__product-details-stat">Б 1,2</div>
+                                <div class="diary__product-details-stat">Ж 0,2</div>
+                                <div class="diary__product-details-stat">У 22</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">100 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-full" @click="details=!details" :aria-expanded="details.toString()"><i></i>20 нутриентов<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Макроэлементы: </b>Кальций, Калий, Магний, Фосфор, Натрий</p>
+                            <p><b>Микроэлементы: </b>Железо, Цинк, Селен, Медь</p>
+                            <p><b>Витамины: </b>Витамин A, Витамин C, Витамин E, Витамин B1, Витамин B2, Витамин B6, Витамин B9, Витамин PP</p>
+                            <p><b>Другие полезные вещества: </b>Клетчатка, Сахара, Холестерин</p>
+                            <p><b>Нет данных: </b>Йод, Витамин D, Витамин B12, Омега-3</p><small>Расчёт для порции: значение на 100 г × 100 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="diary__meal-summary"><b>Приём 1</b><span><small>Ккал</small><b>602</b></span><span><small>Белки</small><b>52,8</b></span><span><small>Жиры</small><b>33,8</b></span><span><small>Углеводы</small><b>22</b></span></div><div class="diary__meal-nutri" x-show="nutri">
+                <span class="diary__meal-nutri-icon icon-diet" aria-hidden="true"></span>
+                <div class="diary__meal-nutri-copy"><b>Нутрицевтика приёма</b><small>Данные по 2 из 2 продуктов</small></div>
+                <button type="button" class="diary__meal-nutri-more l-btn l-btn-primary" @click="$dispatch('diary:nutrients',{scope:'0'})">Подробнее <i class="icon-arrow-short-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+        <section x-show="meal===1" x-cloak>
+            <ul class="diary__product-list">
+                <li class="diary__product-item" data-product-name="Гречка отварная" x-data="{ removed:false,editing:false,details:false,mass:150,draft:150,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Гречка отварная</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Гречка отварная</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 165</div>
+                                <div class="diary__product-details-stat">Б 6,3</div>
+                                <div class="diary__product-details-stat">Ж 1,65</div>
+                                <div class="diary__product-details-stat">У 32</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">150 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-part" @click="details=!details" :aria-expanded="details.toString()"><i></i>15 нутриентов<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Макроэлементы: </b>Кальций, Калий, Магний, Фосфор, Натрий</p>
+                            <p><b>Микроэлементы: </b>Железо, Цинк, Медь</p>
+                            <p><b>Витамины: </b>Витамин B1, Витамин B2, Витамин B6, Витамин B9, Витамин PP</p>
+                            <p><b>Другие полезные вещества: </b>Клетчатка, Сахара</p>
+                            <p><b>Нет данных: </b>Йод, Селен, Витамин A, Витамин C, Витамин D, Витамин E, Витамин B12, Омега-3, Холестерин</p><small>Расчёт для порции: значение на 100 г × 150 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="diary__product-item" data-product-name="Куриная грудка отварная" x-data="{ removed:false,editing:false,details:false,mass:150,draft:150,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Куриная грудка отварная</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Куриная грудка отварная</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 206</div>
+                                <div class="diary__product-details-stat">Б 44,7</div>
+                                <div class="diary__product-details-stat">Ж 2,7</div>
+                                <div class="diary__product-details-stat">У 0,75</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">150 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-part" @click="details=!details" :aria-expanded="details.toString()"><i></i>15 нутриентов<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Макроэлементы: </b>Кальций, Калий, Магний, Фосфор, Натрий</p>
+                            <p><b>Микроэлементы: </b>Железо, Цинк, Селен</p>
+                            <p><b>Витамины: </b>Витамин B2, Витамин B6, Витамин B12, Витамин PP</p>
+                            <p><b>Другие полезные вещества: </b>Клетчатка, Сахара, Холестерин</p>
+                            <p><b>Нет данных: </b>Йод, Медь, Витамин A, Витамин C, Витамин D, Витамин E, Витамин B1, Витамин B9, Омега-3</p><small>Расчёт для порции: значение на 100 г × 150 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="diary__product-item" data-product-name="Соус сметанный домашний" x-data="{ removed:false,editing:false,details:false,mass:40,draft:40,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Соус сметанный домашний</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Соус сметанный домашний</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 88</div>
+                                <div class="diary__product-details-stat">Б 1</div>
+                                <div class="diary__product-details-stat">Ж 8</div>
+                                <div class="diary__product-details-stat">У 2,8</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">40 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-none" @click="details=!details" :aria-expanded="details.toString()"><i></i>Только КБЖУ<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Присутствует по составу, количество неизвестно: </b>Кальций, Фосфор, Витамин A, Витамин D, Витамин B2, Витамин B12, Холестерин</p>
+                            <p><b>Нет данных: </b>Калий, Магний, Натрий, Железо, Цинк, Йод, Селен, Медь, Витамин C, Витамин E, Витамин B1, Витамин B6, Витамин B9, Витамин PP, Клетчатка, Омега-3, Сахара</p><small>Расчёт для порции: значение на 100 г × 40 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="diary__meal-summary"><b>Приём 2</b><span><small>Ккал</small><b>459</b></span><span><small>Белки</small><b>52</b></span><span><small>Жиры</small><b>12,4</b></span><span><small>Углеводы</small><b>35,5</b></span></div><div class="diary__meal-nutri" x-show="nutri">
+                <span class="diary__meal-nutri-icon icon-diet" aria-hidden="true"></span>
+                <div class="diary__meal-nutri-copy"><b>Нутрицевтика приёма</b><small>Данные по 2 из 3 продуктов</small></div>
+                <button type="button" class="diary__meal-nutri-more l-btn l-btn-primary" @click="$dispatch('diary:nutrients',{scope:'1'})">Подробнее <i class="icon-arrow-short-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+        <section x-show="meal===2" x-cloak>
+            <ul class="diary__product-list"></ul>
+            <p class="diary__products-empty">В этом приёме пока нет продуктов</p>
+        </section>
+        <section x-show="meal===3" x-cloak>
+            <ul class="diary__product-list">
+                <li class="diary__product-item" data-product-name="Творог 5%" x-data="{ removed:false,editing:false,details:false,mass:104,draft:104,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Творог 5%</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Творог 5%</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 126</div>
+                                <div class="diary__product-details-stat">Б 17,9</div>
+                                <div class="diary__product-details-stat">Ж 5,2</div>
+                                <div class="diary__product-details-stat">У 1,87</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">104 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-part" @click="details=!details" :aria-expanded="details.toString()"><i></i>5 нутриентов<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Макроэлементы: </b>Кальций, Фосфор, Натрий</p>
+                            <p><b>Витамины: </b>Витамин B2, Витамин B12</p>
+                            <p><b>Нет данных: </b>Калий, Магний, Железо, Цинк, Йод, Селен, Медь, Витамин A, Витамин C, Витамин D, Витамин E, Витамин B1, Витамин B6, Витамин B9, Витамин PP, Клетчатка, Омега-3, Сахара, Холестерин</p><small>Расчёт для порции: значение на 100 г × 104 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="diary__meal-summary"><b>Приём 4</b><span><small>Ккал</small><b>126</b></span><span><small>Белки</small><b>17,9</b></span><span><small>Жиры</small><b>5,2</b></span><span><small>Углеводы</small><b>1,87</b></span></div><div class="diary__meal-nutri" x-show="nutri">
+                <span class="diary__meal-nutri-icon icon-diet" aria-hidden="true"></span>
+                <div class="diary__meal-nutri-copy"><b>Нутрицевтика приёма</b><small>Данные по 1 из 1 продуктов</small></div>
+                <button type="button" class="diary__meal-nutri-more l-btn l-btn-primary" @click="$dispatch('diary:nutrients',{scope:'3'})">Подробнее <i class="icon-arrow-short-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+        <section x-show="meal===4" x-cloak>
+            <ul class="diary__product-list">
+                <li class="diary__product-item" data-product-name="Кофе с молоком" x-data="{ removed:false,editing:false,details:false,mass:250,draft:250,error:'' }">
+                    <div class="diary__product-content" :class="{'removed':removed}">
+                        <div class="diary__product-details">
+                            <div class="diary__product-details-name" x-show="!diet">Кофе с молоком</div><label class="diary__product-name checkbox" x-show="diet"><input type="checkbox" class="checkbox__input" checked :disabled="!editable || removed"><span class="checkbox__content">Кофе с молоком</span></label>
+                            <div class="diary__product-details-stats">
+                                <div class="diary__product-details-stat">К 85</div>
+                                <div class="diary__product-details-stat">Б 4,25</div>
+                                <div class="diary__product-details-stat">Ж 4,5</div>
+                                <div class="diary__product-details-stat">У 7,25</div>
+                            </div>
+                        </div>
+                        <div class="diary__product-unit" x-show="!editing" x-text="mass+' г'">250 г</div><label class="diary__product-mass" x-show="editing" x-cloak><input class="input input-sm" type="number" min="1" max="10000" x-model.number="draft" aria-label="Масса порции, г"><span>г</span></label>
+                        <div class="diary__product-actions" x-show="editable"><button type="button" class="diary__product-edit icon-pen-alternate" x-show="!removed &amp;&amp; !editing" @click.stop="draft=mass;editing=true" aria-label="Изменить порцию"></button><button type="button" class="diary__product-action icon-check" x-show="editing" @click="if(draft>=1 &amp;&amp; draft<=10000){mass=Math.round(draft);editing=false;error=''}else{error='Укажите массу от 1 до 10 000 г'}" aria-label="Сохранить массу"></button><button type="button" class="diary__product-action icon-trash" x-show="!removed" @click="removed=true;editing=false" aria-label="Удалить продукт"></button><button type="button" class="diary__product-action icon-back" x-show="removed" @click="removed=false" aria-label="Восстановить продукт"></button></div>
+                    </div>
+                    <p class="diary__field-error" x-show="error" x-text="error"></p>
+                    <div class="diary__product-nutri" x-show="nutri &amp;&amp; !removed"><button type="button" class="diary__nutri-badge is-none" @click="details=!details" :aria-expanded="details.toString()"><i></i>Только КБЖУ<span class="icon-down" aria-hidden="true"></span></button>
+                        <div class="diary__product-nutri-detail" x-show="details" x-cloak>
+                            <p><b>Присутствует по составу, количество неизвестно: </b>Кальций, Калий, Магний, Фосфор, Йод, Витамин B2, Витамин B12, Витамин PP</p>
+                            <p><b>Нет данных: </b>Натрий, Железо, Цинк, Селен, Медь, Витамин A, Витамин C, Витамин D, Витамин E, Витамин B1, Витамин B6, Витамин B9, Клетчатка, Омега-3, Сахара, Холестерин</p><small>Расчёт для порции: значение на 100 г × 250 г ÷ 100</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="diary__meal-summary"><b>Приём 5</b><span><small>Ккал</small><b>85</b></span><span><small>Белки</small><b>4,25</b></span><span><small>Жиры</small><b>4,5</b></span><span><small>Углеводы</small><b>7,25</b></span></div><div class="diary__meal-nutri" x-show="nutri">
+                <span class="diary__meal-nutri-icon icon-diet" aria-hidden="true"></span>
+                <div class="diary__meal-nutri-copy"><b>Нутрицевтика приёма</b><small>Данные по 0 из 1 продуктов</small></div>
+                <button type="button" class="diary__meal-nutri-more l-btn l-btn-primary" @click="$dispatch('diary:nutrients',{scope:'4'})">Подробнее <i class="icon-arrow-short-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+        <section x-show="meal===5" x-cloak>
+            <ul class="diary__product-list"></ul>
+            <p class="diary__products-empty">В этом приёме пока нет продуктов</p>
+        </section>
+    </div>
+</div>

@@ -1,8 +1,42 @@
-<div class="diary__norm">
+<div class="diary__norm" x-data="{editing:false,goal:2510,draft:2510,norm:2510,error:'',lastFocus:null}" data-kcal-chart data-norm="2510" :data-kcal-goal="goal" :data-calories="empty?0:1271.34" :data-protein="empty?0:126.938" :data-fat="empty?0:55.85" :data-carb="empty?0:66.622" x-init="$nextTick(()=>$dispatch('diary:kcal'));$watch('goal',()=>$nextTick(()=>$dispatch('diary:kcal')))">
     <div class="diary__norm-title title">
-        Ваш КБЖУ <span>от дневной суточной нормы</span>
-        <span class="diary__info-icon" data-tooltip="График отображает сколько калорий вам нужно ежедневно для поддержания веса, согласно формуле Харриса-Бенедикта. Изменить коэффициент физической нагрузки можно в настройках.">?</span>
+        @@if(typeof isConsultant !== 'undefined' && isConsultant){КБЖУ клиента}
+        @@if(typeof isConsultant === 'undefined' || !isConsultant){Ваш КБЖУ}
+        <span>от суточной нормы</span>
+        <span class="diary__info-icon icon-info" data-tooltip="График показывает расчётную суточную потребность в калориях для поддержания веса по формуле Харриса — Бенедикта с учётом коэффициента физической активности из профиля." aria-label="О расчёте нормы"></span>
     </div>
+    <div class="diary__kcal">
+        <button type="button" class="diary__kcal-view" data-modal data-href="diary-kcal-dialog" :disabled="!editable" :aria-expanded="editing.toString()" aria-haspopup="dialog" aria-controls="diary-kcal-dialog">
+            <span>Цель</span><b x-text="goal.toLocaleString('ru-RU')">2 510</b><span>ккал</span>
+            <span class="diary__kcal-edit-icon icon-pen-alternate" aria-hidden="true" x-show="editable"></span>
+        </button>
+        <a class="diary__kcal-hb" href="articles/kalkulyator-normy-caloriy.html" title="Засечка показывает меньшее из значений цели и расчётной нормы">Норма по Харрису-Бенедикту <b x-text="norm"></b> ккал</a>
+    </div>
+    <template x-teleport="body">
+        <div id="diary-kcal-dialog" class="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="diary-kcal-title" @popup-open.camel="lastFocus=$event.detail.modalBtn;draft=goal;error='';editing=true;$nextTick(()=>$refs.goalInput.focus({preventScroll:true}))" @popup-close.camel="editing=false;error='';$nextTick(()=>lastFocus?.focus({preventScroll:true}))">
+            <div class="popup__content">
+                <div class="popup__body popup__body-sm" x-ref="goalDialog" @keydown.enter.stop @keydown.tab="const nodes=[...$refs.goalDialog.querySelectorAll('button,input')];if($event.shiftKey &amp;&amp; document.activeElement===nodes[0]){$event.preventDefault();nodes.at(-1).focus()}else if(!$event.shiftKey &amp;&amp; document.activeElement===nodes.at(-1)){$event.preventDefault();nodes[0].focus()}">
+                    <div class="popup__step">
+                        <div class="popup__header">
+                            <h3 id="diary-kcal-title" class="popup__header-title">Цель по калориям</h3>
+                            <button type="button" class="popup__close icon-close" data-close-modal aria-label="Закрыть окно"></button>
+                        </div>
+                        <div class="popup__step-body">
+                            <p>Задайте дневную цель по калориям</p>
+                            <label class="diary__goal-input"><input class="input input-white" x-ref="goalInput" type="number" min="1000" max="6000" step="10" inputmode="numeric" x-model.number="draft" @keydown.enter.prevent="$refs.goalSave.click()" aria-label="Цель по калориям в день" aria-describedby="diary-kcal-hint diary-kcal-error"><span>ккал</span></label>
+                            <p id="diary-kcal-hint" class="diary__kcal-hint">От 1 000 до 6 000 ккал · расчётная норма: 2 510</p>
+                            <p id="diary-kcal-error" class="diary__field-error" role="alert" x-show="error" x-text="error"></p>
+                            <button type="button" class="diary__kcal-reset" data-close-modal @click="goal=norm">Вернуть расчётную норму</button>
+                        </div>
+                        <div class="popup__footer diary__goal-actions">
+                            <button type="button" class="l-btn l-btn-light l-btn-sm" data-close-modal>Отмена</button>
+                            <button type="button" class="l-btn l-btn-primary l-btn-sm" x-ref="goalSave" data-close-modal @click="if(Number(draft)>=1000 &amp;&amp; Number(draft)<=6000){goal=Math.round(draft/10)*10}else{$event.stopPropagation();error='Введите от 1 000 до 6 000 ккал'}">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
     <div class="diary__norm-body">
         <div class="diary__chart graph">
             <div class="graph__content">
@@ -74,28 +108,35 @@
                     <svg width="970px" height="970px" viewBox="0 0 340 333">
                         <g stroke-width="8">
                             <circle class="graph__foure-first" cx="100" cy="100" r="50" fill="none" stroke="#f6faff"></circle>
-                            <circle class="graph__foure-second" cx="100" cy="100" r="50" fill="none" stroke="#2F80ED"></circle>
+                            <circle class="graph__foure-second graph__kcal-value" cx="100" cy="100" r="50" fill="none" stroke="#2F80ED" style="stroke-dasharray: 78.5 314.16; stroke-dashoffset: 0;"></circle>
                         </g>
                     </svg>
                 </div>
+                <svg class="graph__kcal-marker" width="970" height="970" viewBox="0 0 340 333" role="img" :aria-label="(goal<=norm?'Цель: ':'Расчётная норма: ')+Math.min(goal,norm)+' ккал'">
+                    <g class="graph__kcal-tick">
+                        <title>Цель: 2 510 ккал</title>
+                        <line x1="145.977" y1="98.555" x2="153.973" y2="98.304" stroke="#1F2A44" stroke-width="1.2" stroke-linecap="butt"></line>
+                        <text x="150" y="108" text-anchor="end" fill="#1F2A44" font-size="4.2" font-weight="700"><tspan x-text="goal<=norm?'Цель':'Норма'">Цель</tspan> <tspan x-text="Math.min(goal,norm).toLocaleString('ru-RU')">2 510</tspan></text>
+                    </g>
+                </svg>
             </div>
         </div>
         <ul class="diary__norm-list">
             <li class="diary__norm-item">
                 <div class="diary__norm-caption">Калории</div>
-                <div class="diary__norm-text">900 из 1800 Ккал</div>
+                <div class="diary__norm-text" x-text="(empty?0:1271)+' из '+goal+' Ккал'">1271 из 2 510 Ккал</div>
             </li>
             <li class="diary__norm-item">
                 <div class="diary__norm-caption">Белки</div>
-                <div class="diary__norm-text">3 из 20 грамм</div>
+                <div class="diary__norm-text" x-text="(empty?0:126.9)+' из '+Math.round(goal*0.05)+' грамм'"></div>
             </li>
             <li class="diary__norm-item">
                 <div class="diary__norm-caption">Жиры</div>
-                <div class="diary__norm-text">4 из 18 грамм</div>
+                <div class="diary__norm-text" x-text="(empty?0:55.9)+' из '+Math.round(goal*0.03333333333333333)+' грамм'"></div>
             </li>
             <li class="diary__norm-item">
                 <div class="diary__norm-caption">Углеводы</div>
-                <div class="diary__norm-text red"><strong>60 из 40</strong> грамм</div>
+                <div class="diary__norm-text" x-text="(empty?0:66.6)+' из '+Math.round(goal*0.125)+' грамм'"></div>
             </li>
         </ul>
     </div>

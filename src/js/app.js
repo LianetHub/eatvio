@@ -1,8 +1,10 @@
 "use strict";
 
 import * as devFunctions from "./modules/functions.js";
-import "./modules/diaryAnalytics.js";
-import "./modules/podbor.js";
+import "./modules/diaryCharts.js";
+import "./modules/diaryWater.js";
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     devFunctions.popup();
@@ -436,7 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.search__input').addEventListener('focus', (e) => {
             document.querySelector('.search').classList.add('open');
         });
-        document.querySelector('.search__bar').addEventListener('mouseleave', (e) => {
+        document.querySelector('.search__bar')?.addEventListener('mouseleave', (e) => {
             document.querySelector('.search').classList.remove('open');
         });
     }

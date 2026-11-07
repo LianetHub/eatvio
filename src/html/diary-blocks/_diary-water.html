@@ -1,0 +1,27 @@
+<div class="diary__water-card" x-data="diaryWater(2000)" @diary:water-goal.window="goal=$event.detail.value" :class="{'is-open':open}" aria-label="Потребление воды">
+    <div class="diary__water-header"><span class="diary__water-drop" aria-hidden="true"><img src="@img/icons/water.svg" width="24" height="24" alt=""></span>
+        <div class="diary__water-heading"><b>Вода</b><span x-text="total>=goal?'Цель на день достигнута':'Водный баланс за день'">Водный баланс за день</span></div><button type="button" class="diary__water-sum" @click="open=!open" :aria-expanded="open.toString()" aria-controls="water-log"><span><b x-text="total.toLocaleString('ru-RU')">950</b><small x-text="' / '+goal.toLocaleString('ru-RU')+' мл'"> / 2 000 мл</small></span><span class="diary__water-chevron icon-down" aria-hidden="true"></span></button>
+    </div>
+    <div class="diary__water-progress" role="progressbar" aria-label="Выполнение цели по воде" :aria-valuenow="Math.min(100,total/goal*100)" aria-valuemin="0" aria-valuemax="100"><i :style="'width:'+Math.min(100,total/goal*100)+'%'"></i></div>
+    <div class="diary__water-controls" x-show="editable">
+        <div class="diary__water-quick" aria-label="Быстро добавить воду"><button type="button" @click="add(50)">+50 <small>мл</small></button><button type="button" @click="add(100)">+100 <small>мл</small></button><button type="button" @click="add(200)">+200 <small>мл</small></button></div>
+        <div class="diary__water-entry"><label class="diary__water-custom"><input class="input input-sm" type="number" min="1" max="3000" inputmode="numeric" placeholder="Свой объём" aria-label="Объём воды, мл" aria-describedby="water-error" x-model="ml" @keydown.enter.prevent="add(ml)"><span>мл</span></label><label class="diary__water-clock"><input class="input input-sm diary__water-time" type="time" x-model="time" @input="timeEdited=true" aria-label="Время приёма воды"></label><button type="button" class="diary__water-now icon-refresh" x-show="timeEdited" @click="useCurrentTime()" aria-label="Вернуть текущее время"></button><button type="button" class="l-btn l-btn-primary diary__water-go icon-plus" @click="add(ml)" aria-label="Добавить свой объём воды"></button></div>
+    </div>
+    <p id="water-error" class="diary__field-error" role="alert" x-show="error" x-text="error" x-cloak></p>
+    <div id="water-log" class="diary__water-more" x-show="open" x-cloak>
+        <div class="diary__water-line">
+            <div class="diary__water-axis"></div>
+            <div data-water-markers></div>
+            <div class="diary__water-ticks"><span style="left:0">00:00</span><span style="left:25%">06:00</span><span style="left:50%">12:00</span><span style="left:75%">18:00</span><span style="left:100%">24:00</span></div>
+        </div>
+        <div class="diary__water-log" x-ref="entries" @click="remove($event)"><span class="diary__water-chip" data-water-time="07:05" data-ml="200"><b>07:05</b><span data-volume>200 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 07:05"></button></span>
+            <span class="diary__water-chip" data-water-time="09:40" data-ml="200"><b>09:40</b><span data-volume>200 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 09:40"></button></span>
+            <span class="diary__water-chip" data-water-time="11:15" data-ml="100"><b>11:15</b><span data-volume>100 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 11:15"></button></span>
+            <span class="diary__water-chip" data-water-time="13:30" data-ml="200"><b>13:30</b><span data-volume>200 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 13:30"></button></span>
+            <span class="diary__water-chip" data-water-time="15:10" data-ml="50"><b>15:10</b><span data-volume>50 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 15:10"></button></span>
+            <span class="diary__water-chip" data-water-time="16:45" data-ml="200"><b>16:45</b><span data-volume>200 мл</span><button type="button" class="icon-close" x-show="editable" aria-label="Удалить воду в 16:45"></button></span>
+        </div>
+        <p class="diary__water-empty" x-show="!count">В этот день вода пока не отмечена</p>
+        <template x-ref="entry"><span class="diary__water-chip"><b></b><span data-volume></span><button type="button" class="icon-close" aria-label="Удалить запись воды"></button></span></template>
+    </div>
+</div>

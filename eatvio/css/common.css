@@ -24,20 +24,20 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -3189,6 +3189,10 @@ body.dark-theme {
   color: #1b6fd6;
   -webkit-box-shadow: 0 1px 3px rgba(24, 55, 90, 0.12);
           box-shadow: 0 1px 3px rgba(24, 55, 90, 0.12);
+}
+
+.segment--diary {
+  max-width: 22.5rem;
 }
 
 .segment__btn {
@@ -8660,6 +8664,15 @@ body.dark-theme {
           flex: 1 1 auto;
 }
 
+.settings__form-note {
+  margin: 0.625rem 0 0;
+  color: #7b8794;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 26.25rem;
+}
+
 .settings__form-text {
   color: #323f4b;
   font-weight: 600;
@@ -11457,6 +11470,11 @@ body.dark-theme {
 }
 
 @media (max-width: 767.98px) {
+  .segment--diary {
+    max-width: none;
+    width: 100%;
+  }
+
   .pc-only {
     display: none !important;
   }
